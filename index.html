@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GL Theory: Greg's Computational Guide to the Universe</title>
+    <title>Greg's Computational Guide to the Universe</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap');
       :root {
@@ -951,7 +951,7 @@
         and the insight that changes everything
       </div>
       <div class="byline">
-        VERSION 11.0 · MARCH 2026 · PLAIN ENGLISH EDITION
+        VERSION 12.0 · MARCH 2026 · PLAIN ENGLISH EDITION
       </div>
     </div>
 
@@ -1103,33 +1103,36 @@
           <span class="claim-num">02</span>
           <div class="claim-text">
             <strong
-              >The data layer advances by a global sequential tick. There is a
-              preferred causal ordering.</strong
+              >Each tick has a fixed computational budget C. The ticks advance
+              by a global causal ordering &Omega;.</strong
             >
             <small
-              >S(&Omega;+1) = F(S(&Omega;)). A function with one input cannot
-              have two current states. The sequence is logically entailed, not
-              imposed. Lorentz symmetry is an emergent property of the render
-              layer — not the data layer. The preferred ordering exists and is
-              structurally invisible from inside the render layer. →
-              <em>Section 07</em></small
+              >S(&Omega;+1) = F(S(&Omega;)). Each tick, the engine can do C
+              units of graph work. &Omega; counts the ticks. A function with one
+              input cannot have two current states. The sequence is logically
+              entailed, not imposed. Lorentz symmetry is an emergent property of
+              the render layer — not the data layer. →
+              <em>Sections 01, 07</em></small
             >
           </div>
         </div>
 
         <div class="claim-row">
-          <span class="claim-num">03</span>
+          <span class="claim-num novel">03 ★</span>
           <div class="claim-text">
             <strong
-              >Mass is a cyclic subgraph that forces a strict resolution walk
-              every tick.</strong
+              >Mass is what happens when graph operations overflow the per-tick
+              budget C.</strong
             >
             <small
-              >Most nodes are lazy — cached until needed. Mass has a
-              self-referential cycle that cannot be deferred. It walks itself
-              every tick, and that walk fans out into neighboring nodes. Those
-              neighbors pay the cost whether they interact with the mass or not.
-              → <em>Section 04</em></small
+              >Every tick the engine has a fixed computational budget: C. If a
+              graph interaction resolves within C, it propagates — no
+              persistence, no mass. If it exceeds C, the unresolved portion
+              persists as a stack frame. If that overflow regenerates itself
+              each tick — a self-perpetuating topology — you get stable mass.
+              This is why matter exists at all. Not because it was installed.
+              Because computational overflow with stable attractors is
+              inevitable. → <em>Section 04</em></small
             >
           </div>
         </div>
@@ -1285,6 +1288,24 @@
             >
           </div>
         </div>
+
+        <div class="claim-row">
+          <span class="claim-num novel">13 ★</span>
+          <div class="claim-text">
+            <strong
+              >E = mc² is the total return value of unwinding an overflow stack:
+              m frames × C stored × C propagated.</strong
+            >
+            <small
+              >Each stack frame holds C worth of deferred computation. When mass
+              converts to energy, those frames unwind. The results propagate at
+              rate C. Total energy = stack depth × work stored per frame ×
+              propagation rate = m × C × C. The squaring is not a mystery — C
+              appears twice because it plays two structural roles. →
+              <em>Section 10</em></small
+            >
+          </div>
+        </div>
       </div>
 
       <!-- ═══════════════════════════════════════════════════════════ -->
@@ -1353,8 +1374,8 @@
             it.
           </text>
           <text x="40" y="97" fill="#7a9ab0" font-size="13">
-            • One global clock tick — C — recomputes the entire state of
-            everything.
+            • One global tick — Ω — recomputes the entire state, bounded by
+            budget C.
           </text>
           <text x="40" y="118" fill="#7a9ab0" font-size="13">
             • Sequential, deterministic, global. Like a CPU clock running one
@@ -1549,9 +1570,19 @@
         The global state function is written:
         <code>S(&Omega;+1) = F(S(&Omega;))</code><br />
         <em>S</em> = the complete state of the data layer. <em>&Omega;</em> =
-        the causal index (not a time variable — just a sequence counter).
-        <em>F</em> = the global transition function that advances the entire
-        state by one step.<br /><br />
+        the causal index — the tick counter (not a time variable — just "which
+        step are we on?"). <em>F</em> = the global transition function that
+        advances the entire state by one step.<br /><br />
+        <em>C</em> = the per-tick computational budget. The total amount of
+        graph work the engine can do per tick. Fixed and universal. This is what
+        the speed of light looks like from inside the render layer: a graph that
+        fully resolves within C propagates one hop per tick, and that rate is
+        <em>c</em>.<br /><br />
+        <em>B</em> = a region's remaining share of C after nearby mass has
+        consumed some of it. Less B means fewer state changes per tick — that's
+        time dilation.<br /><br />
+        <em>&theta;</em> = the participation threshold. The minimum activity
+        level for a node to be resolved this tick rather than deferred.<br /><br />
         The render layer projects from this:
         <code>R(&Omega;) = P(S(&Omega;))</code><br />
         <em>P</em> = the projection function. <em>R</em> = what we observe as
@@ -2143,6 +2174,23 @@
         nodes walk. The walk fans out. Neighbors pay. That's gravity.
       </div>
 
+      <div class="callout callout-blue">
+        <strong class="label">The Budget — Why Not Everything Resolves</strong>
+        Every tick, the engine has a fixed amount of work it can do:
+        <strong>C</strong>. This is the per-tick computational budget —
+        universal, fixed, the same everywhere. If a graph's full resolution fits
+        within C, it resolves completely and propagates. A photon's graph
+        resolves within C — that's why it travels at the speed of light and has
+        no mass.<br /><br />
+        If a graph operation <em>exceeds</em> C — if two nodes interact and the
+        combined work is more than one tick can handle — the unresolved portion
+        carries over as a <strong>stack frame</strong> into the next tick. That
+        leftover is the seed of mass. This distinction —
+        <em>fits within C</em> vs. <em>overflows C</em> — is the most important
+        distinction in the framework. Everything about mass, energy, gravity,
+        and E&nbsp;=&nbsp;mc² follows from it.
+      </div>
+
       <div class="figure">
         <div class="scene-label">
           Figure 3 — Resolving a Node Means Walking All Its Pointers
@@ -2500,62 +2548,932 @@
       </div>
 
       <!-- ═══════════════════════════════════════════════════════════ -->
-      <!-- SECTION 4: MASS — THE CYCLIC SUBGRAPH -->
+      <!-- SECTION 4: MASS — WHAT HAPPENS WHEN COMPUTE OVERFLOWS -->
       <!-- ═══════════════════════════════════════════════════════════ -->
 
       <div class="section-header">
         <span class="section-num">04</span>
-        <h2>Mass — A Cyclic Subgraph That Never Stops Resolving</h2>
+        <h2>Mass — What Happens When Computation Overflows</h2>
+      </div>
+
+      <div class="physics-primer">
+        <strong>Why does matter exist at all?</strong> The Standard Model
+        describes which particles exist and how they behave with extraordinary
+        precision. But it takes their existence as given. Why protons? Why
+        electrons? Why these masses and not others? Physics has never provided a
+        structural answer for why certain configurations of energy become stable
+        particles while others don't. This section offers one.
       </div>
 
       <p>
-        Most things in the universe are quiet most of the time. An isolated
-        atom, a photon in empty space — a handful of pointers, a cheap walk,
-        carried forward from cache between ticks when nothing is interacting.
+        Most things in the universe are quiet most of the time. A photon in
+        empty space, a lone particle drifting — their graphs resolve fully
+        within the per-tick budget C. They compute, produce a return value,
+        propagate. Clean resolution. No leftovers.
+      </p>
+
+      <p>Mass is what happens when that clean resolution fails.</p>
+
+      <h3>The Overflow</h3>
+
+      <p>
+        When two nodes interact — when their graphs combine because one depends
+        on the output of the other — the resulting graph may be more complex
+        than either was alone. Most of the time, the combined work still fits
+        within C. The interaction resolves, produces energy (the return value),
+        and both nodes move on.
       </p>
 
       <p>
-        Mass is different in one critical way: <strong>it has cycles.</strong>
+        But sometimes, the combined graph exceeds C. There is more work to do
+        than one tick allows. When this happens, the unresolved portion doesn't
+        disappear. It carries over into the next tick as a
+        <strong>stack frame</strong> — one tick's worth of unfinished
+        computation that persists.
       </p>
 
       <p>
-        At the data layer, mass is a stable self-referential subgraph — a
-        cluster of nodes where resolution walks fan back into themselves. The
-        walk cycles. It converges to a stable configuration every tick, but it
-        always costs the same, because the cycle is always there. Every tick,
-        mass forces a recursive walk through itself and into everything
-        connected to it.
+        Imagine you have a stack of tasks and one hour to finish them. If you
+        finish everything, you start tomorrow with a clean slate. If you don't
+        finish, the leftover tasks carry over — a <em>stack</em> that persists
+        into tomorrow. Now imagine that some of those leftover tasks, just by
+        sitting in the stack, generate new tasks that also won't finish
+        tomorrow. Your stack is permanent. It regenerates itself every day.
+        <strong>That self-perpetuating stack is mass.</strong>
+      </p>
+
+      <div class="novel-claim">
+        <p>
+          <strong
+            >Mass is not a property assigned to particles. It is the natural
+            consequence of graph interactions that exceed the per-tick budget
+            C.</strong
+          >
+          Any interaction that overflows C and forms a self-perpetuating
+          overflow topology becomes mass. Not every overflow persists — most
+          unwind in a few ticks and release their stored work as energy. But
+          certain overflow topologies form closed loops: the deferred frame
+          references nodes that reference back to it. These are stable
+          attractors of F. They don't unwind because each tick regenerates the
+          structure that overflows C again next tick. These stable overflows are
+          what we call matter.
+        </p>
+      </div>
+
+      <div class="figure">
+        <div class="scene-label">
+          Figure 3b — How Mass Arises: From Interaction to Stable Overflow
+        </div>
+        <svg
+          width="100%"
+          viewBox="0 0 800 440"
+          style="max-width: 800px; display: block; margin: 0 auto"
+        >
+          <defs>
+            <marker
+              id="ov1"
+              markerWidth="7"
+              markerHeight="7"
+              refX="6"
+              refY="3.5"
+              orient="auto"
+            >
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#2471a3" />
+            </marker>
+            <marker
+              id="ov2"
+              markerWidth="7"
+              markerHeight="7"
+              refX="6"
+              refY="3.5"
+              orient="auto"
+            >
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#c0392b" />
+            </marker>
+            <marker
+              id="ov3"
+              markerWidth="7"
+              markerHeight="7"
+              refX="6"
+              refY="3.5"
+              orient="auto"
+            >
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#1e8449" />
+            </marker>
+            <marker
+              id="ov4"
+              markerWidth="7"
+              markerHeight="7"
+              refX="6"
+              refY="3.5"
+              orient="auto"
+            >
+              <path d="M0,0 L7,3.5 L0,7 Z" fill="#f0b429" />
+            </marker>
+          </defs>
+
+          <!-- PANEL 1: Interaction within C -->
+          <g transform="translate(20, 16)">
+            <rect
+              width="370"
+              height="90"
+              rx="6"
+              fill="#eafaf1"
+              stroke="#1e8449"
+              stroke-width="1.5"
+            />
+            <text
+              x="185"
+              y="18"
+              text-anchor="middle"
+              fill="#1e8449"
+              font-size="11"
+              font-weight="700"
+            >
+              CASE 1 — INTERACTION RESOLVES WITHIN C
+            </text>
+            <!-- Two nodes -->
+            <circle
+              cx="60"
+              cy="56"
+              r="16"
+              fill="#1a1a2e"
+              stroke="#a8dadc"
+              stroke-width="2"
+            />
+            <text
+              x="60"
+              y="60"
+              text-anchor="middle"
+              fill="#a8dadc"
+              font-size="10"
+              font-weight="700"
+            >
+              A
+            </text>
+            <circle
+              cx="130"
+              cy="56"
+              r="16"
+              fill="#1a1a2e"
+              stroke="#a8dadc"
+              stroke-width="2"
+            />
+            <text
+              x="130"
+              y="60"
+              text-anchor="middle"
+              fill="#a8dadc"
+              font-size="10"
+              font-weight="700"
+            >
+              B
+            </text>
+            <!-- Interaction -->
+            <line
+              x1="76"
+              y1="56"
+              x2="114"
+              y2="56"
+              stroke="#1e8449"
+              stroke-width="2"
+              marker-end="url(#ov3)"
+            />
+            <text x="95" y="48" text-anchor="middle" fill="#888" font-size="8">
+              interact
+            </text>
+            <!-- Arrow to result -->
+            <text x="175" y="60" fill="#888" font-size="20">→</text>
+            <!-- Budget bar -->
+            <rect
+              x="200"
+              y="34"
+              width="150"
+              height="14"
+              rx="3"
+              fill="#eee"
+              stroke="#ccc"
+              stroke-width="1"
+            />
+            <rect
+              x="200"
+              y="34"
+              width="90"
+              height="14"
+              rx="3"
+              fill="#d5f5e3"
+              stroke="#1e8449"
+              stroke-width="1"
+            />
+            <text
+              x="245"
+              y="44"
+              text-anchor="middle"
+              fill="#1e8449"
+              font-size="8"
+              font-weight="700"
+            >
+              work done
+            </text>
+            <text x="310" y="44" text-anchor="middle" fill="#aaa" font-size="8">
+              spare C
+            </text>
+            <text x="275" y="24" text-anchor="middle" fill="#888" font-size="8">
+              fits within budget C
+            </text>
+            <!-- Return value -->
+            <text
+              x="200"
+              y="72"
+              fill="#1e8449"
+              font-size="10"
+              font-weight="700"
+            >
+              → returns energy. Propagates. No mass.
+            </text>
+            <text x="200" y="84" fill="#888" font-size="9">
+              This is light. This is most of what happens.
+            </text>
+          </g>
+
+          <!-- PANEL 2: Interaction exceeds C — overflow -->
+          <g transform="translate(20, 120)">
+            <rect
+              width="370"
+              height="108"
+              rx="6"
+              fill="#fff8f2"
+              stroke="#e67e22"
+              stroke-width="1.5"
+            />
+            <text
+              x="185"
+              y="18"
+              text-anchor="middle"
+              fill="#e67e22"
+              font-size="11"
+              font-weight="700"
+            >
+              CASE 2 — INTERACTION EXCEEDS C
+            </text>
+            <!-- Two nodes -->
+            <circle
+              cx="60"
+              cy="62"
+              r="16"
+              fill="#1a1a2e"
+              stroke="#a8dadc"
+              stroke-width="2"
+            />
+            <text
+              x="60"
+              y="66"
+              text-anchor="middle"
+              fill="#a8dadc"
+              font-size="10"
+              font-weight="700"
+            >
+              A
+            </text>
+            <circle
+              cx="130"
+              cy="62"
+              r="16"
+              fill="#1a1a2e"
+              stroke="#a8dadc"
+              stroke-width="2"
+            />
+            <text
+              x="130"
+              y="66"
+              text-anchor="middle"
+              fill="#a8dadc"
+              font-size="10"
+              font-weight="700"
+            >
+              B
+            </text>
+            <line
+              x1="76"
+              y1="62"
+              x2="114"
+              y2="62"
+              stroke="#e67e22"
+              stroke-width="2"
+              marker-end="url(#ov1)"
+            />
+            <text x="95" y="54" text-anchor="middle" fill="#888" font-size="8">
+              interact
+            </text>
+            <text x="175" y="66" fill="#888" font-size="20">→</text>
+            <!-- Budget bar — overflows -->
+            <rect
+              x="200"
+              y="38"
+              width="150"
+              height="14"
+              rx="3"
+              fill="#fdebd0"
+              stroke="#e67e22"
+              stroke-width="1"
+            />
+            <rect
+              x="200"
+              y="38"
+              width="150"
+              height="14"
+              rx="3"
+              fill="#e67e22"
+              stroke="#e67e22"
+              stroke-width="1"
+              opacity="0.7"
+            />
+            <text
+              x="275"
+              y="48"
+              text-anchor="middle"
+              fill="white"
+              font-size="8"
+              font-weight="700"
+            >
+              FULL — C exhausted
+            </text>
+            <text
+              x="275"
+              y="28"
+              text-anchor="middle"
+              fill="#e67e22"
+              font-size="8"
+              font-weight="700"
+            >
+              exceeds budget C
+            </text>
+            <!-- Overflow stack frame -->
+            <rect
+              x="200"
+              y="58"
+              width="150"
+              height="20"
+              rx="3"
+              fill="#fadbd8"
+              stroke="#c0392b"
+              stroke-width="1.5"
+            />
+            <text
+              x="275"
+              y="72"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="9"
+              font-weight="700"
+            >
+              OVERFLOW → stack frame
+            </text>
+            <text
+              x="200"
+              y="96"
+              fill="#c0392b"
+              font-size="10"
+              font-weight="700"
+            >
+              → unresolved work persists into next tick.
+            </text>
+            <text x="200" y="108" fill="#888" font-size="9">
+              Most overflows unwind in a few ticks → release as energy.
+            </text>
+          </g>
+
+          <!-- PANEL 3: Stable overflow — mass -->
+          <g transform="translate(20, 244)">
+            <rect
+              width="370"
+              height="108"
+              rx="6"
+              fill="#fdedec"
+              stroke="#c0392b"
+              stroke-width="2"
+            />
+            <text
+              x="185"
+              y="18"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="11"
+              font-weight="700"
+            >
+              CASE 3 — OVERFLOW STABILISES → MASS
+            </text>
+            <!-- Self-ref loop -->
+            <circle
+              cx="95"
+              cy="64"
+              r="24"
+              fill="#641e16"
+              stroke="#c0392b"
+              stroke-width="2.5"
+            />
+            <text
+              x="95"
+              y="60"
+              text-anchor="middle"
+              fill="#fad5a5"
+              font-size="10"
+              font-weight="700"
+            >
+              overflow
+            </text>
+            <text
+              x="95"
+              y="72"
+              text-anchor="middle"
+              fill="#f1948a"
+              font-size="8"
+            >
+              topology
+            </text>
+            <path
+              d="M 115 44 Q 148 28 148 56 Q 148 72 119 78"
+              stroke="#c0392b"
+              stroke-width="1.5"
+              fill="none"
+              marker-end="url(#ov2)"
+              stroke-dasharray="4,2"
+            />
+            <text x="160" y="50" fill="#c0392b" font-size="8">self-ref</text>
+            <!-- Stack frames -->
+            <rect
+              x="200"
+              y="34"
+              width="120"
+              height="14"
+              rx="2"
+              fill="#fadbd8"
+              stroke="#c0392b"
+              stroke-width="1"
+            />
+            <rect
+              x="200"
+              y="50"
+              width="120"
+              height="14"
+              rx="2"
+              fill="#f1948a"
+              stroke="#c0392b"
+              stroke-width="1"
+            />
+            <rect
+              x="200"
+              y="66"
+              width="120"
+              height="14"
+              rx="2"
+              fill="#ec7063"
+              stroke="#c0392b"
+              stroke-width="1"
+            />
+            <text x="335" y="58" fill="#c0392b" font-size="9" font-weight="700">
+              ← stack depth = m
+            </text>
+            <text
+              x="260"
+              y="44"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="8"
+            >
+              frame (C work)
+            </text>
+            <text
+              x="260"
+              y="60"
+              text-anchor="middle"
+              fill="white"
+              font-size="8"
+            >
+              frame (C work)
+            </text>
+            <text
+              x="260"
+              y="76"
+              text-anchor="middle"
+              fill="white"
+              font-size="8"
+            >
+              frame (C work)
+            </text>
+            <text
+              x="185"
+              y="98"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="10"
+              font-weight="700"
+            >
+              Each tick regenerates the overflow. Stack persists.
+            </text>
+            <text
+              x="185"
+              y="110"
+              text-anchor="middle"
+              fill="#555"
+              font-size="9"
+            >
+              This is mass. Self-perpetuating. Stable. Expensive every tick.
+            </text>
+          </g>
+
+          <!-- PANEL 4: Annihilation -->
+          <g transform="translate(410, 16)">
+            <rect
+              width="370"
+              height="336"
+              rx="6"
+              fill="#f9f6ee"
+              stroke="#d4a017"
+              stroke-width="2"
+            />
+            <text
+              x="185"
+              y="20"
+              text-anchor="middle"
+              fill="#d4a017"
+              font-size="11"
+              font-weight="700"
+            >
+              CASE 4 — ANNIHILATION: STACKS CANCEL
+            </text>
+
+            <!-- Matter stack -->
+            <rect
+              x="40"
+              y="52"
+              width="80"
+              height="14"
+              rx="2"
+              fill="#dbeafe"
+              stroke="#2471a3"
+              stroke-width="1"
+            />
+            <rect
+              x="40"
+              y="68"
+              width="80"
+              height="14"
+              rx="2"
+              fill="#bfdbfe"
+              stroke="#2471a3"
+              stroke-width="1"
+            />
+            <rect
+              x="40"
+              y="84"
+              width="80"
+              height="14"
+              rx="2"
+              fill="#93c5fd"
+              stroke="#2471a3"
+              stroke-width="1"
+            />
+            <text
+              x="80"
+              y="40"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="9"
+              font-weight="700"
+            >
+              matter stack
+            </text>
+            <text
+              x="80"
+              y="64"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="8"
+            >
+              C work
+            </text>
+            <text
+              x="80"
+              y="80"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="8"
+            >
+              C work
+            </text>
+            <text
+              x="80"
+              y="96"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="8"
+            >
+              C work
+            </text>
+
+            <!-- Antimatter stack -->
+            <rect
+              x="250"
+              y="52"
+              width="80"
+              height="14"
+              rx="2"
+              fill="#fadbd8"
+              stroke="#c0392b"
+              stroke-width="1"
+            />
+            <rect
+              x="250"
+              y="68"
+              width="80"
+              height="14"
+              rx="2"
+              fill="#f1948a"
+              stroke="#c0392b"
+              stroke-width="1"
+            />
+            <rect
+              x="250"
+              y="84"
+              width="80"
+              height="14"
+              rx="2"
+              fill="#ec7063"
+              stroke="#c0392b"
+              stroke-width="1"
+            />
+            <text
+              x="290"
+              y="40"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="9"
+              font-weight="700"
+            >
+              antimatter stack
+            </text>
+            <text
+              x="290"
+              y="64"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="8"
+            >
+              C work
+            </text>
+            <text
+              x="290"
+              y="80"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="8"
+            >
+              C work
+            </text>
+            <text
+              x="290"
+              y="96"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="8"
+            >
+              C work
+            </text>
+
+            <!-- Collision -->
+            <text
+              x="185"
+              y="122"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="24"
+            >
+              💥
+            </text>
+            <text
+              x="185"
+              y="145"
+              text-anchor="middle"
+              fill="#555"
+              font-size="10"
+              font-weight="700"
+            >
+              stacks cancel — all frames unwind at once
+            </text>
+
+            <!-- E = mc² result -->
+            <rect
+              x="35"
+              y="162"
+              width="300"
+              height="56"
+              rx="6"
+              fill="#1a1a2e"
+              stroke="#d4a017"
+              stroke-width="2"
+            />
+            <text
+              x="185"
+              y="182"
+              text-anchor="middle"
+              fill="#d4a017"
+              font-size="13"
+              font-weight="700"
+            >
+              E = m × C × C
+            </text>
+            <text
+              x="185"
+              y="200"
+              text-anchor="middle"
+              fill="#9ab0b8"
+              font-size="10"
+            >
+              m frames · C stored per frame · C propagation rate
+            </text>
+
+            <!-- Photons out -->
+            <line
+              x1="185"
+              y1="222"
+              x2="120"
+              y2="260"
+              stroke="#f0b429"
+              stroke-width="2.5"
+              marker-end="url(#ov4)"
+            />
+            <line
+              x1="185"
+              y1="222"
+              x2="250"
+              y2="260"
+              stroke="#f0b429"
+              stroke-width="2.5"
+              marker-end="url(#ov4)"
+            />
+            <line
+              x1="185"
+              y1="222"
+              x2="150"
+              y2="270"
+              stroke="#f0b429"
+              stroke-width="2.5"
+              marker-end="url(#ov4)"
+            />
+            <line
+              x1="185"
+              y1="222"
+              x2="220"
+              y2="270"
+              stroke="#f0b429"
+              stroke-width="2.5"
+              marker-end="url(#ov4)"
+            />
+            <line
+              x1="185"
+              y1="222"
+              x2="80"
+              y2="255"
+              stroke="#f0b429"
+              stroke-width="2"
+              marker-end="url(#ov4)"
+              opacity="0.7"
+            />
+            <line
+              x1="185"
+              y1="222"
+              x2="290"
+              y2="255"
+              stroke="#f0b429"
+              stroke-width="2"
+              marker-end="url(#ov4)"
+              opacity="0.7"
+            />
+            <text
+              x="185"
+              y="300"
+              text-anchor="middle"
+              fill="#f0b429"
+              font-size="10"
+              font-weight="700"
+            >
+              pure photons — every frame's return value released
+            </text>
+            <text
+              x="185"
+              y="316"
+              text-anchor="middle"
+              fill="#888"
+              font-size="9"
+            >
+              no overflow left · no mass · all energy · all at c
+            </text>
+          </g>
+
+          <!-- Bottom summary -->
+          <rect
+            x="20"
+            y="380"
+            width="760"
+            height="50"
+            rx="6"
+            fill="#f5f3ec"
+            stroke="#ddd"
+            stroke-width="1"
+          />
+          <text
+            x="400"
+            y="400"
+            text-anchor="middle"
+            fill="#333"
+            font-size="11"
+            font-weight="700"
+          >
+            Resolves within C → energy, propagation, no mass. Overflows C and
+            stabilises → mass. Stacks cancel → E = mc².
+          </text>
+          <text x="400" y="420" text-anchor="middle" fill="#888" font-size="10">
+            Mass is not installed. It is what happens when computation overflows
+            and the overflow is self-perpetuating.
+          </text>
+        </svg>
+        <div class="figure-caption">
+          Four cases of graph interaction. Case 1: the combined graph fits
+          within C — clean resolution, produces energy, no mass. This is what
+          photons are. Case 2: exceeds C — unresolved work carries over as a
+          stack frame. Most of these unwind quickly. Case 3: the overflow
+          topology references itself — each tick regenerates the overflow. Stack
+          depth = mass. This is matter. Case 4: two complementary stacks meet
+          and cancel — all stored computation releases as E = mc².
+        </div>
+      </div>
+
+      <h3>The Big Bang as Overflow Sorting</h3>
+
+      <p>
+        This gives us a formation story for the early universe. The Big Bang was
+        a state of maximum graph interaction density. Nearly everything
+        overflowed C. The first fractions of a second were a massive sorting
+        process: unstable overflows decayed — their stack frames unwinding,
+        releasing stored work as energy — while stable overflow topologies
+        persisted. The particles that survived are exactly the overflow
+        topologies that are stable attractors of F.
+      </p>
+
+      <p>
+        Protons are stable — their overflow topology regenerates identically
+        every tick. Free neutrons are not — their topology slowly unwinds (they
+        decay in about ten minutes). This maps directly onto particle physics'
+        actual stability hierarchy. The framework doesn't need to explain why
+        <em>these specific</em> particles and not others — it only needs to
+        explain why stable particles exist at all. The answer: because
+        self-perpetuating overflow is inevitable in any sufficiently active
+        graph.
       </p>
 
       <div class="callout callout-blue">
-        <strong class="label"
-          >A Boundary Condition Worth Stating Clearly</strong
-        >
-        If you're wondering what the cycle looks like at the data layer — how
-        many nodes, what topology — the honest answer is: we don't know, and we
-        can't know. Quarks, gluons, color charge, the strong force — these are
-        render-layer descriptions. They are what the projection function P
-        produces when rendering the proton's data-layer structure onto the
-        screen. A proton might be 3 nodes at the data layer, or 500, or 10,000.
-        QCD describes what that looks like from inside the render layer, with
-        extraordinary precision. But QCD is a description of the screen, not the
-        engine.<br /><br />
-        What the framework requires is not a specific topology. It requires
-        only:
-        <em
-          >there exists a stable self-referential subgraph whose resolution walk
-          is expensive and self-perpetuating.</em
-        >
-        That claim is agnostic about the details. The render layer's quarks and
-        gluons are the shadow that structure casts on the screen.
+        <strong class="label">What about photons, quarks, the Higgs?</strong>
+        In this framework, the render layer's vocabulary — quarks, gluons,
+        leptons, bosons — describes what stable overflow topologies look like
+        from inside the projection. The framework is agnostic about data-layer
+        topology. It requires only: some overflows stabilise, and their
+        structure determines their properties.<br /><br />
+        A photon is a graph that resolves fully within C. No overflow, no stack,
+        no mass. It uses its entire budget propagating — that's why it travels
+        at c and experiences no time.<br /><br />
+        The Higgs field, in this picture, is a background graph structure
+        present everywhere. For some particle topologies, interacting with it
+        pushes their total graph complexity past C — creating the overflow that
+        becomes mass. For others (photons, gluons), the Higgs interaction
+        doesn't push them past C. Same field, different topologies, different
+        outcomes. The Higgs mechanism is a graph interaction that selectively
+        causes overflow.
       </div>
+
+      <h3>What Mass Does Every Tick</h3>
+
+      <p>
+        Once a stable overflow exists, it behaves exactly as the previous
+        sections described: it forces a strict resolution walk every tick. The
+        self-referential cycle cannot be deferred — if you skip it, you lose the
+        configuration. The walk fans out into neighboring nodes. Those neighbors
+        pay the cost. This is gravity, and Section 05 covers it in detail.
+      </p>
+
+      <p>
+        But now we know <em>why</em> the cycle exists. It wasn't installed as a
+        feature of the universe. It arose because graph interactions that exceed
+        C can produce self-perpetuating overflow, and self-perpetuating overflow
+        is a fixed point of F.
+      </p>
 
       <div class="big-claim">
         <p>
-          Mass is a self-stabilizing cyclic subgraph. It is expensive to resolve
-          not because it is big, but because it cannot be resolved shallowly.
-          Every tick, the cycle runs. Every tick, the walk fans out into
-          neighboring nodes. Neighbors pay.
+          Mass is a self-stabilising overflow of the per-tick budget C. It is
+          expensive to resolve not because it is big, but because its overflow
+          regenerates every tick. The walk fans out into neighboring nodes.
+          Neighbors pay. That cost gradient is gravity.
         </p>
       </div>
 
@@ -2604,11 +3522,7 @@
               <stop offset="100%" stop-color="#c0392b" stop-opacity="0" />
             </radialGradient>
           </defs>
-
-          <!-- Walk radius glow -->
           <ellipse cx="400" cy="150" rx="340" ry="130" fill="url(#walkGlow)" />
-
-          <!-- TICK label -->
           <text
             x="400"
             y="18"
@@ -2617,10 +3531,8 @@
             font-size="10"
             font-family="'JetBrains Mono',monospace"
           >
-            EVERY TICK — resolution walk fans out from mass
+            EVERY TICK — the overflow's resolution walk fans out from mass
           </text>
-
-          <!-- Mass core -->
           <circle
             cx="400"
             cy="150"
@@ -2646,9 +3558,8 @@
             fill="#f1948a"
             font-size="8"
           >
-            cyclic subgraph
+            stable overflow
           </text>
-          <!-- Self-reference arc -->
           <path
             d="M 424 120 Q 462 88 460 120 Q 456 148 434 148"
             stroke="#c0392b"
@@ -2657,8 +3568,6 @@
             marker-end="url(#mw1)"
             stroke-dasharray="4,2"
           />
-
-          <!-- Walk ring 1: immediate neighbors — HIGH cost -->
           <circle
             cx="280"
             cy="148"
@@ -2685,7 +3594,6 @@
           >
             –60% budget
           </text>
-
           <circle
             cx="520"
             cy="148"
@@ -2712,7 +3620,6 @@
           >
             –60% budget
           </text>
-
           <circle
             cx="360"
             cy="80"
@@ -2739,7 +3646,6 @@
           >
             –60%
           </text>
-
           <circle
             cx="440"
             cy="80"
@@ -2766,8 +3672,6 @@
           >
             –60%
           </text>
-
-          <!-- Walk edges to ring 1 -->
           <line
             x1="367"
             y1="150"
@@ -2808,8 +3712,6 @@
             marker-end="url(#mw1)"
             stroke-dasharray="5,3"
           />
-
-          <!-- Walk ring 2: second tier — MEDIUM cost -->
           <circle
             cx="165"
             cy="148"
@@ -2836,7 +3738,6 @@
           >
             –20%
           </text>
-
           <circle
             cx="635"
             cy="148"
@@ -2863,7 +3764,6 @@
           >
             –20%
           </text>
-
           <line
             x1="260"
             y1="148"
@@ -2886,8 +3786,6 @@
             stroke-dasharray="7,4"
             opacity="0.7"
           />
-
-          <!-- Walk ring 3: far — LOW cost -->
           <circle
             cx="68"
             cy="148"
@@ -2902,7 +3800,6 @@
           <text x="68" y="157" text-anchor="middle" fill="#888" font-size="8">
             –2%
           </text>
-
           <circle
             cx="732"
             cy="148"
@@ -2917,7 +3814,6 @@
           <text x="732" y="157" text-anchor="middle" fill="#888" font-size="8">
             –2%
           </text>
-
           <line
             x1="147"
             y1="148"
@@ -2940,8 +3836,6 @@
             stroke-dasharray="9,5"
             opacity="0.5"
           />
-
-          <!-- Legend -->
           <text
             x="400"
             y="242"
@@ -2970,26 +3864,41 @@
           </text>
         </svg>
         <div class="figure-caption">
-          Every tick, the scheduler resolves mass. That resolution is a graph
-          walk that fans out from the cyclic core. Nodes close to mass are
-          deeply traversed — their budget is consumed by the walk. Nodes far
-          away are barely touched. The gradient of budget-remaining across the
-          graph is the gravitational field. Objects move along the cheapest path
-          through the graph. That path leads toward mass — not because mass
-          pulls them, but because the walk has already consumed the budget in
-          the other direction.
+          Every tick, the scheduler resolves the overflow. That resolution is a
+          graph walk that fans out from the self-referential core. Nodes close
+          to mass are deeply traversed — their budget is consumed by the walk.
+          Nodes far away are barely touched. The gradient of budget-remaining
+          across the graph is the gravitational field.
         </div>
       </div>
 
       <div class="callout callout-dark">
         <strong class="label">Why Mass Doesn't Disappear</strong>
-        The cyclic subgraph converges to the same configuration every tick. The
-        walk resolves, the configuration re-emerges, identical. Mass is
-        permanent because its resolution produces the very structure that
-        requires its resolution next tick. It is a stable attractor. To destroy
-        mass is to break the cycle — which is exactly what happens in
-        annihilation: particle meets antiparticle, the cycles cancel, and the
-        stored walk cost releases entirely as energy.
+        Mass doesn't disappear because the overflow that created it is
+        self-sustaining. Each tick's resolution produces exactly the structure
+        that overflows C again next tick. It's not that someone designed a loop
+        — it's that this particular overflow topology is a stable attractor of
+        F. To destroy mass is to break the overflow — which is exactly what
+        happens in annihilation: two complementary overflows meet, their stack
+        frames cancel, and all stored computation returns at once as energy.
+      </div>
+
+      <div class="we-built-it">
+        <strong
+          >A system where most processes complete within the time budget, but
+          some overflow and persist as background jobs that consume resources
+          from everything around them?</strong
+        ><br /><br />
+        This is every operating system ever built. Most function calls complete
+        within the scheduler's time slice. Occasionally, a process spawns a
+        computation that can't finish in one slice — it gets context-switched
+        out and its state persists on the stack for the next slice. If that
+        process is recursive and self-referential (say, a server daemon), it
+        never finishes. It runs every slice, consumes resources every slice, and
+        everything sharing its cache lines, memory bus, and scheduler queue pays
+        the cost. <em>That daemon is a mass object.</em> The resource drain on
+        its neighbors is gravity. The fact that no other process can opt out is
+        unshieldability.
       </div>
 
       <!-- ═══════════════════════════════════════════════════════════ -->
@@ -3014,15 +3923,18 @@
       <p>
         Now the payoff. We don't need to invoke curved spacetime. We don't need
         a force carrier. We don't need sixteen coupled differential equations.
-        We need exactly one thing: the mass subgraph's resolution walk consumes
-        budget from every node it touches, and it fans out with distance.
+        We need exactly one thing: the mass overflow's resolution walk consumes
+        budget from every node it touches, and it fans out with distance. C is
+        the total budget. B is what's left for a region after mass's walk has
+        taken its share. Near a massive object, B is much less than C. At an
+        event horizon, B = 0.
       </p>
 
       <div class="novel-claim">
         <p>
           Gravity is not a force. It is not curvature. It is the
           <strong
-            >budget deficit created by a cyclic subgraph's resolution
+            >budget deficit created by a stable overflow's resolution
             walk</strong
           >
           fanning out through the dependency graph every tick. Nodes near mass
@@ -3030,8 +3942,8 @@
           We experience that deficit as time running slower near mass. Objects
           route toward the minimum-budget path through the graph. We experience
           that routing as gravitational attraction. No force is transmitted. No
-          fabric bends. One subgraph is expensive, and everything in the graph
-          pays a share of the cost.
+          fabric bends. One subgraph overflows C every tick, and everything in
+          the graph pays a share of the cost.
         </p>
       </div>
 
@@ -3059,7 +3971,7 @@
       </p>
 
       <p>
-        Mass changes the edge costs in its neighborhood. The cyclic subgraph's
+        Mass changes the edge costs in its neighborhood. The overflow's
         resolution walk makes nearby traversals expensive — it consumes budget
         that those edges would otherwise have available. The local edge costs go
         up. This changes the routing table: paths that used to be equally cheap
@@ -3098,8 +4010,8 @@
         graph's routing structure. The field equations — G<sub>μν</sub> =
         8πT<sub>μν</sub> — relate the curvature of spacetime (left side) to the
         distribution of mass-energy (right side). In this framework: they relate
-        the routing cost gradient (left) to the cyclic subgraph density (right).
-        Same relationship. GR didn't get it wrong. It measured the routing table
+        the routing cost gradient (left) to the overflow density (right). Same
+        relationship. GR didn't get it wrong. It measured the routing table
         exactly right. It just didn't know what a routing table was.
       </div>
 
@@ -3116,9 +4028,9 @@
           walk reaches them.
         </div>
         <div class="col-cell hl">
-          <span class="tag tag-th">Theory</span><br />Mass is a cyclic subgraph.
-          Its resolution walk traverses neighboring nodes and consumes their
-          tick budget. Walk cost is highest near mass, falls with graph
+          <span class="tag tag-th">Theory</span><br />Mass is a stable overflow
+          of C. Its resolution walk traverses neighboring nodes and consumes
+          their tick budget. Walk cost is highest near mass, falls with graph
           distance. Nodes with less remaining budget undergo fewer state changes
           per tick — local time slows. Objects route along cheapest graph paths
           toward mass.
@@ -3548,14 +4460,20 @@
       </div>
 
       <div class="callout callout-dark">
-        <strong class="label">The Two Quantities</strong>
-        <strong>C — The global ordering step.</strong> Not a rate in time. C is
-        the sequencing operator. Each step is causally downstream of the
-        previous. C never varies. It is not a clock. It is the causal index.<br /><br />
-        <strong>B — The local resolution budget.</strong> Per region. Per
-        ordering step. Finite. This is what the massive object's dependency
-        chain consumes from neighboring regions. Less B means fewer state
-        changes completed per ordering step. Less B means a lower revision rate.
+        <strong class="label">The Three Quantities</strong>
+        <strong>&Omega; — The causal index.</strong> The tick counter. Which
+        step are we on? &Omega; advances by one each tick. It is not a rate, not
+        a clock, not a time variable. It is the logical sequence of state
+        transitions.<br /><br />
+        <strong>C — The per-tick computational budget.</strong> The total amount
+        of graph work the engine can do per tick. Fixed. Universal. This is what
+        determines the speed of light: a graph that resolves fully within C
+        propagates one hop per tick. That rate is c.<br /><br />
+        <strong>B — A region's remaining share of C.</strong> Per region. Per
+        tick. B ≤ C. This is what the massive object's overflow walk consumes
+        from neighboring regions. Less B means fewer state changes completed per
+        tick. Less B means a lower revision rate.
+        <em>Less B means slower time.</em>
       </div>
 
       <div class="figure">
@@ -3978,7 +4896,7 @@
         slower for them during travel. The honest explanation in this framework:
         fewer net state changes accumulated. But this raises a question the
         framework must answer: <em>why</em> does moving fast consume revision
-        budget? Mass consumes budget because its cyclic subgraph fans into
+        budget? Mass consumes budget because its overflow walk fans into
         neighbors every tick — that mechanism is clear. What's the mechanism for
         velocity?
       </p>
@@ -5621,6 +6539,67 @@
         </p>
       </div>
 
+      <h3>Velocity Dilation — Why Moving Clocks Run Slow</h3>
+
+      <div class="physics-primer">
+        <strong>Velocity time dilation</strong>, predicted by Special Relativity
+        and confirmed by particle accelerators and GPS satellites, says that
+        moving clocks run slower. A muon created in the upper atmosphere by
+        cosmic rays should decay in 2.2 microseconds — too fast to reach the
+        ground. But muons <em>do</em> reach the ground, because from our frame
+        of reference their internal clock runs slower due to their near-light
+        speed. This has been measured thousands of times. The question is not
+        whether it happens. The question is the mechanism.
+      </div>
+
+      <p>
+        Gravitational dilation happens because mass consumes your budget.
+        Velocity dilation happens because
+        <strong>motion itself costs budget.</strong>
+      </p>
+
+      <p>
+        Moving through the graph means rewriting your edge connections every
+        tick — you are changing which nodes you are adjacent to. That rewriting
+        consumes part of C. The faster you move — the more edges rewritten per
+        tick — the less budget remains for local state changes. Your revision
+        rate drops. Your internal clock slows.
+      </p>
+
+      <p>
+        At the speed of light, <em>all</em> of C is consumed by propagation. No
+        budget remains for internal state changes. A photon uses its entire
+        budget moving. It has zero budget for internal revision. This is why
+        photons experience no time — not because "time stops for light" in some
+        mystical sense, but because propagation at c uses the full computational
+        budget. There is nothing left over for the internal state to change.
+      </p>
+
+      <div class="novel-claim">
+        <p>
+          <strong>Velocity time dilation is budget spent on motion.</strong>
+          Every edge rewrite (change of position in the graph) costs budget.
+          More motion = more edge rewrites = less B remaining for local state
+          changes. At v = c, the entire budget C is consumed by propagation. B =
+          0 for internal state. This is structurally identical to gravitational
+          dilation — both are mechanisms that reduce B below C. Gravity does it
+          by mass consuming your budget externally. Velocity does it by motion
+          consuming your budget internally. Both produce the same result: fewer
+          revisions per tick.
+        </p>
+      </div>
+
+      <div class="callout callout-blue">
+        <strong class="label">Why This Matters for c as a Speed Limit</strong>
+        You cannot exceed the speed of light because you cannot spend more than
+        C per tick. C is the total budget. If all of it goes to motion (edge
+        rewrites), there is zero left — you have reached the structural maximum.
+        Going "faster" would require spending more than C, which is like writing
+        a cheque for more than your bank balance. The speed limit is not imposed
+        by nature as a rule. It is a consequence of finite budget. You simply
+        run out of C before you can go faster.
+      </div>
+
       <h3>The Arrow of Time — Dissolved</h3>
 
       <p>
@@ -6118,6 +7097,18 @@
           below-&theta; behaviour becomes experimentally visible at measurable
           scales.
         </p>
+      </div>
+
+      <div class="callout callout-dark">
+        <strong class="label">What θ Actually Is</strong>
+        &theta; is not an arbitrary line. It is the activity level below which a
+        node's resolution cost is so small relative to C that the engine gains
+        nothing by committing it — and gains efficiency by deferring resolution
+        and tracing its potential contributions instead. Above &theta;, the node
+        consumes enough of C that F <em>must</em> commit a value to keep the
+        graph consistent. Below &theta;, F carries the node as open potential.
+        The threshold is anchored to the per-tick budget C — it is a consequence
+        of efficient scheduling, not a free parameter imposed by the framework.
       </div>
 
       <!-- Figure: Two Passes -->
@@ -9954,12 +10945,12 @@
       </div>
 
       <!-- ═══════════════════════════════════════════════════════════ -->
-      <!-- SECTION 8: E = MC² -->
+      <!-- SECTION 10: E = MC² -->
       <!-- ═══════════════════════════════════════════════════════════ -->
 
       <div class="section-header">
         <span class="section-num">10</span>
-        <h2>E = mc² — Mass is Stored Computation</h2>
+        <h2>E = mc² — Why c Is Squared</h2>
       </div>
 
       <div class="physics-primer">
@@ -9969,29 +10960,80 @@
         energy. This is why nuclear reactions release so much power from so
         little material, and why a particle annihilating with its antiparticle
         produces a burst of pure energy. It is among the most verified equations
-        in physics.
+        in physics. But it has never had a structural explanation for
+        <em>why</em> c appears squared.
       </div>
 
       <p>
-        Einstein's most famous equation now becomes intuitive. But we want to be
-        precise about what it means in this framework, and honest about what we
-        can and can't claim.
+        Now that we know what mass is — a stack of overflow frames, each
+        containing one tick's worth of unfinished computation — and what C is —
+        the per-tick budget — the most famous equation in physics stops being
+        mysterious.
       </p>
 
-      <div class="callout callout-dark">
-        <strong class="label">The Honest Version</strong>
-        The framework is fully consistent with E = mc² and offers a compelling
-        geometric argument for why c appears squared. It is not a formal
-        derivation — that would require showing the render layer produces
-        Minkowski geometry from first principles, which hasn't been done. What
-        follows is the intuition, clearly marked as such.
+      <h3>The Two Roles of C</h3>
+
+      <p>
+        C appears squared because it plays two distinct roles in graph
+        mechanics. Both roles are consequences of C being the universal per-tick
+        budget. Neither is a coincidence.
+      </p>
+
+      <p>
+        <strong>First C — storage.</strong> Each stack frame exists because it
+        contains one tick's worth of work that couldn't complete within C. By
+        definition, each frame holds C units of deferred computation. That's
+        what a frame <em>is</em>: one C-worth of overflow. Total stored
+        computation across all frames = m × C.
+      </p>
+
+      <p>
+        <strong>Second C — propagation.</strong> When the stack unwinds — when
+        mass converts to energy — the return values propagate through the graph.
+        The maximum rate of propagation is C per tick. That's the speed of
+        light. So the total <em>impact</em> on the system — the energy released
+        — equals the stored computation times the rate at which it can propagate
+        and affect the rest of the graph.
+      </p>
+
+      <p>
+        Total energy = stack depth × work stored per frame × propagation rate =
+        <strong>m × C × C</strong>.
+      </p>
+
+      <div class="novel-claim">
+        <p>
+          <strong
+            >E = mc² is the total return value of dissolving an overflow
+            stack.</strong
+          >
+          Each of m frames holds C worth of deferred computation. When the
+          overflow unwinds, results propagate at rate C. The squaring is not
+          mysterious — C appears twice because it plays two structural roles. It
+          determines how much work is stored per overflow frame (first C), and
+          it determines how fast released computation propagates through the
+          graph (second C). Both roles arise from C being the universal per-tick
+          budget. The same quantity, serving two functions, multiplied together.
+        </p>
       </div>
 
+      <p>
+        Think of mass as a warehouse full of unfinished work orders. Each shelf
+        holds one day's worth of work that didn't get done — that's C, one
+        tick's capacity. The warehouse has m shelves. When you tear down the
+        warehouse, all that stored work gets released into the system. But it
+        can only flow out through the loading dock at a maximum rate of C per
+        day. Total impact = number of shelves × work per shelf × flow rate.
+        That's m × C × C. That's E = mc².
+      </p>
+
       <div class="figure">
-        <div class="scene-label">Figure 14 — What E = mc² Actually Means</div>
+        <div class="scene-label">
+          Figure 14 — Why c Is Squared: The Geometry of Overflow Energy
+        </div>
         <svg
           width="100%"
-          viewBox="0 0 800 230"
+          viewBox="0 0 800 480"
           style="max-width: 800px; display: block; margin: 0 auto"
         >
           <defs>
@@ -10037,341 +11079,796 @@
             </marker>
           </defs>
 
-          <!-- E -->
-          <rect
-            x="20"
-            y="40"
-            width="110"
-            height="90"
-            rx="6"
-            fill="#fadbd8"
-            stroke="#c0392b"
-            stroke-width="2"
-          />
-          <text
-            x="75"
-            y="80"
-            text-anchor="middle"
-            fill="#c0392b"
-            font-size="36"
-            font-weight="700"
-            font-family="'Lora',serif"
-          >
-            E
-          </text>
-          <text
-            x="75"
-            y="100"
-            text-anchor="middle"
-            fill="#c0392b"
-            font-size="11"
-          >
-            Total Energy
-          </text>
-          <text x="75" y="115" text-anchor="middle" fill="#888" font-size="10">
-            = return value
-          </text>
-          <text x="75" y="152" text-anchor="middle" fill="#444" font-size="10">
-            Total output when all
-          </text>
-          <text x="75" y="167" text-anchor="middle" fill="#444" font-size="10">
-            pending frames resolve
-          </text>
-
-          <text x="144" y="94" fill="#555" font-size="30">=</text>
-
-          <!-- m -->
-          <rect
-            x="158"
-            y="40"
-            width="110"
-            height="90"
-            rx="6"
-            fill="#eaf4fc"
-            stroke="#2471a3"
-            stroke-width="2"
-          />
-          <text
-            x="213"
-            y="80"
-            text-anchor="middle"
-            fill="#2471a3"
-            font-size="36"
-            font-weight="700"
-            font-family="'Lora',serif"
-          >
-            m
-          </text>
-          <text
-            x="213"
-            y="100"
-            text-anchor="middle"
-            fill="#2471a3"
-            font-size="11"
-          >
-            Mass
-          </text>
-          <text x="213" y="115" text-anchor="middle" fill="#888" font-size="10">
-            = stored computation
-          </text>
-          <text x="213" y="152" text-anchor="middle" fill="#444" font-size="10">
-            Self-referential state
-          </text>
-          <text x="213" y="167" text-anchor="middle" fill="#444" font-size="10">
-            depth of its eval stack
-          </text>
-
-          <text x="282" y="94" fill="#555" font-size="26">×</text>
-
-          <!-- c² -->
-          <rect
-            x="296"
-            y="40"
-            width="110"
-            height="90"
-            rx="6"
-            fill="#eafaf1"
-            stroke="#1e8449"
-            stroke-width="2"
-          />
-          <text
-            x="351"
-            y="80"
-            text-anchor="middle"
-            fill="#1e8449"
-            font-size="36"
-            font-weight="700"
-            font-family="'Lora',serif"
-          >
-            c²
-          </text>
-          <text
-            x="351"
-            y="100"
-            text-anchor="middle"
-            fill="#1e8449"
-            font-size="11"
-          >
-            Clock rate²
-          </text>
-          <text x="351" y="115" text-anchor="middle" fill="#888" font-size="10">
-            = C × C
-          </text>
-          <text x="351" y="152" text-anchor="middle" fill="#444" font-size="10">
-            Rate frames add ×
-          </text>
-          <text x="351" y="167" text-anchor="middle" fill="#444" font-size="10">
-            rate results propagate
-          </text>
-
-          <!-- Annihilation diagram -->
-          <g transform="translate(470, 20)">
+          <!-- LEFT: THE STACK (Mass = m frames) -->
+          <g transform="translate(20, 16)">
+            <rect
+              width="180"
+              height="230"
+              rx="6"
+              fill="#eaf4fc"
+              stroke="#2471a3"
+              stroke-width="2"
+            />
             <text
-              x="160"
-              y="18"
+              x="90"
+              y="22"
               text-anchor="middle"
-              fill="#555"
+              fill="#2471a3"
+              font-size="12"
+              font-weight="700"
+            >
+              THE STACK
+            </text>
+            <text x="90" y="38" text-anchor="middle" fill="#888" font-size="9">
+              Mass = m overflow frames
+            </text>
+
+            <!-- Stack frames -->
+            <rect
+              x="20"
+              y="52"
+              width="140"
+              height="24"
+              rx="3"
+              fill="#dbeafe"
+              stroke="#2471a3"
+              stroke-width="1.5"
+            />
+            <text
+              x="90"
+              y="68"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="10"
+            >
+              C work stored
+            </text>
+            <rect
+              x="20"
+              y="80"
+              width="140"
+              height="24"
+              rx="3"
+              fill="#bfdbfe"
+              stroke="#2471a3"
+              stroke-width="1.5"
+            />
+            <text
+              x="90"
+              y="96"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="10"
+            >
+              C work stored
+            </text>
+            <rect
+              x="20"
+              y="108"
+              width="140"
+              height="24"
+              rx="3"
+              fill="#93c5fd"
+              stroke="#2471a3"
+              stroke-width="1.5"
+            />
+            <text
+              x="90"
+              y="124"
+              text-anchor="middle"
+              fill="#2471a3"
+              font-size="10"
+            >
+              C work stored
+            </text>
+            <rect
+              x="20"
+              y="136"
+              width="140"
+              height="24"
+              rx="3"
+              fill="#60a5fa"
+              stroke="#2471a3"
+              stroke-width="1.5"
+            />
+            <text
+              x="90"
+              y="152"
+              text-anchor="middle"
+              fill="white"
+              font-size="10"
+            >
+              C work stored
+            </text>
+
+            <!-- Braces -->
+            <text
+              x="170"
+              y="110"
+              text-anchor="start"
+              fill="#2471a3"
+              font-size="10"
+              font-weight="700"
+            >
+              } m
+            </text>
+            <text
+              x="90"
+              y="180"
+              text-anchor="middle"
+              fill="#2471a3"
               font-size="11"
               font-weight="700"
             >
-              ANNIHILATION = TWO STACKS CANCEL COMPLETELY
+              Total stored = m × C
             </text>
+
+            <!-- Label -->
+            <text x="90" y="204" text-anchor="middle" fill="#555" font-size="9">
+              Each frame = one tick's
+            </text>
+            <text x="90" y="218" text-anchor="middle" fill="#555" font-size="9">
+              worth of overflow
+            </text>
+          </g>
+
+          <!-- CENTER: ONE FRAME'S IMPACT (C × C square) -->
+          <g transform="translate(230, 16)">
+            <rect
+              width="310"
+              height="230"
+              rx="6"
+              fill="#f9f6ee"
+              stroke="#d4a017"
+              stroke-width="2"
+            />
+            <text
+              x="155"
+              y="22"
+              text-anchor="middle"
+              fill="#d4a017"
+              font-size="12"
+              font-weight="700"
+            >
+              ONE FRAME'S IMPACT
+            </text>
+            <text x="155" y="38" text-anchor="middle" fill="#888" font-size="9">
+              Why c is squared — it's an area
+            </text>
+
+            <!-- The C × C grid/square -->
+            <rect
+              x="55"
+              y="56"
+              width="150"
+              height="150"
+              rx="4"
+              fill="#fffff0"
+              stroke="#d4a017"
+              stroke-width="2"
+            />
+
+            <!-- Grid lines - horizontal -->
+            <line
+              x1="55"
+              y1="86"
+              x2="205"
+              y2="86"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <line
+              x1="55"
+              y1="116"
+              x2="205"
+              y2="116"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <line
+              x1="55"
+              y1="146"
+              x2="205"
+              y2="146"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <line
+              x1="55"
+              y1="176"
+              x2="205"
+              y2="176"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <!-- Grid lines - vertical -->
+            <line
+              x1="85"
+              y1="56"
+              x2="85"
+              y2="206"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <line
+              x1="115"
+              y1="56"
+              x2="115"
+              y2="206"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <line
+              x1="145"
+              y1="56"
+              x2="145"
+              y2="206"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+            <line
+              x1="175"
+              y1="56"
+              x2="175"
+              y2="206"
+              stroke="#d4a017"
+              stroke-width="0.5"
+              opacity="0.4"
+            />
+
+            <!-- Fill with gradient to show energy -->
+            <rect
+              x="55"
+              y="56"
+              width="150"
+              height="150"
+              rx="4"
+              fill="#d4a017"
+              opacity="0.12"
+            />
+
+            <!-- Radiating arrows from center of square -->
+            <circle cx="130" cy="131" r="8" fill="#d4a017" opacity="0.6" />
+            <line
+              x1="130"
+              y1="131"
+              x2="80"
+              y2="80"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="180"
+              y2="80"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="80"
+              y2="180"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="180"
+              y2="180"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="130"
+              y2="70"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="130"
+              y2="192"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="68"
+              y2="131"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+            <line
+              x1="130"
+              y1="131"
+              x2="192"
+              y2="131"
+              stroke="#d4a017"
+              stroke-width="1.5"
+              opacity="0.5"
+            />
+
+            <!-- Axis labels -->
+            <text
+              x="130"
+              y="222"
+              text-anchor="middle"
+              fill="#d4a017"
+              font-size="10"
+              font-weight="700"
+            >
+              C — work stored in frame
+            </text>
+            <text
+              x="40"
+              y="131"
+              text-anchor="middle"
+              fill="#d4a017"
+              font-size="10"
+              font-weight="700"
+              transform="rotate(-90 40 131)"
+            >
+              C — propagation rate
+            </text>
+
+            <!-- Area label -->
+            <text
+              x="230"
+              y="110"
+              fill="#d4a017"
+              font-size="14"
+              font-weight="700"
+            >
+              area
+            </text>
+            <text
+              x="230"
+              y="128"
+              fill="#d4a017"
+              font-size="14"
+              font-weight="700"
+            >
+              = C²
+            </text>
+            <text x="230" y="152" fill="#888" font-size="9">One frame's</text>
+            <text x="230" y="166" fill="#888" font-size="9">total impact</text>
+          </g>
+
+          <!-- RIGHT: TOTAL ENERGY (m × C²) -->
+          <g transform="translate(570, 16)">
+            <rect
+              width="210"
+              height="230"
+              rx="6"
+              fill="#fdedec"
+              stroke="#c0392b"
+              stroke-width="2"
+            />
+            <text
+              x="105"
+              y="22"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="12"
+              font-weight="700"
+            >
+              TOTAL ENERGY
+            </text>
+            <text x="105" y="38" text-anchor="middle" fill="#888" font-size="9">
+              m frames × C² per frame
+            </text>
+
+            <!-- m copies of C² squares -->
+            <rect
+              x="20"
+              y="52"
+              width="50"
+              height="50"
+              rx="3"
+              fill="#fadbd8"
+              stroke="#c0392b"
+              stroke-width="1.5"
+            />
+            <text
+              x="45"
+              y="82"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="9"
+              font-weight="700"
+            >
+              C²
+            </text>
+            <rect
+              x="78"
+              y="52"
+              width="50"
+              height="50"
+              rx="3"
+              fill="#f1948a"
+              stroke="#c0392b"
+              stroke-width="1.5"
+            />
+            <text
+              x="103"
+              y="82"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="9"
+              font-weight="700"
+            >
+              C²
+            </text>
+            <rect
+              x="136"
+              y="52"
+              width="50"
+              height="50"
+              rx="3"
+              fill="#ec7063"
+              stroke="#c0392b"
+              stroke-width="1.5"
+            />
+            <text
+              x="161"
+              y="82"
+              text-anchor="middle"
+              fill="white"
+              font-size="9"
+              font-weight="700"
+            >
+              C²
+            </text>
+            <rect
+              x="49"
+              y="110"
+              width="50"
+              height="50"
+              rx="3"
+              fill="#e74c3c"
+              stroke="#c0392b"
+              stroke-width="1.5"
+            />
+            <text
+              x="74"
+              y="140"
+              text-anchor="middle"
+              fill="white"
+              font-size="9"
+              font-weight="700"
+            >
+              C²
+            </text>
+
+            <text
+              x="105"
+              y="186"
+              text-anchor="middle"
+              fill="#c0392b"
+              font-size="20"
+              font-weight="700"
+            >
+              E = mC²
+            </text>
+            <text
+              x="105"
+              y="208"
+              text-anchor="middle"
+              fill="#555"
+              font-size="10"
+            >
+              m frames × C² impact each
+            </text>
+            <text
+              x="105"
+              y="222"
+              text-anchor="middle"
+              fill="#555"
+              font-size="10"
+            >
+              = total energy released
+            </text>
+          </g>
+
+          <!-- BOTTOM: ANNIHILATION STRIP -->
+          <g transform="translate(20, 264)">
+            <rect
+              width="760"
+              height="200"
+              rx="6"
+              fill="#1a1a2e"
+              stroke="#d4a017"
+              stroke-width="2"
+            />
+            <text
+              x="380"
+              y="22"
+              text-anchor="middle"
+              fill="#d4a017"
+              font-size="12"
+              font-weight="700"
+            >
+              ANNIHILATION — TWO COMPLEMENTARY STACKS CANCEL COMPLETELY
+            </text>
+
             <!-- Matter stack -->
             <rect
-              x="50"
-              y="28"
-              width="60"
-              height="10"
+              x="80"
+              y="44"
+              width="80"
+              height="16"
               rx="2"
               fill="#dbeafe"
               stroke="#2471a3"
               stroke-width="1"
             />
             <rect
-              x="50"
-              y="41"
-              width="60"
-              height="10"
-              rx="2"
-              fill="#bfdbfe"
-              stroke="#2471a3"
-              stroke-width="1"
-            />
-            <rect
-              x="50"
-              y="54"
-              width="60"
-              height="10"
+              x="80"
+              y="63"
+              width="80"
+              height="16"
               rx="2"
               fill="#93c5fd"
               stroke="#2471a3"
               stroke-width="1"
             />
             <rect
-              x="50"
-              y="67"
-              width="60"
-              height="10"
+              x="80"
+              y="82"
+              width="80"
+              height="16"
               rx="2"
               fill="#60a5fa"
               stroke="#2471a3"
               stroke-width="1"
             />
             <text
-              x="80"
-              y="24"
+              x="120"
+              y="38"
               text-anchor="middle"
-              fill="#2471a3"
+              fill="#a8dadc"
               font-size="9"
               font-weight="700"
             >
-              matter
+              matter stack (m frames)
             </text>
+
             <!-- Antimatter stack -->
             <rect
-              x="210"
-              y="28"
-              width="60"
-              height="10"
+              x="600"
+              y="44"
+              width="80"
+              height="16"
               rx="2"
               fill="#fadbd8"
               stroke="#c0392b"
               stroke-width="1"
             />
             <rect
-              x="210"
-              y="41"
-              width="60"
-              height="10"
+              x="600"
+              y="63"
+              width="80"
+              height="16"
               rx="2"
               fill="#f1948a"
               stroke="#c0392b"
               stroke-width="1"
             />
             <rect
-              x="210"
-              y="54"
-              width="60"
-              height="10"
+              x="600"
+              y="82"
+              width="80"
+              height="16"
               rx="2"
               fill="#ec7063"
               stroke="#c0392b"
               stroke-width="1"
             />
-            <rect
-              x="210"
-              y="67"
-              width="60"
-              height="10"
-              rx="2"
-              fill="#e74c3c"
-              stroke="#c0392b"
-              stroke-width="1"
-            />
             <text
-              x="240"
-              y="24"
+              x="640"
+              y="38"
               text-anchor="middle"
-              fill="#c0392b"
+              fill="#f1948a"
               font-size="9"
               font-weight="700"
             >
-              antimatter
+              antimatter stack (m frames)
             </text>
-            <!-- Explosion -->
+
+            <!-- Arrows toward center -->
+            <line
+              x1="170"
+              y1="68"
+              x2="330"
+              y2="68"
+              stroke="#a8dadc"
+              stroke-width="2"
+              marker-end="url(#ph1)"
+            />
+            <line
+              x1="590"
+              y1="68"
+              x2="430"
+              y2="68"
+              stroke="#f1948a"
+              stroke-width="2"
+              marker-end="url(#ph2)"
+            />
+
+            <!-- Explosion at center -->
             <text
-              x="160"
-              y="80"
+              x="380"
+              y="82"
               text-anchor="middle"
-              fill="#c0392b"
-              font-size="28"
+              fill="#d4a017"
+              font-size="36"
             >
               💥
             </text>
             <text
-              x="160"
-              y="104"
+              x="380"
+              y="108"
               text-anchor="middle"
-              fill="#555"
-              font-size="10"
+              fill="#d4a017"
+              font-size="11"
+              font-weight="700"
             >
-              stacks perfectly cancel
+              all frames unwind at once
             </text>
-            <!-- Photons out -->
+
+            <!-- Photons radiating -->
             <line
-              x1="160"
-              y1="115"
-              x2="120"
-              y2="142"
+              x1="380"
+              y1="118"
+              x2="280"
+              y2="158"
               stroke="#f0b429"
               stroke-width="2.5"
               marker-end="url(#ph1)"
             />
             <line
-              x1="160"
-              y1="115"
-              x2="200"
-              y2="142"
+              x1="380"
+              y1="118"
+              x2="480"
+              y2="158"
               stroke="#f0b429"
               stroke-width="2.5"
               marker-end="url(#ph2)"
             />
             <line
-              x1="160"
-              y1="115"
-              x2="140"
-              y2="152"
+              x1="380"
+              y1="118"
+              x2="340"
+              y2="168"
               stroke="#f0b429"
-              stroke-width="2.5"
+              stroke-width="2"
               marker-end="url(#ph3)"
             />
             <line
-              x1="160"
-              y1="115"
-              x2="180"
-              y2="152"
+              x1="380"
+              y1="118"
+              x2="420"
+              y2="168"
               stroke="#f0b429"
-              stroke-width="2.5"
+              stroke-width="2"
               marker-end="url(#ph4)"
             />
+            <line
+              x1="380"
+              y1="118"
+              x2="200"
+              y2="155"
+              stroke="#f0b429"
+              stroke-width="1.5"
+              marker-end="url(#ph1)"
+              opacity="0.7"
+            />
+            <line
+              x1="380"
+              y1="118"
+              x2="560"
+              y2="155"
+              stroke="#f0b429"
+              stroke-width="1.5"
+              marker-end="url(#ph2)"
+              opacity="0.7"
+            />
+
             <text
-              x="160"
-              y="113"
-              text-anchor="middle"
-              fill="#f0b429"
-              font-size="16"
-            >
-              ☀
-            </text>
-            <text
-              x="160"
-              y="180"
+              x="380"
+              y="192"
               text-anchor="middle"
               fill="#f0b429"
               font-size="10"
               font-weight="700"
             >
-              pure photons (return values)
-            </text>
-            <text
-              x="160"
-              y="194"
-              text-anchor="middle"
-              fill="#888"
-              font-size="9"
-            >
-              no continuation · no mass · travel at C
+              pure photons — every frame's return value released at once
             </text>
           </g>
         </svg>
         <div class="figure-caption">
-          Mass is stored computation — a self-referential state configuration
-          that generates deep evaluation every tick. Energy is what returns when
-          it resolves. c² appears because the tick rate C shows up twice — once
-          as the rate the state generates stack depth, once as the rate results
-          propagate outward. Matter-antimatter annihilation: two complementary
-          configurations cancel, all computation returns instantly as photons.
+          Mass is a stack of overflow frames. Each frame holds C worth of
+          deferred computation. One frame's total impact when it unwinds = C
+          (stored) × C (propagation rate) = C². The squaring is literally an
+          area: what was stored times how fast it spreads. Total energy for m
+          frames = m × C². Annihilation: two complementary stacks meet, all
+          frames cancel, total stored computation releases as photons.
         </div>
+      </div>
+
+      <div class="three-col">
+        <div class="col-header">In a Computer</div>
+        <div class="col-header">In This Theory</div>
+        <div class="col-header">What We Observe</div>
+        <div class="col-cell">
+          <span class="tag tag-cs">CS</span><br />A recursive process creates
+          stack frames. Each frame holds one function call's worth of deferred
+          work. The total work trapped in the stack = number of frames × work
+          per frame. When the stack unwinds, results propagate at the system's
+          maximum throughput. Total impact = stack depth × work per frame ×
+          throughput rate.
+        </div>
+        <div class="col-cell hl">
+          <span class="tag tag-th">Theory</span><br />Mass = m overflow frames.
+          Each frame holds C deferred work. When mass converts to energy,
+          results propagate at rate C. E = m × C × C. The squaring is C playing
+          two roles: how much is stored (first C) and how fast the release
+          propagates (second C). Same budget, two structural functions.
+        </div>
+        <div class="col-cell">
+          <span class="tag tag-ph">Physics</span><br />E = mc². Nuclear fission
+          releases a tiny fraction of mass as energy — enough to power cities.
+          Matter-antimatter annihilation converts 100% of mass to energy. The c²
+          factor means a kilogram of matter contains 9 × 10¹⁶ joules — because c
+          is enormous (3 × 10⁸ m/s), and squared makes it astronomical.
+        </div>
+      </div>
+
+      <div class="callout callout-dark">
+        <strong class="label">What This Is and What It Isn't</strong>
+        This is a mechanistic argument, not a geometric intuition. C appears
+        squared because it plays two distinct structural roles in graph
+        mechanics — storage capacity and propagation rate. Both are consequences
+        of C being the universal per-tick budget. What remains to be formally
+        shown: that "total system impact" is <em>exactly</em> the product of
+        these three terms (m, C, C) and not some other function of them. The
+        argument is structurally grounded. A formal proof would require deriving
+        the render layer's metric from graph topology. Direction strong. Formal
+        derivation pending.
+      </div>
+
+      <div class="insight">
+        <span class="insight-label">✦ What This Means</span>
+        <p>
+          For a century, E = mc² has been treated as a fundamental equivalence —
+          mass and energy are the same thing, related by c². But no one has
+          explained why c appears squared. This framework answers that directly:
+          C appears twice because it plays two different roles in the same
+          operation. It measures how much computation each frame stores, and it
+          measures how fast that computation propagates when released. The
+          squaring is not a coincidence. It is the structure of computation.
+        </p>
       </div>
 
       <!-- ═══════════════════════════════════════════════════════════ -->
@@ -10786,24 +12283,35 @@
 
       <div class="gap-box">
         <span class="gap-label"
-          >Open Gap 3 — E = mc² Is Intuition, Not Derivation</span
+          >Open Gap 3 — E = mc² Is Mechanistic, Not Yet Formally Derived</span
         >
-        The geometric argument for why c appears squared is compelling and
-        consistent with the framework. It is not a formal derivation. A full
-        derivation would require showing that the render layer produces
-        Minkowski spacetime from dependency graph topology — something not yet
-        done.
+        The argument for why c appears squared — C playing dual roles as storage
+        capacity and propagation rate — is structurally grounded in the
+        framework's graph mechanics. It is no longer geometric intuition but a
+        mechanistic argument. What remains: a formal proof that the total energy
+        release is exactly m × C² and not some other function (such as m × C^1.5
+        or m × C³). This would require deriving the render layer's Minkowski
+        metric from dependency graph topology. Direction strong. Formal
+        derivation pending.
       </div>
 
       <div class="gap-box">
-        <span class="gap-label">Open Gap 4 — Why Mass Forms At All</span>
-        The framework describes what mass <em>is</em> once it exists: a
-        self-referential state configuration that perpetually regenerates
-        itself. It does not explain how such a configuration arises from a
-        non-self-referential initial state. The transition from the Big Bang —
-        maximum energy density, presumably no stable self-referential loops — to
-        stable protons and electrons is not accounted for. This is not a small
-        gap.
+        <span class="gap-label"
+          >Narrowed Gap 4 — Why <em>These Specific</em> Particles</span
+        >
+        Previous versions of this framework could not explain how mass arises
+        from a massless initial state. The overflow mechanism now provides this:
+        any graph interaction exceeding C produces persistent stack frames, and
+        self-perpetuating overflow topologies become stable matter. The Big Bang
+        is a state of maximum interaction density where nearly everything
+        overflows C, and the particles that survive are the stable attractors of
+        F. The question that <em>remains</em> is more specific: why do the
+        stable topologies correspond to the exact particles we observe —
+        protons, electrons, neutrinos — with their exact mass values? The
+        framework explains <em>why</em> stable matter exists. It does not yet
+        predict <em>which</em> stable configurations arise, or their properties.
+        This is where the framework would need to make contact with the Standard
+        Model's particle spectrum.
       </div>
 
       <div class="gap-box">
@@ -10822,21 +12330,26 @@
 
       <div class="gap-box">
         <span class="gap-label"
-          >Open Gap 6 — The Born Rule: Direction Known, Derivation Pending</span
+          >Narrowed Gap 6 — The Born Rule: Squaring Pattern Identified,
+          Derivation Pending</span
         >
-        The framework now has a candidate mechanism: probability equals the
-        squared intensity of F's traversal contributions converging on a node.
-        Complex amplitudes accumulate along paths through the below-&theta;
-        subgraph, combine at convergence nodes, and the squared magnitude of the
-        combined amplitude corresponds to the probability of a committed-state
-        outcome at that node. This is consistent with Born's rule and provides a
-        mechanistic interpretation. The determinism claim also resolves the "why
-        one outcome" part — because F always produces one outcome; the
-        distribution describes our epistemic ignorance of the full state
-        S(&Omega;), not genuine indeterminism. What remains: a formal derivation
-        showing that this accumulation-and-squaring mechanism follows
-        necessarily from the graph traversal model's axioms, rather than being
-        assumed. Direction clear. Derivation pending.
+        The framework now has a structural explanation for why probability is
+        the squared amplitude — and it connects to the same pattern that
+        explains E = mc². Squaring appears whenever a single quantity plays dual
+        roles in graph operations. C appears squared in E = mc² because it
+        serves as both storage capacity and propagation rate. Similarly, a
+        traversal amplitude α appears squared in the Born rule because it serves
+        two roles: (1) it determines the <em>trace contribution</em> F writes
+        into a convergence node's pending state, and (2) it determines the
+        <em>dependency pull</em> — how strongly that path participates in the
+        resolution when the node crosses θ. The energy deposited at a
+        convergence point = α × α = α². This is structurally parallel to E = m ×
+        C × C. Both are instances of one architectural pattern: a single
+        quantity evaluated in two independent phases of the same operation. What
+        remains: a formal proof that the trace-and-pull mechanism produces
+        exactly |α|² and not some other function, and that this holds across all
+        quantum systems. The structural parallel with E = mc² is strong evidence
+        of a unifying principle. It is not yet a derivation.
       </div>
 
       <div class="callout callout-dark">
@@ -10909,10 +12422,11 @@
           <tr>
             <td><strong>&Omega; (global ordering)</strong></td>
             <td>
-              The causal sequencing operator, not a rate in time. S(&Omega;) →
+              The causal sequencing index — the tick counter. S(&Omega;) →
               S(&Omega;+1) means: S(&Omega;+1) is causally downstream of
-              S(&Omega;). C never varies. It is the index of the causal
-              sequence.
+              S(&Omega;). &Omega; advances by one each tick. It is neither a
+              clock nor a rate. It is the sequence of state transitions,
+              logically entailed by the function S(&Omega;+1) = F(S(&Omega;)).
             </td>
             <td>
               A global loop counter. Iteration N+1 follows iteration N by
@@ -10922,28 +12436,32 @@
           <tr>
             <td><strong>Mass</strong></td>
             <td>
-              A self-referential state configuration that perpetually re-flags
-              itself for computation and requires deep dependency resolution
-              each ordering step. The state regenerates its own evaluation
-              structure from scratch every step. A stable attractor:
-              F(mass_state) → mass_state.
+              What happens when a graph interaction overflows the per-tick
+              budget C. The unresolved portion persists as a stack frame. If the
+              overflow topology is self-perpetuating — each tick regenerating
+              the structure that overflows C again — you get stable mass. Stack
+              depth = mass. Each frame holds C worth of deferred computation.
+              Mass is not installed; it arises from computational overflow.
             </td>
             <td>
-              A recursive data structure or fractal formula: compact to store,
-              expensive and self-perpetuating to evaluate.
+              A recursive process that can't finish within one scheduler
+              time-slice. Its deferred state persists on the stack. If it's
+              self-referential, it runs every slice. That persistent background
+              job is mass.
             </td>
           </tr>
           <tr>
             <td><strong>Inertia</strong></td>
             <td>
-              Resistance to changing a deeply interconnected self-referential
-              state. The state continuously regenerates itself — overwriting it
-              requires fighting the regeneration every step. More mass = deeper
-              self-reference = more resistance.
+              Resistance to changing a deep overflow stack. More mass = more
+              stack frames = more ticks of stored work that must be overwritten
+              to change the trajectory. Changing the state of a massive object
+              means rewriting many C-worth of overflow per tick. The deeper the
+              stack, the harder the rewrite.
             </td>
             <td>
-              Cost of rewriting a deeply interconnected data structure that is
-              simultaneously rebuilding itself.
+              Cost of rewriting a deeply nested call stack that is
+              simultaneously rebuilding itself each scheduler slice.
             </td>
           </tr>
           <tr>
@@ -10962,14 +12480,17 @@
           <tr>
             <td><strong>Speed of light (c)</strong></td>
             <td>
-              Maximum propagation rate of a dirty signal through the dependency
-              graph. One step per causal ordering step. Not a speed limit
-              imposed by nature — a structural consequence of the graph
-              topology.
+              C is the per-tick computational budget. A graph that fully
+              resolves within C propagates one hop per tick. That rate, observed
+              from the render layer, is c. It is a structural maximum, not a law
+              imposed on nature — you cannot propagate faster than C allows
+              because C is the total budget. Exceeding c would require spending
+              more than C per tick, which is incoherent.
             </td>
             <td>
-              Maximum message propagation rate between nodes. Cannot receive
-              updates faster than the network allows.
+              Maximum message propagation rate between nodes — bounded by the
+              system's processing throughput per cycle. Cannot exceed the
+              scheduler's per-tick work limit.
             </td>
           </tr>
           <tr>
@@ -10977,10 +12498,10 @@
             <td>
               The routing table of the dependency graph. Flat spacetime =
               uniform edge costs across the graph. Curved spacetime = routing
-              cost gradient caused by a mass subgraph's walk. The metric tensor
-              in GR is the edge-cost matrix. Geodesics are cheapest-path routes.
-              GR correctly measured the routing table — it just didn't know
-              that's what it was measuring.
+              cost gradient caused by a mass overflow's resolution walk. The
+              metric tensor in GR is the edge-cost matrix. Geodesics are
+              cheapest-path routes. GR correctly measured the routing table — it
+              just didn't know that's what it was measuring.
             </td>
             <td>
               A weighted graph with a routing table. The routing table changes
@@ -10993,7 +12514,7 @@
             <td><strong>Spacetime curvature</strong></td>
             <td>
               The deviation of the dependency graph's edge costs from
-              uniformity, caused by a mass subgraph's resolution walk consuming
+              uniformity, caused by a mass overflow's resolution walk consuming
               neighboring budget. What GR calls the Riemann curvature tensor is
               the second derivative of the routing cost field.
             </td>
@@ -11016,22 +12537,27 @@
           <tr>
             <td><strong>E = mc²</strong></td>
             <td>
-              The total return value of dissolving a self-referential state
-              configuration. Geometric intuition: releases propagate spherically
-              at c, total influence scales with c². Not formally derived.
+              The total return value of dissolving an overflow stack. m stack
+              frames × C work stored per frame × C propagation rate = total
+              energy. C appears squared because it plays two structural roles:
+              storage capacity (first C) and propagation rate (second C). Both
+              arise from C being the universal per-tick budget. Mechanistic
+              argument, not yet formally derived.
             </td>
             <td>
-              Total output = stored recursive depth × (propagation rate)².
-              Intuitive, not derived.
+              Total impact = stack depth × work per frame × release throughput.
+              The same budget quantity appears twice because it governs both
+              storage and propagation.
             </td>
           </tr>
           <tr>
             <td><strong>Gravity</strong></td>
             <td>
-              Dependency pressure from a massive region's evaluation walk
-              consuming neighboring regions' resolution budget B. Emergent. Not
-              transmitted. A structural property of the data layer's dependency
-              graph.
+              Dependency pressure from a massive object's overflow resolution
+              walk consuming neighboring regions' resolution budget B. Emergent.
+              Not transmitted. A structural property of the data layer's
+              dependency graph. The walk exists because the overflow must
+              resolve every tick.
             </td>
             <td>
               Deep recursive process consuming cache, memory bandwidth, and
@@ -11196,12 +12722,14 @@
           <tr>
             <td><strong>Photon</strong></td>
             <td>
-              A pure return value. No self-referential loop. No revision
-              accumulation. No "time" experienced. Propagates at c.
+              A graph operation that resolves fully within C. No overflow. No
+              stack frames. No mass. Uses its entire budget propagating — one
+              hop per tick = c. Zero budget remains for internal state changes,
+              so it experiences no time. A pure return value in transit.
             </td>
             <td>
               A return value being passed up a call chain. No local state
-              maintained.
+              maintained. Completes within one scheduler slice.
             </td>
           </tr>
           <tr>
@@ -11234,7 +12762,13 @@
     <!-- /content -->
 
     <footer>
-      <strong>GL Theory: Greg's Computational Guide to the Universe</strong>
+      <strong>Greg's Computational Guide to the Universe</strong> — Version 12.0
+      — March 2026<br />
+      Framework developed by Greg. Plain English Edition with Stick Figures.<br />
+      <span style="display: block; margin-top: 0.5rem; font-size: 0.75rem"
+        >For the formal mathematical treatment and predictions, see the
+        companion technical document.</span
+      >
     </footer>
   </body>
 </html>
