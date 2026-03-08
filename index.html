@@ -6,97 +6,457 @@
 <title>Greg's Computational Guide to the Universe</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap');
-:root{--ink:#1a1a1a;--paper:#faf8f3;--paper2:#f2efe6;--red:#c0392b;--blue:#2471a3;--green:#1e8449;--purple:#7d3c98;--orange:#d35400;--gold:#d4a017;--muted:#7a7a6a;--border:#d5d0c0;--dark:#1a1a2e;--darkblue:#a8dadc}
+
+/* ═══════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   ═══════════════════════════════════════════════════════════ */
+:root{
+  /* Core palette */
+  --ink:#1a1a1a;
+  --paper:#faf8f3;
+  --paper2:#f2efe6;
+  --text-primary:#2a2a2a;
+  --text-secondary:#3a3a3a;
+
+  /* Accent colors */
+  --red:#c0392b;
+  --blue:#2471a3;
+  --green:#1e8449;
+  --purple:#7d3c98;
+  --orange:#d35400;
+  --gold:#d4a017;
+
+  /* UI colors */
+  --muted:#7a7a6a;
+  --border:#d5d0c0;
+  --dark:#1a1a2e;
+  --teal:#a8dadc;
+
+  /* Block backgrounds — all warm, all readable */
+  --block-bg:#f5f2eb;
+  --block-bg-alt:var(--paper2);
+  --block-bg-warm:#faf6e8;
+  --block-bg-blue:#eef6fb;
+  --block-bg-red:#fdf0ef;
+  --block-bg-green:#edf8f1;
+  --block-bg-orange:#fff8f2;
+  --block-bg-teal:#edf5f6;
+  --block-bg-code:#f4f2ed;
+
+  /* Spacing scale */
+  --block-padding:1.25rem 1.5rem;
+  --block-padding-lg:1.75rem 2rem;
+  --block-margin:1.75rem 0;
+  --block-radius:5px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESET & BASE TYPOGRAPHY
+   ═══════════════════════════════════════════════════════════ */
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.85;font-size:17px}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Lora',Georgia,serif;
+  line-height:1.85;
+  font-size:17px;
+}
+
+p{margin-bottom:1.1rem;color:var(--text-primary)}
+strong{color:var(--ink)}
+h3{font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:700;margin:2rem 0 .6rem;color:var(--ink)}
+svg text{font-family:'DM Sans',sans-serif}
+
+/* ═══════════════════════════════════════════════════════════
+   REUSABLE: .block-label
+   Small monospace uppercase label used across many block types.
+   ═══════════════════════════════════════════════════════════ */
+.block-label{
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.63rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  margin-bottom:.6rem;
+  font-weight:600;
+  color:var(--muted);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   REUSABLE: .mono
+   Utility class for JetBrains Mono font
+   ═══════════════════════════════════════════════════════════ */
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* ═══════════════════════════════════════════════════════════
+   REUSABLE: .tag
+   Small inline category labels
+   ═══════════════════════════════════════════════════════════ */
+.tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:.15rem .45rem;margin-bottom:.5rem;border-radius:2px;text-transform:uppercase}
+.tag-cs{background:#dbeafe;color:#1e40af}
+.tag-ph{background:#dcfce7;color:#166534}
+.tag-th{background:#fce7f3;color:#9d174d}
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT: .doc-header  (hero — dark is intentional here)
+   ═══════════════════════════════════════════════════════════ */
 .doc-header{background:var(--dark);padding:5rem 2rem 4rem;text-align:center;position:relative;overflow:hidden}
 .doc-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.015) 40px,rgba(255,255,255,.015) 41px)}
 .doc-header h1{font-family:'Lora',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:600;letter-spacing:-.02em;margin-bottom:1rem;position:relative;color:#f0ece0}
 .doc-header .subtitle{font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:300;color:#9ab0b8;position:relative}
 .doc-header .byline{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#5a7a82;margin-top:1.5rem;letter-spacing:.1em;position:relative}
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT: .content, .section-header
+   ═══════════════════════════════════════════════════════════ */
 .content{max-width:860px;margin:0 auto;padding:3rem 2rem}
 .section-header{display:flex;align-items:center;gap:1rem;margin:4.5rem 0 2rem;padding-bottom:.75rem;border-bottom:2px solid var(--ink)}
 .section-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;background:var(--ink);color:var(--paper);padding:.25rem .6rem;letter-spacing:.1em;flex-shrink:0}
 .section-header h2{font-family:'Lora',serif;font-size:1.7rem;font-weight:600}
-h3{font-family:'DM Sans',sans-serif;font-size:1.1rem;font-weight:700;margin:2rem 0 .6rem;color:var(--ink)}
-p{margin-bottom:1.1rem;color:#2a2a2a}
-strong{color:var(--ink)}
-.hook{background:#f5f2eb;border-left:5px solid var(--ink);color:#1e1e1e;padding:2.5rem;border-radius:0 4px 4px 0;font-size:1.05rem;line-height:1.95;position:relative;margin:2rem 0}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .hook  — opening introduction block
+   ═══════════════════════════════════════════════════════════ */
+.hook{
+  background:var(--block-bg);
+  border-left:5px solid var(--ink);
+  color:#1e1e1e;
+  padding:2.5rem;
+  border-radius:0 var(--block-radius) var(--block-radius) 0;
+  font-size:1.05rem;
+  line-height:1.95;
+  position:relative;
+  margin:2rem 0;
+}
 .hook strong{color:var(--ink);font-weight:700}
-.hook p{color:#2a2a2a;margin-bottom:1.1rem}
+.hook p{color:var(--text-primary);margin-bottom:1.1rem}
 .hook p:last-child{margin-bottom:0}
-.three-col{display:grid;grid-template-columns:1fr 1fr 1fr;border:2px solid var(--ink);margin:2rem 0;font-family:'DM Sans',sans-serif;border-radius:4px;overflow:hidden}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .callout  — accent-colored sidebar blocks
+   All share the same base; modifier sets border + bg color.
+   ═══════════════════════════════════════════════════════════ */
+.callout{
+  border-left:4px solid;
+  padding:var(--block-padding);
+  margin:var(--block-margin);
+  font-family:'DM Sans',sans-serif;
+  font-size:.94rem;
+  line-height:1.75;
+  border-radius:0 var(--block-radius) var(--block-radius) 0;
+}
+.callout .block-label{opacity:.7}
+
+.callout-blue{border-color:var(--blue);background:var(--block-bg-blue)}
+.callout-red{border-color:var(--red);background:var(--block-bg-red)}
+.callout-green{border-color:var(--green);background:var(--block-bg-green)}
+.callout-neutral{border-color:var(--border);background:var(--block-bg)}
+.callout-gold{border-color:var(--gold);background:var(--block-bg-warm)}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .insight  — section-closing takeaway
+   WAS: dark background. NOW: warm teal-tinted, dark text.
+   ═══════════════════════════════════════════════════════════ */
+.insight{
+  background:var(--block-bg-teal);
+  border:1.5px solid #c2dfe0;
+  border-radius:6px;
+  padding:var(--block-padding-lg);
+  margin:2.25rem 0;
+  position:relative;
+  overflow:hidden;
+}
+.insight::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--teal),var(--blue));
+}
+.insight .block-label{color:var(--blue);margin-bottom:.75rem}
+.insight p{
+  font-family:'Lora',serif;
+  font-size:1.03rem;
+  font-style:italic;
+  color:var(--text-primary);
+  margin:0;
+  line-height:1.8;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .claims-box  — physics claims list
+   WAS: dark background. NOW: warm cream with gold accent.
+   ═══════════════════════════════════════════════════════════ */
+.claims-box{
+  background:var(--block-bg-warm);
+  border:2px solid var(--gold);
+  border-radius:8px;
+  padding:2rem 2.25rem;
+  margin:2rem 0;
+  color:var(--text-primary);
+}
+.claims-box h4{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.25rem;
+}
+.claim-item{
+  padding:.75rem 0;
+  border-bottom:1px solid var(--border);
+  font-family:'DM Sans',sans-serif;
+  font-size:.93rem;
+  line-height:1.65;
+  color:var(--text-primary);
+}
+.claim-item:last-child{border-bottom:none;padding-bottom:0}
+.claim-item strong{color:var(--ink)}
+.claim-item.novel-item{border-left:3px solid var(--orange);padding-left:1rem;margin-left:-.25rem}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .under-hood  — formal notation / code block
+   WAS: dark background. NOW: light code-style block.
+   ═══════════════════════════════════════════════════════════ */
+.under-hood{
+  border:1.5px solid var(--border);
+  border-radius:var(--block-radius);
+  background:var(--block-bg-code);
+  padding:var(--block-padding);
+  margin:1.5rem 0;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.82rem;
+  line-height:1.8;
+  color:var(--text-secondary);
+}
+.under-hood .block-label{color:var(--muted)}
+.under-hood code{color:var(--red);font-weight:600}
+.under-hood em{color:var(--blue);font-style:normal}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .principle-box  — framework principles list
+   ═══════════════════════════════════════════════════════════ */
+.principle-box{
+  background:var(--block-bg-alt);
+  border:2px solid var(--ink);
+  border-radius:6px;
+  padding:2rem 2.25rem;
+  margin:2rem 0;
+}
+.principle-box h4{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1.25rem;
+}
+.principle-item{
+  padding:.85rem 0;
+  border-bottom:1px solid var(--border);
+  font-family:'DM Sans',sans-serif;
+  font-size:.95rem;
+  line-height:1.65;
+}
+.principle-item:last-child{border-bottom:none;padding-bottom:0}
+.principle-num{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  background:var(--blue);
+  color:white;
+  padding:.2rem .5rem;
+  border-radius:2px;
+  margin-right:.6rem;
+  vertical-align:middle;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .novel-claim  — original claim callout
+   ═══════════════════════════════════════════════════════════ */
+.novel-claim{
+  border-left:4px solid var(--orange);
+  background:var(--block-bg-orange);
+  border-radius:0 var(--block-radius) var(--block-radius) 0;
+  padding:var(--block-padding);
+  margin:var(--block-margin);
+  font-family:'DM Sans',sans-serif;
+  font-size:.94rem;
+  line-height:1.75;
+  position:relative;
+}
+.novel-claim::before{
+  content:'NOVEL CLAIM';
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.6rem;
+  letter-spacing:.15em;
+  color:var(--orange);
+  margin-bottom:.5rem;
+  font-weight:600;
+}
+.novel-claim p{margin:0;color:var(--text-primary)}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .puzzle  — section-opening question
+   ═══════════════════════════════════════════════════════════ */
+.puzzle{
+  border:1px solid var(--border);
+  border-left:3px solid var(--blue);
+  background:var(--block-bg-alt);
+  border-radius:0 var(--block-radius) var(--block-radius) 0;
+  padding:.9rem 1.1rem;
+  margin:1.5rem 0 .75rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.92rem;
+  line-height:1.7;
+  color:var(--text-secondary);
+}
+.puzzle::before{
+  content:'THE PUZZLE';
+  display:block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:.58rem;
+  letter-spacing:.14em;
+  color:var(--blue);
+  margin-bottom:.35rem;
+  opacity:.75;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .gap-box  — known gaps / open problems
+   ═══════════════════════════════════════════════════════════ */
+.gap-box{
+  border:1px solid var(--border);
+  border-left:3px solid #999;
+  border-radius:0 var(--block-radius) var(--block-radius) 0;
+  padding:var(--block-padding);
+  margin:var(--block-margin);
+  background:var(--block-bg-alt);
+  font-family:'DM Sans',sans-serif;
+  font-size:.9rem;
+  line-height:1.7;
+}
+.gap-box .block-label{color:#999}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .big-claim  — centered emphasis block
+   ═══════════════════════════════════════════════════════════ */
+.big-claim{
+  border:2px solid var(--ink);
+  border-radius:var(--block-radius);
+  padding:2rem 2.25rem;
+  margin:2.75rem 0;
+  text-align:center;
+  background:#f9f7f2;
+}
+.big-claim p{font-family:'Lora',serif;font-size:1.2rem;font-style:italic;color:var(--ink);margin:0;line-height:1.65}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .distinction-block  — two-mode comparison
+   ═══════════════════════════════════════════════════════════ */
+.distinction-block{
+  background:#f0f7ff;
+  border:2px solid var(--blue);
+  border-radius:8px;
+  padding:var(--block-padding-lg);
+  margin:2rem 0;
+}
+.distinction-block h4{font-family:'Lora',serif;font-size:1.1rem;color:#1a4a7a;margin:0 0 1.25rem 0}
+.distinction-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1rem}
+.dist-above{background:#e0eef8;border:1.5px solid #a3c4e0;border-radius:6px;padding:1.1rem 1.25rem;color:#1e3a5f}
+.dist-below{background:#f0e4f8;border:1.5px solid #cba8e0;border-radius:6px;padding:1.1rem 1.25rem;color:#3b1555}
+.dist-label{display:block;font-family:'JetBrains Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;font-weight:700}
+.dist-above .dist-label{color:var(--blue)}
+.dist-below .dist-label{color:var(--purple)}
+.dist-above p,.dist-below p{font-size:.88rem;line-height:1.6;margin:0}
+.distinction-block .dist-note{font-size:.87rem;color:#555;font-style:italic;margin:0}
+
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .deeper  — expandable detail block
+   ═══════════════════════════════════════════════════════════ */
+.deeper{border:1px solid var(--border);border-radius:var(--block-radius);margin:var(--block-margin);overflow:hidden;background:var(--paper)}
+.deeper-label{background:var(--block-bg-alt);padding:.7rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border)}
+.deeper-label::before{content:'▸';font-size:.8rem;opacity:.6}
+.deeper-body{padding:1.35rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:.9rem;line-height:1.75;color:#333}
+.deeper-body p{font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--text-secondary);margin-bottom:.85rem}
+.deeper-body p:last-child{margin-bottom:0}
+
+/* ═══════════════════════════════════════════════════════════
+   TABLE: .three-col  — comparison grid
+   ═══════════════════════════════════════════════════════════ */
+.three-col{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  border:2px solid var(--ink);
+  margin:2rem 0;
+  font-family:'DM Sans',sans-serif;
+  border-radius:var(--block-radius);
+  overflow:hidden;
+}
 .col-header{background:var(--ink);color:var(--paper);padding:.65rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-right:1px solid #333}
 .col-header:last-child{border-right:none}
 .col-cell{padding:1.1rem 1rem;border-right:1px solid var(--border);border-top:1px solid var(--border);font-size:.875rem;line-height:1.7}
 .col-cell:last-child{border-right:none}
-.col-cell.hl{background:#f5f3ec}
-.tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.08em;padding:.15rem .45rem;margin-bottom:.5rem;border-radius:2px;text-transform:uppercase}
-.tag-cs{background:#dbeafe;color:#1e40af}
-.tag-ph{background:#dcfce7;color:#166534}
-.tag-th{background:#fce7f3;color:#9d174d}
-.figure{background:white;border:1.5px solid var(--border);border-radius:6px;padding:1.75rem 1.75rem 1.1rem;margin:2.25rem 0;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-.figure-caption{font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--muted);text-align:center;margin-top:1.1rem;font-style:italic;line-height:1.55;border-top:1px solid var(--border);padding-top:.85rem}
-svg text{font-family:'DM Sans',sans-serif}
-.scene-label{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.65rem}
-.callout{border-left:4px solid;padding:1.1rem 1.4rem;margin:1.75rem 0;font-family:'DM Sans',sans-serif;font-size:.94rem;line-height:1.75;border-radius:0 4px 4px 0}
-.callout-blue{border-color:var(--blue);background:#eef6fb}
-.callout-red{border-color:var(--red);background:#fdf0ef}
-.callout-green{border-color:var(--green);background:#edf8f1}
-.callout-dark{border-color:#888;background:#f3f1ed}
-.callout-gold{border-color:var(--gold);background:#faf6e8}
-.callout strong.label{display:block;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;opacity:.7}
-.big-claim{border:2px solid var(--ink);border-radius:4px;padding:2rem 2.25rem;margin:2.75rem 0;text-align:center;background:#f9f7f2}
-.big-claim p{font-family:'Lora',serif;font-size:1.2rem;font-style:italic;color:var(--ink);margin:0;line-height:1.65}
-.summary-table{width:100%;border-collapse:collapse;font-family:'DM Sans',sans-serif;font-size:.87rem;margin:1.5rem 0;border-radius:4px;overflow:hidden;border:1px solid var(--border)}
+.col-cell.hl{background:var(--block-bg)}
+
+/* ═══════════════════════════════════════════════════════════
+   TABLE: .summary-table  — reference table
+   ═══════════════════════════════════════════════════════════ */
+.summary-table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:'DM Sans',sans-serif;
+  font-size:.87rem;
+  margin:1.5rem 0;
+  border-radius:var(--block-radius);
+  overflow:hidden;
+  border:1px solid var(--border);
+}
 .summary-table th{background:var(--ink);color:var(--paper);padding:.7rem 1rem;text-align:left;font-weight:600;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
 .summary-table td{padding:.8rem 1rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55}
 .summary-table tr:last-child td{border-bottom:none}
-.summary-table tr:nth-child(even) td{background:var(--paper2)}
-.insight{background:var(--dark);border-radius:6px;padding:1.75rem 2rem;margin:2.25rem 0;position:relative;overflow:hidden}
-.insight::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--darkblue),var(--blue))}
-.insight-label{font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--darkblue);margin-bottom:.75rem;display:block}
-.insight p{font-family:'Lora',serif;font-size:1.03rem;font-style:italic;color:#e8e4d8;margin:0;line-height:1.8}
-.deeper{border:1px solid var(--border);border-radius:5px;margin:1.75rem 0;overflow:hidden;background:var(--paper)}
-.deeper-label{background:var(--paper2);padding:.7rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:.5rem;border-bottom:1px solid var(--border)}
-.deeper-label::before{content:'▸';font-size:.8rem;opacity:.6}
-.deeper-body{padding:1.35rem 1.25rem;font-family:'DM Sans',sans-serif;font-size:.9rem;line-height:1.75;color:#333}
-.deeper-body p{font-family:'DM Sans',sans-serif;font-size:.9rem;color:#3a3a3a;margin-bottom:.85rem}
-.deeper-body p:last-child{margin-bottom:0}
-.gap-box{border:1px solid var(--border);border-left:3px solid #999;border-radius:0 5px 5px 0;padding:1.25rem 1.5rem;margin:1.75rem 0;background:var(--paper2);font-family:'DM Sans',sans-serif;font-size:.9rem;line-height:1.7}
-.gap-label{display:block;font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.13em;text-transform:uppercase;color:#999;margin-bottom:.6rem}
-.novel-claim{border-left:4px solid var(--orange);background:#fff8f2;border-radius:0 5px 5px 0;padding:1.25rem 1.4rem;margin:1.75rem 0;font-family:'DM Sans',sans-serif;font-size:.94rem;line-height:1.75;position:relative}
-.novel-claim::before{content:'NOVEL CLAIM';display:block;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.15em;color:var(--orange);margin-bottom:.5rem;font-weight:600}
-.novel-claim p{margin:0;color:#2a2a2a}
-.puzzle{border:1px solid var(--border);border-left:3px solid var(--blue);background:var(--paper2);border-radius:0 4px 4px 0;padding:.9rem 1.1rem;margin:1.5rem 0 .75rem;font-family:'DM Sans',sans-serif;font-size:.92rem;line-height:1.7;color:#3a3a3a}
-.puzzle::before{content:'THE PUZZLE';display:block;font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.14em;color:var(--blue);margin-bottom:.35rem;opacity:.75}
-.under-hood{border:1px solid #c8c0b0;border-radius:5px;background:#1a1a2e;padding:1.25rem 1.4rem;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.8;color:#a8dadc}
-.under-hood-label{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:#5a8a8c;display:block;margin-bottom:.6rem}
-.under-hood code{color:#f8c291}
-.under-hood em{color:#9ab0b8;font-style:normal}
-.principle-box{background:var(--paper2);border:2px solid var(--ink);border-radius:6px;padding:2rem 2.25rem;margin:2rem 0}
-.principle-box h4{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
-.principle-item{padding:.85rem 0;border-bottom:1px solid var(--border);font-family:'DM Sans',sans-serif;font-size:.95rem;line-height:1.65}
-.principle-item:last-child{border-bottom:none;padding-bottom:0}
-.principle-num{font-family:'JetBrains Mono',monospace;font-size:.7rem;background:var(--blue);color:white;padding:.2rem .5rem;border-radius:2px;margin-right:.6rem;vertical-align:middle}
-.claims-box{background:#0d1117;border:2px solid var(--gold);border-radius:8px;padding:2rem 2.25rem;margin:2rem 0;color:#e8e8e8}
-.claims-box h4{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
-.claim-item{padding:.75rem 0;border-bottom:1px solid #30363d;font-family:'DM Sans',sans-serif;font-size:.93rem;line-height:1.65;color:#d0d0d0}
-.claim-item:last-child{border-bottom:none;padding-bottom:0}
-.claim-item strong{color:#f5c842}
-.claim-item.novel-item{border-left:3px solid var(--orange);padding-left:1rem;margin-left:-.25rem}
-.distinction-block{background:#f0f7ff;border:2px solid #2471a3;border-radius:8px;padding:1.75rem 2rem;margin:2rem 0}
-.distinction-block h4{font-family:'Lora',serif;font-size:1.1rem;color:#1a4a7a;margin:0 0 1.25rem 0}
-.distinction-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1rem}
-.dist-above{background:#1e3a5f;border-radius:6px;padding:1.1rem 1.25rem;color:#e8f4fd}
-.dist-below{background:#3b1555;border-radius:6px;padding:1.1rem 1.25rem;color:#f0e8ff}
-.dist-label{display:block;font-family:'JetBrains Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;font-weight:700}
-.dist-above .dist-label{color:#a8dadc}
-.dist-below .dist-label{color:#d4a8f0}
-.dist-above p,.dist-below p{font-size:.88rem;line-height:1.6;margin:0}
-.distinction-block .dist-note{font-size:.87rem;color:#555;font-style:italic;margin:0}
-footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--muted);margin-top:5rem;background:var(--paper2)}
-@media(max-width:640px){.three-col{grid-template-columns:1fr}.hook{padding:1.75rem 1.5rem}.content{padding:2rem 1.25rem}.distinction-row{grid-template-columns:1fr}}
+.summary-table tr:nth-child(even) td{background:var(--block-bg-alt)}
+
+/* ═══════════════════════════════════════════════════════════
+   FIGURE
+   ═══════════════════════════════════════════════════════════ */
+.figure{
+  background:white;
+  border:1.5px solid var(--border);
+  border-radius:6px;
+  padding:1.75rem 1.75rem 1.1rem;
+  margin:2.25rem 0;
+  overflow:hidden;
+  box-shadow:0 1px 4px rgba(0,0,0,.04);
+}
+.figure-caption{font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--muted);text-align:center;margin-top:1.1rem;font-style:italic;line-height:1.55;border-top:1px solid var(--border);padding-top:.85rem}
+.scene-label{font-family:'JetBrains Mono',monospace;font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:.65rem}
+
+/* ═══════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════ */
+footer{
+  border-top:1px solid var(--border);
+  padding:3rem 2rem;
+  text-align:center;
+  font-family:'DM Sans',sans-serif;
+  font-size:.82rem;
+  color:var(--muted);
+  margin-top:5rem;
+  background:var(--block-bg-alt);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+@media(max-width:640px){
+  .three-col{grid-template-columns:1fr}
+  .hook{padding:1.75rem 1.5rem}
+  .content{padding:2rem 1.25rem}
+  .distinction-row{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -372,7 +732,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="callout callout-blue">
-  <strong class="label">Why this matters for everything that follows</strong>
+  <span class="block-label">Why this matters for everything that follows</span>
   This "committed frame" idea will turn out to be the key to understanding quantum mechanics. In Section 07, we will see that what physicists call the "wave function" is the engine computing the next frame — tracing every possible path before committing any of them, exactly like a modern graphics card ray-traces every light path before writing a single pixel. You never see the tracing. You only see the result. From inside the screen, it looks like the particle "was in two places at once." From outside, the engine was just computing.
 </div>
 
@@ -394,7 +754,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>You have never seen the engine. Everything you have ever observed — every experiment, every measurement — lives on the screen. The engine has no space, no distance, no time. It has graphs. The screen is made of pixels, each referencing graphs in the engine. When physicists say QM and GR contradict, they are describing two accurate views of two different layers and wondering why they don't match. They don't match because they were never describing the same thing.</p>
 </div>
 
@@ -552,7 +912,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 <p>The universe's engine does the same thing. Each tick, it accounts for every node — including pending ones that haven't been committed yet. For those, it traces their potential through every connected path. This tracing is the wave function. The commitment is "collapse." We'll see exactly how this works in Section 07.</p>
 
 <div class="under-hood">
-  <span class="under-hood-label">Under the Hood — formal notation</span>
+  <span class="block-label">Under the Hood — formal notation</span>
   Computer scientists call a system that produces exactly one next state from the current state a <strong>Moore machine</strong>.<br><br>
   <code>S(Ω+1) = F(S(Ω))</code> — <em>S</em> = state, <em>Ω</em> = tick, <em>F</em> = the Rule.<br>
   <em>C</em> = budget (per-tick work limit = speed of light from screen's perspective).<br>
@@ -571,7 +931,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>Four ideas from computing — graphs, stacks, budgets, and frame commits — are all you need. If you understand how a pile of paperwork can grow and never clear, how a heavy app slows down your whole laptop, how two mirror-image structures cancel each other out, and how a graphics card traces every path before drawing a pixel — you already have the intuition for mass, gravity, annihilation, and quantum mechanics. You just didn't know that's what you were looking at.</p>
 </div>
 <!-- SECTION 03: MASS + E=MC² -->
@@ -597,8 +957,8 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
   <p><strong>Mass is not a property assigned to particles. It is what happens when work overflows the budget and the overflow perpetuates itself.</strong> The Big Bang was a state of maximum activity — nearly every interaction overflowed. The first fractions of a second were a massive sorting process: unstable overflows decayed, releasing energy. Stable overflow loops persisted. The particles that survived — protons, electrons, neutrinos — are the overflow topologies that happen to be self-sustaining. Matter was not installed as a feature of the universe. It emerged because the budget is finite and some overflows are stable.</p>
 </div>
 
-<div class="callout callout-dark">
-  <strong class="label">Why some particles are stable and others aren't</strong>
+<div class="callout callout-neutral">
+  <span class="block-label">Why some particles are stable and others aren't</span>
   A proton's overflow topology regenerates identically every tick — it is a stable loop. A proton has never been observed to decay. A free neutron, by contrast, has an overflow topology that slowly unwinds — it decays in about ten minutes, releasing energy as it does. The stability of a particle is determined by whether its overflow loop is a perfect cycle or a gradually unwinding spiral. Physics calls this "particle stability." This framework calls it: whether the stack regenerates cleanly or leaks.
 </div>
 
@@ -606,8 +966,8 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 
 <p>A photon is a graph operation that resolves completely within one tick. No overflow. No stack. No mass. It uses its entire budget on propagation — moving through the graph. That's why it travels at the speed of light (one hop per tick at full budget) and why it experiences no time (all budget spent on motion, zero left for internal state changes). A photon is the output of a completed computation, in transit. It is a return value being delivered.</p>
 
-<div class="callout callout-dark">
-  <strong class="label">Why some particles have mass and others don't — the Higgs field</strong>
+<div class="callout callout-neutral">
+  <span class="block-label">Why some particles have mass and others don't — the Higgs field</span>
   Physicists discovered that a background field — the <strong>Higgs field</strong> — is present everywhere in the universe. When certain particle types interact with it, they acquire mass. Others (photons, gluons) interact with the Higgs field but remain massless. In this framework, the Higgs field is a background graph structure present everywhere. For some particle types, interacting with it pushes their combined graph complexity past the budget — creating the overflow that becomes mass. For others, the Higgs interaction doesn't push them past the budget. Same field, different graph topologies, different outcomes.
 </div>
 
@@ -695,7 +1055,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>Matter is not a given. It is the inevitable result of a finite budget and a busy web. When interactions overflow and the overflow sustains itself, you get mass. When that mass converts back to energy, the budget appears squared because it plays two roles — and that's why a tiny amount of mass contains an enormous amount of energy. E = mc² is not mysterious. It is the structure of computation.</p>
 </div>
 
@@ -739,6 +1099,153 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
   <p><strong>What Einstein called the metric tensor — the mathematical object describing distances and geometry at every point in space — is the edge-cost matrix of the graph's routing table.</strong> Einstein measured the routing table with extraordinary precision. He predicted gravitational waves (vibrations in the routing table), light bending around stars (light following cheapest paths through a skewed table), and GPS clock corrections (budget deficit near Earth's mass). Every prediction has been confirmed. GR didn't get it wrong. It measured the routing table exactly right. It just didn't know that's what it was measuring.</p>
 </div>
 
+<div class="figure">
+  <div class="scene-label">Figure 4 — From Computer Routing to Gravity: How a Stack Warps the Topology</div>
+  <svg width="100%" viewBox="0 0 800 520" style="max-width:800px;display:block;margin:0 auto;">
+    <defs>
+      <marker id="rt1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1e8449"/></marker>
+      <marker id="rt2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#c0392b"/></marker>
+      <marker id="rt3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2471a3"/></marker>
+    </defs>
+
+    <!-- TOP HALF: Computer routing -->
+    <rect x="10" y="8" width="780" height="230" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="400" y="30" text-anchor="middle" fill="#1e8449" font-size="13" font-weight="700" font-family="'JetBrains Mono',monospace">IN A COMPUTER — ROUTING AROUND A CONGESTED NODE</text>
+
+    <!-- Left: uniform routing -->
+    <g transform="translate(30,45)">
+      <text x="140" y="0" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">BEFORE: Uniform costs — all routes equal</text>
+      <!-- Grid of nodes -->
+      <circle cx="40" cy="40" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="140" cy="40" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="240" cy="40" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="40" cy="110" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="140" cy="110" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="240" cy="110" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="40" cy="170" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="140" cy="170" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <circle cx="240" cy="170" r="14" fill="#fff" stroke="#1e8449" stroke-width="1.5"/>
+      <!-- Edges with costs -->
+      <line x1="54" y1="40" x2="126" y2="40" stroke="#1e8449" stroke-width="1"/>
+      <text x="90" y="34" text-anchor="middle" fill="#1e8449" font-size="8">cost: 1</text>
+      <line x1="154" y1="40" x2="226" y2="40" stroke="#1e8449" stroke-width="1"/>
+      <text x="190" y="34" text-anchor="middle" fill="#1e8449" font-size="8">cost: 1</text>
+      <line x1="40" y1="54" x2="40" y2="96" stroke="#1e8449" stroke-width="1"/>
+      <line x1="140" y1="54" x2="140" y2="96" stroke="#1e8449" stroke-width="1"/>
+      <line x1="240" y1="54" x2="240" y2="96" stroke="#1e8449" stroke-width="1"/>
+      <line x1="54" y1="110" x2="126" y2="110" stroke="#1e8449" stroke-width="1"/>
+      <line x1="154" y1="110" x2="226" y2="110" stroke="#1e8449" stroke-width="1"/>
+      <line x1="40" y1="124" x2="40" y2="156" stroke="#1e8449" stroke-width="1"/>
+      <line x1="140" y1="124" x2="140" y2="156" stroke="#1e8449" stroke-width="1"/>
+      <line x1="240" y1="124" x2="240" y2="156" stroke="#1e8449" stroke-width="1"/>
+      <line x1="54" y1="170" x2="126" y2="170" stroke="#1e8449" stroke-width="1"/>
+      <line x1="154" y1="170" x2="226" y2="170" stroke="#1e8449" stroke-width="1"/>
+      <!-- Straight path -->
+      <line x1="54" y1="110" x2="126" y2="110" stroke="#1e8449" stroke-width="3" marker-end="url(#rt1)"/>
+      <line x1="154" y1="110" x2="226" y2="110" stroke="#1e8449" stroke-width="3" marker-end="url(#rt1)"/>
+      <text x="140" y="140" text-anchor="middle" fill="#1e8449" font-size="9" font-weight="700">→ straight path (cheapest)</text>
+    </g>
+
+    <!-- Right: congested routing -->
+    <g transform="translate(430,45)">
+      <text x="150" y="0" text-anchor="middle" fill="#c0392b" font-size="10" font-weight="700">AFTER: Heavy process saturates center node</text>
+      <circle cx="40" cy="40" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <circle cx="150" cy="40" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <circle cx="260" cy="40" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <circle cx="40" cy="110" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <!-- Heavy node -->
+      <circle cx="150" cy="110" r="20" fill="#641e16" stroke="#c0392b" stroke-width="3"/>
+      <text x="150" y="107" text-anchor="middle" fill="#fad5a5" font-size="9" font-weight="700">HEAVY</text>
+      <text x="150" y="118" text-anchor="middle" fill="#f1948a" font-size="7">100% CPU</text>
+      <circle cx="260" cy="110" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <circle cx="40" cy="170" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <circle cx="150" cy="170" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <circle cx="260" cy="170" r="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+      <!-- Edges with CHANGED costs -->
+      <line x1="54" y1="40" x2="136" y2="40" stroke="#888" stroke-width="1"/>
+      <text x="95" y="34" text-anchor="middle" fill="#888" font-size="8">cost: 1</text>
+      <line x1="164" y1="40" x2="246" y2="40" stroke="#888" stroke-width="1"/>
+      <text x="205" y="34" text-anchor="middle" fill="#888" font-size="8">cost: 1</text>
+      <line x1="40" y1="54" x2="40" y2="96" stroke="#888" stroke-width="1"/>
+      <line x1="150" y1="54" x2="150" y2="90" stroke="#c0392b" stroke-width="1"/>
+      <text x="165" y="70" fill="#c0392b" font-size="7" font-weight="700">cost: 8!</text>
+      <line x1="260" y1="54" x2="260" y2="96" stroke="#888" stroke-width="1"/>
+      <line x1="54" y1="110" x2="130" y2="110" stroke="#c0392b" stroke-width="1"/>
+      <text x="92" y="103" text-anchor="middle" fill="#c0392b" font-size="7" font-weight="700">cost: 8!</text>
+      <line x1="170" y1="110" x2="246" y2="110" stroke="#c0392b" stroke-width="1"/>
+      <text x="208" y="103" text-anchor="middle" fill="#c0392b" font-size="7" font-weight="700">cost: 8!</text>
+      <line x1="40" y1="124" x2="40" y2="156" stroke="#888" stroke-width="1"/>
+      <line x1="150" y1="130" x2="150" y2="156" stroke="#c0392b" stroke-width="1"/>
+      <line x1="260" y1="124" x2="260" y2="156" stroke="#888" stroke-width="1"/>
+      <line x1="54" y1="170" x2="136" y2="170" stroke="#888" stroke-width="1"/>
+      <line x1="164" y1="170" x2="246" y2="170" stroke="#888" stroke-width="1"/>
+      <!-- Curved path avoiding center -->
+      <path d="M 54 110 Q 40 75 54 44" stroke="#2471a3" stroke-width="3" fill="none" marker-end="url(#rt3)"/>
+      <path d="M 55 40 L 136 40" stroke="#2471a3" stroke-width="3" fill="none" marker-end="url(#rt3)"/>
+      <path d="M 164 40 L 246 40" stroke="#2471a3" stroke-width="3" fill="none" marker-end="url(#rt3)"/>
+      <path d="M 260 54 Q 260 75 256 96" stroke="#2471a3" stroke-width="3" fill="none" marker-end="url(#rt3)"/>
+      <text x="150" y="150" text-anchor="middle" fill="#2471a3" font-size="9" font-weight="700">→ path curves around congestion</text>
+      <text x="150" y="162" text-anchor="middle" fill="#888" font-size="8">(cheapest route now avoids center)</text>
+    </g>
+
+    <!-- BOTTOM HALF: How this IS gravity -->
+    <rect x="10" y="250" width="780" height="260" rx="8" fill="#f9f6ee" stroke="#d4a017" stroke-width="2"/>
+    <text x="400" y="272" text-anchor="middle" fill="#d4a017" font-size="13" font-weight="700" font-family="'JetBrains Mono',monospace">IN THE UNIVERSE — THIS IS WHAT GRAVITY LOOKS LIKE</text>
+
+    <!-- Gravity warped grid -->
+    <g transform="translate(60,285)">
+      <!-- Flat grid far from mass (left side) -->
+      <text x="0" y="0" fill="#888" font-size="9" font-weight="700">FAR FROM MASS</text>
+      <text x="0" y="12" fill="#888" font-size="8">full budget per tick</text>
+      <line x1="0" y1="25" x2="120" y2="25" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="0" y1="55" x2="120" y2="55" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="0" y1="85" x2="120" y2="85" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="0" y1="115" x2="120" y2="115" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="0" y1="145" x2="120" y2="145" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="0" y1="175" x2="120" y2="175" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="0" y1="25" x2="0" y2="175" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="30" y1="25" x2="30" y2="175" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="60" y1="25" x2="60" y2="175" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="90" y1="25" x2="90" y2="175" stroke="#d5d0c0" stroke-width="1"/>
+      <line x1="120" y1="25" x2="120" y2="175" stroke="#d5d0c0" stroke-width="1"/>
+      <text x="60" y="196" text-anchor="middle" fill="#1e8449" font-size="9" font-weight="700">uniform routing costs</text>
+      <text x="60" y="208" text-anchor="middle" fill="#1e8449" font-size="9">= flat spacetime</text>
+    </g>
+
+    <!-- Warped grid near mass (right side) -->
+    <g transform="translate(360,285)">
+      <text x="180" y="0" text-anchor="middle" fill="#c0392b" font-size="9" font-weight="700">NEAR MASS</text>
+      <text x="180" y="12" text-anchor="middle" fill="#c0392b" font-size="8">budget drained — routing costs warped</text>
+      <!-- Warped grid lines (curves toward center mass) -->
+      <path d="M 0 25 Q 180 25 360 25" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 0 55 Q 180 65 360 55" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 0 85 Q 160 115 360 85" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 0 115 Q 160 130 360 115" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 0 145 Q 180 155 360 145" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 0 175 Q 180 175 360 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <!-- Vertical warped -->
+      <path d="M 0 25 Q 0 100 0 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 72 25 Q 78 100 72 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 144 25 Q 162 100 144 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 216 25 Q 200 100 216 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 288 25 Q 282 100 288 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <path d="M 360 25 Q 360 100 360 175" stroke="#d5d0c0" stroke-width="1" fill="none"/>
+      <!-- Mass in center -->
+      <circle cx="180" cy="100" r="28" fill="#641e16" stroke="#c0392b" stroke-width="3"/>
+      <text x="180" y="96" text-anchor="middle" fill="#fad5a5" font-size="11" font-weight="700">MASS</text>
+      <text x="180" y="110" text-anchor="middle" fill="#f1948a" font-size="8">permanent stack</text>
+      <!-- Curved path of light -->
+      <path d="M 10 40 Q 100 35 140 60 Q 160 72 170 78" stroke="#d4a017" stroke-width="2.5" fill="none" stroke-dasharray="6,3"/>
+      <path d="M 190 78 Q 200 72 220 60 Q 260 35 350 40" stroke="#d4a017" stroke-width="2.5" fill="none" marker-end="url(#rt1)" stroke-dasharray="6,3"/>
+      <text x="180" y="58" text-anchor="middle" fill="#d4a017" font-size="8" font-weight="700">light curves</text>
+      <text x="180" y="68" text-anchor="middle" fill="#d4a017" font-size="7">(cheapest path bends)</text>
+      <text x="180" y="196" text-anchor="middle" fill="#c0392b" font-size="9" font-weight="700">warped routing costs</text>
+      <text x="180" y="208" text-anchor="middle" fill="#c0392b" font-size="9">= curved spacetime</text>
+    </g>
+  </svg>
+  <div class="figure-caption">Top left: a uniform network — all routing costs equal, cheapest path is straight. Top right: a heavy process saturates the center node — nearby edge costs skyrocket, cheapest path curves around it. Bottom: the same thing in the universe. Far from mass: uniform routing costs = flat spacetime. Near mass: the permanent stack drains budget, warping routing costs. The grid curves. Light follows the cheapest path, which bends around mass. Einstein called this curved spacetime. It is a routing table warped by a congested node.</div>
+</div>
+
 <h3>Why Gravity Cannot Be Shielded</h3>
 
 <p>You can block every other force because every other force propagates through the render layer — through the space you can see and place things in. An electromagnetic wave travels through space. You put a metal cage in that space. The cage intercepts the wave. Done.</p>
@@ -779,7 +1286,10 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
+  <p>Gravity is not a force. It is resource contention. A permanent stack drains budget from its neighbors, creating a gradient. Everything routes along the cheapest path through that gradient — and from the render layer, that looks like attraction. You cannot shield it because it operates in the engine, and your shield lives on the screen. Einstein's spacetime curvature is the routing table, warped by a congested node. Black holes are what happen when the congestion reaches 100%. Every prediction of general relativity — time dilation, light bending, event horizons — falls out of one mechanism: a permanent stack consuming shared resources.</p>
+</div>
+
 <!-- SECTION 05: VELOCITY DILATION + ARROW OF TIME -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
@@ -791,13 +1301,17 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 
 <p>In the previous section, we saw that gravity slows time by draining the local budget from the outside — mass's walk consumes your resources. But there is a second way to lose budget: <strong>spending it on motion.</strong></p>
 
-<p>Think about moving data between locations on a computer. Every transfer costs processor cycles. Moving a file from one folder to another takes work. Moving it across a network takes more work. The faster you move data, the more cycles it costs — cycles that aren't available for other computation.</p>
+<p>Remember the entity model from Section 01: graphs live in the engine. The screen references them. A graph doesn't have a position in the engine — position is a screen concept. Your "location" is determined by which screen region is currently referencing your graph.</p>
 
-<p>In the engine's web, your position is determined by which nodes you're connected to — your edges, your neighborhood in the graph. Moving means <strong>rewriting those connections</strong> every tick. You disconnect from old neighbors and connect to new ones. Each rewrite costs budget. The faster you move — the more connections rewritten per tick — the less budget remains for your internal state to change.</p>
+<p>So what does moving actually mean? Your graph doesn't move — it has no position to move from. What changes is <strong>which screen regions reference it.</strong> The old region drops its reference. The new region picks it up. Both regions need to re-render — the old one because it lost something, the new one because it gained something.</p>
+
+<p>That re-rendering is work. It consumes budget. Every tick you're in motion, screen regions are being remapped — old references dropped, new ones acquired, both ends re-rendered. The faster you move, the more regions are remapped per tick, the more budget goes to re-rendering, the less remains for your graph's internal state to change.</p>
+
+<p>At the speed of light, the maximum number of screen regions are being remapped per tick. All budget goes to re-rendering. Zero budget remains for internal state changes. No time experienced.</p>
 
 <h3>The Muon Paradox</h3>
 
-<p>A muon created in the upper atmosphere by cosmic rays moves at about 99.5% of the speed of light. At that speed, nearly all of its budget is consumed by motion — rewriting its position in the graph every tick. Almost nothing remains for internal processes, including the decay process that would normally destroy it in 2.2 microseconds.</p>
+<p>A muon created in the upper atmosphere by cosmic rays moves at about 99.5% of the speed of light. At that speed, nearly all of its budget is consumed by the projection remapping — its graph is being handed from screen region to screen region at near-maximum rate. Almost nothing remains for internal processes, including the decay process that would normally destroy it in 2.2 microseconds.</p>
 
 <p>From our perspective on the ground, the muon's internal clock is running roughly 10 times slower than ours. In the 2.2 microseconds of muon-time that pass (during which it would normally decay), about 22 microseconds pass in our reference frame — enough time for it to travel 15 km and reach the ground.</p>
 
@@ -809,7 +1323,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 
 <p>This is real. It is confirmed by experiments with atomic clocks on aircraft and satellites. It is not a thought experiment.</p>
 
-<p>In this framework: Twin B spent more budget on motion. Every tick, a large portion of their budget went to rewriting their position in the graph, leaving less for internal state changes. Fewer internal changes accumulated. Fewer revisions means less experienced time means younger.</p>
+<p>In this framework: Twin B's graph was remapped across vastly more screen regions than Twin A's. Every remapping consumed budget. Over the entire journey, Twin B's graph had less budget available for internal state changes. Fewer internal changes accumulated. Fewer revisions means less experienced time means younger.</p>
 
 <p>Twin A stayed put — minimal position rewrites, full budget for internal state. More revisions accumulated. More experienced time. Older.</p>
 
@@ -836,12 +1350,12 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
   <div class="col-header">In This Framework</div>
   <div class="col-header">What We Observe</div>
   <div class="col-cell"><span class="tag tag-cs">CS</span><br>Data transfer costs cycles. Faster transfer = more cycles consumed = fewer available for other work. At max transfer rate, all cycles go to movement. A function takes input, produces output — you can't reverse it. The call stack grows forward only.</div>
-  <div class="col-cell hl"><span class="tag tag-th">Framework</span><br>Motion = rewriting graph connections = costs budget. Faster = more cost = less internal state change = slower time. At c: all budget on motion, zero internal. Arrow: the Rule runs one direction. Output depends on input. Not reversible.</div>
+  <div class="col-cell hl"><span class="tag tag-th">Framework</span><br>Motion = graph's projection remapping across screen regions. Faster = more regions re-rendered per tick = more budget consumed = less internal state change = slower time. At c: all budget on remapping, zero internal. Arrow: the Rule runs one direction. Not reversible.</div>
   <div class="col-cell"><span class="tag tag-ph">Physics</span><br>Muons survive to reach ground. Twin paradox confirmed by atomic clocks. Photons experience no time. Nothing exceeds c. Eggs scramble but don't unscramble. Entropy increases. All explained by budget consumption and the directionality of the Rule.</div>
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>Time is not a river that flows or a dimension that stretches. It is a counter: how many state changes happened to you. Near mass, fewer happen — that's gravitational dilation. Moving fast, fewer happen — that's velocity dilation. At light speed, none happen — that's why photons don't age. The speed limit is not a law — it's a budget cap. And the arrow of time is not a mystery for thermodynamics to solve. It is the fact that computation runs forward. One input, one output, no reversal.</p>
 </div>
 
@@ -871,8 +1385,8 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 
 <p>Two people looking at the same supernova and disagreeing about when it happened are not confused. They are both right. They have different replication lag to the event. They will eventually agree — once the light from the supernova has had time to reach both of them. Until then, their "nows" are different.</p>
 
-<div class="callout callout-dark">
-  <strong class="label">The preferred ordering — exists but invisible</strong>
+<div class="callout callout-neutral">
+  <span class="block-label">The preferred ordering — exists but invisible</span>
   The engine advances by a global tick. Step 1, step 2, step 3. This implies a preferred causal ordering — an absolute sequence underneath everything. But from inside the render layer, you can't detect it. The projection function produces geometry that looks the same to every observer within it. Physics calls this Lorentz symmetry, and it has been tested to extraordinary precision. The framework's prediction: at extreme (Planck-scale) energies, tiny deviations from this symmetry should be detectable, because the discrete ticking structure of the engine would begin to show through.
 </div>
 
@@ -886,7 +1400,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>There is no universal "now." Not because time is strange or reality is subjective — but because you are an observer in a distributed system, and your version of events depends on how far each state change has traveled to reach you. Einstein said the same thing with Lorentz transformations. This framework says the same thing with replication lag. The speed of light is not a mysterious cosmic rule. It is the maximum throughput of the engine. You can't go faster because there is no more budget to spend.</p>
 </div>
 
@@ -982,6 +1496,33 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 
 <p>In principle, if you could completely isolate a basketball from every interaction — every air molecule, every photon of light, every vibration of the floor — its graph would quiet down, its activity would drop below the threshold, and the engine would trace its potential through multiple paths. You would get basketball-scale interference. Quantum mechanics agrees with this: any object can in principle exhibit quantum behavior. What prevents it is interaction with the environment — what physicists call <strong>decoherence</strong>. In this framework, decoherence is just: the node's graph is too busy. Too many connections, too much activity, always above the threshold. The engine commits rather than traces.</p>
 
+<h3>What Happens When You Send an Entangled Particle Through the Slits?</h3>
+
+<p>Here is a prediction that falls directly out of the framework — and matches real experiments.</p>
+
+<p>If you fire a single, unentangled particle at the double slit, the engine traces a simple graph through two paths. Clean two-path interference pattern.</p>
+
+<p>But what if the particle is entangled with a partner somewhere else? Remember: entangled particles are <strong>one graph</strong>. The engine doesn't trace just the particle — it traces the <em>full graph</em>, including the partner. The trace through the two slits now carries the partner's structure along with it. The combined graph is more complex than a lone particle's graph.</p>
+
+<p>The result: the single-particle pattern shows <strong>no clean interference on its own</strong>. It looks random. But when you correlate the results with measurements on the partner particle, you can extract subsets that DO show interference. The partner's measurement acts as a filter — exactly like the quantum eraser. The full pattern contains all the information. Looking at one particle alone averages over the partner's contributions, washing out the interference. Filter by the partner's value, and clean interference subsets emerge.</p>
+
+<p>Physicists have confirmed this experimentally with entangled photons since the 1990s. In this framework, the result is inevitable: the engine traces the full graph, and the full graph includes both particles. No additional mechanism needed — it falls directly out of "the engine traces the graph."</p>
+
+<h3>When Graphs Share a Screen Region</h3>
+
+<p>One more consequence of the entity model — and it leads to a genuine prediction.</p>
+
+<p>Multiple graphs can be referenced by the same screen region. When any one of them resolves, the region re-renders. That re-render triggers a budget check on <em>every</em> graph referenced by that region — even graphs that are completely unrelated to the one that just resolved.</p>
+
+<p>Think of it like an open-plan office. When one person's phone rings loudly (their "graph resolves"), everyone nearby is momentarily disrupted — even people working on completely unrelated projects. The disruption isn't because they're collaborating. It's because they share the same physical space.</p>
+
+<p>This is the framework's mechanism for environmental decoherence: more resolved graphs in the same screen region means more frequent re-renders, which means more frequent budget checks on every pending graph nearby, which means it's harder for any graph to stay below the threshold. Dense environments (lots of resolved stuff nearby) force quantum systems into classical behavior faster — not because of interaction, but because of shared screen space.</p>
+
+<div class="callout callout-gold">
+  <span class="block-label">A candidate prediction</span>
+  Standard decoherence theory says a quantum system loses coherence based on its <strong>interaction strength</strong> with the environment. This framework says it's based on <strong>screen-region proximity</strong> — sharing the same render region triggers budget checks regardless of direct interaction. Usually these are the same thing (nearby things interact). But for two quantum systems that overlap spatially without interacting (different force carriers, no shared quantum numbers), our framework predicts slightly faster decoherence than standard QM. The trigger is spatial proximity, not interaction strength. If testable, this would distinguish this framework from standard quantum mechanics.
+</div>
+
 <div class="three-col">
   <div class="col-header">In a Computer</div>
   <div class="col-header">In This Framework</div>
@@ -992,7 +1533,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>The double-slit experiment is not strange. It is exactly what any engine looks like from the inside when it computes a frame before committing it. The wave function is the computation. "Collapse" is the commitment. The quantum eraser is a spreadsheet filter being removed. And decoherence — the reason your coffee cup doesn't show quantum behavior — is that large, busy objects are always above the threshold. The engine commits them every tick. There is nothing left to trace. Quantum mechanics is not a mystery. It is rendering.</p>
 </div>
 
@@ -1056,7 +1597,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 </div>
 
 <div class="insight">
-  <span class="insight-label">✦ What This Means</span>
+  <span class="block-label">✦ What This Means</span>
   <p>There is nothing spooky about entanglement. Two particles interact, forming a shared edge in the engine. The engine has no concept of distance — "near" and "far" are screen concepts. When the engine resolves one particle, the shared edge pulls the other into the same computation. Both values are produced together. The correlation isn't transmitted across space. It was written into the graph when the particles first interacted. It was always there. You just couldn't see it until measurement forced the computation to run.</p>
 </div>
 
@@ -1091,37 +1632,37 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
 <p>Any framework that claims to explain the universe should be upfront about what it can't do. Here is what this one hasn't solved — and why those gaps matter.</p>
 
 <div class="gap-box">
-  <span class="gap-label">Open Gap 1 — Full General Relativity</span>
+  <span class="block-label">Open Gap 1 — Full General Relativity</span>
   The framework produces gravitational attraction, time dilation, black holes, geodesics, gravitational lensing, and unshieldability. But Einstein's complete field equations — which also predict gravitational waves, precise light-bending magnitudes, Mercury's orbital precession, and frame dragging — have not been formally derived from graph topology. The framework is consistent with GR but has not reproduced it from first principles.
 </div>
 
 <div class="gap-box">
-  <span class="gap-label">Open Gap 2 — The Preferred Ordering</span>
+  <span class="block-label">Open Gap 2 — The Preferred Ordering</span>
   The global tick implies a preferred causal sequence. Lorentz symmetry is claimed to be an emergent property of the projection, not the engine. Whether the projection produces <em>exact</em> Lorentz symmetry from a discrete ordering is not proven. Testable prediction: at Planck-scale energies, tiny deviations from Lorentz symmetry should be detectable.
 </div>
 
 <div class="gap-box">
-  <span class="gap-label">Narrowing Gap 3 — E = mc² Formal Derivation</span>
+  <span class="block-label">Narrowing Gap 3 — E = mc² Formal Derivation</span>
   The dual-role argument for why the budget appears squared is structurally grounded. A formal proof that total energy release is exactly m × budget² (and not some other function) requires deriving the render layer's geometry from graph topology. Direction strong. Formal derivation pending.
 </div>
 
 <div class="gap-box">
-  <span class="gap-label">Narrowing Gap 4 — Why These Specific Particles</span>
+  <span class="block-label">Narrowing Gap 4 — Why These Specific Particles</span>
   The overflow mechanism explains why mass exists — but not why the stable overflow topologies correspond to the exact particles we observe (protons, electrons, neutrinos) with their exact masses. The framework explains <em>that</em> stable matter exists. It does not yet predict <em>which</em> configurations arise.
 </div>
 
 <div class="gap-box">
-  <span class="gap-label">Open Gap 5 — The Engine Is Inaccessible</span>
-  Like all interpretations of quantum mechanics, this framework proposes a structure that cannot be directly measured — we live on the screen, not in the engine. Testable predictions must come from screen-layer observations that differ from standard QM+GR. Candidates: Planck-scale Lorentz deviation, decoherence timescales matching the threshold model, a minimum mass unit at the Planck scale.
+  <span class="block-label">Open Gap 5 — The Engine Is Inaccessible</span>
+  Like all interpretations of quantum mechanics, this framework proposes a structure that cannot be directly measured — we live on the screen, not in the engine. Testable predictions must come from screen-layer observations that differ from standard QM+GR. Candidates: (1) Planck-scale Lorentz deviation, (2) decoherence timescales matching the threshold model, (3) a minimum mass unit at the Planck scale, (4) <strong>spatial proximity decoherence</strong> — two non-interacting quantum systems sharing the same render region should decohere slightly faster than standard QM predicts based on interaction strength alone, because region re-rendering triggers budget checks regardless of direct interaction.
 </div>
 
 <div class="gap-box">
-  <span class="gap-label">Narrowing Gap 6 — The Born Rule</span>
+  <span class="block-label">Narrowing Gap 6 — The Born Rule</span>
   The dual-role pattern provides a structural explanation for why quantum probability is |α|². Formal proof that the trace-and-pull mechanism produces exactly |α|² across all quantum systems is pending. The structural parallel with E = mc² is strong evidence of a unifying principle.
 </div>
 
-<div class="callout callout-dark">
-  <strong class="label">Why Honest Gaps Matter</strong>
+<div class="callout callout-neutral">
+  <span class="block-label">Why Honest Gaps Matter</span>
   A framework that claims to explain everything with no open problems is not a framework — it is a story. The gaps above are real, they are hard, and they are the precise places where this work needs to go deeper to become a testable scientific theory rather than a compelling interpretive lens. Both things have value. This document is both.
 </div>
 
@@ -1143,7 +1684,7 @@ footer{border-top:1px solid var(--border);padding:3rem 2rem;text-align:center;fo
     <tr><td><strong>Inertia</strong></td><td>Cost of rewriting a deep overflow stack. Deeper stack = harder to change.</td><td>Cost of modifying a nested call stack that's rebuilding itself.</td></tr>
     <tr><td><strong>Gravity</strong></td><td>Budget drain from mass's overflow walk fanning into neighbors. Emergent. Unshieldable — engine layer vs screen layer.</td><td>Shared resource contention. Heavy process draining CPU from neighbors.</td></tr>
     <tr><td><strong>Gravitational time dilation</strong></td><td>Budget drained by mass → fewer state changes per tick → slower clock.</td><td>Process starved by a CPU hog. Fewer iterations per system tick.</td></tr>
-    <tr><td><strong>Velocity time dilation</strong></td><td>Budget spent on motion → fewer internal state changes → slower clock.</td><td>Data transfer consuming cycles that can't be used for other work.</td></tr>
+    <tr><td><strong>Velocity time dilation</strong></td><td>Motion = graph's projection remapping across screen regions. More remapping per tick = more budget consumed = fewer internal state changes = slower clock.</td><td>Moving data between servers requires re-rendering at both ends. Faster transfer = more re-renders = fewer cycles for other work.</td></tr>
     <tr><td><strong>Speed of light</strong></td><td>Maximum propagation = full budget per tick. Can't exceed — no more budget.</td><td>Maximum network throughput. Can't send faster than the bus allows.</td></tr>
     <tr><td><strong>Spacetime</strong></td><td>The routing table of the graph. Flat = uniform costs. Curved = cost gradient from mass's drain. Metric tensor = edge-cost matrix.</td><td>Weighted routing table that updates when one path gets congested.</td></tr>
     <tr><td><strong>Geodesics</strong></td><td>Cheapest paths through the routing table. Objects follow them because the engine routes along minimum cost.</td><td>Dijkstra's shortest path. Default scheduler routing.</td></tr>
