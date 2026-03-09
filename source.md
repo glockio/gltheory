@@ -15,6 +15,34 @@ You are building a single `index.html` file from this source document. This file
 5. **The Author's Note section is VERBATIM.** Copy it exactly as provided — typos and all. It is the author's personal voice. Do not fix, edit, or rephrase it.
 6. **Every chapter ends with a "What This Means" insight block.** One paragraph, plain English, no jargon.
 7. **Physics cards are skippable callouts.** The main text must make sense without them.
+8. **Mystery blocks open every physics chapter.** They present the weird observation, build tension, THEN the framework resolves it. The reader should feel the strangeness before getting the answer.
+
+### Narrative Structure — The Mystery-First Pattern
+
+Every chapter in Part Two follows this beat structure:
+
+```
+1. THE MYSTERY — "Here's something genuinely strange about reality
+   that physicists have observed. Feel how weird it is."
+2. THE TENSION — "Seriously, think about this. Why WOULD it work
+   this way? It shouldn't. And yet."
+3. THE FRAMEWORK — "But if reality is a two-layer system with an
+   engine and a render... it's not weird at all. It's obvious."
+4. THE PAYOFF — "Here's exactly how it works in the framework."
+5. PHYSICS CARDS — For the curious (skippable)
+6. INSIGHT — One paragraph, plain English
+```
+
+### The Two-Layer Architecture
+
+The document's central claim is a two-layer architecture:
+
+- **Engine Layer** — where computation happens. The graph. The actual structure of reality. Analogy: the Nintendo console, the desktop computer, the thing doing the work.
+- **Render Layer** — what you experience. Your "reality." Analogy: the TV screen, the monitor, the output you see.
+
+The Mario analogy is the primary vehicle. Thread it throughout: Mario is the reader, living on the render layer. The engine computes his world. He can't see the engine. Use this analogy for time (Mario's time is change, not ticks), double buffering (Mario never gets half his world), the holographic principle (Mario 64 on a 2D screen), and the arrow of time (computation direction is in the engine).
+
+Refer to the layers consistently as "engine layer" and "render layer" throughout. Let the reader know they can also think of them as desktop/monitor or Nintendo/TV.
 
 ### SVG Figure Handling
 
@@ -37,6 +65,7 @@ This avoids regenerating expensive SVGs that haven't changed.
 
 - **Never use a concept before explaining it.** Every term is built from prior chapters.
 - **Images do heavy lifting.** Text supports images, not the other way around.
+- **Lead with the mystery.** Every physics chapter opens with the weird observation, lets the reader sit in it, then resolves it with the framework.
 - Each SVG should use `viewBox` for responsiveness, `width="100%"`, and `max-width` for containment.
 - Target reading time: ~45 minutes.
 - Target word count: ~12,000–15,000 words (prose only, not counting HTML/SVG markup).
@@ -116,15 +145,19 @@ This avoids regenerating expensive SVGs that haven't changed.
 **`.callout .callout-{color}`** — Accent-colored sidebar blocks. 4px left border. Used for:
 
 - `.callout-neutral` (muted border) — Author's Note, general aside
-- `.callout-blue` — Important conceptual callout
+- `.callout-blue` — Important conceptual callout (used for engine/render layer definition)
 - `.callout-green` — Positive/success callout
 - `.callout-gold` — Special emphasis
+
+**`.mystery-block`** — Purple-bordered callout that opens every physics chapter. Presents the weird observation and builds tension. Label: `🔍 The Mystery`. Uses `--purple` border and purple gradient background.
 
 **`.physics-card`** — Green-bordered callout for real physics experiments. Label: `⚛ Physics Card — {Title}`. Skippable. Uses `--green` border and `--block-bg-green`.
 
 **`.insight`** — Chapter-closing takeaway. Teal background with gradient top bar. Label: `✦ What This Means`. Italic Lora text. One paragraph summary, no jargon.
 
-**`.principle-box`** — Numbered list of framework principles. Black border. Each item has a numbered blue badge.
+**`.principle-box`** — Numbered list of framework axioms. Black border. Each item has a numbered blue badge.
+
+**`.claims-box`** — Numbered list of framework claims. Orange border. Each item has a numbered orange badge. Used for the "What We're Claiming" section.
 
 **`.figure`** — White box with light border and shadow. Contains: `.scene-label` (monospace uppercase), `<svg>`, `.figure-caption` (italic, muted, with top border).
 
@@ -198,72 +231,104 @@ Cheers,
 A Very Serious Person
 ```
 
-#### Hook (intro block)
+---
 
-> **AUTHOR NOTE (SECTION):** This should be inviting and low-pressure. Three short paragraphs. Make it clear: no physics degree needed, no CS degree needed. You'll learn cool stuff either way. The "at most you'll see a pattern" line is important — it's the promise without overselling.
+#### THE HOOK: You Are Mario
 
-**Content direction:** Explain that this document tries to explain physics mysteries using five ideas from computers. Not metaphors — structural parallels. No degrees needed. At minimum you learn cool stuff about the universe. At most you see a pattern connecting it all.
+> **AUTHOR NOTE (SECTION):** This is the most important opening in the document. It replaces the old "here are five axioms" approach. The reader needs to understand the two-layer architecture IMMEDIATELY — it's the central claim. Use the Mario analogy. Make it visceral, not academic. The reader should walk away knowing: (1) there are two layers — engine and render, (2) you live on the render, (3) the engine is running graphs, (4) this isn't just "simulation theory" — it actually explains things.
 
-#### The Framework at a Glance
+**Hook block content:** Before we get into anything — before graphs, before physics, before any of it — I need to tell you something uncomfortable. **You are Mario.** Not metaphorically. Structurally. You are living on a screen. What you experience as "reality" is a rendered output. There is an engine underneath computing what you see, and you have no direct access to it.
 
-A principle-box with five items. Plant seeds — no explanation yet. Reader returns to this after Chapter 3 and everything clicks.
+**Content direction (after hook):** Four paragraphs:
 
-```
-1. ONE GRAPH — Reality is dots connected by lines. That's it.
-2. ONE RULE — Each tick, everything updates. One input, one output.
-3. GRAPH OPERATIONS — Things interact by connecting. Opposites cancel.
-4. BUDGET — There's a speed limit on how much work gets done per tick.
-5. LAZY EVALUATION — The engine doesn't compute answers nobody asked for.
-```
+1. This sounds insane until you realize you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and render (monitor). We're claiming reality works the same way.
+2. What you experience — space, mass, time, gravity — is the render layer. Underneath, the engine runs something simpler: a graph. Dots connected by lines.
+3. The punchline: you are a pattern of connections being rendered into the world you experience. And the only thing worse than being a 2D Italian plumber is finding out you're a graph representation of one.
+4. Going forward: two layers. Engine layer (where computation happens — Nintendo console, desktop) and Render layer (what you experience — TV screen, monitor). Use whichever analogy helps.
 
-Follow with a centered muted note: "You don't need to understand any of these yet. By the end, you will."
+**Blue callout block:** Define the two layers clearly:
+
+- **The Engine Layer** — where computation happens. The actual structure of reality. Think: the Nintendo console. The desktop computer.
+- **The Render Layer** — what you experience. Your "reality." Think: the TV screen. The monitor.
+- Note: can also call them desktop/monitor, Nintendo/TV.
+
+##### Figure: fig-00
+
+**ID:** fig-00
+**Label:** Figure 0 — Two Layers of Reality
+**Description:** Left: a TV screen showing Mario's world (stick-figure Mario, platforms, a question block) labeled "RENDER LAYER — What Mario experiences. His 'reality.'" Right: a Nintendo console with circuit board showing graph nodes and edges inside, labeled "ENGINE LAYER — Dots and lines. The actual computation." Arrow between them labeled "renders."
+**Caption:** Two layers. The screen shows the output — Mario's world. The engine does the work — dots and lines. Mario can't see the engine. He only sees the render. Sound familiar?
+
+**Content direction (after figure):** Two paragraphs explaining why this is interesting:
+
+1. This isn't just "simulation theory" — this architecture actually EXPLAINS things. Weird things that have baffled physicists for a century.
+2. List the mysteries as teasers: Why can't you shield gravity? Why does the universe seem to "know" what you're going to measure? Why do physics equations work backwards? How can two particles be instantly correlated across the universe? These are genuine unsolved mysteries and they all have the same answer.
 
 ---
 
-### PART ONE: THE BUILDING BLOCKS
+#### WHAT WE'RE CLAIMING
 
-**Part header:** "Part One — The Building Blocks"
+> **AUTHOR NOTE (SECTION):** This replaces the old "Framework at a Glance" axiom box. These are CLAIMS, not axioms. Stated in plain English. Each claim is paired with a mystery it solves. The reader should think "that's either brilliant or insane" and keep reading. Use the claims-box CSS class (orange border, orange badges).
 
-> **AUTHOR NOTE (PART):** These three chapters teach concepts with ZERO physics. Just everyday life and computers. The reader should not feel like they're "learning physics" yet. They're learning about graphs, engines, and lazy kitchens. The physics payoff comes in Part Two.
+**Content direction:** Intro line: "Before we teach you anything, here's what this framework says about reality. Read these now — some will sound wild. By the end of this document, none of them will."
+
+**Claims box with 8 items:**
+
+1. **There are two layers to reality.** What you experience is a render. Underneath is an engine computing it. You are Mario. This explains why certain things about reality seem "computed."
+2. **The engine layer is a graph — dots connected by lines.** Space, matter, you — all graph structure. This explains why space has a minimum size and why distance exists at all.
+3. **Mass is a loop in the graph that never finishes,** consuming the engine's budget every tick. This explains why mass and energy are interchangeable — and why E=mc².
+4. **Gravity is not a force — it's emergent.** It's what happens when loops drain budget from their region, warping the routing table. This explains why you can't shield it, why it's indistinguishable from acceleration, and why no one has ever found the graviton.
+5. **C (the speed of light) is the engine's clock speed** — the maximum rate at which change can propagate. It's not about light. It's the fastest the engine can update anything.
+6. **E=mc² means: break the loop and the trapped work escapes.** The c² isn't arbitrary — it's the engine's processing capacity squared. That's why a paperclip could power a city.
+7. **You're always one frame behind.** The engine computes the entire frame, then commits it. You never see work in progress. This explains the quantum eraser, delayed-choice experiments, and why you can't catch reality mid-computation.
+8. **Spacetime is the routing table.** The engine needs to know which nodes to update and in what order. That routing table, warped by mass, is what we experience as spacetime. Einstein called it "curved spacetime." We call it a congested network.
+
+**Muted center text:** "Some of that probably sounds crazy. By the end, none of it will. Let's start with the one tool you need."
 
 ---
 
-#### Chapter 1 — Dots and Lines: What is a Graph?
+### PART ONE: THE TOOLKIT
+
+**Part header:** "Part One — The Toolkit"
+
+> **AUTHOR NOTE (PART):** Two chapters. Fast. These teach concepts with ZERO physics. Just everyday life and computers. The reader should be through the toolkit in 15 minutes max and hungry for payoffs. The physics payoff comes immediately after in Part Two.
+
+---
+
+#### Chapter 1 — What Is a Graph?
 
 **Section number:** 01
-**Section title:** Dots and Lines: What is a Graph?
+**Section title:** What Is a Graph?
 
-> **AUTHOR NOTE (CHAPTER):** This is the most important chapter to get right because everything builds on it. The reader needs to walk away understanding three things: (1) a graph is dots connected by lines, (2) a cycle is a loop that never finishes, (3) inverse graphs cancel. Keep it dead simple. The family tree / social network / recipe examples work perfectly — use all three.
+> **AUTHOR NOTE (CHAPTER):** This is the most important chapter to get right because everything builds on it. Keep it TIGHT — shorter than the previous version. The reader needs: (1) graph = dots connected by lines, (2) cycle = loop that never finishes, (3) inverse graphs cancel. Then the PIVOT: "graph foreplay is over, everything is a graph, you are Mario and the cartridge is full of graphs."
 
 ##### Opening
 
-> **AUTHOR NOTE (SECTION):** Open with "You already know what a graph is. You just don't call it that." This immediately disarms any math anxiety.
-
-**Content direction:** Explain graphs through three everyday examples: family tree (people = dots, relationships = lines), social network (friends = dots, connections = lines), recipe (steps = dots, "must do first" = lines). Establish that a graph is dots connected by lines. Mention that mathematicians have fancier words (nodes, edges) but the picture is always the same.
+**Content direction:** "Before we can talk about the universe being a graph, we need to talk about what a graph actually is. Good news: you already know. You just don't call it that." Explain through three compact examples: family tree, social network, recipe. Dots connected by lines.
 
 ##### Figure: fig-01
 
 **ID:** fig-01
 **Label:** Figure 1 — You Already Know What a Graph Is
-**Description:** Three simple graphs side by side: a family tree (4 people, parent-child lines), a social network (5 people, friend connections), and a recipe (4 steps with directional arrows showing order).
+**Description:** Three simple graphs side by side: a family tree (5 people, parent-child lines), a social network (6 people, friend connections), and a recipe (4 steps with directional arrows showing order: Mix → Bake → Cool → Frost).
 **Caption:** These are all graphs. Dots connected by lines. That's the whole idea.
 
 ##### The Key Rule
 
-**Content direction:** Explain that you can't finish a dot until you've finished everything it depends on. Use the recipe: can't frost the cake until you've baked it.
+**Content direction:** One sentence: you can't finish a dot until you've finished everything it depends on. Can't frost the cake until it's cooled.
 
 ##### Cycles: When Work Never Finishes
 
-> **AUTHOR NOTE (SECTION):** Make cycles feel dangerous and permanent. The reader needs to viscerally understand that a loop NEVER resolves. The stuck-at-desk metaphor is good. This sets up mass in Chapter 5.
+> **AUTHOR NOTE (SECTION):** Make cycles feel dangerous and permanent. The reader needs to viscerally understand that a loop NEVER resolves. Keep it tight — this was good in v19 and doesn't need to be longer.
 
-**Content direction:** Most graphs are straightforward — A then B then C, done. But what if the lines loop back? What if C points back to A? That's a cycle — a loop that never finishes. It's not just an annoyance — it's one of the most important patterns in the universe.
+**Content direction:** Most graphs are straightforward — A then B then C, done. But what if the lines loop back? C points to A? That's a cycle — a loop that never finishes. It's a permanent condition. The work goes around and around forever. Like being stuck at a desk where your to-do list generates more to-do list. You will never get up. Remember that feeling — cycles are one of the most important patterns in the universe.
 
 ##### Figure: fig-02
 
 **ID:** fig-02
 **Label:** Figure 2 — What Happens When a Graph Loops Back
-**Description:** Three panels. Left: A→B→C simple chain, labeled "FINISHES ✓" in green. Center: A→B→C→A loop, labeled "NEVER FINISHES ✗" in red, with "∞ Forever." Right: Stick figure trapped at desk with paperwork piling up, thought bubble "I'll never get up."
-**Caption:** A loop means the work never finishes. It runs forever.
+**Description:** Two panels. Left: A→B→C simple chain in green, labeled "FINISHES ✓" with "Done!" Right: A→B→C→A loop in red, labeled "NEVER FINISHES ✗" with "∞ Forever" in the center.
+**Caption:** A loop means the work never finishes. It runs forever. That permanence is going to explain mass.
 
 ##### Mirror Graphs: Opposites Cancel
 
@@ -273,27 +338,31 @@ Follow with a centered muted note: "You don't need to understand any of these ye
 
 **ID:** fig-03
 **Label:** Figure 3 — When a Graph Meets Its Mirror
-**Description:** Left: a small directed graph in blue labeled "GRAPH." Center: its mirror (arrows reversed) in red labeled "MIRROR (INVERSE)." Between them a "+" sign. Then "=" sign. Then a sparkle/poof labeled "Nothing — They cancel."
+**Description:** Left: a small directed graph (A→B→C) in blue labeled "GRAPH." Center: its mirror (C→B→A) in red labeled "MIRROR (INVERSE)." Between them a "+" sign. Then "=" sign. Then a sparkle labeled "Nothing. They cancel."
 **Caption:** When a graph meets its exact opposite, they cancel. Zero left. This will explain matter-antimatter annihilation.
+
+##### The Pivot: Everything Is a Graph
+
+> **AUTHOR NOTE (SECTION):** This is the key transition moment. The reader has learned graph basics. Now hit them with the claim. The tone should shift from educational to provocative. "Graph foreplay is over."
+
+**Content direction:** "Graph foreplay is over. Here's where it gets real." When I say everything is a graph, I don't mean graphs are a useful metaphor. I mean there is no "world" as you know it. The render layer — trees, rocks, your body — is an output. The engine layer is graphs. Dots and lines. That's what's actually there. The rest is rendering. You are Mario. The cartridge is full of graphs. And we're going to use three facts about graphs — they have structure, they can loop, and opposites cancel — to explain most of what physicists have spent a century arguing about.
 
 ##### What This Means (Insight)
 
-Everything in the universe can be described as dots connected by lines. Some patterns loop forever. Some patterns are mirrors of each other and cancel out. That's it. That's the basic building block.
+Everything in the universe — space, matter, forces, you — can be described as dots connected by lines. Some patterns finish. Some loop forever, trapping work inside themselves. Some are mirrors of each other and cancel on contact. These three behaviors are all the building blocks we need.
 
 ---
 
-#### Chapter 2 — The Engine: Clock Ticks and Budgets
+#### Chapter 2 — The Engine: How Reality Gets Computed
 
 **Section number:** 02
-**Section title:** The Engine: Clock Ticks and Budgets
+**Section title:** The Engine: How Reality Gets Computed
 
-> **AUTHOR NOTE (CHAPTER):** The engine concept is the second pillar. The reader needs to internalize: (1) there's a clock that ticks, (2) each tick has a fixed budget, (3) overflow carries forward as a stack, (4) you only see the finished frame. The workday analogy (8 hours, to-do list) is the right one. Double buffering is important — it explains why we're always looking at the past and why physics equations are time-symmetric.
+> **AUTHOR NOTE (CHAPTER):** This is the densest chapter — it covers clock/budget, overflow/stack, C as clock speed, double buffering ("Mario never gets half his world"), and lazy evaluation ("the smart kitchen"). The Mario analogy carries the weight. Five beats, each landing a concept that will pay off in Part Two. The old Chapters 2 and 3 are merged here.
 
 ##### Opening
 
-> **AUTHOR NOTE (SECTION):** Start from something everyone knows — your phone has a chip, it follows instructions. Then scale up: imagine the universe works the same way.
-
-**Content direction:** Your phone has a chip. It follows instructions one step at a time, ~3 billion times per second. Each tick, a fixed amount of work. Now imagine an engine that runs the universe the same way. One clock. One tick at a time. A fixed budget of work per tick.
+**Content direction:** "So there's an engine underneath reality. How does it work? Same way your computer works. A clock ticks. Each tick, a fixed amount of work gets done. That's it." Your phone: ~3 billion ticks/sec, fixed budget per tick. The universe's engine: same pattern, one clock, one tick, fixed budget.
 
 ##### Figure: fig-04
 
@@ -304,108 +373,98 @@ Everything in the universe can be described as dots connected by lines. Some pat
 
 ##### When Work Overflows
 
-**Content direction:** Workday analogy. 8 hours = budget. 6-hour to-do list = done with spare. 12-hour to-do list = overflow, 4 hours carry to tomorrow. Carried-over work = a stack of unfinished tasks.
+**Content direction:** Workday analogy. 8 hours = budget. 6-hour to-do list = done with spare. 12-hour to-do list = overflow, 4 hours carry to tomorrow. Carried-over work = a stack.
 
 ##### Figure: fig-05
 
 **ID:** fig-05
 **Label:** Figure 5 — Work That Fits vs. Work That Overflows
 **Description:** Left panel (green): budget bar with 6hrs of work fitting inside 8hr bar, labeled "FITS IN BUDGET — All done! Energy left over." Right panel (red): budget bar full, 4hrs spilling over as dashed box pointing to "next tick," labeled "OVERFLOWS BUDGET."
-**Caption:** If work fits in the budget, it completes. If it overflows, the leftover carries to the next tick.
+**Caption:** If work fits in the budget, it completes. If it overflows, the leftover carries to the next tick as a stack.
 
-##### Cycles Eat Budget Forever
+##### Bridge to Mass
 
-> **AUTHOR NOTE (SECTION):** This is the bridge from "abstract graph concept" to "this explains mass." Make the connection explicit: the loop from Chapter 1 never finishes, so it overflows EVERY tick. Forever. That permanent budget drain is going to be mass.
-
-**Content direction:** Connect Chapter 1's loop to the budget concept. A cycle never finishes → it overflows every tick → permanent stack → permanent budget drain. Foreshadow: "Remember that — it's going to explain mass."
+**Content direction:** Connect Chapter 1's loop to the budget. A cycle never finishes → it overflows every tick → permanent stack → permanent budget drain. Foreshadow: "Remember that — we're about to use it to explain mass."
 
 ##### Figure: fig-06
 
 **ID:** fig-06
-**Label:** Figure 6 — A Loop is a Permanent Budget Drain
-**Description:** Three identical ticks side by side. Each shows the same A→B→C→A loop and a budget bar where the loop consumes the same chunk (e.g., 30/100) each tick. Label: "Same loop. Same budget consumed. Every tick. Forever."
-**Caption:** A loop is a permanent stack. It runs every tick, consuming budget every tick, forever.
+**Label:** Figure 6 — A Loop Is a Permanent Budget Drain
+**Description:** Three identical ticks side by side (Tick 1, Tick 2, Tick 3). Each shows a budget bar where the loop (red) consumes the same chunk (~30%) and the rest is "other work" (blue). Below: a small 3-node cycle diagram. Label: "Same drain. Every tick. That's mass."
+**Caption:** A loop is a permanent stack. It runs every tick, consuming budget every tick, feeding its own results back into itself. It never stops.
 
-##### Double Buffering: You Only See the Finished Result
+##### C Is the Engine's Clock Speed
 
-> **AUTHOR NOTE (SECTION):** Double buffering is subtle but important. It explains why we're "always looking at the past" and why physics equations are time-symmetric (the rendered frame is a static snapshot with no inherent direction).
+> **AUTHOR NOTE (SECTION):** This is a NEW major section that was underserved in prior versions. C needs its own dedicated space with a real explanation. The reader needs to walk away understanding: (1) C is not a "speed limit" — it's the engine's clock speed, (2) you can't go "faster" because the clock IS how fast things happen, (3) "stopping time" means nothing is changing, not that a clock paused, (4) C is the speed of change.
 
-**Content direction:** Video on your phone: you see the finished frame while the next one is being computed. You never see work in progress. This is double buffering. You're always looking one tick behind.
+**Content direction:** "Here's something that confused physicists for a century: why does the universe have a speed limit? Wrong question. It's not a speed limit. It's a clock speed."
+
+Your computer has a clock speed — 3 GHz means 3 billion ticks per second. Each tick, data moves a fixed distance. You can't move data faster than the clock because the clock IS how fast things happen. No "faster" to go. Asking "what if data went faster" is like asking "what if the engine did more work than it can."
+
+C is the same thing for the universe's engine. Not that light is special — light just has zero mass (no loops, no budget drain) so it can travel at the engine's maximum rate. C is the fastest the engine can propagate a change from one node to the next.
+
+What does "stopping time" mean? Nothing is changing. Zero state transitions. Not a cosmic clock pausing — the budget is fully consumed and nothing can update. Time isn't a river flowing. Time is change. C is the speed of change.
+
+##### Figure: fig-c-clockspeed
+
+**ID:** fig-c-clockspeed
+**Label:** Figure 7 — C Is Not a Speed Limit. It's a Clock Speed.
+**Description:** Two panels. Left: "YOUR COMPUTER" — a dark rectangle (computer chip) with "3 GHz — 3B ticks/sec" label, a data dot moving along a bus at max speed with arrow. Right: "THE UNIVERSE'S ENGINE" — a dark rectangle with graph nodes connected by edges, a change dot propagating between nodes, labeled "C ≈ 3×10⁸ m/s." Both panels have matching text: "Data/change can't move faster than the clock allows. There's no 'faster.'"
+**Caption:** Not a speed limit. A clock speed. The fastest the engine can move a change from one node to the next. "What if something went faster than light?" is like asking "what if the computer did more than 3 billion ticks per second on a 3 GHz chip?" It can't. That's what 3 GHz means.
+
+##### Mario Never Gets Half His World (Double Buffering)
+
+> **AUTHOR NOTE (SECTION):** Do NOT use the term "double buffering" in the main text. Use the Mario analogy instead. The reader needs to understand: (1) the engine computes the ENTIRE frame before committing, (2) you only see committed frames, (3) you're always one frame behind, (4) this is going to explain quantum weirdness. Tease the quantum payoff at the end.
+
+**Content direction:** When you play Mario, you never see half a frame. Mario gets his entire world, fully formed, every single frame. The console computes the ENTIRE frame in the background, then flips it to the screen all at once. While you're looking at Frame 12, the engine is computing Frame 13. You — Mario — are always one frame behind.
+
+Reality works the same way. The engine computes the entire state of everything, commits it, and THAT is what you experience. You never see work in progress.
+
+This seems like a nerdy technical detail. It's not. It's going to explain why physicists have been tearing their hair out for 80 years over experiments where the universe seems to know the future. Spoiler: it doesn't know the future. There's just no "during" — only "before the frame commits" and "after the frame commits."
 
 ##### Figure: fig-07
 
 **ID:** fig-07
-**Label:** Figure 7 — You're Always Looking at the Finished Frame
-**Description:** Left: clean finished frame (smiley face, labeled "WHAT YOU SEE — Frame N — Clean. Finished. Committed."). Right: half-drawn frame with construction lines (labeled "BEING COMPUTED — Frame N+1 — Messy. In progress."). Arrow between them: "you are always one tick behind."
-**Caption:** You see Frame N while the engine computes Frame N+1. You never see the work in progress. You're always one behind.
+**Label:** Figure 8 — Mario Never Gets Half His World
+**Description:** Left: a clean, complete frame (smiley face, platforms) with solid green border, labeled "WHAT MARIO SEES — Frame N — Clean. Complete. Committed." Right: a half-drawn frame with construction lines and dashed red border, labeled "BEING COMPUTED — Frame N+1 — Messy. In progress. Mario can't see this." Between them: "you are always one frame behind."
+**Caption:** Mario sees Frame N while the engine computes Frame N+1. He never sees work in progress. He's always one frame behind. Reality works the same way.
 
-##### What This Means (Insight)
+##### The Smart Kitchen (Lazy Evaluation)
 
-There's an engine. It runs on a clock. Each tick, it has a budget of work it can do. Most work finishes and moves on. But loops never finish — they consume budget every tick, forever. And you only ever see the finished result, never the work in progress.
+> **AUTHOR NOTE (SECTION):** Compress this from its old standalone chapter. It's now a subsection. The reader needs: (1) smart chef has all recipes but only cooks orders, (2) customer = strict consumer, (3) basketball vs photon — dense thing = everything committed, lone thing = nothing committed. The bridge to quantum should be one sentence.
 
----
+**Content direction:** "One more engine rule. The engine is smart — it doesn't compute answers nobody needs." Restaurant analogy: dumb chef pre-cooks everything (wasteful, insane), smart chef has recipe book but only cooks what's ordered. Customer = strict consumer. No customer, no dish — just a recipe.
 
-#### Chapter 3 — The Engine Doesn't Compute Answers Nobody Asked For
-
-**Section number:** 03
-**Section title:** The Engine Doesn't Compute Answers Nobody Asked For
-
-> **AUTHOR NOTE (CHAPTER):** This is where it gets fun. Lazy evaluation is the key that unlocks quantum mechanics. But DON'T do quantum yet. Just establish the principle through the restaurant analogy. The basketball vs. photon comparison at the end is the bridge to Part Two. The reader should finish this chapter thinking "oh... so quantum weirdness is just a kitchen that doesn't cook food nobody ordered?"
-
-##### Opening
-
-**Content direction:** "Here's something that sounds obvious but changes everything: a smart computer doesn't compute answers nobody needs."
-
-##### The Restaurant Analogy
-
-> **AUTHOR NOTE (SECTION):** The dumb kitchen vs. smart kitchen contrast needs to be vivid. Dumb kitchen = overwhelmed chef, food everywhere, most wasted. Smart kitchen = calm chef with a recipe book, only cooking what's ordered. The CUSTOMER is the strict consumer.
-
-**Content direction:** Restaurant kitchen with full menu. Chef could pre-cook everything (wasteful, insane). Smart chef waits for orders. The customer who orders = the strict consumer. Without a customer, the dish stays as a recipe (a plan, not a product).
+Quick application: basketball = 10²⁶ atoms, every one demanding values, everything committed. Photon in empty space = nobody asking, stays as a recipe. "This is going to explain all of quantum mechanics."
 
 ##### Figure: fig-08
 
 **ID:** fig-08
-**Label:** Figure 8 — Dumb Kitchen vs. Smart Kitchen
-**Description:** Left panel (red): "DUMB KITCHEN" — overwhelmed chef stick figure surrounded by dishes everywhere, trash can nearby, caption "Cooks everything. Most goes in the trash." Right panel (green): "SMART KITCHEN" — calm chef with recipe book, only 3 dishes being cooked, caption "Knows all recipes. Only cooks what's ordered."
-**Caption:** A smart engine only produces finished answers when something needs them. This is called lazy evaluation.
-
-##### The Basketball vs. the Photon
-
-> **AUTHOR NOTE (SECTION):** This is the "aha" setup for all of quantum mechanics. Don't resolve it here — just plant the seed. Basketball = dense, everything demands answers from everything, all resolved. Photon in empty space = alone, nobody asking, stays as a recipe.
-
-**Content direction:** A basketball: 10²⁶ atoms, each demanding values from neighbors. Everything gets resolved immediately. Every tick. A photon in empty space: nothing nearby needs its value. Nobody's asking. It stays as a recipe, not a dish.
-
-##### Figure: fig-09
-
-**ID:** fig-09
-**Label:** Figure 9 — When Everything Asks vs. When Nobody Asks
-**Description:** Left: basketball (big circle) filled with tiny demanding dots, speech bubbles saying "I NEED YOUR VALUE!" — labeled "10²⁶ atoms, each demanding answers. Everything gets resolved." Right: single dot in empty space with dashed circle of emptiness around it, thought bubble "Nobody's asking me anything..." — labeled "Nothing nearby needs its value. Stays as a recipe."
-**Caption:** A basketball: everything is demanding answers, everything is resolved. A lone photon: nobody's asking, so no definite answer is produced.
+**Label:** Figure 9 — Dumb Kitchen vs. Smart Kitchen
+**Description:** Left panel (red, "DUMB KITCHEN"): overwhelmed chef stick figure surrounded by dishes everywhere, trash can nearby, "Cooks everything. Most goes in the trash." Right panel (green, "SMART KITCHEN"): calm chef with recipe book, only 2 dishes being cooked, "Knows all recipes. Only cooks what's ordered."
+**Caption:** A smart engine only produces finished answers when something needs them. This is called lazy evaluation, and it's going to explain quantum mechanics.
 
 ##### What This Means (Insight)
 
-The engine computes everything, but only produces definite answers when something NEEDS one. Things surrounded by demanding neighbors (like atoms in a basketball) always get definite answers. Things floating alone (like a photon in space) don't — they stay as possibilities until something asks.
+The engine ticks. Each tick has a budget. Loops consume budget forever — that's mass. C is the engine's clock speed — the maximum rate change can propagate. You always see the last committed frame, never work in progress. And the engine only produces definite answers when something demands one. You now have every tool you need. Let's explain the universe.
 
 ---
 
-### INTERLUDE: The Five Principles Revisited
+#### THE FIVE AXIOMS (Interlude)
 
-> **AUTHOR NOTE (SECTION):** This is the payoff for the "Framework at a Glance" card from the front matter. The reader now understands every concept. Restate each principle with a one-sentence callback to what they learned. This should feel like "oh, NOW I get it."
+> **AUTHOR NOTE (SECTION):** This appears AFTER the toolkit chapters, not before. The reader now understands every concept. Restate each axiom with a callback to what they learned. Use the principle-box CSS class (black border, blue badges). This should feel like "oh, these are the gears inside what I just learned."
 
-**Content direction:** Now that you understand graphs, engines, budgets, and lazy evaluation, restate the five principles with callbacks to the chapters.
+**Principle box title:** "The Five Axioms — Now That You Speak the Language"
 
-##### Figure: fig-10
+```
+1. ONE GRAPH — The engine layer is a graph. Dots and lines. Space is the large-scale shape of the connections. Stuff is the local structure — loops, clusters, edges.
+2. ONE RULE — Each tick, everything updates. One clock. One pass. Like your CPU — one cycle, process the whole instruction queue.
+3. GRAPH OPERATIONS — Things interact by connecting their dots. Mirror graphs cancel on contact. Connections can be committed (definite) or uncommitted (possible).
+4. BUDGET — Fixed work per tick. Loops eat it forever. C is the ceiling — the maximum work rate. You can't exceed it because it IS the tick rate.
+5. LAZY EVALUATION — No definite answer until something demands one. The engine knows all recipes. It only cooks what's ordered.
+```
 
-**ID:** fig-10
-**Label:** Figure 10 — The Framework, Now That You Speak the Language
-**Description:** Five horizontal cards stacked vertically, each with a numbered blue badge and two lines of text. Each principle gets a one-sentence callback:
-
-1. ONE GRAPH — Remember dots and lines? That's everything. Space is the pattern. Stuff is the local connections.
-2. ONE RULE — Each tick, everything updates. Like your CPU: one clock, one step, every time.
-3. GRAPH OPERATIONS — Things interact by connecting their dots. Mirror graphs cancel.
-4. BUDGET — There's a cap on work per tick. Loops eat it forever. That's mass.
-5. LAZY EVAL — No answer until someone asks. That's why quantum stuff is weird.
-   **Caption:** Five ideas. That's the whole framework. Now let's use them to explain the universe.
+**Muted center text:** "Five ideas. That's the whole framework. Now let's use them to explain the universe."
 
 ---
 
@@ -413,374 +472,410 @@ The engine computes everything, but only produces definite answers when somethin
 
 **Part header:** "Part Two — The Universe Through the Framework"
 
-> **AUTHOR NOTE (PART):** This is where we pay off all the setup. Each chapter follows the pattern: (1) the cool observation in plain English, (2) how the framework explains it, (3) physics cards for curious readers, (4) "What This Means." The tone should escalate — the reader should feel the framework gaining explanatory power with each chapter.
+> **AUTHOR NOTE (PART):** This is where we pay off all the setup. EVERY chapter opens with a mystery block — the weird observation, the tension — then resolves it with the framework. The tone should escalate. The reader should feel the framework gaining explanatory power with each chapter. Chapter order: Mass/Energy → Gravity → Space → Time → Quantum → Entanglement → Expansion. This order is deliberate: Mass pays off loops immediately, Gravity pays off budget drains, Space needs mass/gravity context, Time needs all three, Quantum needs lazy eval + double buffering, Entanglement is graph structure, Expansion is the victory lap.
 
 ---
 
-#### Chapter 4 — What is Space?
+#### Chapter 3 — What Is Mass? And What Is Energy?
 
-**Section number:** 04
-**Section title:** What is Space? (It's the Graph's Shape)
+**Section number:** 03
+**Section title:** What Is Mass? And What Is Energy?
 
-> **AUTHOR NOTE (CHAPTER):** The key insight: space isn't a container, it's the graph's shape seen from far away. The three-zoom-levels figure is crucial — it shows the same thing at different scales. "Distance = hops" needs to land hard. The position section (committed vs uncommitted edges) is the bridge to quantum — committed edges = definite position, uncommitted edges = superposition.
+> **AUTHOR NOTE (CHAPTER):** This is the FIRST physics payoff. The reader just learned about loops and budgets. Now they see it explain E=mc². The mystery opening should make the reader feel the strangeness of mass-energy equivalence. The c² explanation is the key new addition — C is clock speed, c² = work × propagation rate. The hamster wheel metaphor is perfect for mass. Three destinations for return values. Annihilation ties to mirror graphs from Ch 1.
 
-##### Opening
+##### Mystery Block
 
-**Content direction:** Most people think space is a big empty container — a box that holds stuff. This framework says the opposite. There is no box. Space is the large-scale pattern of connections. Distance = how many hops between nodes. Zoom out far enough and the hops look smooth. That smoothness is what we call space.
+**Mystery content:** Here's something that should bother you: mass and energy are the same thing. Einstein proved it in 1905. A paperclip contains enough energy to flatten a city. But WHY? Why would stuff contain astronomical amounts of trapped energy? And why is the conversion factor the speed of LIGHT, squared? What does light have to do with a paperclip?
 
-##### Figure: fig-11
+Physicists can use the equation. But "why c²" has never had a satisfying intuitive answer.
 
-**ID:** fig-11
-**Label:** Figure 11 — Space is the Graph's Shape, Seen From Different Distances
-**Description:** Three panels at increasing "zoom out." Left (ZOOMED IN): individual nodes and edges visible, dots and lines. Center (MEDIUM ZOOM): denser mesh, zigzag pattern emerges. Right (ZOOMED OUT): smooth flowing curves — this is what we call "space."
-**Caption:** Space is the graph's shape, seen from far enough away. Up close it's dots. Far away it's smooth.
+##### Tension
 
-##### Figure: fig-12
+**Content direction:** Think about it. Mass just sits there. A rock on a table. Not moving, not glowing. Where is all that energy hiding? And when you release it — nuclear bomb, annihilation — where does it come FROM?
 
-**ID:** fig-12
-**Label:** Figure 12 — Distance is Just the Number of Hops
-**Description:** Left (green): two nodes connected by short path (3 hops), labeled "NEAR — 3 HOPS." Right (red): two nodes connected by long path with many intermediate dots and ellipsis, labeled "FAR — MANY HOPS." Bottom text: "There's no invisible 'space' the graph sits in. The connections ARE the distance."
-**Caption:** There's no separate "space" containing the graph. The hops ARE the distance.
+##### Framework Answer
 
-##### Position = Having Definite Connections
+**Content direction:** The energy isn't hiding. It's active. Being consumed and regenerated every tick. If mass is a loop — a computation that runs every tick, consuming budget, feeding results back in — then the rock on your table is running a permanent computation. A hamster wheel that never stops. You can't see it because you're Mario — you see the render, not the engine.
 
-**Content direction:** Being "somewhere" = committed connections to specific neighbors (solid lines). Not being "somewhere" = uncommitted connections to many possible neighbors (dotted lines). That's what superposition actually means.
+##### Mass: The Hamster Wheel
 
-##### Figure: fig-13
-
-**ID:** fig-13
-**Label:** Figure 13 — Being 'Somewhere' vs. Being 'Undecided'
-**Description:** Left (green): node with thick solid lines to 3 specific neighbors, labeled "DEFINITE POSITION — Solid connections. 'I am HERE.'" Right (purple): node with dotted lines fanning out to ~10 possible neighbors, labeled "NO DEFINITE POSITION — Dotted connections. 'I could be anywhere.'"
-**Caption:** Being "somewhere" means having definite connections. Being "in superposition" means the connections haven't been decided yet.
-
-##### Physics Card: The Planck Scale
-
-Physicists discovered that below ~10⁻³⁵ meters (the Planck length), our equations stop working. In this framework, that's the graph's minimum spacing — nothing smaller than one node. The Planck time (~10⁻⁴⁴ seconds) is one tick of the engine.
-
-##### What This Means (Insight)
-
-Space isn't a box that holds the universe. Space is the SHAPE of the graph — the pattern of connections between everything. Distance is how many hops separate two things. When you "move," your connections to neighbors are being rewired. There's no space "under" the graph. The graph is all there is.
-
----
-
-#### Chapter 5 — What is Mass? And What is Energy?
-
-**Section number:** 05
-**Section title:** What is Mass? And What is Energy?
-
-> **AUTHOR NOTE (CHAPTER):** This is the big payoff for chapters 1 and 2. Cycles + budget = mass. Return values = energy. Three destinations for return values: energy (exits), mass (loops back), expansion (builds new graph). The E=mc² moment should hit hard — "break the loop and everything escapes." The hamster wheel metaphor is perfect for mass. Annihilation (mirror graphs from Ch1 meeting and canceling) ties it together.
-
-##### Opening
-
-**Content direction:** When the engine finishes a computation, it produces a return value — an output. That return value goes one of three places: out (energy), back into the loop (mass), or into building new connections (expansion).
+**Content direction:** Loop from Ch1 + budget from Ch2. Every tick, engine processes the cycle, produces a return value, result feeds back in. Round and round. Forever. Heavier thing = bigger loop = more budget consumed per tick.
 
 ##### Figure: fig-14
 
 **ID:** fig-14
-**Label:** Figure 14 — Every Computation Produces a Result. It Goes One of Three Places.
-**Description:** Three panels side by side. Left (blue, "ENERGY"): arrows propagating outward from a node, stick figure waving goodbye, "Result goes OUT." Center (red, "MASS"): stick figure running in a hamster wheel (cycle), "Result loops BACK IN." Right (green, "EXPANSION"): stick figure building a bridge between two nodes, "Result BUILDS new graph."
-**Caption:** Every tick, the engine produces results. They go one of three places: out (energy), back in (mass), or into building new graph (expansion).
+**Label:** Figure 10 — Every Computation Produces a Result. It Goes One of Three Places.
+**Description:** Three panels side by side. Left (blue, "ENERGY"): arrows propagating outward from a node, "Result goes OUT. Work finished." Center (red, "MASS"): stick figure running in a hamster wheel, "Result loops BACK IN. Round and round." Right (green, "EXPANSION"): nodes building new connections (dashed lines to new node), "Result BUILDS new graph."
+**Caption:** Every tick, the engine produces results. They go one of three places: out (energy), back in (mass), or into building new graph (expansion). These are the only three options.
 
-##### Mass: The Hamster Wheel
+##### E=mc²: When the Loop Breaks — WITH the c² Explained
 
-> **AUTHOR NOTE (SECTION):** Mass should feel heavy and permanent and inescapable. A loop that never stops. Budget consumed every tick. The hamster wheel.
+> **AUTHOR NOTE (SECTION):** This is the most dramatic moment so far. Break the loop → everything escapes → as energy. But ALSO explain c². C = clock speed = budget per tick. Loop consumes C-worth of budget. When it breaks, work escapes at C propagation rate. Work × propagation = C × C = c². It's the engine's processing capacity squared. THAT is why tiny mass = astronomical energy. The engine is fast as hell.
 
-**Content direction:** The loop from Chapter 1 + the budget from Chapter 2. Every tick, the engine processes the cycle. Every tick, it produces a return value. But instead of going somewhere useful, the result feeds right back in. Round and round. Forever. That's mass. Heavier = bigger loop = more budget consumed.
+**Content direction:** When the loop breaks, trapped results escape. All at once. As energy. That's a nuclear bomb.
 
-##### Figure: fig-15
+But unpack c². C is the engine's clock speed. The budget per tick. The loop consumes C-worth of budget. When it breaks, work escapes and propagates at C. Work × propagation = C × C = c². Not a magic number. It's the engine's processing capacity squared. That clock speed is enormous — ~300 million m/s. Squared: ~9 × 10¹⁶. THAT is why a paperclip could power a city.
 
-**ID:** fig-15
-**Label:** Figure 15 — Mass is a Loop That Never Stops Eating Budget
-**Description:** Left: a 4-node cycle with recycling arrow. Right: three stacked budget bars (Tick 1, Tick 2, Tick 3) each showing the same chunk consumed by "loop" (red, ~30%) and the rest for "other work." Label: "Same drain. Every tick. That's mass."
-**Caption:** Mass is a loop that runs every tick, consuming budget every tick, feeding its own results back into itself. It never stops.
-
-##### E = mc²: When the Loop Breaks
-
-> **AUTHOR NOTE (SECTION):** This is the most dramatic moment in the first half of the document. The reader should feel the explosion. Break the loop → everything trapped inside escapes → all at once → as energy. That's a nuclear bomb. Then connect to annihilation: mirror graphs from Chapter 1 cancel, loops vanish, total conversion.
-
-**Content direction:** When the loop breaks — when something destroys the cycle — all those trapped results escape. All at once. As energy. That's E = mc². That's a nuclear bomb. And when a particle meets its antiparticle (its mirror from Chapter 1), they cancel completely. Total conversion.
+When a particle meets its antiparticle (mirror graph from Ch 1), they cancel completely. Total conversion. 100% efficiency.
 
 ##### Figure: fig-16
 
 **ID:** fig-16
-**Label:** Figure 16 — Break the Loop and Mass Becomes Energy
-**Description:** Left: intact loop (red, 3 nodes cycling), labeled "BEFORE: LOOP INTACT — Mass. Stable. Contained." Center: scissors icon with "BREAK!" Right: nodes scattered, energy arrows radiating outward with lightning bolt symbols, labeled "AFTER: ENERGY ESCAPES — Everything trapped inside escapes. All at once."
-**Caption:** Break the loop and everything trapped inside escapes as energy. That's E = mc². That's a nuclear bomb.
+**Label:** Figure 11 — Break the Loop and Mass Becomes Energy
+**Description:** Left: intact 3-node loop in red, labeled "BEFORE: LOOP INTACT — Mass. Stable. Trapped." Center: scissors icon with "BREAK!" Right: scattered nodes with energy arrows and lightning bolts radiating outward, labeled "AFTER: ENERGY ESCAPES — Everything trapped escapes. All at once. E = mc²."
+**Caption:** Break the loop and everything trapped inside escapes as energy. The c² isn't mysterious — it's the engine's clock speed squared. Work × propagation rate.
 
 ##### Physics Card: E = mc²
 
-Einstein showed in 1905 that mass and energy are interchangeable. E = mc². A paperclip contains enough energy to power a city. Nuclear weapons, reactors, and PET scanners all exploit this. The c² factor is why tiny mass = astronomical energy.
+Einstein showed in 1905 that mass and energy are interchangeable. The c² factor (~9 × 10¹⁶) is why tiny mass = astronomical energy. Nuclear weapons exploit partial conversion. Antimatter annihilation achieves total conversion.
 
 ##### Physics Card: Matter-Antimatter Annihilation
 
-When an electron meets a positron (its antimatter mirror), they annihilate completely — converting 100% of their mass into energy as photons. Routinely observed in particle accelerators and PET scanners.
+When an electron meets a positron (its antimatter mirror), they annihilate completely — 100% mass to energy as photons. In this framework: mirror graphs cancel, loops vanish, all trapped work escapes.
 
 ##### What This Means (Insight)
 
-Mass is stuck energy. It's work that loops forever, consuming budget every tick, feeding its own results back into itself. Energy is work that finished and went somewhere. They're the same thing — return values from computation — just going to different destinations. Break the loop and mass becomes energy. E = mc².
+Mass is stuck energy. It's work that loops forever, consuming budget every tick, feeding its own results back into itself. Energy is work that finished and went somewhere. They're the same thing — return values from computation — just going to different destinations. Break the loop and mass becomes energy. c² is the engine's clock speed squared — work times propagation. That's why tiny mass equals city-leveling energy.
 
 ---
 
-#### Chapter 6 — What is Time?
+#### Chapter 4 — What Is Gravity?
 
-**Section number:** 06
-**Section title:** What is Time? (And Why Does It Run Differently in Different Places?)
+**Section number:** 04
+**Section title:** What Is Gravity? And Why Can't You Block It?
 
-> **AUTHOR NOTE (CHAPTER):** Time as a counter, not a river. The two-clocks figure is the money shot — same tick, same total budget, but one clock is near a star (mass ate the budget) so it ticked fewer times. Make it visceral: "This is not a trick. This is not perception. The clock genuinely ticked fewer times." GPS example makes it concrete and real. Three levels of time (engine/experienced/rendered) is subtle but important. Velocity dilation = motion costs budget too. The speed of light = budget cap, not a rule.
+> **AUTHOR NOTE (CHAPTER):** This is the longest and most important chapter in Part Two. THREE mysteries in the opening: (1) can't shield it, (2) indistinguishable from acceleration, (3) no graviton. These should feel genuinely weird before the framework resolves them. Three major beats after the mystery: Activity Monitor as gravity, Spacetime as routing table, Why you can't block it. The fish-in-water analogy is the crown jewel. Three physics cards: lensing, black holes, gravitational waves.
 
-##### Opening
+##### Mystery Block
 
-**Content direction:** Most people think time is a river. This framework says time is a counter — how many state changes happened to you since the last tick. And the counter is different in different places because budget is different in different places.
+**Mystery content:** Gravity is weird. Not "quantum mechanics weird" — a different kind. A suspicious kind.
 
-##### Figure: fig-17
+Four forces: electromagnetic, strong nuclear, weak nuclear, gravity. First three can be shielded. Radiation → lead. EM fields → Faraday cage. Strong force → doesn't even reach past the nucleus. But gravity? Never found a way to shield it. Not with any material, any field, any clever arrangement. Nothing blocks it.
 
-**ID:** fig-17
-**Label:** Figure 17 — Same Tick, Different Budgets, Different Time
-**Description:** Left (green): "CLOCK IN EMPTY SPACE" — clock face with happy expression, budget bar showing only 5 units used for small tasks, 95 for clock ticking. "Clock ticks: 95." Right (red): "CLOCK NEAR A STAR" — clock face with tired expression, star nearby eating 40 units, only 55 left for clock. "Clock ticks: 55."
-**Caption:** Same engine tick. Same total budget. But the clock near the star had less budget available — so it ticked fewer times. That's time dilation.
+Einstein's equivalence principle: NO experiment, from inside a sealed room, can tell you if you're in a gravitational field or accelerating. None. Elevator on Earth vs. rocket in space — identical experience. Why would a "force" be perfectly identical to acceleration?
 
-##### Make It Real
+Physicists spent decades hunting the graviton — the hypothetical carrier particle. Never found one. Every other force has a carrier. Gravity? Nothing.
 
-> **AUTHOR NOTE (SECTION):** Don't let the reader dismiss this as theoretical. This is REAL. GPS depends on it. Every day. The atoms genuinely aged differently.
+Three clues: can't shield, identical to acceleration, no carrier particle. Three ways gravity is fundamentally different. Maybe it's not a force at all.
 
-**Content direction:** "This is not a trick. This is not perception." The clock near the star genuinely ticked fewer times. Fewer state changes. Fewer electron transitions. It AGED less.
+##### Beat 1: How Budget Drains Work in Real Machines
 
-##### Figure: fig-18
+> **AUTHOR NOTE (SECTION):** Walk through this concretely with Activity Monitor / Task Manager. The reader should realize their computer does this every day. Chrome eating CPU = heavy process = everything else slows. Closer to the heavy process = more affected. This IS gravity.
 
-**ID:** fig-18
-**Label:** Figure 18 — Your Phone Depends on This Being Real
-**Description:** GPS satellite high up (far from Earth, fast clock), phone on ground near Earth (slow clock). Callout box: "DIFFERENCE: ~45 μs/day — Without correction, your GPS would be off by 10km per day."
-**Caption:** GPS satellites correct for time dilation every day. Your phone's location accuracy depends on it.
+**Content direction:** Open Activity Monitor. Find Chrome with 47 tabs eating 78% CPU. Everything else slows down. Not because Chrome sent a "go slow" message. They share hardware. Chrome is eating the shared budget. Closer processes (same core, same cache lines) = more affected. Farther processes (different core) = barely notice. That's gravity. Mass (a loop) drains budget. Closer in graph = more affected. Farther = less. That falloff = inverse-square law. Not magic — resource contention in a shared system.
 
-##### Three Levels of Time
+##### Figure: fig-activity-monitor
 
-**Content direction:** Engine time = master clock, ticks the same everywhere. Experienced time = how much happened to you, depends on budget, this is what dilates. Rendered time = the committed frame, a static snapshot with no inherent direction (explains why physics equations are time-symmetric). Arrow of time = computation direction. You can't un-run a function.
+**ID:** fig-activity-monitor
+**Label:** Figure 12 — Your Computer Already Does This
+**Description:** Left: "YOUR COMPUTER" — Activity Monitor window showing Chrome at 78% CPU, Mail/Spotify/Notes at tiny percentages. Text: "Chrome didn't send a 'go slow' message. They share hardware." Right: "THE UNIVERSE" — A massive star node (gold) with nearby nodes (red, "slow" labels, thin budget bars) and far nodes (green, "fast" labels, full budget bars). Text: "Mass eats shared budget. Nearby = slow. Far = fine."
+**Caption:** Same effect. Same reason. A massive object doesn't "pull" things toward it. It drains the shared budget. Everything nearby gets less. That's gravity.
 
-##### Figure: fig-19
+##### Beat 2: Spacetime IS the Routing Table
 
-**ID:** fig-19
-**Label:** Figure 19 — Three Things We Call "Time"
-**Description:** Three panels. Left (blue, "ENGINE TIME"): steady clock, "The master clock. Ticks the same everywhere. Always." Center (orange, "EXPERIENCED TIME"): two stick figures — one running fast, one moving slowly near a heavy ball — "How much happened to you. Depends on available budget. Dilates." Right (purple, "RENDERED TIME"): a photograph/snapshot — "A snapshot. Static. No direction. That's why equations work both ways." Bottom text: "The arrow of time is the computation direction."
-**Caption:** Engine time never changes. Experienced time depends on your budget. Rendered time is a static snapshot — the committed frame.
+> **AUTHOR NOTE (SECTION):** This is the key new conceptual contribution. Spacetime isn't just "curved" — it IS the routing table for the engine's computation. When mass changes the edge costs, the routing table updates, and paths curve. Einstein described this perfectly — he called it curved spacetime. We're saying WHY it curves: because mass changes the routing costs.
 
-##### Motion Eats Budget Too
+**Content direction:** Your computer has routing tables — maps saying "to get data from A to B, go through these nodes, here's the cost." Network routers have them too. The engine needs the same thing — which nodes to update, in what order, cheapest paths.
 
-**Content direction:** Moving fast = rewiring connections (old dropped, new formed). Rewiring costs budget. Faster = more rewiring = more budget consumed = less for internal state = less time experienced. That's why moving clocks run slow.
+That routing table — connections, costs, cheapest paths between every pair of nodes — is what we experience as spacetime.
 
-##### Figure: fig-20
+No mass nearby: all edges cost the same, cheapest path is straight, flat spacetime. Mass present (loop eating budget): edges near it cost more (less budget, more congestion), cheapest paths curve around mass. That curve is gravity. Einstein described it perfectly, called it curved spacetime. He didn't say WHY mass curves spacetime. This framework answers: because mass drains budget, the routing table updates every tick with new costs. Spacetime IS the routing table, not a thing that gets curved — a computational structure that gets rewritten.
 
-**ID:** fig-20
-**Label:** Figure 20 — Moving Fast Means Rewiring Your Connections (That Costs Budget)
-**Description:** Stick figure moving right, trailing dotted lines behind (old connections, red, "dropped") and forming solid lines ahead (new connections, green, "new"). Budget bar showing "motion (rewiring)" chunk and smaller "internal state changes" chunk. Labels: "More motion → less budget for you → fewer internal changes → less time."
-**Caption:** Moving fast means constantly rewiring your graph connections. That costs budget. Less budget left for internal state changes.
+##### Figure: fig-routing
 
-##### Physics Card: The Muon
+**ID:** fig-routing
+**Label:** Figure 13 — Spacetime Is a Routing Table
+**Description:** Left (green, "FLAT ROUTING TABLE — NO MASS"): uniform grid with all edge costs labeled "1", straight green path from A to B, text "All edges cost 1. Cheapest path is straight. Flat spacetime." Right (red, "WARPED ROUTING TABLE — NEAR MASS"): same grid but with a massive node M in center, nearby edges labeled "5" and "8" (high cost), far edges still "1". A→B path curves around M. Text: "Edges near mass cost more. Cheapest path curves. That's curved spacetime."
+**Caption:** Left: no mass, flat routing table, straight paths. Right: mass increases local costs, routing table warps, paths curve. Gravity isn't a force. It's a routing distortion.
 
-Cosmic rays create muons in the upper atmosphere (~15km up). They decay in 2.2 microseconds — should only travel ~660 meters. But they reach the ground. Their clocks run ~10x slower at 99.5% light speed. Confirmed by every experiment.
+##### Beat 3: Why You Can't Block It
 
-##### Physics Card: The Twin Paradox
+**Content direction:** Now the three clues dissolve:
 
-Twin A stays home. Twin B flies to a star at near-light speed and returns. Twin B is younger. Confirmed by atomic clocks on aircraft and satellites. Not a thought experiment — reality.
-
-##### What This Means (Insight)
-
-Time is a counter: how many state changes happened to you since the last tick. Near mass, fewer happen (mass ate the budget). Moving fast, fewer happen (motion ate the budget). At the speed of light, NONE happen — all budget goes to movement. The speed limit isn't a rule — it's a budget cap. You can't spend more than exists.
-
----
-
-#### Chapter 7 — What is Gravity?
-
-**Section number:** 07
-**Section title:** What is Gravity? (And Why Can't You Block It?)
-
-> **AUTHOR NOTE (CHAPTER):** Gravity as routing distortion, not a force. The flat-vs-warped graph figure is the centerpiece. Activity Monitor analogy is perfect for making it feel intuitive. The "why you can't block it" section is the unique insight — other forces travel through connections, gravity IS the connections. The fish-in-water analogy nails it. Three physics cards here: lensing, black holes, gravitational waves.
-
-##### Opening
-
-**Content direction:** Four forces in physics. Three can be blocked. Gravity can't. Nothing shields it. Why? Because gravity isn't a force. It's a routing distortion — the budget drain from mass warping connections around it.
-
-##### Figure: fig-21
-
-**ID:** fig-21
-**Label:** Figure 21 — Flat Space vs. Space Warped by Mass
-**Description:** Left (green, "FLAT SPACE — NO MASS"): uniform grid with straight path from A to B. "All edges cost the same. Shortest path is straight." Right (red, "NEAR MASS — WARPED"): same grid but warped/curved around a heavy node M. Path from A to B curves around M. "Edges near mass cost more. Cheapest path CURVES around it."
-**Caption:** Flat space: all connections cost the same, shortest path is straight. Near mass: costs are warped, cheapest path curves. That curve is gravity.
-
-##### The Activity Monitor Analogy
-
-**Content direction:** Open Activity Monitor. Find the heaviest app. Watch everything else slow down. The heavy app didn't send a "go slow" message. They share hardware. It's eating the shared budget. That's gravity.
-
-##### Why You Can't Block It
-
-> **AUTHOR NOTE (SECTION):** This is one of my favorite parts. Every other force uses connections as a medium — break the connections, block the force. But gravity IS the connections. Your shield is made of connections. The drain flows through the shield itself. The fish-in-water analogy makes this visceral.
-
-**Content direction:** Every other force travels through connections — break them with a shield. Gravity isn't traveling through connections. Gravity IS the connections. The budget drain flows through the connections themselves. Your shield is made of connections. The drain flows through your shield.
+**Can't shield it** — gravity isn't traveling through connections, it IS the connections. Other forces send signals along edges (photons, gluons). Break the edges, block the force. But gravity is the edge weights. The budget drain is in the graph structure. Your shield is made of graph. The drain flows through your shield.
 
 ##### Figure: fig-22
 
 **ID:** fig-22
-**Label:** Figure 22 — Why You Can't Build a Gravity Shield
-**Description:** A fish in water holding a sign that says "NO CURRENT." The current (wavy lines) flows right through the fish and the sign. Label: "A shield is made of the same stuff gravity flows through. You can't block the current when you ARE the current."
-**Caption:** You can't build a gravity shield for the same reason a fish can't block a current. The shield is made of the medium the drain flows through.
+**Label:** Figure 14 — Why You Can't Build a Gravity Shield
+**Description:** A fish in water holding a sign that says "NO CURRENT." Current lines (wavy) flow right through the fish and the sign. Label: "The shield is made of the same stuff the drain flows through. You can't block the current when you ARE the current."
+**Caption:** A fish holding a "NO CURRENT" sign. The current flows right through. A gravity shield is made of graph — the medium the drain flows through. You can't block it.
+
+**Indistinguishable from acceleration** — same thing at engine level. Acceleration = connections rewired, costs budget. Gravity = nearby loop drains budget. Either way, from render layer: less budget, fewer transitions, identical experience. No difference in the engine.
+
+**No graviton** — nothing being transmitted. Gravity is a property of the routing table, not a signal. "What particle carries gravity?" is like "what particle carries network congestion?" Nothing. Congestion is a system property.
 
 ##### Physics Card: Gravitational Lensing
 
-In 1919, Arthur Eddington photographed stars during a solar eclipse. Stars near the sun's edge appeared shifted — light bending around the sun, following the cheapest path through warped space. Einstein predicted exactly this.
+1919, Eddington photographed stars during eclipse. Stars near sun appeared shifted — light bending, following cheapest path through warped routing table. Einstein predicted this exactly.
 
 ##### Physics Card: Black Holes
 
-A black hole is where mass is so concentrated that budget drain = 100%. Zero budget left. Zero state changes. Time stops. Nothing propagates out. The event horizon isn't a barrier — it's where the budget hits zero.
+A black hole = budget drain at 100%. Zero budget remaining. Zero state changes. Time stops. Event horizon = where budget hits zero. Not "gravity so strong light can't escape" but "no budget left for anything to happen."
 
 ##### Physics Card: Gravitational Waves
 
-In 2015, LIGO detected ripples from two black holes merging 1.3 billion light-years away. When mass changes, the changing budget drain propagates outward as waves — edge weights oscillating.
+2015, LIGO detected ripples from black holes merging 1.3 billion light-years away. Mass changes → routing table updates → changing edge weights propagate at C.
 
 ##### What This Means (Insight)
 
-Gravity is not a force pulling things together. It's a budget drain that distorts the connections around mass. Everything follows the cheapest path through the distorted network — and those paths curve toward mass. Einstein described this distortion perfectly. He called it curved spacetime. It's a routing table warped by a congested node.
+Gravity isn't a force pulling things together. It's a budget drain that distorts the routing table. Everything follows the cheapest path through the distorted network — and those paths curve toward mass. You can't block it because the routing table IS the medium. You can't tell it from acceleration because they cost the same budget. There's no graviton because there's nothing being sent — the routing table itself is warped. Einstein's curved spacetime is a routing table updated by a congested node. Every tick.
 
 ---
 
-#### Chapter 8 — The Quantum World
+#### Chapter 5 — What Is Space?
 
-**Section number:** 08
+**Section number:** 05
+**Section title:** What Is Space?
+
+> **AUTHOR NOTE (CHAPTER):** Space comes AFTER mass and gravity because the reader now understands graph weights and routing distortion. The mystery opening: space has a minimum size (granular, not continuous) and the holographic principle (3D info encoded on 2D surface). The holographic principle section uses Mario 64 as the analogy — 3D game on a 2D screen. Position (committed vs uncommitted edges) bridges to quantum.
+
+##### Mystery Block
+
+**Mystery content:** Space has a minimum size. Below ~10⁻³⁵ meters (Planck length), equations break. Not "need better instruments" — the math itself breaks. Space appears granular. Like zooming into a photo and finding pixels.
+
+And: physicists proved all information in a 3D volume can be described by its 2D surface. Not approximately — FULLY. Information in a room scales with wall area, not volume. This is the holographic principle. Makes no sense if space is a container.
+
+##### Framework Answer
+
+**Content direction:** Space isn't a box. It's the large-scale pattern of connections. Distance = hops between nodes. Zoom out far enough, hops look smooth. That smoothness is "space."
+
+##### Figure: fig-11
+
+**ID:** fig-11
+**Label:** Figure 15 — Space Is the Graph's Shape, Seen From Different Distances
+**Description:** Three panels at increasing zoom. Left (ZOOMED IN): individual dots and lines. Center (MEDIUM ZOOM): dense mesh of tiny dots, pattern emerges. Right (ZOOMED OUT): smooth flowing shape, labeled "Space — smooth curves."
+**Caption:** Up close: dots and lines. Zoom out: a mesh. Zoom out more: smooth curves. That's "space." The connections ARE the space.
+
+##### Distance Is Hops
+
+**Content direction:** Two nodes connected by 3 intermediate nodes? Close. Separated by a billion? Far. No invisible "space" the graph sits in. The connections ARE the distance.
+
+##### Position = Committed Connections
+
+**Content direction:** Being "somewhere" = committed (solid) connections to specific neighbors. Not being anywhere definite = uncommitted (dotted) connections to many possible neighbors. That's superposition.
+
+##### The Holographic Principle: Mario 64 on a 2D Screen
+
+> **AUTHOR NOTE (SECTION):** This is a NEW section. Use the Mario 64 analogy. 3D castles, depth, volume — but the screen is flat. 2D surface contains ALL information for the 3D experience. Physicists found the same thing: Bekenstein showed black hole info scales with surface area. The engine doesn't need to "fill" 3D space — it encodes info however it wants, renders it as 3D.
+
+**Content direction:** Super Mario 64: Mario moves in 3D, depth, volume, castles, mountains. But the screen is flat. 2D. Everything in Mario 64's 3D world is encoded on a 2D surface.
+
+Physicists discovered the same about our universe. Bekenstein: black hole information scales with surface AREA, not volume. 't Hooft and Susskind formalized: all info in 3D volume can be encoded on 2D boundary. Like a hologram.
+
+In this framework: not surprising. The engine (graph) doesn't need to be 3D. It stores info however is efficient. The 3D world is the render. The engine's storage might be a 2D boundary. You are Mario 64 — 3D experience, 2D information.
+
+##### Physics Card: The Holographic Principle
+
+1993, 't Hooft proposed information in any volume is encoded on its boundary. Bekenstein showed black hole entropy scales with surface area. AdS/CFT correspondence (Maldacena, 1997) provides mathematical realization. In this framework: engine encodes info however it wants; 3D experience is the render.
+
+##### What This Means (Insight)
+
+Space isn't a box. It's the graph's shape — connections between everything. Distance is hops. Minimum size is one node (one pixel). The 3D world might be a rendering of 2D-encoded information — like Mario 64 on a flat screen. No space "under" the graph. The graph is all there is.
+
+---
+
+#### Chapter 6 — What Is Time?
+
+**Section number:** 06
+**Section title:** What Is Time? (And Why Does It Run Differently in Different Places?)
+
+> **AUTHOR NOTE (CHAPTER):** The mystery opening has TWO parts: (1) equations work backwards — where's the arrow? (2) time dilation — clocks genuinely age differently. Use "Mario's Time" as the primary framing — Mario's time is change, not ticks. When you pause the game, Mario doesn't wait. C as speed of change (reinforced from Ch 2). Three levels of time. The arrow of time section is crucial — arrow lives in the engine (computation direction), not the render (snapshot). Equations describe the render (snapshot) = time-symmetric. NO TIME TRAVEL — computation is irreversible. Motion eats budget too → velocity dilation.
+
+##### Mystery Block
+
+**Mystery content:** Every fundamental equation works perfectly backwards. Newton, Maxwell, Einstein, Schrödinger — run them in reverse, valid solutions. Drop a ball: falls. Run backwards: rises. Both valid.
+
+But reality has a direction. Eggs break, don't unbreak. You age. Universe started with Big Bang. There CLEARLY is an arrow of time.
+
+Where is it? Where in the laws of physics does it say "time goes this way"? Nowhere. No equation contains the arrow. Century-long argument.
+
+And: time runs at different speeds. Clocks near Earth tick slower than orbital clocks. Not broken — genuinely fewer ticks. Fewer electron transitions. They AGE less.
+
+##### Framework Answer
+
+**Content direction:** Time isn't a thing. Time is change. How many state transitions happened in your region since the last engine tick.
+
+##### Mario's Time
+
+> **AUTHOR NOTE (SECTION):** Use Mario as the vehicle. Mario's time = number of updates his region gets. Pause the game = nothing happens for Mario, because nothing DID happen. No state changes, no time. Time IS change.
+
+**Content direction:** Does Mario experience time? Things change — Goombas move, coins spin. Mario's time = updates his region gets per frame. More budget → more changes → "faster time." When you pause the game, Mario doesn't wait — nothing DID happen. No state changes. No time. Time IS change.
+
+##### Figure: fig-17
+
+**ID:** fig-17
+**Label:** Figure 16 — Same Tick, Different Budgets, Different Time
+**Description:** Left (green, "CLOCK IN EMPTY SPACE"): clock face, budget bar showing tiny tasks (5 units) and large "clock ticking" portion (95 units). "Clock ticks: 95." Right (red, "CLOCK NEAR A STAR"): clock face, star nearby eating 45 units, only 55 left. "Clock ticks: 55." Caption: "Same engine tick. Same total budget. But the star ate the budget."
+**Caption:** Same engine tick. Same total budget. But the clock near the star had less budget — the star's loop ate it. Fewer state transitions. That's time dilation. Not a trick. The clock genuinely aged less.
+
+##### GPS — This Is Real
+
+**Content direction:** GPS satellites orbit high, less mass nearby, more budget, faster clocks. Difference: ~45 μs/day. Without correction, GPS drifts 10km/day. Every satellite adjusts. Your phone's blue dot depends on time dilation being real.
+
+##### The Arrow Lives in the Engine
+
+> **AUTHOR NOTE (SECTION):** This is the resolution to the time-symmetry mystery. Equations describe the RENDER (committed frame) = static snapshot = no direction = time-symmetric. The arrow is in the ENGINE (computation direction) = Frame N before Frame N+1. The arrow isn't in the equations because they describe the output, not the process. Then: NO TIME TRAVEL. Computation is irreversible. Can't un-compute a frame.
+
+**Content direction:** Equations work backwards because they describe the render — committed frames. A photograph has no arrow. Static snapshot. Equations describe the photograph → time-symmetric.
+
+Arrow of time is in the ENGINE — computation direction. Engine computes Frame N before N+1. That's the arrow. Not in equations because equations describe output, not process. Arrow lives one layer deeper.
+
+No time travel. Arrow is in engine's computation direction. Can't un-compute. Can't rewind. Render is time-symmetric but engine isn't. Computation is irreversible. Function ran. Output committed. No undo.
+
+##### Motion Eats Budget Too
+
+**Content direction:** Moving fast = rewiring connections (dropping old, forming new). Rewiring costs budget. Faster = more rewiring = more budget consumed = less for internal state = less time. At light speed, ALL budget → motion, zero internal changes, zero time. "Speed limit" isn't a rule — it's a budget cap. C is the maximum. Can't spend more than exists.
+
+##### Physics Card: The Muon
+
+Cosmic muons: created ~15km up, decay in 2.2μs, should travel ~660m. But reach the ground at 99.5% C. Clocks run ~10× slower. Budget consumed by motion, almost none for internal decay.
+
+##### Physics Card: The Twin Paradox
+
+Twin A home, Twin B near-light-speed travel. B is genuinely younger — fewer heartbeats, cell divisions, state transitions. Confirmed by atomic clocks on aircraft and GPS.
+
+##### What This Means (Insight)
+
+Time is not a river. Time is change — how many state transitions happened in your region. Near mass, fewer (mass ate budget). Moving fast, fewer (motion ate budget). At light speed, NONE. Equations work backwards because they describe the committed frame — a static snapshot with no arrow. The arrow lives in the engine's computation direction. No time travel — computation is irreversible.
+
+---
+
+#### Chapter 7 — The Quantum World
+
+**Section number:** 07
 **Section title:** The Quantum World: Why Small Things Act So Strange
 
-> **AUTHOR NOTE (CHAPTER):** This is the longest and most important chapter. It's the payoff for lazy evaluation (Ch 3). The double-slit experiment is the main event — the 4-panel comic strip format works. Key insight: the engine walks every possible path but doesn't commit until a strict consumer demands it. "Observation" isn't magic — it's a strict consumer forcing resolution. The basketball (Ch 3 callback) explains why big things don't do this. The detector-ruins-it explanation must be clear: the camera didn't "disturb" the particle, it demanded an answer.
+> **AUTHOR NOTE (CHAPTER):** This is the longest chapter and the payoff for lazy evaluation (Ch 2) and double buffering ("Mario never gets half his world"). The mystery opening is the DOUBLE-SLIT + QUANTUM ERASER — present it as genuinely mind-bending before resolving it. Key insight: the engine computes the whole frame before committing. The quantum eraser isn't time travel — you can't fool the engine after the frame is committed because the frame was computed all at once. The detector-ruins-it explanation: the camera demanded an answer, not "disturbed" the particle. The basketball callback (Ch 2): why big things don't do this.
 
-##### Opening
+##### Mystery Block
 
-> **AUTHOR NOTE (SECTION):** Callback to the smart kitchen. The chef knows every recipe but only cooks what's ordered. Now: a particle in flight, nobody needs its position. Nobody ordered the soufflé.
+**Mystery content:** The experiment that broke physics. Double-slit: fire particles at wall with two slits. Thousands of dots form interference pattern (wave behavior, particle goes through BOTH slits). Put detector at slit → pattern vanishes. Looking changed the outcome.
 
-**Content direction:** Callback to Ch 3. Chef knows recipes, only cooks orders. A particle in flight — nothing needs its definite position. No strict consumer. Engine walks the recipe (computes all possible paths) but doesn't produce a finished dish. The particle has potential positions — possible connections, none committed.
+Then the quantum eraser makes it INSANE: run with detector, AFTER particle hits screen, erase which-path info. Sort results. Interference pattern COMES BACK for erased subset. The particle already hit the screen. The dot is already there. How can erasing info AFTER THE FACT change a pattern already recorded? As if the universe reached back in time.
+
+Confirmed hundreds of times. Real. Works. Seems to violate causality.
+
+##### Tension
+
+**Content direction:** Four options: (1) particles are magic, (2) universe knows the future, (3) reality doesn't exist until you look, (4) we're misunderstanding "before" and "after." Let's talk about option 4.
+
+##### Smart Kitchen Revisited
+
+**Content direction:** Callback to Ch 2 chef. Particle in flight — nobody needs definite position. No strict consumer. Engine walks the recipe (all possible paths) but doesn't commit. Particle has potential positions — possible connections, none committed.
 
 ##### Figure: fig-23
 
 **ID:** fig-23
-**Label:** Figure 23 — Before Anyone Asks vs. After Someone Asks
-**Description:** Left (purple, "WAVE FUNCTION — BEFORE"): central node with dotted lines fanning out to ~10 possible positions, faint endpoint dots. "Many possible connections. None committed." Right (green, "MEASURED PARTICLE — AFTER"): same central node but with ONE solid thick line to ONE neighbor, all other connections faded. "One definite connection. One definite position."
-**Caption:** Before someone asks: many possible connections (wave function). After someone asks: one definite connection (collapse). That's quantum mechanics.
+**Label:** Figure 17 — Before Anyone Asks vs. After Someone Asks
+**Description:** Left (purple, "WAVE FUNCTION — BEFORE"): central node with dotted lines fanning out to ~7 possible positions. "Many possible connections. None committed." Right (green, "MEASURED — AFTER"): same node with ONE thick solid line to ONE neighbor, all others faded. "One definite connection. One definite position."
+**Caption:** Left: nobody's asking — many possible connections (wave function). Right: someone asks — one connection commits (collapse). That's quantum mechanics.
 
-##### The Double-Slit Experiment
+##### The Double-Slit
 
-> **AUTHOR NOTE (SECTION):** This is the most famous experiment in physics. Feynman said it contains "the only mystery." Use the 4-panel comic format. Panel 1: particle approaches, nobody's asking where it is. Panel 2: engine walks both paths through both slits (dotted). Panel 3: paths overlap on screen — bright where they align, dark where they cancel. Panel 4: screen demands "WHERE ARE YOU?" — one dot appears. Over thousands of particles, dots form interference pattern.
-
-**Content direction:** The most famous experiment in physics. Four steps: (1) particle approaches wall with two slits, nobody asking where it is. (2) Engine computes paths through BOTH slits. (3) Paths overlap on far screen — constructive (bright) and destructive (dark) interference. (4) Screen is a strict consumer — demands one answer — one dot appears. Over thousands: dots form interference bands.
-
-##### Figure: fig-24
-
-**ID:** fig-24
-**Label:** Figure 24 — The Double-Slit Experiment: The Most Important Experiment in Physics
-**Description:** Four-panel comic strip. Panel ①: particle approaching wall with 2 slits, thought bubble "Nobody's asking where I am." Panel ②: dotted lines going through BOTH slits — "Engine walks both paths. Neither committed." Panel ③: screen showing interference pattern (alternating bright/dark bands) — "Where paths line up: bright. Where they cancel: dark." Panel ④: screen demands "WHERE ARE YOU?" — single dot appears on screen — "One dot. Over thousands, dots form the pattern."
-**Caption:** Each particle lands at one spot. But the PROBABILITY of where it lands was shaped by the engine computing every possible path through both slits.
+**Content direction:** Four steps: (1) particle approaches, nobody asking. (2) Engine computes paths through BOTH slits — neither committed. (3) Paths overlap on screen — where they line up: bright, where they cancel: dark. (4) Screen is strict consumer (dense material, 10²⁶ atoms demanding). Forces commitment → one dot. Over thousands → interference bands.
 
 ##### Why a Detector Ruins the Pattern
 
-**Content direction:** Put a camera at one slit. It's a strict consumer — needs to know "did you come through here?" Forces a definite answer. Once there's an answer, only one path. No overlap. No interference.
+**Content direction:** Camera at slit = strict consumer that NEEDS to know "did you come through here?" Forces definite answer. Once answered, only one path committed. No overlap. No interference. Camera didn't "disturb" the particle. It demanded an answer.
 
-##### Figure: fig-25
+##### The Off-By-One: Why the Quantum Eraser Isn't Time Travel
 
-**ID:** fig-25
-**Label:** Figure 25 — A Detector Doesn't 'Disturb' the Particle. It Demands an Answer.
-**Description:** Wall with two slits. Camera (red) at one slit with speech bubble "DID YOU COME THROUGH HERE?" One solid path shown. Screen on right with scattered dots (no pattern). Label: "The camera demanded an answer. Once committed, only one path contributes."
-**Caption:** The camera didn't "disturb" the particle. It demanded an answer. Once the answer exists, only one path contributes. No interference.
+> **AUTHOR NOTE (SECTION):** THIS IS THE KEY INSIGHT for resolving quantum eraser weirdness. Callback to "Mario never gets half his world." The engine computes the ENTIRE frame before committing. There is no "during." The engine computed source + slits + detectors + erasers + screen ALL AT ONCE. The eraser is part of the INPUT, not "after." You're changing inputs to an uncommitted computation, like editing a spreadsheet formula before hitting Enter.
+
+**Content direction:** Remember: Mario never gets half his world. Engine computes ENTIRE frame before committing. No "during." No "particle went through slit THEN hit screen THEN someone erased data." Engine computed the entire setup — source, slits, detectors, erasers, screen — in one pass. Then committed.
+
+Quantum eraser doesn't change the past. There is no "past" during computation — only the uncommitted frame. Engine sees whole setup: slits, detectors, the eraser that will be applied. Computes result of complete configuration. Eraser is part of INPUT, not "after."
+
+Not retroactively changing a result. Changing inputs to an uncommitted computation. Like editing a spreadsheet formula before hitting Enter. Not changing history — result hasn't committed yet.
 
 ##### Why Basketballs Don't Do This
 
-**Content direction:** Callback to Ch 3's basketball. 10²⁶ atoms, every one a strict consumer. No uncommitted edges survive. That's why big things behave normally.
-
-##### Figure: fig-26
-
-**ID:** fig-26
-**Label:** Figure 26 — Why Big Things Behave Normally
-**Description:** Large basketball circle filled with tiny dots, speech bubbles ("VALUE!" "NOW!" "WHERE?!" "GIVE!"). Caption: "10²⁶ atoms, EVERY one a strict consumer. No uncommitted edges survive."
-**Caption:** A basketball has 10²⁶ atoms, every one demanding answers from its neighbors. Everything gets committed instantly. No quantum weirdness.
+**Content direction:** Callback to Ch 2. Basketball: 10²⁶ atoms, every one a strict consumer. Everything committed instantly. No uncommitted edges survive. No wave function lasts. Too many customers in the kitchen.
 
 ##### Physics Card: Decoherence
 
-Isolated particles maintain superposition. In warm, dense environments, quantum behavior vanishes instantly. More neighbors = more strict consumers = faster resolution. Main challenge in quantum computing.
+Isolated particles maintain superposition. Warm, dense environments: quantum behavior vanishes instantly. More neighbors = more strict consumers = faster commitment. Main quantum computing challenge: keeping qubits isolated.
 
-##### Physics Card: The Quantum Eraser
+##### Physics Card: The Quantum Eraser (Detailed)
 
-Run double-slit with detectors → no interference. Erase which-path info after particle hit screen. Sort results → interference reappears in subset. Not time travel. You changed how you sorted already-committed data. Like removing a spreadsheet filter.
+Kim et al. (1999) confirmed delayed-choice quantum eraser. Entangled pairs: one hits screen, other goes through path that preserves or erases which-slit info. When erased (even after partner hit screen), interference reappears in sorted subset. Not time travel — engine computed whole setup as single frame. Sorting data = applying filter to committed spreadsheet.
 
 ##### What This Means (Insight)
 
-Quantum behavior isn't strange. It's lazy evaluation. The engine computes every possibility but doesn't commit an answer until something NEEDS one. Small, isolated things have nobody asking, so they stay as possibilities. Big, interconnected things have everything asking — they're committed immediately. "Observation" isn't magic. It's a strict consumer forcing a computation to produce a definite result.
+Quantum behavior isn't strange. It's lazy evaluation. The engine computes every possibility but doesn't commit until something demands one. Small isolated things: nobody asking, stay as possibilities. Big dense things: everything asking, committed immediately. "Observation" isn't magic — it's a strict consumer forcing resolution. The quantum eraser isn't time travel — the frame was computed all at once.
 
 ---
 
-#### Chapter 9 — Entanglement
+#### Chapter 8 — Entanglement
 
-**Section number:** 09
+**Section number:** 08
 **Section title:** Entanglement: The Universe's Shortcut
 
-> **AUTHOR NOTE (CHAPTER):** Entanglement should feel simple once you see it. A direct edge that persists. Three-panel story: (1) two particles meet, form a direct edge, (2) they separate, thousands of nodes between them, but the direct edge is still 1 hop, (3) one is measured, resolution travels through the shortcut. Then: why it's not faster-than-light communication (you need to compare results at light speed). Bell's theorem physics card.
+> **AUTHOR NOTE (CHAPTER):** Mystery opening: Einstein's "spooky action," Bell's theorem proving correlations too strong for hidden info, 2022 Nobel Prize. Framework answer: a direct edge (shortcut) that persists. Three-panel story. Then: why not FTL communication. Keep this chapter tight — the concept is simple once you see it.
 
-##### Opening
+##### Mystery Block
 
-**Content direction:** Einstein called it "spooky action at a distance." He thought particles must carry hidden info. In 1964, Bell proved the correlations are too strong for hidden info. Something connects them. In this framework: a direct edge — a shortcut.
+**Mystery content:** Einstein called it "spooky action at a distance." Two particles interact, separate, fly to opposite sides. Measure one — the other INSTANTLY has correlated value. Not light-speed fast. Instantly.
+
+Bell (1964) proved correlations too strong for hidden information (particles can't carry pre-agreed answers). Something connects them. 2022 Nobel Prize confirmed experimentally.
+
+How can two things on opposite sides of the universe be instantly correlated with no signal?
+
+##### Framework Answer
+
+**Content direction:** A direct edge. A shortcut. When particles interact, they form a direct connection — 1 hop. They separate, neighborhood path grows (thousands, millions of hops). But direct edge persists. Still 1 hop. Resolution travels through the shortcut regardless of scenic route length.
 
 ##### Figure: fig-27
 
 **ID:** fig-27
-**Label:** Figure 27 — Entanglement is a Shortcut That Persists
-**Description:** Three panels. ① "THEY MEET": two nodes close together with thick orange direct edge. ② "THEY SEPARATE": same two nodes far apart, many intermediate gray nodes between them, but thick orange direct edge still connects them — "Direct edge persists. One hop." ③ "ONE IS MEASURED": scientist measures node A, resolution arrow travels along the direct edge to node B — "Both get definite values. Instantly." Bottom text: "The neighborhood path might be 1 billion hops. The direct edge is still 1 hop."
-**Caption:** That's entanglement. Not magic. Not communication. A shortcut through the graph that doesn't care about the long way around.
+**Label:** Figure 18 — Entanglement Is a Shortcut That Persists
+**Description:** Three panels. ① "THEY MEET": two nodes close together with thick orange direct edge. ② "THEY SEPARATE": same nodes far apart, gray intermediate nodes between them (scenic route: many hops), but thick orange direct edge still connects them — "still 1 hop." ③ "ONE IS MEASURED": scientist measures one node, resolution arrow travels the direct edge to other node — "Both get definite values. Instantly."
+**Caption:** Direct edge persists regardless of separation. Resolution travels the shortcut. One hop. That's entanglement.
 
-##### Why It's Not Faster-Than-Light Communication
+##### Why Not FTL Communication
 
-**Content direction:** Neither particle learns what question the other was asked. Just correlated answers. To check correlation, you must compare results via regular signal at light speed.
-
-##### Figure: fig-28
-
-**ID:** fig-28
-**Label:** Figure 28 — Correlated Instantly, But Verification Takes Time
-**Description:** Two stick-figure scientists on opposite sides. Left one with thought bubble "I got UP" (blue). Right one with "I got DOWN" (red). Between them: a dashed line with a snail emoji and label "classical signal needed to compare (travels at speed of light — no faster)."
-**Caption:** The particles get correlated answers instantly. But to KNOW they're correlated, you need to send a regular signal. No faster-than-light phone calls.
+**Content direction:** Neither scientist learns what question the other was asked. Just correlated answers. Can't control outcomes (random). Can't encode messages. Must compare results via regular signal at light speed. Like two people opening envelopes from the same deck — if you get the ace, you know the other didn't, but you can't send a message by opening your envelope.
 
 ##### Physics Card: Bell's Theorem
 
-In 1964, John Bell proved correlations between entangled particles are too strong for hidden information. Something connects them. Decades of experiments confirmed this, culminating in the 2022 Nobel Prize. In this framework: the direct edge.
+1964, Bell: correlations too strong for local hidden variables. Something nonlocal connects them. Decades of experiments confirmed. 2022 Nobel Prize (Aspect, Clauser, Zeilinger). In framework: direct edge IS the nonlocal connection.
 
 ##### What This Means (Insight)
 
-Two particles that interact form a direct edge — a shortcut in the graph. When one is measured, the resolution travels through the shortcut, not through the neighborhood. The shortcut is one hop regardless of how many hops the neighborhood path has grown to. This isn't spooky. It's graph structure.
+Two particles that interact form a direct edge — a shortcut. Resolution travels through it, not the scenic route. One hop, regardless of distance. Not spooky. Not action at a distance. Graph structure that doesn't care about the long way around.
 
 ---
 
-#### Chapter 10 — Why is the Universe Expanding?
+#### Chapter 9 — Why Is the Universe Expanding?
 
-**Section number:** 10
-**Section title:** Why is the Universe Expanding? (And Getting Bigger Faster?)
+**Section number:** 09
+**Section title:** Why Is the Universe Expanding? (And Getting Bigger Faster?)
 
-> **AUTHOR NOTE (CHAPTER):** This should feel like the framework's victory lap. Expansion = computation creates new connections. Acceleration = positive feedback (more graph → more computation → more graph). The snowball analogy is perfect. The dark energy problem: standard physics needs a mysterious substance making up 68% of the universe. This framework doesn't — the expansion IS the graph growing through its own computation. That's elegant and the reader should feel it.
+> **AUTHOR NOTE (CHAPTER):** Victory lap chapter. Mystery: accelerating expansion, "dark energy" = 68% of universe, never detected. Framework: graph grows itself through computation. Positive feedback = acceleration. No mysterious substance needed. The snowball analogy. Keep it short — the elegance should speak for itself.
 
-##### Opening
+##### Mystery Block
 
-**Content direction:** Hubble 1929: galaxies flying apart. 1998: expansion accelerating. Standard physics needs "dark energy" (68% of the universe, never detected). In this framework: computation creates connections. More connections → more computation → more connections. Positive feedback = acceleration.
+**Mystery content:** Hubble (1929): galaxies flying apart. 1998: expansion accelerating. Getting faster. Physicists called it "dark energy" — 68% of the universe. Nobody detected it. Nobody knows what it is. Biggest component, completely invisible. Suspicious.
+
+##### Framework Answer
+
+**Content direction:** What if nothing is pushing? What if the graph grows itself? Every tick: engine runs → computations produce return values → some create new connections (new edges, nodes) → more graph → more computation next tick → more return values → more connections. Positive feedback. Snowball.
 
 ##### Figure: fig-29
 
 **ID:** fig-29
-**Label:** Figure 29 — The Graph Grows Itself
-**Description:** Three graphs of increasing size left to right, with "compute →" arrows between them. Left (EARLY): 5 nodes, 5 edges. Center (LATER): ~13 nodes, ~15 edges. Right (EVEN LATER): ~40 nodes, many edges. Bottom: "More graph → more computation → more new connections → more graph. Growth proportional to size = acceleration."
-**Caption:** The engine runs. Computations produce results. Results create new connections. More connections = more computations = more new connections. The graph grows itself.
-
-##### Figure: fig-30
-
-**ID:** fig-30
-**Label:** Figure 30 — A Snowball Rolling Downhill
-**Description:** A curved downhill slope. Snowballs rolling down, increasing in size from left (small) to right (huge), with increasingly large motion arrows. Labels: "small" → "bigger" → "BIGGER" → "HUGE."
-**Caption:** More graph → more computation → more growth. Growth proportional to current size = exponential acceleration.
+**Label:** Figure 19 — The Graph Grows Itself
+**Description:** Three graphs increasing in size left to right with "compute →" arrows between. Left (EARLY): 5 nodes. Center (LATER): ~12 nodes. Right (EVEN LATER): ~40 nodes. Bottom text: "More graph → more computation → more new connections → more graph. Growth proportional to size = acceleration."
+**Caption:** Computation creates connections. More connections = more computation = more connections. Growth proportional to current size = exponential acceleration.
 
 ##### Physics Card: The Expanding Universe
 
-Hubble 1929: galaxies receding. 1998: expansion accelerating. Standard physics requires "dark energy" — 68% of the universe. In this framework, no separate substance needed. The expansion IS the graph growing through its own computation.
+Hubble (1929): galaxies receding. Perlmutter, Schmidt, Riess (1998, Nobel 2011): expansion accelerating. Standard physics requires "dark energy" — 68%, never detected. In this framework: no separate substance. Acceleration IS the graph growing through computation.
 
 ##### What This Means (Insight)
 
-The universe is growing because computation creates connections. Every tick, the engine runs, produces results, and those results build new structure. More structure means more computation. More computation means more structure. It's a snowball. That's why the expansion is accelerating. It's not a mysterious force. It's the graph computing itself into existence.
+The universe is expanding because computation creates connections. Every tick: more structure → more computation → more structure. Snowball. Acceleration isn't a mysterious force. The graph is computing itself into existence, getting better at it every tick. No "dark energy" needed.
 
 ---
 
@@ -788,25 +883,25 @@ The universe is growing because computation creates connections. Every tick, the
 
 **Part header:** "Part Three — What We Don't Know"
 
-#### Chapter 11 — Honest Gaps
+#### Chapter 10 — Honest Gaps
 
-**Section number:** 11
+**Section number:** 10
 **Section title:** Honest Gaps
 
-> **AUTHOR NOTE (CHAPTER):** This section is critical for credibility. No overselling. List what the framework CAN'T do. The tone should be honest and undefensive. "A framework that claims to explain everything is a story, not a theory. These gaps are real and hard." End with an invitation: lay out what you think, lay out where it breaks, invite smarter people to do what you couldn't.
+> **AUTHOR NOTE (CHAPTER):** Critical for credibility. No overselling. List what the framework CAN'T do. Honest, undefensive. "A framework that claims to explain everything is a story, not a theory." Use the gap-box CSS class.
 
 **Content direction:** Use a gap-box block. List these honest gaps:
 
-1. **Can't derive Einstein's exact equations from graph structure** — the #1 problem. Without the math, it's an analogy, not a derivation.
-2. **Can't explain why space is 3D** — why this specific connectivity pattern?
-3. **Can't explain specific particles** — electrons, quarks, neutrinos have specific masses, charges. What determines the "shape" of each loop?
+1. **Can't derive Einstein's exact equations from graph structure** — the #1 problem. Qualitative match but no mathematical derivation from first principles. Without the math, it's an analogy, not a derivation.
+2. **Can't explain why space is 3D** — graph could produce any number of dimensions. Why three?
+3. **Can't explain specific particles** — electrons, quarks, neutrinos have specific masses and charges. What determines which loops map to which particles?
 4. **Can't prove the Born rule** — why probability = amplitude squared?
-5. **Can't explain spin** — electron needs 720° rotation to return to starting state. No graph operation yet produces this.
-6. **Can't explain charge quantization** — why every proton has exactly the same charge.
+5. **Can't explain spin** — electron needs 720° rotation to return. No graph operation produces this.
+6. **Can't explain charge quantization** — every proton has exactly the same charge. Why such precision?
 7. **Can't explain the hierarchy problem** — gravity 10³⁶ times weaker than electromagnetism. Why?
-8. **No unique experimental prediction** — framework makes same predictions as standard physics. Necessary but not sufficient. A framework indistinguishable from current theory by experiment is not yet physics.
+8. **No unique experimental prediction** — framework makes same predictions as standard physics. Necessary but not sufficient. Indistinguishable from current theory by experiment = not yet physics. A lens, not a theory, until it predicts something new.
 
-Close with: "These are genuine obstacles. Any one could unravel the whole picture. That's how science works."
+Close with: "These are genuine obstacles. Any one could invalidate the whole picture. That's how science works — you lay out what you think, lay out where it breaks, and hope someone smarter can do what you couldn't."
 
 ---
 
@@ -814,43 +909,49 @@ Close with: "These are genuine obstacles. Any one could unravel the whole pictur
 
 **Part header:** "Part Four — Everything Mapped"
 
-#### Chapter 12 — The Complete Reference Table
+#### Chapter REF — The Complete Reference Table
 
 **Section number:** REF
 **Section title:** The Complete Reference Table
 
-> **AUTHOR NOTE (CHAPTER):** This is a quick-reference lookup. Every phenomenon in one table. Three columns: Physics Concept / In This Framework / Computer Analogy. Cover all concepts discussed in the document. Use the summary-table CSS class.
+> **AUTHOR NOTE (CHAPTER):** Quick-reference lookup. Every phenomenon in one table. Three columns: Physics Concept / In This Framework / Computer Analogy. Use the summary-table CSS class.
 
-**Content direction:** A summary-table with three columns covering (at minimum):
+**Content direction:** Summary table covering:
 
-| Physics Concept          | In This Framework                                                     | Computer Analogy                                        |
-| ------------------------ | --------------------------------------------------------------------- | ------------------------------------------------------- |
-| Space                    | Large-scale graph shape, connectivity                                 | Network topology, hop count = distance                  |
-| Position                 | Committed edges to specific neighbors                                 | Pointer to specific memory address                      |
-| Mass                     | Cyclic subgraph, loop consuming budget per tick                       | Infinite loop consuming CPU per cycle                   |
-| Energy                   | Return value of completed computation                                 | Function output that exits and passes forward           |
-| E = mc²                  | Breaking a loop releases trapped return values                        | Terminating infinite loop, flushing stack as output     |
-| Antimatter               | Inverse (mirror) graph                                                | Function whose output negates another's                 |
-| Annihilation             | Graph meets inverse, loops cancel, energy escapes                     | Composed opposite functions = zero residue              |
-| Time (engine)            | Global tick counter, never dilates                                    | CPU clock cycles                                        |
-| Time (experienced)       | State transitions per tick, depends on budget                         | Instructions per cycle, varies with load                |
-| Time dilation (gravity)  | Mass drains budget → fewer transitions                                | Heavy process consuming CPU → less throughput           |
-| Time dilation (velocity) | Motion rewiring costs budget                                          | Data transfer consuming bandwidth                       |
-| Speed of light           | Maximum budget per tick, all spent on propagation                     | Maximum bus speed                                       |
-| Gravity                  | Budget drain warps edge weights → curved cheapest paths               | Congested node warps routing costs                      |
-| Can't shield gravity     | Drain flows through graph itself; shield IS graph                     | Can't block congestion with more network                |
-| Black hole               | Budget drain = 100%, zero state changes, time stops                   | CPU at 100% by one process, everything freezes          |
-| Wave function            | Uncommitted edges, potential connections                              | Lazy thunk, defined but not forced                      |
-| Collapse                 | Strict consumer demands value, engine commits                         | Forcing a lazy thunk, evaluating and caching            |
-| Superposition            | Node with uncommitted edges to multiple neighbors                     | Unevaluated expression with multiple possible values    |
-| Interference             | Multiple graph walks overlap, amplitudes add/cancel                   | Multiple path evaluations combining or canceling        |
-| Decoherence              | More neighbors = more strict consumers = faster resolution            | More consumers of lazy value = higher chance of forcing |
-| Entanglement             | Direct edge (shortcut) between nodes, persists regardless of distance | Shared pointer, same data regardless of memory distance |
-| Expansion                | Return values create new edges/nodes                                  | Self-writing code, expanding codebase                   |
-| Accelerating expansion   | Growth proportional to current size, positive feedback                | Exponential growth                                      |
-| Planck length            | Minimum graph spacing, one node                                       | One pixel, minimum addressable unit                     |
-| Planck time              | One tick of the engine                                                | One clock cycle                                         |
-| Double buffering         | See Frame N while N+1 computes                                        | GPU renders next frame while displaying current         |
+| Physics Concept          | In This Framework                                        | Computer Analogy                                         |
+| ------------------------ | -------------------------------------------------------- | -------------------------------------------------------- |
+| Space                    | Large-scale graph shape, connectivity pattern            | Network topology, hop count = distance                   |
+| Position                 | Committed edges to specific neighbors                    | Pointer to specific memory address                       |
+| Mass                     | Cyclic subgraph, loop consuming budget per tick          | Infinite loop consuming CPU per cycle                    |
+| Energy                   | Return value of completed computation                    | Function output that exits and passes forward            |
+| E = mc²                  | Breaking loop releases trapped work at clock speed²      | Terminating infinite loop, flushing stack as output      |
+| Antimatter               | Inverse (mirror) graph                                   | Function whose output negates another's                  |
+| Annihilation             | Graph meets inverse, loops cancel, energy escapes        | Composed opposite functions = zero residue               |
+| Time (engine)            | Global tick counter, never dilates                       | CPU clock cycles                                         |
+| Time (experienced)       | State transitions per tick, depends on budget            | Instructions per cycle, varies with load                 |
+| Arrow of time            | Computation direction in engine layer                    | Program execution order — can't un-run code              |
+| Time dilation (gravity)  | Mass drains budget → fewer transitions nearby            | Heavy process consuming CPU → less throughput            |
+| Time dilation (velocity) | Motion rewiring costs budget                             | Data transfer consuming bandwidth                        |
+| Speed of light (C)       | Engine clock speed — max propagation rate per tick       | CPU clock speed — max operations per cycle               |
+| Gravity                  | Budget drain warps routing table → curved cheapest paths | Congested node warps routing costs → curved paths        |
+| Can't shield gravity     | Drain flows through graph itself; shield IS graph        | Can't block congestion with more network                 |
+| Equivalence principle    | Acceleration and gravity both cost budget the same way   | CPU load from motion vs. load from processes: same       |
+| Spacetime                | Engine's routing table, updated per tick                 | Network routing table, updated with topology changes     |
+| Black hole               | Budget drain = 100%, zero state changes, time stops      | CPU at 100% by one process, everything else freezes      |
+| Gravitational waves      | Changing edge weights propagating outward at C           | Routing table updates propagating through network        |
+| Wave function            | Uncommitted edges, potential connections                 | Lazy thunk — defined but not forced                      |
+| Collapse                 | Strict consumer demands value, engine commits            | Forcing a lazy thunk, evaluating and caching             |
+| Superposition            | Node with uncommitted edges to multiple neighbors        | Unevaluated expression with multiple possible results    |
+| Interference             | Multiple graph walks overlap, amplitudes add/cancel      | Multiple path evaluations combining or canceling         |
+| Decoherence              | More strict consumers → faster resolution                | More consumers of lazy value → higher chance of forcing  |
+| Quantum eraser           | Whole frame computed before commit — no "after the fact" | Editing spreadsheet formula before pressing Enter        |
+| Entanglement             | Direct edge (shortcut) persists regardless of distance   | Shared pointer — same data regardless of memory distance |
+| Double buffering         | See Frame N while N+1 computes — always one behind       | GPU renders next frame while displaying current          |
+| Holographic principle    | Graph info encoded on boundaries, rendered as 3D         | Mario 64: 3D game on 2D screen                           |
+| Expansion                | Return values create new edges/nodes                     | Self-writing code, expanding codebase                    |
+| Accelerating expansion   | Growth proportional to current size, positive feedback   | Exponential growth — more code → more output → more code |
+| Planck length            | Minimum graph spacing — one node                         | One pixel — minimum addressable unit                     |
+| Planck time              | One tick of the engine                                   | One clock cycle                                          |
 
 ---
 
