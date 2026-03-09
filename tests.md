@@ -59,7 +59,7 @@ LOGICAL ISSUES (sorted by severity):
 - Any axioms that are doing no work (not needed for any test case)
 - Any test cases that require assumptions beyond the stated axioms
 
-Be rigorous. Be skeptical. The framework's author wants honest evaluation,
+Be rigorous. Be skeptical. Specifically watch for claims in the theorem that are IMPORTED from other frameworks rather than derived from the stated axioms — the theorem should tag these honestly. The framework's author wants honest evaluation,
 not validation. Grade it the way a physics PhD committee would grade a
 thesis defense.
 ```
@@ -253,7 +253,7 @@ thesis defense.
 
 **Observed:** Confirmed by every SR experiment. Foundational to GPS operation. Two events that are simultaneous in one frame are not simultaneous in another moving frame.
 
-#### SR-6: Lorentz Symmetry
+#### SR-6: Lorentz Symmetry [FRAMEWORK: OPEN QUESTION]
 
 **Observed:** No preferred reference frame detected. Tested to 10⁻²¹ precision by Hughes-Drever experiments and modern variants.
 **Key fact:** Extraordinary precision. Any discrete-spacetime model must explain why no violations have been seen.
@@ -355,6 +355,11 @@ thesis defense.
 #### COS-4: Dark Matter
 
 **Observed:** ~27% of universe's energy budget. Galaxy rotation curves, gravitational lensing, CMB power spectrum, large-scale structure formation all require it. Doesn't interact electromagnetically. Never directly detected as a particle.
+
+#### COS-4b: Accelerating Expansion Mechanism
+
+**Observed:** The expansion of the universe is accelerating. Standard cosmology requires "dark energy" — a mysterious component making up ~68% of the universe energy budget — to explain this.
+**Key fact:** The simplest model (cosmological constant Λ) fits observations. No one knows what dark energy IS.
 
 #### COS-5: Dark Energy / Accelerating Expansion
 
