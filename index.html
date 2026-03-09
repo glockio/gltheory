@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greg's Computational Guide to the Universe</title>
+<title>Greg's Computational Guide to the Universe — v17</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap');
 
@@ -451,6 +451,36 @@ footer{
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════
+   BLOCK: .state-box — three committed state types
+   ═══════════════════════════════════════════════════════════ */
+.state-box{
+  border:2px solid var(--ink);
+  border-radius:8px;
+  padding:2rem 2.25rem;
+  margin:2rem 0;
+  background:var(--block-bg-alt);
+}
+.state-box h4{
+  font-family:'JetBrains Mono',monospace;
+  font-size:.7rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:1.25rem;
+}
+.state-item{
+  padding:.85rem 0;
+  border-bottom:1px solid var(--border);
+  font-family:'DM Sans',sans-serif;
+  font-size:.93rem;
+  line-height:1.65;
+}
+.state-item:last-child{border-bottom:none;padding-bottom:0}
+.state-resolved{border-left:3px solid var(--green);padding-left:1rem;margin-left:-.25rem}
+.state-branching{border-left:3px solid var(--blue);padding-left:1rem;margin-left:-.25rem}
+.state-cycling{border-left:3px solid var(--red);padding-left:1rem;margin-left:-.25rem}
+
 @media(max-width:640px){
   .three-col{grid-template-columns:1fr}
   .hook{padding:1.75rem 1.5rem}
@@ -464,7 +494,7 @@ footer{
 <div class="doc-header">
   <h1>Greg's Computational Guide<br>to the Universe</h1>
   <div class="subtitle">The biggest mysteries in physics, explained through the lens of the machines we build every day</div>
-  <div class="byline">VERSION 15.0 · MARCH 2026 · PLAIN ENGLISH EDITION</div>
+  <div class="byline">VERSION 17.0 · MARCH 2026 · PLAIN ENGLISH EDITION</div>
 </div>
 
 <div class="content">
@@ -480,7 +510,7 @@ footer{
 
   <div class="principle-item">
     <span class="principle-num">1</span>
-    <strong>Two Layers.</strong> Reality has an engine and a screen — like a video game has code running underneath and graphics on top. Everything you can see and touch is on the screen. The engine runs underneath. You can't see it directly, but you can figure out what it's doing by studying what appears on screen.
+    <strong>Two Types of Structure.</strong> Reality is one engine containing two types of graph structure. <strong>Content graphs</strong> represent particles, fields, and interactions — they have topology (connections and dependencies) but no spatial location. <strong>The spatial graph</strong> is space itself — a network of regions connected to neighboring regions. Each region references content graphs, like pixels referencing data in video memory. The spatial graph is the render layer — but it is inside the engine, not separate from it.
   </div>
 
   <div class="principle-item">
@@ -490,17 +520,17 @@ footer{
 
   <div class="principle-item">
     <span class="principle-num">3</span>
-    <strong>Everything is a Graph.</strong> At the engine level, everything is represented as a graph — a network of connected things, where each piece may depend on others. You can picture it as dots connected by lines. Graphs live in the engine, not on the screen. The screen <em>references</em> graphs — it projects them, like pixels on a monitor displaying an image stored in memory.
+    <strong>Everything is a Graph.</strong> At the engine level, everything is represented as a graph — a network of connected things, where each piece may depend on others. You can picture it as dots connected by lines. Content graphs hold all the physics — particles, fields, interactions. They have no spatial location. The spatial graph references them, giving them the appearance of position — like pixels on a monitor displaying an image stored in memory.
   </div>
 
   <div class="principle-item">
     <span class="principle-num">4</span>
-    <strong>There is a Budget.</strong> Each step, the engine can only do a fixed amount of work. This limit never changes. If a graph can't be fully resolved in one step, the leftover carries over to the next step — a stack of unfinished work. That stack is the beginning of mass.
+    <strong>There is a Shared Budget.</strong> Each step, the engine has a fixed total amount of computation it can perform — a shared budget, like total CPU cycles on a processor. Every node's evaluation draws from the same pool. If a content graph can't be fully resolved in one step, the leftover carries over — a stack of unfinished work. That stack consumes budget every tick it persists. That stack is mass. And because the budget is shared, that consumption leaves less for everything nearby — that is gravity.
   </div>
 
   <div class="principle-item">
     <span class="principle-num">5</span>
-    <strong>You Only See the Finished Frame.</strong> The engine computes the next state completely — tracing every possible path through the graphs — before committing anything. You only ever see committed results. Never the work in progress. This is why quantum mechanics looks strange from the inside: you're watching a movie and wondering how the special effects work, because you can't see the rendering engine.
+    <strong>Committed Does Not Mean Fully Resolved.</strong> Each tick, the engine commits the next state of the entire graph. But the committed state comes in three forms. <strong>Resolved:</strong> dependency chain completed — single definite value. This is classical reality. <strong>Branching:</strong> multiple valid dependency paths, and no committed consumer demands a selection — the multi-path structure IS the committed state. This is superposition. <strong>Cycling:</strong> self-referencing overflow that regenerates every tick — definite and deterministic, but inexhaustible. This is mass. You only ever see committed state. But committed state includes structured pending work — and that is where quantum mechanics comes from.
   </div>
 </div>
 
@@ -516,7 +546,7 @@ footer{
   </div>
 
   <div class="claim-item novel-item">
-    <strong>Graphs live in the engine. The screen references them — like pixels referencing objects in memory.</strong> Multiple screen locations can reference the same graph. When that graph resolves, every screen location referencing it updates simultaneously. No signal between screen locations needed. This is what entanglement is.
+    <strong>Graphs live in the content layer. The spatial graph references them — like pixels referencing objects in memory.</strong> Multiple spatial regions can reference the same content graph. When that content graph resolves, every spatial region referencing it updates simultaneously. No signal between regions needed. This is what entanglement is.
   </div>
 
   <div class="claim-item novel-item">
@@ -524,7 +554,7 @@ footer{
   </div>
 
   <div class="claim-item novel-item">
-    <strong>Gravity is pressure from that overflow — and it cannot be blocked.</strong> Mass's ongoing work drains budget from everything around it. That drain is gravity. You can't shield it because it operates in the engine. Your shield exists only on the screen. Wrong layer entirely.
+    <strong>Gravity is contention for the shared budget — and it cannot be blocked.</strong> Mass's ongoing overflow processing consumes computation from the shared pool every tick. Everything nearby gets less. That budget deficit is gravity. You can't shield it because a shield is a content structure — it can block content-graph propagation (like electromagnetic waves) but it cannot block contention for the shared compute budget. Same system, different type of structure.
   </div>
 
   <div class="claim-item novel-item">
@@ -540,19 +570,19 @@ footer{
   </div>
 
   <div class="claim-item novel-item">
-    <strong>The wave function is NOT the particle — it is the engine computing the next frame.</strong> Like a graphics card tracing every light path before drawing a pixel, the engine traces every possibility before committing. The particle sits still, cached, unrendered. The tracing IS the wave. "Collapse" is the engine committing a value.
+    <strong>The wave function is NOT the particle — it is the committed state of an unresolved content graph.</strong> When a content graph has multiple valid dependency paths and no committed consumer demands a selection, the engine commits the multi-path structure as-is. That stored structure — path weights sitting on a node — IS the wave function. It is data, not a process. "Collapse" is what happens when a committed consumer (a detector, an atom, a measurement device) demands the node's value, forcing the engine to resolve one path.
   </div>
 
   <div class="claim-item novel-item">
-    <strong>Entanglement requires no communication whatsoever.</strong> Two entangled particles are one graph in the engine projected onto two screen locations. When the graph resolves, both screen locations update — not because a signal traveled between them, but because they were always referencing the same data. Like two users editing the same shared document.
+    <strong>Entanglement requires no communication whatsoever.</strong> Two entangled particles are one content graph referenced by two spatial regions. When the content graph resolves, both regions update — not because a signal traveled between them, but because they were always referencing the same data. Like two users editing the same shared document.
   </div>
 
   <div class="claim-item novel-item">
-    <strong>E = mc² — the budget appears squared because it plays two roles.</strong> It determines how much work each overflow frame stores AND how fast the release propagates. Same quantity, two jobs, multiplied together. This "dual-role pattern" also explains why quantum probability is the square of the amplitude.
+    <strong>E = mc² — the budget appears squared because it plays two roles.</strong> The shared compute budget determines how much computation each overflow frame stores (cycles consumed per tick) AND how fast the release propagates (cycles applied to transmission). Same shared resource, two jobs, multiplied together. This "dual-role pattern" also explains why quantum probability is the square of the amplitude.
   </div>
 
   <div class="claim-item">
-    <strong>The speed of light is not a law imposed on nature.</strong> It is the maximum amount of work the engine can do per step. You can't exceed it because you can't spend more budget than exists.
+    <strong>The speed of light is not a law imposed on nature.</strong> It is the maximum propagation rate when the full shared budget is applied to transmission. You can't exceed it because you can't spend more budget than exists. Near mass, where the budget is partially consumed by overflow processing, even light propagates slightly slower — physicists call this the Shapiro delay, and GPS systems correct for it.
   </div>
 
   <div class="claim-item novel-item">
@@ -561,6 +591,10 @@ footer{
 
   <div class="claim-item novel-item">
     <strong>The quantum eraser does not require the future to affect the past.</strong> The interference was always in the data. The detector sorted results into groups that washed it out. Erasing the sorting recombines the groups and the pattern reappears. Like removing a filter from a spreadsheet — the data never changed.
+  </div>
+
+  <div class="claim-item novel-item">
+    <strong>Things stay quantum when nobody asks. Things become classical when the environment demands answers.</strong> An isolated particle has no committed consumers — nothing needs its value — so the engine saves budget by carrying its multi-path structure forward as-is (cheaper than resolving). A basketball has 10²⁶ atoms all demanding definite values from each other every tick. Maintaining branching state across that many consumers would cost far more budget than resolving once. The engine resolves because it's the budget-optimal choice. Decoherence is caused by environmental demand, not by internal complexity.
   </div>
 </div>
 
@@ -576,53 +610,63 @@ footer{
   Physics has two theories that each work perfectly — and completely disagree with each other. <strong>Quantum mechanics</strong> governs the very small: particles, atoms, subatomic forces. It has been tested to fourteen decimal places of accuracy. <strong>General relativity</strong> governs the very large: gravity, spacetime, black holes. It has predicted gravitational waves, GPS corrections, and the bending of starlight. Both are extraordinarily precise. Both have passed every test. And for a hundred years, every attempt to combine them into one unified theory has failed.
 </div>
 
-<p>Think about a video game. There are two things happening at the same time.</p>
+<p>Think about a video game. There are two things happening at the same time — inside the same hardware.</p>
 
-<p>First, there is the <strong>game engine</strong> — the actual code running underneath. It tracks every object's position, calculates collisions, and updates the state of the world sixty times per second. The engine operates on pure data: numbers, lists, connections between objects.</p>
+<p>First, there are the <strong>game objects</strong> — the actual data. A character's health, position, inventory. A weapon's damage value. The connections between objects: this character owns that weapon, this door connects to that room. All of this is pure data: numbers, lists, connections. None of it has a physical location inside the computer. It's just graph structure — dots connected by lines.</p>
 
-<p>Second, there is the <strong>screen</strong> — what the player sees. A lush 3D world with trees, mountains, sunlight. The player can walk around, pick things up, look at the sky. The screen is real — it's what you experience. But everything on screen is generated from the engine's data, every frame.</p>
+<p>Second, there is the <strong>framebuffer</strong> — a grid of pixels that makes the data visible. Each pixel references the game objects and displays them spatially. The 3D world you see on screen is built from the framebuffer. It has distances, positions, depth. But the framebuffer is not separate from the hardware — it is inside the graphics card, part of the same system as the game objects. It's a different type of data structure serving a different purpose.</p>
 
-<p>The screen has rules of its own. Light behaves realistically. Shadows fall correctly. Physics feels right. You could spend years studying the screen and develop an accurate theory of the game's world. But that theory would never explain the engine — because the screen doesn't contain its own explanation. To understand <em>why</em> the screen looks the way it does, you have to look one layer deeper.</p>
+<p>The framebuffer has rules of its own. Light behaves realistically. Shadows fall correctly. Physics feels right. You could spend years studying the screen and develop an accurate theory of the game's world. But that theory would never explain the game objects — because the framebuffer doesn't contain its own explanation. To understand <em>why</em> the screen looks the way it does, you have to look at the data structures underneath.</p>
 
-<p>This framework proposes that reality has the same structure:</p>
+<p>This framework proposes that reality has the same structure — inside one engine:</p>
 
-<p>The <strong>data layer</strong> is the engine. Pure computation. No space, no distance, no time as we experience it. It advances one step at a time — each step producing the next state from the current one. This is where quantum mechanics lives.</p>
+<p><strong>Content graphs</strong> are the data. Particles, fields, interactions — represented as networks of connected things with dependencies. They have topology but no spatial location. A particle's graph doesn't know where it "is." It's just a pattern of dependencies. This is where quantum mechanics lives.</p>
 
-<p>The <strong>render layer</strong> is the screen. Space, distance, time, gravity — everything you can touch, see, or measure. It is projected from the data layer every step. This is where general relativity lives.</p>
+<p>The <strong>spatial graph</strong> is the framebuffer. A network of regions, each connected to neighboring regions, each referencing content graphs. This network IS space. Distance, proximity, routing costs — all are properties of this graph. This is where general relativity lives.</p>
+
+<p>Both live inside one engine. Both are evaluated by one rule each tick. They are not separate layers — they are two types of structure within a single system.</p>
 
 <div class="figure">
-  <div class="scene-label">Figure 1 — The Architecture of Reality</div>
-  <svg width="100%" viewBox="0 0 800 320" style="max-width:800px;display:block;margin:0 auto;">
+  <div class="scene-label">Figure 1 — The Architecture of Reality: Two Types of Structure in One Engine</div>
+  <svg width="100%" viewBox="0 0 800 400" style="max-width:800px;display:block;margin:0 auto;">
     <defs><marker id="darr" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#666"/></marker></defs>
-    <rect x="20" y="20" width="760" height="118" rx="6" fill="#1a1a2e" stroke="#a8dadc" stroke-width="2"/>
-    <text x="40" y="50" fill="#a8dadc" font-size="12" font-weight="700" letter-spacing="2" font-family="'JetBrains Mono',monospace">DATA LAYER — THE ENGINE</text>
-    <text x="40" y="76" fill="#7a9ab0" font-size="13">• Pure computation. Graphs, nodes, edges. No space, no distance.</text>
-    <text x="40" y="97" fill="#7a9ab0" font-size="13">• Advances one tick at a time. Each tick bounded by a fixed work budget.</text>
-    <text x="40" y="118" fill="#7a9ab0" font-size="13">• One input, one output, always. Fully determined.</text>
-    <rect x="570" y="54" width="190" height="26" rx="4" fill="#2471a3" fill-opacity="0.45"/>
-    <text x="665" y="71" text-anchor="middle" fill="#e8f4fc" font-size="11" font-weight="700">← Quantum Mechanics lives here</text>
-    <line x1="400" y1="143" x2="400" y2="173" stroke="#888" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#darr)"/>
-    <text x="440" y="163" fill="#888" font-size="11" font-style="italic">projects onto</text>
-    <rect x="20" y="178" width="760" height="118" rx="6" fill="#f9f6ee" stroke="#1e8449" stroke-width="2"/>
-    <text x="40" y="208" fill="#1e8449" font-size="12" font-weight="700" letter-spacing="2" font-family="'JetBrains Mono',monospace">RENDER LAYER — THE SCREEN</text>
-    <text x="40" y="234" fill="#444" font-size="13">• Space, distance, time, gravity — all emergent outputs of the engine.</text>
-    <text x="40" y="255" fill="#444" font-size="13">• Made of "pixels" — each pixel references graphs in the engine above.</text>
-    <text x="40" y="276" fill="#444" font-size="13">• We are observers inside this layer. We only see committed frames.</text>
-    <rect x="555" y="238" width="205" height="26" rx="4" fill="#1e8449" fill-opacity="0.15" stroke="#1e8449" stroke-width="1"/>
-    <text x="657" y="255" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="700">← General Relativity lives here</text>
+    <!-- Engine boundary -->
+    <rect x="10" y="10" width="780" height="380" rx="8" fill="none" stroke="#1a1a2e" stroke-width="2.5" stroke-dasharray="8,4"/>
+    <text x="30" y="35" fill="#1a1a2e" font-size="11" font-weight="700" letter-spacing="2" font-family="'JetBrains Mono',monospace">ONE ENGINE — TWO TYPES OF STRUCTURE</text>
+    <!-- Content graphs zone -->
+    <rect x="30" y="50" width="740" height="130" rx="6" fill="#1a1a2e" stroke="#a8dadc" stroke-width="2"/>
+    <text x="50" y="75" fill="#a8dadc" font-size="11" font-weight="700" letter-spacing="2" font-family="'JetBrains Mono',monospace">CONTENT GRAPHS — NO SPATIAL LOCATION</text>
+    <text x="50" y="95" fill="#7a9ab0" font-size="12">• Particles, fields, interactions. Topology only. No position, no distance.</text>
+    <text x="50" y="115" fill="#7a9ab0" font-size="12">• Can be resolved (definite), branching (multi-path), or cycling (overflow).</text>
+    <text x="50" y="135" fill="#7a9ab0" font-size="12">• Multiple spatial regions can reference the same content graph.</text>
+    <rect x="530" y="62" width="220" height="26" rx="4" fill="#2471a3" fill-opacity="0.45"/>
+    <text x="640" y="79" text-anchor="middle" fill="#e8f4fc" font-size="10" font-weight="700">← Quantum Mechanics describes these</text>
+    <!-- Arrow -->
+    <line x1="400" y1="185" x2="400" y2="215" stroke="#888" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#darr)"/>
+    <text x="450" y="205" fill="#888" font-size="10" font-style="italic">regions reference content graphs</text>
+    <!-- Spatial graph zone -->
+    <rect x="30" y="225" width="740" height="130" rx="6" fill="#f9f6ee" stroke="#1e8449" stroke-width="2"/>
+    <text x="50" y="250" fill="#1e8449" font-size="11" font-weight="700" letter-spacing="2" font-family="'JetBrains Mono',monospace">SPATIAL GRAPH — THIS IS SPACE</text>
+    <text x="50" y="270" fill="#444" font-size="12">• Regions connected to neighboring regions. Distance and routing costs live here.</text>
+    <text x="50" y="290" fill="#444" font-size="12">• Each region references zero or more content graphs.</text>
+    <text x="50" y="310" fill="#444" font-size="12">• We are structures inside this graph. We only see committed values.</text>
+    <rect x="530" y="268" width="220" height="26" rx="4" fill="#1e8449" fill-opacity="0.15" stroke="#1e8449" stroke-width="1"/>
+    <text x="640" y="285" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">← General Relativity describes this</text>
+    <!-- Both inside engine label -->
+    <text x="400" y="380" text-anchor="middle" fill="#1a1a2e" font-size="11" font-weight="700">Both types of structure live inside one engine, evaluated by one rule each tick.</text>
   </svg>
-  <div class="figure-caption">QM and GR are not incompatible. They describe different layers. QM is the physics of the engine. GR is the physics of the screen. Trying to reconcile them by working in the render layer alone is like trying to understand a video game by only studying the pixels.</div>
+  <div class="figure-caption">QM and GR are not incompatible. They describe different types of structure within the same engine. QM describes the behavior of content graphs — multi-path branching, demand-driven collapse. GR describes the behavior of the spatial graph — routing costs, edge weights, how overflow stacks warp the spatial structure. They were never describing the same thing.</div>
 </div>
 
 <h3>Where Things Actually Live</h3>
 
-<p>Here is a distinction that changes everything: <strong>graphs live in the engine, not on the screen.</strong> The screen <em>references</em> graphs — it displays them, projects them — but the actual data is in the engine.</p>
+<p>Here is a distinction that changes everything: <strong>content graphs have no spatial location. The spatial graph references them.</strong> A particle doesn't "live" at a point in space. A particle is a content graph — a pattern of dependencies — and some region in the spatial graph holds a reference to it. The reference gives the particle a location. The particle's graph doesn't know or care where that location is.</p>
 
-<p>Think about your computer monitor. Each pixel on screen doesn't contain an image. Each pixel references a value in video memory — a number that determines its color. The actual image data lives in the graphics card's memory. The screen just displays it. If you change a value in memory, the pixel changes. The pixel doesn't "know" anything. It's reading from the source.</p>
+<p>Think about your computer's memory and monitor. Each pixel on screen doesn't contain an image. Each pixel references a value in video memory — a number that determines its color. The actual data lives in the graphics card's memory. The screen just displays it. If you change a value in memory, the pixel changes. The pixel doesn't "know" anything. It's reading from the source. And crucially — the framebuffer and the game data are both inside the same graphics card. They're not separate systems. They're different types of data structure inside one chip.</p>
 
 <p>Now here is the part that matters for physics: <strong>multiple pixels can reference the same object in memory.</strong> A single 3D model in a game might be visible from two cameras at once. Both views display the same object. If the object changes in memory, both views update — not because a signal went from one camera to the other, but because both cameras were looking at the same underlying data.</p>
 
-<p>This is exactly how entanglement works. Two particles that have interacted are <strong>one graph in the engine</strong> being displayed at <strong>two locations on the screen.</strong> The distance between them exists on the screen — not in the engine. When the graph resolves, every screen location referencing it updates. No signal between screen locations needed. They were always reading from the same source.</p>
+<p>This is exactly how entanglement works. Two particles that have interacted are <strong>one content graph</strong> being referenced by <strong>two regions in the spatial graph.</strong> The distance between those regions is real in the spatial graph. It is meaningless in the content graph — content graphs have no spatial properties. When the content graph resolves, every spatial region referencing it updates. No signal between regions needed. They were always reading from the same source.</p>
 
 <div class="figure">
   <div class="scene-label">Figure 1b — Graphs Live in the Engine. The Screen References Them.</div>
@@ -667,7 +711,7 @@ footer{
 
     <!-- Distance label -->
     <text x="400" y="260" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700">← billions of light years on screen →</text>
-    <text x="400" y="275" text-anchor="middle" fill="#888" font-size="9">distance exists HERE on the screen</text>
+    <text x="400" y="275" text-anchor="middle" fill="#888" font-size="9">distance exists HERE in the spatial graph</text>
     <text x="400" y="288" text-anchor="middle" fill="#1e8449" font-size="9" font-weight="700">distance does NOT exist in the engine above</text>
 
     <!-- Pixel grid right -->
@@ -684,7 +728,7 @@ footer{
       <text x="80" y="70" text-anchor="middle" fill="#888" font-size="8">this pixel ALSO references the graph above</text>
     </g>
   </svg>
-  <div class="figure-caption">The engine contains one graph (A–B linked). The screen projects it onto two locations, billions of light years apart. The distance is real on the screen — but the graph has no distance. When the graph resolves, both screen locations update. No signal travels. Both were always reading from the same data. This is entanglement.</div>
+  <div class="figure-caption">The engine contains one content graph (A–B linked). The spatial graph references it from two regions, billions of light years apart. The distance is real in the spatial graph — but the content graph has no distance. When the content graph resolves, both spatial references update. No signal travels. Both were always reading from the same data. This is entanglement.</div>
 </div>
 
 <h3>The Universe Has Pixels</h3>
@@ -697,43 +741,65 @@ footer{
 
 <p>In this framework: the Planck length is the pixel size. The Planck time is the tick duration. The universe literally has a resolution and a frame rate.</p>
 
-<h3>You Always See the Committed Frame</h3>
+<h3>You Always See Committed State</h3>
 
-<p>When you play a video game, your graphics card doesn't draw pixels one by one from left to right. Instead, it computes the <em>entire next frame</em> behind the scenes, then flips the whole image to the screen at once. While you're looking at frame 47, the graphics card is already computing frame 48. You never see the computation — only its result. This is called <strong>double buffering</strong>.</p>
+<p>Each tick, the engine evaluates the full graph — content and spatial — and commits the next state. But committed does not mean fully resolved. The committed state contains three types of content:</p>
 
-<p>The universe works the same way. Everything you observe — every measurement, every experiment, every photograph — is the last committed state. The engine is already computing the next tick, and you will only see its results after it commits. You are always looking at the previous frame.</p>
+<p><strong>Resolved</strong> nodes have definite values — their dependency chains completed within budget, or committed consumers demanded their values. This is classical reality. Your coffee cup, a clock tick, a measured particle.</p>
+
+<p><strong>Branching</strong> nodes have multiple valid dependency paths and no committed consumer demanded a selection. Their committed state IS the multi-path structure — weights on each path. This is superposition. It is not a failure to compute. It is the correct, honest answer for a graph with multiple paths and no demand for selection.</p>
+
+<p><strong>Cycling</strong> nodes have self-referencing overflow stacks that regenerate every tick. They are definite and deterministic — the engine knows exactly what they are. They simply exceed what one tick's budget can discharge. This is mass.</p>
+
+<p>You — as a committed structure embedded in the spatial graph — can only read resolved values from the content graphs around you. You cannot see branching structure (wave functions) or directly observe the cycling process (mass's internal overflow). You see the resolved outputs. From inside the spatial graph, the branching structure looks like "the particle was in two places at once." From outside, the content graph had two valid paths and nobody asked it to pick.</p>
 
 <div class="figure">
-  <div class="scene-label">Figure 1c — You Only See the Committed Frame</div>
-  <svg width="100%" viewBox="0 0 800 180" style="max-width:800px;display:block;margin:0 auto;">
-    <!-- Frame N (displayed) -->
-    <rect x="20" y="20" width="240" height="140" rx="6" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
-    <text x="140" y="42" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="700">FRAME N — ON SCREEN</text>
-    <text x="140" y="62" text-anchor="middle" fill="#555" font-size="10">This is what you see.</text>
-    <text x="140" y="80" text-anchor="middle" fill="#555" font-size="10">Every measurement reads from this.</text>
-    <text x="140" y="100" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">Committed. Complete. Definite.</text>
-    <text x="140" y="130" text-anchor="middle" fill="#888" font-size="9">All observations, all experiments,</text>
-    <text x="140" y="144" text-anchor="middle" fill="#888" font-size="9">all of physics — happens here.</text>
-
-    <!-- Arrow -->
-    <text x="310" y="90" text-anchor="middle" fill="#888" font-size="28">→</text>
-    <text x="310" y="115" text-anchor="middle" fill="#888" font-size="9">meanwhile...</text>
-
-    <!-- Frame N+1 (computing) -->
-    <rect x="370" y="20" width="410" height="140" rx="6" fill="#1a1a2e" stroke="#a8dadc" stroke-width="2"/>
-    <text x="575" y="42" text-anchor="middle" fill="#a8dadc" font-size="11" font-weight="700">FRAME N+1 — BEING COMPUTED</text>
-    <text x="575" y="62" text-anchor="middle" fill="#7a9ab0" font-size="10">The engine is tracing every possible path.</text>
-    <text x="575" y="80" text-anchor="middle" fill="#7a9ab0" font-size="10">Every graph, every contribution, every interaction.</text>
-    <text x="575" y="100" text-anchor="middle" fill="#a8dadc" font-size="10" font-weight="700">This is the wave function. This is "superposition."</text>
-    <text x="575" y="130" text-anchor="middle" fill="#7a9ab0" font-size="9">You cannot see this happening.</text>
-    <text x="575" y="144" text-anchor="middle" fill="#7a9ab0" font-size="9">You will only see the result after it commits.</text>
+  <div class="scene-label">Figure 1c — Three Types of Committed State</div>
+  <svg width="100%" viewBox="0 0 800 200" style="max-width:800px;display:block;margin:0 auto;">
+    <!-- Resolved -->
+    <rect x="10" y="10" width="240" height="170" rx="6" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="130" y="34" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="700">RESOLVED</text>
+    <text x="130" y="54" text-anchor="middle" fill="#555" font-size="10">Definite value. Single answer.</text>
+    <circle cx="130" cy="90" r="20" fill="#1e8449" stroke="#82e0aa" stroke-width="2"/>
+    <text x="130" y="95" text-anchor="middle" fill="white" font-size="12" font-weight="700">7</text>
+    <text x="130" y="130" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">Classical reality</text>
+    <text x="130" y="148" text-anchor="middle" fill="#888" font-size="9">Committed consumers demanded.</text>
+    <text x="130" y="162" text-anchor="middle" fill="#888" font-size="9">Engine resolved. One answer.</text>
+    <!-- Branching -->
+    <rect x="280" y="10" width="240" height="170" rx="6" fill="#eef6fb" stroke="#2471a3" stroke-width="2"/>
+    <text x="400" y="34" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="700">BRANCHING</text>
+    <text x="400" y="54" text-anchor="middle" fill="#555" font-size="10">Multi-path. Nobody asked.</text>
+    <circle cx="400" cy="80" r="14" fill="#2471a3" stroke="#6a7fdb" stroke-width="2"/>
+    <text x="400" y="84" text-anchor="middle" fill="white" font-size="9" font-weight="700">P</text>
+    <circle cx="360" cy="115" r="9" fill="#3b6fa0" stroke="#6a7fdb" stroke-width="1.5"/>
+    <text x="360" y="118" text-anchor="middle" fill="white" font-size="7">A</text>
+    <circle cx="440" cy="115" r="9" fill="#3b6fa0" stroke="#6a7fdb" stroke-width="1.5"/>
+    <text x="440" y="118" text-anchor="middle" fill="white" font-size="7">B</text>
+    <line x1="390" y1="92" x2="366" y2="108" stroke="#6a7fdb" stroke-width="1.5"/>
+    <line x1="410" y1="92" x2="434" y2="108" stroke="#6a7fdb" stroke-width="1.5"/>
+    <text x="346" y="108" fill="#6a7fdb" font-size="7">0.6</text>
+    <text x="446" y="108" fill="#6a7fdb" font-size="7">0.3i</text>
+    <text x="400" y="148" text-anchor="middle" fill="#2471a3" font-size="10" font-weight="700">Superposition</text>
+    <text x="400" y="162" text-anchor="middle" fill="#888" font-size="9">No demand → multi-path persists.</text>
+    <!-- Cycling -->
+    <rect x="550" y="10" width="240" height="170" rx="6" fill="#fdf0ef" stroke="#c0392b" stroke-width="2"/>
+    <text x="670" y="34" text-anchor="middle" fill="#c0392b" font-size="11" font-weight="700">CYCLING</text>
+    <text x="670" y="54" text-anchor="middle" fill="#555" font-size="10">Self-referencing. Definite. Inexhaustible.</text>
+    <circle cx="670" cy="88" r="18" fill="#641e16" stroke="#c0392b" stroke-width="2.5"/>
+    <text x="670" y="84" text-anchor="middle" fill="#fad5a5" font-size="9" font-weight="700">M</text>
+    <text x="670" y="98" text-anchor="middle" fill="#f1948a" font-size="7">mass</text>
+    <path d="M 685 73 Q 708 58 706 82 Q 704 98 688 100" stroke="#c0392b" stroke-width="2" fill="none" stroke-dasharray="4,2"/>
+    <text x="714" y="78" fill="#c0392b" font-size="7">loops</text>
+    <text x="670" y="134" text-anchor="middle" fill="#c0392b" font-size="10" font-weight="700">Mass</text>
+    <text x="670" y="148" text-anchor="middle" fill="#888" font-size="9">Deterministic overflow.</text>
+    <text x="670" y="162" text-anchor="middle" fill="#888" font-size="9">Regenerates every tick.</text>
   </svg>
-  <div class="figure-caption">You always see the committed frame (left). The engine is simultaneously computing the next frame (right), tracing every possible path before committing. The tracing is the wave function. The commitment is "collapse." You never see the computation — only the result. This is why quantum mechanics looks strange from inside the screen.</div>
+  <div class="figure-caption">All three are committed state — the engine's truthful answer for each tick. Resolved: dependency chain completed, single value (classical). Branching: multiple valid paths, no consumer demanding selection (superposition). Cycling: self-referencing overflow regenerating every tick (mass). Superposition is not a resource problem. Mass is not ambiguity. They are different topologies producing different types of committed state.</div>
 </div>
 
 <div class="callout callout-blue">
   <span class="block-label">Why this matters for everything that follows</span>
-  This "committed frame" idea will turn out to be the key to understanding quantum mechanics. In Section 07, we will see that what physicists call the "wave function" is the engine computing the next frame — tracing every possible path before committing any of them, exactly like a modern graphics card ray-traces every light path before writing a single pixel. You never see the tracing. You only see the result. From inside the screen, it looks like the particle "was in two places at once." From outside, the engine was just computing.
+  The three types of committed state are the key to understanding quantum mechanics. What physicists call the "wave function" is branching state — a content graph with multiple valid paths and no committed consumer demanding selection. "Collapse" is what happens when demand appears — a detector, an atom, anything committed that needs the value. The engine resolves the branching structure into a definite value because a committed consumer demanded it. You never see branching state directly. You only see resolved values. From inside the spatial graph, it looks like the particle "was in two places at once." From outside, the content graph had two valid paths and nobody asked it to pick.
 </div>
 
 <h3>You Are Mario</h3>
@@ -748,14 +814,14 @@ footer{
   <div class="col-header">In a Computer</div>
   <div class="col-header">In This Framework</div>
   <div class="col-header">What We Observe</div>
-  <div class="col-cell"><span class="tag tag-cs">CS</span><br>A game engine runs underneath — data, state, connections. The screen projects committed frames. Pixels reference objects in memory. Multiple pixels can reference the same object. The screen has a resolution (pixels per inch).</div>
-  <div class="col-cell hl"><span class="tag tag-th">Framework</span><br>Data layer = engine (graphs, no space). Render layer = screen (space, time, gravity). Screen pixels reference engine graphs. Multiple screen locations can reference one graph. Planck length is the pixel size. Planck time is the tick rate.</div>
+  <div class="col-cell"><span class="tag tag-cs">CS</span><br>A game engine runs inside a graphics card. Game objects (data) and the framebuffer (display grid) are both in the same hardware. The framebuffer references game objects. Pixels reference data in memory. Multiple pixels can reference the same object. The screen has a resolution (pixels per inch).</div>
+  <div class="col-cell hl"><span class="tag tag-th">Framework</span><br>Content graphs (particles, fields — no space) and the spatial graph (regions, distances — IS space) are both inside one engine. Spatial regions reference content graphs. Multiple regions can reference one content graph. Planck length is the spatial graph's resolution. Planck time is the tick rate.</div>
   <div class="col-cell"><span class="tag tag-ph">Physics</span><br>QM works at small scales. GR at large scales. They contradict. Holographic principle: information on surfaces, not volumes. Planck length/time: minimum meaningful units. All consistent with a two-layer system with finite resolution.</div>
 </div>
 
 <div class="insight">
   <span class="block-label">✦ What This Means</span>
-  <p>You have never seen the engine. Everything you have ever observed — every experiment, every measurement — lives on the screen. The engine has no space, no distance, no time. It has graphs. The screen is made of pixels, each referencing graphs in the engine. When physicists say QM and GR contradict, they are describing two accurate views of two different layers and wondering why they don't match. They don't match because they were never describing the same thing.</p>
+  <p>You have never seen a content graph directly. Everything you have ever observed — every experiment, every measurement — is a resolved value read from the spatial graph. Content graphs have no space, no distance, no time. They have topology. The spatial graph references them, giving them the appearance of location. When physicists say QM and GR contradict, they are describing two types of structure inside one system and wondering why the descriptions don't match. They don't match because content graphs and the spatial graph have different properties — and that's exactly what you'd expect from two types of structure serving different functions inside one engine.</p>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -767,6 +833,15 @@ footer{
 <div class="puzzle">
   Before we can explain what mass is, or why gravity can't be shielded, or what the double-slit experiment is really showing us, we need to understand how the engine works. This section introduces four ideas from computing that you'll recognize in every section that follows. None of them are complicated — but all of them are essential.
 </div>
+
+<div class="state-box">
+  <h4>Three Types of Committed State — The Key Distinction</h4>
+  <div class="state-item state-resolved"><strong>Resolved</strong> — dependency chain completed within budget. Single definite value. A committed consumer demanded it, the engine resolved it. This is classical reality — a measured particle, a clock tick, a definite position.</div>
+  <div class="state-item state-branching"><strong>Branching</strong> — the content graph has multiple valid dependency paths, and no committed consumer demands a selection. The committed state IS the multi-path structure with weights. This is <strong>superposition</strong>. Not a resource problem — a demand problem. Nobody asked, so no selection was made. The engine is being honest.</div>
+  <div class="state-item state-cycling"><strong>Cycling</strong> — the content graph self-references and can't be discharged within budget. Definite, deterministic overflow pattern that regenerates every tick. This is <strong>mass</strong>. Not ambiguous at all — just inexhaustible. The engine knows exactly what it is. It simply exceeds what one tick can clear.</div>
+</div>
+
+<p>The critical distinction: <strong>superposition is not a resource failure.</strong> It's the correct answer for a graph with multiple valid paths and no consumer demanding selection. And mass is not superposition — it's a definite, known pattern that exceeds one tick's budget. They share nothing except both being "not a single simple value." Understanding this distinction is the key to everything that follows.</p>
 
 <h3>The Graph</h3>
 
@@ -893,32 +968,36 @@ footer{
 
 <h3>The Budget</h3>
 
-<p>Imagine you can do eight hours of productive work per day. If your to-do list takes six hours — great, done with time to spare. If it takes twelve, you only get through eight, and the remaining four carry over to tomorrow. Your daily capacity is your <strong>budget</strong>. Each day is a <strong>tick</strong>.</p>
+<p>Imagine you share a single computer with everyone in your office. The computer can do a fixed number of calculations per second — say, a billion. That's the shared budget. Every process running on that computer draws from the same pool. If one process consumes 400 million cycles, the remaining 600 million are split among everything else.</p>
 
-<p>The universe's engine has a fixed budget per tick. This single number determines almost everything:</p>
+<p>The universe's engine works the same way. There is a fixed total amount of computation the engine can perform per tick — a <strong>shared budget</strong>. Every node's evaluation, every dependency chain resolved, every overflow stack processed — all draw from this single pool. This shared budget determines almost everything:</p>
 
-<p><strong>The speed of light</strong> — a graph operation that uses the entire budget on propagation. One hop per tick, at full budget. Can't go faster: no more budget to spend.</p>
+<p><strong>The speed of light</strong> — a graph operation that uses the full budget on propagation. Maximum transmission rate at full budget allocation. Can't go faster: no more budget to spend. Near mass, where the budget is partially consumed by overflow processing, even propagation slows — this is why light takes longer to pass near massive objects (the Shapiro delay).</p>
 
-<p><strong>Mass</strong> — work that exceeds the budget. The leftover carries over. If it loops, the stack is permanent.</p>
+<p><strong>Mass</strong> — work that exceeds the budget. The leftover carries over. If it loops, the stack is permanent. And because the budget is shared, the stack's processing drains computation from everything nearby.</p>
 
-<p><strong>Time dilation</strong> — your share of the budget is reduced. Near mass, the permanent stack's work drains your budget. You get less done per tick. Your counter falls behind. That's "slower time."</p>
+<p><strong>Time dilation</strong> — your share of the budget is reduced. Near mass, the permanent stack's processing consumes shared cycles. You get less done per tick. Your counter falls behind. That's "slower time." Moving fast, the re-contextualization of your content graph across spatial regions consumes shared cycles. Same effect — less budget for internal state changes, slower clock.</p>
 
-<h3>The Committed Frame</h3>
+<p><strong>Decoherence</strong> — maintaining a branching (quantum) state costs budget every time a committed neighbor needs to fold it into its own computation. When enough neighbors are asking, resolving once costs less total budget than maintaining the branching state across all those computations. The engine resolves because it is the budget-optimal choice. Things become classical when deferring is more expensive than committing.</p>
 
-<p>Modern video games use <strong>ray tracing</strong>. Before the graphics card draws a single pixel, it traces the path of <em>every light ray</em> through the entire scene — rays bouncing off walls you can't see, rays from off-screen lights, rays through glass. It traces all of them because any might contribute to the final color of any pixel.</p>
+<h3>Why Branching State Persists — Budget Optimization</h3>
 
-<p>The card traces every path, computes every contribution, and only then <em>commits</em> — one color per pixel, written to the frame buffer. You only see committed frames. Never the tracing.</p>
+<p>Here is a point that matters for quantum mechanics: <strong>maintaining branching state is cheaper than resolving it.</strong></p>
 
-<p>The universe's engine does the same thing. Each tick, it accounts for every node — including pending ones that haven't been committed yet. For those, it traces their potential through every connected path. This tracing is the wave function. The commitment is "collapse." We'll see exactly how this works in Section 07.</p>
+<p>When a content graph has multiple valid dependency paths and nothing is demanding a definite value, the engine has two choices. It can resolve the graph — follow each path, evaluate the full dependency chain, pick a definite answer. That costs computation. Or it can carry the multi-path structure forward as-is. That's cheap — just copy the branching data into the next state.</p>
+
+<p>The engine is spending a shared budget. Wasting computation on resolving something nobody needs is a bad use of limited resources. So the engine carries branching state forward. It commits the multi-path structure as-is. The branching structure IS the committed state. The engine is being efficient.</p>
+
+<p>When does this change? When committed consumers need the value. If ten committed nodes all need the branching node's value, the engine must fold the multi-path structure into ten separate computations — one for each consumer. That costs budget proportional to (number of consumers × complexity of branching structure). At some point, resolving once (one computation, definite answer, reused by all consumers) becomes cheaper than folding (N computations, each incorporating the full branching structure). The engine resolves. That's collapse. Not a mysterious process — the budget-optimal choice changed.</p>
 
 <div class="under-hood">
   <span class="block-label">Under the Hood — formal notation</span>
   Computer scientists call a system that produces exactly one next state from the current state a <strong>Moore machine</strong>.<br><br>
-  <code>S(Ω+1) = F(S(Ω))</code> — <em>S</em> = state, <em>Ω</em> = tick, <em>F</em> = the Rule.<br>
-  <em>C</em> = budget (per-tick work limit = speed of light from screen's perspective).<br>
-  <em>B</em> = remaining budget after mass has consumed some.<br>
-  <em>θ</em> = threshold (minimum activity for commit vs trace).<br>
-  <code>R(Ω) = P(S(Ω))</code> — <em>P</em> = projection, <em>R</em> = what we observe.
+  <code>S(Ω+1) = F(S(Ω))</code> — <em>S</em> = state (content graphs + spatial graph), <em>Ω</em> = tick, <em>F</em> = the Rule.<br>
+  <em>C</em> = shared budget (total computation per tick). Determines both maximum propagation rate (speed of light) and storage capacity per overflow frame (mass). Its dual role is why it appears squared in E = mc².<br>
+  <em>B</em> = remaining budget at a spatial region after mass's overflow has consumed its share.<br>
+  <em>θ</em> = threshold (crossover point where resolving a branching node costs less budget than maintaining it across N committed consumers).<br>
+  <code>R(Ω) = P(S(Ω))</code> — <em>P</em> = projection (spatial graph reading resolved values from content graphs), <em>R</em> = what we observe.
 </div>
 
 <div class="three-col">
@@ -964,7 +1043,7 @@ footer{
 
 <h3>What a Photon Is</h3>
 
-<p>A photon is a graph operation that resolves completely within one tick. No overflow. No stack. No mass. It uses its entire budget on propagation — moving through the graph. That's why it travels at the speed of light (one hop per tick at full budget) and why it experiences no time (all budget spent on motion, zero left for internal state changes). A photon is the output of a completed computation, in transit. It is a return value being delivered.</p>
+<p>A photon is a graph operation that resolves completely within one tick. No overflow. No stack. No mass. It uses its entire share of the budget on propagation — moving through the spatial graph. That's why it travels at the speed of light (maximum propagation at full budget) and why it experiences no time (all budget spent on transmission, zero left for internal state changes). A photon is the output of a completed computation, in transit. It is a return value being delivered.</p>
 
 <div class="callout callout-neutral">
   <span class="block-label">Why some particles have mass and others don't — the Higgs field</span>
@@ -973,18 +1052,18 @@ footer{
 
 <h3>Why E = mc² — And Why c Is Squared</h3>
 
-<p>Now we can understand Einstein's most famous equation. Mass is a stack of overflow frames. Each frame holds one tick's worth of unfinished work — exactly one budget's worth of deferred computation. The stack depth is m: how many frames persist.</p>
+<p>Now we can understand Einstein's most famous equation. Mass is a stack of overflow frames. Each frame stores one tick's worth of computation that couldn't be completed — exactly one budget's worth of cycles consumed from the shared pool. The stack depth is m: how many frames persist.</p>
 
 <p>When mass converts to energy — when the stack unwinds, as in nuclear fission or matter-antimatter annihilation — two things happen at once:</p>
 
-<p><strong>First: the stored work is released.</strong> Each frame held one budget's worth of deferred computation. Total stored work = m frames × one budget each = m × budget.</p>
+<p><strong>First: the stored computation is released.</strong> Each frame held one budget's worth of cycles consumed from the shared pool. Total stored computation = m frames × one budget each = m × C.</p>
 
-<p><strong>Second: the released work propagates.</strong> The return values from the unwinding stack don't just appear — they propagate through the graph at the maximum rate, which is also one budget per tick (the speed of light).</p>
+<p><strong>Second: the released computation propagates.</strong> The return values from the unwinding stack propagate through the spatial graph at the maximum rate — which is also one budget per tick (the speed of light). The same shared budget that determined how much each frame stored now determines how fast the release spreads.</p>
 
-<p>The total impact on the system — the energy released — is the stored work times the propagation rate: m × budget × budget = <strong>m × budget²</strong>.</p>
+<p>The total energy released is the stored computation times the propagation rate: m × C × C = <strong>m × C²</strong>.</p>
 
 <div class="novel-claim">
-  <p><strong>The budget appears squared because it plays two structural roles in the same operation.</strong> It determines how much work each frame stores (first role), and it determines how fast the release propagates (second role). Both roles arise from the budget being the universal per-tick work limit. The same quantity, serving two functions, multiplied together. This is not a coincidence — it is what happens whenever a single quantity does double duty in a computation. We call this the <strong>dual-role pattern</strong>.</p>
+  <p><strong>The shared budget appears squared because it plays two structural roles in the same operation.</strong> It determines how many cycles each overflow frame consumes from the pool (first role: storage), and it determines the maximum rate at which released computation propagates through the spatial graph (second role: transmission). Both roles arise from the budget being the universal shared resource — total computation per tick. The same quantity, serving two functions, multiplied together. This is not a coincidence — it is what happens when a single shared resource governs both storage and release. We call this the <strong>dual-role pattern</strong>.</p>
 </div>
 
 <div class="figure">
@@ -1077,23 +1156,23 @@ footer{
 
 <p>The closer a process is to the heavy one in terms of shared resources — the more cache memory they share, the more they compete for the same memory bus — the worse the impact. A process sharing the same CPU core with the heavy app gets hit hardest. A process on a different core but sharing the same memory bus gets hit less. A process on a completely separate machine doesn't feel it at all.</p>
 
-<p>Now here is the part that matters: <strong>you cannot shield against this.</strong> There is no setting in your operating system that says "protect this app from a neighbor's resource drain." The competition happens at the hardware level — the silicon, the circuits, the physical wires. Software can't block hardware-level contention. It would be like trying to stop your neighbor's noise by putting up a poster inside your apartment. The noise travels through the building's structure, not through your living room. <em>Wrong layer.</em></p>
+<p>Now here is the part that matters: <strong>you cannot shield against this.</strong> There is no setting in your operating system that says "protect this app from a neighbor's resource drain." The competition happens at the hardware level — the silicon, the circuits, the physical wires. Software can't block hardware-level contention. A content-level structure (an app, a shield, a Faraday cage) cannot intercept competition for the shared compute budget. The contention propagates through the shared resource itself, not through any particular app's data.</p>
 
-<p>This is gravity.</p>
+<p>This is gravity. The universe has a shared compute budget, like a processor with fixed cycles per tick. Mass is a permanent process consuming those shared cycles. Everything nearby gets less.</p>
 
-<h3>The Budget Drain</h3>
+<h3>The Shared Budget Drain</h3>
 
-<p>Mass is a permanent stack that runs every tick. The engine must resolve it — walk the self-referencing loop, follow every dependency — and that walk extends into neighboring nodes in the graph. Those neighbors get swept into the resolution. Their budget is partially consumed by mass's walk.</p>
+<p>Mass is a permanent overflow stack — a cycling content graph that runs every tick. Processing it consumes computation from the shared budget. That consumption is not optional — F must process the overflow to produce the next state. The cycles consumed by the overflow are cycles that other nodes cannot use.</p>
 
-<p>Nodes close to mass are heavily affected — most of their budget is consumed. Nodes far away are barely touched. This creates a <strong>gradient</strong>: high budget drain near mass, tapering off with distance. That gradient is the gravitational field.</p>
+<p>Spatial regions close to mass are heavily affected — most of their share of the budget is consumed by the overflow's processing. Regions far away are barely touched. This creates a <strong>gradient</strong>: high budget consumption near mass, tapering off with distance through the spatial graph. That gradient is the gravitational field.</p>
 
-<p>Everything in the graph routes along the cheapest available path — the path that costs the least remaining budget to traverse. Near mass, the routing costs are skewed by the drain. The cheapest path curves toward mass. Objects follow that path, and from the render layer, we observe it as gravitational attraction. Physics calls this path a <strong>geodesic</strong>. The framework calls it: the scheduler routing along minimum cost.</p>
+<p>Everything in the spatial graph routes along the cheapest available path — the path that costs the least remaining budget to traverse. Near mass, the routing costs are skewed by the drain. The cheapest path curves toward mass. Objects follow that path, and from inside the spatial graph, we observe it as gravitational attraction. Physics calls this path a <strong>geodesic</strong>. The framework calls it: the scheduler routing along minimum cost.</p>
 
 <h3>Spacetime Is the Routing Table</h3>
 
 <p>In a computer network, a <strong>routing table</strong> is a map that tells data how to get from one place to another. It says: "To go from A to B, the cheapest route is through C, costing 3 units." When one route gets congested — when a heavy process monopolizes a link — the routing table updates. Traffic flows through a different, cheaper path. The routing table is not a physical road. It is a set of costs and connections that determines how everything navigates.</p>
 
-<p>Spacetime, in this framework, is the routing table of the graph. When no mass is nearby, all routes cost roughly the same — flat spacetime, uniform routing costs. When mass is present, its budget drain makes nearby routes expensive. The routing table updates. Everything routes through cheaper paths, which curve away from the drain zone. From the render layer, this looks like curved spacetime.</p>
+<p>Spacetime, in this framework, is the edge-cost matrix of the spatial graph. When no mass is nearby, all routes cost roughly the same — flat spacetime, uniform routing costs. When mass is present, its budget consumption makes nearby routes expensive. The routing costs update. Everything routes through cheaper paths, which curve away from the drain zone. From inside the spatial graph, this looks like curved spacetime.</p>
 
 <div class="novel-claim">
   <p><strong>What Einstein called the metric tensor — the mathematical object describing distances and geometry at every point in space — is the edge-cost matrix of the graph's routing table.</strong> Einstein measured the routing table with extraordinary precision. He predicted gravitational waves (vibrations in the routing table), light bending around stars (light following cheapest paths through a skewed table), and GPS clock corrections (budget deficit near Earth's mass). Every prediction has been confirmed. GR didn't get it wrong. It measured the routing table exactly right. It just didn't know that's what it was measuring.</p>
@@ -1248,9 +1327,9 @@ footer{
 
 <h3>Why Gravity Cannot Be Shielded</h3>
 
-<p>You can block every other force because every other force propagates through the render layer — through the space you can see and place things in. An electromagnetic wave travels through space. You put a metal cage in that space. The cage intercepts the wave. Done.</p>
+<p>You can block every other force because every other force propagates through content graphs — through dependency chains between content structures. An electromagnetic wave is a content-graph phenomenon: one content structure's state changes propagating to another through dependency edges. You put a Faraday cage — another content structure — between them. The cage breaks the dependency chain. The wave can't reach the interior. Done.</p>
 
-<p>Gravity doesn't propagate through the render layer. It is a structural property of the engine layer's graph — the budget drain from mass's resolution walk. Your shield is a render-layer object. It lives on the screen. Gravity lives in the engine. Your shield has no address in the engine. It cannot intercept a resolution walk any more than a character in a video game can stop the game's code from running.</p>
+<p>Gravity doesn't propagate through content graphs. It is budget consumption cascading through the spatial graph itself — the very fabric of space. Mass's overflow stack runs every tick, consuming budget. That budget consumption affects every spatial region near it, because they share the same spatial graph structure. Your shield is a content structure. It sits inside the spatial graph. It can no more intercept budget consumption cascading through the spatial graph than a fish can block the current it's swimming in. Same system, different type of structure.</p>
 
 <h3>Gravitational Time Dilation</h3>
 
@@ -1287,7 +1366,7 @@ footer{
 
 <div class="insight">
   <span class="block-label">✦ What This Means</span>
-  <p>Gravity is not a force. It is resource contention. A permanent stack drains budget from its neighbors, creating a gradient. Everything routes along the cheapest path through that gradient — and from the render layer, that looks like attraction. You cannot shield it because it operates in the engine, and your shield lives on the screen. Einstein's spacetime curvature is the routing table, warped by a congested node. Black holes are what happen when the congestion reaches 100%. Every prediction of general relativity — time dilation, light bending, event horizons — falls out of one mechanism: a permanent stack consuming shared resources.</p>
+  <p>Gravity is not a force. It is resource contention. A permanent overflow stack consumes budget from its neighbors in the spatial graph, creating a gradient. Everything routes along the cheapest path through that gradient — and from inside the spatial graph, that looks like attraction. You cannot shield it because it propagates through the spatial graph, and your shield is a content structure embedded within it. Einstein's spacetime curvature is the spatial graph's edge-cost matrix, warped by a congested node. Black holes are what happen when the congestion reaches 100%. Every prediction of general relativity — time dilation, light bending, event horizons — falls out of one mechanism: a permanent stack consuming shared resources.</p>
 </div>
 
 <!-- SECTION 05: VELOCITY DILATION + ARROW OF TIME -->
@@ -1301,11 +1380,11 @@ footer{
 
 <p>In the previous section, we saw that gravity slows time by draining the local budget from the outside — mass's walk consumes your resources. But there is a second way to lose budget: <strong>spending it on motion.</strong></p>
 
-<p>Remember the entity model from Section 01: graphs live in the engine. The screen references them. A graph doesn't have a position in the engine — position is a screen concept. Your "location" is determined by which screen region is currently referencing your graph.</p>
+<p>Remember the entity model from Section 01: content graphs have no spatial location. The spatial graph references them. A content graph doesn't have a position — position is a spatial-graph concept. Your "location" is determined by which spatial region currently references your content graph.</p>
 
-<p>So what does moving actually mean? Your graph doesn't move — it has no position to move from. What changes is <strong>which screen regions reference it.</strong> The old region drops its reference. The new region picks it up. Both regions need to re-render — the old one because it lost something, the new one because it gained something.</p>
+<p>So what does moving actually mean? Your content graph doesn't move — it has no position to move from. What changes is <strong>which spatial regions reference it.</strong> The old region drops its reference. The new region picks it up. The engine must re-evaluate your content graph in its new spatial context — new neighbors, new incoming budget effects, new demand environment.</p>
 
-<p>That re-rendering is work. It consumes budget. Every tick you're in motion, screen regions are being remapped — old references dropped, new ones acquired, both ends re-rendered. The faster you move, the more regions are remapped per tick, the more budget goes to re-rendering, the less remains for your graph's internal state to change.</p>
+<p>That re-evaluation is work. It consumes budget. Every tick you're in motion, spatial regions are being remapped — old references dropped, new ones acquired, the content graph re-contextualized. The faster you move, the more regions are remapped per tick, the more budget goes to re-contextualization, the less remains for your content graph's internal state to change.</p>
 
 <p>At the speed of light, the maximum number of screen regions are being remapped per tick. All budget goes to re-rendering. Zero budget remains for internal state changes. No time experienced.</p>
 
@@ -1343,7 +1422,7 @@ footer{
 
 <p>This framework's answer is simpler. The Rule takes an input and produces an output. The output depends on the input. The input does not depend on the output. You cannot un-run a function that has already returned. You cannot un-commit a state that has already been written.</p>
 
-<p>The equations of physics are symmetric because they describe the render layer — and the render layer's geometry can be symmetric. But the engine's Rule runs in one direction by construction. That is the arrow. Not entropy. Not initial conditions. The direction of time is the evaluation direction of the Rule. Functions run forward.</p>
+<p>The equations of physics are symmetric because they describe the spatial graph's geometry — and that geometry can be symmetric. But the engine's Rule runs in one direction by construction. That is the arrow. Not entropy. Not initial conditions. The direction of time is the evaluation direction of the Rule. Functions run forward.</p>
 
 <div class="three-col">
   <div class="col-header">In a Computer</div>
@@ -1387,7 +1466,7 @@ footer{
 
 <div class="callout callout-neutral">
   <span class="block-label">The preferred ordering — exists but invisible</span>
-  The engine advances by a global tick. Step 1, step 2, step 3. This implies a preferred causal ordering — an absolute sequence underneath everything. But from inside the render layer, you can't detect it. The projection function produces geometry that looks the same to every observer within it. Physics calls this Lorentz symmetry, and it has been tested to extraordinary precision. The framework's prediction: at extreme (Planck-scale) energies, tiny deviations from this symmetry should be detectable, because the discrete ticking structure of the engine would begin to show through.
+  The engine advances by a global tick. Step 1, step 2, step 3. This implies a preferred causal ordering — an absolute sequence underneath everything. But from inside the spatial graph, you can't detect it. The spatial graph's geometry looks the same to every observer within it. Physics calls this Lorentz symmetry, and it has been tested to extraordinary precision. The framework's prediction: at extreme (Planck-scale) energies, tiny deviations from this symmetry should be detectable, because the discrete ticking structure of the engine would begin to show through.
 </div>
 
 <div class="three-col">
@@ -1457,7 +1536,7 @@ footer{
 <p><strong>Step 4 — Over many particles, the pattern builds up.</strong> Each individual particle lands at one definite spot when the detection screen forces commitment. But the <em>probability</em> of where it lands is shaped by the two-path tracing. Over thousands of particles, the accumulated pattern is the interference pattern: alternating bright and dark bands. Each particle's landing was determined by the graph structure at the moment of tracing. Same particle, same web, same pattern every time.</p>
 
 <div class="novel-claim">
-  <p><strong>The wave function is not the particle. It is the engine's mandatory accounting pass — tracing a pending node's potential through every connected path before committing the next frame.</strong> The particle is not "in two places at once." It is cached, unrendered, sitting still. The engine is tracing both paths because downstream nodes might depend on either. The interference pattern is what happens when the engine's traced contributions converge. The tracing IS the wave. The committed result IS the particle.</p>
+  <p><strong>The wave function is not the particle. It is the committed state of a content graph with multiple valid paths and no consumer demanding selection.</strong> The particle's content graph connects through path A and path B. No committed structure demands "which path?" — so the engine commits the multi-path structure as-is. The path weights sitting on the node ARE the wave function. The particle is not "in two places at once." Its content graph has two valid dependency paths and nobody has asked it to pick one. The interference pattern is what happens when those path weights converge at the detection screen. The committed result IS the branching structure.</p>
 </div>
 
 <h3>Why a Detector Destroys Interference</h3>
@@ -1466,11 +1545,11 @@ footer{
 
 <p>"Looking" is the wrong word. Here is what actually happens:</p>
 
-<p>A detector is a physical device. It interacts with the particle. In graph terms, placing a detector at one slit <strong>adds a new connection</strong> — a new edge in the graph between the detector node and the slit. The detector's next state now depends on knowing which slit the particle came through. This dependency means the engine must commit one path at that slit to satisfy the detector's requirement.</p>
+<p>A detector is a physical device — a committed content structure. Its nodes are resolved every tick because they are surrounded by other committed structures demanding their values. When you place a detector at one slit, you add a committed consumer whose next state depends on whether a particle came through that slit. The detector <strong>demands</strong> the particle's path value at that slit.</p>
 
-<p>Once one path is committed, there is only one path contributing to the far wall. One path means no convergence of two paths. No convergence means no interference. The pattern vanishes.</p>
+<p>Demand forces resolution. The engine must resolve the particle's branching structure at that slit to compute the detector's next state. Once one path is resolved to a definite value, there is only one path contributing to the far wall. One path means no convergence of two paths. No convergence means no interference. The pattern vanishes.</p>
 
-<p>The detector didn't "observe" in any mystical sense. It didn't disturb the particle with its measurement. It <strong>edited the graph's structure</strong> — added an edge that wasn't there before — and the engine responded to the new structure. The engine always responds to the graph's current shape. Change the shape, change the computation. That's all that happened.</p>
+<p>The detector didn't "observe" in any mystical sense. It didn't disturb the particle with its measurement. It <strong>created demand for a definite value</strong> where none existed before — and the engine responded by resolving the branching structure. Change the demand, change what gets resolved. That's all that happened.</p>
 
 <h3>The Quantum Eraser — The Real Test</h3>
 
@@ -1492,35 +1571,35 @@ footer{
 
 <p>If everything in the graph gets processed every tick, why doesn't a basketball produce an interference pattern when thrown through two doors?</p>
 
-<p>Because a basketball is always above the threshold. It consists of roughly 10²⁶ atoms, all interacting with each other and with the air, the floor, the light in the room. Its graph is so densely connected, so constantly active, that the engine must commit its state every tick. There is nothing pending to trace through multiple paths. The engine commits its position, its velocity, its state — definitively, every tick. No tracing. No open potential. No interference.</p>
+<p>Because a basketball is surrounded by an enormous number of committed structures — 10²⁶ atoms, all resolved, all demanding definite values from their neighbors every tick. Every node in the basketball's content graphs has committed consumers pulling on it constantly. The engine resolves every node because resolving once is vastly cheaper than maintaining branching state when millions of committed neighbors all demand the value. Nothing stays branching. Everything is resolved. No multi-path structures survive. Classical behavior, every tick.</p>
 
-<p>In principle, if you could completely isolate a basketball from every interaction — every air molecule, every photon of light, every vibration of the floor — its graph would quiet down, its activity would drop below the threshold, and the engine would trace its potential through multiple paths. You would get basketball-scale interference. Quantum mechanics agrees with this: any object can in principle exhibit quantum behavior. What prevents it is interaction with the environment — what physicists call <strong>decoherence</strong>. In this framework, decoherence is just: the node's graph is too busy. Too many connections, too much activity, always above the threshold. The engine commits rather than traces.</p>
+<p>The cause is not internal complexity. The cause is <strong>environmental demand</strong>. An isolated basketball with zero interactions — impossible in practice, valid in principle — would theoretically show quantum behavior. Not because it got simpler, but because the demand disappeared. What prevents quantum behavior in everyday objects is the overwhelming demand from their environment. Physicists call this <strong>decoherence</strong>. In this framework, decoherence is: too many committed neighbors are demanding definite answers, and the engine obliges.</p>
 
 <h3>What Happens When You Send an Entangled Particle Through the Slits?</h3>
 
 <p>Here is a prediction that falls directly out of the framework — and matches real experiments.</p>
 
-<p>If you fire a single, unentangled particle at the double slit, the engine traces a simple graph through two paths. Clean two-path interference pattern.</p>
+<p>If you fire a single, unentangled particle at the double slit, its content graph has branching paths through both slits. Clean two-path interference pattern.</p>
 
-<p>But what if the particle is entangled with a partner somewhere else? Remember: entangled particles are <strong>one graph</strong>. The engine doesn't trace just the particle — it traces the <em>full graph</em>, including the partner. The trace through the two slits now carries the partner's structure along with it. The combined graph is more complex than a lone particle's graph.</p>
+<p>But what if the particle is entangled with a partner somewhere else? Remember: entangled particles are <strong>one content graph</strong>. The engine evaluates the full content graph — including the partner. The branching state through the two slits now carries the partner's structure along with it. The combined graph is more complex than a lone particle's graph.</p>
 
 <p>The result: the single-particle pattern shows <strong>no clean interference on its own</strong>. It looks random. But when you correlate the results with measurements on the partner particle, you can extract subsets that DO show interference. The partner's measurement acts as a filter — exactly like the quantum eraser. The full pattern contains all the information. Looking at one particle alone averages over the partner's contributions, washing out the interference. Filter by the partner's value, and clean interference subsets emerge.</p>
 
-<p>Physicists have confirmed this experimentally with entangled photons since the 1990s. In this framework, the result is inevitable: the engine traces the full graph, and the full graph includes both particles. No additional mechanism needed — it falls directly out of "the engine traces the graph."</p>
+<p>Physicists have confirmed this experimentally with entangled photons since the 1990s. In this framework, the result is inevitable: the engine evaluates the full content graph, and the full content graph includes both particles. No additional mechanism needed — it falls directly out of "the engine evaluates the whole graph."</p>
 
-<h3>When Graphs Share a Screen Region</h3>
+<h3>When Content Graphs Share a Spatial Region</h3>
 
 <p>One more consequence of the entity model — and it leads to a genuine prediction.</p>
 
-<p>Multiple graphs can be referenced by the same screen region. When any one of them resolves, the region re-renders. That re-render triggers a budget check on <em>every</em> graph referenced by that region — even graphs that are completely unrelated to the one that just resolved.</p>
+<p>Multiple content graphs can be referenced by the same spatial region. Each committed content graph's processing draws from the shared budget. When many committed graphs occupy the same region, the budget in that region is heavily consumed — leaving less available for any branching graph nearby.</p>
 
-<p>Think of it like an open-plan office. When one person's phone rings loudly (their "graph resolves"), everyone nearby is momentarily disrupted — even people working on completely unrelated projects. The disruption isn't because they're collaborating. It's because they share the same physical space.</p>
+<p>Think of it like an open-plan office where everyone shares one power grid. When one person runs a space heater (their content graph consumes budget), the lights dim for everyone — even people working on completely unrelated things. The impact isn't because they're collaborating. It's because they share the same resource pool.</p>
 
-<p>This is the framework's mechanism for environmental decoherence: more resolved graphs in the same screen region means more frequent re-renders, which means more frequent budget checks on every pending graph nearby, which means it's harder for any graph to stay below the threshold. Dense environments (lots of resolved stuff nearby) force quantum systems into classical behavior faster — not because of interaction, but because of shared screen space.</p>
+<p>This is the framework's mechanism for environmental decoherence: more committed content graphs in the same spatial region means more budget consumed, which means maintaining branching state nearby becomes increasingly expensive relative to resolving. Dense environments (lots of committed stuff nearby) force quantum systems into classical behavior faster — not because of direct interaction, but because of shared budget contention.</p>
 
 <div class="callout callout-gold">
   <span class="block-label">A candidate prediction</span>
-  Standard decoherence theory says a quantum system loses coherence based on its <strong>interaction strength</strong> with the environment. This framework says it's based on <strong>screen-region proximity</strong> — sharing the same render region triggers budget checks regardless of direct interaction. Usually these are the same thing (nearby things interact). But for two quantum systems that overlap spatially without interacting (different force carriers, no shared quantum numbers), our framework predicts slightly faster decoherence than standard QM. The trigger is spatial proximity, not interaction strength. If testable, this would distinguish this framework from standard quantum mechanics.
+  Standard decoherence theory says a quantum system loses coherence based on its <strong>interaction strength</strong> with the environment. This framework says it's based on <strong>demand from committed neighbors</strong> — sharing the same spatial region with committed structures creates demand regardless of direct interaction. Usually these are the same thing (nearby committed things create demand through dependency edges). But for two quantum systems that overlap spatially without interacting (different force carriers, no shared quantum numbers), our framework predicts slightly faster decoherence than standard QM. The trigger is proximity to committed structures in the spatial graph, not interaction strength between content graphs. If testable, this would distinguish this framework from standard quantum mechanics.
 </div>
 
 <div class="three-col">
@@ -1555,11 +1634,11 @@ footer{
 
 <p>This merged graph is below the threshold. It hasn't been committed yet. Its values do not exist — not "unknown to us" but genuinely not yet computed. It is a pending graph in the engine, waiting to be resolved.</p>
 
-<p>Now the particles physically separate in the render layer. One goes left, one goes right. On the screen, they look like two distant objects — potentially on opposite sides of the galaxy.</p>
+<p>Now the particles physically separate in the spatial graph. One goes left, one goes right. In the spatial graph, they look like two distant objects — potentially on opposite sides of the galaxy.</p>
 
-<p>But they are not two objects in the engine. They are <strong>one graph, displayed at two screen locations.</strong></p>
+<p>But they are not two objects in the engine. They are <strong>one content graph, referenced by two spatial regions.</strong></p>
 
-<p>Remember Section 01: graphs live in the engine. The screen references them — like pixels referencing data in memory. When the particles "separate," the graph doesn't split. The graph stays in the engine, which has no space. What moved were the screen projections. Two different screen pixels now reference the same underlying graph. The distance between them is real on the screen. It is meaningless in the engine.</p>
+<p>Remember Section 01: content graphs have no spatial location. The spatial graph references them. When the particles "separate," the content graph doesn't split. The content graph stays as one structure with no spatial properties. What moved were the spatial references. Two different spatial regions now reference the same content graph. The distance between those regions is real in the spatial graph. It is meaningless to the content graph — content graphs have no concept of distance.</p>
 
 <h3>What Happens When You Measure One</h3>
 
@@ -1567,11 +1646,11 @@ footer{
 
 <p>The engine resolves <em>the whole graph</em> — because it is one graph. It doesn't resolve "particle A" and then notify "particle B." There is no separate A and B in the engine. There is one graph. The engine computes definite values for all nodes in the graph, in one tick.</p>
 
-<p>Every screen location referencing this graph updates with the committed values. The pixel showing "particle A" and the pixel showing "particle B" both update — because they were both referencing the same graph all along.</p>
+<p>Every spatial region referencing this content graph updates with the committed values. The region showing "particle A" and the region showing "particle B" both update — because they were both referencing the same content graph all along.</p>
 
 <h3>Why There Is No Communication</h3>
 
-<p><strong>There was never anything to communicate.</strong> Communication requires two separate things sending messages. But there aren't two separate things. There is one graph in the engine, referenced by two screen locations. When the engine resolves the graph, both references update. No signal is sent from A to B because A and B are not separate objects in the engine — they are the same data, projected to different screen coordinates.</p>
+<p><strong>There was never anything to communicate.</strong> Communication requires two separate things sending messages. But there aren't two separate things. There is one content graph, referenced by two spatial regions. When the engine resolves the content graph, both references update. No signal is sent from A to B because A and B are not separate objects — they are the same content graph, referenced from different regions in the spatial graph.</p>
 
 <p>This is exactly like a shared Google Doc. Someone in New York edits the document. A reader in Tokyo sees the change. Not because a signal went from New York to Tokyo — but because both users are looking at the same document. The document doesn't exist in New York or Tokyo. It exists in the cloud. The "distance" between users is irrelevant because the thing they're both reading has no location.</p>
 
@@ -1584,7 +1663,7 @@ footer{
 <p>This framework resolves the paradox. The hidden state is not local — not stored inside either particle. It is the graph itself — a structure in the engine layer, which has no spatial location. Bell rules out local hidden variables. This framework's variables are non-local by construction. The graph doesn't exist "inside" particle A or "inside" particle B. It exists in the engine, which has no space.</p>
 
 <div class="novel-claim">
-  <p><strong>Entanglement requires no communication whatsoever.</strong> Two entangled particles are one graph in the engine, projected onto two screen locations. When the graph resolves, every screen reference updates — not because a signal traveled between them, but because they were always projecting the same data. The distance between them exists only on the screen. In the engine, there was never a distance. There was never two things. There was one graph, unresolved, waiting to be computed. When it was, both projections updated. That is all that happened.</p>
+  <p><strong>Entanglement requires no communication whatsoever.</strong> Two entangled particles are one content graph referenced by two regions in the spatial graph. When the content graph resolves, every spatial reference updates — not because a signal traveled between regions, but because they were always referencing the same data. The distance between them exists only in the spatial graph. In the content graph, there was never a distance. There was never two things. There was one content graph, branching, waiting for demand. When demand came, both references updated. That is all that happened.</p>
 </div>
 
 <div class="three-col">
@@ -1598,7 +1677,7 @@ footer{
 
 <div class="insight">
   <span class="block-label">✦ What This Means</span>
-  <p>There is nothing spooky about entanglement. Two particles interact, forming a shared edge in the engine. The engine has no concept of distance — "near" and "far" are screen concepts. When the engine resolves one particle, the shared edge pulls the other into the same computation. Both values are produced together. The correlation isn't transmitted across space. It was written into the graph when the particles first interacted. It was always there. You just couldn't see it until measurement forced the computation to run.</p>
+  <p>There is nothing spooky about entanglement. Two particles interact, forming one content graph. Content graphs have no concept of distance — "near" and "far" are spatial-graph properties. When demand forces one particle's resolution, the entire content graph resolves as one computation. Both spatial references update. The correlation isn't transmitted across space. It was written into the content graph when the particles first interacted. It was always there. You just couldn't see it until demand forced the resolution.</p>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -1643,7 +1722,7 @@ footer{
 
 <div class="gap-box">
   <span class="block-label">Narrowing Gap 3 — E = mc² Formal Derivation</span>
-  The dual-role argument for why the budget appears squared is structurally grounded. A formal proof that total energy release is exactly m × budget² (and not some other function) requires deriving the render layer's geometry from graph topology. Direction strong. Formal derivation pending.
+  The dual-role argument for why the budget appears squared is structurally grounded. A formal proof that total energy release is exactly m × budget² (and not some other function) requires deriving the spatial graph's geometry from content graph topology. Direction strong. Formal derivation pending.
 </div>
 
 <div class="gap-box">
@@ -1653,7 +1732,12 @@ footer{
 
 <div class="gap-box">
   <span class="block-label">Open Gap 5 — The Engine Is Inaccessible</span>
-  Like all interpretations of quantum mechanics, this framework proposes a structure that cannot be directly measured — we live on the screen, not in the engine. Testable predictions must come from screen-layer observations that differ from standard QM+GR. Candidates: (1) Planck-scale Lorentz deviation, (2) decoherence timescales matching the threshold model, (3) a minimum mass unit at the Planck scale, (4) <strong>spatial proximity decoherence</strong> — two non-interacting quantum systems sharing the same render region should decohere slightly faster than standard QM predicts based on interaction strength alone, because region re-rendering triggers budget checks regardless of direct interaction.
+  Like all interpretations of quantum mechanics, this framework proposes a structure that cannot be directly measured — content graphs have no spatial location and can't be observed from inside the spatial graph. Testable predictions must come from spatial-graph observations that differ from standard QM+GR. Candidates: (1) Planck-scale Lorentz deviation, (2) decoherence timescales matching the demand-driven model, (3) a minimum mass unit at the Planck scale, (4) <strong>demand-proximity decoherence</strong> — two non-interacting quantum systems sharing the same spatial region should decohere slightly faster than standard QM predicts based on interaction strength alone, because proximity to committed structures in the spatial graph creates demand regardless of direct content-graph interaction.
+</div>
+
+<div class="gap-box">
+  <span class="block-label">Open Gap 5b — Deriving the Demand Threshold</span>
+  The crossover point where resolving a branching node becomes cheaper than maintaining its multi-path structure — the effective threshold — has not been formally derived. The framework predicts it depends on the number and density of committed consumers demanding the node's value, not on the node's internal properties. A formal derivation should produce decoherence rates that match observed values, providing a quantitative test.
 </div>
 
 <div class="gap-box">
@@ -1678,41 +1762,41 @@ footer{
     <tr><td><strong>Time</strong></td><td>A counter — the number of state changes a region has undergone. Not a dimension. Not a river. Duration is constructed from revision count.</td><td>A loop counter. How many iterations a process has completed.</td></tr>
     <tr><td><strong>Arrow of time</strong></td><td>The evaluation direction of the Rule. Next state depends on current; current does not depend on next. You can't un-run a function.</td><td>Functions run forward. You can't un-return a value.</td></tr>
     <tr><td><strong>The tick</strong></td><td>The causal step counter. Which step are we on? Not a clock — a sequence index.</td><td>A global loop counter. Step N+1 follows step N by definition.</td></tr>
-    <tr><td><strong>The budget</strong></td><td>The per-tick work limit. Fixed. Universal. Determines the speed of light and whether overflow creates mass.</td><td>The scheduler's time-slice. System throughput limit.</td></tr>
+    <tr><td><strong>The budget</strong></td><td>The total shared computation per tick. Fixed. Universal. Every node's evaluation draws from the same pool. Determines both the speed of light (maximum propagation) and overflow storage (mass). Its dual role is why c appears squared in E = mc².</td><td>Total CPU cycles per tick. All processes share the same pool. A heavy process consumes cycles that other processes need.</td></tr>
     <tr><td><strong>Mass</strong></td><td>Overflow that self-perpetuates. Stack depth = mass. Each frame holds one budget of deferred work. Arises from overflow, not by design.</td><td>A recursive process that regenerates every cycle. Permanent stack.</td></tr>
     <tr><td><strong>Energy</strong></td><td>The return value of resolved computation. What comes back when work completes.</td><td>Output of a completed function call.</td></tr>
     <tr><td><strong>Inertia</strong></td><td>Cost of rewriting a deep overflow stack. Deeper stack = harder to change.</td><td>Cost of modifying a nested call stack that's rebuilding itself.</td></tr>
-    <tr><td><strong>Gravity</strong></td><td>Budget drain from mass's overflow walk fanning into neighbors. Emergent. Unshieldable — engine layer vs screen layer.</td><td>Shared resource contention. Heavy process draining CPU from neighbors.</td></tr>
+    <tr><td><strong>Gravity</strong></td><td>Budget consumption from mass's cycling overflow cascading through the spatial graph. Emergent. Unshieldable — spatial-graph phenomenon vs content-graph shield.</td><td>Shared resource contention. Heavy process draining CPU from neighbors.</td></tr>
     <tr><td><strong>Gravitational time dilation</strong></td><td>Budget drained by mass → fewer state changes per tick → slower clock.</td><td>Process starved by a CPU hog. Fewer iterations per system tick.</td></tr>
-    <tr><td><strong>Velocity time dilation</strong></td><td>Motion = graph's projection remapping across screen regions. More remapping per tick = more budget consumed = fewer internal state changes = slower clock.</td><td>Moving data between servers requires re-rendering at both ends. Faster transfer = more re-renders = fewer cycles for other work.</td></tr>
-    <tr><td><strong>Speed of light</strong></td><td>Maximum propagation = full budget per tick. Can't exceed — no more budget.</td><td>Maximum network throughput. Can't send faster than the bus allows.</td></tr>
-    <tr><td><strong>Spacetime</strong></td><td>The routing table of the graph. Flat = uniform costs. Curved = cost gradient from mass's drain. Metric tensor = edge-cost matrix.</td><td>Weighted routing table that updates when one path gets congested.</td></tr>
+    <tr><td><strong>Velocity time dilation</strong></td><td>Motion = content graph's reference shifting across spatial regions. More shifts per tick = more budget consumed by re-contextualization = fewer internal state changes = slower clock.</td><td>Moving data between servers requires re-evaluation at both ends. Faster transfer = more re-evaluations = fewer cycles for other work.</td></tr>
+    <tr><td><strong>Speed of light</strong></td><td>Maximum propagation rate when the full shared budget is applied to transmission. Can't exceed — no more budget. Near mass, budget is partially consumed by overflow, so even propagation slows (Shapiro delay).</td><td>Maximum network throughput. Can't send faster than the bus allows. Congested routes are slower.</td></tr>
+    <tr><td><strong>Spacetime</strong></td><td>The edge-cost matrix of the spatial graph. Flat = uniform costs. Curved = cost gradient from mass's budget consumption. Metric tensor = spatial graph's edge-cost matrix.</td><td>Weighted routing table that updates when one path gets congested.</td></tr>
     <tr><td><strong>Geodesics</strong></td><td>Cheapest paths through the routing table. Objects follow them because the engine routes along minimum cost.</td><td>Dijkstra's shortest path. Default scheduler routing.</td></tr>
     <tr><td><strong>Gravitational lensing</strong></td><td>Light follows cheapest path. Near mass, costs are skewed. Light curves.</td><td>Network traffic re-routing around a congested node.</td></tr>
     <tr><td><strong>Event horizon</strong></td><td>Where mass's drain consumes 100% of local budget. Zero state changes. Time stops.</td><td>Complete CPU starvation. Zero iterations indefinitely.</td></tr>
     <tr><td><strong>Black hole singularity</strong></td><td>Overflow stack exceeds any finite budget. Computational crash.</td><td>Stack overflow exception.</td></tr>
     <tr><td><strong>Hawking radiation</strong></td><td>Edge cleanup at the overflow boundary where budget is almost but not quite zero.</td><td>Near-crashed process slowly completing cleanup at the edge.</td></tr>
-    <tr><td><strong>E = mc²</strong></td><td>m frames × budget stored × budget propagation rate = m × budget². Dual-role: budget governs both storage and release.</td><td>Stack unwind: depth × work/frame × throughput. Budget appears twice → squared.</td></tr>
+    <tr><td><strong>E = mc²</strong></td><td>m frames × cycles stored per frame × propagation rate = m × C². The shared budget appears twice because it governs both storage (cycles consumed from the pool each tick) and release (maximum transmission rate). Same shared resource, two roles.</td><td>Stack unwind: depth × cycles/frame × throughput. Same pool pays for both → squared.</td></tr>
     <tr><td><strong>Photon</strong></td><td>Web operation that resolves within one tick. No overflow, no mass. All budget on propagation → c. No internal state → no time.</td><td>Return value in transit. Completes in one scheduler slice.</td></tr>
-    <tr><td><strong>Superposition</strong></td><td>A node below the threshold — not yet committed. Pending. Value doesn't exist yet, not "unknown."</td><td>Lazy evaluation. Async promise. Resolves when forced.</td></tr>
-    <tr><td><strong>Wave function</strong></td><td>The engine's trace of a pending node's potential through every connected path. Not the particle moving — the engine computing the next frame.</td><td>GPU ray tracing every light path before committing pixels.</td></tr>
-    <tr><td><strong>Wave function "collapse"</strong></td><td>A dependency forces the engine to commit one path. The graph was edited (detector added an edge). The engine responded.</td><td>A query forcing lazy evaluation. GPU committing which ray hit which surface.</td></tr>
+    <tr><td><strong>Superposition</strong></td><td>A content graph with multiple valid dependency paths and no committed consumer demanding selection. The branching structure IS the committed state. Not "unknown" — genuinely multi-path.</td><td>A configuration value that hasn't been queried yet. Valid options exist. Nobody has asked, so no selection has been made.</td></tr>
+    <tr><td><strong>Wave function</strong></td><td>The branching structure stored on a content graph's nodes — path weights representing the possible dependency routes. Not a process — stored state data computed by the engine during evaluation.</td><td>A data structure holding multiple weighted options. It sits in memory between queries. Not a running process — just data.</td></tr>
+    <tr><td><strong>Wave function "collapse"</strong></td><td>A committed consumer demands the branching node's value. The engine resolves the multi-path structure to one definite value. Demand forced selection.</td><td>A query forces the config to return one value. The options collapse to an answer because something needed the answer.</td></tr>
     <tr><td><strong>Quantum eraser</strong></td><td>Detector sorted results into groups, hiding interference. Erasing the sort recombines groups. Pattern reappears. Data never changed.</td><td>Filtering a spreadsheet hides cross-category patterns. Remove filter, patterns return.</td></tr>
-    <tr><td><strong>Decoherence</strong></td><td>Large objects have busy, densely-connected webs — always above threshold. Engine commits them every tick. Nothing pending to trace.</td><td>A process with too many active threads to defer any of them.</td></tr>
-    <tr><td><strong>Entanglement</strong></td><td>Two entangled particles are one graph in the engine, projected onto two screen locations. When the graph resolves, both projections update. No signal — they were always referencing the same data. The engine has no spatial distance.</td><td>A shared Google Doc. Edit in New York, change appears in Tokyo. Not a signal — both reading the same document. The document has no location.</td></tr>
-    <tr><td><strong>Bell's theorem</strong></td><td>Rules out local hidden variables. This framework's variables are non-local — the graph lives in the engine, which has no spatial location. Not inside particle A or B — it IS particles A and B.</td><td>The consistency isn't stored in either server — it's in the shared document that both are reading from.</td></tr>
+    <tr><td><strong>Decoherence</strong></td><td>Large objects are surrounded by committed neighbors demanding definite values every tick. Nothing stays branching because everything is being asked. The cause is environmental demand, not internal complexity.</td><td>A config value constantly queried by thousands of processes — it's always resolved because demand never lets it stay pending.</td></tr>
+    <tr><td><strong>Entanglement</strong></td><td>Two entangled particles are one content graph referenced by two spatial regions. When the content graph resolves, both references update. No signal — they were always referencing the same data. Content graphs have no spatial distance.</td><td>A shared Google Doc. Edit in New York, change appears in Tokyo. Not a signal — both reading the same document. The document has no location.</td></tr>
+    <tr><td><strong>Bell's theorem</strong></td><td>Rules out local hidden variables. This framework's variables are non-local — the content graph has no spatial location. Not inside particle A or B — it IS particles A and B.</td><td>The consistency isn't stored in either server — it's in the shared document that both are reading from.</td></tr>
     <tr><td><strong>Principle of least action</strong></td><td>Engine routes along cheapest paths. Not a law — a property of schedulers.</td><td>Dijkstra's algorithm. Compiler optimization. Default scheduling behavior.</td></tr>
     <tr><td><strong>Entropy increase</strong></td><td>The Rule runs one direction. Each tick adds irreversibly to history. Append-only.</td><td>Write-only log. You can add entries but never remove them.</td></tr>
-    <tr><td><strong>Holographic principle</strong></td><td>In a two-layer system, the screen's boundary encodes the data. Interior is computed from it. Information scales with surface area, not volume.</td><td>A character's data in memory is a flat structure. The 3D appearance is rendered from it.</td></tr>
-    <tr><td><strong>Planck length / Planck time</strong></td><td>The screen's pixel size (~10⁻³⁵ m) and the engine's tick duration (~10⁻⁴⁴ s). Below these scales, "distance" and "duration" lose meaning — because you've hit the resolution boundary. The universe literally has pixels.</td><td>Screen resolution and frame rate. Below one pixel, there is no finer detail. Below one frame, there is no finer timing.</td></tr>
-    <tr><td><strong>Entity model</strong></td><td>Graphs live in the engine (no space). The screen references them — like pixels referencing memory. Multiple screen locations can reference the same graph. When the graph resolves, all referencing screen locations update simultaneously.</td><td>Multiple pixels can display the same object in video memory. Change the object, all pixels update. No signal between pixels — they read from the same source.</td></tr>
+    <tr><td><strong>Holographic principle</strong></td><td>Content graphs are flat data structures with no inherent dimensionality. The spatial graph gives them the appearance of existing in 3D. Information scales with surface area (content structure) not volume (spatial rendering).</td><td>A character's data in memory is a flat structure. The 3D appearance is rendered from it.</td></tr>
+    <tr><td><strong>Planck length / Planck time</strong></td><td>The spatial graph's minimum resolution (~10⁻³⁵ m) and the engine's tick duration (~10⁻⁴⁴ s). Below these scales, "distance" and "duration" lose meaning — because you've hit the resolution boundary of the spatial graph.</td><td>Screen resolution and frame rate. Below one pixel, there is no finer detail. Below one frame, there is no finer timing.</td></tr>
+    <tr><td><strong>Entity model</strong></td><td>Content graphs have no spatial location. The spatial graph references them — like pixels referencing memory. Multiple spatial regions can reference the same content graph. When the content graph resolves, all referencing regions update simultaneously.</td><td>Multiple pixels can display the same object in video memory. Change the object, all pixels update. No signal between pixels — they read from the same source.</td></tr>
   </tbody>
 </table>
 
 </div><!-- /content -->
 
 <footer>
-  <strong>Greg's Computational Guide to the Universe</strong> — Version 15.0 — March 2026<br>
+  <strong>Greg's Computational Guide to the Universe</strong> — Version 17.0 — March 2026<br>
   Framework developed by Greg. Plain English Edition.<br>
   <span style="display:block;margin-top:.5rem;font-size:.75rem;">For the formal mathematical treatment and predictions, see the companion technical document.</span>
 </footer>
