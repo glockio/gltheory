@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GL Theory: Greg's Computational Guide to the Universe — v18</title>
+    <title>GL Theory: Greg's Computational Guide to the Universe — v19</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap');
 
@@ -814,7 +814,7 @@
         machines we build every day
       </div>
       <div class="byline">
-        VERSION 18.0 · MARCH 2026 · PLAIN ENGLISH EDITION
+        VERSION 19.0 · MARCH 2026 · PLAIN ENGLISH EDITION
       </div>
     </div>
 
@@ -912,19 +912,31 @@
           <strong>Content graphs</strong> represent particles, fields, and
           interactions — they have topology (connections and dependencies) but
           no spatial location. <strong>The spatial graph</strong> is space
-          itself — a network of regions connected to neighboring regions. Each
-          region references content graphs, like pixels referencing data in
-          video memory. The spatial graph is the render layer — but it is inside
-          the engine, not separate from it.
+          itself — not a grid, but a graph: a network of regions connected to
+          neighboring regions, where "neighboring" and "distance" are properties
+          of the graph's edge weights. Space doesn't contain the graph. The
+          graph IS space. The relationship between the two layers is
+          <strong>many-to-many</strong>: each spatial region can reference many
+          content nodes (dense regions), and each content node can be referenced
+          by many spatial regions (entanglement). The spatial graph is the
+          render layer — but it is inside the engine, not separate from it.
         </div>
 
         <div class="principle-item">
           <span class="principle-num">2</span>
           <strong>One Rule.</strong> Each step, the engine takes everything that
           currently exists and produces what exists next. One input, one output,
-          always. No randomness, no branching, no alternatives. Like a
-          spreadsheet: change one cell and every formula recalculates, producing
-          exactly one result.
+          always. No randomness, no branching, no alternatives. Time has three
+          levels in this framework: <strong>Engine time</strong> is the global
+          tick counter — it never dilates, every region participates every tick.
+          <strong>Experienced time</strong> is the number of state transitions
+          actually computed on your content graph per tick — this is what clocks
+          measure, this is what dilates, and the dilation is actual, not
+          perceived: fewer state transitions genuinely happened.
+          <strong>Rendered time</strong> is the committed frame — a static
+          snapshot with no inherent direction, which is why physics equations
+          are time-symmetric. The arrow of time comes from the computation
+          direction: you can't un-run a function.
         </div>
 
         <div class="principle-item">
@@ -943,22 +955,32 @@
           a fixed amount of work. This limit never changes. If a graph can't be
           fully resolved in one step, the leftover carries over to the next step
           — a stack of unfinished work. That stack is the beginning of mass.
+          <strong>The return value of completed work is energy.</strong> That
+          return value becomes input to the next cycle. This is conservation of
+          energy: output from one tick becomes input to the next. Nothing is
+          created or destroyed — return values are passed forward.
         </div>
 
         <div class="principle-item">
           <span class="principle-num">5</span>
-          <strong>Double-Buffered Rendering.</strong> Each tick, the engine
-          commits a frame — the resolved state of every graph above a
-          <strong>commit threshold</strong>. You always see frame N while the
-          engine computes frame N+1. But between commits, the engine walks the
-          <strong>entire</strong> dependency tree — including graphs below the
-          threshold — because any graph might influence any other. That
-          full-tree walk of uncommitted graphs, computing every possible path
-          through every dependency, is where quantum mechanics comes from.
-          <strong>Measurement</strong> is a cache bust: when a committed
-          structure's next state depends on an uncommitted graph, the engine is
-          forced to resolve that graph's subtree. The resolution cascades
-          through every dependent graph. That is "collapse."
+          <strong>Lazy Evaluation and Double-Buffered Rendering.</strong>
+          Each tick, the engine commits a frame. You always see frame N while
+          the engine computes frame N+1. <strong>You are always off by
+          one.</strong> The engine computes ALL graphs every tick — nothing is
+          skipped. The question is not whether a graph gets computed. It is:
+          <strong>does anything demand a definite answer from it?</strong> This
+          is lazy evaluation — values aren't collapsed to final answers until a
+          <strong>strict consumer</strong> demands one. A basketball is its own
+          strict consumer: every atom demands definite values from its neighbors
+          just to compute the next tick — it resolves itself. A lone photon has
+          no strict consumer — nothing needs its definite position — so the
+          engine carries the multi-path walk forward as the graph's evolving
+          state at the data layer, not projected to a definite spatial location.
+          That walk IS the wave function.
+          <strong>Measurement</strong> is a cache bust: a strict consumer —
+          a committed structure that needs a definite value — demands resolution.
+          The engine produces one answer. The walk is replaced by a result.
+          That is "collapse."
         </div>
       </div>
 
@@ -997,10 +1019,13 @@
           <strong
             >Mass is computational overflow that perpetuates itself.</strong
           >
-          When two graphs interact and the combined work exceeds the budget, the
-          leftover persists. If it regenerates itself every step, you get stable
-          matter. Matter-antimatter pairs are inverse graphs — when they meet,
-          they cancel perfectly and all stored work returns as energy.
+          A directed acyclic graph (no cycles) resolves cleanly — no overflow,
+          no mass. A cyclic graph overflows — the self-reference creates
+          permanent stack. If it regenerates every step, you get stable
+          matter. The mass/massless distinction is the distinction between
+          cyclic and acyclic graph topologies. Matter-antimatter pairs are
+          inverse graphs — when they meet, they cancel perfectly and all stored
+          work returns as energy.
         </div>
 
         <div class="claim-item novel-item">
@@ -1020,6 +1045,27 @@
           extraordinary precision. He just didn't know that's what it was.
         </div>
 
+        <div class="claim-item novel-item">
+          <strong
+            >Gravity and time dilation are one mechanism, not two.</strong
+          >
+          Mass's budget consumption simultaneously distorts the spatial graph's
+          edge weights (curvature) and starves neighboring content graphs of
+          compute cycles (dilation). One drain, two observable effects. This is
+          why the Schwarzschild metric covers both with one equation.
+        </div>
+
+        <div class="claim-item novel-item">
+          <strong
+            >Time dilation is actual, not perceived.</strong
+          >
+          Near mass, fewer state transitions genuinely occurred on your content
+          graph. Not fewer measured. Not fewer perceived. Fewer actual. GPS
+          satellites correct for 45 microseconds per day because fewer state
+          transitions were computed on the ground clock than the satellite
+          clock, across the same number of engine ticks.
+        </div>
+
         <div class="claim-item">
           <strong>Time is a counter, not a river.</strong> How many state
           changes happened to you — that's your time. Near mass, fewer happen.
@@ -1030,24 +1076,25 @@
 
         <div class="claim-item">
           <strong>Energy is the return value of completed work.</strong> When
-          the engine finishes resolving a graph, the output is energy. Every
-          completed computation returns a value. That value is what we measure
-          as energy.
+          the engine finishes resolving a graph, the output is energy. That
+          return value becomes input to the next tick. Conservation of energy is
+          not an imposed law — it is the fact that function outputs become
+          function inputs, total bounded by C.
         </div>
 
         <div class="claim-item novel-item">
           <strong
-            >The wave function is NOT the particle — it is the engine's
-            dependency walk of an uncommitted graph.</strong
+            >The wave function is NOT the particle — it is the content graph's
+            evolving state at the data layer.</strong
           >
-          When a content graph is below the commit threshold, the engine walks
-          every path through that graph each tick — not to commit a value, but
-          to compute its potential influence on everything else. That full-tree
-          walk IS the wave function. It is computation in progress, not stored
-          data. "Collapse" is a cache bust: when a committed structure (a
-          detector, an atom, a measurement device) needs the graph's value, the
-          engine resolves the subtree and the multi-path walk is replaced by a
-          single definite result.
+          When no strict consumer demands a definite value, the engine computes
+          the graph's influence through every path each tick without resolving
+          to a single answer. That multi-path walk IS the wave function. It
+          lives at the data layer — computed, evolving, but not projected to a
+          definite spatial-graph position. You can't observe it directly because
+          it hasn't been written as a definite value. "Collapse" is a cache
+          bust: when a strict consumer — a committed structure that needs a
+          definite value — demands resolution, the engine produces one answer.
         </div>
 
         <div class="claim-item novel-item">
@@ -1098,18 +1145,17 @@
 
         <div class="claim-item novel-item">
           <strong
-            >Things stay quantum when they're simple and isolated. Things become
-            classical when graph complexity crosses the commit
-            threshold.</strong
+            >Things stay quantum when nothing demands a definite answer. Things
+            become classical when they contain or connect to strict
+            consumers.</strong
           >
-          An isolated particle is a tiny graph with no committed neighbors — it
-          stays below threshold, and the engine carries its multi-path walk
-          forward tick after tick. A basketball has 10²⁶ atoms, each joined to
-          neighbors by dependency edges — the combined graph is astronomically
-          above the commit threshold. The engine resolves it every tick. Nothing
-          stays uncommitted because the graph is too complex and interconnected
-          to carry below threshold. Decoherence is not caused by "observation."
-          It is caused by graph complexity exceeding the commit budget.
+          An isolated particle has no strict consumer — nothing needs its
+          definite position — so the engine carries its multi-path walk forward
+          tick after tick. A basketball has 10²⁶ atoms, each demanding definite
+          values from its neighbors to compute the next tick. It is its own
+          strict consumer — it resolves itself. Decoherence is not caused by
+          "observation." It is caused by strict consumers demanding definite
+          values.
         </div>
       </div>
 
@@ -1273,7 +1319,7 @@
             distance.
           </text>
           <text x="50" y="115" fill="#7a9ab0" font-size="12">
-            • Above commit threshold: resolved (classical). Below: walked but
+            • Strict consumer present: resolved (classical). No strict consumer: walked but
             uncommitted (quantum).
           </text>
           <text x="50" y="135" fill="#7a9ab0" font-size="12">
@@ -1846,30 +1892,27 @@
       </p>
 
       <p>
-        Every graph in the engine falls on one side of a dividing line — the
-        <strong>commit threshold</strong>:
+        Every graph in the engine falls on one side of a dividing line:
       </p>
 
       <p>
-        <strong>Above threshold:</strong> the graph is complex enough,
-        interconnected enough, or self-referencing enough that the engine
-        resolves it to definite values and writes those values into the
-        committed frame. This is classical reality. Your coffee cup, a clock
+        <strong>Strict consumer present — resolve:</strong> a committed
+        structure's next state requires a definite value from this graph.
+        The engine produces one answer and writes it to the committed frame.
+        This is classical reality. Your coffee cup, a clock
         tick, a measured particle. Mass — a self-referencing overflow stack that
-        regenerates every tick — is always above threshold because it consumes
-        budget every tick by definition.
+        regenerates every tick — is its own strict consumer and resolves
+        every tick by definition.
       </p>
 
       <p>
-        <strong>Below threshold:</strong> the graph is simple and isolated — a
-        lone particle in flight, an unobserved photon. The engine does not
-        commit it. But the engine still has to account for it, because this
-        graph might influence any committed graph it encounters. So the engine
-        <strong>walks the full dependency tree</strong> of this uncommitted
-        graph, computing every possible path through every dependency. That walk
-        is the wave function. It is computation in progress — not stored data,
-        not a separate "trace mode," just the engine doing what engines do:
-        evaluating all dependencies before committing a frame.
+        <strong>No strict consumer — carry the walk:</strong> a
+        lone particle in flight, an unobserved photon. Nothing demands a
+        definite answer. The engine computes the graph's influence through
+        every path but carries the walk forward as the graph's evolving state
+        at the data layer. That walk
+        is the wave function. It is computation in progress — lazy evaluation
+        in action: the engine doesn't produce answers nobody asked for.
       </p>
 
       <p>
@@ -2011,7 +2054,7 @@
           <text x="195" y="166" fill="#888" font-size="9">
             Overflow: always
           </text>
-          <text x="195" y="178" fill="#888" font-size="9">above threshold</text>
+          <text x="195" y="178" fill="#888" font-size="9">always resolved</text>
           <text
             x="195"
             y="220"
@@ -2142,7 +2185,7 @@
             fill="#6a7fdb"
             font-size="8"
           >
-            Below threshold:
+            No strict consumer:
           </text>
           <text
             x="570"
@@ -2211,7 +2254,7 @@
         </svg>
         <div class="figure-caption">
           Left: Frame N — the last committed frame. Every value definite. Mass
-          is always above threshold (self-referencing overflow). This is
+          is always resolved (self-referencing overflow, its own strict consumer). This is
           classical reality. Right: Frame N+1 being computed. The engine walks
           all graphs — committed ones get resolved, uncommitted ones get their
           full dependency tree walked through every path (the wave function). A
@@ -2224,19 +2267,19 @@
         <span class="block-label"
           >Why this matters for everything that follows</span
         >
-        The commit threshold is the key to understanding quantum mechanics.
-        Graphs below threshold are small, simple, and isolated — the engine
-        walks their full dependency tree each tick without committing, computing
-        every possible influence path. That walk IS the wave function. When a
-        committed structure's next state depends on an uncommitted graph — a
-        detector at a slit, an atom absorbing a photon — that dependency is a
-        cache bust. The engine resolves the uncommitted graph's subtree,
-        producing a definite value. Every dependent graph recomputes. That is
-        "collapse." You never see the dependency walk directly. You only see
+        Lazy evaluation is the key to understanding quantum mechanics.
+        When no strict consumer demands a definite answer, the engine walks a
+        graph's full dependency tree each tick without resolving, computing
+        every possible influence path. That walk IS the wave function — the
+        content graph's evolving state at the data layer. When a strict consumer
+        appears — a detector at a slit, an atom absorbing a photon — it demands
+        a definite value. Cache bust. The engine resolves the graph, producing
+        one answer. Every dependent graph recomputes. That is
+        "collapse." You never see the walk directly. You only see
         committed frames. From inside the spatial graph, it looks like the
         particle "was in two places at once." From outside, the engine was
-        walking an uncommitted graph through every path, and a cache bust forced
-        it to pick one.
+        computing an unresolved graph through every path, and a strict consumer
+        forced it to pick one.
       </div>
 
       <h3>You Are Mario</h3>
@@ -2331,37 +2374,115 @@
         them are complicated — but all of them are essential.
       </div>
 
+      <h3>Three Levels of Time</h3>
+
+      <p>
+        This is the most important concept in the framework. Get it right, and
+        everything that follows is intuitive.
+      </p>
+
       <div class="state-box">
-        <h4>The Commit Threshold — One Dividing Line</h4>
+        <h4>Time Operates at Three Distinct Levels</h4>
         <div class="state-item state-resolved">
-          <strong>Above threshold → Committed</strong> — the graph is complex,
-          interconnected, or self-referencing enough that the engine resolves it
-          to definite values and writes them into the frame. Everything you see
-          — classical reality — is above the threshold. Mass (self-referencing
-          overflow) is always above it. Dense objects surrounded by other
-          committed graphs are always above it.
+          <strong>Engine time (the global tick)</strong> — the step counter:
+          Ω, Ω+1, Ω+2. This never dilates. Every region participates in every
+          tick. The engine computes the full next state, always.
         </div>
         <div class="state-item state-branching">
-          <strong>Below threshold → Walked but not committed</strong> — the
-          graph is simple and isolated. The engine does not commit it but still
-          walks its full dependency tree each tick, computing every path through
-          every dependency, because the graph might influence committed nodes
-          downstream. That full-tree walk IS the wave function. This is
-          superposition — not a failure to compute, but the engine's accounting
-          of an uncommitted graph's potential influence.
+          <strong>Experienced time (state transitions on your content graph)</strong>
+          — the number of internal state transitions actually computed on YOUR
+          subgraph during a given tick. This is what a clock measures.
+          <strong>This is what dilates.</strong> Near mass, less budget is
+          available (mass's stack consumed it). Moving fast, budget goes to
+          spatial-graph updates instead. In both cases: fewer state transitions
+          genuinely happened. Not fewer perceived — fewer actual.
+        </div>
+        <div class="state-item state-cycling">
+          <strong>Rendered time (the committed frame)</strong> — a static
+          snapshot with no inherent time direction. Physics equations are
+          time-symmetric because they describe committed frames. The arrow of
+          time comes from the computation direction: you can't un-run a
+          function.
         </div>
       </div>
 
       <p>
-        The commit threshold is not arbitrary — it is the point where the
-        graph's combined complexity (its own structure plus its subgraph joins
-        with committed neighbors) exceeds what the engine can carry as
-        uncommitted work. Below it: the engine walks all paths. Above it: the
-        engine resolves and commits.
-        <strong>Measurement is a cache bust</strong> — when a committed
-        structure's next state depends on an uncommitted graph, the engine is
-        forced to resolve the uncommitted graph's subtree. The resolved value
-        cascades through every dependent graph. That is "collapse."
+        These three levels dissolve the apparent paradox: "How can time dilate
+        if the engine renders everything globally?" The engine ticks at the same
+        rate everywhere. But it doesn't do the same amount of work on every
+        content graph each tick.
+      </p>
+
+      <h3>Spacetime Is the Routing Table</h3>
+
+      <p>
+        What Einstein called <strong>spacetime</strong> — the mathematical
+        structure described by the metric tensor — is the <strong>spatial
+        graph's edge-cost matrix.</strong> Flat spacetime means all edge weights
+        are uniform. Curved spacetime means the edge weights have been
+        distorted by mass's budget consumption.
+      </p>
+
+      <p>
+        This matters because gravity and time dilation are not two separate
+        phenomena that happen to share equations. They are <strong>one mechanism
+        producing two observable effects.</strong> Mass's permanent stack
+        consumes budget, which simultaneously distorts the spatial graph's edge
+        weights (curvature) and starves neighboring content graphs of compute
+        cycles (dilation). One drain, two consequences.
+      </p>
+
+      <h3>Why Some Things Resolve and Others Don't — Lazy Evaluation</h3>
+
+      <p>
+        If the engine computes all graphs every tick, <strong>why don't all
+        graphs produce definite answers?</strong> Our own computers resolve
+        small functions instantly. Nobody says "this function is too small —
+        carry it as a probability distribution." So why would the engine?
+      </p>
+
+      <p>
+        The answer: it doesn't skip anything. It computes everything. But there
+        is a difference between computing a graph's influence and producing a
+        definite answer.
+      </p>
+
+      <p>
+        Programmers call this <strong>lazy evaluation.</strong> In functional
+        programming, a value isn't collapsed to a final answer until something
+        downstream actually needs that answer to proceed. Not because it's too
+        small. Not because it's too complex. Because no consumer has demanded
+        the result yet.
+      </p>
+
+      <div class="state-box">
+        <h4>The Engine's Decision — One Question</h4>
+        <div class="state-item state-resolved">
+          <strong>Strict consumer present → Resolve.</strong> Produce one
+          definite value. Write it to the spatial graph. This is classical
+          reality. A basketball is its own strict consumer — every atom demands
+          definite values from its neighbors just to compute the next tick.
+          It resolves itself because its internal dependencies require it.
+        </div>
+        <div class="state-item state-branching">
+          <strong>No strict consumer → Carry the walk.</strong> Nothing demands
+          a definite answer. The multi-path computation IS the content graph's
+          evolving state. It lives at the data layer — computed, updated each
+          tick, but not projected to a definite spatial-graph position. This is
+          quantum behavior. You can't observe it directly because you're a
+          committed structure and it hasn't been written as a definite value.
+        </div>
+      </div>
+
+      <p>
+        The wave function lives entirely at the <strong>content-graph
+        layer.</strong> The spatial graph holds a reference to the unresolved
+        content graph — it knows it's there — but the reference points to an
+        evolving multi-path computation, not a definite value.
+        <strong>Measurement is a cache bust</strong> — a strict consumer
+        whose next state requires a definite value from an unresolved graph.
+        The engine produces one answer. The walk is replaced by a result.
+        That is "collapse."
       </p>
 
       <h3>The Graph</h3>
@@ -3141,9 +3262,9 @@
         <strong>Mass</strong> is what happens when a graph's work exceeds C —
         the overflow carries over. <strong>Time dilation</strong> is what
         happens when your share of C shrinks — less work done per tick, fewer
-        state changes, slower clock. <strong>The commit threshold</strong> is
-        set by C — how much uncommitted graph complexity can the engine walk
-        within its budget before it must commit and move on.
+        state changes, slower clock. C also determines how much total
+        computation the engine can perform — and thus how much budget is
+        available for each content graph's state transitions per tick.
       </p>
 
       <p>
@@ -3162,8 +3283,9 @@
         <em>C</em> = budget (per-tick work limit = clock speed of reality =
         speed of light from render layer).<br />
         <em>B</em> = remaining budget after mass has consumed some.<br />
-        <em>θ(G)</em> = commit threshold — depends on graph G's complexity +
-        subgraph joins with committed neighbors.<br />
+        <em>θ(G)</em> = resolution trigger — whether graph G has strict
+        consumers (committed structures whose next state depends on G's
+        definite values).<br />
         <code>R(Ω) = P(S(Ω))</code> — <em>P</em> = projection (committed frame),
         <em>R</em> = what we observe.<br />
         Display is double-buffered: you see <em>R(Ω)</em> while engine computes
@@ -3205,14 +3327,16 @@
       <div class="insight">
         <span class="block-label">✦ What This Means</span>
         <p>
-          Four ideas from computing — graphs, stacks, budgets, and
-          double-buffered frames — are all you need. If you understand how a
-          pile of paperwork can grow and never clear, how a heavy app slows down
-          your whole laptop, how two mirror-image structures cancel each other
-          out, and how a GPU displays one frame while computing the next — you
-          already have the intuition for mass, gravity, annihilation, and
-          quantum mechanics. You just didn't know that's what you were looking
-          at.
+          Five ideas from computing — graphs, stacks, budgets,
+          double-buffered frames, and lazy evaluation — plus the three-level
+          time model are all you need. If you understand how a pile of paperwork
+          can grow and never clear, how a heavy app slows down your whole
+          laptop, how two mirror-image structures cancel each other out, how a
+          GPU displays one frame while computing the next, and why a smart
+          computer doesn't compute answers nobody asked for — you already have
+          the intuition for mass, gravity, annihilation, quantum mechanics, and
+          why things stay quantum until something demands a definite answer. You
+          just didn't know that's what you were looking at.
         </p>
       </div>
       <!-- SECTION 03: MASS + E=MC² -->
@@ -3273,7 +3397,8 @@
           <strong
             >Mass is not a property assigned to particles. It is what happens
             when work overflows the budget and the overflow perpetuates
-            itself.</strong
+            itself. The mass/massless distinction is the distinction between
+            cyclic and acyclic graph topologies.</strong
           >
           The Big Bang was a state of maximum activity — nearly every
           interaction overflowed. The first fractions of a second were a massive
@@ -3312,19 +3437,23 @@
         value being delivered.
       </p>
 
-      <div class="callout callout-neutral">
+      <div class="callout callout-blue">
         <span class="block-label"
-          >Why some particles have mass and others don't — the Higgs field</span
+          >Why some particles have mass and others don't — graph topology</span
         >
-        Physicists discovered that a background field — the
-        <strong>Higgs field</strong> — is present everywhere in the universe.
-        When certain particle types interact with it, they acquire mass. Others
-        (photons, gluons) interact with the Higgs field but remain massless. In
-        this framework, the Higgs field is a background graph structure present
-        everywhere. For some particle types, interacting with it pushes their
-        combined graph complexity past the budget — creating the overflow that
-        becomes mass. For others, the Higgs interaction doesn't push them past
-        the budget. Same field, different graph topologies, different outcomes.
+        In graph-theoretic terms, the distinction is clean. A <strong>directed
+        acyclic graph</strong> (DAG — no cycles) can be resolved by topological
+        sort. If the work fits within C, it resolves in one tick. No overflow.
+        No mass. This is a photon. A <strong>directed graph with
+        cycles</strong> cannot be resolved by topological sort. The cycle
+        creates recursion within the tick. The engine truncates after exhausting
+        budget C, carrying forward unresolved nodes. If those nodes regenerate
+        the cycle next tick, the stack is permanent. This is mass. Different
+        graph topologies have different <strong>spectral
+        properties</strong> — the eigenvalues of their adjacency matrices
+        determine how much overflow they generate, producing different masses.
+        The specific particle masses we observe correspond to the spectral
+        radii of the stable cyclic topologies.
       </div>
 
       <h3>Why E = mc² — And Why c Is Squared</h3>
@@ -3873,6 +4002,37 @@
       </p>
 
       <p>This is gravity.</p>
+
+      <h3>One Mechanism, Two Effects</h3>
+
+      <p>
+        Mass is a permanent stack that runs every tick. The engine must process
+        it. That processing consumes budget. Budget consumption in a region does
+        two things simultaneously:
+      </p>
+
+      <p>
+        <strong>It distorts the spatial graph's edge weights.</strong>
+        Neighboring regions' routing costs increase. The cheapest path curves
+        toward mass. Objects follow that path. From the render layer, this looks
+        like gravitational attraction. <strong>This is curvature.</strong>
+      </p>
+
+      <p>
+        <strong>It starves neighboring content graphs of compute
+        cycles.</strong> A clock near mass has fewer state transitions computed
+        per tick. The clock genuinely advances less. Not "appears to" —
+        genuinely. <strong>This is time dilation.</strong>
+      </p>
+
+      <p>
+        In standard physics, these are described by the same equation (the
+        Schwarzschild metric), and physicists note they are "aspects of the same
+        phenomenon." But it's never been clear <em>why</em> they're the same.
+        In this framework, it's obvious: they're both consequences of budget
+        consumption. One drain, two consequences. The math is the same because
+        the mechanism is the same.
+      </p>
 
       <h3>The Budget Drain</h3>
 
@@ -4942,16 +5102,38 @@
         In 1919, Arthur Eddington photographed stars during a solar eclipse and
         found that stars near the edge of the sun appeared slightly shifted from
         their known positions. The sun's mass was bending their light. Einstein
-        had predicted exactly this. It was the first major confirmation of
-        general relativity.
+        had predicted exactly this.
       </p>
 
       <p>
         In this framework: light follows the cheapest path through the graph.
         Near the sun, the routing costs are skewed by the sun's budget drain.
-        The cheapest path for light passing near the sun curves slightly toward
-        it — exactly as Eddington observed. Light doesn't "feel" gravity. It
-        follows the routing table, and the routing table is warped by mass.
+        The cheapest path curves slightly toward it. Light doesn't "feel"
+        gravity. It follows the routing table, and the routing table is warped.
+      </p>
+
+      <h3>Gravitational Waves</h3>
+
+      <p>
+        When mass changes — a binary star system spiraling inward, two black
+        holes merging — the stack's computation pattern changes. Different
+        amounts of work overflow each tick. The return values change. Those
+        changing return values propagate through the spatial graph at speed C.
+        The spatial graph's edge weights oscillate as the return values pass
+        through. That oscillation IS a gravitational wave. LIGO detected
+        exactly this in 2015.
+      </p>
+
+      <h3>Frame Dragging</h3>
+
+      <p>
+        If a mass is rotating — its cyclic graph topology has a directional bias
+        in the cycle traversal — then the return values propagating outward
+        carry that directional bias. Neighboring regions' edge weights become
+        asymmetric: cheaper to traverse in the rotation direction than against
+        it. From the render layer, this looks like space itself being "dragged"
+        by the rotating mass. Frame dragging is confirmed experimentally
+        (Gravity Probe B, 2011).
       </p>
 
       <div class="three-col">
@@ -5059,6 +5241,24 @@
         At the speed of light, the maximum number of screen regions are being
         remapped per tick. All budget goes to re-rendering. Zero budget remains
         for internal state changes. No time experienced.
+      </p>
+
+      <h3>The Equivalence Principle — Derived, Not Assumed</h3>
+
+      <p>
+        Einstein's equivalence principle states that acceleration is locally
+        indistinguishable from gravity. In this framework, this is derived:
+      </p>
+
+      <p>
+        <strong>Acceleration</strong> means the rate of spatial-graph edge
+        updates is changing. More edge updates per tick = more budget consumed.
+        <strong>Gravity</strong> means mass's stack is consuming budget in your
+        region. <strong>Both</strong> are budget drain on your content graph,
+        from different sources. There is genuinely no difference at the budget
+        level between "mass consumed your budget" and "your own acceleration
+        consumed your budget." Same drain. Same effect. The equivalence
+        principle falls out.
       </p>
 
       <h3>The Muon Paradox</h3>
@@ -5405,7 +5605,7 @@
 
       <p><strong>The universe's engine does exactly the same thing.</strong></p>
 
-      <h3>Above and Below the Commit Threshold</h3>
+      <h3>Why Some Things Resolve and Others Don't</h3>
 
       <p>
         Each tick, the engine processes every node in the graph. But not every
@@ -5416,7 +5616,7 @@
         <h4>What the engine does with each node every tick</h4>
         <div class="distinction-row">
           <div class="dist-above">
-            <span class="dist-label">Above threshold — committed</span>
+            <span class="dist-label">Strict consumer present — resolve</span>
             <p>
               The graph is complex enough — interconnected, self-referencing, or
               joined to many committed neighbors — that the engine resolves it
@@ -5427,7 +5627,7 @@
           </div>
           <div class="dist-below">
             <span class="dist-label"
-              >Below threshold — walked but not committed</span
+              >No strict consumer — carry the walk</span
             >
             <p>
               The graph is simple and isolated. The engine doesn't commit it —
@@ -5440,10 +5640,10 @@
           </div>
         </div>
         <p class="dist-note">
-          The dividing line is the <strong>commit threshold</strong> —
-          determined by the graph's complexity plus its subgraph joins with
-          committed neighbors. Small, isolated particles are below it. Everyday
-          objects with 10²⁶ interconnected atoms are always above it.
+          This is lazy evaluation — the engine doesn't produce answers nobody
+          asked for. Small, isolated particles have no strict consumers.
+          Everyday objects with 10²⁶ interconnected atoms are dense webs of
+          strict consumers — they resolve themselves every tick.
         </p>
       </div>
 
@@ -5455,20 +5655,22 @@
       </p>
 
       <p>
-        <strong>Step 1 — The particle is below the commit threshold.</strong>
-        Once fired, the particle is a simple, isolated graph. No committed
-        structures depend on it yet. The engine carries it forward without
-        committing — but walks its full dependency tree each tick.
+        <strong>Step 1 — Nothing demands a definite answer from the
+        particle.</strong>
+        Once fired, the particle is an isolated content graph. No committed
+        structure's next state depends on it having a definite position. The
+        engine computes its dependency tree every tick — walks every path — but
+        produces no single answer because nothing is asking for one.
       </p>
 
       <p>
         <strong>Step 2 — The engine walks every available path.</strong> The
         particle's graph connects through two paths — one through each slit. The
-        engine walks both, computing the particle's potential influence on
-        everything downstream. This is not the particle "going through both
-        slits." It is the engine evaluating an uncommitted graph's full
-        dependency tree — exactly like the GPU walking every light ray through
-        every opening in the scene.
+        engine walks both, computing potential influence on everything
+        downstream. This is not the particle "going through both
+        slits." It is the engine computing an unresolved graph's full
+        dependency tree — exactly what lazy evaluation does with a value nobody
+        has demanded yet.
       </p>
 
       <p>
@@ -5481,12 +5683,12 @@
       </p>
 
       <p>
-        <strong>Step 4 — The screen forces commitment.</strong> The detection
-        screen is a committed structure. When the particle reaches it, the
-        screen's next state depends on the particle's position — this is a
-        <strong>cache bust</strong>. The engine must resolve the particle's
-        graph to compute the screen's next frame. The particle lands at one
-        definite spot. But the <em>probability</em> of where it lands was shaped
+        <strong>Step 4 — The screen is a strict consumer.</strong> The detection
+        screen is a macroscopic committed structure — dense internal
+        dependencies, self-resolving every tick. When the particle reaches it,
+        the screen's next state depends on the particle's position — the screen
+        NEEDS a definite answer. <strong>Cache bust.</strong> The engine resolves
+        the particle's graph. One definite spot. But the <em>probability</em> of where it lands was shaped
         by the two-path walk. Over thousands of particles, the accumulated
         pattern is the interference pattern: alternating bright and dark bands.
       </p>
@@ -5494,17 +5696,18 @@
       <div class="novel-claim">
         <p>
           <strong
-            >The wave function is not the particle. It is the engine's
-            dependency walk of an uncommitted graph.</strong
+            >The wave function is the content graph's evolving state at the
+            data layer — not projected to the spatial graph.</strong
           >
           The particle's content graph connects through path A and path B. No
-          committed structure depends on it yet — so the engine walks both paths
-          without committing. The multi-path walk IS the wave function. The
-          particle is not "in two places at once." The engine is evaluating an
-          uncommitted graph's influence through every available path, the same
-          way a GPU traces every light ray before committing a pixel. The
-          interference pattern is what those walked paths look like when they
-          converge at the detection screen.
+          strict consumer demands a definite answer — so the engine walks both
+          paths, carrying the walk as the graph's state at the data layer. The
+          multi-path walk IS the wave function. The particle is not "in two
+          places at once." The engine is computing an unresolved graph's
+          influence through every available path — lazy evaluation. The
+          interference pattern is the statistical fingerprint of many cache
+          busts, each shaped by a data-layer computation you never directly
+          observed.
         </p>
       </div>
 
@@ -5534,13 +5737,10 @@
       </p>
 
       <p>
-        The detector didn't "observe" in any mystical sense. It didn't disturb
-        the particle with its measurement. It created a
-        <strong>dependency edge</strong> from a committed structure to the
-        uncommitted graph — and that dependency forced the engine to resolve the
-        graph's subtree. The cache bust cascaded: resolved which-path value →
-        single path to screen → no interference. Change the dependencies, change
-        what gets resolved. That's all that happened.
+        The detector didn't "observe" in any mystical sense. It is a strict
+        consumer that demanded a definite value from an unresolved graph — and
+        that demand forced resolution. Change the consumers, change what gets
+        resolved. That's all that happened.
       </p>
 
       <h3>The Quantum Eraser — The Real Test</h3>
@@ -5645,13 +5845,14 @@
       </p>
 
       <p>
-        Because a basketball's graph has 10²⁶ atoms, each connected to neighbors
-        by dependency edges. The combined graph — with all its subgraph joins —
-        is astronomically above the commit threshold. The engine resolves it
-        every tick because the graph is far too complex and interconnected to
-        carry as uncommitted work within the budget C. Nothing stays
-        uncommitted. Everything is resolved. No multi-path walks survive.
-        Classical behavior, every tick.
+        Because a basketball has 10²⁶ atoms. Each atom's next state depends on
+        its neighbors' definite positions and forces. Atom 47 can't compute its
+        next tick without a definite answer from atoms 46 and 48.
+        <strong>Every atom is a strict consumer of its neighbors.</strong>
+        The basketball's internal dependency structure demands definite values at
+        every node, every tick. It resolves itself — not because it's "large" in
+        some abstract sense, but because its own internal dependencies require
+        it. No multi-path walks survive. Classical behavior, every tick.
       </p>
 
       <p>
@@ -5661,12 +5862,12 @@
         in practice, valid in principle — would theoretically show quantum
         behavior. Not because it got simpler internally, but because without
         subgraph joins to committed neighbors, its total graph complexity would
-        drop below the commit threshold. What prevents quantum behavior in
-        everyday objects is the overwhelming interconnection with their
-        environment pushing the combined graph above threshold. Physicists call
-        this <strong>decoherence</strong>. In this framework, decoherence is:
-        the combined graph got too complex for the engine to carry below
-        threshold, so the engine commits it.
+        lose all strict consumers. What prevents quantum behavior in
+        everyday objects is the overwhelming web of strict-consumer dependencies — each
+        atom demanding answers from its neighbors, forcing resolution
+        everywhere. Physicists call this
+        <strong>decoherence</strong>. In this framework, decoherence is:
+        strict consumers demanding definite values.
       </p>
 
       <h3>
@@ -5739,11 +5940,11 @@
         This is the framework's mechanism for environmental decoherence: more
         resolved graphs in the same screen region means more subgraph joins for
         every uncommitted graph nearby, which pushes their combined complexity
-        closer to the commit threshold, which means it's harder for any graph to
-        stay below threshold. Dense environments (lots of committed stuff
-        nearby) force quantum systems into classical behavior faster — not
-        because of direct interaction, but because of shared spatial-graph
-        proximity increasing graph complexity above the commit threshold.
+        more likely to acquire strict consumers, which means it's harder for
+        any graph to stay unresolved. Dense environments (lots of committed
+        stuff nearby) force quantum systems into classical behavior faster —
+        not because of direct interaction, but because proximity creates
+        indirect strict consumers through shared spatial-graph dependencies.
       </p>
 
       <div class="callout callout-gold">
@@ -5751,18 +5952,17 @@
         Standard decoherence theory says a quantum system loses coherence based
         on its <strong>interaction strength</strong> with the environment. This
         framework says it's based on
-        <strong>graph complexity crossing the commit threshold</strong> —
-        subgraph joins with committed structures in the same spatial region push
-        total complexity above threshold regardless of direct interaction
-        strength. Usually these predict the same thing (nearby committed things
+        <strong>whether strict consumers exist</strong> —
+        committed structures whose next state depends on a definite value from
+        the quantum system, regardless of direct interaction strength. Usually these predict the same thing (nearby committed things
         create subgraph joins through dependency edges). But for two quantum
         systems that overlap spatially without interacting (different force
         carriers, no shared quantum numbers), our framework predicts slightly
-        faster decoherence than standard QM. The trigger is proximity to
-        committed structures in the spatial graph pushing combined graph
-        complexity above threshold, not interaction strength between content
-        graphs. If testable, this would distinguish this framework from standard
-        quantum mechanics.
+        faster decoherence than standard QM. The trigger is proximity creating
+        indirect strict consumers — when one system resolves, the region
+        re-renders, creating new dependency edges that make nearby systems'
+        values needed. If testable, this would distinguish this framework from
+        standard quantum mechanics.
       </div>
 
       <div class="three-col">
@@ -5783,7 +5983,7 @@
           engine's dependency walk of uncommitted graphs. Interference = walked
           paths converging. Detector = cache bust forcing subtree resolution.
           Eraser = null operation on the which-path edge — no cache bust
-          occurred. Decoherence = graph complexity above commit threshold. The
+          occurred. Decoherence = strict consumers demanding definite values. The
           particle never moved through both slits. The engine walked both paths.
         </div>
         <div class="col-cell">
@@ -5798,17 +5998,17 @@
       <div class="insight">
         <span class="block-label">✦ What This Means</span>
         <p>
-          The double-slit experiment is not strange. It is exactly what any
-          double-buffered engine looks like from the inside. The wave function
-          is the engine's dependency walk of uncommitted graphs. "Collapse" is a
-          cache bust — a committed structure needing a value, forcing
-          resolution. The quantum eraser is a null operation on the which-path
-          edge — no cache bust means no resolution, and the multi-path walk is
-          right there in the data when you know how to sort it. And decoherence
-          — the reason your coffee cup doesn't show quantum behavior — is that
-          large, interconnected objects are always above the commit threshold.
-          The engine resolves them every tick. There is nothing left to walk.
-          Quantum mechanics is not a mystery. It is rendering.
+          The double-slit experiment is not strange. It is lazy evaluation.
+          The engine computes the particle's influence through every path but
+          doesn't produce a definite answer because nothing is asking for one.
+          The wave function is the content graph's evolving state at the data
+          layer. "Collapse" is a strict consumer demanding a value. The quantum
+          eraser is a null operation on the which-path edge — the data never
+          changed, you changed the filter. And decoherence — the reason your
+          coffee cup doesn't show quantum behavior — is that everyday objects
+          are dense webs of strict consumers, every atom demanding answers from
+          its neighbors. Quantum mechanics is not a mystery. It is lazy
+          evaluation.
         </p>
       </div>
 
@@ -5849,9 +6049,9 @@
       </p>
 
       <p>
-        This merged graph is below the threshold. It hasn't been committed yet.
+        This merged graph has no strict consumer demanding its resolution.
         Its values do not exist — not "unknown to us" but genuinely not yet
-        computed. It is a pending graph in the engine, waiting to be resolved.
+        computed, because nothing has asked for a definite answer.
       </p>
 
       <p>
@@ -6084,6 +6284,61 @@
         "
       />
 
+      <h3>Conservation of Energy</h3>
+
+      <p>
+        Energy is the return value of completed work. Return values from tick N
+        become inputs to tick N+1. The total is bounded by C. Nothing is created
+        or destroyed — return values are passed forward. Conservation of energy
+        is not an imposed law. It is the fact that function outputs become
+        function inputs, and the total throughput is fixed.
+      </p>
+
+      <h3>Dark Matter — Orphaned Overflow Stacks</h3>
+
+      <p>
+        Approximately 27% of the universe's energy budget is dark matter — mass
+        that gravitates but doesn't interact electromagnetically or through the
+        strong nuclear force. It is invisible except through gravity.
+      </p>
+
+      <p>
+        In this framework, dark matter consists of content graphs whose topology
+        creates <strong>overflow</strong> (permanent self-perpetuating stacks —
+        therefore mass, therefore budget drain, therefore gravitational effects)
+        but whose graph structure has <strong>no dependency edges</strong> to the
+        content graphs that make up normal matter's electromagnetic and
+        strong-force interactions. Dark matter's stacks are self-demanding — the
+        cyclic topology means each tick's computation needs its own previous
+        state, creating an internal strict consumer that forces resolution
+        every tick. But they have no coupling to visible matter's content
+        graphs. You can't see it, scatter light off it, or detect it with any
+        force except gravity — because gravity operates through the spatial
+        graph (which dark matter DOES affect via budget drain), while every
+        other force operates through content-graph dependency edges (which dark
+        matter DOESN'T have with normal matter).
+      </p>
+
+      <h3>Dark Energy — The Cost of the Spatial Graph</h3>
+
+      <p>
+        Approximately 68% of the universe's energy budget is dark energy — a
+        mysterious force driving the accelerating expansion of the universe.
+      </p>
+
+      <p>
+        In this framework, the spatial graph itself has a baseline computational
+        cost — each region requires some minimum work per tick to maintain its
+        structure and edges to neighboring regions. Additionally, the engine
+        walks below-threshold content graphs in the vacuum each tick, and their
+        multi-path dependency walks create a subtle outward computational
+        pressure. As the spatial graph expands (adds regions), more baseline
+        computation is required, which enables further expansion — a
+        self-reinforcing loop. This is speculative within the framework, but
+        consistent with the axioms and produces the right qualitative behavior:
+        a baseline energy density driving accelerating expansion.
+      </p>
+
       <h3>What This Framework Has Not Yet Solved</h3>
 
       <p>
@@ -6095,8 +6350,8 @@
       <div class="gap-box">
         <span class="block-label">Open Gap 1 — Full General Relativity</span>
         The framework produces gravitational attraction, time dilation, black
-        holes, geodesics, gravitational lensing, and unshieldability. But
-        Einstein's complete field equations — which also predict gravitational
+        holes, geodesics, gravitational lensing, gravitational waves, frame
+        dragging, and unshieldability. But Einstein's complete field equations — which also predict gravitational
         waves, precise light-bending magnitudes, Mercury's orbital precession,
         and frame dragging — have not been formally derived from graph topology.
         The framework is consistent with GR but has not reproduced it from first
@@ -6153,16 +6408,11 @@
 
       <div class="gap-box">
         <span class="block-label"
-          >Open Gap 5b — Deriving the Commit Threshold</span
+          >Open Gap 5b — Formalizing Strict Consumer Dynamics</span
         >
         The crossover point where the engine must commit a graph rather than
-        carry it as uncommitted work — the effective commit threshold — has not
-        been formally derived. The framework predicts it depends on the graph's
-        total complexity: its own structure plus subgraph joins with committed
-        neighbors. A formal derivation should produce decoherence rates that
-        match observed values, providing a quantitative test. The relationship
-        between graph topology, number of subgraph joins, and the threshold
-        value is the key unsolved problem.
+        produce decoherence rates that match observed values, providing a
+        quantitative test.
       </div>
 
       <div class="gap-box">
@@ -6172,6 +6422,29 @@
         mechanism produces exactly |α|² across all quantum systems is pending.
         The structural parallel with E = mc² is strong evidence of a unifying
         principle.
+      </div>
+
+      <div class="gap-box">
+        <span class="block-label">Open Gap 7 — Spatial Graph Expansion</span>
+        How does the spatial graph grow? The universe is expanding. New regions
+        must be created. Does the engine allocate new regions? Do existing
+        dynamics create them? The dark energy sketch above is a qualitative
+        proposal, not a derivation.
+      </div>
+
+      <div class="gap-box">
+        <span class="block-label">Open Gap 8 — Quantum Field Theory</span>
+        The framework describes particles as content graphs but has not
+        addressed virtual particles, renormalization, gauge symmetries, or the
+        path integral formalism. A complete framework must map QFT's
+        field-theoretic structure to graph operations.
+      </div>
+
+      <div class="gap-box">
+        <span class="block-label">Open Gap 9 — Spin, Charge, and Quantum Numbers</span>
+        The framework does not explain how graph topology produces the specific
+        quantum numbers (spin-1/2, charge, color charge) that define particles.
+        These determine all interactions and should emerge from graph structure.
       </div>
 
       <div class="callout callout-neutral">
@@ -6236,7 +6509,8 @@
             <td>
               The per-tick work limit. Fixed. Universal. The clock speed of
               reality. Determines the speed of light, whether overflow creates
-              mass, and the commit threshold for quantum vs. classical behavior.
+              mass, and whether strict consumers demand resolution (quantum vs.
+              classical).
             </td>
             <td>
               The CPU's clock speed — how many operations per cycle. The
@@ -6390,11 +6664,11 @@
           <tr>
             <td><strong>Superposition</strong></td>
             <td>
-              A content graph below the commit threshold. The engine walks its
-              full dependency tree through every path each tick without
-              committing — computing potential influence on downstream nodes.
-              The multi-path walk IS the superposition. Not "unknown" —
-              genuinely uncommitted.
+              Content graph with no strict consumer demanding resolution. The
+              engine walks its full dependency tree through every path, carrying
+              the walk as the graph's evolving state at the data layer. Not
+              "unknown" — genuinely unresolved because nothing asked for an
+              answer. This is lazy evaluation.
             </td>
             <td>
               The GPU walking every light ray through a scene before committing
@@ -6405,11 +6679,11 @@
           <tr>
             <td><strong>Wave function</strong></td>
             <td>
-              The engine's dependency walk of an uncommitted content graph —
-              computing every path through its dependency tree for potential
-              influence on committed nodes. Computation in progress, not stored
-              data. Exists between commits, like a GPU's ray walk exists between
-              frames.
+              The content graph's evolving state at the data layer as the
+              engine computes its influence tick by tick without any strict
+              consumer demanding resolution. Lives at the data layer only — not
+              projected to the spatial graph. Computation in progress, not
+              stored data.
             </td>
             <td>
               A GPU's ray-tracing computation for a pixel that hasn't been
@@ -6420,10 +6694,10 @@
           <tr>
             <td><strong>Wave function "collapse"</strong></td>
             <td>
-              A cache bust. A committed structure's next state depends on an
-              uncommitted graph, forcing the engine to resolve that graph's
-              subtree. The multi-path walk is replaced by a single definite
-              value. Resolution cascades through all dependent graphs.
+              A cache bust. A strict consumer — a committed structure whose next
+              state requires a definite value — demands resolution. The engine
+              produces one answer. Multi-path walk replaced by a single result.
+              Resolution cascades through all dependent graphs.
             </td>
             <td>
               Cache invalidation — a downstream consumer needs a value, forcing
@@ -6450,12 +6724,10 @@
           <tr>
             <td><strong>Decoherence</strong></td>
             <td>
-              Large objects have massive graph complexity — 10²⁶ subgraph joins
-              with committed neighbors. Total complexity is far above the commit
-              threshold. The engine resolves them every tick because the
-              combined graph is too complex to carry as uncommitted work within
-              C. Nothing stays uncommitted. The cause is graph complexity, not
-              observation.
+              Large objects are dense webs of strict consumers — 10²⁶ atoms
+              each demanding definite values from neighbors to compute the next
+              tick. They resolve themselves because their internal dependencies
+              require it. The cause is strict consumption, not observation.
             </td>
             <td>
               A heavily-referenced cache entry that's constantly invalidated by
@@ -6563,7 +6835,7 @@
             </td>
           </tr>
           <tr>
-            <td><strong>Commit threshold</strong></td>
+            <td><strong>Lazy evaluation</strong></td>
             <td>
               The dividing line between quantum and classical. Below: graph is
               simple and isolated, engine walks all paths without committing.
@@ -6598,7 +6870,7 @@
 
     <footer>
       <strong>GL: Greg's Computational Guide to the Universe</strong> — Version
-      18.0 — March 2026<br />
+      19.0 — March 2026<br />
       Framework developed by Greg. Plain English Edition.<br />
     </footer>
   </body>
