@@ -48,9 +48,9 @@ These three should be styled consistently and feel like one argument unfolding v
 Graph basics → Prime demo (topology = values) →
 How industry evaluates graphs → Topological ordering →
 Special relativity for free →
+Mass as stable topology → E=mc² from bidirectional walk →
 Call stack deep dive → Pyramid → Invert → Spacetime fabric →
 Routing pressure → Gravity → Can't shield it →
-Mass as stable topology → E=mc² from bidirectional walk →
 Time as revision rate → Two observers →
 Quantum → Entanglement → Expansion
 ```
