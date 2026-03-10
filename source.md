@@ -31,11 +31,12 @@ Thread these three ideas throughout: (1) topology generates values, (2) topologi
 
 ### The Prime Number Demo — Reference Throughout
 
-The demo section is the centrepiece of the setup. It proves this *type* of theory is possible by showing that even a trivially simple recursive graph, when evaluated, produces emergent properties. Reference the demo's emergent properties explicitly in later sections (mass, gravity, time, quantum). The demo is not a metaphor — it is a working example.
+The demo section is the centrepiece of the setup. It proves this _type_ of theory is possible by showing that even a trivially simple recursive graph, when evaluated, produces emergent properties. Reference the demo's emergent properties explicitly in later sections (mass, gravity, time, quantum). The demo is not a metaphor — it is a working example.
 
 ### The Call Stack Visual Sequence — Three Figures That Flow
 
 The gravity section has three figures that must feel like one continuous reveal:
+
 1. **call-stack-pyramid** — graph nodes across the top, call stack depth bars below, forming a mountain shape
 2. **invert-pyramid-spacetime** — same image flipped, spacetime fabric draped over it, wells where the mountain was
 3. **routing-pressure** — routing table before/after, paths bending around the pressure zone
@@ -134,14 +135,14 @@ This means `index.html` can be rebuilt quickly from source without regenerating 
 
 ### Semantic Color Usage in SVGs
 
-| Meaning                         | Color                | Use for                                                   |
-| ------------------------------- | -------------------- | --------------------------------------------------------- |
-| Positive / completes / resolves | `--green` (#1e8449)  | Things that finish, things that work, definite positions  |
-| Negative / loops / stuck        | `--red` (#c0392b)    | Cycles, overflow, things that don't resolve               |
-| Neutral / informational         | `--blue` (#2471a3)   | Graphs, nodes, informational elements                     |
-| Warning / energy / motion       | `--orange` (#d35400) | Energy release, motion, change, direct edges              |
-| Quantum / uncommitted           | `--purple` (#7d3c98) | Wave functions, superposition, potential connections      |
-| Special / gold accents          | `--gold` (#d4a017)   | Stars, mass labels, special callouts                      |
+| Meaning                         | Color                | Use for                                                  |
+| ------------------------------- | -------------------- | -------------------------------------------------------- |
+| Positive / completes / resolves | `--green` (#1e8449)  | Things that finish, things that work, definite positions |
+| Negative / loops / stuck        | `--red` (#c0392b)    | Cycles, overflow, things that don't resolve              |
+| Neutral / informational         | `--blue` (#2471a3)   | Graphs, nodes, informational elements                    |
+| Warning / energy / motion       | `--orange` (#d35400) | Energy release, motion, change, direct edges             |
+| Quantum / uncommitted           | `--purple` (#7d3c98) | Wave functions, superposition, potential connections     |
+| Special / gold accents          | `--gold` (#d4a017)   | Stars, mass labels, special callouts                     |
 
 ### Block Types
 
@@ -150,6 +151,7 @@ This means `index.html` can be rebuilt quickly from source without regenerating 
 **`.hook`** — Opening intro block. Left border 5px solid ink. Cream background. Larger font.
 
 **`.callout .callout-{color}`** — Accent-colored sidebar blocks. 4px left border.
+
 - `.callout-neutral` — Author's Note, general aside
 - `.callout-blue` — Important conceptual callout
 - `.callout-green` — Positive/success callout
@@ -197,33 +199,32 @@ This means `index.html` can be rebuilt quickly from source without regenerating 
 
 #### Author's Note (VERBATIM — do not edit, fix, or rephrase)
 
-```
+```MD
 It is a curious thing to have a passion for a subject you can't quite
 grasp. I would imagine this is all that is really needed for the seeds
-of AI psychosis to take hold.
+of AI psychosis to truly take hold.
 
-What follows is something of a "hobby" of mine, that while on the
+What follows is something of a "hobby" of mine. On the
 surface might seem odd, to "ponder the world" as a hobby. But, I'd
 argue it's actually a well-known fact that the best way to spend ANY
 amount of time on ANY amount of drugs is to sit back and go
-"YO what IF LIKE…"
+**"YO BUT what IF LIKE…"**
 
-Most of what follows is clearly by written AI, but this is more or
-less the result of my "pondering"/ranting about a subject I lack the
-skills to fully grasp for the last 8 or 9 years. So while the words
-are AI assited but I asure you the delusions are my own.
+Most of what follows is aided with AI, but this is more or
+less the result of my "pondering"/ranting about for the last 8 or 9 years. So while the words
+are AI assisted, I assure you the delusions are entirely my own.
 
 I have not figured out the exact number yet, but I imagine the odds of
 someone being committed rise significantly the moment they start
 uttering the words "I have a theory of the universe".
 
-So to try and get ahead of whoever it was that plotted to get Kayne,
+So to try and get ahead of whoever it was that plotted to get Kanye,
 I'd like to spell out what this actually is.
 
 This is my best guess on how it could all work. Do I think it's right?
 I'd say the odds are as close to zero as something can be. However, if
 this somehow has any iota of a concept that inspires a thought in
-someone more capable, even if born out of pure opposition, than I'd
+someone more capable, even if born out of pure opposition, then I'd
 consider that a win.
 
 Most of what I describe below is things about our known universe that
@@ -253,6 +254,7 @@ A Very Serious Person
 2. This isn't just "reality is a simulation" — that's like saying "there's something going on." We're proposing a specific architecture and then showing it actually explains things: Why can't you shield gravity? Why does the universe "know" what you'll measure? Why do equations work backwards in time? These are genuine unsolved mysteries and they all have the same answer.
 
 **Blue callout block — define the two layers:**
+
 - **The Engine Layer** — where computation happens. The actual structure of reality. Think: the Nintendo console.
 - **The Render Layer** — what you experience. Your "reality." The output. Think: the TV screen.
 
@@ -289,6 +291,7 @@ In our graph, edges carry instructions — multiply, divide, add. The edge tells
 **Content direction:** "Now let's actually watch a graph evaluate itself. Here's a recursive function in ~10 lines:"
 
 **Pseudocode block:**
+
 ```
 function evaluate(node):
     if node has no children:
@@ -311,10 +314,11 @@ function evaluate(node):
 **Slug:** graph-evaluation-walkthrough
 **Label:** Figure 2 — Watch What Emerges From Recursive Evaluation
 **Description:** NEW FIGURE. A 2-3 panel visual showing a small graph (root with two children, each with a leaf) being evaluated step by step. The walkthrough annotates each emergent property as it appears:
+
 - Panel 1: "BEFORE" — all nodes show "?" (pending). Annotation: "Nothing demanded yet. All nodes pending. → That's superposition."
 - Panel 2: "EVALUATING" — leaves evaluate first (they have no children, return immediately at rate C). Call stack shown building as parent waits for children. Annotations: "Leaves go first — can't evaluate parent before children. → That's causal ordering." / "Stack builds while parent waits. → That's the gravity mechanism." / "Leaf commits instantly — no subgraph to recurse. → That's C, the speed of light."
 - Panel 3: "COMPLETE" — all nodes committed, revision counters ticked. Parent reads children's LAST committed values. Annotations: "Each node ticked its revision counter. → That's time." / "Parent read the LAST committed result, not the in-progress one. → That's the speed-of-information limit."
-**Caption:** One recursive function. No physics. No special rules. Just: evaluate the graph. And look what fell out.
+  **Caption:** One recursive function. No physics. No special rules. Just: evaluate the graph. And look what fell out.
 
 **Content direction (after figure, "Did You Notice?" section):** Short section pointing out what just emerged with NO special rules:
 
@@ -531,7 +535,7 @@ The engine evaluates the graph. Some evaluations add new nodes and edges. More g
 
 **Gap box items (6):**
 
-1. **Can't derive Einstein's exact equations from graph structure.** The number one problem. The qualitative match is strong but we haven't derived G_μν + Λg_μν = 8πG/c⁴ T_μν from first principles. Without the derivation, this is a compelling analogy, not a formal theory.
+1. **Can't derive Einstein's exact equations from graph structure.** The number one problem. The qualitative match is strong but we haven't derived G*μν + Λg*μν = 8πG/c⁴ T_μν from first principles. Without the derivation, this is a compelling analogy, not a formal theory.
 
 2. **Can't prove the computation is confluent.** We claim the committed result is independent of traversal order. But we haven't formally proven the graph has a unique fixed point for all orderings. If different orderings produce different states, the framework predicts violations of Lorentz symmetry that aren't observed.
 
@@ -553,28 +557,28 @@ The engine evaluates the graph. Some evaluations add new nodes and edges. More g
 
 > **AUTHOR NOTE:** Trimmed from 35 rows to ~20 most important.
 
-| Physics Concept          | In This Framework (v22)                                                                      | Computer Analogy                                                     |
-| ------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Space                    | Large-scale graph shape. Connectivity pattern.                                               | Network topology. Hop count = distance.                              |
-| Mass                     | Stable subgraph topology. Same walk, same result.                                            | Deterministic function, same output for unchanged input.             |
-| Energy                   | Return value that propagates outward when topology changes.                                  | Function output feeding next function call.                          |
-| E = mc²                  | Bidirectional walk: m hops down at C, m hops up at C. mc².                                   | Recursive call cost: down m levels × up m levels at same rate.       |
-| Time                     | Revision counter. How many times this node has committed.                                    | Iteration counter.                                                   |
-| Arrow of time            | Each walk's output feeds the next. Fibonacci dependency. Cannot un-commit.                   | Program execution order. Can't un-run code.                          |
-| Time dilation            | Deep stack or fast motion → slower commits → revision counter ticks less.                    | Deep recursion or I/O consuming cycles → lower throughput.           |
-| Speed of light (C)       | Commit rate of a leaf node. No subgraph. Maximum rate.                                       | Base case return time. Immediate, no recursion.                      |
-| Gravity                  | Deep call stack creating routing pressure. Paths curve.                                      | Deep recursive call; OS routes work around it.                       |
-| Can't shield gravity     | Stack is part of your own evaluation. Not a signal — a topology.                             | Can't avoid being on the same call stack.                            |
-| Equivalence principle    | Acceleration and gravity both add call stack depth. Same mechanism.                          | CPU load from motion vs. deep calls: same throughput impact.         |
-| Spacetime                | The routing table — edge weights, cheapest paths. Updated by stack pressure.                 | Network routing table, updated on congestion.                        |
-| Black hole               | Subgraph so deep the stack never unwinds. No singularity — stack exhaustion.                 | Non-terminating recursion. Finite code, infinite loop.               |
-| Wave function            | Pending evaluation. Multiple possible states, nothing committed.                             | Lazy thunk. Defined, not forced.                                     |
-| Collapse                 | Strict consumer demands a result. Pending evaluation commits.                                | Forcing a lazy thunk.                                                |
-| Quantum eraser           | Eraser is upstream in dependency chain. Pull cascades through its state.                     | Editing spreadsheet formula before Enter.                            |
-| Entanglement             | Shared value subgraph node. Co-resolves when either is evaluated.                            | Shared pointer. Same data regardless of location.                    |
-| Special relativity       | No preferred traversal order → no preferred frame.                                           | Same output regardless of evaluation order.                          |
-| Expansion                | Evaluations add new nodes. Growth proportional to size = acceleration.                       | Self-modifying code. Evaluation extends codebase.                    |
-| Planck length            | One hop. One node. One pixel.                                                                | Minimum addressable unit.                                            |
+| Physics Concept       | In This Framework (v22)                                                      | Computer Analogy                                               |
+| --------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| Space                 | Large-scale graph shape. Connectivity pattern.                               | Network topology. Hop count = distance.                        |
+| Mass                  | Stable subgraph topology. Same walk, same result.                            | Deterministic function, same output for unchanged input.       |
+| Energy                | Return value that propagates outward when topology changes.                  | Function output feeding next function call.                    |
+| E = mc²               | Bidirectional walk: m hops down at C, m hops up at C. mc².                   | Recursive call cost: down m levels × up m levels at same rate. |
+| Time                  | Revision counter. How many times this node has committed.                    | Iteration counter.                                             |
+| Arrow of time         | Each walk's output feeds the next. Fibonacci dependency. Cannot un-commit.   | Program execution order. Can't un-run code.                    |
+| Time dilation         | Deep stack or fast motion → slower commits → revision counter ticks less.    | Deep recursion or I/O consuming cycles → lower throughput.     |
+| Speed of light (C)    | Commit rate of a leaf node. No subgraph. Maximum rate.                       | Base case return time. Immediate, no recursion.                |
+| Gravity               | Deep call stack creating routing pressure. Paths curve.                      | Deep recursive call; OS routes work around it.                 |
+| Can't shield gravity  | Stack is part of your own evaluation. Not a signal — a topology.             | Can't avoid being on the same call stack.                      |
+| Equivalence principle | Acceleration and gravity both add call stack depth. Same mechanism.          | CPU load from motion vs. deep calls: same throughput impact.   |
+| Spacetime             | The routing table — edge weights, cheapest paths. Updated by stack pressure. | Network routing table, updated on congestion.                  |
+| Black hole            | Subgraph so deep the stack never unwinds. No singularity — stack exhaustion. | Non-terminating recursion. Finite code, infinite loop.         |
+| Wave function         | Pending evaluation. Multiple possible states, nothing committed.             | Lazy thunk. Defined, not forced.                               |
+| Collapse              | Strict consumer demands a result. Pending evaluation commits.                | Forcing a lazy thunk.                                          |
+| Quantum eraser        | Eraser is upstream in dependency chain. Pull cascades through its state.     | Editing spreadsheet formula before Enter.                      |
+| Entanglement          | Shared value subgraph node. Co-resolves when either is evaluated.            | Shared pointer. Same data regardless of location.              |
+| Special relativity    | No preferred traversal order → no preferred frame.                           | Same output regardless of evaluation order.                    |
+| Expansion             | Evaluations add new nodes. Growth proportional to size = acceleration.       | Self-modifying code. Evaluation extends codebase.              |
+| Planck length         | One hop. One node. One pixel.                                                | Minimum addressable unit.                                      |
 
 ---
 

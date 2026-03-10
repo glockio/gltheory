@@ -1,0 +1,260 @@
+<!-- DESCRIPTION: 3-panel evaluation walkthrough showing emergent properties from recursive graph evaluation -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- ===== PANEL 1: BEFORE ===== -->
+  <text x="170" y="22" text-anchor="middle" fill="#7d3c98" font-size="13" font-weight="bold">BEFORE</text>
+
+  <!-- Panel border (purple — pending state) -->
+  <rect x="18" y="32" width="305" height="300" rx="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Root node -->
+  <circle cx="170" cy="80" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="170" y="86" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="170" y="63" text-anchor="middle" fill="#7a7a6a" font-size="9">Root</text>
+
+  <!-- Edge Root -> A -->
+  <line x1="155" y1="96" x2="105" y2="150" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="122" y="120" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Edge Root -> B -->
+  <line x1="185" y1="96" x2="235" y2="150" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="218" y="120" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Node A -->
+  <circle cx="95" cy="168" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="95" y="174" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="75" y="158" text-anchor="middle" fill="#7a7a6a" font-size="9">A</text>
+
+  <!-- Node B -->
+  <circle cx="245" cy="168" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="245" y="174" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="265" y="158" text-anchor="middle" fill="#7a7a6a" font-size="9">B</text>
+
+  <!-- Edge A -> C -->
+  <line x1="95" y1="186" x2="95" y2="230" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="83" y="212" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Edge B -> D -->
+  <line x1="245" y1="186" x2="245" y2="230" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="257" y="212" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Leaf C -->
+  <circle cx="95" cy="248" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="95" y="254" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="75" y="242" text-anchor="middle" fill="#7a7a6a" font-size="9">C</text>
+
+  <!-- Leaf D -->
+  <circle cx="245" cy="248" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="245" y="254" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="265" y="242" text-anchor="middle" fill="#7a7a6a" font-size="9">D</text>
+
+  <!-- Panel 1 annotation -->
+  <text x="170" y="296" text-anchor="middle" fill="#1a1a1a" font-size="10">Nothing demanded yet.</text>
+  <text x="170" y="310" text-anchor="middle" fill="#1a1a1a" font-size="10">All nodes pending.</text>
+  <text x="170" y="326" text-anchor="middle" fill="#7d3c98" font-size="11" font-weight="600" font-style="italic">That's superposition.</text>
+
+
+  <!-- ===== PANEL 2: EVALUATING ===== -->
+  <text x="545" y="22" text-anchor="middle" fill="#2471a3" font-size="13" font-weight="bold">EVALUATING</text>
+
+  <!-- Panel border (blue — in-flight) -->
+  <rect x="370" y="32" width="350" height="300" rx="8" fill="none" stroke="#2471a3" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Root node (still pending) -->
+  <circle cx="500" cy="80" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="500" y="86" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="500" y="63" text-anchor="middle" fill="#7a7a6a" font-size="9">Root</text>
+
+  <!-- Edge Root -> A -->
+  <line x1="485" y1="96" x2="440" y2="150" stroke="#7a7a6a" stroke-width="1.5"/>
+  <text x="455" y="120" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Edge Root -> B -->
+  <line x1="515" y1="96" x2="560" y2="150" stroke="#7a7a6a" stroke-width="1.5"/>
+  <text x="545" y="120" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Node A (still pending, waiting) -->
+  <circle cx="430" cy="168" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="430" y="174" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="410" y="158" text-anchor="middle" fill="#7a7a6a" font-size="9">A</text>
+
+  <!-- Node B (still pending, waiting) -->
+  <circle cx="570" cy="168" r="18" fill="white" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="570" y="174" text-anchor="middle" fill="#7d3c98" font-size="16">?</text>
+  <text x="590" y="158" text-anchor="middle" fill="#7a7a6a" font-size="9">B</text>
+
+  <!-- Edge A -> C (committed edge) -->
+  <line x1="430" y1="186" x2="430" y2="230" stroke="#1e8449" stroke-width="2"/>
+  <text x="418" y="212" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Edge B -> D (committed edge) -->
+  <line x1="570" y1="186" x2="570" y2="230" stroke="#1e8449" stroke-width="2"/>
+  <text x="582" y="212" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Leaf C (committed, green, value = 1) -->
+  <circle cx="430" cy="248" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="430" y="253" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="410" y="242" text-anchor="middle" fill="#1e8449" font-size="9">C</text>
+  <!-- Checkmark -->
+  <text x="452" y="244" fill="#1e8449" font-size="13">&#10003;</text>
+
+  <!-- Leaf D (committed, green, value = 1) -->
+  <circle cx="570" cy="248" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="570" y="253" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="590" y="242" text-anchor="middle" fill="#1e8449" font-size="9">D</text>
+  <!-- Checkmark -->
+  <text x="552" y="244" fill="#1e8449" font-size="13">&#10003;</text>
+
+  <!-- Call stack visualization (right side of panel) -->
+  <text x="680" y="148" text-anchor="middle" fill="#7a7a6a" font-size="8">CALL STACK</text>
+
+  <!-- Stack frames building up -->
+  <rect x="655" y="155" width="50" height="20" rx="3" fill="#d35400" opacity="0.2" stroke="#d35400" stroke-width="1"/>
+  <text x="680" y="168" text-anchor="middle" fill="#d35400" font-size="7" font-weight="bold">Root</text>
+
+  <rect x="655" y="177" width="50" height="20" rx="3" fill="#d35400" opacity="0.35" stroke="#d35400" stroke-width="1"/>
+  <text x="680" y="190" text-anchor="middle" fill="#d35400" font-size="7" font-weight="bold">A</text>
+
+  <rect x="655" y="199" width="50" height="20" rx="3" fill="#d35400" opacity="0.5" stroke="#d35400" stroke-width="1"/>
+  <text x="680" y="212" text-anchor="middle" fill="#d35400" font-size="7" font-weight="bold">C</text>
+
+  <!-- Stack depth bracket -->
+  <line x1="648" y1="155" x2="648" y2="219" stroke="#d35400" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="643" y="192" text-anchor="end" fill="#d35400" font-size="8">3</text>
+
+  <!-- Panel 2 annotations -->
+  <!-- Annotation: Causal ordering -->
+  <line x1="430" y1="270" x2="430" y2="280" stroke="#1e8449" stroke-width="1"/>
+  <text x="430" y="292" text-anchor="middle" fill="#1e8449" font-size="9" font-style="italic">Leaves go first</text>
+  <text x="430" y="303" text-anchor="middle" fill="#2471a3" font-size="9" font-weight="600">Causal ordering</text>
+
+  <!-- Annotation: Gravity mechanism (near stack) -->
+  <text x="680" y="236" text-anchor="middle" fill="#d35400" font-size="8" font-style="italic">Stack builds while</text>
+  <text x="680" y="247" text-anchor="middle" fill="#d35400" font-size="8" font-style="italic">parent waits</text>
+  <text x="680" y="261" text-anchor="middle" fill="#d35400" font-size="9" font-weight="600">Gravity mechanism</text>
+
+  <!-- Annotation: That's C -->
+  <text x="570" y="292" text-anchor="middle" fill="#1e8449" font-size="9" font-style="italic">Leaf commits instantly</text>
+  <text x="570" y="303" text-anchor="middle" fill="#1e8449" font-size="9" font-weight="600">That's c</text>
+
+
+  <!-- ===== PANEL 3: COMPLETE ===== -->
+  <text x="895" y="22" text-anchor="middle" fill="#1e8449" font-size="13" font-weight="bold">COMPLETE</text>
+
+  <!-- Panel border (green — fully committed) -->
+  <rect x="745" y="32" width="318" height="300" rx="8" fill="none" stroke="#1e8449" stroke-width="1.5"/>
+
+  <!-- Root node (committed, green) -->
+  <circle cx="870" cy="80" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="870" y="86" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="870" y="63" text-anchor="middle" fill="#1e8449" font-size="9">Root</text>
+  <text x="893" y="74" fill="#1e8449" font-size="13">&#10003;</text>
+  <!-- Revision counter -->
+  <text x="903" y="88" fill="#2471a3" font-size="8" font-weight="600">rev: 1</text>
+
+  <!-- Edge Root -> A -->
+  <line x1="855" y1="96" x2="810" y2="150" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="825" y="120" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Edge Root -> B -->
+  <line x1="885" y1="96" x2="930" y2="150" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="915" y="120" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Node A (committed) -->
+  <circle cx="800" cy="168" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="800" y="174" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="780" y="158" text-anchor="middle" fill="#1e8449" font-size="9">A</text>
+  <text x="822" y="163" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- Revision counter -->
+  <text x="770" y="190" fill="#2471a3" font-size="8" font-weight="600">rev: 1</text>
+
+  <!-- Node B (committed) -->
+  <circle cx="940" cy="168" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="940" y="174" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="960" y="158" text-anchor="middle" fill="#1e8449" font-size="9">B</text>
+  <text x="962" y="163" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- Revision counter -->
+  <text x="970" y="190" fill="#2471a3" font-size="8" font-weight="600">rev: 1</text>
+
+  <!-- Edge A -> C -->
+  <line x1="800" y1="186" x2="800" y2="230" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="788" y="212" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Edge B -> D -->
+  <line x1="940" y1="186" x2="940" y2="230" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="952" y="212" text-anchor="middle" fill="#d35400" font-size="11" font-weight="bold">x</text>
+
+  <!-- Leaf C (committed) -->
+  <circle cx="800" cy="248" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="800" y="253" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="780" y="242" text-anchor="middle" fill="#1e8449" font-size="9">C</text>
+  <text x="822" y="244" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- Revision counter -->
+  <text x="770" y="264" fill="#2471a3" font-size="8" font-weight="600">rev: 1</text>
+
+  <!-- Leaf D (committed) -->
+  <circle cx="940" cy="248" r="18" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="940" y="253" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="bold">1</text>
+  <text x="960" y="242" text-anchor="middle" fill="#1e8449" font-size="9">D</text>
+  <text x="962" y="244" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- Revision counter -->
+  <text x="970" y="264" fill="#2471a3" font-size="8" font-weight="600">rev: 1</text>
+
+  <!-- Panel 3 annotations -->
+  <text x="870" y="296" text-anchor="middle" fill="#2471a3" font-size="9" font-style="italic">Revision counter ticked</text>
+  <text x="870" y="310" text-anchor="middle" fill="#2471a3" font-size="10" font-weight="600">That's time.</text>
+
+  <text x="870" y="326" text-anchor="middle" fill="#1a1a1a" font-size="9" font-style="italic">Parent read LAST committed result</text>
+
+
+  <!-- ===== BOTTOM SUMMARY BAR ===== -->
+  <line x1="40" y1="360" x2="1040" y2="360" stroke="#7a7a6a" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Progression arrow -->
+  <line x1="60" y1="385" x2="1020" y2="385" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="1020,380 1035,385 1020,390" fill="#1a1a1a"/>
+
+  <!-- Phase labels along the arrow -->
+  <circle cx="170" cy="385" r="4" fill="#7d3c98"/>
+  <text x="170" y="405" text-anchor="middle" fill="#7d3c98" font-size="10" font-weight="600">Pending</text>
+  <text x="170" y="418" text-anchor="middle" fill="#7a7a6a" font-size="9">superposition</text>
+
+  <circle cx="545" cy="385" r="4" fill="#2471a3"/>
+  <text x="545" y="405" text-anchor="middle" fill="#2471a3" font-size="10" font-weight="600">Evaluating</text>
+  <text x="545" y="418" text-anchor="middle" fill="#7a7a6a" font-size="9">causal order + gravity</text>
+
+  <circle cx="895" cy="385" r="4" fill="#1e8449"/>
+  <text x="895" y="405" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="600">Committed</text>
+  <text x="895" y="418" text-anchor="middle" fill="#7a7a6a" font-size="9">time + information limit</text>
+
+  <!-- Five emergent properties summary -->
+  <text x="540" y="460" text-anchor="middle" fill="#1a1a1a" font-size="11">One evaluation pass. Five emergent properties.</text>
+
+  <g transform="translate(130, 475)">
+    <!-- Superposition -->
+    <circle cx="0" cy="0" r="3" fill="#7d3c98"/>
+    <text x="8" y="4" fill="#7d3c98" font-size="9" font-weight="600">Superposition</text>
+
+    <!-- Causal ordering -->
+    <circle cx="140" cy="0" r="3" fill="#2471a3"/>
+    <text x="148" y="4" fill="#2471a3" font-size="9" font-weight="600">Causal ordering</text>
+
+    <!-- Gravity -->
+    <circle cx="290" cy="0" r="3" fill="#d35400"/>
+    <text x="298" y="4" fill="#d35400" font-size="9" font-weight="600">Gravity (stack depth)</text>
+
+    <!-- c -->
+    <circle cx="460" cy="0" r="3" fill="#1e8449"/>
+    <text x="468" y="4" fill="#1e8449" font-size="9" font-weight="600">c (instant commit)</text>
+
+    <!-- Time -->
+    <circle cx="610" cy="0" r="3" fill="#2471a3"/>
+    <text x="618" y="4" fill="#2471a3" font-size="9" font-weight="600">Time (revision count)</text>
+  </g>
+
+  <!-- Information limit note -->
+  <text x="540" y="505" text-anchor="middle" fill="#7a7a6a" font-size="9" font-style="italic">Information limit: parent can only see the last committed value, never intermediate states.</text>
+</svg>
