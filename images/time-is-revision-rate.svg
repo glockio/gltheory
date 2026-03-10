@@ -1,0 +1,113 @@
+<!-- DESCRIPTION: Two side-by-side nodes, each with a revision counter shown as a tally. Left node (green, "NODE IN EMPTY SPACE"): shallow call stack bar (depth 2), revision counter ticking quickly — showing 8 tallies. Label: "Shallow stack. Commits freely. Revision rate: fast." Right node (red/amber, "NODE NEAR MASS"): tall call stack bar (depth 7), revision counter ticking slowly — showing 4 tallies. Label: "Deep stack. Waits for stack to unwind. Revision rate: slow." Below both: "Same amount of external time. Different revision counts. The node near mass has genuinely elapsed less." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- LEFT SIDE: NODE IN EMPTY SPACE -->
+  <text x="200" y="30" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">NODE IN EMPTY SPACE</text>
+
+  <!-- The node itself -->
+  <circle cx="120" cy="80" r="14" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="120" y="85" text-anchor="middle" font-size="10" fill="white" font-weight="700">N</text>
+
+  <!-- Shallow call stack bar (depth 2) -->
+  <text x="120" y="118" text-anchor="middle" font-size="9" fill="#7a7a6a">call stack</text>
+  <!-- Stack frame 1 -->
+  <rect x="90" y="125" width="60" height="18" rx="2" fill="#1e8449" opacity="0.3" stroke="#1e8449" stroke-width="1"/>
+  <text x="120" y="137" text-anchor="middle" font-size="8" fill="#1a1a1a">frame 1</text>
+  <!-- Stack frame 2 -->
+  <rect x="90" y="145" width="60" height="18" rx="2" fill="#1e8449" opacity="0.2" stroke="#1e8449" stroke-width="1"/>
+  <text x="120" y="157" text-anchor="middle" font-size="8" fill="#1a1a1a">frame 2</text>
+
+  <!-- Depth label -->
+  <text x="160" y="147" font-size="9" fill="#1e8449" font-weight="600">depth: 2</text>
+
+  <!-- Revision counter - 8 tallies -->
+  <text x="240" y="75" font-size="10" fill="#1a1a2e" font-weight="600">revisions:</text>
+
+  <!-- Tally marks - 8 total (groups of 5 + 3) -->
+  <g transform="translate(240, 85)">
+    <!-- Group of 5 with cross -->
+    <line x1="0" y1="0" x2="0" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+    <line x1="8" y1="0" x2="8" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+    <line x1="16" y1="0" x2="16" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+    <line x1="24" y1="0" x2="24" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+    <!-- Cross line for the 5th -->
+    <line x1="-4" y1="20" x2="28" y2="5" stroke="#1e8449" stroke-width="2.5"/>
+    <!-- 3 more -->
+    <line x1="38" y1="0" x2="38" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+    <line x1="46" y1="0" x2="46" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+    <line x1="54" y1="0" x2="54" y2="25" stroke="#1e8449" stroke-width="2.5"/>
+  </g>
+  <text x="305" y="105" font-size="14" fill="#1e8449" font-weight="700">= 8</text>
+
+  <!-- Speed indicator -->
+  <text x="240" y="135" font-size="10" fill="#7a7a6a">tick tick tick tick tick tick tick tick</text>
+  <text x="240" y="148" font-size="9" fill="#7a7a6a" font-style="italic">rapid commits</text>
+
+  <!-- Label -->
+  <text x="200" y="195" text-anchor="middle" font-size="11" fill="#1a1a2e">Shallow stack. Commits freely.</text>
+  <text x="200" y="212" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="600">Revision rate: FAST</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="20" x2="400" y2="230" stroke="#a8dadc" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- RIGHT SIDE: NODE NEAR MASS -->
+  <text x="600" y="30" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="700">NODE NEAR MASS</text>
+
+  <!-- The node itself -->
+  <circle cx="500" cy="80" r="14" fill="#c0392b" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="500" y="85" text-anchor="middle" font-size="10" fill="white" font-weight="700">N</text>
+
+  <!-- Tall call stack bar (depth 7) -->
+  <text x="500" y="108" text-anchor="middle" font-size="9" fill="#7a7a6a">call stack</text>
+  <!-- Stack frames -->
+  <rect x="470" y="113" width="60" height="14" rx="2" fill="#c0392b" opacity="0.15" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="123" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 1</text>
+  <rect x="470" y="128" width="60" height="14" rx="2" fill="#c0392b" opacity="0.18" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="138" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 2</text>
+  <rect x="470" y="143" width="60" height="14" rx="2" fill="#c0392b" opacity="0.22" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="153" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 3</text>
+  <rect x="470" y="158" width="60" height="14" rx="2" fill="#c0392b" opacity="0.26" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="168" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 4</text>
+  <rect x="470" y="173" width="60" height="14" rx="2" fill="#c0392b" opacity="0.3" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="183" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 5</text>
+  <rect x="470" y="188" width="60" height="14" rx="2" fill="#c0392b" opacity="0.34" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="198" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 6</text>
+  <rect x="470" y="203" width="60" height="14" rx="2" fill="#c0392b" opacity="0.38" stroke="#c0392b" stroke-width="0.8"/>
+  <text x="500" y="213" text-anchor="middle" font-size="7" fill="#1a1a1a">frame 7</text>
+
+  <!-- Depth label -->
+  <text x="540" y="165" font-size="9" fill="#c0392b" font-weight="600">depth: 7</text>
+
+  <!-- Revision counter - 4 tallies -->
+  <text x="620" y="75" font-size="10" fill="#1a1a2e" font-weight="600">revisions:</text>
+
+  <!-- Tally marks - 4 total -->
+  <g transform="translate(620, 85)">
+    <line x1="0" y1="0" x2="0" y2="25" stroke="#c0392b" stroke-width="2.5"/>
+    <line x1="8" y1="0" x2="8" y2="25" stroke="#c0392b" stroke-width="2.5"/>
+    <line x1="16" y1="0" x2="16" y2="25" stroke="#c0392b" stroke-width="2.5"/>
+    <line x1="24" y1="0" x2="24" y2="25" stroke="#c0392b" stroke-width="2.5"/>
+  </g>
+  <text x="660" y="105" font-size="14" fill="#c0392b" font-weight="700">= 4</text>
+
+  <!-- Speed indicator -->
+  <text x="620" y="135" font-size="10" fill="#7a7a6a">tick . . . tick . . . tick . . . tick</text>
+  <text x="620" y="148" font-size="9" fill="#7a7a6a" font-style="italic">slow commits</text>
+
+  <!-- Label -->
+  <text x="600" y="240" text-anchor="middle" font-size="11" fill="#1a1a2e">Deep stack. Waits for stack to unwind.</text>
+  <text x="600" y="257" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="600">Revision rate: SLOW</text>
+
+  <!-- External time bracket spanning both -->
+  <line x1="60" y1="285" x2="740" y2="285" stroke="#7a7a6a" stroke-width="1"/>
+  <line x1="60" y1="280" x2="60" y2="290" stroke="#7a7a6a" stroke-width="1"/>
+  <line x1="740" y1="280" x2="740" y2="290" stroke="#7a7a6a" stroke-width="1"/>
+  <text x="400" y="280" text-anchor="middle" font-size="10" fill="#7a7a6a">same external time elapsed</text>
+
+  <!-- Bottom summary -->
+  <text x="400" y="315" text-anchor="middle" font-size="12" fill="#1a1a2e" font-weight="600">Same amount of external time. Different revision counts.</text>
+  <text x="400" y="338" text-anchor="middle" font-size="12" fill="#1a1a2e" font-style="italic">The node near mass has genuinely elapsed less.</text>
+</svg>

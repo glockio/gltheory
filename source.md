@@ -33,14 +33,15 @@ Thread these three ideas throughout: (1) topology generates values, (2) topologi
 
 Chapter 1.5 introduces the prime demo. Reference it explicitly in Chapter 3 (mass), Chapter 4 (gravity), and Chapter 6 (time). The demo is the proof that this type of graph is possible — not a metaphor for physics but an actual working example of a graph that generates a structured number system from pure topology with no stored values.
 
-### The Call Stack Visual Sequence — Three Figures That Flow
+### The Call Stack Visual Sequence — Four Figures That Flow
 
-The call stack section in Chapter 4 has three figures that must feel like one continuous reveal:
-1. **fig-pyramid** — graph nodes across the top, call stack depth bars below, forming a mountain shape
-2. **fig-invert-spacetime** — same image flipped, spacetime fabric draped over it, wells where the mountain was
-3. **fig-routing-pressure** — routing table before/after, paths bending around the pressure zone
+The call stack section in Chapter 4 has four figures that must feel like one continuous reveal:
+1. **stack-depth-grows-with-subgraph-depth** — three panels showing how deeper subgraphs create taller stacks
+2. **call-stack-pyramid** — graph nodes across the top, call stack depth bars below, forming a mountain shape
+3. **invert-pyramid-spacetime** — same image flipped, spacetime fabric draped over it, wells where the mountain was
+4. **routing-pressure** — routing table before/after, paths bending around the pressure zone
 
-These three should be styled consistently and feel like one argument unfolding visually.
+These four should be styled consistently and feel like one argument unfolding visually.
 
 ### Narrative Arc
 
@@ -55,19 +56,25 @@ Time as revision rate → Two observers →
 Quantum → Entanglement → Expansion
 ```
 
-### SVG Figure Handling
+### Image Handling — Slug-Based `images/` Folder
 
-Each figure has a stable ID (e.g., `fig-01`) and a description.
+Each figure has a unique **slug** derived from its title (e.g., `two-layers-of-reality`). Images are built as standalone SVG files in an `images/` folder. The `index.html` references them via `<img>` tags, NOT inline SVGs.
 
-**Mode A — Fresh Build (no previous HTML provided):**
-Generate all SVGs inline from the descriptions. Style: whiteboard/stick-figure aesthetic. Dots and lines. Simple shapes. DM Sans font. Use the color tokens from the design system.
+**Build process:**
 
-**Mode B — Incremental Build (previous index.html provided):**
-For each figure:
-1. Find the `<div class="figure" id="fig-XX">` in the previous HTML.
-2. Compare the figure description in this source doc to the `scene-label` text in the previous HTML.
-3. If the description matches → **copy the entire figure div verbatim.**
-4. If the description changed or the figure is new → **generate fresh SVG.**
+1. For each figure in this source doc, generate an SVG file at `images/{slug}.svg`.
+2. Style: whiteboard/stick-figure aesthetic. Dots and lines. Simple shapes. DM Sans font. Use the color tokens from the design system.
+3. In `index.html`, reference each figure as: `<img src="images/{slug}.svg" alt="{caption}" width="100%">`
+4. Each SVG should use `viewBox` for responsiveness and a reasonable default `width`.
+
+**Incremental builds (rebuilding index.html from source):**
+
+1. For each figure, check if `images/{slug}.svg` already exists.
+2. Compare the figure description in this source doc to the description comment embedded at the top of the existing SVG file (first line: `<!-- DESCRIPTION: ... -->`).
+3. If the description matches → **skip regeneration. Use the existing file.**
+4. If the description changed, the slug changed, or the file is missing → **generate fresh SVG.**
+
+This means `index.html` can be rebuilt quickly from source without regenerating images unless their descriptions change.
 
 ### General Rules
 
@@ -75,7 +82,7 @@ For each figure:
 - **Images do heavy lifting.** Text supports images, not the other way around.
 - **Lead with the mystery.** Every physics chapter opens with the weird observation, lets the reader sit in it, then resolves it with the framework.
 - **Bar test.** If a sentence sounds like a textbook, rewrite it. "Would I say this to a smart friend after two beers?" If no, rewrite.
-- Each SVG should use `viewBox` for responsiveness, `width="100%"`, and `max-width` for containment.
+- Each SVG in `images/` should use `viewBox` for responsiveness. The `<img>` tag in HTML uses `width="100%"` and `max-width` for containment.
 - Target reading time: ~45 minutes.
 - Target word count: ~12,000–15,000 words (prose only).
 
@@ -160,7 +167,7 @@ For each figure:
 
 **`.claims-box`** — Numbered claims. Orange border. Orange numbered badges.
 
-**`.figure`** — White box with border and shadow. Contains: `.scene-label` (monospace uppercase), `<svg>`, `.figure-caption` (italic, muted).
+**`.figure`** — White box with border and shadow. Contains: `.scene-label` (monospace uppercase), `<img src="images/{slug}.svg">`, `.figure-caption` (italic, muted).
 
 **`.gap-box`** — Gray-bordered block for honest gaps.
 
@@ -255,9 +262,9 @@ The key takeaway is this: what you experience as "reality" is an output. It take
 - **The Engine Layer** — where computation happens. The actual structure of reality. Think: the Nintendo console. The desktop computer.
 - **The Render Layer** — what you experience. Your "reality." The output. Think: the TV screen. The monitor.
 
-##### Figure: fig-00
+##### Figure: two-layers-of-reality
 
-**ID:** fig-00
+**Slug:** two-layers-of-reality
 **Label:** Figure 0 — Two Layers of Reality
 **Description:** Left: a TV screen showing Mario's world (stick-figure Mario, platforms, a question block) labeled "RENDER LAYER — What Mario experiences. His 'reality.'" Right: a Nintendo console with circuit board showing graph nodes and edges inside, labeled "ENGINE LAYER — Dots and lines. The actual computation." Arrow goes FROM the console TO the TV screen, labeled "produces."
 **Caption:** Two layers. The engine computes the graph. The screen shows the output — Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?
@@ -316,9 +323,9 @@ The key takeaway is this: what you experience as "reality" is an output. It take
 
 **Content direction:** "Before we can talk about the universe being a graph, we need to talk about what a graph actually is. Good news: you already know. You just don't call it that." Three compact examples: family tree, social network, recipe. Dots connected by lines.
 
-##### Figure: fig-01
+##### Figure: you-already-know-what-a-graph-is
 
-**ID:** fig-01
+**Slug:** you-already-know-what-a-graph-is
 **Label:** Figure 1 — You Already Know What a Graph Is
 **Description:** Three simple graphs side by side: a family tree (5 people, parent-child lines), a social network (6 people, friend connections), and a recipe (4 steps with directional arrows: Mix → Bake → Cool → Frost).
 **Caption:** These are all graphs. Dots connected by lines. That's the whole idea.
@@ -335,10 +342,10 @@ The key takeaway is this: what you experience as "reality" is an output. It take
 
 **Content direction:** Some graphs are exact mirrors — every connection reversed, every operation inverted. When they meet, they cancel completely. Like adding 5 and subtracting 5. Zero left. This will explain matter-antimatter annihilation later.
 
-##### Figure: fig-03
+##### Figure: when-a-graph-meets-its-mirror
 
-**ID:** fig-03
-**Label:** Figure 3 — When a Graph Meets Its Mirror
+**Slug:** when-a-graph-meets-its-mirror
+**Label:** Figure 2 — When a Graph Meets Its Mirror
 **Description:** Left: a small directed graph (A→B→C) in blue labeled "GRAPH." Center: its mirror (C→B→A) in red labeled "MIRROR (INVERSE)." Between them a "+" sign. Then "=" sign. Then a sparkle/burst labeled "Nothing. They cancel."
 **Caption:** When a graph meets its exact opposite, they cancel. Zero left. This will explain matter-antimatter annihilation.
 
@@ -369,10 +376,10 @@ You can never evaluate a parent before its children. The direction is fixed. Bot
 
 Show this as a three-step state diagram:
 
-##### Figure: fig-graph-state
+##### Figure: evaluating-a-graph-step-by-step
 
-**ID:** fig-graph-state
-**Label:** Figure 2a — Evaluating a Graph, Step by Step
+**Slug:** evaluating-a-graph-step-by-step
+**Label:** Figure 3a — Evaluating a Graph, Step by Step
 **Description:** Three panels showing one graph in three states. The graph has a root node connected to two children (A and B), each connected to one leaf (C and D respectively). All edges labeled ×. Panel 1 "STATE 0 — BEFORE": all nodes show "?" — unresolved. Panel 2 "STATE 1 — LEAVES FIRST": C and D show their values (both return 1 since they are leaves — no children). A and B still show "?". Panel 3 "STATE 2 — COMPLETE": A evaluates using C's result. B evaluates using D's result. Root evaluates using A and B's results. All nodes show committed values with green checkmarks. Arrow below shows direction: "bottom → up. Leaves first. Root last."
 **Caption:** You can't evaluate a parent before its children. Leaves go first. Results flow upward. The root is always last.
 
@@ -382,10 +389,10 @@ Show this as a three-step state diagram:
 
 This is the off-by-one. You always read the last committed result while the next evaluation is already underway. There is no way to see work in progress. By the time you look, the result has already been committed, and the next evaluation has already started.
 
-##### Figure: fig-off-by-one
+##### Figure: the-off-by-one
 
-**ID:** fig-off-by-one
-**Label:** Figure 2b — The Off-By-One: You Always Read the Last Committed Result
+**Slug:** the-off-by-one
+**Label:** Figure 3b — The Off-By-One: You Always Read the Last Committed Result
 **Description:** Two frames side by side. Left frame (green border, "WHAT YOU READ — Committed result. Revision 4. Locked in."): a node showing value=12, revision=4, with a solid green checkmark. Right frame (red dashed border, "BEING EVALUATED RIGHT NOW — In progress. You can't see this."): same node with question marks and dashed lines showing active computation. Between them: "← you are always one step behind." Below: "By the time you observe a result, the next evaluation has already started."
 **Caption:** You always read the last committed result. The current evaluation is invisible. You're always one step behind. This is true in computers and, we'll argue, in reality.
 
@@ -409,11 +416,11 @@ The node doesn't store these numbers. It counts its hops to the root. That count
 
 Now connect nodes with multiply edges and watch what happens:
 
-##### Figure: fig-prime-topology
+##### Figure: three-graphs-no-stored-values
 
-**ID:** fig-prime-topology
-**Label:** Figure 2c — Three Graphs. No Stored Values. Three Different Numbers.
-**Description:** Three separate small graphs side by side, all using multiply edges (labeled ×). Left graph: root at depth 1 connected to one child at depth 2 (a leaf). Evaluation shown below: "child=2, root=2. Result: 2." Center graph: root at depth 1, child at depth 2, grandchild at depth 3 (leaf). Evaluation: "grandchild=3, child=3, root=3. Result: 3." Right graph: root at depth 1, two children both at depth 2, each with one leaf at depth 3. Evaluation: "leaves=3 each, children=3×3=... wait — show simpler version: left child depth 2 returns 2, right child depth 3 returns 3, root multiplies: 2×3=6. Result: 6." All three graphs use only topology — no stored values. Labels below each: "Returns 2," "Returns 3," "Returns 6."
+**Slug:** three-graphs-no-stored-values
+**Label:** Figure 3c — Three Graphs. No Stored Values. Three Different Numbers.
+**Description:** Three separate small graphs side by side, all using multiply edges (labeled ×). Left graph: root at depth 1 connected to one child at depth 2 (a leaf). Evaluation shown below: "child=2, root=2. Result: 2." Center graph: root at depth 1, child at depth 2, grandchild at depth 3 (leaf). Evaluation: "grandchild=3, child=3, root=3. Result: 3." Right graph: root at depth 1 with two children — left child at depth 2 (returns 2), right child at depth 3 (returns 3). Root multiplies: 2×3=6. Result: 6. All three graphs use only topology — no stored values. Labels below each: "Returns 2," "Returns 3," "Returns 6."
 **Caption:** Three graphs. No stored numbers anywhere. Different structures produce different values — 2, 3, and 6 — purely from depth and connectivity. The topology IS the value. This is the foundation of everything that follows.
 
 **Content direction (after figure):** Why does this matter? Because 2 and 3 are prime numbers — the irreducible building blocks of all arithmetic. Every whole number is a unique product of primes. If topology generates primes, and primes generate all numbers, then **topology alone is sufficient to generate all of arithmetic.** No stored values. Just structure. Just connections. Just depth.
@@ -461,9 +468,9 @@ That's it. That's the rule. Let's see it in three systems you might actually use
 
 A spreadsheet is a graph. Every cell is a node. Formulas are edges. When you change cell A1, the spreadsheet doesn't recompute every cell. It walks the dependency graph forward from A1, recomputing only the cells that depend on it, in order.
 
-##### Figure: fig-spreadsheet
+##### Figure: spreadsheet-is-a-graph
 
-**ID:** fig-spreadsheet
+**Slug:** spreadsheet-is-a-graph
 **Label:** Figure 4a — A Spreadsheet Is a Graph Being Evaluated
 **Description:** Three panels showing spreadsheet cell dependency graph changing state. Panel 1 "STATE 0": four cells. A1=5 (blue, just changed), B1="=A1×2" (gray, stale), C1="=A1+1" (gray, stale), D1="=B1+C1" (gray, stale). Panel 2 "STATE 1": B1 and C1 both evaluate (they both depend only on A1, no dependency between each other — they can go in any order or simultaneously). B1=10 (green, committed), C1=6 (green, committed), D1 still stale. Panel 3 "STATE 2": D1 now evaluates (depends on both B1 and C1, which are both committed). D1=16 (green, committed). Arrow below: "A1 changed → B1 and C1 in parallel → D1 last. Topological order."
 **Caption:** Change A1 and the update cascades forward through the dependency graph. B1 and C1 can update in parallel — no dependency between them. D1 waits for both. That's topological ordering.
@@ -478,9 +485,9 @@ When multiple CPU cores share memory, each core has a local cache. When Core 1 w
 
 **Content direction (connecting all three):** Three completely different systems, built by different teams, for different purposes. All three independently arrived at the same model: evaluate in dependency order, commit locally, propagate forward. Because it's the only model that is both correct and efficient. The universe, we're arguing, does the same thing. For the same reason.
 
-##### Figure: fig-topo-ordering
+##### Figure: topological-ordering
 
-**ID:** fig-topo-ordering
+**Slug:** topological-ordering
 **Label:** Figure 4b — Topological Ordering: Causally Connected = Sequential. Causally Disconnected = Parallel.
 **Description:** One graph with two clear branches. Root at top. Left branch: Root → A → C (three nodes in a chain, arrows showing sequential dependency, labeled "SEQUENTIAL — C must wait for A. A must wait for Root."). Right branch: Root → B (single node, no dependency on A or C, labeled "PARALLEL — B can evaluate any time. No ordering constraint with A or C."). Below: "Causally connected = ordered. Causally disconnected = free. This is topological ordering."
 **Caption:** Nodes in a dependency chain must evaluate in order. Nodes with no dependency between them can go in any order or simultaneously. That's topological ordering. That's what every graph system uses. That's what we're claiming the universe uses.
@@ -495,9 +502,9 @@ You can walk the independent branches of the graph left-to-right, right-to-left,
 
 This means there is no preferred frame. No "special" vantage point from which the traversal looks canonical. Two observers on independent branches of the graph genuinely have no shared "now" — not because of a physical law, but because there is no ordering constraint between them. Their evaluations are independent. Their commits happen in their own local order. Neither is "earlier" or "later" in any absolute sense.
 
-##### Figure: fig-light-cone
+##### Figure: light-cone-is-dependency-graph
 
-**ID:** fig-light-cone
+**Slug:** light-cone-is-dependency-graph
 **Label:** Figure 4c — The Light Cone Is the Dependency Graph
 **Description:** Classic light cone diagram but redrawn as a dependency graph. Center: YOU (a node). Above (future): nodes connected TO you by dependency arrows — "These depend on your result. They evaluate after you." Below (past): nodes YOU depend on — "You depend on these. They evaluated before you." Left and right (spacelike, outside cone): nodes with NO dependency path to or from you — "No dependency. No ordering. No shared now. Parallel branch." Dotted boundary lines form the cone shape. Label: "The light cone is not a physical law. It is the dependency graph."
 **Caption:** Everything inside your future light cone depends on your result. Everything in your past light cone, you depend on. Everything outside — no dependency, no ordering, no shared now. The light cone is the dependency graph of the computation. C is the rate at which a dependency propagates one hop.
@@ -524,9 +531,9 @@ A basketball has 10²⁶ atoms, every one demanding values from its neighbors. E
 
 The strict consumer doesn't just "observe" the particle. It demands a definite input for its own evaluation. The particle must commit. That commit IS what physicists call "collapse." Not mysterious. The evaluation was pending. A consumer demanded it. It committed.
 
-##### Figure: fig-08
+##### Figure: dumb-kitchen-vs-smart-kitchen
 
-**ID:** fig-08
+**Slug:** dumb-kitchen-vs-smart-kitchen
 **Label:** Figure 5 — Dumb Kitchen vs. Smart Kitchen
 **Description:** Left panel (red border, "DUMB KITCHEN"): overwhelmed stick-figure chef surrounded by piles of dishes, trash can overflowing, "Evaluates everything. Most goes to waste." Right panel (green border, "SMART KITCHEN"): calm stick-figure chef with recipe book, only 2 dishes on counter, "Knows all recipes. Only evaluates what's ordered."
 **Caption:** A smart engine only produces committed results when something needs them. This is lazy evaluation. It's going to explain quantum mechanics.
@@ -603,10 +610,10 @@ A rock on a table isn't running a computation. It's a region of the graph that k
 
 Callback to the prime demo: when you ask "what is the rock's mass?" you're asking the graph to evaluate that subgraph's topology. The result — the mass value — is not stored in the rock. It's what you get when you walk that particular structure.
 
-##### Figure: fig-14
+##### Figure: mass-is-stable-topology
 
-**ID:** fig-14
-**Label:** Figure 10 — Mass Is Stable Topology. Energy Is What Propagates When It Isn't.
+**Slug:** mass-is-stable-topology
+**Label:** Figure 6 — Mass Is Stable Topology. Energy Is What Propagates When It Isn't.
 **Description:** Three panels. Left panel (blue, "STABLE TOPOLOGY — MASS"): a subgraph with fixed edges shown twice (Walk 1 and Walk 2), both producing the same result. Label: "Same walk. Same result. Every time. That's mass." Center panel (orange, "DISRUPTION — ENERGY INPUT"): new edge being added to the subgraph, labeled "Energy arrives. Topology changes." Right panel (green, "PROPAGATION — RELEASED ENERGY"): the subgraph with new structure, delta arrows radiating outward, labeled "New walk. Different result. Delta propagates outward. That's released energy."
 **Caption:** Mass is a stable subgraph — same walk, same result. Energy is the delta that propagates when the topology changes. Mass and energy are the same thing going to different destinations.
 
@@ -627,10 +634,10 @@ Total energy: m × C (down) × C (up) = mc²
 
 The c² isn't a magic number. It's the graph telling you it's bidirectional. The same propagation rate in two orthogonal directions through the same topology. That's why tiny mass equals enormous energy: the engine's base rate C is enormous, and it appears twice.
 
-##### Figure: fig-16
+##### Figure: the-bidirectional-walk
 
-**ID:** fig-16
-**Label:** Figure 11 — The Bidirectional Walk. That's Where c² Comes From.
+**Slug:** the-bidirectional-walk
+**Label:** Figure 7 — The Bidirectional Walk. That's Where c² Comes From.
 **Description:** One subgraph of depth m shown with two sets of arrows. Blue arrows going DOWN from root to leaves labeled "DOWN LEG — m hops at rate C." Orange arrows going UP from leaves to root labeled "UP LEG — m hops at rate C." Below: equation "E = m × C (down) × C (up) = mc²." Caption note: "Same rate. Two independent directions. The graph is symmetric. No preferred direction. That's why c² appears."
 **Caption:** The walk down to leaves and the walk back up are both at rate C. Same rate, two independent directions. No preferred direction in the graph. That's c² — not a magic constant, a topological fact.
 
@@ -709,10 +716,10 @@ Now imagine the function calls itself recursively:
 
 The stack depth equals the subgraph depth. Shallow subgraph: short stack, unwinds fast. Deep subgraph: tall stack, takes longer to unwind. Everything waiting on the root has to wait for the entire stack to unwind before it gets an answer.
 
-##### Figure: fig-callstack-grow
+##### Figure: stack-depth-grows-with-subgraph-depth
 
-**ID:** fig-callstack-grow
-**Label:** Figure 12a — Stack Depth Grows With Subgraph Depth
+**Slug:** stack-depth-grows-with-subgraph-depth
+**Label:** Figure 8a — Stack Depth Grows With Subgraph Depth
 **Description:** Three side-by-side panels. Each panel shows a subgraph on top and its call stack as vertical blocks below. Left panel: a root with 1 child (leaf). Call stack: 2 blocks tall. Label "Depth 2 — Short stack. Unwinds fast." Center panel: root → child → grandchild (leaf). Call stack: 3 blocks tall. Label "Depth 3 — Medium stack." Right panel: root → a → b → c → d → leaf. Call stack: 5 blocks tall, taking more space. Label "Depth 5 — Tall stack. Everything waits longer." Color: stacks in orange/amber to suggest heat/pressure.
 **Caption:** The deeper the subgraph, the taller the call stack. The taller the stack, the longer everything waits. Stack depth is a direct measure of how much the subgraph delays its surroundings.
 
@@ -724,10 +731,10 @@ The stack depth equals the subgraph depth. Shallow subgraph: short stack, unwind
 
 What shape do you get?
 
-##### Figure: fig-pyramid
+##### Figure: call-stack-pyramid
 
-**ID:** fig-pyramid
-**Label:** Figure 12b — Call Stack Depth Across the Graph Forms a Pyramid
+**Slug:** call-stack-pyramid
+**Label:** Figure 8b — Call Stack Depth Across the Graph Forms a Pyramid
 **Description:** A horizontal row of nodes across the top of the figure (connected as a graph, with a clearly deeper/more complex subgraph in the center, labeled "MASS"). Below each node, a vertical bar whose height represents that node's call stack depth when evaluated. The bars form a pyramid/mountain shape — tallest in the center over the mass, tapering to height 1 at the far edges (leaf nodes). The whole shape is amber/orange. Labels: "height 1" at edges (pointing to leaf nodes), "height 8" at peak (pointing to the mass node's bar), "MASS HERE" with an arrow at the peak. Below the figure: "Stack depth across the graph. Tall where mass is. Flat everywhere else."
 **Caption:** Plot call stack depth across the graph and you get a mountain. Tallest where mass is. Height 1 at the leaves — those are your photons, traveling at C. Everything between: deeper stack, slower commits. This is the gravity well, before we flip it.
 
@@ -741,10 +748,10 @@ The tall bars become deep wells. The flat edges stay flat. You're looking at exa
 
 That's not a coincidence. The call stack topology and spacetime curvature are the same structure, described from two different perspectives. In the engine: tall call stacks near mass. In the render layer — your reality — deep wells in the fabric of spacetime.
 
-##### Figure: fig-invert-spacetime
+##### Figure: invert-pyramid-spacetime
 
-**ID:** fig-invert-spacetime
-**Label:** Figure 12c — Invert the Pyramid. Add the Spacetime Fabric. Same Shape.
+**Slug:** invert-pyramid-spacetime
+**Label:** Figure 8c — Invert the Pyramid. Add the Spacetime Fabric. Same Shape.
 **Description:** Same data as fig-pyramid but inverted. The mountain shape is now flipped to a well shape. Over the top of it, a grid of lines (the "spacetime fabric") is draped, curving downward into the well at the center and flat at the edges — exactly like the classic spacetime curvature diagrams from physics textbooks. The mass node is at the bottom of the well. Label: "INVERT THE CALL STACK TOPOLOGY." Second label on the fabric: "THIS IS SPACETIME CURVATURE." Third label: "Same shape. Different perspective. The call stack IS the curvature."
 **Caption:** Flip the pyramid and drape a fabric over it. That's the spacetime diagram from your physics textbook. The call stack topology is spacetime curvature. Same structure, seen from two sides of the engine/render boundary.
 
@@ -760,10 +767,10 @@ The same thing happens in our graph. A massive subgraph builds a deep call stack
 
 Everything follows the cheapest path through the routing table. But the cheapest path through a region of high stack pressure isn't straight. It curves. It bends around the pressure zone. That curve is what you experience as gravity.
 
-##### Figure: fig-routing-pressure
+##### Figure: routing-pressure
 
-**ID:** fig-routing-pressure
-**Label:** Figure 12d — Deep Call Stacks Create Routing Pressure. Paths Bend Around It.
+**Slug:** routing-pressure
+**Label:** Figure 8d — Deep Call Stacks Create Routing Pressure. Paths Bend Around It.
 **Description:** Two panels. Left panel "BEFORE — no mass, flat routing table": a uniform grid of nodes. A straight path from A (top left) to B (bottom right) drawn as a straight diagonal line. All nodes the same color. Label: "Uniform routing costs. Straight path is cheapest." Right panel "AFTER — mass present, routing table updated": same grid. A cluster of nodes in the center colored amber/orange, labeled "DEEP STACK — high routing cost." The path from A to B is now curved around the mass cluster, avoiding the high-cost center. Label: "Routing table updated. Cheapest path now bends around the mass. That bend is gravity."
 **Caption:** Deep call stacks create routing pressure. The system updates routing costs. Cheapest paths bend around the pressure zone. Everything follows the cheapest path. That bend is gravity. Einstein called it curved spacetime. We call it a routing table being updated by stack pressure.
 
@@ -812,10 +819,10 @@ And: all the information in any 3D volume of space can be completely described b
 
 **Content direction:** Space isn't a box. It's the large-scale pattern of connections in the graph. Distance = hop count. Zoom out far enough and the hops look smooth. That smoothness is what we call "space."
 
-##### Figure: fig-11
+##### Figure: space-is-graph-shape
 
-**ID:** fig-11
-**Label:** Figure 15 — Space Is the Graph's Shape, Seen From Different Distances
+**Slug:** space-is-graph-shape
+**Label:** Figure 9 — Space Is the Graph's Shape, Seen From Different Distances
 **Description:** Three panels at increasing zoom. Left (ZOOMED IN): individual dots and lines, clearly discrete. Center (MEDIUM ZOOM): dense mesh, structure becoming less obvious. Right (ZOOMED OUT): smooth flowing continuous shape — like a manifold or curved surface.
 **Caption:** Up close: dots and lines. Zoom out: a mesh. More: smooth curves. That's "space." The connections ARE the space.
 
@@ -866,10 +873,10 @@ And separately: time genuinely runs at different speeds in different places. Clo
 
 We measure time by counting changes: clock ticks, pendulum swings, heartbeats, atomic oscillations. Every "clock" is a change counter. We've never measured time directly. We've always measured change and called it time.
 
-##### Figure: fig-17
+##### Figure: time-is-revision-rate
 
-**ID:** fig-17
-**Label:** Figure 16 — Time Is Revision Rate. Same Graph Walk, Different Stack Depth, Different Rate.
+**Slug:** time-is-revision-rate
+**Label:** Figure 10 — Time Is Revision Rate. Same Graph Walk, Different Stack Depth, Different Rate.
 **Description:** Two side-by-side nodes, each with a revision counter shown as a tally. Left node (green, "NODE IN EMPTY SPACE"): shallow call stack bar (depth 2), revision counter ticking quickly — showing 8 tallies. Label: "Shallow stack. Commits freely. Revision rate: fast." Right node (red/amber, "NODE NEAR MASS"): tall call stack bar (depth 7), revision counter ticking slowly — showing 4 tallies. Label: "Deep stack. Waits for stack to unwind. Revision rate: slow." Below both: "Same amount of external time. Different revision counts. The node near mass has genuinely elapsed less."
 **Caption:** Time is revision rate. Near mass, the call stack is deeper — commits take longer to complete. The revision counter ticks less often. The node genuinely ages less. GPS satellites correct for exactly this every day.
 
@@ -952,10 +959,10 @@ Confirmed hundreds of times. Not a measurement error. Real.
 
 **Content direction:** Callback to the smart chef from Chapter 2. A particle in flight with nobody asking about its position. No strict consumer. The engine knows how to evaluate it — it has the recipe — but nothing is demanding the result. Pending. Possible positions, nothing committed. Both paths through the slits: pending. Neither committed.
 
-##### Figure: fig-23
+##### Figure: pending-vs-committed
 
-**ID:** fig-23
-**Label:** Figure 17 — Pending vs. Committed: That's All Superposition Is
+**Slug:** pending-vs-committed
+**Label:** Figure 11 — Pending vs. Committed: That's All Superposition Is
 **Description:** Two panels. Left panel (purple border, "WAVE FUNCTION — PENDING"): central node (the particle) with six dotted lines connecting to six possible position nodes around it. None are committed. Label: "No consumer. All paths pending. Nothing committed. This is superposition." Right panel (green border, "MEASURED — COMMITTED"): same central node with ONE thick solid line to ONE position node. All other connections gone. Label: "Consumer demands a result. One path commits. One definite position."
 **Caption:** Superposition is pending evaluation — multiple possible connections, nothing committed. Collapse is when a consumer demands a result. One path commits. The others weren't the answer returned.
 
@@ -1022,10 +1029,10 @@ How?
 
 **Content direction:** The answer is in the value subgraph. When two particles interact, their value subgraphs merge — they share a node. Their position edges can be rewired anywhere in the graph — they can move to opposite ends of the universe. But their value subgraph doesn't care about position edges. The shared node is still there. Still shared.
 
-##### Figure: fig-27
+##### Figure: entanglement-shared-subgraph
 
-**ID:** fig-27
-**Label:** Figure 18 — Entanglement Is a Shared Subgraph That Persists Across Distance
+**Slug:** entanglement-shared-subgraph
+**Label:** Figure 12 — Entanglement Is a Shared Subgraph That Persists Across Distance
 **Description:** Three panels. Panel 1 "THEY INTERACT": two nodes (A and B) close together, both connected to a shared subgraph node (SH) below them. Label: "Shared value subgraph forms." Panel 2 "THEY SEPARATE": A and B moved far apart on the graph (many position-edge hops between them), but both still connected to (SH) via value edges. Position distance shown as a long gray dashed path. Value connection shown as direct solid orange lines to SH. Label: "Position edges rewired. Value subgraph unchanged. SH is still shared." Panel 3 "ONE IS MEASURED": consumer demands A's value. A evaluates → SH evaluates → commits result R. B then evaluates → SH already committed to R → B returns correlated result. Label: "SH evaluates once. Both read same committed result."
 **Caption:** Entanglement is a shared value subgraph node. Position can change — the particles can move anywhere. The shared subgraph node doesn't care about position. When either particle is evaluated, the shared node commits. Both read the same result.
 
@@ -1060,10 +1067,10 @@ Entanglement is a shared evaluation dependency. Two particles share a subgraph n
 
 The rate of growth is proportional to the current size of the graph — more nodes means more evaluations means more growth. Growth proportional to size means accelerating growth. Exponential expansion. No dark energy. No mysterious pushing force. Just: the computation creates the structure it computes.
 
-##### Figure: fig-29
+##### Figure: the-graph-grows-itself
 
-**ID:** fig-29
-**Label:** Figure 19 — The Graph Grows Itself
+**Slug:** the-graph-grows-itself
+**Label:** Figure 13 — The Graph Grows Itself
 **Description:** Three graphs increasing in size left to right with "evaluate →" arrows between them. Left graph: 5 nodes (small). Center graph: approximately 12 nodes (medium). Right graph: approximately 35 nodes (large). Below all three: "More graph → more evaluations → more return values → more new nodes. Growth proportional to size = acceleration."
 **Caption:** Evaluation creates new structure. More structure means more evaluation. Growth proportional to current size produces acceleration. No dark energy needed. The graph computes itself into existence.
 

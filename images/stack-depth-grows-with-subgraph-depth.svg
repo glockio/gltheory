@@ -1,0 +1,124 @@
+<!-- DESCRIPTION: Three side-by-side panels. Each panel shows a subgraph on top and its call stack as vertical blocks below. Left panel: a root with 1 child (leaf). Call stack: 2 blocks tall. Label "Depth 2 — Short stack. Unwinds fast." Center panel: root → child → grandchild (leaf). Call stack: 3 blocks tall. Label "Depth 3 — Medium stack." Right panel: root → a → b → c → d → leaf. Call stack: 5 blocks tall, taking more space. Label "Depth 5 — Tall stack. Everything waits longer." Color: stacks in orange/amber to suggest heat/pressure. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" font-family="DM Sans, sans-serif">
+  <rect width="900" height="380" fill="white" fill-opacity="0"/>
+
+  <defs>
+    <marker id="sd-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#1a1a1a" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- ========== PANEL 1: DEPTH 2 ========== -->
+  <rect x="30" y="10" width="250" height="360" rx="8" fill="white" stroke="#d35400" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Subgraph: root → leaf -->
+  <circle cx="155" cy="45" r="10" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="155" y="49" text-anchor="middle" font-size="8" fill="#1a1a1a" font-weight="bold">root</text>
+  <line x1="155" y1="55" x2="155" y2="78" stroke="#1a1a1a" stroke-width="1.8" marker-end="url(#sd-arr)"/>
+  <circle cx="155" cy="90" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+  <text x="155" y="94" text-anchor="middle" font-size="8" fill="#7a7a6a">leaf</text>
+
+  <!-- Call Stack -->
+  <text x="155" y="130" text-anchor="middle" font-size="9" fill="#7a7a6a">CALL STACK</text>
+
+  <!-- Stack blocks (2 blocks) -->
+  <rect x="115" y="140" width="80" height="32" rx="3" fill="#d35400" opacity="0.2" stroke="#d35400" stroke-width="1.5"/>
+  <text x="155" y="160" text-anchor="middle" font-size="9" fill="#d35400" font-weight="bold">root</text>
+
+  <rect x="115" y="172" width="80" height="32" rx="3" fill="#d35400" opacity="0.35" stroke="#d35400" stroke-width="1.5"/>
+  <text x="155" y="192" text-anchor="middle" font-size="9" fill="#d35400" font-weight="bold">leaf</text>
+
+  <!-- Height indicator -->
+  <line x1="100" y1="140" x2="100" y2="204" stroke="#d35400" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="93" y="175" text-anchor="end" font-size="9" fill="#d35400">2</text>
+
+  <!-- Label -->
+  <text x="155" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a">Depth 2</text>
+  <text x="155" y="258" text-anchor="middle" font-size="10" fill="#7a7a6a">Short stack.</text>
+  <text x="155" y="273" text-anchor="middle" font-size="10" fill="#7a7a6a">Unwinds fast.</text>
+
+  <!-- ========== PANEL 2: DEPTH 3 ========== -->
+  <rect x="310" y="10" width="260" height="360" rx="8" fill="white" stroke="#d35400" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Subgraph: root → child → grandchild -->
+  <circle cx="440" cy="35" r="10" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="440" y="39" text-anchor="middle" font-size="8" fill="#1a1a1a" font-weight="bold">root</text>
+  <line x1="440" y1="45" x2="440" y2="62" stroke="#1a1a1a" stroke-width="1.8" marker-end="url(#sd-arr)"/>
+  <circle cx="440" cy="73" r="10" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+  <text x="460" y="77" font-size="8" fill="#7a7a6a">child</text>
+  <line x1="440" y1="83" x2="440" y2="98" stroke="#1a1a1a" stroke-width="1.8" marker-end="url(#sd-arr)"/>
+  <circle cx="440" cy="108" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+  <text x="440" y="112" text-anchor="middle" font-size="8" fill="#7a7a6a">leaf</text>
+
+  <!-- Call Stack -->
+  <text x="440" y="136" text-anchor="middle" font-size="9" fill="#7a7a6a">CALL STACK</text>
+
+  <!-- Stack blocks (3 blocks) -->
+  <rect x="400" y="145" width="80" height="30" rx="3" fill="#d35400" opacity="0.2" stroke="#d35400" stroke-width="1.5"/>
+  <text x="440" y="164" text-anchor="middle" font-size="9" fill="#d35400" font-weight="bold">root</text>
+
+  <rect x="400" y="175" width="80" height="30" rx="3" fill="#d35400" opacity="0.35" stroke="#d35400" stroke-width="1.5"/>
+  <text x="440" y="194" text-anchor="middle" font-size="9" fill="#d35400" font-weight="bold">child</text>
+
+  <rect x="400" y="205" width="80" height="30" rx="3" fill="#d35400" opacity="0.5" stroke="#d35400" stroke-width="1.5"/>
+  <text x="440" y="224" text-anchor="middle" font-size="9" fill="#d35400" font-weight="bold">leaf</text>
+
+  <!-- Height indicator -->
+  <line x1="385" y1="145" x2="385" y2="235" stroke="#d35400" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="378" y="193" text-anchor="end" font-size="9" fill="#d35400">3</text>
+
+  <!-- Label -->
+  <text x="440" y="262" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a">Depth 3</text>
+  <text x="440" y="280" text-anchor="middle" font-size="10" fill="#7a7a6a">Medium stack.</text>
+
+  <!-- ========== PANEL 3: DEPTH 5 ========== -->
+  <rect x="600" y="10" width="275" height="360" rx="8" fill="white" stroke="#d35400" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Subgraph: root → a → b → c → d → leaf -->
+  <circle cx="738" cy="25" r="9" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="738" y="29" text-anchor="middle" font-size="7" fill="#1a1a1a" font-weight="bold">root</text>
+  <line x1="738" y1="34" x2="738" y2="46" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#sd-arr)"/>
+
+  <circle cx="738" cy="55" r="9" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+  <text x="752" y="59" font-size="7" fill="#7a7a6a">a</text>
+  <line x1="738" y1="64" x2="738" y2="76" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#sd-arr)"/>
+
+  <circle cx="738" cy="85" r="9" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+  <text x="752" y="89" font-size="7" fill="#7a7a6a">b</text>
+  <line x1="738" y1="94" x2="738" y2="106" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#sd-arr)"/>
+
+  <circle cx="738" cy="115" r="9" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
+  <text x="752" y="119" font-size="7" fill="#7a7a6a">c</text>
+  <line x1="738" y1="124" x2="738" y2="134" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#sd-arr)"/>
+
+  <circle cx="738" cy="143" r="9" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
+  <text x="752" y="147" font-size="7" fill="#7a7a6a">d</text>
+
+  <!-- Call Stack -->
+  <text x="738" y="170" text-anchor="middle" font-size="9" fill="#7a7a6a">CALL STACK</text>
+
+  <!-- Stack blocks (5 blocks) - getting warmer colors -->
+  <rect x="698" y="178" width="80" height="26" rx="3" fill="#d35400" opacity="0.15" stroke="#d35400" stroke-width="1.5"/>
+  <text x="738" y="195" text-anchor="middle" font-size="8" fill="#d35400" font-weight="bold">root</text>
+
+  <rect x="698" y="204" width="80" height="26" rx="3" fill="#d35400" opacity="0.25" stroke="#d35400" stroke-width="1.5"/>
+  <text x="738" y="221" text-anchor="middle" font-size="8" fill="#d35400" font-weight="bold">a</text>
+
+  <rect x="698" y="230" width="80" height="26" rx="3" fill="#d35400" opacity="0.4" stroke="#d35400" stroke-width="1.5"/>
+  <text x="738" y="247" text-anchor="middle" font-size="8" fill="#d35400" font-weight="bold">b</text>
+
+  <rect x="698" y="256" width="80" height="26" rx="3" fill="#d35400" opacity="0.55" stroke="#d35400" stroke-width="1.5"/>
+  <text x="738" y="273" text-anchor="middle" font-size="8" fill="#d35400" font-weight="bold">c</text>
+
+  <rect x="698" y="282" width="80" height="26" rx="3" fill="#c0392b" opacity="0.5" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="738" y="299" text-anchor="middle" font-size="8" fill="#c0392b" font-weight="bold">d</text>
+
+  <!-- Height indicator -->
+  <line x1="683" y1="178" x2="683" y2="308" stroke="#d35400" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="676" y="248" text-anchor="end" font-size="9" fill="#d35400">5</text>
+
+  <!-- Label -->
+  <text x="738" y="330" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a1a">Depth 5</text>
+  <text x="738" y="348" text-anchor="middle" font-size="10" fill="#7a7a6a">Tall stack. Everything</text>
+  <text x="738" y="363" text-anchor="middle" font-size="10" fill="#7a7a6a">waits longer.</text>
+</svg>

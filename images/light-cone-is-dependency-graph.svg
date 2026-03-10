@@ -1,0 +1,86 @@
+<!-- DESCRIPTION: Classic light cone diagram but redrawn as a dependency graph. Center: YOU (a node). Above (future): nodes connected TO you by dependency arrows — "These depend on your result. They evaluate after you." Below (past): nodes YOU depend on — "You depend on these. They evaluated before you." Left and right (spacelike, outside cone): nodes with NO dependency path to or from you — "No dependency. No ordering. No shared now. Parallel branch." Dotted boundary lines form the cone shape. Label: "The light cone is not a physical law. It is the dependency graph." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" font-family="DM Sans, sans-serif">
+  <rect width="700" height="500" fill="white" fill-opacity="0"/>
+
+  <defs>
+    <marker id="arr-up" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#2471a3" stroke="none"/>
+    </marker>
+    <marker id="arr-down" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#1e8449" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- Cone boundary lines (dotted) -->
+  <!-- Future cone -->
+  <line x1="350" y1="240" x2="190" y2="50" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="350" y1="240" x2="510" y2="50" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+  <!-- Past cone -->
+  <line x1="350" y1="240" x2="190" y2="420" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+  <line x1="350" y1="240" x2="510" y2="420" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+
+  <!-- YOU node (center) -->
+  <circle cx="350" cy="240" r="22" fill="#1a1a2e" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="350" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="white">YOU</text>
+
+  <!-- FUTURE NODES (above, inside cone) -->
+  <!-- Arrows FROM you TO future -->
+  <line x1="340" y1="218" x2="300" y2="148" stroke="#2471a3" stroke-width="1.8" marker-end="url(#arr-up)"/>
+  <line x1="350" y1="218" x2="350" y2="118" stroke="#2471a3" stroke-width="1.8" marker-end="url(#arr-up)"/>
+  <line x1="360" y1="218" x2="400" y2="148" stroke="#2471a3" stroke-width="1.8" marker-end="url(#arr-up)"/>
+
+  <circle cx="295" cy="140" r="12" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <circle cx="350" cy="110" r="12" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <circle cx="405" cy="140" r="12" fill="white" stroke="#2471a3" stroke-width="2"/>
+
+  <!-- Second tier future -->
+  <line x1="350" y1="98" x2="350" y2="68" stroke="#2471a3" stroke-width="1.5" marker-end="url(#arr-up)"/>
+  <circle cx="350" cy="60" r="10" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+
+  <!-- Future label -->
+  <text x="540" y="95" font-size="11" font-weight="bold" fill="#2471a3">FUTURE</text>
+  <text x="540" y="112" font-size="9.5" fill="#7a7a6a">These depend on</text>
+  <text x="540" y="125" font-size="9.5" fill="#7a7a6a">your result. They</text>
+  <text x="540" y="138" font-size="9.5" fill="#7a7a6a">evaluate after you.</text>
+
+  <!-- PAST NODES (below, inside cone) -->
+  <line x1="340" y1="262" x2="300" y2="328" stroke="#1e8449" stroke-width="1.8" marker-end="url(#arr-down)"/>
+  <line x1="350" y1="262" x2="350" y2="348" stroke="#1e8449" stroke-width="1.8" marker-end="url(#arr-down)"/>
+  <line x1="360" y1="262" x2="400" y2="328" stroke="#1e8449" stroke-width="1.8" marker-end="url(#arr-down)"/>
+
+  <circle cx="295" cy="338" r="12" fill="white" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="350" cy="358" r="12" fill="white" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="405" cy="338" r="12" fill="white" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- Second tier past -->
+  <line x1="350" y1="370" x2="350" y2="398" stroke="#1e8449" stroke-width="1.5" marker-end="url(#arr-down)"/>
+  <circle cx="350" cy="408" r="10" fill="white" stroke="#1e8449" stroke-width="1.8"/>
+
+  <!-- Past label -->
+  <text x="540" y="340" font-size="11" font-weight="bold" fill="#1e8449">PAST</text>
+  <text x="540" y="357" font-size="9.5" fill="#7a7a6a">You depend on</text>
+  <text x="540" y="370" font-size="9.5" fill="#7a7a6a">these. They evaluated</text>
+  <text x="540" y="383" font-size="9.5" fill="#7a7a6a">before you.</text>
+
+  <!-- SPACELIKE NODES (left, outside cone) -->
+  <circle cx="80" cy="200" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+  <circle cx="110" cy="260" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+  <circle cx="65" cy="280" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+
+  <!-- Spacelike label left -->
+  <text x="20" y="175" font-size="10" font-weight="bold" fill="#7d3c98">SPACELIKE</text>
+  <text x="20" y="190" font-size="9" fill="#7a7a6a">No dependency.</text>
+  <text x="20" y="203" font-size="9" fill="#7a7a6a">No ordering.</text>
+  <text x="20" y="216" font-size="9" fill="#7a7a6a">No shared now.</text>
+  <text x="20" y="229" font-size="9" fill="#7a7a6a">Parallel branch.</text>
+
+  <!-- SPACELIKE NODES (right, outside cone) -->
+  <circle cx="630" cy="210" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+  <circle cx="650" cy="260" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+  <circle cx="620" cy="290" r="10" fill="white" stroke="#7a7a6a" stroke-width="1.8"/>
+
+  <!-- Bottom label -->
+  <line x1="100" y1="450" x2="600" y2="450" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+  <text x="350" y="472" text-anchor="middle" font-size="13" fill="#1a1a1a">The light cone is not a physical law.</text>
+  <text x="350" y="492" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a2e">It is the dependency graph.</text>
+</svg>

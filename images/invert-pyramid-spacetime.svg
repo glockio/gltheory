@@ -1,0 +1,71 @@
+<!-- DESCRIPTION: Same data as the call-stack-pyramid but inverted. The mountain shape is now flipped to a well shape. Over the top of it, a grid of lines (the "spacetime fabric") is draped, curving downward into the well at the center and flat at the edges — exactly like the classic spacetime curvature diagrams from physics textbooks. The mass node is at the bottom of the well. Label: "INVERT THE CALL STACK TOPOLOGY." Second label on the fabric: "THIS IS SPACETIME CURVATURE." Third label: "Same shape. Different perspective. The call stack IS the curvature." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- Spacetime fabric grid - horizontal lines curving into the well -->
+  <!-- Row 1 (top, flattest) -->
+  <path d="M 50,60 Q 250,60 350,65 Q 450,90 450,90 Q 450,90 550,65 Q 650,60 850,60" fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.6"/>
+  <!-- Row 2 -->
+  <path d="M 50,85 Q 250,85 340,95 Q 450,130 450,130 Q 450,130 560,95 Q 650,85 850,85" fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.65"/>
+  <!-- Row 3 -->
+  <path d="M 50,110 Q 250,110 330,130 Q 450,175 450,175 Q 450,175 570,130 Q 650,110 850,110" fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.7"/>
+  <!-- Row 4 -->
+  <path d="M 50,135 Q 250,135 320,165 Q 450,220 450,220 Q 450,220 580,165 Q 650,135 850,135" fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.75"/>
+  <!-- Row 5 -->
+  <path d="M 50,160 Q 250,160 310,200 Q 450,265 450,265 Q 450,265 590,200 Q 650,160 850,160" fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.8"/>
+  <!-- Row 6 (deepest visible) -->
+  <path d="M 50,185 Q 250,185 300,235 Q 450,305 450,305 Q 450,305 600,235 Q 650,185 850,185" fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.85"/>
+
+  <!-- Vertical grid lines curving into the well -->
+  <path d="M 100,55 Q 100,185 100,190" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 200,55 Q 200,185 200,190" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 300,55 Q 300,160 310,200 L 330,235" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 370,55 Q 370,130 390,180 L 420,270" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 450,55 Q 450,100 450,305" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.5"/>
+  <path d="M 530,55 Q 530,130 510,180 L 480,270" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 600,55 Q 600,160 590,200 L 570,235" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 700,55 Q 700,185 700,190" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 800,55 Q 800,185 800,190" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+
+  <!-- Well outline (the inverted pyramid) -->
+  <path d="M 200,60 L 350,60 L 450,310 L 550,60 L 700,60" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="6,4" opacity="0.3"/>
+
+  <!-- Left wall of well -->
+  <line x1="350" y1="60" x2="450" y2="310" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
+  <!-- Right wall of well -->
+  <line x1="550" y1="60" x2="450" y2="310" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.4"/>
+
+  <!-- Mass node at the bottom of the well -->
+  <circle cx="450" cy="315" r="8" fill="#c0392b" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="450" y="340" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="600">mass</text>
+
+  <!-- Nodes along the well edges to show structure -->
+  <circle cx="350" cy="60" r="4" fill="#1a1a1a"/>
+  <circle cx="400" cy="185" r="3.5" fill="#1a1a1a" opacity="0.7"/>
+  <circle cx="425" cy="248" r="3.5" fill="#1a1a1a" opacity="0.7"/>
+  <circle cx="475" cy="248" r="3.5" fill="#1a1a1a" opacity="0.7"/>
+  <circle cx="500" cy="185" r="3.5" fill="#1a1a1a" opacity="0.7"/>
+  <circle cx="550" cy="60" r="4" fill="#1a1a1a"/>
+
+  <!-- Flat edge nodes -->
+  <circle cx="200" cy="60" r="3" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="250" cy="60" r="3" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="650" cy="60" r="3" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="700" cy="60" r="3" fill="#7a7a6a" opacity="0.5"/>
+
+  <!-- Label 1 -->
+  <text x="130" y="280" font-size="14" fill="#1a1a2e" font-weight="700" text-transform="uppercase">INVERT THE</text>
+  <text x="130" y="298" font-size="14" fill="#1a1a2e" font-weight="700" text-transform="uppercase">CALL STACK TOPOLOGY.</text>
+
+  <!-- Label 2 on the fabric -->
+  <text x="640" y="100" font-size="13" fill="#2471a3" font-weight="600">THIS IS SPACETIME</text>
+  <text x="640" y="118" font-size="13" fill="#2471a3" font-weight="600">CURVATURE.</text>
+  <!-- Arrow from label to fabric -->
+  <line x1="638" y1="105" x2="610" y2="105" stroke="#2471a3" stroke-width="1" marker-end="none" opacity="0.5"/>
+
+  <!-- Label 3 -->
+  <text x="250" y="375" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">Same shape. Different perspective.</text>
+  <text x="600" y="375" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">The call stack IS the curvature.</text>
+</svg>

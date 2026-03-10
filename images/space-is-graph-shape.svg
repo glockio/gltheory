@@ -1,0 +1,120 @@
+<!-- DESCRIPTION: Three panels at increasing zoom. Left (ZOOMED IN): individual dots and lines, clearly discrete. Center (MEDIUM ZOOM): dense mesh, structure becoming less obvious. Right (ZOOMED OUT): smooth flowing continuous shape — like a manifold or curved surface. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- PANEL 1: ZOOMED IN - discrete dots and lines -->
+  <rect x="15" y="15" width="260" height="250" rx="6" fill="none" stroke="#a8dadc" stroke-width="1"/>
+  <text x="145" y="38" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="700">ZOOMED IN</text>
+  <text x="145" y="52" text-anchor="middle" font-size="9" fill="#7a7a6a">clearly discrete</text>
+
+  <!-- Scattered nodes with visible edges -->
+  <circle cx="65" cy="90" r="5" fill="#1a1a1a"/>
+  <circle cx="120" cy="75" r="5" fill="#1a1a1a"/>
+  <circle cx="170" cy="100" r="5" fill="#1a1a1a"/>
+  <circle cx="90" cy="140" r="5" fill="#1a1a1a"/>
+  <circle cx="145" cy="145" r="5" fill="#1a1a1a"/>
+  <circle cx="200" cy="130" r="5" fill="#1a1a1a"/>
+  <circle cx="230" cy="85" r="5" fill="#1a1a1a"/>
+  <circle cx="60" cy="190" r="5" fill="#1a1a1a"/>
+  <circle cx="115" cy="200" r="5" fill="#1a1a1a"/>
+  <circle cx="175" cy="195" r="5" fill="#1a1a1a"/>
+  <circle cx="225" cy="180" r="5" fill="#1a1a1a"/>
+  <circle cx="140" cy="240" r="5" fill="#1a1a1a"/>
+  <circle cx="210" cy="230" r="5" fill="#1a1a1a"/>
+
+  <!-- Edges between nearby nodes -->
+  <line x1="65" y1="90" x2="120" y2="75" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="120" y1="75" x2="170" y2="100" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="170" y1="100" x2="230" y2="85" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="65" y1="90" x2="90" y2="140" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="120" y1="75" x2="145" y2="145" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="90" y1="140" x2="145" y2="145" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="145" y1="145" x2="200" y2="130" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="170" y1="100" x2="200" y2="130" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="200" y1="130" x2="230" y2="85" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="90" y1="140" x2="60" y2="190" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="60" y1="190" x2="115" y2="200" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="145" y1="145" x2="175" y2="195" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="115" y1="200" x2="175" y2="195" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="200" y1="130" x2="225" y2="180" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="175" y1="195" x2="225" y2="180" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="115" y1="200" x2="140" y2="240" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="175" y1="195" x2="210" y2="230" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="140" y1="240" x2="210" y2="230" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="225" y1="180" x2="210" y2="230" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Arrow between panels -->
+  <line x1="285" y1="140" x2="310" y2="140" stroke="#7a7a6a" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- PANEL 2: MEDIUM ZOOM - dense mesh -->
+  <rect x="320" y="15" width="260" height="250" rx="6" fill="none" stroke="#a8dadc" stroke-width="1"/>
+  <text x="450" y="38" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="700">MEDIUM ZOOM</text>
+  <text x="450" y="52" text-anchor="middle" font-size="9" fill="#7a7a6a">structure fading</text>
+
+  <!-- Dense mesh of tiny dots and thin lines -->
+  <!-- Generate a denser grid pattern -->
+  <g opacity="0.55">
+    <!-- Rows of small dots with dense connections -->
+    <!-- Row 1 -->
+    <circle cx="345" cy="70" r="2" fill="#1a1a1a"/><circle cx="365" cy="72" r="2" fill="#1a1a1a"/><circle cx="385" cy="69" r="2" fill="#1a1a1a"/><circle cx="405" cy="73" r="2" fill="#1a1a1a"/><circle cx="425" cy="68" r="2" fill="#1a1a1a"/><circle cx="445" cy="71" r="2" fill="#1a1a1a"/><circle cx="465" cy="74" r="2" fill="#1a1a1a"/><circle cx="485" cy="70" r="2" fill="#1a1a1a"/><circle cx="505" cy="72" r="2" fill="#1a1a1a"/><circle cx="525" cy="69" r="2" fill="#1a1a1a"/><circle cx="545" cy="73" r="2" fill="#1a1a1a"/><circle cx="555" cy="68" r="2" fill="#1a1a1a"/>
+    <!-- Row 2 -->
+    <circle cx="340" cy="90" r="2" fill="#1a1a1a"/><circle cx="358" cy="92" r="2" fill="#1a1a1a"/><circle cx="378" cy="88" r="2" fill="#1a1a1a"/><circle cx="398" cy="93" r="2" fill="#1a1a1a"/><circle cx="418" cy="87" r="2" fill="#1a1a1a"/><circle cx="438" cy="91" r="2" fill="#1a1a1a"/><circle cx="458" cy="94" r="2" fill="#1a1a1a"/><circle cx="478" cy="89" r="2" fill="#1a1a1a"/><circle cx="498" cy="92" r="2" fill="#1a1a1a"/><circle cx="518" cy="88" r="2" fill="#1a1a1a"/><circle cx="538" cy="93" r="2" fill="#1a1a1a"/><circle cx="558" cy="90" r="2" fill="#1a1a1a"/>
+    <!-- Row 3-8 similar dense patterns -->
+    <circle cx="342" cy="110" r="2" fill="#1a1a1a"/><circle cx="362" cy="113" r="2" fill="#1a1a1a"/><circle cx="382" cy="108" r="2" fill="#1a1a1a"/><circle cx="402" cy="114" r="2" fill="#1a1a1a"/><circle cx="422" cy="107" r="2" fill="#1a1a1a"/><circle cx="442" cy="112" r="2" fill="#1a1a1a"/><circle cx="462" cy="115" r="2" fill="#1a1a1a"/><circle cx="482" cy="109" r="2" fill="#1a1a1a"/><circle cx="502" cy="113" r="2" fill="#1a1a1a"/><circle cx="522" cy="108" r="2" fill="#1a1a1a"/><circle cx="542" cy="114" r="2" fill="#1a1a1a"/><circle cx="557" cy="111" r="2" fill="#1a1a1a"/>
+    <circle cx="338" cy="132" r="2" fill="#1a1a1a"/><circle cx="358" cy="134" r="2" fill="#1a1a1a"/><circle cx="378" cy="130" r="2" fill="#1a1a1a"/><circle cx="398" cy="135" r="2" fill="#1a1a1a"/><circle cx="418" cy="128" r="2" fill="#1a1a1a"/><circle cx="438" cy="133" r="2" fill="#1a1a1a"/><circle cx="458" cy="136" r="2" fill="#1a1a1a"/><circle cx="478" cy="131" r="2" fill="#1a1a1a"/><circle cx="498" cy="134" r="2" fill="#1a1a1a"/><circle cx="518" cy="130" r="2" fill="#1a1a1a"/><circle cx="538" cy="135" r="2" fill="#1a1a1a"/><circle cx="556" cy="132" r="2" fill="#1a1a1a"/>
+    <circle cx="340" cy="153" r="2" fill="#1a1a1a"/><circle cx="360" cy="155" r="2" fill="#1a1a1a"/><circle cx="380" cy="151" r="2" fill="#1a1a1a"/><circle cx="400" cy="156" r="2" fill="#1a1a1a"/><circle cx="420" cy="149" r="2" fill="#1a1a1a"/><circle cx="440" cy="154" r="2" fill="#1a1a1a"/><circle cx="460" cy="157" r="2" fill="#1a1a1a"/><circle cx="480" cy="152" r="2" fill="#1a1a1a"/><circle cx="500" cy="155" r="2" fill="#1a1a1a"/><circle cx="520" cy="151" r="2" fill="#1a1a1a"/><circle cx="540" cy="156" r="2" fill="#1a1a1a"/><circle cx="558" cy="153" r="2" fill="#1a1a1a"/>
+    <circle cx="342" cy="174" r="2" fill="#1a1a1a"/><circle cx="362" cy="176" r="2" fill="#1a1a1a"/><circle cx="382" cy="172" r="2" fill="#1a1a1a"/><circle cx="402" cy="177" r="2" fill="#1a1a1a"/><circle cx="422" cy="170" r="2" fill="#1a1a1a"/><circle cx="442" cy="175" r="2" fill="#1a1a1a"/><circle cx="462" cy="178" r="2" fill="#1a1a1a"/><circle cx="482" cy="173" r="2" fill="#1a1a1a"/><circle cx="502" cy="176" r="2" fill="#1a1a1a"/><circle cx="522" cy="172" r="2" fill="#1a1a1a"/><circle cx="542" cy="177" r="2" fill="#1a1a1a"/><circle cx="555" cy="174" r="2" fill="#1a1a1a"/>
+    <circle cx="338" cy="195" r="2" fill="#1a1a1a"/><circle cx="358" cy="198" r="2" fill="#1a1a1a"/><circle cx="378" cy="193" r="2" fill="#1a1a1a"/><circle cx="398" cy="199" r="2" fill="#1a1a1a"/><circle cx="418" cy="192" r="2" fill="#1a1a1a"/><circle cx="438" cy="197" r="2" fill="#1a1a1a"/><circle cx="458" cy="200" r="2" fill="#1a1a1a"/><circle cx="478" cy="194" r="2" fill="#1a1a1a"/><circle cx="498" cy="198" r="2" fill="#1a1a1a"/><circle cx="518" cy="193" r="2" fill="#1a1a1a"/><circle cx="538" cy="199" r="2" fill="#1a1a1a"/><circle cx="556" cy="196" r="2" fill="#1a1a1a"/>
+    <circle cx="340" cy="217" r="2" fill="#1a1a1a"/><circle cx="360" cy="219" r="2" fill="#1a1a1a"/><circle cx="380" cy="215" r="2" fill="#1a1a1a"/><circle cx="400" cy="220" r="2" fill="#1a1a1a"/><circle cx="420" cy="213" r="2" fill="#1a1a1a"/><circle cx="440" cy="218" r="2" fill="#1a1a1a"/><circle cx="460" cy="221" r="2" fill="#1a1a1a"/><circle cx="480" cy="216" r="2" fill="#1a1a1a"/><circle cx="500" cy="219" r="2" fill="#1a1a1a"/><circle cx="520" cy="215" r="2" fill="#1a1a1a"/><circle cx="540" cy="220" r="2" fill="#1a1a1a"/><circle cx="557" cy="217" r="2" fill="#1a1a1a"/>
+    <circle cx="342" cy="238" r="2" fill="#1a1a1a"/><circle cx="362" cy="240" r="2" fill="#1a1a1a"/><circle cx="382" cy="236" r="2" fill="#1a1a1a"/><circle cx="402" cy="241" r="2" fill="#1a1a1a"/><circle cx="422" cy="235" r="2" fill="#1a1a1a"/><circle cx="442" cy="239" r="2" fill="#1a1a1a"/><circle cx="462" cy="242" r="2" fill="#1a1a1a"/><circle cx="482" cy="237" r="2" fill="#1a1a1a"/><circle cx="502" cy="240" r="2" fill="#1a1a1a"/><circle cx="522" cy="236" r="2" fill="#1a1a1a"/><circle cx="542" cy="241" r="2" fill="#1a1a1a"/><circle cx="555" cy="238" r="2" fill="#1a1a1a"/>
+  </g>
+
+  <!-- Thin mesh lines for medium zoom -->
+  <g stroke="#7a7a6a" stroke-width="0.4" opacity="0.25">
+    <!-- Horizontal mesh lines -->
+    <line x1="335" y1="70" x2="560" y2="71"/><line x1="335" y1="91" x2="560" y2="91"/><line x1="335" y1="111" x2="560" y2="112"/><line x1="335" y1="132" x2="560" y2="133"/><line x1="335" y1="153" x2="560" y2="154"/><line x1="335" y1="174" x2="560" y2="175"/><line x1="335" y1="196" x2="560" y2="197"/><line x1="335" y1="217" x2="560" y2="218"/><line x1="335" y1="238" x2="560" y2="239"/>
+    <!-- Vertical mesh lines -->
+    <line x1="345" y1="65" x2="342" y2="243"/><line x1="365" y1="67" x2="362" y2="245"/><line x1="385" y1="64" x2="382" y2="241"/><line x1="405" y1="68" x2="402" y2="246"/><line x1="425" y1="63" x2="422" y2="240"/><line x1="445" y1="66" x2="442" y2="244"/><line x1="465" y1="69" x2="462" y2="247"/><line x1="485" y1="65" x2="482" y2="242"/><line x1="505" y1="67" x2="502" y2="245"/><line x1="525" y1="64" x2="522" y2="241"/><line x1="545" y1="68" x2="542" y2="246"/>
+  </g>
+
+  <!-- Arrow between panels -->
+  <line x1="590" y1="140" x2="615" y2="140" stroke="#7a7a6a" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- PANEL 3: ZOOMED OUT - smooth continuous surface -->
+  <rect x="625" y="15" width="260" height="250" rx="6" fill="none" stroke="#a8dadc" stroke-width="1"/>
+  <text x="755" y="38" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="700">ZOOMED OUT</text>
+  <text x="755" y="52" text-anchor="middle" font-size="9" fill="#7a7a6a">smooth continuum</text>
+
+  <!-- Smooth flowing surface / manifold shape -->
+  <path d="M 645,120 Q 680,80 720,90 Q 760,100 780,75 Q 810,60 840,85 Q 865,105 870,130"
+        fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.6"/>
+  <path d="M 645,145 Q 680,105 720,115 Q 760,125 780,100 Q 810,85 840,110 Q 865,130 870,155"
+        fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.5"/>
+  <path d="M 645,170 Q 680,130 720,140 Q 760,150 780,125 Q 810,110 840,135 Q 865,155 870,180"
+        fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.4"/>
+  <path d="M 645,195 Q 680,155 720,165 Q 760,175 780,150 Q 810,135 840,160 Q 865,180 870,205"
+        fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.35"/>
+  <path d="M 645,220 Q 680,180 720,190 Q 760,200 780,175 Q 810,160 840,185 Q 865,205 870,230"
+        fill="none" stroke="#1a1a1a" stroke-width="2" opacity="0.3"/>
+
+  <!-- Cross lines for surface feel -->
+  <path d="M 660,110 Q 665,140 660,175 Q 658,200 660,225" fill="none" stroke="#1a1a1a" stroke-width="1.2" opacity="0.2"/>
+  <path d="M 700,85 Q 705,120 702,155 Q 700,185 703,215" fill="none" stroke="#1a1a1a" stroke-width="1.2" opacity="0.2"/>
+  <path d="M 740,95 Q 742,125 740,160 Q 738,190 740,220" fill="none" stroke="#1a1a1a" stroke-width="1.2" opacity="0.2"/>
+  <path d="M 780,72 Q 782,105 780,140 Q 778,170 780,200" fill="none" stroke="#1a1a1a" stroke-width="1.2" opacity="0.2"/>
+  <path d="M 820,70 Q 822,100 820,135 Q 818,165 820,195" fill="none" stroke="#1a1a1a" stroke-width="1.2" opacity="0.2"/>
+  <path d="M 855,90 Q 857,120 855,155 Q 853,185 855,215" fill="none" stroke="#1a1a1a" stroke-width="1.2" opacity="0.2"/>
+
+  <!-- Subtle gradient fill to suggest surface -->
+  <path d="M 645,120 Q 680,80 720,90 Q 760,100 780,75 Q 810,60 840,85 Q 865,105 870,130 L 870,230 Q 865,205 840,185 Q 810,160 780,175 Q 760,200 720,190 Q 680,180 645,220 Z"
+        fill="#a8dadc" opacity="0.12"/>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#7a7a6a"/>
+    </marker>
+  </defs>
+</svg>

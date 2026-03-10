@@ -1,0 +1,141 @@
+<!-- DESCRIPTION: Three panels showing spreadsheet cell dependency graph changing state. Panel 1 STATE 0: A1=5 (blue, just changed), B1 stale, C1 stale, D1 stale. Panel 2 STATE 1: B1=10 and C1=6 both evaluate (committed, green), D1 still stale. Panel 3 STATE 2: D1=16 now evaluates (committed, green). Arrow below: A1 changed, B1 and C1 in parallel, D1 last. Topological order. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- ===== PANEL 1: STATE 0 ===== -->
+  <text x="140" y="20" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">STATE 0</text>
+
+  <rect x="15" y="30" width="260" height="210" rx="6" fill="none" stroke="#7a7a6a" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- A1 — blue, just changed -->
+  <rect x="105" y="48" width="70" height="36" rx="5" fill="#dbeaf7" stroke="#2471a3" stroke-width="2"/>
+  <text x="140" y="63" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="bold">A1</text>
+  <text x="140" y="77" text-anchor="middle" fill="#2471a3" font-size="10">= 5</text>
+  <text x="182" y="60" fill="#2471a3" font-size="9" font-style="italic">changed!</text>
+
+  <!-- Arrows from A1 to B1 and C1 -->
+  <line x1="110" y1="84" x2="70" y2="120" stroke="#1a1a1a" stroke-width="1.2"/>
+  <polygon points="67,116 65,126 74,120" fill="#1a1a1a"/>
+
+  <line x1="170" y1="84" x2="210" y2="120" stroke="#1a1a1a" stroke-width="1.2"/>
+  <polygon points="213,116 215,126 206,120" fill="#1a1a1a"/>
+
+  <!-- B1 — stale -->
+  <rect x="30" y="126" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="70" y="141" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">B1</text>
+  <text x="70" y="155" text-anchor="middle" fill="#7a7a6a" font-size="9">=A1×2</text>
+  <text x="115" y="148" fill="#7a7a6a" font-size="8">stale</text>
+
+  <!-- C1 — stale -->
+  <rect x="170" y="126" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="210" y="141" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">C1</text>
+  <text x="210" y="155" text-anchor="middle" fill="#7a7a6a" font-size="9">=A1+1</text>
+  <text x="255" y="148" fill="#7a7a6a" font-size="8">stale</text>
+
+  <!-- Arrows from B1 and C1 to D1 -->
+  <line x1="70" y1="162" x2="110" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
+  <polygon points="107,191 106,201 114,195" fill="#1a1a1a"/>
+
+  <line x1="210" y1="162" x2="170" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
+  <polygon points="173,191 174,201 166,195" fill="#1a1a1a"/>
+
+  <!-- D1 — stale -->
+  <rect x="100" y="198" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="140" y="213" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">D1</text>
+  <text x="140" y="227" text-anchor="middle" fill="#7a7a6a" font-size="9">=B1+C1</text>
+
+
+  <!-- ===== PANEL 2: STATE 1 ===== -->
+  <text x="460" y="20" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">STATE 1</text>
+
+  <rect x="320" y="30" width="260" height="210" rx="6" fill="none" stroke="#7a7a6a" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- A1 -->
+  <rect x="410" y="48" width="70" height="36" rx="5" fill="#dbeaf7" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="445" y="63" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="bold">A1</text>
+  <text x="445" y="77" text-anchor="middle" fill="#2471a3" font-size="10">= 5</text>
+
+  <!-- Arrows from A1 -->
+  <line x1="415" y1="84" x2="375" y2="120" stroke="#1e8449" stroke-width="1.2"/>
+  <polygon points="372,116 370,126 379,120" fill="#1e8449"/>
+
+  <line x1="475" y1="84" x2="515" y2="120" stroke="#1e8449" stroke-width="1.2"/>
+  <polygon points="518,116 520,126 511,120" fill="#1e8449"/>
+
+  <!-- B1 — committed = 10 -->
+  <rect x="335" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
+  <text x="375" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">B1</text>
+  <text x="375" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 10</text>
+  <text x="420" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+
+  <!-- C1 — committed = 6 -->
+  <rect x="475" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
+  <text x="515" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">C1</text>
+  <text x="515" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 6</text>
+  <text x="560" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+
+  <!-- Arrows from B1 and C1 to D1 -->
+  <line x1="375" y1="162" x2="415" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
+  <polygon points="412,191 411,201 419,195" fill="#1a1a1a"/>
+
+  <line x1="515" y1="162" x2="475" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
+  <polygon points="478,191 479,201 471,195" fill="#1a1a1a"/>
+
+  <!-- D1 — still stale -->
+  <rect x="405" y="198" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="445" y="213" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">D1</text>
+  <text x="445" y="227" text-anchor="middle" fill="#7a7a6a" font-size="9">=B1+C1</text>
+  <text x="490" y="220" fill="#7a7a6a" font-size="8">stale</text>
+
+  <!-- "parallel" annotation -->
+  <text x="445" y="118" text-anchor="middle" fill="#7a7a6a" font-size="8" font-style="italic">B1 &amp; C1 in parallel</text>
+
+
+  <!-- ===== PANEL 3: STATE 2 ===== -->
+  <text x="760" y="20" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">STATE 2</text>
+
+  <rect x="625" y="30" width="260" height="210" rx="6" fill="none" stroke="#1e8449" stroke-width="1.5"/>
+
+  <!-- A1 -->
+  <rect x="715" y="48" width="70" height="36" rx="5" fill="#dbeaf7" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="750" y="63" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="bold">A1</text>
+  <text x="750" y="77" text-anchor="middle" fill="#2471a3" font-size="10">= 5</text>
+
+  <!-- Arrows -->
+  <line x1="720" y1="84" x2="680" y2="120" stroke="#1e8449" stroke-width="1.2"/>
+  <polygon points="677,116 675,126 684,120" fill="#1e8449"/>
+  <line x1="780" y1="84" x2="820" y2="120" stroke="#1e8449" stroke-width="1.2"/>
+  <polygon points="823,116 825,126 816,120" fill="#1e8449"/>
+
+  <!-- B1 — committed -->
+  <rect x="640" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
+  <text x="680" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">B1</text>
+  <text x="680" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 10</text>
+  <text x="725" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+
+  <!-- C1 — committed -->
+  <rect x="780" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
+  <text x="820" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">C1</text>
+  <text x="820" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 6</text>
+  <text x="865" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+
+  <!-- Arrows to D1 -->
+  <line x1="680" y1="162" x2="720" y2="195" stroke="#1e8449" stroke-width="1.2"/>
+  <polygon points="717,191 716,201 724,195" fill="#1e8449"/>
+  <line x1="820" y1="162" x2="780" y2="195" stroke="#1e8449" stroke-width="1.2"/>
+  <polygon points="783,191 784,201 776,195" fill="#1e8449"/>
+
+  <!-- D1 — committed = 16 -->
+  <rect x="710" y="198" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="750" y="213" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">D1</text>
+  <text x="750" y="227" text-anchor="middle" fill="#1e8449" font-size="10">= 16</text>
+  <text x="795" y="208" fill="#1e8449" font-size="14" font-weight="bold">&#10003;</text>
+
+
+  <!-- Bottom arrow and label -->
+  <line x1="140" y1="270" x2="760" y2="270" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="760,265 772,270 760,275" fill="#1a1a1a"/>
+  <text x="450" y="290" text-anchor="middle" fill="#7a7a6a" font-size="11">A1 changed → B1 and C1 in parallel → D1 last. Topological order.</text>
+</svg>

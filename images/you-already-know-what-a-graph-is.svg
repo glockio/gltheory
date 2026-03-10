@@ -1,0 +1,113 @@
+<!-- DESCRIPTION: Three simple graphs side by side: a family tree (5 people, parent-child lines), a social network (6 people, friend connections), and a recipe (4 steps with directional arrows: Mix, Bake, Cool, Frost). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- FAMILY TREE -->
+  <text x="130" y="24" text-anchor="middle" fill="#1a1a1a" font-size="13" font-weight="bold">Family Tree</text>
+
+  <!-- Grandparent -->
+  <circle cx="130" cy="60" r="10" fill="#2471a3" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="130" y="64" text-anchor="middle" fill="white" font-size="8" font-weight="bold">G</text>
+
+  <!-- Parent left -->
+  <circle cx="80" cy="120" r="10" fill="#2471a3" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="80" y="124" text-anchor="middle" fill="white" font-size="8" font-weight="bold">P1</text>
+
+  <!-- Parent right -->
+  <circle cx="180" cy="120" r="10" fill="#2471a3" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="180" y="124" text-anchor="middle" fill="white" font-size="8" font-weight="bold">P2</text>
+
+  <!-- Child left -->
+  <circle cx="60" cy="185" r="10" fill="#a8dadc" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="60" y="189" text-anchor="middle" fill="#1a1a2e" font-size="8" font-weight="bold">C1</text>
+
+  <!-- Child right -->
+  <circle cx="100" cy="185" r="10" fill="#a8dadc" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="100" y="189" text-anchor="middle" fill="#1a1a2e" font-size="8" font-weight="bold">C2</text>
+
+  <!-- Edges -->
+  <line x1="122" y1="68" x2="88" y2="112" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="138" y1="68" x2="172" y2="112" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="74" y1="128" x2="66" y2="177" stroke="#1a1a1a" stroke-width="1.5"/>
+  <line x1="86" y1="128" x2="94" y2="177" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- Label -->
+  <text x="130" y="220" text-anchor="middle" fill="#7a7a6a" font-size="10">parent-child edges</text>
+
+  <!-- Divider -->
+  <line x1="268" y1="20" x2="268" y2="240" stroke="#7a7a6a" stroke-width="0.8" stroke-dasharray="4,4"/>
+
+  <!-- SOCIAL NETWORK -->
+  <text x="420" y="24" text-anchor="middle" fill="#1a1a1a" font-size="13" font-weight="bold">Social Network</text>
+
+  <!-- 6 people arranged in a rough circle -->
+  <circle cx="420" cy="60" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="420" y="64" text-anchor="middle" fill="white" font-size="7">A</text>
+
+  <circle cx="475" cy="90" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="475" y="94" text-anchor="middle" fill="white" font-size="7">B</text>
+
+  <circle cx="475" cy="155" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="475" y="159" text-anchor="middle" fill="white" font-size="7">C</text>
+
+  <circle cx="420" cy="185" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="420" y="189" text-anchor="middle" fill="white" font-size="7">D</text>
+
+  <circle cx="365" cy="155" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="365" y="159" text-anchor="middle" fill="white" font-size="7">E</text>
+
+  <circle cx="365" cy="90" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="365" y="94" text-anchor="middle" fill="white" font-size="7">F</text>
+
+  <!-- Friend connections (undirected) -->
+  <line x1="430" y1="60" x2="465" y2="88" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="410" y1="60" x2="375" y2="88" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="475" y1="100" x2="475" y2="145" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="365" y1="100" x2="365" y2="145" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="466" y1="161" x2="430" y2="181" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="375" y1="159" x2="410" y2="181" stroke="#1a1a1a" stroke-width="1.2"/>
+  <line x1="420" y1="70" x2="420" y2="175" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="375" y1="93" x2="465" y2="152" stroke="#1a1a1a" stroke-width="1"/>
+
+  <!-- Label -->
+  <text x="420" y="220" text-anchor="middle" fill="#7a7a6a" font-size="10">friend connections</text>
+
+  <!-- Divider -->
+  <line x1="540" y1="20" x2="540" y2="240" stroke="#7a7a6a" stroke-width="0.8" stroke-dasharray="4,4"/>
+
+  <!-- RECIPE -->
+  <text x="670" y="24" text-anchor="middle" fill="#1a1a1a" font-size="13" font-weight="bold">Recipe</text>
+
+  <!-- Mix -->
+  <circle cx="670" cy="60" r="14" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="670" y="64" text-anchor="middle" fill="white" font-size="9" font-weight="bold">Mix</text>
+
+  <!-- Arrow down -->
+  <line x1="670" y1="74" x2="670" y2="92" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="665,90 670,98 675,90" fill="#1a1a1a"/>
+
+  <!-- Bake -->
+  <circle cx="670" cy="110" r="14" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="670" y="114" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Bake</text>
+
+  <!-- Arrow down -->
+  <line x1="670" y1="124" x2="670" y2="142" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="665,140 670,148 675,140" fill="#1a1a1a"/>
+
+  <!-- Cool -->
+  <circle cx="670" cy="160" r="14" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="670" y="164" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Cool</text>
+
+  <!-- Arrow down -->
+  <line x1="670" y1="174" x2="670" y2="192" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="665,190 670,198 675,190" fill="#1a1a1a"/>
+
+  <!-- Frost -->
+  <circle cx="670" cy="210" r="14" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="670" y="214" text-anchor="middle" fill="white" font-size="8" font-weight="bold">Frost</text>
+
+  <!-- Label -->
+  <text x="670" y="245" text-anchor="middle" fill="#7a7a6a" font-size="10">directional steps</text>
+</svg>

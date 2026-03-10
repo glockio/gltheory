@@ -1,0 +1,165 @@
+<!-- DESCRIPTION: Three graphs increasing in size left to right with "evaluate →" arrows between them. Left graph: 5 nodes (small). Center graph: approximately 12 nodes (medium). Right graph: approximately 35 nodes (large). Below all three: "More graph → more evaluations → more return values → more new nodes. Growth proportional to size = acceleration." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- GRAPH 1: Small (5 nodes) -->
+  <text x="130" y="28" text-anchor="middle" font-size="10" fill="#7a7a6a">t = 0</text>
+
+  <circle cx="130" cy="80" r="6" fill="#1a1a1a"/>
+  <circle cx="100" cy="120" r="6" fill="#1a1a1a"/>
+  <circle cx="160" cy="120" r="6" fill="#1a1a1a"/>
+  <circle cx="85" cy="165" r="6" fill="#1a1a1a"/>
+  <circle cx="145" cy="165" r="6" fill="#1a1a1a"/>
+
+  <line x1="130" y1="86" x2="100" y2="114" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="130" y1="86" x2="160" y2="114" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="126" x2="85" y2="159" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="126" x2="145" y2="159" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="160" y1="126" x2="145" y2="159" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Node count -->
+  <text x="130" y="198" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="600">5 nodes</text>
+
+  <!-- Arrow: evaluate -->
+  <text x="250" y="110" text-anchor="middle" font-size="10" fill="#2471a3" font-weight="600">evaluate</text>
+  <line x1="220" y1="120" x2="275" y2="120" stroke="#2471a3" stroke-width="1.5"/>
+  <polygon points="273,116 280,120 273,124" fill="#2471a3"/>
+
+  <!-- GRAPH 2: Medium (~12 nodes) -->
+  <text x="420" y="28" text-anchor="middle" font-size="10" fill="#7a7a6a">t = 1</text>
+
+  <!-- Core nodes -->
+  <circle cx="420" cy="55" r="5" fill="#1a1a1a"/>
+  <circle cx="385" cy="80" r="5" fill="#1a1a1a"/>
+  <circle cx="455" cy="80" r="5" fill="#1a1a1a"/>
+  <circle cx="365" cy="110" r="5" fill="#1a1a1a"/>
+  <circle cx="405" cy="110" r="5" fill="#1a1a1a"/>
+  <circle cx="435" cy="110" r="5" fill="#1a1a1a"/>
+  <circle cx="475" cy="110" r="5" fill="#1a1a1a"/>
+  <circle cx="350" cy="145" r="5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="390" cy="145" r="5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="420" cy="145" r="5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="450" cy="145" r="5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="485" cy="145" r="5" fill="#1e8449" opacity="0.7"/>
+
+  <!-- Edges -->
+  <line x1="420" y1="60" x2="385" y2="75" stroke="#7a7a6a" stroke-width="1" opacity="0.4"/>
+  <line x1="420" y1="60" x2="455" y2="75" stroke="#7a7a6a" stroke-width="1" opacity="0.4"/>
+  <line x1="385" y1="85" x2="365" y2="105" stroke="#7a7a6a" stroke-width="1" opacity="0.4"/>
+  <line x1="385" y1="85" x2="405" y2="105" stroke="#7a7a6a" stroke-width="1" opacity="0.4"/>
+  <line x1="455" y1="85" x2="435" y2="105" stroke="#7a7a6a" stroke-width="1" opacity="0.4"/>
+  <line x1="455" y1="85" x2="475" y2="105" stroke="#7a7a6a" stroke-width="1" opacity="0.4"/>
+  <line x1="365" y1="115" x2="350" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+  <line x1="365" y1="115" x2="390" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+  <line x1="405" y1="115" x2="390" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+  <line x1="435" y1="115" x2="420" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+  <line x1="435" y1="115" x2="450" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+  <line x1="475" y1="115" x2="485" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+  <line x1="475" y1="115" x2="450" y2="140" stroke="#1e8449" stroke-width="1" opacity="0.4"/>
+
+  <!-- New nodes label -->
+  <text x="502" y="148" font-size="7" fill="#1e8449" font-style="italic">new</text>
+
+  <!-- Node count -->
+  <text x="420" y="198" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="600">12 nodes</text>
+
+  <!-- Arrow: evaluate -->
+  <text x="555" y="110" text-anchor="middle" font-size="10" fill="#2471a3" font-weight="600">evaluate</text>
+  <line x1="525" y1="120" x2="580" y2="120" stroke="#2471a3" stroke-width="1.5"/>
+  <polygon points="578,116 585,120 578,124" fill="#2471a3"/>
+
+  <!-- GRAPH 3: Large (~35 nodes) -->
+  <text x="735" y="28" text-anchor="middle" font-size="10" fill="#7a7a6a">t = 2</text>
+
+  <!-- Dense cloud of nodes -->
+  <!-- Layer 1 -->
+  <circle cx="735" cy="45" r="4" fill="#1a1a1a"/>
+  <!-- Layer 2 -->
+  <circle cx="710" cy="60" r="4" fill="#1a1a1a"/>
+  <circle cx="760" cy="60" r="4" fill="#1a1a1a"/>
+  <!-- Layer 3 -->
+  <circle cx="690" cy="78" r="4" fill="#1a1a1a"/>
+  <circle cx="720" cy="78" r="4" fill="#1a1a1a"/>
+  <circle cx="750" cy="78" r="4" fill="#1a1a1a"/>
+  <circle cx="780" cy="78" r="4" fill="#1a1a1a"/>
+  <!-- Layer 4 -->
+  <circle cx="670" cy="96" r="4" fill="#1a1a1a"/>
+  <circle cx="700" cy="96" r="4" fill="#1a1a1a"/>
+  <circle cx="730" cy="96" r="4" fill="#1a1a1a"/>
+  <circle cx="760" cy="96" r="4" fill="#1a1a1a"/>
+  <circle cx="790" cy="96" r="4" fill="#1a1a1a"/>
+  <circle cx="810" cy="96" r="3.5" fill="#1a1a1a"/>
+  <!-- Layer 5 -->
+  <circle cx="655" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="680" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="705" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="730" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="755" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="780" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="805" cy="114" r="3.5" fill="#1a1a1a"/>
+  <circle cx="825" cy="114" r="3.5" fill="#1a1a1a"/>
+  <!-- Layer 6 (new nodes, green) -->
+  <circle cx="640" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="660" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="680" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="700" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="720" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="740" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="760" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="780" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="800" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="820" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <circle cx="840" cy="135" r="3.5" fill="#1e8449" opacity="0.7"/>
+  <!-- Layer 7 (more new) -->
+  <circle cx="650" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="675" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="700" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="725" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="750" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="775" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="800" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+  <circle cx="825" cy="155" r="3" fill="#1e8449" opacity="0.5"/>
+
+  <!-- Dense edge network (thin, faint) -->
+  <g stroke="#7a7a6a" stroke-width="0.6" opacity="0.25">
+    <line x1="735" y1="49" x2="710" y2="56"/><line x1="735" y1="49" x2="760" y2="56"/>
+    <line x1="710" y1="64" x2="690" y2="74"/><line x1="710" y1="64" x2="720" y2="74"/>
+    <line x1="760" y1="64" x2="750" y2="74"/><line x1="760" y1="64" x2="780" y2="74"/>
+    <line x1="690" y1="82" x2="670" y2="92"/><line x1="690" y1="82" x2="700" y2="92"/>
+    <line x1="720" y1="82" x2="700" y2="92"/><line x1="720" y1="82" x2="730" y2="92"/>
+    <line x1="750" y1="82" x2="730" y2="92"/><line x1="750" y1="82" x2="760" y2="92"/>
+    <line x1="780" y1="82" x2="790" y2="92"/><line x1="780" y1="82" x2="760" y2="92"/>
+    <line x1="670" y1="100" x2="655" y2="110"/><line x1="670" y1="100" x2="680" y2="110"/>
+    <line x1="700" y1="100" x2="705" y2="110"/><line x1="730" y1="100" x2="730" y2="110"/>
+    <line x1="760" y1="100" x2="755" y2="110"/><line x1="790" y1="100" x2="780" y2="110"/>
+    <line x1="790" y1="100" x2="805" y2="110"/><line x1="810" y1="100" x2="825" y2="110"/>
+  </g>
+  <!-- New node edges (green tint) -->
+  <g stroke="#1e8449" stroke-width="0.5" opacity="0.3">
+    <line x1="655" y1="118" x2="640" y2="131"/><line x1="655" y1="118" x2="660" y2="131"/>
+    <line x1="680" y1="118" x2="680" y2="131"/><line x1="705" y1="118" x2="700" y2="131"/>
+    <line x1="730" y1="118" x2="720" y2="131"/><line x1="730" y1="118" x2="740" y2="131"/>
+    <line x1="755" y1="118" x2="760" y2="131"/><line x1="780" y1="118" x2="780" y2="131"/>
+    <line x1="805" y1="118" x2="800" y2="131"/><line x1="825" y1="118" x2="820" y2="131"/>
+    <line x1="825" y1="118" x2="840" y2="131"/>
+    <line x1="640" y1="139" x2="650" y2="151"/><line x1="680" y1="139" x2="675" y2="151"/>
+    <line x1="720" y1="139" x2="725" y2="151"/><line x1="760" y1="139" x2="750" y2="151"/>
+    <line x1="800" y1="139" x2="800" y2="151"/><line x1="820" y1="139" x2="825" y2="151"/>
+  </g>
+
+  <!-- New nodes label -->
+  <text x="855" y="140" font-size="7" fill="#1e8449" font-style="italic">new</text>
+
+  <!-- Node count -->
+  <text x="735" y="198" text-anchor="middle" font-size="11" fill="#1a1a2e" font-weight="600">~35 nodes</text>
+
+  <!-- Bottom summary -->
+  <text x="450" y="240" text-anchor="middle" font-size="12" fill="#1a1a2e">
+    More graph  -->  more evaluations  -->  more return values  -->  more new nodes.
+  </text>
+  <text x="450" y="268" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="700">
+    Growth proportional to size = acceleration.
+  </text>
+</svg>

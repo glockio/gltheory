@@ -1,0 +1,122 @@
+<!-- DESCRIPTION: Three panels. Left panel (blue, "STABLE TOPOLOGY — MASS"): a subgraph with fixed edges shown twice (Walk 1 and Walk 2), both producing the same result. Label: "Same walk. Same result. Every time. That's mass." Center panel (orange, "DISRUPTION — ENERGY INPUT"): new edge being added to the subgraph, labeled "Energy arrives. Topology changes." Right panel (green, "PROPAGATION — RELEASED ENERGY"): the subgraph with new structure, delta arrows radiating outward, labeled "New walk. Different result. Delta propagates outward. That's released energy." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="DM Sans, sans-serif">
+  <rect width="900" height="300" fill="white" fill-opacity="0"/>
+
+  <defs>
+    <marker id="m-blue" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#2471a3" stroke="none"/>
+    </marker>
+    <marker id="m-orange" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#d35400" stroke="none"/>
+    </marker>
+    <marker id="m-green" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#1e8449" stroke="none"/>
+    </marker>
+    <marker id="m-red" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#c0392b" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- PANEL 1: STABLE TOPOLOGY — MASS -->
+  <rect x="15" y="15" width="275" height="270" rx="8" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <text x="152" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3">STABLE TOPOLOGY</text>
+  <text x="152" y="56" text-anchor="middle" font-size="10" fill="#7a7a6a">MASS</text>
+
+  <!-- Walk 1 subgraph -->
+  <text x="80" y="78" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="bold">Walk 1</text>
+  <!-- Nodes -->
+  <circle cx="80" cy="95" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="80" y1="103" x2="60" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <line x1="80" y1="103" x2="100" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <circle cx="55" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <circle cx="105" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="55" y1="143" x2="80" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <line x1="105" y1="143" x2="80" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <circle cx="80" cy="170" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <!-- Result -->
+  <text x="80" y="195" text-anchor="middle" font-size="9" fill="#2471a3">= 42</text>
+
+  <!-- Walk 2 subgraph (identical) -->
+  <text x="215" y="78" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="bold">Walk 2</text>
+  <circle cx="215" cy="95" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="215" y1="103" x2="195" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <line x1="215" y1="103" x2="235" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <circle cx="190" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <circle cx="240" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="190" y1="143" x2="215" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <line x1="240" y1="143" x2="215" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
+  <circle cx="215" cy="170" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
+  <!-- Same result -->
+  <text x="215" y="195" text-anchor="middle" font-size="9" fill="#2471a3">= 42</text>
+
+  <!-- Equals sign between -->
+  <text x="148" y="145" text-anchor="middle" font-size="18" fill="#2471a3" font-weight="bold">=</text>
+
+  <!-- Label -->
+  <text x="152" y="228" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Same walk. Same result.</text>
+  <text x="152" y="243" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Every time.</text>
+  <text x="152" y="262" text-anchor="middle" font-size="10" font-weight="bold" fill="#2471a3">That's mass.</text>
+
+  <!-- PANEL 2: DISRUPTION — ENERGY INPUT -->
+  <rect x="310" y="15" width="275" height="270" rx="8" fill="white" stroke="#d35400" stroke-width="2"/>
+  <text x="447" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#d35400">DISRUPTION</text>
+  <text x="447" y="56" text-anchor="middle" font-size="10" fill="#7a7a6a">ENERGY INPUT</text>
+
+  <!-- Original subgraph -->
+  <circle cx="447" cy="95" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
+  <line x1="447" y1="103" x2="427" y2="128" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
+  <line x1="447" y1="103" x2="467" y2="128" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
+  <circle cx="422" cy="135" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
+  <circle cx="472" cy="135" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
+  <line x1="422" y1="143" x2="447" y2="163" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
+  <line x1="472" y1="143" x2="447" y2="163" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
+  <circle cx="447" cy="170" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
+
+  <!-- NEW EDGE being added (bold, red, with lightning) -->
+  <line x1="350" y1="115" x2="417" y2="132" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="4,3" marker-end="url(#m-red)"/>
+  <circle cx="345" cy="112" r="6" fill="#c0392b" opacity="0.3"/>
+  <text x="365" y="108" font-size="8" fill="#c0392b" font-weight="bold">new edge</text>
+
+  <!-- Lightning bolt icon -->
+  <path d="M345,90 L340,105 L348,103 L342,118" fill="none" stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="447" y="215" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Energy arrives.</text>
+  <text x="447" y="233" text-anchor="middle" font-size="10" font-weight="bold" fill="#d35400">Topology changes.</text>
+
+  <!-- PANEL 3: PROPAGATION — RELEASED ENERGY -->
+  <rect x="605" y="15" width="280" height="270" rx="8" fill="white" stroke="#1e8449" stroke-width="2"/>
+  <text x="745" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">PROPAGATION</text>
+  <text x="745" y="56" text-anchor="middle" font-size="10" fill="#7a7a6a">RELEASED ENERGY</text>
+
+  <!-- Modified subgraph (new structure - extra node) -->
+  <circle cx="740" cy="90" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
+  <line x1="740" y1="98" x2="710" y2="120" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
+  <line x1="740" y1="98" x2="770" y2="120" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
+  <circle cx="705" cy="128" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
+  <!-- New node integrated -->
+  <circle cx="670" cy="128" r="8" fill="#1e8449" stroke="#1e8449" stroke-width="1.8" opacity="0.3"/>
+  <line x1="678" y1="128" x2="697" y2="128" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="775" cy="128" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
+  <line x1="705" y1="136" x2="740" y2="155" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
+  <line x1="775" y1="136" x2="740" y2="155" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
+  <circle cx="740" cy="162" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
+
+  <!-- Delta arrows radiating outward -->
+  <line x1="748" y1="162" x2="790" y2="162" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
+  <line x1="745" y1="170" x2="780" y2="195" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
+  <line x1="735" y1="170" x2="700" y2="195" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
+  <line x1="732" y1="162" x2="690" y2="162" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
+
+  <!-- Delta symbols at arrow tips -->
+  <text x="795" y="160" font-size="10" fill="#d35400" font-style="italic">delta</text>
+  <text x="782" y="200" font-size="10" fill="#d35400" font-style="italic">delta</text>
+
+  <!-- New result -->
+  <text x="740" y="185" text-anchor="middle" font-size="9" fill="#1e8449">= 47</text>
+
+  <!-- Label -->
+  <text x="745" y="225" text-anchor="middle" font-size="9.5" fill="#1a1a1a">New walk. Different result.</text>
+  <text x="745" y="240" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Delta propagates outward.</text>
+  <text x="745" y="259" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e8449">That's released energy.</text>
+</svg>
