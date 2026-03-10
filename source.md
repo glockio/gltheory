@@ -31,29 +31,27 @@ Thread these three ideas throughout: (1) topology generates values, (2) topologi
 
 ### The Prime Number Demo — Reference Throughout
 
-Chapter 1.5 introduces the prime demo. Reference it explicitly in Chapter 3 (mass), Chapter 4 (gravity), and Chapter 6 (time). The demo is the proof that this type of graph is possible — not a metaphor for physics but an actual working example of a graph that generates a structured number system from pure topology with no stored values.
+The demo section is the centrepiece of the setup. It proves this *type* of theory is possible by showing that even a trivially simple recursive graph, when evaluated, produces emergent properties. Reference the demo's emergent properties explicitly in later sections (mass, gravity, time, quantum). The demo is not a metaphor — it is a working example.
 
-### The Call Stack Visual Sequence — Four Figures That Flow
+### The Call Stack Visual Sequence — Three Figures That Flow
 
-The call stack section in Chapter 4 has four figures that must feel like one continuous reveal:
-1. **stack-depth-grows-with-subgraph-depth** — three panels showing how deeper subgraphs create taller stacks
-2. **call-stack-pyramid** — graph nodes across the top, call stack depth bars below, forming a mountain shape
-3. **invert-pyramid-spacetime** — same image flipped, spacetime fabric draped over it, wells where the mountain was
-4. **routing-pressure** — routing table before/after, paths bending around the pressure zone
+The gravity section has three figures that must feel like one continuous reveal:
+1. **call-stack-pyramid** — graph nodes across the top, call stack depth bars below, forming a mountain shape
+2. **invert-pyramid-spacetime** — same image flipped, spacetime fabric draped over it, wells where the mountain was
+3. **routing-pressure** — routing table before/after, paths bending around the pressure zone
 
-These four should be styled consistently and feel like one argument unfolding visually.
+These three should be styled consistently and feel like one argument unfolding visually.
 
 ### Narrative Arc
 
 ```
-Graph basics → Prime demo (topology = values) →
-How industry evaluates graphs → Topological ordering →
-Special relativity for free →
-Mass as stable topology → E=mc² from bidirectional walk →
-Call stack deep dive → Pyramid → Invert → Spacetime fabric →
-Routing pressure → Gravity → Can't shield it →
-Time as revision rate → Two observers →
-Quantum → Entanglement → Expansion
+Mario / two layers → Graph basics → Demo (emergent properties) →
+Industry / Topo ordering / C →
+Mass & Energy → Gravity (centrepiece) →
+Space (brief) → Time →
+Quantum + Eraser →
+Entanglement + Expansion (compressed) →
+Honest Gaps → Reference Table
 ```
 
 ### Image Handling — Slug-Based `images/` Folder
@@ -83,8 +81,8 @@ This means `index.html` can be rebuilt quickly from source without regenerating 
 - **Lead with the mystery.** Every physics chapter opens with the weird observation, lets the reader sit in it, then resolves it with the framework.
 - **Bar test.** If a sentence sounds like a textbook, rewrite it. "Would I say this to a smart friend after two beers?" If no, rewrite.
 - Each SVG in `images/` should use `viewBox` for responsiveness. The `<img>` tag in HTML uses `width="100%"` and `max-width` for containment.
-- Target reading time: ~45 minutes.
-- Target word count: ~12,000–15,000 words (prose only).
+- Target reading time: ~18 minutes.
+- Target word count: ~4,500–5,500 words (prose only).
 
 ---
 
