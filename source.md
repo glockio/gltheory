@@ -1,4 +1,4 @@
-# GL Theory v22 — Source Document
+# GL Theory — Source Document
 
 ---
 
@@ -191,9 +191,9 @@ This means `index.html` can be rebuilt quickly from source without regenerating 
 
 #### Hero Header
 
-- **Title:** GL Theory v22
-- **Subtitle:** A guide to the universe for people who build things
-- **Byline:** VERSION 22.0 · MARCH 2026 · PLAIN ENGLISH EDITION
+- **Title:** GL Theory
+- **Subtitle:** Greg's Computational Guide to the Universe
+- **Byline:** MARCH 2026 · PLAIN ENGLISH EDITION
 
 ---
 
@@ -240,25 +240,31 @@ Cheers,
 A Very Serious Person
 ```
 
-## <!-- Add a note here that this is very much a work in progress. Also i think its good to note that as we have started out on this jounery or exercise of reflection of our thoughts what has started to stake shape is fairly similar to Wolframs project so if this peaks your intrest take a gander for what is more likely to be the actual correct inturption of what I am trying to say. I myself have not read the work but Mr. GPT tells me its similar in concept. -->
+#### Work in Progress (gold callout, after Author's Note, before Hook)
+
+> **AUTHOR NOTE:** Gold callout. Stands out but doesn't feel like a warning.
+
+**Callout content (verbatim, Greg's words, typos fixed):** This is very much a work in progress. As we've started out on this journey — this exercise of reflection — what has started to take shape is fairly similar to Wolfram's project. So if this piques your interest, take a look for what is more likely to be the actual correct interpretation of what I'm trying to say. I myself have not read the work, but Mr. GPT tells me it's similar in concept.
 
 #### THE HOOK: You Are Mario
 
 > **AUTHOR NOTE:** Trimmed ~40% from original. Keep core metaphor, two-layer definition, teaser mystery list. Cut extra elaboration.
 
-**Hook block content:** Before we get into anything — before graphs, before physics, before any of it — I need to tell you something uncomfortable. **You are Mario.** Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it.
-
-<!-- Include: now there are worse things than life as an Itilain 2d plumber -- we will get to that in a minute. -->
+**Hook block content:** Before we get into anything — before graphs, before physics, before any of it — I need to tell you something uncomfortable. **You are Mario.** Now there are worse things than life as an Italian 2D plumber — we'll get to that in a minute. Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it.
 
 **Content direction (after hook):** Two tight paragraphs:
 
-1. That sounds crazy until you realize you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're claiming reality works the same way — what you experience takes place on a screen, but the real reality of it is in the enegine. So while I said you were a 2D itialin pulbmer, I am actually saying youa re the _graphical_ reperstation of a 2D itialin plumber. See it always can get worse.
+1. That sounds crazy until you realize you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're claiming reality works the same way — what you experience takes place on a screen, but the real reality of it is in the engine. So while I said you were a 2D Italian plumber, I am actually saying you are the _graphical_ representation of a 2D Italian plumber. See, it always can get worse.
 
 2. This isn't just "reality is a simulation" — that's like saying "there's something going on." We're proposing a specific architecture and then showing it actually explains things:
 
-<!-- these questions are cool so lets just format them one by one as like bullet points or some foramtting that draws the reader in -->
+Mystery questions formatted as individual bullet points to draw the reader in:
 
-Why can't you shield gravity? Why does the universe "know" what you'll measure? Why do equations work backwards in time? These are genuine unsolved mysteries and they all have the same answer.
+- Why can't you shield gravity?
+- Why does the universe "know" what you'll measure?
+- Why do equations work backwards in time?
+
+These are genuine unsolved mysteries and they all have the same answer.
 
 **Blue callout block — define the two layers:**
 
@@ -279,22 +285,22 @@ Why can't you shield gravity? Why does the universe "know" what you'll measure? 
 **Slug:** you-already-know-what-a-graph-is
 **Label:** Figure 1 — You Already Know What a Graph Is
 **Description:** Three simple graphs side by side: a family tree (5 people, parent-child lines), a social network (6 people, friend connections), and a recipe (4 steps with directional arrows: Mix → Bake → Cool → Frost).
-**Caption:** These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "Edges" but lines and dots. And the lines/edges can have values to so for the family tree exmaple the line would show "mom" on the relationship between you and your mother.
+**Caption:** These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show "mom" on the relationship between you and your mother.
 
-Now I suspect our universe graph is slightly more complicated than the family tree. So here are the basic rules we will add
+Now I suspect our universe graph is slightly more complicated than the family tree. So here are the basic rules we will add:
 
-1. values are lazy loaded. That means unless someone asks "hey you whats your name/value" than don't even think about it, just do noting
-2. No values are stroed within the nodes/dots themelves all values are derived fro the toplogy of the graph. Yikes... umm... imagine someone asks you for the time. You actually don't know the time, in fact the time depends on where in the world you are so you need check your phone which, which uses GPS to check some satialite that nerds everywhere maintain to keep everyone in sync. The point is what time is it depends on where you are and you don't know the answer yourself you always need to check with the star nerds.
+1. Values are lazy loaded. That means unless someone asks "hey you, what's your name/value?" then don't even think about it, just do nothing.
+2. No values are stored within the nodes/dots themselves — all values are derived from the topology of the graph. Yikes... umm... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is "what time is it" depends on where you are, and you don't know the answer yourself — you always need to check with the star nerds.
 
-## Thats it. Not so bad. So to recap we have sh\*it eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now lets go create the fucking universe...
+That's it. Not so bad. So to recap we have sh\*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...
 
 #### The Demo: What Happens When You Evaluate One
 
 > **AUTHOR NOTE:** THE CENTREPIECE OF THE SETUP. Reframed from "primes from topology" to "watch what emerges from the simplest possible recursive evaluation." Pseudocode + visual walkthrough does the heavy lifting, not prose.
 
-**Content direction:** " Okay we left off with, you are a graph. "That don't impress me much you say" in the best shinaia twain voice). But wait it gets better. So your, _our_ reailty is actually off by one. What do I mean by that? I mean what happens is the graph dose its little grpahy caulcations we get the result and than paint that to the sreen. While you sitting happy on the screen the graph starting running its little caulcations again, over and over. Where the input for the next calucation is the output of the previous one. We have a nice little name for this in comp sci we call it a recursive function -- there is a proper way to desricbe this but the easiest way to get the concept is if you have ever owned a dog. And you feed it... wait a bit...let the dogs stomach do dog stomach things... than take it on a walk and for some unkown reason it tries to eat its own sh\*it... and the cycle repeats. Well that is your dog running a recusive function. A recueisve function is something that eats its own "output" ... again and again... and the universe my friend seems to LOVE eating its own graph.
+**Content direction:** "Okay, we left off with: you are a graph. 'That don't impress me much,' you say (in the best Shania Twain voice). But wait, it gets better. So your — _our_ — reality is actually off by one. What do I mean by that? I mean what happens is the graph does its little graphy calculations, we get the result, and then paint that to the screen. While you're sitting happy on the screen, the graph starts running its little calculations again, over and over. Where the input for the next calculation is the output of the previous one. We have a nice little name for this in comp sci — we call it a recursive function. There is a proper way to describe this, but the easiest way to get the concept is if you have ever owned a dog. And you feed it... wait a bit... let the dog's stomach do dog stomach things... then take it on a walk and for some unknown reason it tries to eat its own sh\*t... and the cycle repeats. Well, that is your dog running a recursive function. A recursive function is something that eats its own 'output'... again and again... and the universe, my friend, seems to LOVE eating its own graph.
 
-Now that dogs helped expolain what this is lets look at one in code for you nerds.
+Now that dogs helped explain what this is, let's look at one in code for you nerds.
 Now let's actually watch a graph evaluate itself. Here's a recursive function in ~10 lines:"
 
 **Pseudocode block:**
@@ -314,7 +320,7 @@ function evaluate(node):
     return result
 ```
 
-**Content direction:** "That's the whole engine. Its not much but its ours. So as much as I'd love for it to be that simple I am going to say that the universes graph has some speical properties that are _slightly_ different from your family tree.
+**Content direction:** "That's the whole engine. It's not much, but it's ours. So as much as I'd love for it to be that simple, I am going to say that the universe's graph has some special properties that are _slightly_ different from your family tree.
 
 ##### Figure: graph-evaluation-walkthrough
 
@@ -620,8 +626,8 @@ The engine evaluates the graph. Some evaluations add new nodes and edges. More g
 ### FOOTER
 
 ```
-GL Theory v22: A Guide to the Universe for People Who Build Things
-Version 22.0 · March 2026 · Plain English Edition
+GL Theory: Greg's Computational Guide to the Universe
+March 2026 · Plain English Edition
 Framework developed by Greg.
 "The delusions are my own."
 ```

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GL Theory v22: A Guide to the Universe for People Who Build Things</title>
+<title>GL Theory: Greg's Computational Guide to the Universe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -61,9 +61,9 @@ blockquote{border-left:3px solid var(--border);padding-left:20px;margin:20px 0;c
 
 <!-- ======== HERO HEADER ======== -->
 <div class="doc-header">
-<h1>GL Theory v22</h1>
-<div class="subtitle">A guide to the universe for people who build things</div>
-<div class="byline">VERSION 22.0 &middot; MARCH 2026 &middot; PLAIN ENGLISH EDITION</div>
+<h1>GL Theory</h1>
+<div class="subtitle">Greg's Computational Guide to the Universe</div>
+<div class="byline">MARCH 2026 &middot; PLAIN ENGLISH EDITION</div>
 </div>
 
 <div class="container">
@@ -102,16 +102,31 @@ that was just me.</p>
 <p>Cheers,<br>A Very Serious Person</p>
 </div>
 
+<!-- ======== WORK IN PROGRESS ======== -->
+<div class="callout callout-gold">
+<span class="callout-label">Work in Progress</span>
+<p>This is very much a work in progress. As we've started out on this journey &mdash; this exercise of reflection &mdash; what has started to take shape is fairly similar to <a href="https://www.wolframphysics.org/" target="_blank">Wolfram's project</a>. So if this piques your interest, take a look for what is more likely to be the actual correct interpretation of what I'm trying to say. I myself have not read the work, but Mr. GPT tells me it's similar in concept.</p>
+</div>
+
 <!-- ======== THE HOOK: YOU ARE MARIO ======== -->
 <div class="hook">
 <p>Before we get into anything &mdash; before graphs, before physics, before any of it &mdash; I need to tell you something uncomfortable.</p>
 <p><strong>You are Mario.</strong></p>
+<p>Now there are worse things than life as an Italian 2D plumber &mdash; we'll get to that in a minute.</p>
 <p>Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it.</p>
 </div>
 
-<p>That sounds insane until you realize you deal with two-layer systems every single day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're claiming reality works the same way &mdash; what you experience (space, mass, time, gravity) is the output of an engine evaluating a graph. Dots connected by lines. The evaluation IS your reality.</p>
+<p>That sounds crazy until you realize you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're claiming reality works the same way &mdash; what you experience takes place on a screen, but the real reality of it is in the engine. So while I said you were a 2D Italian plumber, I am actually saying you are the <em>graphical</em> representation of a 2D Italian plumber. See, it always can get worse.</p>
 
-<p>This isn't just "reality is a simulation" &mdash; that's like saying "there's something going on." Cool, thanks. We're proposing a specific architecture and then showing it actually explains things: Why can't you shield gravity when you can shield every other force? Why does the universe seem to "know" what you're going to measure before you measure it? Why do physics equations work perfectly backwards in time? These are genuine unsolved mysteries and they all have the same answer.</p>
+<p>This isn't just "reality is a simulation" &mdash; that's like saying "there's something going on." We're proposing a specific architecture and then showing it actually explains things:</p>
+
+<ul style="margin:0 0 18px 24px;list-style:none;padding:0">
+<li style="margin-bottom:8px">&bull; Why can't you shield gravity?</li>
+<li style="margin-bottom:8px">&bull; Why does the universe "know" what you'll measure?</li>
+<li style="margin-bottom:8px">&bull; Why do equations work backwards in time?</li>
+</ul>
+
+<p>These are genuine unsolved mysteries and they all have the same answer.</p>
 
 <div class="callout callout-blue">
 <p><strong>The Engine Layer</strong> &mdash; where computation happens. The actual structure of reality. Think: the Nintendo console.</p>
@@ -125,18 +140,32 @@ that was just me.</p>
 <div class="figure-caption">Two layers. The engine computes the graph. The screen shows the output &mdash; Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?</div>
 </div>
 
-<p>We suspect the engine layer is a <strong>graph</strong> &mdash; dots connected by lines, where edges carry operations (multiply, add, divide). A recipe is a graph. A family tree is a graph. You already think in graphs. The node stores nothing &mdash; everything meaningful is in the connections.</p>
+<p>We suspect the engine layer is a <strong>graph</strong> &mdash; dots connected by lines. A recipe is a graph. A family tree is a graph. You already know graphs.</p>
 
 <div class="figure" id="you-already-know-what-a-graph-is">
 <span class="scene-label">Figure 1 &mdash; You Already Know What a Graph Is</span>
 <img src="images/you-already-know-what-a-graph-is.svg" alt="Three simple graphs: a family tree, a social network, and a recipe with directional arrows">
-<div class="figure-caption">These are all graphs. Dots connected by lines. That's the whole idea.</div>
+<div class="figure-caption">These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" &mdash; but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show "mom" on the relationship between you and your mother.</div>
 </div>
+
+<p>Now I suspect our universe graph is slightly more complicated than the family tree. So here are the basic rules we will add:</p>
+
+<p><strong>1. Values are lazy loaded.</strong> That means unless someone asks "hey you, what's your name/value?" then don't even think about it, just do nothing.</p>
+
+<p><strong>2. No values are stored within the nodes themselves</strong> &mdash; all values are derived from the topology of the graph. Yikes... umm... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is "what time is it" depends on where you are, and you don't know the answer yourself &mdash; you always need to check with the star nerds.</p>
+
+<p>That's it. Not so bad. So to recap we have sh*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...</p>
 
 <!-- ======== THE DEMO ======== -->
 <h2>The Demo: What Happens When You Evaluate One</h2>
 
-<p>Now let's actually watch a graph evaluate itself. Here's the entire engine in about ten lines:</p>
+<p>Okay, we left off with: you are a graph. "That don't impress me much," you say (in the best Shania Twain voice). But wait, it gets better.</p>
+
+<p>So your &mdash; <em>our</em> &mdash; reality is actually off by one. What do I mean by that? I mean what happens is the graph does its little graphy calculations, we get the result, and then paint that to the screen. While you're sitting happy on the screen, the graph starts running its little calculations again, over and over. Where the input for the next calculation is the output of the previous one.</p>
+
+<p>We have a nice little name for this in comp sci &mdash; we call it a <strong>recursive function</strong>. There is a proper way to describe this, but the easiest way to get the concept is if you have ever owned a dog. And you feed it... wait a bit... let the dog's stomach do dog stomach things... then take it on a walk and for some unknown reason it tries to eat its own sh*t... and the cycle repeats. Well, that is your dog running a recursive function. A recursive function is something that eats its own "output"... again and again... and the universe, my friend, seems to LOVE eating its own graph.</p>
+
+<p>Now that dogs helped explain what this is, let's look at one in code for you nerds:</p>
 
 <pre>function evaluate(node):
     if node has no children:
@@ -151,7 +180,7 @@ that was just me.</p>
     node.committed = result             // lock in the result
     return result</pre>
 
-<p>That's the whole engine. Let's run it on a simple graph and watch what happens.</p>
+<p>That's the whole engine. It's not much, but it's ours. So as much as I'd love for it to be that simple, I am going to say that the universe's graph has some special properties that are <em>slightly</em> different from your family tree. Let's run it on a simple graph and watch what happens.</p>
 
 <!-- Figure 2 — NEW: Graph Evaluation Walkthrough -->
 <div class="figure" id="graph-evaluation-walkthrough">
@@ -445,8 +474,8 @@ that was just me.</p>
 
 <!-- ======== FOOTER ======== -->
 <div class="doc-footer">
-<strong>GL Theory v22: A Guide to the Universe for People Who Build Things</strong><br>
-Version 22.0 &middot; March 2026 &middot; Plain English Edition<br>
+<strong>GL Theory: Greg's Computational Guide to the Universe</strong><br>
+March 2026 &middot; Plain English Edition<br>
 Framework developed by Greg.<br>
 "The delusions are my own."
 </div>
