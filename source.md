@@ -324,7 +324,26 @@ function evaluate(node):
 
 **Content direction (qualitative caveat):** "A caveat before we go further: we don't know the exact operations on the edges. We're not claiming to have the specific rules that generate electrons or gravity constants. What we're showing is that the **structure** of recursive graph evaluation — regardless of the specific operations — produces emergent properties that map onto physics. The shape of the argument matters more than the specific numbers."
 
-**Content direction (prime number result):** "One more thing. If we make a node's base value depend on its depth in the graph — depth 2 returns the 2nd value, depth 3 the 3rd — topology alone generates the prime numbers. The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept. Everything else builds on it."
+**Content direction (prime number result — ELEVATED, with figure):** "One more thing — and this matters. Watch what happens when a node's base value depends on its depth in the graph."
+
+"Take a graph of depth 2 — one parent, one child. The child (a leaf) returns 1. The parent multiplies: result is 1. That's 1 unique factor. Depth 2 gives you the first value in the sequence: 1."
+
+"Depth 3: the parent has a child at depth 2 (which returns 1) and a leaf. Multiply up: 2 is the result. 2 is prime."
+
+"Depth 4: the subgraph at depth 2 already returned its result. The parent at depth 4 just gets 2 × 1 = 2. NOT a new prime — it's composite. It factors into the structure below it."
+
+"Depth 5: a new topology that can't be factored into smaller subgraphs. Result: 3. That's the next prime."
+
+"You see the pattern? Depths that introduce genuinely new topological structure produce primes. Depths that are just combinations of existing sub-structures produce composites. The primes aren't stored. They aren't computed by a formula. They emerge from which depths create irreducible topologies."
+
+"The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept. Everything else builds on it."
+
+##### Figure: evaluating-a-graph-step-by-step
+
+**Slug:** evaluating-a-graph-step-by-step
+**Label:** Figure 2b — Topology Generates Primes
+**Description:** Three columns showing graphs at different depths. Left column "DEPTH 2": a simple parent-child pair. Child returns 1, parent gets 1. Label: "Depth 2 → 1. Base case." Center column "DEPTH 3": parent with two children (one at depth 2, one leaf). Result: 2. Label: "Depth 3 → 2. Prime. New irreducible structure." Right column "DEPTH 5": a tree that can't be decomposed into smaller sub-trees. Result: 3. Label: "Depth 5 → 3. Prime. Another irreducible structure." Between columns 2 and 3, a small "DEPTH 4" annotation showing 2 × 1 = 2 with label: "Depth 4 → 2. Composite. Just sub-structures re-combined." Bottom label: "Primes aren't stored. They emerge from irreducible topology. The structure IS the value."
+**Caption:** Primes emerge from topology. Depths with irreducible structure produce primes. Composite depths just re-combine existing sub-structures. No values stored anywhere.
 
 ##### What This Means (Insight)
 
@@ -334,9 +353,9 @@ A recursive graph evaluation — with no stored values and no special rules — 
 
 #### How Industry Already Does This
 
-> **AUTHOR NOTE:** Demoted to a callout-blue block titled "For the Engineers." The callout should feel skippable. Keep the spreadsheet figure inside. Cut the topological-ordering figure (spreadsheet already demonstrates the concept). Move the C = leaf commit rate and special relativity punchlines OUT of the callout and INTO a short main-narrative transition paragraph between the callout and "What the Framework Explains."
+> **AUTHOR NOTE:** Promoted from callout to regular subsection titled "You Already Use This Model." Topological ordering is essential context, not optional engineer-only material. The spreadsheet figure stays. C = leaf commit rate and special relativity punchlines follow as main-narrative transition.
 
-**Callout (callout-blue, titled "For the Engineers"):** We already build systems that evaluate graphs. Spreadsheets, React, CPU caches — different teams, different decades, different purposes. They all independently converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait. A spreadsheet is a graph. Change cell A1 and it walks the dependency graph forward, recomputing only what depends on A1, in order. B1 and C1 can update in parallel (no dependency between them). D1 waits for both.
+**Subsection (h3, "You Already Use This Model"):** We already build systems that evaluate graphs. Spreadsheets, React, CPU caches — different teams, different decades, different purposes. They all independently converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait. A spreadsheet is a graph. Change cell A1 and it walks the dependency graph forward, recomputing only what depends on A1, in order. B1 and C1 can update in parallel (no dependency between them). D1 waits for both.
 
 ##### Figure: spreadsheet-is-a-graph (inside callout)
 
@@ -359,7 +378,9 @@ A recursive graph evaluation — with no stored values and no special rules — 
 
 **Content direction (~350 words):** A massive object is a region of the graph whose topology is **stable** — edges don't change, same walk produces the same result every time. That's mass. When stability breaks — enough energy to rewire edges — the delta propagates outward. That's released energy.
 
-E = mc²: the walk has two legs. Down to leaves at rate C (m hops). Back up at rate C (m hops). Same rate, two directions, symmetric graph. m × C × C = mc². The c² isn't magic — it's the graph being bidirectional. Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full evaluation propagates outward as energy.
+E = mc²: look at the pseudocode from the demo. Recursive evaluation has two phases and it can't avoid them. The *call* phase walks down — the root calls its children, which call their children, all the way to the leaves. That's m hops at rate C. Then the *return* phase walks back up — each child returns its result to its parent, all the way to the root. Another m hops at rate C. Every recursive evaluation does both. You can't have one without the other — you go down to get the answer, you come back up to deliver it. m × C × C = mc². The c² isn't magic — it's the two unavoidable phases of recursion.
+
+Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full evaluation propagates outward as energy.
 
 ##### Figure: mass-is-stable-topology
 
@@ -384,7 +405,7 @@ E = mc²: the walk has two legs. Down to leaves at rate C (m hops). Back up at r
 **Mystery Block:**
 Gravity is weird. A suspicious kind of weird. Three clues: (1) You can shield every other force — EM, strong, weak. Nobody has ever shielded gravity. (2) Einstein's equivalence principle: no experiment can distinguish gravity from acceleration. Why? (3) Physicists hunted the graviton for decades. Never found one. Maybe gravity isn't a force at all.
 
-**Content direction (call stack intro):** When the engine evaluates a deep subgraph, it builds a call stack — a list of things waiting for answers. Everything on the stack is **waiting**. The stack depth equals the subgraph depth. Deep subgraph = tall stack = everything nearby waits longer.
+**Content direction (call stack intro):** When the engine evaluates a deep subgraph, it builds a call stack — a list of things waiting for answers. [ADD PHYSICAL ANALOGY: "Think of a stack of plates: you can't get to the bottom one until you take off every plate above it. Each plate is a question waiting for the question below it to be answered first."] Everything on the stack is **waiting**. The stack depth equals the subgraph depth. Deep subgraph = tall stack = everything nearby waits longer.
 
 Now plot call stack depth across a region of the graph. What shape do you get?
 
@@ -431,13 +452,11 @@ Gravity is not a force. It is call stack pressure created by a deep subgraph. Pl
 
 ---
 
-##### Space
+##### Space & Time
 
-**Content direction (~100 words):** Space isn't a box. It's the graph's shape — the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop — one node. That's the Planck length: one pixel. Being "somewhere" means having committed position edges to specific neighbors. Not having a definite position — pending edges to multiple neighbors — is superposition.
+> **AUTHOR NOTE:** Space section folded into Time. "Space = graph shape, distance = hop count, Planck length" opens the combined section. "Pending edges = superposition" moved to the quantum section where it's actually needed.
 
----
-
-##### Time
+**Content direction (space opening, ~50 words):** Space isn't a box things happen inside. It's the graph's shape — the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop — one node. That's the Planck length: one pixel.
 
 > **AUTHOR NOTE:** ~300 words. Lead with "what if time stopped?" thought experiment. Time = amount of change in your local region. Fibonacci/arrow of time (keep photographs insight), GPS proof. Physics card: The Muon.
 
@@ -466,7 +485,7 @@ Time is change. No change, no time. Near mass: deeper stack, slower commits, les
 **Mystery Block:**
 Double-slit: fire particles at two slits. Interference pattern appears. Add a detector: pattern vanishes. Quantum eraser: erase the detector's info AFTER the dot is recorded. Pattern comes BACK. How can erasing information after the fact change a result that's already been recorded?
 
-**Content direction:** Remember the demo — if nothing demands a node's result, it stays unevaluated. A particle in flight with no strict consumer: pending. Both paths through both slits: pending. Neither committed.
+**Content direction:** Remember the demo — if nothing demands a node's result, it stays unevaluated. A particle in flight with no **strict consumer** — anything that demands a definite answer right now, like a detector, a screen, your eyeball — stays pending. Both paths through both slits: pending. Neither committed.
 
 ##### Figure: pending-vs-committed
 

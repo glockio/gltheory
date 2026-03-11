@@ -176,23 +176,44 @@ that was just me.</p>
 
 <p>A caveat before we go further: we don't know the exact operations on the edges. We're not claiming to have the specific rules that generate electrons or gravity constants. What we're showing is that the <strong>structure</strong> of recursive graph evaluation &mdash; regardless of the specific operations &mdash; produces emergent properties that map onto physics. The shape of the argument matters more than the specific numbers.</p>
 
-<p>One more thing. If we make a node's base value depend on its depth in the graph &mdash; depth 2 returns 2, depth 3 returns 3, and so on &mdash; topology alone generates the prime numbers. The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept. Everything else builds on it.</p>
+<h3>The Proof of Concept: Primes From Topology</h3>
+
+<p>One more thing &mdash; and this matters. Watch what happens when a node's base value depends on its depth in the graph.</p>
+
+<p>Take a graph of depth 2 &mdash; one parent, one child. The child is a leaf, returns 1. The parent multiplies: result is 1. Depth 2 gives you the first value in the sequence.</p>
+
+<p>Depth 3: the parent has a child at depth 2 (which already returned its result) and a leaf. Multiply up: 2. That's prime.</p>
+
+<p>Depth 4: the subgraph at depth 2 already returned its result. The parent at depth 4 just gets 2 &times; 1 = 2. Not a new prime &mdash; it's composite. It factors into the structure below it.</p>
+
+<p>Depth 5: a new topology that can't be factored into smaller subgraphs. Result: 3. The next prime.</p>
+
+<p>See the pattern? Depths that introduce genuinely new topological structure produce primes. Depths that are just combinations of existing sub-structures produce composites. The primes aren't stored. They aren't computed by a formula. They emerge from which depths create irreducible topologies.</p>
+
+<div class="figure" id="evaluating-a-graph-step-by-step">
+<span class="scene-label">Figure 2b &mdash; Topology Generates Primes</span>
+<img src="images/evaluating-a-graph-step-by-step.svg" alt="Three graph depths shown: depth 2 produces 1 (base case), depth 3 produces 2 (prime, new irreducible structure), depth 5 produces 3 (prime), while depth 4 produces 2 (composite, just sub-structures re-combined)">
+<div class="figure-caption">Primes emerge from topology. Depths with irreducible structure produce primes. Composite depths just re-combine existing sub-structures. No values stored anywhere.</div>
+</div>
+
+<p>The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept &mdash; everything else builds on it.</p>
 
 <div class="insight">
 <span class="callout-label">&starf; What This Means</span>
 <p>A recursive graph evaluation &mdash; with no stored values and no special rules &mdash; produces emergent properties that map directly onto physics: time (change), causality (evaluation order), gravity (stack depth), quantum mechanics (lazy evaluation), and the speed of information (off-by-one). None of these were designed in. They fell out of the recursive evaluation. The properties ARE the evaluation.</p>
 </div>
 
-<!-- ======== HOW INDUSTRY ALREADY DOES THIS (CALLOUT) ======== -->
-<div class="callout callout-blue">
-<span class="callout-label">For the Engineers</span>
+<!-- ======== HOW INDUSTRY ALREADY DOES THIS ======== -->
+<h3>You Already Use This Model</h3>
+
 <p>We already build systems that evaluate graphs. Spreadsheets, React, CPU caches &mdash; different teams, different decades, different purposes. They all independently converged on the same model: <strong>topological ordering</strong>. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait.</p>
+
 <p>A spreadsheet is a graph. Change cell A1 and it walks the dependency graph forward, recomputing only what depends on A1, in order. B1 and C1 can update in parallel &mdash; no dependency between them. D1 waits for both.</p>
-<div class="figure" id="spreadsheet-is-a-graph" style="margin:24px 0 0">
+
+<div class="figure" id="spreadsheet-is-a-graph">
 <span class="scene-label">Figure 3 &mdash; A Spreadsheet Is a Graph Being Evaluated</span>
 <img src="images/spreadsheet-is-a-graph.svg" alt="Three panels showing spreadsheet cells evaluating in dependency order: A1 changes, B1 and C1 update in parallel, then D1 last">
 <div class="figure-caption">Change A1 and the update cascades forward through the dependency graph. B1 and C1 can update in parallel &mdash; no dependency between them. D1 waits for both. That's topological ordering.</div>
-</div>
 </div>
 
 <p>Two key consequences fall out of topological ordering. First: no preferred traversal order = no preferred frame = <strong>special relativity for free</strong>. Two observers on independent branches genuinely have no shared "now" &mdash; not because of a physical law, but because there's no ordering constraint between them.</p>
@@ -215,7 +236,9 @@ that was just me.</p>
 <div class="figure-caption">Mass is a stable subgraph &mdash; same walk, same result. Energy is the delta that propagates when the topology changes.</div>
 </div>
 
-<p><strong>E = mc&sup2;:</strong> the walk has two legs. Down to leaves at rate C (m hops). Back up at rate C (m hops). Same rate, two directions, symmetric graph. m &times; C &times; C = mc&sup2;. The c&sup2; isn't magic &mdash; it's the graph being bidirectional. Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full evaluation propagates outward as energy.</p>
+<p><strong>E = mc&sup2;:</strong> look at the pseudocode from the demo. Recursive evaluation has two phases and it can't avoid them. The <em>call</em> phase walks down &mdash; the root calls its children, which call their children, all the way to the leaves. That's m hops at rate C. Then the <em>return</em> phase walks back up &mdash; each child returns its result to its parent, all the way to the root. Another m hops at rate C. Every recursive evaluation does both. You can't have one without the other &mdash; you go down to get the answer, you come back up to deliver it. m &times; C &times; C = mc&sup2;. The c&sup2; isn't magic &mdash; it's the two unavoidable phases of recursion.</p>
+
+<p>Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full evaluation propagates outward as energy.</p>
 
 <div class="figure" id="the-bidirectional-walk">
 <span class="scene-label">Figure 6 &mdash; The Bidirectional Walk</span>
@@ -234,7 +257,7 @@ that was just me.</p>
 <p><strong>3.</strong> Physicists hunted the graviton for decades. Never found one. Maybe gravity isn't a force at all.</p>
 </div>
 
-<p>When the engine evaluates a deep subgraph, it builds a <strong>call stack</strong> &mdash; a list of things waiting for answers. Everything on the stack is waiting. The stack depth equals the subgraph depth. Deep subgraph = tall stack = everything nearby waits longer.</p>
+<p>When the engine evaluates a deep subgraph, it builds a <strong>call stack</strong> &mdash; a list of things waiting for answers. Think of a stack of plates: you can't get to the bottom one until you take off every plate above it. Each plate is a question waiting for the question below it to be answered first. Everything on the stack is waiting. The stack depth equals the subgraph depth. Deep subgraph = tall stack = everything nearby waits longer.</p>
 
 <p>Now plot call stack depth across a region of the graph. What shape do you get?</p>
 
@@ -278,13 +301,10 @@ that was just me.</p>
 <p>Gravity is not a force. It is call stack pressure created by a deep subgraph. Plot the stack depth: a pyramid. Flip it: Einstein's spacetime curvature. The routing table updates, paths curve toward mass. You can't block it because the stack is part of your own evaluation. There is no signal to block. The topology is not optional.</p>
 </div>
 
-<!-- ======== SPACE ======== -->
-<h3>Space</h3>
+<!-- ======== SPACE & TIME ======== -->
+<h3>Space &amp; Time</h3>
 
-<p>Space isn't a box. It's the graph's shape &mdash; the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop &mdash; one node. That's the Planck length: one pixel. Being "somewhere" means having committed position edges to specific neighbors. Not having a definite position &mdash; pending edges to multiple neighbors &mdash; is superposition.</p>
-
-<!-- ======== TIME ======== -->
-<h3>Time</h3>
+<p>Space isn't a box things happen inside. It's the graph's shape &mdash; the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop &mdash; one node. That's the Planck length: one pixel.</p>
 
 <p>What would it look like if time stopped? Nothing changes. No node evaluates to a new state. Nothing commits. Time IS the amount of change in your local region. Each time a node commits a new result, that's one tick of local time &mdash; not because the graph is counting, but because change happened. Near mass, the call stack is deeper, commits are slower, less change happens. That IS time dilation.</p>
 
@@ -303,7 +323,7 @@ that was just me.</p>
 
 <div class="insight">
 <span class="callout-label">&starf; What This Means</span>
-<p>Time is change. No change, no time. Near mass: deeper stack, slower commits, less change, less elapsed time. The arrow of time is a dependency chain &mdash; each walk's output feeds the next. The equations work backwards because they describe photographs, not the computation. The computation runs one direction. No undo.</p>
+<p>Space is the graph's shape. Distance is hop count. Time is change. No change, no time. Near mass: deeper stack, slower commits, less change, less elapsed time. The arrow of time is a dependency chain &mdash; each walk's output feeds the next. The equations work backwards because they describe photographs, not the computation. The computation runs one direction. No undo.</p>
 </div>
 
 <!-- ======== THE QUANTUM WORLD ======== -->
@@ -315,7 +335,7 @@ that was just me.</p>
 <p>Quantum eraser: run the experiment WITH a detector. After the particle hits the screen and its dot is already recorded, erase the detector's which-path info. Sort the results. The interference pattern comes BACK. The dot is already on the screen. How can erasing information after the fact change a result that's already been recorded?</p>
 </div>
 
-<p>Remember the demo &mdash; if nothing demands a node's result, it stays unevaluated. A particle in flight with no strict consumer: pending. Both paths through both slits: pending. Neither committed.</p>
+<p>Remember the demo &mdash; if nothing demands a node's result, it stays unevaluated. Being "somewhere" means having committed position edges to specific neighbors. Not having a definite position &mdash; pending edges to multiple neighbors &mdash; is superposition. A particle in flight with no <strong>strict consumer</strong> &mdash; anything that demands a definite answer right now, like a detector, a screen, your eyeball &mdash; stays pending. Both paths through both slits: pending. Neither committed.</p>
 
 <div class="figure" id="pending-vs-committed">
 <span class="scene-label">Figure 8 &mdash; Pending vs. Committed</span>
