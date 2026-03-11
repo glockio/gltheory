@@ -1,187 +1,685 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GL Theory: Greg's Computational Guide to the Universe</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#1a1a1a;--paper:#faf8f3;--paper2:#f2efe6;--text-primary:#2a2a2a;--text-secondary:#3a3a3a;--red:#c0392b;--blue:#2471a3;--green:#1e8449;--purple:#7d3c98;--orange:#d35400;--gold:#d4a017;--muted:#7a7a6a;--border:#d5d0c0;--dark:#1a1a2e;--teal:#a8dadc;--block-bg:#f5f2eb;--block-bg-alt:var(--paper2);--block-bg-warm:#faf6e8;--block-bg-blue:#eef6fb;--block-bg-red:#fdf0ef;--block-bg-green:#edf8f1;--block-bg-orange:#fff8f2;--block-bg-teal:#edf5f6;--block-bg-code:#f4f2ed}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.85;color:var(--text-primary);background:var(--paper)}
-.container{max-width:860px;margin:0 auto;padding:0 24px}
-.doc-header{background:var(--dark);color:#fff;padding:80px 24px 64px;text-align:center}
-.doc-header h1{font-family:'Lora',Georgia,serif;font-size:3.2rem;font-weight:600;letter-spacing:-1px;margin-bottom:12px;color:#fff}
-.doc-header .subtitle{font-family:'DM Sans',sans-serif;font-size:1.25rem;font-weight:300;color:var(--teal);margin-bottom:24px}
-.doc-header .byline{font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:3px;color:#888;text-transform:uppercase}
-h2{font-family:'Lora',Georgia,serif;font-size:2rem;font-weight:600;color:var(--ink);margin:48px 0 16px;line-height:1.3}
-h3{font-family:'DM Sans',sans-serif;font-size:1.25rem;font-weight:600;color:var(--ink);margin:36px 0 12px}
-.section-number{font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;display:block}
-p{margin-bottom:18px}strong{font-weight:600}em{font-style:italic}
-.hook{border-left:5px solid var(--ink);background:var(--block-bg-warm);padding:32px 36px;margin:40px 0;font-size:1.1rem;line-height:1.9;border-radius:0 6px 6px 0}
-.callout{padding:28px 32px;margin:32px 0;border-radius:0 6px 6px 0;border-left:4px solid var(--muted);background:var(--block-bg)}
-.callout-label{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;display:block}
-.callout-neutral{border-left-color:var(--muted);background:var(--block-bg)}
-.callout-blue{border-left-color:var(--blue);background:var(--block-bg-blue)}
-.callout-green{border-left-color:var(--green);background:var(--block-bg-green)}
-.callout-gold{border-left-color:var(--gold);background:var(--block-bg-warm)}
-.physics-card{border-left:4px solid var(--green);background:var(--block-bg-green);padding:24px 28px;margin:28px 0;border-radius:0 6px 6px 0}
-.physics-card .callout-label{color:var(--green)}
-.technical-card{border-left:4px solid var(--blue);background:var(--block-bg-blue);padding:24px 28px;margin:28px 0;border-radius:0 6px 6px 0;font-family:'DM Sans',sans-serif;font-size:.95rem}
-.technical-card .callout-label{color:var(--blue)}
-.insight{background:var(--block-bg-teal);padding:32px 36px;margin:40px 0;border-radius:6px;border-top:4px solid var(--teal)}
-.insight .callout-label{color:var(--blue)}
-.insight p{font-style:italic;margin-bottom:0}
-.figure{background:#fff;border:1px solid var(--border);border-radius:8px;padding:24px;margin:36px 0;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-.figure img{display:block;margin:0 auto;width:100%;height:auto}
-.scene-label{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;display:block}
-.figure-caption{font-family:'DM Sans',sans-serif;font-size:.9rem;font-style:italic;color:var(--muted);border-top:1px solid var(--border);padding-top:14px;margin-top:18px;line-height:1.6}
-.gap-box{border:2px solid var(--border);background:var(--block-bg);padding:32px 36px;margin:36px 0;border-radius:6px}
-.gap-item{margin-bottom:18px;padding-left:20px;border-left:3px solid var(--muted)}
-.gap-item:last-child{margin-bottom:0}
-.gap-item strong{font-family:'DM Sans',sans-serif;display:block;margin-bottom:4px}
-.mystery-block{border-left:4px solid var(--purple);background:linear-gradient(135deg,#f9f5fd,#f5f0fa);padding:28px 32px;margin:32px 0;border-radius:0 6px 6px 0}
-.mystery-block .callout-label{color:var(--purple)}
-.muted-center{text-align:center;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--muted);font-style:italic;margin:24px 0 40px}
-.summary-table{width:100%;border-collapse:collapse;margin:36px 0;font-family:'DM Sans',sans-serif;font-size:.85rem}
-.summary-table thead{background:var(--dark);color:#fff}
-.summary-table th{padding:14px 16px;text-align:left;font-weight:600;font-size:.75rem;letter-spacing:1px;text-transform:uppercase}
-.summary-table td{padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5}
-.summary-table tr:nth-child(even){background:var(--block-bg)}
-.summary-table tr:nth-child(odd){background:#fff}
-.doc-footer{background:var(--dark);color:#888;text-align:center;padding:48px 24px;margin-top:80px;font-family:'DM Sans',sans-serif;font-size:.85rem;line-height:1.8}
-.doc-footer strong{color:var(--teal);font-weight:600}
-pre{background:var(--block-bg-code);border:1px solid var(--border);border-radius:6px;padding:20px 24px;margin:24px 0;overflow-x:auto;font-family:'JetBrains Mono',monospace;font-size:.85rem;line-height:1.7}
-code{font-family:'JetBrains Mono',monospace;font-size:.9em;background:var(--block-bg-code);padding:2px 6px;border-radius:3px}
-blockquote{border-left:3px solid var(--border);padding-left:20px;margin:20px 0;color:var(--text-secondary);font-style:italic}
-@media(max-width:640px){.doc-header{padding:48px 16px 40px}.doc-header h1{font-size:2.2rem}.container{padding:0 16px}.hook,.callout,.physics-card,.technical-card,.insight,.gap-box,.mystery-block{padding:20px 18px}h2{font-size:1.6rem}.figure{padding:16px}.summary-table{font-size:.78rem}.summary-table th,.summary-table td{padding:8px 10px}}
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GL Theory: Greg's Computational Guide to the Universe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #1a1a1a;
+        --paper: #faf8f3;
+        --paper2: #f2efe6;
+        --text-primary: #2a2a2a;
+        --text-secondary: #3a3a3a;
+        --red: #c0392b;
+        --blue: #2471a3;
+        --green: #1e8449;
+        --purple: #7d3c98;
+        --orange: #d35400;
+        --gold: #d4a017;
+        --muted: #7a7a6a;
+        --border: #d5d0c0;
+        --dark: #1a1a2e;
+        --teal: #a8dadc;
+        --block-bg: #f5f2eb;
+        --block-bg-alt: var(--paper2);
+        --block-bg-warm: #faf6e8;
+        --block-bg-blue: #eef6fb;
+        --block-bg-red: #fdf0ef;
+        --block-bg-green: #edf8f1;
+        --block-bg-orange: #fff8f2;
+        --block-bg-teal: #edf5f6;
+        --block-bg-code: #f4f2ed;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Lora', Georgia, serif;
+        font-size: 17px;
+        line-height: 1.85;
+        color: var(--text-primary);
+        background: var(--paper);
+      }
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .doc-header {
+        background: var(--dark);
+        color: #fff;
+        padding: 80px 24px 64px;
+        text-align: center;
+      }
+      .doc-header h1 {
+        font-family: 'Lora', Georgia, serif;
+        font-size: 3.2rem;
+        font-weight: 600;
+        letter-spacing: -1px;
+        margin-bottom: 12px;
+        color: #fff;
+      }
+      .doc-header .subtitle {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: var(--teal);
+        margin-bottom: 24px;
+      }
+      .doc-header .byline {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        color: #888;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-family: 'Lora', Georgia, serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin: 48px 0 16px;
+        line-height: 1.3;
+      }
+      h3 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin: 36px 0 12px;
+      }
+      .section-number {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--muted);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        display: block;
+      }
+      p {
+        margin-bottom: 18px;
+      }
+      strong {
+        font-weight: 600;
+      }
+      em {
+        font-style: italic;
+      }
+      a {
+        color: var(--blue);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+      a:hover {
+        border-bottom-color: var(--blue);
+      }
+      ul,
+      ol {
+        margin: 0 0 18px 24px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      .hook {
+        border-left: 5px solid var(--ink);
+        background: var(--block-bg-warm);
+        padding: 32px 36px;
+        margin: 40px 0;
+        font-size: 1.1rem;
+        line-height: 1.9;
+        border-radius: 0 6px 6px 0;
+      }
+      .callout {
+        padding: 28px 32px;
+        margin: 32px 0;
+        border-radius: 0 6px 6px 0;
+        border-left: 4px solid var(--muted);
+        background: var(--block-bg);
+      }
+      .callout-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .callout-neutral {
+        border-left-color: var(--muted);
+        background: var(--block-bg);
+      }
+      .callout-blue {
+        border-left-color: var(--blue);
+        background: var(--block-bg-blue);
+      }
+      .callout-green {
+        border-left-color: var(--green);
+        background: var(--block-bg-green);
+      }
+      .callout-gold {
+        border-left-color: var(--gold);
+        background: var(--block-bg-warm);
+      }
+      .physics-card {
+        border-left: 4px solid var(--green);
+        background: var(--block-bg-green);
+        padding: 24px 28px;
+        margin: 28px 0;
+        border-radius: 0 6px 6px 0;
+      }
+      .physics-card .callout-label {
+        color: var(--green);
+      }
+      .technical-card {
+        border-left: 4px solid var(--blue);
+        background: var(--block-bg-blue);
+        padding: 24px 28px;
+        margin: 28px 0;
+        border-radius: 0 6px 6px 0;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.95rem;
+      }
+      .technical-card .callout-label {
+        color: var(--blue);
+      }
+      .insight {
+        background: var(--block-bg-teal);
+        padding: 32px 36px;
+        margin: 40px 0;
+        border-radius: 6px;
+        border-top: 4px solid var(--teal);
+      }
+      .insight .callout-label {
+        color: var(--blue);
+      }
+      .insight p {
+        font-style: italic;
+        margin-bottom: 0;
+      }
+      .figure {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 24px;
+        margin: 36px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+      .figure img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+      }
+      .scene-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 16px;
+        display: block;
+      }
+      .figure-caption {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+        padding-top: 14px;
+        margin-top: 18px;
+        line-height: 1.6;
+      }
+      .gap-box {
+        border: 2px solid var(--border);
+        background: var(--block-bg);
+        padding: 32px 36px;
+        margin: 36px 0;
+        border-radius: 6px;
+      }
+      .gap-item {
+        margin-bottom: 18px;
+        padding-left: 20px;
+        border-left: 3px solid var(--muted);
+      }
+      .gap-item:last-child {
+        margin-bottom: 0;
+      }
+      .gap-item strong {
+        font-family: 'DM Sans', sans-serif;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .mystery-block {
+        border-left: 4px solid var(--purple);
+        background: linear-gradient(135deg, #f9f5fd, #f5f0fa);
+        padding: 28px 32px;
+        margin: 32px 0;
+        border-radius: 0 6px 6px 0;
+      }
+      .mystery-block .callout-label {
+        color: var(--purple);
+      }
+      .summary-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 36px 0;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.85rem;
+      }
+      .summary-table thead {
+        background: var(--dark);
+        color: #fff;
+      }
+      .summary-table th {
+        padding: 14px 16px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      .summary-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      .summary-table tr:nth-child(even) {
+        background: var(--block-bg);
+      }
+      .summary-table tr:nth-child(odd) {
+        background: #fff;
+      }
+      .doc-footer {
+        background: var(--dark);
+        color: #888;
+        text-align: center;
+        padding: 48px 24px;
+        margin-top: 80px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.85rem;
+        line-height: 1.8;
+      }
+      .doc-footer strong {
+        color: var(--teal);
+        font-weight: 600;
+      }
+      pre {
+        background: var(--block-bg-code);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin: 24px 0;
+        overflow-x: auto;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        line-height: 1.7;
+      }
+      code {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9em;
+        background: var(--block-bg-code);
+        padding: 2px 6px;
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 3px solid var(--border);
+        padding-left: 20px;
+        margin: 20px 0;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 48px 0;
+      }
+      @media (max-width: 640px) {
+        .doc-header {
+          padding: 48px 16px 40px;
+        }
+        .doc-header h1 {
+          font-size: 2.2rem;
+        }
+        .container {
+          padding: 0 16px;
+        }
+        .hook,
+        .callout,
+        .physics-card,
+        .technical-card,
+        .insight,
+        .gap-box,
+        .mystery-block {
+          padding: 20px 18px;
+        }
+        h2 {
+          font-size: 1.6rem;
+        }
+        .figure {
+          padding: 16px;
+        }
+        .summary-table {
+          font-size: 0.78rem;
+        }
+        .summary-table th,
+        .summary-table td {
+          padding: 8px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ======== HERO HEADER ======== -->
+    <div class="doc-header">
+      <h1>GL Theory</h1>
+      <div class="subtitle">Greg's Computational Guide to the Universe</div>
+      <div class="byline">MARCH 2026 &middot; PLAIN ENGLISH EDITION</div>
+    </div>
 
-<!-- ======== HERO HEADER ======== -->
-<div class="doc-header">
-<h1>GL Theory</h1>
-<div class="subtitle">Greg's Computational Guide to the Universe</div>
-<div class="byline">MARCH 2026 &middot; PLAIN ENGLISH EDITION</div>
-</div>
+    <div class="container">
+      <!-- ======== FRONT MATTER ======== -->
+      <h2>Front Matter</h2>
 
-<div class="container">
+      <!-- ======== AUTHOR'S NOTE (VERBATIM) ======== -->
+      <div class="callout callout-neutral" style="margin-top: 48px">
+        <span class="callout-label">Author&rsquo;s Note</span>
+        <p>
+          It is a curious thing to have a passion for a subject you can't quite
+          grasp. I would imagine this is all that is really needed for the seeds
+          of AI psychosis to truly take hold.
+        </p>
+        <p>
+          What follows is something of a "hobby" of mine. On the surface might
+          seem odd, to "ponder the world" as a hobby. But, I'd argue it's
+          actually a well-known fact that the best way to spend ANY amount of
+          time on ANY amount of drugs is to sit back and go
+          <strong>"YO BUT what IF LIKE&hellip;"</strong>
+        </p>
+        <p>
+          Most of what follows is aided with AI, but this is more or less the
+          result of my "pondering"/ranting about for the last 8 or 9 years. So
+          while the words are AI assisted, I assure you the delusions are
+          entirely my own.
+        </p>
+        <p>
+          I have not figured out the exact number yet, but I imagine the odds of
+          someone being committed rise significantly the moment they start
+          uttering the words "I have a theory of the universe".
+        </p>
+        <p>
+          So to try and get ahead of whoever it was that plotted to get Kanye,
+          I'd like to spell out what this actually is.
+        </p>
+        <p>
+          This is my best guess on how it could all work. Do I think it's right?
+          I'd say the odds are as close to zero as something can be. However, if
+          this somehow has any iota of a concept that inspires a thought in
+          someone more capable, even if born out of pure opposition, then I'd
+          consider that a win.
+        </p>
+        <p>
+          Most of what I describe below is things about our known universe that
+          absolutely fascinate (scare the living fuck out of me). And I thought
+          having it on the World Wide Web makes it easier for me to send as
+          advance briefing for any family function or dinner party I should be
+          expected to attend.
+        </p>
+        <p>
+          In a world where AI and and do almost everything I wanted one section
+          that was just me.
+        </p>
+        <p>Cheers,<br />A Very Serious Person</p>
+      </div>
 
-<!-- ======== AUTHOR'S NOTE (VERBATIM) ======== -->
-<div class="callout callout-neutral" style="margin-top:48px">
-<span class="callout-label">Author&rsquo;s Note</span>
-<p>It is a curious thing to have a passion for a subject you can't quite
-grasp. I would imagine this is all that is really needed for the seeds
-of AI psychosis to truly take hold.</p>
-<p>What follows is something of a "hobby" of mine. On the
-surface might seem odd, to "ponder the world" as a hobby. But, I'd
-argue it's actually a well-known fact that the best way to spend ANY
-amount of time on ANY amount of drugs is to sit back and go
-<strong>"YO BUT what IF LIKE&hellip;"</strong></p>
-<p>Most of what follows is aided with AI, but this is more or
-less the result of my "pondering"/ranting about for the last 8 or 9 years. So while the words
-are AI assisted, I assure you the delusions are entirely my own.</p>
-<p>I have not figured out the exact number yet, but I imagine the odds of
-someone being committed rise significantly the moment they start
-uttering the words "I have a theory of the universe".</p>
-<p>So to try and get ahead of whoever it was that plotted to get Kanye,
-I'd like to spell out what this actually is.</p>
-<p>This is my best guess on how it could all work. Do I think it's right?
-I'd say the odds are as close to zero as something can be. However, if
-this somehow has any iota of a concept that inspires a thought in
-someone more capable, even if born out of pure opposition, then I'd
-consider that a win.</p>
-<p>Most of what I describe below is things about our known universe that
-absolutely fascinate (scare the living fuck out of me). And I thought
-having it on the World Wide Web makes it easier for me to send as
-advance briefing for any family function or dinner party I should be
-expected to attend.</p>
-<p>In a world where AI and and do almost everything I wanted one section
-that was just me.</p>
-<p>Cheers,<br>A Very Serious Person</p>
-</div>
+      <!-- ======== WORK IN PROGRESS ======== -->
+      <div class="callout callout-gold">
+        <span class="callout-label">Work in Progress</span>
+        <p>
+          This is very much a work in progress. As we've started out on this
+          journey &mdash; this exercise of reflection &mdash; what has started
+          to take shape is fairly similar to
+          <a href="https://www.wolframphysics.org/">Wolfram's project</a>,
+          <a href="https://en.wikipedia.org/wiki/Loop_quantum_gravity"
+            >loop quantum gravity</a
+          >, and
+          <a href="https://en.wikipedia.org/wiki/Causal_sets"
+            >causal set theory</a
+          >. The idea that spacetime might be discrete isn't new &mdash; a lot
+          of very smart people have been working on it for decades. What I think
+          is different here is the specific claim: that reality is a graph with
+          two operations (reads and writes), and that everything we observe is
+          the committed output of a recursive evaluation we never see. If this
+          piques your interest, take a look at those projects for what is more
+          likely to be the actual correct interpretation of what I'm trying to
+          say.
+        </p>
+      </div>
 
-<!-- ======== WORK IN PROGRESS ======== -->
-<div class="callout callout-gold">
-<span class="callout-label">Work in Progress</span>
-<p>This is very much a work in progress. As we've started out on this journey &mdash; this exercise of reflection &mdash; what has started to take shape is fairly similar to <a href="https://www.wolframphysics.org/" target="_blank">Wolfram's project</a>. So if this piques your interest, take a look for what is more likely to be the actual correct interpretation of what I'm trying to say. I myself have not read the work, but Mr. GPT tells me it's similar in concept.</p>
-</div>
+      <!-- ======== THE PROPOSAL ======== -->
+      <div class="callout callout-blue">
+        <p><strong>The Proposal</strong></p>
+        <p>
+          Everything that follows builds on one idea: reality is a graph that
+          evaluates itself.
+        </p>
+        <p>Five rules. That's it.</p>
+        <ol>
+          <li>
+            <strong>It's a graph.</strong> Dots connected by lines. The lines
+            carry operations.
+          </li>
+          <li>
+            <strong>One function evaluates it.</strong> Recursive. Leaves first,
+            then up.
+          </li>
+          <li>
+            <strong>Nothing computes until asked.</strong> No reader? No result.
+            It just sits there.
+          </li>
+          <li>
+            <strong>No stored values.</strong> Every value comes from the shape
+            of the connections. Structure is the data.
+          </li>
+          <li>
+            <strong>Each pass feeds the next.</strong> The output of one
+            evaluation becomes the input of the next.
+          </li>
+        </ol>
+        <p>
+          The punchline: you only ever see the committed result. Never the
+          computation. The engine is invisible. Everything in this document
+          &mdash; gravity, time, quantum mechanics &mdash; is what this graph
+          looks like from the render side.
+        </p>
+      </div>
 
-<!-- ================================================================ -->
-<!-- CHAPTER 1: YOU ARE MARIO                                         -->
-<!-- ================================================================ -->
-<h2>Chapter 1: You Are Mario</h2>
+      <!-- ================================================================ -->
+      <!-- CHAPTER 1: YOU ARE MARIO                                         -->
+      <!-- ================================================================ -->
+      <h2>Chapter 1: You Are Mario</h2>
 
-<div class="hook">
-<p>Before we get into anything &mdash; before graphs, before physics, how nerds run computers in the sky. I want to drive a point home.</p>
-<p><strong>You are Mario.</strong> Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it. Now there are worse things than life as an Italian 2D plumber &mdash; we'll get to that in a minute. But stay with me for a second.</p>
-</div>
+      <div class="hook">
+        <p>
+          Before we get into anything &mdash; before graphs, before physics, how
+          nerds run computers in the sky. I want to drive a point home.
+        </p>
+        <p>
+          <strong>You are Mario.</strong> Not metaphorically. Your reality is
+          taking place on a screen. There is an engine underneath computing your
+          world, and you have no direct access to it. Now there are worse things
+          than life as an Italian 2D plumber &mdash; we'll get to that in a
+          minute. But stay with me for a second.
+        </p>
+      </div>
 
-<p>This might sound crazy, maybe confusing? But you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're &mdash; well I'm &mdash; claiming reality works the same way. What you experience takes place on a screen, but the real action is in the engine underneath. YOU and your reality are stored on that engine. And more specifically, the universe seems to be stored as a graph.</p>
+      <p>
+        This might sound crazy, maybe confusing? But you deal with two-layer
+        systems every day. Your monitor shows letters, your computer stores ones
+        and zeros. Two layers: engine (processor) and the output (monitor).
+        We're &mdash; well I'm &mdash; claiming reality works the same way. What
+        you experience takes place on a screen, but the real action is in the
+        engine underneath. YOU and your reality are stored on that engine. And
+        more specifically, the universe seems to be stored as a graph.
+      </p>
 
-<p>So I lied. You are not a 2D Italian plumber, you are the <em>graphical</em> representation of a 2D Italian plumber. See, it always can get worse.</p>
+      <p>
+        So I lied. You are not a 2D Italian plumber, you are the
+        <em>graphical</em> representation of a 2D Italian plumber. See, it
+        always can get worse.
+      </p>
 
-<p>Saying &ldquo;it's all a simulation&rdquo; is not actually that new or novel. But what I want to add is a bit more on how I think the specifics of the architecture might look. And I want to show <em>why</em> this type of architecture would actually explain things. Things like:</p>
+      <p>
+        Saying &ldquo;it's all a simulation&rdquo; is not actually that new or
+        novel. But what I want to add is a bit more on how I think the specifics
+        of the architecture might look. And I want to show <em>why</em> this
+        type of architecture would actually explain things. Things like:
+      </p>
 
-<ul style="margin:0 0 18px 24px;list-style:none;padding:0">
-<li style="margin-bottom:8px">&bull; Why can't you shield gravity?</li>
-<li style="margin-bottom:8px">&bull; What is gravity? Why can't you tell the difference between gravity and acceleration?</li>
-<li style="margin-bottom:8px">&bull; Why can't anything travel faster than the speed of light?</li>
-<li style="margin-bottom:8px">&bull; Why does time slow down near a black hole?</li>
-<li style="margin-bottom:8px">&bull; Why does the universe &ldquo;know&rdquo; what you'll measure?</li>
-<li style="margin-bottom:8px">&bull; Why do equations for physics work backwards in time?</li>
-<li style="margin-bottom:8px">&bull; Is time travel possible?</li>
-<li style="margin-bottom:8px">&bull; Is there any age at which a man can know for sure he won't ever bald?</li>
-</ul>
+      <ul style="list-style: none; padding: 0; margin: 0 0 18px 0">
+        <li style="margin-bottom: 8px">&bull; Why can't you shield gravity?</li>
+        <li style="margin-bottom: 8px">
+          &bull; What is gravity? Why can't you tell the difference between
+          gravity and acceleration?
+        </li>
+        <li style="margin-bottom: 8px">
+          &bull; Why can't anything travel faster than the speed of light?
+        </li>
+        <li style="margin-bottom: 8px">
+          &bull; Why does time slow down near a black hole?
+        </li>
+        <li style="margin-bottom: 8px">
+          &bull; Why does the universe &ldquo;know&rdquo; what you'll measure?
+        </li>
+        <li style="margin-bottom: 8px">
+          &bull; Why do equations for physics work backwards in time?
+        </li>
+        <li style="margin-bottom: 8px">&bull; Is time travel possible?</li>
+        <li style="margin-bottom: 8px">
+          &bull; Is there any age at which a man can know for sure he won't ever
+          bald?
+        </li>
+      </ul>
 
-<p>These are genuine unsolved mysteries and in my version of what's going on, they all have the same answer. Well except the last one, that is an open question I'm asking for a friend.</p>
+      <p>
+        These are genuine unsolved mysteries and in my version of what's going
+        on, they all have the same answer. Well except the last one, that is an
+        open question I'm asking for a friend.
+      </p>
 
-<div class="callout callout-blue">
-<p><strong>The Engine Layer</strong> &mdash; where computation happens. The actual structure of reality. Think: the Nintendo console.</p>
-<p><strong>The Render Layer</strong> &mdash; what you experience. Your &ldquo;reality.&rdquo; The output. Think: the TV screen.</p>
-</div>
+      <div class="callout callout-blue">
+        <p>
+          <strong>The Engine Layer</strong> &mdash; where computation happens.
+          The actual structure of reality. Think: the Nintendo console.
+        </p>
+        <p>
+          <strong>The Render Layer</strong> &mdash; what you experience. Your
+          &ldquo;reality.&rdquo; The output. Think: the TV screen.
+        </p>
+      </div>
 
-<!-- Figure 0 -->
-<div class="figure" id="two-layers-of-reality">
-<span class="scene-label">Figure 0 &mdash; Two Layers of Reality</span>
-<img src="images/two-layers-of-reality.svg" alt="Two layers: engine (Nintendo console with graph nodes) produces the render layer (TV screen showing Mario's world)">
-<div class="figure-caption">Two layers. The engine computes the graph. The screen shows the output &mdash; Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?</div>
-</div>
+      <!-- Figure 0 -->
+      <div class="figure" id="two-layers-of-reality">
+        <span class="scene-label">Figure 0 &mdash; Two Layers of Reality</span>
+        <img
+          src="images/two-layers-of-reality.svg"
+          alt="Two layers: engine (Nintendo console with graph nodes) produces the render layer (TV screen showing Mario's world)"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Two layers. The engine computes the graph. The screen shows the output
+          &mdash; Mario's world. Mario can't see the engine. He only sees the
+          output. Sound familiar?
+        </div>
+      </div>
 
-<p>Okay so real quick &mdash; a <strong>graph</strong> is dots connected by lines. A recipe is a graph. A family tree is a graph. That's it.</p>
+      <p>
+        Okay so real quick &mdash; a <strong>graph</strong> is dots connected by
+        lines. A recipe is a graph. A family tree is a graph. That's it.
+      </p>
 
-<!-- Figure 1 -->
-<div class="figure" id="you-already-know-what-a-graph-is">
-<span class="scene-label">Figure 1 &mdash; You Already Know What a Graph Is</span>
-<img src="images/you-already-know-what-a-graph-is.svg" alt="Three simple graphs: a family tree, a social network, and a recipe with directional arrows">
-<div class="figure-caption">These are all graphs. Dots connected by lines. That's the whole idea. We call the dots &ldquo;nodes&rdquo; and the connections between them &ldquo;edges&rdquo; &mdash; but lines and dots.</div>
-</div>
+      <!-- Figure 1 -->
+      <div class="figure" id="you-already-know-what-a-graph-is">
+        <span class="scene-label"
+          >Figure 1 &mdash; You Already Know What a Graph Is</span
+        >
+        <img
+          src="images/you-already-know-what-a-graph-is.svg"
+          alt="Three simple graphs: a family tree, a social network, and a recipe with directional arrows"
+          width="100%"
+        />
+        <div class="figure-caption">
+          These are all graphs. Dots connected by lines. That's the whole idea.
+          We call the dots &ldquo;nodes&rdquo; and the connections between them
+          &ldquo;edges&rdquo; &mdash; but lines and dots.
+        </div>
+      </div>
 
-<p>Now our universe graph needs a few rules:</p>
+      <p>Now our universe graph needs a few rules:</p>
 
-<p><strong>1. Lazy loaded.</strong> Unless someone asks &ldquo;hey, what's your value?&rdquo; &mdash; do nothing.</p>
+      <p>
+        <strong>1. Lazy loaded.</strong> Unless someone asks &ldquo;hey, what's
+        your value?&rdquo; &mdash; do nothing.
+      </p>
 
-<p><strong>2. No stored values</strong> &mdash; all values come from how the graph is connected. Imagine someone asks you the time. You don't actually know &mdash; you check your phone, which checks a satellite, which checks an atomic clock. The time depends on where you are in the graph. You always need to check.</p>
+      <p>
+        <strong>2. No stored values</strong> &mdash; all values come from how
+        the graph is connected. Imagine someone asks you the time. You don't
+        actually know &mdash; you check your phone, which checks a satellite,
+        which checks an atomic clock. The time depends on where you are in the
+        graph. You always need to check.
+      </p>
 
-<p><strong>3. Edges are operations</strong> &mdash; the lines connecting dots can be instructions. Like: (3) --- &times; --- (3) = 9.</p>
+      <p>
+        <strong>3. Edges are operations</strong> &mdash; the lines connecting
+        dots can be instructions. Like: (3) --- &times; --- (3) = 9.
+      </p>
 
-<p>One more thing: <strong>recursive functions.</strong> You know when you feed your dog and then an hour later he tries to eat his own sh*t? That is a recursive function. It's a function (in this case your dog) which eats its own &ldquo;output&rdquo;... again and again.</p>
+      <p>
+        One more thing: <strong>recursive functions.</strong> You know when you
+        feed your dog and then an hour later he tries to eat his own sh*t? That
+        is a recursive function. It's a function (in this case your dog) which
+        eats its own &ldquo;output&rdquo;... again and again.
+      </p>
 
-<p>In our case we eat the graph, do math, get a result, then eat that result. Again and again. Each time we eat the graph we update the screen with what the graph says. This is how video games work &mdash; the engine does math, then updates the screen. Mario never sees half a screen. He always sees a complete image. From Mario's perspective you can hit pause, walk away, get lunch, and resume &mdash; and no time would have passed at all for him.</p>
+      <p>
+        In our case we eat the graph, do math, get a result, then eat that
+        result. Again and again. Each time we eat the graph we update the screen
+        with what the graph says. This is how video games work &mdash; the
+        engine does math, then updates the screen. Mario never sees half a
+        screen. He always sees a complete image. From Mario's perspective you
+        can hit pause, walk away, get lunch, and resume &mdash; and no time
+        would have passed at all for him.
+      </p>
 
-<p>That's it. Sh*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...</p>
+      <p>
+        That's it. Sh*t-eating dogs, nerds in the sky with time, and a base rule
+        of don't speak unless spoken to. Now let's go make some graphic content
+        and create the fucking universe...
+      </p>
 
-<!-- ================================================================ -->
-<!-- CHAPTER 2: RUN IT                                                -->
-<!-- ================================================================ -->
-<h2>Chapter 2: Run It</h2>
+      <!-- ================================================================ -->
+      <!-- CHAPTER 2: RUN IT                                                -->
+      <!-- ================================================================ -->
+      <h2>Chapter 2: Run It</h2>
 
-<p>Here is a basic example of what an engine might look like.</p>
+      <p>Here is a basic example of what an engine might look like.</p>
 
-<pre>function evaluate(node):
+      <pre>
+function evaluate(node):
     if node has no children:
         return 1                        // leaf &mdash; base case
 
@@ -192,512 +690,1609 @@ that was just me.</p>
 
     node.revision += 1                  // tick the counter
     node.committed = result             // lock in the result
-    return result</pre>
-
-<!-- Figure 2 -->
-<div class="figure" id="graph-evaluation-walkthrough">
-<span class="scene-label">Figure 2 &mdash; Watch What Emerges From Recursive Evaluation</span>
-<img src="images/graph-evaluation-walkthrough.svg" alt="Multi-panel walkthrough of a graph being evaluated step by step, with annotations showing emergent properties: time, causality, gravity mechanism, superposition, and information limit">
-<div class="figure-caption">One recursive function. No physics. No special rules. Just: evaluate the graph. And look what fell out.</div>
-</div>
-
-<p>So what just happened? The engine walked the graph. Leaves committed first &mdash; they had nothing to wait for. Parents waited for their children, then committed. Each node's revision counter ticked. The screen updated. That's one frame of reality.</p>
-
-<p>Now let me show you what fell out of that &mdash; because it's kind of insane.</p>
-
-<p><strong>Time.</strong> See that revision counter? That's time. Not metaphorical time &mdash; actual time. Every commit is one tick. Two commits = two moments passed. No commits = no time passes. Think about it: what would it look like if time stopped? Nothing would change. No node evaluates. Nothing commits. That's literally what &ldquo;time stopped&rdquo; means &mdash; zero change. Time isn't a river you float on. It's the amount of change happening in your local region.</p>
-
-<p>And here's the thing about engine time: the engine could take a billion years between frames for all we know. Mario doesn't notice. Hit pause, walk away, get lunch, come back &mdash; zero time passed for Mario. You only ever experience the update. Never the computation.</p>
-
-<p><strong>The speed limit.</strong> Every parent reads its children's LAST COMMITTED value &mdash; not the value they're currently computing. You're always one step behind. The current evaluation is invisible. That's the speed limit. A leaf node &mdash; nothing to recurse into &mdash; commits instantly. That rate is C. The speed of light. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why nothing travels faster than light &mdash; you can't commit faster than a node with zero work to do.</p>
-
-<p><strong>E=mc&sup2;.</strong> Look at the pseudocode again. Recursive evaluation has two legs it can't skip. The <em>call</em> phase walks DOWN the graph &mdash; root to leaves. That's m hops at rate C. Then the <em>return</em> phase walks back UP &mdash; leaves to root, delivering results. Another m hops at rate C. Down at C, up at C. m &times; C &times; C = mc&sup2;. The c&sup2; isn't some magical physics constant. It's the two unavoidable legs of recursion.</p>
-
-<p><strong>Mass.</strong> A region of the graph whose topology doesn't change. Same walk, same result, every time. A rock on a table keeps committing the same value because no new inputs are arriving. Stability. When that stability breaks &mdash; enough energy to rewire the edges &mdash; the delta propagates outward. That's released energy.</p>
-
-<p>And one more: <strong>lazy evaluation.</strong> If nothing demands a node's result, it stays unevaluated. It doesn't need to commit. It can sit there with multiple possible states, pending, until someone asks. That's quantum superposition &mdash; and we'll come back to it.</p>
-
-<p>No physics. No special rules. Just: evaluate the graph. And we got time (revision counter), a speed limit (off-by-one), E=mc&sup2; (two-leg recursion), mass (stable topology), and lazy evaluation (nodes that nobody asked for stay unevaluated). All from one function.</p>
-
-<p>A caveat before we go further: we don't know the exact operations on the edges. We're not claiming to have the specific rules that generate electrons or gravity constants. What we're showing is that the <strong>structure</strong> of recursive graph evaluation &mdash; regardless of the specific operations &mdash; produces emergent properties that map onto physics. The shape of the argument matters more than the specific numbers.</p>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Recursive Evaluation Rule</span>
-<p><strong>Axiom A2</strong> states the entire engine: a single recursive function evaluates the graph. Leaves return the identity (base case). Non-leaf nodes aggregate their children's committed values via edge operations. The output of pass W(n) feeds pass W(n+1) (Axiom A5). Combined with lazy evaluation (A3) and no stored values (A4), this produces all emergent properties observed above: time (D1), causal ordering (D2), stack depth (D8), superposition (D16), and the information limit.</p>
-</div>
-
-<h3>The Proof of Concept: Primes From Topology</h3>
-
-<p>Watch what happens when a node's value depends on its depth. Depth 2: leaf returns 1. Depth 3: new irreducible structure &rarr; 2 (prime). Depth 4: just recombines depth 2 &rarr; composite. Depth 5: another irreducible structure &rarr; 3 (prime).</p>
-
-<!-- Figure 2b -->
-<div class="figure" id="evaluating-a-graph-step-by-step">
-<span class="scene-label">Figure 2b &mdash; Topology Generates Primes</span>
-<img src="images/evaluating-a-graph-step-by-step.svg" alt="Three graph depths shown: depth 2 produces 1 (base case), depth 3 produces 2 (prime, new irreducible structure), depth 5 produces 3 (prime), while depth 4 produces 2 (composite, just sub-structures re-combined)">
-<div class="figure-caption">Primes emerge from topology. Depths with irreducible structure produce primes. Composite depths just re-combine existing sub-structures. No values stored anywhere.</div>
-</div>
-
-<p>The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept &mdash; everything else builds on it.</p>
-
-<div class="insight">
-<span class="callout-label">&starf; What This Means</span>
-<p>One recursive function &mdash; no physics, no special rules &mdash; and we got time, a speed limit, E=mc&sup2;, mass, and quantum superposition. None of these were designed in. They fell out of the evaluation. The engine walked the graph, and physics showed up uninvited.</p>
-</div>
-
-<p>Five properties. No physics. No special rules. Just: evaluate the graph. But here's the thing &mdash; we're not the first people to build systems like this.</p>
-
-<!-- ================================================================ -->
-<!-- CHAPTER 3: THE REVEAL                                            -->
-<!-- ================================================================ -->
-<h2>Chapter 3: &ldquo;Wait. This IS Spacetime.&rdquo;</h2>
-
-<h3>You Already Use This Model</h3>
-
-<p>We already build systems that evaluate graphs. Spreadsheets, React, CPU caches &mdash; different teams, different decades, different purposes. They all independently converged on the same model: <strong>topological ordering</strong>. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait.</p>
-
-<p>A spreadsheet is a graph. Change cell A1 and it walks the dependency graph forward, recomputing only what depends on A1, in order. B1 and C1 can update in parallel &mdash; no dependency between them. D1 waits for both.</p>
-
-<!-- Figure 3 -->
-<div class="figure" id="spreadsheet-is-a-graph">
-<span class="scene-label">Figure 3 &mdash; A Spreadsheet Is a Graph Being Evaluated</span>
-<img src="images/spreadsheet-is-a-graph.svg" alt="Three panels showing spreadsheet cells evaluating in dependency order: A1 changes, B1 and C1 update in parallel, then D1 last">
-<div class="figure-caption">Change A1 and the update cascades forward through the dependency graph. B1 and C1 can update in parallel &mdash; no dependency between them. D1 waits for both. That's topological ordering.</div>
-</div>
-
-<p>Two key consequences fall out of topological ordering. First: no preferred traversal order = no preferred frame = <strong>special relativity for free</strong>. Two observers on independent branches genuinely have no shared &ldquo;now&rdquo; &mdash; not because of a physical law, but because there's no ordering constraint between them.</p>
-
-<h3>Subgraphs Have Stacks</h3>
-
-<p>Now here's where it gets interesting. When the engine evaluates a deep subgraph, it builds a <strong>call stack</strong> &mdash; a list of things waiting for answers. Think of a stack of plates: you can't get to the bottom one until you take off every plate above it. Deeper subgraphs = taller call stacks = more pressure on the system.</p>
-
-<p>Plot call stack depth across a region of the graph. What shape do you get?</p>
-
-<!-- Figure 4 -->
-<div class="figure" id="call-stack-pyramid">
-<span class="scene-label">Figure 4 &mdash; Call Stack Depth Forms a Pyramid</span>
-<img src="images/call-stack-pyramid.svg" alt="Row of nodes with vertical bars below forming a pyramid shape, tallest at center where mass is, height 1 at edges">
-<div class="figure-caption">Plot call stack depth across the graph and you get a mountain. Tallest where mass is. Height 1 at the leaves &mdash; those are your photons, traveling at C.</div>
-</div>
-
-<p>Now flip that pyramid upside down. The tall bars become deep wells. Drape a spacetime fabric grid over it.</p>
-
-<!-- Figure 5 -->
-<div class="figure" id="invert-pyramid-spacetime">
-<span class="scene-label">Figure 5 &mdash; Invert the Pyramid. That's Spacetime.</span>
-<img src="images/invert-pyramid-spacetime.svg" alt="Inverted pyramid with spacetime fabric grid draped over it, curving into the well at center">
-<div class="figure-caption">Flip the pyramid and drape a fabric over it. That's the spacetime diagram from your physics textbook. The call stack topology is spacetime curvature.</div>
-</div>
-
-<p>You're looking at the diagram from every physics textbook ever printed.</p>
-
-<!-- Figure 6 -->
-<div class="figure" id="spacetime-is-a-routing-table">
-<span class="scene-label">Figure 6 &mdash; Same Thing. Different Notation.</span>
-<img src="images/spacetime-is-a-routing-table.svg" alt="Side-by-side: inverted call stack with curving paths vs. classic GR spacetime curvature diagram. Same shape, different notation.">
-<div class="figure-caption">Same thing. Different notation. 110 years of research. Our map.</div>
-</div>
-
-<p><strong>This IS spacetime.</strong></p>
-
-<p>Around here I realized something that took me embarrassingly long to see. This graph I'd been staring at &mdash; physicists already had a name for it. They call it spacetime. They've been studying it for 110 years. They call it a &ldquo;fabric.&rdquo; They draw diagrams of it curving. But here's the question that never gets answered: what IS the fabric? What is the thing that curves? I'm saying it's a graph. And if I'm right &mdash; or even close &mdash; then 110 years of general relativity research just became our instruction manual. Reverse engineering might be cheating in the physics world, but in my world it's a mark of the trade.</p>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Core Axioms</span>
-<p><strong>A1 (Graph Structure):</strong> Reality is a directed graph G = (N, E). Edges carry operations. <strong>A3 (Lazy Evaluation):</strong> No node evaluates until a consumer demands its result. <strong>A4 (No Stored Values):</strong> All values derived from topology alone &mdash; the structure IS the value. These three axioms, combined with recursive evaluation (A2), produce the emergent properties demonstrated in the demo.</p>
-</div>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Topological Ordering</span>
-<p><strong>D2 (Causal Ordering):</strong> Children evaluate before parents &mdash; the partial order imposed by the graph's dependency structure. <strong>D3 (Special Relativity):</strong> Causally independent nodes have no ordering constraint &rarr; no preferred frame &rarr; no preferred &ldquo;now.&rdquo; <strong>D4 (Speed of Light):</strong> A leaf node commits at maximum rate C &mdash; no subgraph to wait for. All non-leaf evaluations are slower.</p>
-</div>
-
-<div class="insight">
-<span class="callout-label">&starf; What This Means</span>
-<p>The call stack of a recursive graph evaluation IS spacetime. The topology of stack depth IS spacetime curvature. Nobody ever said what spacetime IS &mdash; what the fabric is, what the thing that curves is. It's a graph. And 110 years of general relativity just became our instruction manual.</p>
-</div>
-
-<p>So what does GR actually tell us about our graph? It tells us this is a 3D graph. It tells us mass curves the routing table. It tells us paths follow cheapest routes. It tells us the speed of information has a hard cap. We didn't invent any of this &mdash; we're using 110 years of research as a map. But we ARE adding a few rules of our own: lazy evaluation, topology-as-value, and no stored state. Let's see where the map takes us.</p>
-
-<!-- ================================================================ -->
-<!-- PART 2: GENERAL RELATIVITY, TRANSLATED                           -->
-<!-- ================================================================ -->
-<h2>Part 2: General Relativity, Translated</h2>
-
-<!-- ======== MASS & ENERGY ======== -->
-<h3>Mass &amp; Energy</h3>
-
-<p>A massive object is a region of the graph whose topology is <strong>stable</strong> &mdash; edges don't change, same walk produces the same result every time. That's mass. A rock on a table IS part of the evaluation &mdash; but its topology hasn't changed, so it commits the same result every time. No change = same committed value = that's what mass is. Topology that holds.</p>
-
-<p>When that stability breaks &mdash; enough energy to rewire the edges &mdash; the evaluation produces a different result. The delta propagates outward through the graph. That outward propagation IS the released energy.</p>
-
-<!-- Figure 7 -->
-<div class="figure" id="mass-is-stable-topology">
-<span class="scene-label">Figure 7 &mdash; Mass Is Stable Topology</span>
-<img src="images/mass-is-stable-topology.svg" alt="Three panels: stable topology producing same result (mass), disruption changing edges (energy input), and delta propagating outward (released energy)">
-<div class="figure-caption">Mass is a stable subgraph &mdash; same walk, same result. Energy is the delta that propagates when the topology changes.</div>
-</div>
-
-<p><strong>E = mc&sup2;:</strong> remember the two-leg walk from the demo? The <em>call</em> phase walks down &mdash; root to leaves. That's m hops at rate C. The <em>return</em> phase walks back up &mdash; leaves to root, delivering results. Another m hops at rate C. You can't have one without the other &mdash; you go down to get the answer, you come back up to deliver it. m &times; C &times; C = mc&sup2;. The c&sup2; isn't magic &mdash; it's the two unavoidable phases of recursion.</p>
-
-<p>Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full evaluation propagates outward as energy.</p>
-
-<!-- Figure 8 -->
-<div class="figure" id="the-bidirectional-walk">
-<span class="scene-label">Figure 8 &mdash; The Bidirectional Walk</span>
-<img src="images/the-bidirectional-walk.svg" alt="Subgraph with blue arrows going down at rate C and orange arrows going up at rate C, equation E=mc&sup2; below">
-<div class="figure-caption">The walk down to leaves and the walk back up are both at rate C. Same rate, two independent directions. That's c&sup2; &mdash; not a magic constant, a topological fact.</div>
-</div>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Mass, Energy, and E=mc&sup2;</span>
-<p><strong>D5 (Mass):</strong> A stable subgraph topology &mdash; same walk, same result. Topological persistence. <strong>D6 (Energy):</strong> The delta that propagates when stable topology is disrupted. <strong>D7 (E=mc&sup2;):</strong> The bidirectional walk &mdash; call phase descends m hops at rate C, return phase ascends m hops at rate C. Total: m &times; C&sup2; = mc&sup2;. The c&sup2; factor is the two unavoidable phases of recursion. <strong>D23 (Antimatter):</strong> Mirror (conjugate) graph topology. Contact with original = complete cancellation &rarr; full energy release.</p>
-</div>
-
-<!-- ======== GRAVITY ======== -->
-<h3>Gravity</h3>
-
-<div class="mystery-block">
-<span class="callout-label">&#128270; The Mystery</span>
-<p>Gravity is weird. A suspicious kind of weird. Three clues:</p>
-<p><strong>1.</strong> You can shield every other force &mdash; EM, strong, weak. Nobody has ever shielded gravity.</p>
-<p><strong>2.</strong> Einstein's equivalence principle: no experiment can distinguish gravity from acceleration. Why would a &ldquo;force&rdquo; be indistinguishable from acceleration?</p>
-<p><strong>3.</strong> Physicists hunted the graviton for decades. Never found one. Maybe gravity isn't a force at all.</p>
-</div>
-
-<p>You already saw it &mdash; the call stack pyramid, the inversion, the spacetime curvature. Now let's look at what the routing pressure actually does.</p>
-
-<p>The deep call stack doesn't just slow things down &mdash; the system actively routes around it. Paths through mass are expensive. Paths around it are cheaper. Everything follows the cheapest path. The cheapest path curves. That curve IS gravity.</p>
-
-<!-- Figure 9 -->
-<div class="figure" id="routing-pressure">
-<span class="scene-label">Figure 9 &mdash; Routing Pressure</span>
-<img src="images/routing-pressure.svg" alt="Left: uniform grid with straight path. Right: same grid with mass cluster in center, path curving around it">
-<div class="figure-caption">Deep call stacks create routing pressure. Cheapest paths bend around the pressure zone. That bend is gravity.</div>
-</div>
-
-<p>Now dissolve the three mysteries:</p>
-
-<p><strong>Why you can't shield gravity.</strong> Every other force transmits via a signal through edges &mdash; photons carry EM, gluons carry the strong force. Block the edge, block the signal. But gravity isn't a signal. It's the call stack depth of your own evaluation. Your shield shares the same stack. There is no layer in your reality that can reach into the engine and change stack depth. You are Mario. You cannot reach into the console.</p>
-
-<p><strong>Why gravity equals acceleration.</strong> Both add depth to your local call stack. Same effect. Same mechanism. That's why Einstein couldn't tell them apart &mdash; they're the same thing.</p>
-
-<p><strong>Why there's no graviton.</strong> &ldquo;What particle carries gravity?&rdquo; is like asking &ldquo;What particle carries network congestion?&rdquo; It's a system property. Not a thing that travels.</p>
-
-<div class="physics-card">
-<span class="callout-label">&#9883; Physics Card &mdash; Black Holes</span>
-<p>A black hole is a subgraph so deep that evaluation never completes. The call stack builds without unwinding. Unlike General Relativity's prediction of a singularity &mdash; infinite density &mdash; there's nothing infinite here. The subgraph is finite. The stack is deep but finite. The computation just never finishes. Stack exhaustion, not mathematical breakdown.</p>
-</div>
-
-<div class="physics-card">
-<span class="callout-label">&#9883; Physics Card &mdash; Dark Matter</span>
-<p>Pure cycles in the graph &mdash; nodes that depend on themselves. When the engine tries to evaluate a cycle, it detects &ldquo;already visiting this node&rdquo; and returns PENDING. The cycle can't resolve. But the call stack was already built on the way in. Stack depth is real. Routing pressure is real. So the cycle gravitates &mdash; it has mass from the stack depth &mdash; but no value ever commits. No signal leaves. No electromagnetic interaction. No committed state to collide with. Collisionless, invisible, extends further than stable matter. All observed dark matter properties from one mechanism: cycles that gravitate but never resolve.</p>
-</div>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Gravity as Routing Pressure</span>
-<p><strong>D8 (Call Stack Depth):</strong> Evaluating a deep subgraph builds a call stack &mdash; each parent waits for its children. Stack depth = subgraph depth. <strong>D9 (Gravity):</strong> Deep stacks make paths expensive &rarr; system routes around &rarr; cheapest paths curve. That curve is gravity. <strong>D10 (Spacetime Curvature):</strong> Inverted call stack profile = spacetime curvature. <strong>D11 (Can&rsquo;t Shield):</strong> Gravity is stack depth, not a signal through edges &mdash; no edge to block. <strong>D12 (Equivalence Principle):</strong> Gravity and acceleration both add stack depth. Same mechanism.</p>
-</div>
-
-<div class="insight">
-<span class="callout-label">&starf; What This Means</span>
-<p>Gravity is not a force. It is call stack pressure created by a deep subgraph. Plot the stack depth: a pyramid. Flip it: Einstein's spacetime curvature. The routing table updates, paths curve toward mass. You can't block it because the stack is part of your own evaluation. There is no signal to block. The topology is not optional.</p>
-</div>
-
-<!-- ======== TIME, SPACE & THE SPEED OF LIGHT ======== -->
-<h3>Time, Space &amp; the Speed of Light</h3>
-
-<p>We already know time is the revision counter and C is the leaf commit rate. Now watch what happens near mass &mdash; and what happens to the graph as a whole.</p>
-
-<p>Space isn't a box things happen inside. It's the graph's shape &mdash; the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop &mdash; one node. That's the Planck length: one pixel.</p>
-
-<!-- Figure 10 -->
-<div class="figure" id="time-is-revision-rate">
-<span class="scene-label">Figure 10 &mdash; Time Is the Revision Counter</span>
-<img src="images/time-is-revision-rate.svg" alt="Two timelines: far from mass with rapid commits, near mass with slow commits. Same span, different tick rates.">
-<div class="figure-caption">Time is the revision counter. Each commit is one tick. Near mass: deeper stack, slower commits, fewer ticks. That's time dilation.</div>
-</div>
-
-<p>Near mass, the call stack is deeper, commits are slower, less change happens. That IS time dilation. GPS satellites orbit where the stack depth is lower &mdash; less mass nearby, shallower call stacks, faster commits, faster clocks. The difference is about 45 microseconds per day. Without correction, GPS would drift roughly 10 kilometres per day. Your phone depends on this being real.</p>
-
-<p><strong>The arrow of time:</strong> remember Fibonacci? 1, 1, 2, 3, 5, 8, 13&hellip; Each number needs the previous two. The engine works the same way. Each walk's committed results become the input to the next walk. Walk 5 needs Walk 4's output. The dependency runs one direction.</p>
-
-<p>That dependency chain IS the arrow. The equations work backwards because they describe the committed results &mdash; the photographs. A photograph has no arrow. You can run a film forward or backward. The arrow lives in the computation that produced the frames. Not in the output. In the engine.</p>
-
-<p>Moving fast eats commits too &mdash; position edges being rewired costs evaluation steps, leaving fewer for internal state changes. At C, zero internal revisions. Zero elapsed time. That's why a photon experiences no time.</p>
-
-<div class="physics-card">
-<span class="callout-label">&#9883; Physics Card &mdash; The Muon</span>
-<p>Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% of C, almost all evaluation steps go to motion. Their revision counter barely moves. Confirmed experimentally.</p>
-</div>
-
-<p><strong>Why is the universe expanding?</strong> Think of your family tree. It can grow &mdash; two people create a new person. You never ask &ldquo;what is my family tree expanding into?&rdquo; &mdash; growth is just a valid operation on a graph. Same here. The engine evaluates the graph. Some evaluations produce new nodes and edges. More graph = more evaluations = more new nodes. Growth proportional to size = accelerating expansion. No dark energy needed &mdash; the graph computes itself into existence.</p>
-
-<!-- Figure 11 -->
-<div class="figure" id="the-graph-grows-itself">
-<span class="scene-label">Figure 11 &mdash; The Graph Grows Itself</span>
-<img src="images/the-graph-grows-itself.svg" alt="Three panels showing a graph growing: Pass 1 with 6 nodes, Pass 2 with 10 nodes, Pass 3 with 16 nodes. Growth proportional to size.">
-<div class="figure-caption">The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.</div>
-</div>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Time and Space</span>
-<p><strong>D1 (Time):</strong> Change. Each commit = one tick. No change = no time. <strong>D13 (Gravitational Time Dilation):</strong> Near mass &rarr; deeper stack &rarr; slower commits &rarr; fewer ticks. <strong>D14 (Velocity Time Dilation):</strong> Fast motion consumes evaluation steps &rarr; fewer internal revisions. At C, zero elapsed time. <strong>D15 (Arrow of Time):</strong> Each pass&rsquo;s output feeds the next. Dependency chain runs one direction. Cannot un-commit. <strong>D24 (Space):</strong> Large-scale graph connectivity. Distance = hop count. Planck length = 1 hop = 1 node. <strong>D25 (Expansion):</strong> Evaluations add nodes. Growth proportional to size = accelerating expansion.</p>
-</div>
-
-<div class="insight">
-<span class="callout-label">&starf; What This Means</span>
-<p>Space is the graph's shape. Distance is hop count. Time is change &mdash; near mass, deeper stacks mean slower commits and less elapsed time. The arrow points one direction because each walk feeds the next. And the universe expands because evaluation grows the graph &mdash; like a family tree, it doesn't expand &ldquo;into&rdquo; anything. It just grows.</p>
-</div>
-
-<p>General relativity mapped. Every prediction checks out. But Einstein only described the large-scale structure. What about the small-scale weirdness?</p>
-
-<!-- ================================================================ -->
-<!-- PART 3: QUANTUM MECHANICS, TRANSLATED                            -->
-<!-- ================================================================ -->
-<h2>Part 3: Quantum Mechanics, Translated</h2>
-
-<div class="mystery-block">
-<span class="callout-label">&#128270; The Mystery</span>
-<p>Three things that shouldn't be possible:</p>
-<p><strong>1.</strong> Looking at something changes it. Not bumping it, not touching it &mdash; looking. The act of measurement alters the result.</p>
-<p><strong>2.</strong> Two particles, separated by the width of the universe, give correlated answers the instant either is measured. No signal between them. Instantaneous.</p>
-<p><strong>3.</strong> A particle hits a screen. The dot is recorded. AFTER that, you erase some information about the experiment. The interference pattern comes back &mdash; in data that was already collected. Erasing information after the fact changed a result that already happened.</p>
-<p>These are real. Every one confirmed experimentally, repeatedly, for decades. Standard physics says shut up and calculate. Let's do better.</p>
-</div>
-
-<!-- ======== THE IDLE NODE ======== -->
-<h3>The Idle Node</h3>
-
-<p>Remember lazy evaluation from the demo? No consumer = no evaluation. Now zoom in. Picture a small subgraph &mdash; four or five nodes connected by edges. It's sitting in a quiet corner of the graph. No path connects it to any consumer. No detector. No screen. No eyeball. Just nodes, floating there. Idle.</p>
-
-<!-- Figure 12 -->
-<div class="figure" id="idle-subgraph">
-<span class="scene-label">Figure 12 &mdash; The Idle Node</span>
-<img src="images/idle-subgraph.svg" alt="Isolated subgraph with all edges pending (purple, dotted) and all nodes showing question marks. Surrounding committed graph shown in green for contrast.">
-<div class="figure-caption">An isolated subgraph. No consumer connected. All edges pending. All nodes uncommitted. The surrounding committed graph (green) doesn't reach it. This is superposition.</div>
-</div>
-
-<p>What would it mean for one of those nodes to &ldquo;be somewhere&rdquo;? Being somewhere means having committed position edges to specific neighbors. Definite position = definite edges. But this subgraph has no consumer demanding answers. So it hasn't committed. It has pending edges to MULTIPLE positions. Not because physics is weird &mdash; because nobody asked.</p>
-
-<p>THIS is superposition. Not a particle magically in two places at once. A graph with no reader. An idle subgraph with uncommitted edges. There is nothing mysterious about it. It's the same thing as a spreadsheet cell whose formula hasn't recalculated yet because nothing downstream needs the result.</p>
-
-<p>Now connect a consumer. A detector. A screen. Something that demands: &ldquo;What is your value?&rdquo; That demand cascades into the idle subgraph. The nodes MUST commit. One path is chosen. The others disappear. That's collapse. Not a mystical transition &mdash; a lazy thunk being forced.</p>
-
-<!-- Figure 12b -->
-<div class="figure" id="consumer-forces-cascade">
-<span class="scene-label">Figure 12b &mdash; Consumer Forces Cascade</span>
-<img src="images/consumer-forces-cascade.svg" alt="Two panels. Left: idle subgraph with all pending edges. Right: detector connected, one path commits green, rest fade to gray.">
-<div class="figure-caption">LEFT: the idle subgraph from before &mdash; all pending, no consumer. RIGHT: a detector connects. The demand cascades in. One path commits (green, solid). The rest fade. That's measurement.</div>
-</div>
-
-<p>Small, isolated things &mdash; no consumers nearby &mdash; stay pending. Both paths alive. That's why quantum effects appear at tiny scales. Large things &mdash; 10<sup>26</sup> atoms, every one a <strong>strict consumer</strong> (anything that demands a definite answer right now: a detector, a screen, your eyeball) demanding definite inputs from its neighbors &mdash; everything commits instantly. No pending evaluations survive the crowd. That's decoherence.</p>
-
-<!-- ======== WHY YOU CAN'T JUST LOOK ======== -->
-<h3>Why You Can't Just Look</h3>
-
-<p>Measurement means inserting a consumer into the graph. Simple enough. But here's the catch: connecting a consumer CHANGES THE TOPOLOGY. You've added edges. You've altered the dependency structure. The graph before measurement and the graph after measurement are different graphs.</p>
-
-<p>You cannot observe without participating. Not because of some mystical observer effect &mdash; because inserting a node into a dependency graph changes the dependency graph. That's not philosophy. That's data structures.</p>
-
-<!-- Figure 12c -->
-<div class="figure" id="measurement-changes-topology">
-<span class="scene-label">Figure 12c &mdash; Measurement Changes the Topology</span>
-<img src="images/measurement-changes-topology.svg" alt="Three panels: idle subgraph with pending position and momentum edges; position detector connects and commits position but disrupts momentum; annotation showing why both can't be measured simultaneously.">
-<div class="figure-caption">LEFT: idle subgraph with pending position edges (purple, dotted) and pending momentum structure (orange, dotted). MIDDLE: position detector connects &mdash; position edges commit (green), momentum edges disrupted (red). RIGHT: you can't demand both without one demand disrupting the other.</div>
-</div>
-
-<p>This is Heisenberg's uncertainty principle. Position and momentum are both derived from graph topology. Position is about WHICH edges connect WHERE. Momentum is about HOW the topology is changing over time &mdash; edge rewiring rates. Measuring position requires a consumer that demands position edges. That consumer's presence rewires the topology &mdash; which is exactly the thing momentum depends on. You can't demand both because demanding one structurally alters what the other depends on.</p>
-
-<p>Not an instrument limitation. Not &ldquo;we need better equipment.&rdquo; A topological constraint. You can't read a variable and its rate of change from a single snapshot of a graph that your measurement just rewired.</p>
-
-<!-- ======== ENTANGLEMENT ======== -->
-<h3>Entanglement</h3>
-
-<p>When two particles interact &mdash; collide, get created together, exchange energy &mdash; their value subgraphs merge. They end up sharing a node. Think of two spreadsheet cells that both reference the same formula cell. Change the formula, both cells update. That's not magic. That's a shared dependency.</p>
-
-<!-- Figure 13 -->
-<div class="figure" id="entanglement-forms">
-<span class="scene-label">Figure 13 &mdash; Entanglement Forms</span>
-<img src="images/entanglement-forms.svg" alt="Two panels: Before interaction, particles A and B have separate value subgraphs. After interaction, their values merge into a single shared node SH.">
-<div class="figure-caption">LEFT &mdash; BEFORE: particles A and B with separate, independent value subgraphs. RIGHT &mdash; AFTER INTERACTION: their value subgraphs have merged into a single shared node (SH). Both A and B point to SH. Interaction merges value subgraphs. Correlation is structural.</div>
-</div>
-
-<p>Now the particles separate. They fly to opposite ends of the universe. Position edges rewire &mdash; A is HERE, B is THERE, enormous distance between them. But here's the thing: value edges and position edges are <strong>different parts of the graph</strong>. The shared value node doesn't move. It doesn't care about position. It's still shared. Still pending. Nobody asked for its value yet.</p>
-
-<!-- Figure 13b -->
-<div class="figure" id="entangled-separated">
-<span class="scene-label">Figure 13b &mdash; Entangled but Separated</span>
-<img src="images/entangled-separated.svg" alt="Particles A (far left) and B (far right) with long dashed position path between them but direct orange value edges to shared node SH at center-bottom, still pending.">
-<div class="figure-caption">A on the far left, B on the far right. Long dashed gray position path between them (many hops &mdash; enormous distance). But both A and B have direct value edges going to the shared node SH (center-bottom). Position edges: gray, dashed &mdash; rewired when particles move. Value edges: orange, solid &mdash; unchanged by movement. SH is still purple/pending. Nobody asked.</div>
-</div>
-
-<p>Someone measures particle A. A detector connects. The demand cascades: detector &rarr; A &rarr; shared node SH. SH must commit. It produces result R. Done.</p>
-
-<p>Now someone measures particle B. Could be a millisecond later. Could be a year. Could be simultaneously. The demand cascades: detector &rarr; B &rarr; shared node SH. But SH already committed. It already chose R. B reads R. Same result. Correlated.</p>
-
-<!-- Figure 13c -->
-<div class="figure" id="entanglement-cascade">
-<span class="scene-label">Figure 13c &mdash; The Entanglement Cascade</span>
-<img src="images/entanglement-cascade.svg" alt="Sequence showing detector connecting to A, cascade through shared node SH which commits result R, then detector connecting to B which reads the already-committed R. No signal between A and B.">
-<div class="figure-caption">The full cascade. (1) Detector connects to A. (2) Green cascade: detector &rarr; A &rarr; SH. SH commits, shows &ldquo;R&rdquo;. (3) Detector connects to B. (4) Orange cascade: detector &rarr; B &rarr; SH (already committed). B reads R. No signal between A and B. SH committed once. Both read the same answer.</div>
-</div>
-
-<p>No signal traveled between A and B. Nothing moved faster than light. The correlation was baked into the topology the moment they interacted. It was sitting there, waiting for someone to ask. The first measurement didn't CAUSE the second result. Both results were caused by the shared node &mdash; which committed once, for both.</p>
-
-<p>Why can't you use this for faster-than-light communication? Because the results are correlated but individually random. When A measures, it gets R &mdash; but R is random. A can't choose R. B gets R too &mdash; but without knowing A's result, it just looks random. Comparing notes still requires a classical signal at speed C. It's like two people opening sealed envelopes from the same pre-shuffled deck &mdash; the cards match, but neither person controls which card they got, and they can't learn anything useful until they call each other.</p>
-
-<!-- ======== THE DOUBLE-SLIT ======== -->
-<h3>The Double-Slit</h3>
-
-<div class="mystery-block">
-<span class="callout-label">&#128270; The Mystery</span>
-<p>Fire particles one at a time at two slits. An interference pattern appears &mdash; as if each particle went through both. Add a detector at one slit: the pattern vanishes. Looking at it changed the result.</p>
-</div>
-
-<p>You already know everything you need for this one.</p>
-
-<p><strong>Step 1:</strong> No consumer at the slits. Both paths through slit A and slit B are pending. The particle's path is an idle subgraph &mdash; nobody asked which slit.</p>
-
-<p><strong>Step 2:</strong> The engine evaluates all pending paths without committing. Both paths are alive in the dependency chain.</p>
-
-<p><strong>Step 3:</strong> Pending paths overlap at the screen &mdash; bright bands where they align, dark bands where they cancel. Interference.</p>
-
-<p><strong>Step 4:</strong> The screen's 10<sup>26</sup> atoms force commitment. One dot. Over thousands of particles, the interference bands fill in.</p>
-
-<!-- Figure 14 -->
-<div class="figure" id="double-slit-as-graph">
-<span class="scene-label">Figure 14 &mdash; Double-Slit as a Dependency Graph</span>
-<img src="images/double-slit-as-graph.svg" alt="Double-slit experiment as dependency graph: top row shows both paths pending with interference, bottom row shows detector forcing commitment with no interference">
-<div class="figure-caption">The double-slit experiment as a dependency graph. Pending edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment &mdash; killing the interference.</div>
-</div>
-
-<p><strong>A detector ruins it</strong> because it's a consumer. It demands &ldquo;which slit?&rdquo; &mdash; forces one path to commit. Only one path reaches the screen. No overlap. No interference. You didn't disturb the particle. You changed the graph.</p>
-
-<!-- ======== QUANTUM ERASER & DELAYED CHOICE ======== -->
-<h3>The Quantum Eraser &amp; Delayed Choice</h3>
-
-<p>This is the payoff. Let me spell out why the quantum eraser is so strange &mdash; because &ldquo;strange&rdquo; doesn't do it justice.</p>
-
-<p>You run the double-slit with a detector. The detector records which-path info. No interference &mdash; just like we'd expect. Particles hit the screen one at a time. Dots recorded. Data collected. Done.</p>
-
-<p>Now &mdash; AFTER the dots are already on the screen &mdash; you erase the which-path information. You sort the data by whether the which-path info was erased or kept. In the &ldquo;erased&rdquo; subset: the interference pattern is BACK. In the &ldquo;kept&rdquo; subset: no interference. The dots were already recorded. How can erasing information after the fact change a pattern that's already there?</p>
-
-<p>Here's how: the eraser is <strong>upstream in the dependency chain.</strong></p>
-
-<!-- Figure 15 -->
-<div class="figure" id="eraser-cascade-path">
-<span class="scene-label">Figure 15 &mdash; The Eraser Cascade</span>
-<img src="images/eraser-cascade-path.svg" alt="Full dependency chain from source through slits to screen, with idler branch to eraser node. Cascade traces backward from screen through graph to eraser. Two outcomes shown: erased gives interference, recorded gives no pattern.">
-<div class="figure-caption">Full dependency chain: SOURCE &rarr; SLIT A / SLIT B &rarr; SCREEN. An IDLER branch from one slit path leads to the ERASER node. The cascade from SCREEN traces backward through the graph and hits the ERASER. Two outcomes &mdash; TOP: eraser says &ldquo;erased&rdquo; &rarr; both paths still pending &rarr; interference. BOTTOM: eraser says &ldquo;recorded&rdquo; &rarr; one path committed &rarr; no interference. The cascade reads the eraser's state at pull-time.</div>
-</div>
-
-<p>When the screen demands the particle's position, that demand cascades backward through the dependency graph. The eraser node sits in that chain. The cascade reads whatever state the eraser is in at the moment the cascade reaches it. Not when the eraser was set. When the cascade arrives.</p>
-
-<p>Eraser says &ldquo;erased&rdquo; &rarr; which-path info gone &rarr; both paths still pending &rarr; interference.</p>
-
-<p>Eraser says &ldquo;recorded&rdquo; &rarr; which-path info locked &rarr; one path committed &rarr; no interference.</p>
-
-<p>&ldquo;After the fact&rdquo; is an illusion. The cascade was in flight through the dependency chain. The eraser's state at cascade-time is what matters. No time travel. No retrocausality. A dependency graph being read in dependency order.</p>
-
-<p><strong>Delayed choice</strong> is the same mechanism pushed further. Wheeler's thought experiment: choose whether to insert a detector AFTER the particle has already passed the slits. Seems like the particle must retroactively decide its own past. But the choice node is upstream in the dependency graph. The cascade reads its state at pull-time, not at wall-clock-time. &ldquo;Retrocausality&rdquo; is confusing wall-clock time with graph evaluation order. In the dependency graph, there is no &ldquo;before&rdquo; and &ldquo;after&rdquo; &mdash; there is only upstream and downstream.</p>
-
-<p><strong>Why basketballs don't do this:</strong> 10<sup>26</sup> atoms, every one a strict consumer demanding definite inputs. No pending evaluations survive. That's decoherence.</p>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Superposition and Collapse</span>
-<p><strong>D16 (Superposition):</strong> No strict consumer &rarr; node stays unevaluated &rarr; pending edges to multiple states. <strong>D17 (Collapse):</strong> Consumer demands result &rarr; one path commits &rarr; definite outcome. <strong>D18 (Decoherence):</strong> ~10<sup>26</sup> atoms each acting as strict consumers &rarr; no pending evaluations survive in warm/dense environments. <strong>D19 (Double-Slit):</strong> No consumer at slits &rarr; both paths pending &rarr; interference at screen. <strong>D20 (Quantum Eraser):</strong> Eraser is upstream in dependency chain. Its state at cascade-time determines outcome. No retrocausality &mdash; evaluation was in flight. <strong>D26 (Heisenberg):</strong> Measuring one property rewires the topology the other depends on. Topological constraint, not instrument limitation.</p>
-</div>
-
-<div class="technical-card">
-<span class="callout-label">Technical Detail &mdash; Entanglement Mechanics</span>
-<p><strong>D21 (Entanglement):</strong> Interaction merges value subgraphs into a shared node. Correlation is structural &mdash; baked into topology at interaction time. <strong>D22 (No FTL):</strong> Results are correlated but individually random. Comparing notes requires classical communication at C. Bell's theorem: the correlations are stronger than any local hidden variable model allows &mdash; because the shared node ISN'T a hidden variable. It's a real topological feature of the graph that both particles share. The correlation isn't pre-determined &mdash; it's co-determined at commit-time.</p>
-</div>
-
-<div class="physics-card">
-<span class="callout-label">&#9883; Physics Card &mdash; Why Probability Is Amplitude Squared</span>
-<p>The prime demo uses trees (no cycles). Values stay real. Everything is deterministic. That's the baseline.</p>
-<p>Now add a <strong>cycle</strong> to the graph &mdash; a node that depends on itself. Topological ordering breaks. You can't evaluate it top-down because the node needs its own result before it can produce one.</p>
-<p>Self-consistency forces a constraint: the value must equal the result of its own operation applied to itself. For many operations, the only solutions are <strong>roots of unity</strong> &mdash; complex numbers that return to 1 when raised to some power. Complex numbers don't get bolted on as a special rule. They emerge because cycles demand self-consistent solutions, and self-consistent solutions in a multiplicative graph are roots of unity.</p>
-<p>Once you have complex values, paths through the graph carry complex amplitudes. Multiple paths to the same node accumulate &mdash; some reinforce, some cancel. That's <strong>interference</strong>. Not mysterious wave behavior. Bookkeeping on a graph with cycles.</p>
-<p>The bidirectional walk (down to leaves, back up to root) means the final result involves &alpha; times its conjugate: &alpha; &times; &alpha;* = |&alpha;|&sup2;. Probability from structure.</p>
-<p><strong>Caveat:</strong> This is exploratory. We haven't derived the Born rule from first principles. But it's interesting that cycles in a graph &mdash; which must exist in any non-trivial universe (feedback, self-reference, closed causal loops) &mdash; naturally produce exactly the mathematical structure quantum mechanics uses: complex amplitudes, interference, and squared-modulus probability.</p>
-</div>
-
-<div class="insight">
-<span class="callout-label">&starf; What This Means</span>
-<p>Quantum mechanics is what a graph looks like when nobody's reading it. Idle subgraphs sit with all paths pending &mdash; that's superposition. Connecting a consumer forces commitment &mdash; that's collapse. Measurement changes the topology it's trying to read &mdash; that's Heisenberg. Two particles that interacted share a node that commits once for both &mdash; that's entanglement. And the quantum eraser? The eraser sits upstream in the dependency chain. The cascade reads its state at pull-time, not at wall-clock time. No time travel. No spookiness. Just a graph being evaluated in dependency order.</p>
-</div>
-
-<!-- ================================================================ -->
-<!-- HONEST GAPS                                                      -->
-<!-- ================================================================ -->
-<h2>Honest Gaps</h2>
-
-<p>A framework that claims to explain everything without identifying where it breaks is a story, not a theory. These gaps are real and hard.</p>
-
-<div class="gap-box">
-
-<div class="gap-item"><strong>1. Can't derive Einstein's exact equations from graph structure.</strong> The number one problem. The qualitative match is strong but we haven't derived G<sub>&mu;&nu;</sub> + &Lambda;g<sub>&mu;&nu;</sub> = 8&pi;G/c<sup>4</sup> T<sub>&mu;&nu;</sub> from first principles. Without the derivation, this is a compelling analogy, not a formal theory.</div>
-
-<div class="gap-item"><strong>2. Can't prove the computation is confluent.</strong> We claim the committed result is independent of traversal order. But we haven't formally proven the graph has a unique fixed point for all orderings. If different orderings produce different states, the framework predicts violations of Lorentz symmetry that aren't observed.</div>
-
-<div class="gap-item"><strong>3. Can't explain specific particles.</strong> Electrons, quarks, neutrinos have specific masses and charges. &ldquo;Particles are stable topologies&rdquo; doesn't tell us which ones exist or why.</div>
-
-<div class="gap-item"><strong>4. Can't prove the Born rule.</strong> We explain that measurement produces a committed result. We don't explain why probabilities follow amplitude squared. (The Born Rule physics card above shows that cycles in graphs naturally produce the right mathematical ingredients &mdash; complex amplitudes and |&alpha;|&sup2; &mdash; but this observation is exploratory, not a derivation.)</div>
-
-<div class="gap-item"><strong>5. Can't explain the hierarchy problem.</strong> Gravity is approximately 10<sup>36</sup> times weaker than electromagnetism. Why would stack depth produce such an enormous ratio? No answer.</div>
-
-<div class="gap-item"><strong>6. No unique experimental prediction &mdash; with one exception.</strong> The framework predicts <strong>no singularity</strong> at the center of black holes. Standard GR predicts infinite density. This framework predicts stack exhaustion &mdash; finite depth, non-terminating computation, but nothing infinite. If quantum gravity observations become possible, this could be testable.</div>
-
-</div>
-
-<p>These are genuine obstacles. Any one of them could be fatal to the whole picture. That's fine. That's how this works. You lay out what you think, you lay out where it breaks, and you hope someone smarter can get further than you did.</p>
-
-<!-- ================================================================ -->
-<!-- QUICK REFERENCE                                                  -->
-<!-- ================================================================ -->
-<h2>Quick Reference</h2>
-
-<table class="summary-table">
-<thead>
-<tr><th>Physics Concept</th><th>In This Framework</th><th>Computer Analogy</th></tr>
-</thead>
-<tbody>
-<tr><td>Space</td><td>Large-scale graph shape. Connectivity pattern.</td><td>Network topology. Hop count = distance.</td></tr>
-<tr><td>Mass</td><td>Stable subgraph topology. Same walk, same result.</td><td>Deterministic function, same output for unchanged input.</td></tr>
-<tr><td>Energy</td><td>Return value that propagates outward when topology changes.</td><td>Function output feeding next function call.</td></tr>
-<tr><td>E = mc&sup2;</td><td>Bidirectional walk: m hops down at C, m hops up at C. mc&sup2;.</td><td>Recursive call cost: down m levels &times; up m levels at same rate.</td></tr>
-<tr><td>Time</td><td>Change. Each commit is one tick of local time. No change = no time.</td><td>State change counter. No state change = no tick.</td></tr>
-<tr><td>Arrow of time</td><td>Each walk's output feeds the next. Fibonacci dependency. Cannot un-commit.</td><td>Program execution order. Can't un-run code.</td></tr>
-<tr><td>Time dilation</td><td>Deep stack or fast motion &rarr; slower commits &rarr; revision counter ticks less.</td><td>Deep recursion or I/O consuming cycles &rarr; lower throughput.</td></tr>
-<tr><td>Speed of light (C)</td><td>Commit rate of a leaf node. No subgraph. Maximum rate.</td><td>Base case return time. Immediate, no recursion.</td></tr>
-<tr><td>Gravity</td><td>Deep call stack creating routing pressure. Paths curve.</td><td>Deep recursive call; OS routes work around it.</td></tr>
-<tr><td>Can't shield gravity</td><td>Stack is part of your own evaluation. Not a signal &mdash; a topology.</td><td>Can't avoid being on the same call stack.</td></tr>
-<tr><td>Equivalence principle</td><td>Acceleration and gravity both add call stack depth. Same mechanism.</td><td>CPU load from motion vs. deep calls: same throughput impact.</td></tr>
-<tr><td>Spacetime</td><td>The routing table &mdash; edge weights, cheapest paths. Updated by stack pressure.</td><td>Network routing table, updated on congestion.</td></tr>
-<tr><td>Black hole</td><td>Subgraph so deep the stack never unwinds. No singularity &mdash; stack exhaustion.</td><td>Non-terminating recursion. Finite code, infinite loop.</td></tr>
-<tr><td>Dark matter</td><td>Graph cycles that build stacks but never commit. Gravitates, never interacts.</td><td>Infinite loop &mdash; CPU busy (stack depth) but no output (no signal).</td></tr>
-<tr><td>Wave function</td><td>Pending evaluation. Multiple possible states, nothing committed.</td><td>Lazy thunk. Defined, not forced.</td></tr>
-<tr><td>Collapse</td><td>Strict consumer demands a result. Pending evaluation commits.</td><td>Forcing a lazy thunk.</td></tr>
-<tr><td>Quantum eraser</td><td>Eraser is upstream in dependency chain. Pull cascades through its state.</td><td>Editing spreadsheet formula before Enter.</td></tr>
-<tr><td>Heisenberg uncertainty</td><td>Measuring one property rewires the topology the other depends on. Topological constraint.</td><td>Can't read a variable and its derivative from one snapshot.</td></tr>
-<tr><td>Delayed choice</td><td>Choice node is upstream. Cascade reads state at pull-time.</td><td>Setting a config value before the function reads it.</td></tr>
-<tr><td>Entanglement</td><td>Shared value subgraph node. Co-resolves when either is evaluated.</td><td>Shared pointer. Same data regardless of location.</td></tr>
-<tr><td>Special relativity</td><td>No preferred traversal order &rarr; no preferred frame.</td><td>Same output regardless of evaluation order.</td></tr>
-<tr><td>Expansion</td><td>Evaluations add new nodes. Growth proportional to size = acceleration.</td><td>Self-modifying code. Evaluation extends codebase.</td></tr>
-<tr><td>Planck length</td><td>One hop. One node. One pixel.</td><td>Minimum addressable unit.</td></tr>
-</tbody>
-</table>
-
-</div><!-- /.container -->
-
-<!-- ======== FOOTER ======== -->
-<div class="doc-footer">
-<strong>GL Theory: Greg's Computational Guide to the Universe</strong><br>
-March 2026 &middot; Plain English Edition<br>
-Framework developed by Greg.<br>
-&ldquo;The delusions are my own.&rdquo;
-</div>
-
-</body>
+    return result</pre
+      >
+
+      <!-- Figure 2 -->
+      <div class="figure" id="graph-evaluation-walkthrough">
+        <span class="scene-label"
+          >Figure 2 &mdash; Watch What Emerges From Recursive Evaluation</span
+        >
+        <img
+          src="images/graph-evaluation-walkthrough.svg"
+          alt="Multi-panel walkthrough of a graph being evaluated step by step, with annotations showing emergent properties: time, causality, gravity mechanism, superposition, and information limit"
+          width="100%"
+        />
+        <div class="figure-caption">
+          One recursive function. No physics. No special rules. Just: evaluate
+          the graph. And look what fell out.
+        </div>
+      </div>
+
+      <p>
+        So what just happened? The engine walked the graph. Leaves committed
+        first &mdash; they had nothing to wait for. Parents waited for their
+        children, then committed. Each node's revision counter ticked. The
+        screen updated. That's one frame of reality.
+      </p>
+
+      <p>
+        Now let me show you what fell out of that &mdash; because it's kind of
+        insane.
+      </p>
+
+      <p>
+        <strong>Time.</strong> See that revision counter? That's time. Not
+        metaphorical time &mdash; actual time. Every commit is one tick. Two
+        commits = two moments passed. No commits = no time passes. Think about
+        it: what would it look like if time stopped? Nothing would change. No
+        node evaluates. Nothing commits. That's literally what &ldquo;time
+        stopped&rdquo; means &mdash; zero change. Time isn't a river you float
+        on. It's the amount of change happening in your local region.
+      </p>
+
+      <p>
+        And here's the thing about engine time: the engine could take a billion
+        years between frames for all we know. Mario doesn't notice. Hit pause,
+        walk away, get lunch, come back &mdash; zero time passed for Mario. You
+        only ever experience the update. Never the computation.
+      </p>
+
+      <p>
+        <strong>The speed limit.</strong> Every parent reads its children's LAST
+        COMMITTED value &mdash; not the value they're currently computing.
+        You're always one step behind. The current evaluation is invisible.
+        That's the speed limit. A leaf node &mdash; nothing to recurse into
+        &mdash; commits instantly. That rate is C. The speed of light.
+        Everything else is slower because it has subgraph work to do first. A
+        photon is a leaf. That's why nothing travels faster than light &mdash;
+        you can't commit faster than a node with zero work to do.
+      </p>
+
+      <p>
+        <strong>E=mc&sup2;.</strong> Look at the pseudocode again. Recursive
+        evaluation has two legs it can't skip. The <em>call</em> phase walks
+        DOWN the graph &mdash; root to leaves. That's m hops at rate C. Then the
+        <em>return</em> phase walks back UP &mdash; leaves to root, delivering
+        results. Another m hops at rate C. Down at C, up at C. m &times; C
+        &times; C = mc&sup2;. The dimensional structure of recursion mirrors
+        E=mc&sup2; &mdash; two unavoidable phases, each at the maximum rate. We
+        haven't derived the physical value of c&sup2; (9&times;10&sup1;&sup6;
+        m&sup2;/s&sup2;) from this, but the structural pattern is suggestive.
+      </p>
+
+      <p>
+        <strong>Mass.</strong> A region of the graph whose topology doesn't
+        change. Same walk, same result, every time. A rock on a table keeps
+        committing the same value because no new inputs are arriving. Stability.
+        When that stability breaks &mdash; enough energy to rewire the edges
+        &mdash; the delta propagates outward. That's released energy.
+      </p>
+
+      <p>
+        And one more: <strong>lazy evaluation.</strong> If nothing demands a
+        node's result, it stays unevaluated. It doesn't need to commit. It can
+        sit there with multiple possible states, pending, until someone asks.
+        That's quantum superposition &mdash; and we'll come back to it.
+      </p>
+
+      <p>
+        No physics. No special rules. Just: evaluate the graph. And we got
+        something that looks like time (revision counter), a speed limit
+        (off-by-one), a structural mirror of E=mc&sup2; (two-leg recursion),
+        mass (stable topology), and lazy evaluation (nodes that nobody asked for
+        stay unevaluated). All from one function.
+      </p>
+
+      <p>
+        A caveat before we go further: we don't know the exact operations on the
+        edges. We're not claiming to have the specific rules that generate
+        electrons or gravity constants. What we're showing is that the
+        <strong>structure</strong> of recursive graph evaluation &mdash;
+        regardless of the specific operations &mdash; produces emergent
+        properties that map onto physics. The shape of the argument matters more
+        than the specific numbers.
+      </p>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Recursive Evaluation Rule</span
+        >
+        <p>
+          <strong>Axiom A2</strong> states the entire engine: a single recursive
+          function evaluates the graph. Leaves return the identity (base case).
+          Non-leaf nodes aggregate their children's committed values via edge
+          operations. The output of pass W(n) feeds pass W(n+1) (Axiom A5).
+          Combined with lazy evaluation (A3) and no stored values (A4), this
+          produces all emergent properties observed above: time (D1), causal
+          ordering (D2), stack depth (D8), superposition (D16), and the
+          information limit.
+        </p>
+      </div>
+
+      <h3>The Proof of Concept: Primes From Topology</h3>
+
+      <p>
+        Watch what happens when a node's value depends on its depth. Depth 2:
+        leaf returns 1. Depth 3: new irreducible structure &rarr; 2 (prime).
+        Depth 4: just recombines depth 2 &rarr; composite. Depth 5: another
+        irreducible structure &rarr; 3 (prime).
+      </p>
+
+      <!-- Figure 2b -->
+      <div class="figure" id="evaluating-a-graph-step-by-step">
+        <span class="scene-label"
+          >Figure 2b &mdash; Topology Generates Primes</span
+        >
+        <img
+          src="images/evaluating-a-graph-step-by-step.svg"
+          alt="Three graph depths shown: depth 2 produces 1 (base case), depth 3 produces 2 (prime, new irreducible structure), depth 5 produces 3 (prime), while depth 4 produces 2 (composite, just sub-structures re-combined)"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Primes emerge from topology. Depths with irreducible structure produce
+          primes. Composite depths just re-combine existing sub-structures. No
+          values stored anywhere.
+        </div>
+      </div>
+
+      <p>
+        The node stores nothing. The structure IS the value. This is
+        illustrative, not a proof &mdash; but it shows that pure structure, with
+        no stored values, can generate non-trivial mathematical objects. If
+        topology can produce primes, the &ldquo;no stored values&rdquo; axiom
+        isn't as crazy as it sounds.
+      </p>
+
+      <div class="insight">
+        <span class="callout-label">&starf; What This Means</span>
+        <p>
+          One recursive function &mdash; no physics, no special rules &mdash;
+          and we got structures that look like time, a speed limit, E=mc&sup2;,
+          mass, and quantum superposition. None of these were designed in. They
+          fell out of the evaluation. The engine walked the graph, and something
+          that looks a lot like physics showed up uninvited.
+        </p>
+      </div>
+
+      <p>
+        Five properties. No physics. No special rules. Just: evaluate the graph.
+        But here's the thing &mdash; we're not the first people to build systems
+        like this.
+      </p>
+
+      <!-- ================================================================ -->
+      <!-- CHAPTER 3: THE REVEAL                                            -->
+      <!-- ================================================================ -->
+      <h2>Chapter 3: &ldquo;Wait. This IS Spacetime.&rdquo;</h2>
+
+      <h3>You Already Use This Model</h3>
+
+      <p>
+        We already build systems that evaluate graphs. Spreadsheets, React, CPU
+        caches &mdash; different teams, different decades, different purposes.
+        They all independently converged on the same model:
+        <strong>topological ordering</strong>. If two nodes have no dependency
+        between them, they can evaluate in any order. If one depends on the
+        other, it must wait.
+      </p>
+
+      <p>
+        A spreadsheet is a graph. Change cell A1 and it walks the dependency
+        graph forward, recomputing only what depends on A1, in order. B1 and C1
+        can update in parallel &mdash; no dependency between them. D1 waits for
+        both.
+      </p>
+
+      <!-- Figure 3 -->
+      <div class="figure" id="spreadsheet-is-a-graph">
+        <span class="scene-label"
+          >Figure 3 &mdash; A Spreadsheet Is a Graph Being Evaluated</span
+        >
+        <img
+          src="images/spreadsheet-is-a-graph.svg"
+          alt="Three panels showing spreadsheet cells evaluating in dependency order: A1 changes, B1 and C1 update in parallel, then D1 last"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Change A1 and the update cascades forward through the dependency
+          graph. B1 and C1 can update in parallel &mdash; no dependency between
+          them. D1 waits for both. That's topological ordering.
+        </div>
+      </div>
+
+      <p>
+        Two key consequences fall out of topological ordering. First: no
+        preferred traversal order = no preferred frame =
+        <strong>special relativity for free</strong>. Two observers on
+        independent branches genuinely have no shared &ldquo;now&rdquo; &mdash;
+        not because of a physical law, but because there's no ordering
+        constraint between them.
+      </p>
+
+      <h3>Subgraphs Have Stacks</h3>
+
+      <p>
+        Now here's where it gets interesting. When the engine evaluates a deep
+        subgraph, it builds a <strong>call stack</strong> &mdash; a list of
+        things waiting for answers. Think of a stack of plates: you can't get to
+        the bottom one until you take off every plate above it. Deeper subgraphs
+        = taller call stacks = more pressure on the system.
+      </p>
+
+      <p>
+        Plot call stack depth across a region of the graph. What shape do you
+        get?
+      </p>
+
+      <!-- Figure 7a -->
+      <div class="figure" id="call-stack-pyramid">
+        <span class="scene-label"
+          >Figure 7a &mdash; Call Stack Depth Forms a Pyramid</span
+        >
+        <img
+          src="images/call-stack-pyramid.svg"
+          alt="Row of nodes with vertical bars below forming a pyramid shape, tallest at center where mass is, height 1 at edges"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Plot call stack depth across the graph and you get a mountain. Tallest
+          where mass is. Height 1 at the leaves &mdash; those are your photons,
+          traveling at C.
+        </div>
+      </div>
+
+      <p>
+        Now flip that pyramid upside down. The tall bars become deep wells.
+        Drape a spacetime fabric grid over it.
+      </p>
+
+      <!-- Figure 7b -->
+      <div class="figure" id="invert-pyramid-spacetime">
+        <span class="scene-label"
+          >Figure 7b &mdash; Invert the Pyramid. That&rsquo;s Spacetime.</span
+        >
+        <img
+          src="images/invert-pyramid-spacetime.svg"
+          alt="Inverted pyramid with spacetime fabric grid draped over it, curving into the well at center"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Flip the pyramid and drape a fabric over it. That's the spacetime
+          diagram from your physics textbook. The call stack topology is
+          spacetime curvature.
+        </div>
+      </div>
+
+      <p>
+        You're looking at the diagram from every physics textbook ever printed.
+      </p>
+
+      <!-- Figure 7d -->
+      <div class="figure" id="spacetime-is-a-routing-table">
+        <span class="scene-label"
+          >Figure 7d &mdash; Same Thing. Different Notation.</span
+        >
+        <img
+          src="images/spacetime-is-a-routing-table.svg"
+          alt="Side-by-side: inverted call stack with curving paths vs. classic GR spacetime curvature diagram. Same shape, different notation."
+          width="100%"
+        />
+        <div class="figure-caption">
+          Same thing. Different notation. 110 years of research. Our map.
+        </div>
+      </div>
+
+      <p><strong>This IS spacetime.</strong></p>
+
+      <p>
+        Around here I realized something that took me embarrassingly long to
+        see. This graph I'd been staring at &mdash; physicists already had a
+        name for it. They call it spacetime. They've been studying it for 110
+        years. They call it a &ldquo;fabric.&rdquo; They draw diagrams of it
+        curving. But here's the question that never gets answered: what IS the
+        fabric? What is the thing that curves? I'm saying it's a graph. And if
+        I'm right &mdash; or even close &mdash; then 110 years of general
+        relativity research just became our instruction manual. Reverse
+        engineering might be cheating in the physics world, but in my world it's
+        a mark of the trade.
+      </p>
+
+      <div class="technical-card">
+        <span class="callout-label">Technical Detail &mdash; Core Axioms</span>
+        <p>
+          <strong>A1 (Graph Structure):</strong> Reality is a directed graph G =
+          (N, E). Edges carry operations.
+          <strong>A3 (Lazy Evaluation):</strong> No node evaluates until a
+          consumer demands its result.
+          <strong>A4 (No Stored Values):</strong> All values derived from
+          topology alone &mdash; the structure IS the value. These three axioms,
+          combined with recursive evaluation (A2), produce the emergent
+          properties demonstrated in the demo.
+        </p>
+      </div>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Topological Ordering</span
+        >
+        <p>
+          <strong>D2 (Causal Ordering):</strong> Children evaluate before
+          parents &mdash; the partial order imposed by the graph's dependency
+          structure. <strong>D3 (Special Relativity):</strong> Causally
+          independent nodes have no ordering constraint &rarr; no preferred
+          frame &rarr; no preferred &ldquo;now.&rdquo;
+          <strong>D4 (Speed of Light):</strong> A leaf node commits at maximum
+          rate C &mdash; no subgraph to wait for. All non-leaf evaluations are
+          slower.
+        </p>
+      </div>
+
+      <div class="insight">
+        <span class="callout-label">&starf; What This Means</span>
+        <p>
+          The call stack of a recursive graph evaluation IS spacetime. The
+          topology of stack depth IS spacetime curvature. Nobody ever said what
+          spacetime IS &mdash; what the fabric is, what the thing that curves
+          is. It's a graph. And 110 years of general relativity just became our
+          instruction manual.
+        </p>
+      </div>
+
+      <p>
+        So IF this is right &mdash; what would GR tell us about our graph? It
+        would tell us this is a 3D graph. It would tell us mass curves the
+        routing table. It would tell us paths follow cheapest routes. It would
+        tell us the speed of information has a hard cap. We didn't invent any of
+        this &mdash; we're using 110 years of research as a map. But we ARE
+        adding a few rules of our own: lazy evaluation, topology-as-value, and
+        no stored state. The next two sections reverse-engineer what the graph
+        MUST look like to produce the physics we observe. Where the mapping is
+        structural and exact, we'll say so. Where it's suggestive, we'll say
+        that too.
+      </p>
+
+      <!-- ================================================================ -->
+      <!-- PART 2: GENERAL RELATIVITY, TRANSLATED                           -->
+      <!-- ================================================================ -->
+      <h2>Part 2: General Relativity, Translated</h2>
+
+      <!-- ======== MASS & ENERGY ======== -->
+      <h3>Mass &amp; Energy</h3>
+
+      <p>
+        A massive object is a region of the graph whose topology is
+        <strong>stable</strong> &mdash; edges don't change, same walk produces
+        the same result every time. That's mass. A rock on a table IS part of
+        the evaluation &mdash; but its topology hasn't changed, so it commits
+        the same result every time. No change = same committed value = that's
+        what mass is. Topology that holds.
+      </p>
+
+      <p>
+        When that stability breaks &mdash; enough energy to rewire the edges
+        &mdash; the evaluation produces a different result. The delta propagates
+        outward through the graph. That outward propagation IS the released
+        energy.
+      </p>
+
+      <!-- Figure 5 -->
+      <div class="figure" id="mass-is-stable-topology">
+        <span class="scene-label"
+          >Figure 5 &mdash; Mass Is Stable Topology</span
+        >
+        <img
+          src="images/mass-is-stable-topology.svg"
+          alt="Three panels: stable topology producing same result (mass), disruption changing edges (energy input), and delta propagating outward (released energy)"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Mass is a stable subgraph &mdash; same walk, same result. Energy is
+          the delta that propagates when the topology changes.
+        </div>
+      </div>
+
+      <p>
+        <strong>E = mc&sup2;:</strong> remember the two-leg walk from the demo?
+        The <em>call</em> phase walks down &mdash; root to leaves. That's m hops
+        at rate C. The <em>return</em> phase walks back up &mdash; leaves to
+        root, delivering results. Another m hops at rate C. You can't have one
+        without the other &mdash; you go down to get the answer, you come back
+        up to deliver it. m &times; C &times; C = mc&sup2;. The dimensional
+        structure mirrors E=mc&sup2; &mdash; two unavoidable phases, each at the
+        maximum rate. This doesn't derive the specific physical value of
+        c&sup2;, but the structural pattern is hard to ignore.
+      </p>
+
+      <p>
+        Antimatter is a mirror graph; when it meets its original, they cancel
+        completely, and the full evaluation propagates outward as energy.
+      </p>
+
+      <!-- Figure 6 -->
+      <div class="figure" id="the-bidirectional-walk">
+        <span class="scene-label">Figure 6 &mdash; The Bidirectional Walk</span>
+        <img
+          src="images/the-bidirectional-walk.svg"
+          alt="Subgraph with blue arrows going down at rate C and orange arrows going up at rate C, equation E=mc&sup2; below"
+          width="100%"
+        />
+        <div class="figure-caption">
+          The walk down to leaves and the walk back up are both at rate C. Same
+          rate, two independent directions. The dimensional structure mirrors
+          c&sup2; &mdash; two unavoidable phases at the same rate.
+        </div>
+      </div>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Mass, Energy, and E=mc&sup2;</span
+        >
+        <p>
+          <strong>D5 (Mass):</strong> A stable subgraph topology &mdash; same
+          walk, same result. Topological persistence.
+          <strong>D6 (Energy):</strong> The delta that propagates when stable
+          topology is disrupted. <strong>D7 (E=mc&sup2;):</strong> The
+          bidirectional walk &mdash; call phase descends m hops at rate C,
+          return phase ascends m hops at rate C. Total: m &times; C&sup2; =
+          mc&sup2;. The dimensional structure mirrors the c&sup2; factor &mdash;
+          two unavoidable phases of recursion.
+          <strong>D23 (Antimatter):</strong> Mirror (conjugate) graph topology.
+          Contact with original = complete cancellation &rarr; full energy
+          release.
+        </p>
+      </div>
+
+      <!-- ======== GRAVITY ======== -->
+      <h3>Gravity</h3>
+
+      <div class="mystery-block">
+        <span class="callout-label">&#128270; The Mystery</span>
+        <p>Gravity is weird. A suspicious kind of weird. Three clues:</p>
+        <p>
+          <strong>1.</strong> You can shield every other force &mdash; EM,
+          strong, weak. Nobody has ever shielded gravity.
+        </p>
+        <p>
+          <strong>2.</strong> Einstein's equivalence principle: no experiment
+          can distinguish gravity from acceleration. Why would a
+          &ldquo;force&rdquo; be indistinguishable from acceleration?
+        </p>
+        <p>
+          <strong>3.</strong> Physicists hunted the graviton for decades. Never
+          found one. Maybe gravity isn't a force at all.
+        </p>
+      </div>
+
+      <p>
+        You already saw it &mdash; the call stack pyramid, the inversion, the
+        spacetime curvature. Now let's look at what the routing pressure
+        actually does.
+      </p>
+
+      <p>
+        The deep call stack doesn't just slow things down &mdash; the system
+        actively routes around it. Paths through mass are expensive. Paths
+        around it are cheaper. Everything follows the cheapest path. The
+        cheapest path curves. That curve would produce gravity-like behavior
+        &mdash; objects following curved paths toward mass, exactly as observed.
+      </p>
+
+      <!-- Figure 7c -->
+      <div class="figure" id="routing-pressure">
+        <span class="scene-label">Figure 7c &mdash; Routing Pressure</span>
+        <img
+          src="images/routing-pressure.svg"
+          alt="Left: uniform grid with straight path. Right: same grid with mass cluster in center, path curving around it"
+          width="100%"
+        />
+        <div class="figure-caption">
+          Deep call stacks create routing pressure. Cheapest paths bend around
+          the pressure zone. That bend produces gravity-like behavior.
+        </div>
+      </div>
+
+      <p>Now look at the three mysteries through this lens:</p>
+
+      <p>
+        <strong>Why you can't shield gravity.</strong> Every other force
+        transmits via a signal through edges &mdash; photons carry EM, gluons
+        carry the strong force. Block the edge, block the signal. IF gravity is
+        stack depth, it isn't a signal &mdash; it's the call stack depth of your
+        own evaluation. Your shield shares the same stack. There is no layer in
+        your reality that can reach into the engine and change stack depth. You
+        are Mario. You cannot reach into the console.
+      </p>
+
+      <p>
+        <strong>Why gravity equals acceleration.</strong> IF gravity is stack
+        depth, then acceleration adds the same thing &mdash; depth to your local
+        call stack. Same effect. Same mechanism. That's why Einstein couldn't
+        tell them apart &mdash; in this model, they're the same thing.
+      </p>
+
+      <p>
+        <strong>Why there's no graviton.</strong> IF gravity is a system
+        property rather than a force, then &ldquo;What particle carries
+        gravity?&rdquo; is like asking &ldquo;What particle carries network
+        congestion?&rdquo; It's not a thing that travels.
+      </p>
+
+      <div class="physics-card">
+        <span class="callout-label"
+          >&#9883; Physics Card &mdash; Black Holes</span
+        >
+        <p>
+          A black hole is a subgraph so deep that evaluation never completes.
+          The call stack builds without unwinding. Unlike General Relativity's
+          prediction of a singularity &mdash; infinite density &mdash; there's
+          nothing infinite here. The subgraph is finite. The stack is deep but
+          finite. The computation just never finishes. Stack exhaustion, not
+          mathematical breakdown.
+        </p>
+      </div>
+
+      <div class="physics-card">
+        <span class="callout-label"
+          >&#9883; Physics Card &mdash; Dark Matter</span
+        >
+        <p>
+          Here's a candidate mechanism: pure cycles in the graph &mdash; nodes
+          that depend on themselves. When the engine tries to evaluate a cycle,
+          it detects &ldquo;already visiting this node&rdquo; and returns
+          PENDING. The cycle can't resolve. But the call stack was already built
+          on the way in. Stack depth is real. Routing pressure is real. So the
+          cycle would gravitate &mdash; it has mass from the stack depth &mdash;
+          but no value ever commits. No signal leaves. No electromagnetic
+          interaction. No committed state to collide with. Collisionless,
+          invisible, gravitates but doesn't interact with light. This is
+          suggestive, but let's be honest about what it doesn't do: it generates
+          zero predictions. No particle mass. No relic abundance. No
+          self-interaction cross-section. It restates dark matter's observed
+          properties in graph language &mdash; which is a starting point, not an
+          explanation.
+        </p>
+      </div>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Gravity as Routing Pressure</span
+        >
+        <p>
+          <strong>D8 (Call Stack Depth):</strong> Evaluating a deep subgraph
+          builds a call stack &mdash; each parent waits for its children. Stack
+          depth = subgraph depth. <strong>D9 (Gravity):</strong> Deep stacks
+          make paths expensive &rarr; system routes around &rarr; cheapest paths
+          curve &rarr; gravity-like behavior.
+          <strong>D10 (Spacetime Curvature):</strong> Inverted call stack
+          profile mirrors spacetime curvature.
+          <strong>D11 (Can&rsquo;t Shield):</strong> If gravity is stack depth,
+          it's not a signal through edges &mdash; no edge to block.
+          <strong>D12 (Equivalence Principle):</strong> Gravity and acceleration
+          both add stack depth &mdash; same mechanism in this model.
+        </p>
+      </div>
+
+      <div class="insight">
+        <span class="callout-label">&starf; What This Means</span>
+        <p>
+          If gravity is stack depth rather than a force, three mysteries
+          dissolve at once: you can't shield it (the stack is part of your own
+          evaluation), you can't tell it from acceleration (both add stack
+          depth), and there's no graviton (it's a system property, not a
+          particle). Plot the stack depth: a pyramid. Flip it: something that
+          looks exactly like Einstein's spacetime curvature. This is suggestive,
+          not proven &mdash; but the structural match is hard to dismiss.
+        </p>
+      </div>
+
+      <!-- ======== TIME, SPACE & THE SPEED OF LIGHT ======== -->
+      <h3>Time, Space &amp; the Speed of Light</h3>
+
+      <p>
+        We already know time is the revision counter and C is the leaf commit
+        rate. Now watch what happens near mass &mdash; and what happens to the
+        graph as a whole.
+      </p>
+
+      <p>
+        Space isn't a box things happen inside. It's the graph's shape &mdash;
+        the large-scale pattern of connections. Distance is hop count. The
+        minimum distance is one hop &mdash; one node. That's the Planck length:
+        one pixel.
+      </p>
+
+      <!-- Figure 12 -->
+      <div class="figure" id="time-is-revision-rate">
+        <span class="scene-label"
+          >Figure 12 &mdash; Time Is the Revision Counter</span
+        >
+        <img
+          src="images/time-is-revision-rate.svg"
+          alt="Two timelines: far from mass with rapid commits, near mass with slow commits. Same span, different tick rates."
+          width="100%"
+        />
+        <div class="figure-caption">
+          Time is the revision counter. Each commit is one tick. Near mass:
+          deeper stack, slower commits, fewer ticks. That's time dilation.
+        </div>
+      </div>
+
+      <p>
+        Near mass, the call stack is deeper, commits are slower, less change
+        happens. That's the graph version of time dilation. GPS satellites orbit
+        where the stack depth is lower &mdash; less mass nearby, shallower call
+        stacks, faster commits, faster clocks. The difference is about 45
+        microseconds per day. Without correction, GPS would drift roughly 10
+        kilometres per day. Your phone depends on this being real.
+      </p>
+
+      <p>
+        <strong>The arrow of time:</strong> remember Fibonacci? 1, 1, 2, 3, 5,
+        8, 13&hellip; Each number needs the previous two. The engine works the
+        same way. Each walk's committed results become the input to the next
+        walk. Walk 5 needs Walk 4's output. The dependency runs one direction.
+      </p>
+
+      <p>
+        That dependency chain IS the arrow. The equations work backwards because
+        they describe the committed results &mdash; the photographs. A
+        photograph has no arrow. You can run a film forward or backward. The
+        arrow lives in the computation that produced the frames. Not in the
+        output. In the engine.
+      </p>
+
+      <p>
+        Moving fast eats commits too &mdash; position edges being rewired costs
+        evaluation steps, leaving fewer for internal state changes. At C, zero
+        internal revisions. Zero elapsed time. That's why a photon experiences
+        no time.
+      </p>
+
+      <div class="physics-card">
+        <span class="callout-label">&#9883; Physics Card &mdash; The Muon</span>
+        <p>
+          Cosmic ray muons should decay 660m above Earth. They reach the ground.
+          At 99.5% of C, almost all evaluation steps go to motion. Their
+          revision counter barely moves. Confirmed experimentally.
+        </p>
+      </div>
+
+      <p>
+        <strong>Why is the universe expanding?</strong> Think of your family
+        tree. It can grow &mdash; two people create a new person. You never ask
+        &ldquo;what is my family tree expanding into?&rdquo; &mdash; growth is
+        just a valid operation on a graph. Same here. The engine evaluates the
+        graph. Some evaluations produce new nodes and edges. More graph = more
+        evaluations = more new nodes. Growth proportional to size = accelerating
+        expansion. The graph growing itself would produce expansion-like
+        behavior, though we can't derive the specific rate &mdash; so this is a
+        structural possibility, not a replacement for dark energy.
+      </p>
+
+      <!-- Figure 13 -->
+      <div class="figure" id="the-graph-grows-itself">
+        <span class="scene-label"
+          >Figure 13 &mdash; The Graph Grows Itself</span
+        >
+        <img
+          src="images/the-graph-grows-itself.svg"
+          alt="Three panels showing a graph growing: Pass 1 with 6 nodes, Pass 2 with 10 nodes, Pass 3 with 16 nodes. Growth proportional to size."
+          width="100%"
+        />
+        <div class="figure-caption">
+          The graph grows itself. Evaluations add nodes. More nodes = more
+          evaluations = more new nodes. Growth proportional to size =
+          accelerating expansion.
+        </div>
+      </div>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Time and Space</span
+        >
+        <p>
+          <strong>D1 (Time):</strong> Change. Each commit = one tick. No change
+          = no time. <strong>D13 (Gravitational Time Dilation):</strong> Near
+          mass &rarr; deeper stack &rarr; slower commits &rarr; fewer ticks.
+          <strong>D14 (Velocity Time Dilation):</strong> Fast motion consumes
+          evaluation steps &rarr; fewer internal revisions. At C, zero elapsed
+          time. <strong>D15 (Arrow of Time):</strong> Each pass&rsquo;s output
+          feeds the next. Dependency chain runs one direction. Cannot un-commit.
+          <strong>D24 (Space):</strong> Large-scale graph connectivity. Distance
+          = hop count. Planck length = 1 hop = 1 node.
+          <strong>D25 (Expansion):</strong> Evaluations add nodes. Growth
+          proportional to size = accelerating expansion.
+        </p>
+      </div>
+
+      <div class="insight">
+        <span class="callout-label">&starf; What This Means</span>
+        <p>
+          Space is the graph's shape. Distance is hop count. Time is change
+          &mdash; near mass, deeper stacks mean slower commits and less elapsed
+          time. The arrow points one direction because each walk feeds the next.
+          And the universe expands because evaluation grows the graph &mdash;
+          like a family tree, it doesn't expand &ldquo;into&rdquo; anything. It
+          just grows.
+        </p>
+      </div>
+
+      <p>
+        That's the large-scale picture. The structural matches are suggestive
+        &mdash; some tighter than others. But Einstein only described the
+        large-scale structure. What about the small-scale weirdness?
+      </p>
+
+      <!-- ================================================================ -->
+      <!-- PART 3: QUANTUM MECHANICS, TRANSLATED                            -->
+      <!-- ================================================================ -->
+      <h2>Part 3: Quantum Mechanics, Translated</h2>
+
+      <div class="mystery-block">
+        <span class="callout-label">&#128270; The Mystery</span>
+        <p>Three things that shouldn't be possible:</p>
+        <p>
+          <strong>1.</strong> Looking at something changes it. Not bumping it,
+          not touching it &mdash; looking. The act of measurement alters the
+          result.
+        </p>
+        <p>
+          <strong>2.</strong> Two particles, separated by the width of the
+          universe, give correlated answers the instant either is measured. No
+          signal between them. Instantaneous.
+        </p>
+        <p>
+          <strong>3.</strong> A particle hits a screen. The dot is recorded.
+          AFTER that, you erase some information about the experiment. The
+          interference pattern comes back &mdash; in data that was already
+          collected. Erasing information after the fact changed a result that
+          already happened.
+        </p>
+        <p>
+          These are real. Every one confirmed experimentally, repeatedly, for
+          decades. Standard physics says shut up and calculate. Let's do better.
+        </p>
+      </div>
+
+      <!-- ======== THE IDLE NODE ======== -->
+      <h3>The Idle Node</h3>
+
+      <p>
+        Remember lazy evaluation from the demo? No consumer = no evaluation. Now
+        zoom in. Picture a small subgraph &mdash; four or five nodes connected
+        by edges. It's sitting in a quiet corner of the graph. No path connects
+        it to any consumer. No detector. No screen. No eyeball. Just nodes,
+        floating there. Idle.
+      </p>
+
+      <!-- Figure 8 -->
+      <div class="figure" id="idle-subgraph">
+        <span class="scene-label">Figure 8 &mdash; The Idle Node</span>
+        <img
+          src="images/idle-subgraph.svg"
+          alt="Isolated subgraph with all edges pending (purple, dotted) and all nodes showing question marks. Surrounding committed graph shown in green for contrast."
+          width="100%"
+        />
+        <div class="figure-caption">
+          An isolated subgraph. No consumer connected. All edges pending. All
+          nodes uncommitted. The surrounding committed graph (green) doesn't
+          reach it. This is superposition.
+        </div>
+      </div>
+
+      <p>
+        What would it mean for one of those nodes to &ldquo;be somewhere&rdquo;?
+        Being somewhere means having committed position edges to specific
+        neighbors. Definite position = definite edges. But this subgraph has no
+        consumer demanding answers. So it hasn't committed. It has pending edges
+        to MULTIPLE positions. Not because physics is weird &mdash; because
+        nobody asked.
+      </p>
+
+      <p>
+        THIS is superposition. Not a particle magically in two places at once. A
+        graph with no reader. An idle subgraph with uncommitted edges. There is
+        nothing mysterious about it. It's the same thing as a spreadsheet cell
+        whose formula hasn't recalculated yet because nothing downstream needs
+        the result.
+      </p>
+
+      <p>
+        Now connect a consumer. A detector. A screen. Something that demands:
+        &ldquo;What is your value?&rdquo; That demand cascades into the idle
+        subgraph. The nodes MUST commit. One path is chosen. The others
+        disappear. That's collapse. Not a mystical transition &mdash; a lazy
+        thunk being forced.
+      </p>
+
+      <!-- Figure 8b -->
+      <div class="figure" id="consumer-forces-cascade">
+        <span class="scene-label"
+          >Figure 8b &mdash; Consumer Forces Cascade</span
+        >
+        <img
+          src="images/consumer-forces-cascade.svg"
+          alt="Two panels. Left: idle subgraph with all pending edges. Right: detector connected, one path commits green, rest fade to gray."
+          width="100%"
+        />
+        <div class="figure-caption">
+          LEFT: the idle subgraph from before &mdash; all pending, no consumer.
+          RIGHT: a detector connects. The demand cascades in. One path commits
+          (green, solid). The rest fade. That's measurement.
+        </div>
+      </div>
+
+      <p>
+        Small, isolated things &mdash; no consumers nearby &mdash; stay pending.
+        Both paths alive. That's why quantum effects appear at tiny scales.
+        Large things &mdash; 10<sup>26</sup> atoms, every one a
+        <strong>strict consumer</strong> (anything that demands a definite
+        answer right now: a detector, a screen, your eyeball) demanding definite
+        inputs from its neighbors &mdash; everything commits instantly. No
+        pending evaluations survive the crowd. That's decoherence.
+      </p>
+
+      <!-- ======== WHY YOU CAN'T JUST LOOK ======== -->
+      <h3>Why You Can't Just Look</h3>
+
+      <p>
+        Measurement means inserting a consumer into the graph. Simple enough.
+        But here's the catch: connecting a consumer CHANGES THE TOPOLOGY. You've
+        added edges. You've altered the dependency structure. The graph before
+        measurement and the graph after measurement are different graphs.
+      </p>
+
+      <p>
+        You cannot observe without participating. Not because of some mystical
+        observer effect &mdash; because inserting a node into a dependency graph
+        changes the dependency graph. That's not philosophy. That's data
+        structures.
+      </p>
+
+      <!-- Figure 8c -->
+      <div class="figure" id="measurement-changes-topology">
+        <span class="scene-label"
+          >Figure 8c &mdash; Measurement Changes the Topology</span
+        >
+        <img
+          src="images/measurement-changes-topology.svg"
+          alt="Three panels: idle subgraph with pending position and momentum edges; position detector connects and commits position but disrupts momentum; annotation showing why both can't be measured simultaneously."
+          width="100%"
+        />
+        <div class="figure-caption">
+          LEFT: idle subgraph with pending position edges (purple, dotted) and
+          pending momentum structure (orange, dotted). MIDDLE: position detector
+          connects &mdash; position edges commit (green), momentum edges
+          disrupted (red). RIGHT: you can't demand both without one demand
+          disrupting the other.
+        </div>
+      </div>
+
+      <p>
+        This is Heisenberg's uncertainty principle. Position and momentum are
+        both derived from graph topology. Position is about WHICH edges connect
+        WHERE. Momentum is about HOW the topology is changing over time &mdash;
+        edge rewiring rates. Measuring position requires a consumer that demands
+        position edges. That consumer's presence rewires the topology &mdash;
+        which is exactly the thing momentum depends on. You can't demand both
+        because demanding one structurally alters what the other depends on.
+      </p>
+
+      <p>
+        Not an instrument limitation. Not &ldquo;we need better
+        equipment.&rdquo; A topological constraint. You can't read a variable
+        and its rate of change from a single snapshot of a graph that your
+        measurement just rewired.
+      </p>
+
+      <!-- ======== ENTANGLEMENT ======== -->
+      <h3>Entanglement</h3>
+
+      <p>
+        When two particles interact &mdash; collide, get created together,
+        exchange energy &mdash; their value subgraphs merge. They end up sharing
+        a node. Think of two spreadsheet cells that both reference the same
+        formula cell. Change the formula, both cells update. That's not magic.
+        That's a shared dependency.
+      </p>
+
+      <!-- Figure 9 -->
+      <div class="figure" id="entanglement-forms">
+        <span class="scene-label">Figure 9 &mdash; Entanglement Forms</span>
+        <img
+          src="images/entanglement-forms.svg"
+          alt="Two panels: Before interaction, particles A and B have separate value subgraphs. After interaction, their values merge into a single shared node SH."
+          width="100%"
+        />
+        <div class="figure-caption">
+          LEFT &mdash; BEFORE: particles A and B with separate, independent
+          value subgraphs. RIGHT &mdash; AFTER INTERACTION: their value
+          subgraphs have merged into a single shared node (SH). Both A and B
+          point to SH. Interaction merges value subgraphs. Correlation is
+          structural.
+        </div>
+      </div>
+
+      <p>
+        Now the particles separate. They fly to opposite ends of the universe.
+        Position edges rewire &mdash; A is HERE, B is THERE, enormous distance
+        between them. But here's the thing: value edges and position edges are
+        <strong>different parts of the graph</strong>. The shared value node
+        doesn't move. It doesn't care about position. It's still shared. Still
+        pending. Nobody asked for its value yet.
+      </p>
+
+      <!-- Figure 9b -->
+      <div class="figure" id="entangled-separated">
+        <span class="scene-label"
+          >Figure 9b &mdash; Entangled but Separated</span
+        >
+        <img
+          src="images/entangled-separated.svg"
+          alt="Particles A (far left) and B (far right) with long dashed position path between them but direct orange value edges to shared node SH at center-bottom, still pending."
+          width="100%"
+        />
+        <div class="figure-caption">
+          A on the far left, B on the far right. Long dashed gray position path
+          between them (many hops &mdash; enormous distance). But both A and B
+          have direct value edges going to the shared node SH (center-bottom).
+          Position edges: gray, dashed &mdash; rewired when particles move.
+          Value edges: orange, solid &mdash; unchanged by movement. SH is still
+          purple/pending. Nobody asked.
+        </div>
+      </div>
+
+      <p>
+        Someone measures particle A. A detector connects. The demand cascades:
+        detector &rarr; A &rarr; shared node SH. SH must commit. It produces
+        result R. Done.
+      </p>
+
+      <p>
+        Now someone measures particle B. Could be a millisecond later. Could be
+        a year. Could be simultaneously. The demand cascades: detector &rarr; B
+        &rarr; shared node SH. But SH already committed. It already chose R. B
+        reads R. Same result. Correlated.
+      </p>
+
+      <!-- Figure 9c -->
+      <div class="figure" id="entanglement-cascade">
+        <span class="scene-label"
+          >Figure 9c &mdash; The Entanglement Cascade</span
+        >
+        <img
+          src="images/entanglement-cascade.svg"
+          alt="Sequence showing detector connecting to A, cascade through shared node SH which commits result R, then detector connecting to B which reads the already-committed R. No signal between A and B."
+          width="100%"
+        />
+        <div class="figure-caption">
+          The full cascade. (1) Detector connects to A. (2) Green cascade:
+          detector &rarr; A &rarr; SH. SH commits, shows &ldquo;R&rdquo;. (3)
+          Detector connects to B. (4) Orange cascade: detector &rarr; B &rarr;
+          SH (already committed). B reads R. No signal between A and B. SH
+          committed once. Both read the same answer.
+        </div>
+      </div>
+
+      <p>
+        No signal traveled between A and B. Nothing moved faster than light. The
+        correlation was baked into the topology the moment they interacted. It
+        was sitting there, waiting for someone to ask. The first measurement
+        didn't CAUSE the second result. Both results were caused by the shared
+        node &mdash; which committed once, for both.
+      </p>
+
+      <p>
+        Why can't you use this for faster-than-light communication? Because the
+        results are correlated but individually random. When A measures, it gets
+        R &mdash; but R is random. A can't choose R. B gets R too &mdash; but
+        without knowing A's result, it just looks random. Comparing notes still
+        requires a classical signal at speed C. It's like two people opening
+        sealed envelopes from the same pre-shuffled deck &mdash; the cards
+        match, but neither person controls which card they got, and they can't
+        learn anything useful until they call each other.
+      </p>
+
+      <!-- ======== THE DOUBLE-SLIT ======== -->
+      <h3>The Double-Slit</h3>
+
+      <div class="mystery-block">
+        <span class="callout-label">&#128270; The Mystery</span>
+        <p>
+          Fire particles one at a time at two slits. An interference pattern
+          appears &mdash; as if each particle went through both. Add a detector
+          at one slit: the pattern vanishes. Looking at it changed the result.
+        </p>
+      </div>
+
+      <p>You already know everything you need for this one.</p>
+
+      <p>
+        <strong>Step 1:</strong> No consumer at the slits. Both paths through
+        slit A and slit B are pending. The particle's path is an idle subgraph
+        &mdash; nobody asked which slit.
+      </p>
+
+      <p>
+        <strong>Step 2:</strong> The engine evaluates all pending paths without
+        committing. Both paths are alive in the dependency chain.
+      </p>
+
+      <p>
+        <strong>Step 3:</strong> Pending paths overlap at the screen &mdash;
+        bright bands where they align, dark bands where they cancel.
+        Interference.
+      </p>
+
+      <p>
+        <strong>Step 4:</strong> The screen's 10<sup>26</sup> atoms force
+        commitment. One dot. Over thousands of particles, the interference bands
+        fill in.
+      </p>
+
+      <!-- Figure 10 -->
+      <div class="figure" id="double-slit-as-graph">
+        <span class="scene-label"
+          >Figure 10 &mdash; Double-Slit as a Dependency Graph</span
+        >
+        <img
+          src="images/double-slit-as-graph.svg"
+          alt="Double-slit experiment as dependency graph: top row shows both paths pending with interference, bottom row shows detector forcing commitment with no interference"
+          width="100%"
+        />
+        <div class="figure-caption">
+          The double-slit experiment as a dependency graph. Pending edges
+          (purple, dotted) show both paths alive. The detector node, when
+          present, forces commitment &mdash; killing the interference.
+        </div>
+      </div>
+
+      <p>
+        <strong>A detector ruins it</strong> because it's a consumer. It demands
+        &ldquo;which slit?&rdquo; &mdash; forces one path to commit. Only one
+        path reaches the screen. No overlap. No interference. You didn't disturb
+        the particle. You changed the graph.
+      </p>
+
+      <!-- ======== QUANTUM ERASER & DELAYED CHOICE ======== -->
+      <h3>The Quantum Eraser &amp; Delayed Choice</h3>
+
+      <p>
+        This is the payoff. Let me spell out why the quantum eraser is so
+        strange &mdash; because &ldquo;strange&rdquo; doesn't do it justice.
+      </p>
+
+      <p>
+        You run the double-slit with a detector. The detector records which-path
+        info. No interference &mdash; just like we'd expect. Particles hit the
+        screen one at a time. Dots recorded. Data collected. Done.
+      </p>
+
+      <p>
+        Now &mdash; AFTER the dots are already on the screen &mdash; you erase
+        the which-path information. You sort the data by whether the which-path
+        info was erased or kept. In the &ldquo;erased&rdquo; subset: the
+        interference pattern is BACK. In the &ldquo;kept&rdquo; subset: no
+        interference. The dots were already recorded. How can erasing
+        information after the fact change a pattern that's already there?
+      </p>
+
+      <p>
+        Here's how: the eraser is
+        <strong>upstream in the dependency chain.</strong>
+      </p>
+
+      <!-- Figure 11 -->
+      <div class="figure" id="eraser-cascade-path">
+        <span class="scene-label">Figure 11 &mdash; The Eraser Cascade</span>
+        <img
+          src="images/eraser-cascade-path.svg"
+          alt="Full dependency chain from source through slits to screen, with idler branch to eraser node. Cascade traces backward from screen through graph to eraser. Two outcomes shown: erased gives interference, recorded gives no pattern."
+          width="100%"
+        />
+        <div class="figure-caption">
+          Full dependency chain: SOURCE &rarr; SLIT A / SLIT B &rarr; SCREEN. An
+          IDLER branch from one slit path leads to the ERASER node. The cascade
+          from SCREEN traces backward through the graph and hits the ERASER. Two
+          outcomes &mdash; TOP: eraser says &ldquo;erased&rdquo; &rarr; both
+          paths still pending &rarr; interference. BOTTOM: eraser says
+          &ldquo;recorded&rdquo; &rarr; one path committed &rarr; no
+          interference. The cascade reads the eraser's state at pull-time.
+        </div>
+      </div>
+
+      <p>
+        When the screen demands the particle's position, that demand cascades
+        backward through the dependency graph. The eraser node sits in that
+        chain. The cascade reads whatever state the eraser is in at the moment
+        the cascade reaches it. Not when the eraser was set. When the cascade
+        arrives.
+      </p>
+
+      <p>
+        Eraser says &ldquo;erased&rdquo; &rarr; which-path info gone &rarr; both
+        paths still pending &rarr; interference.
+      </p>
+
+      <p>
+        Eraser says &ldquo;recorded&rdquo; &rarr; which-path info locked &rarr;
+        one path committed &rarr; no interference.
+      </p>
+
+      <p>
+        &ldquo;After the fact&rdquo; is an illusion. The cascade was in flight
+        through the dependency chain. The eraser's state at cascade-time is what
+        matters. No time travel. No retrocausality. A dependency graph being
+        read in dependency order.
+      </p>
+
+      <p>
+        <strong>Delayed choice</strong> is the same mechanism pushed further.
+        Wheeler's thought experiment: choose whether to insert a detector AFTER
+        the particle has already passed the slits. Seems like the particle must
+        retroactively decide its own past. But the choice node is upstream in
+        the dependency graph. The cascade reads its state at pull-time, not at
+        wall-clock-time. &ldquo;Retrocausality&rdquo; is confusing wall-clock
+        time with graph evaluation order. In the dependency graph, there is no
+        &ldquo;before&rdquo; and &ldquo;after&rdquo; &mdash; there is only
+        upstream and downstream.
+      </p>
+
+      <p>
+        <strong>Why basketballs don't do this:</strong> 10<sup>26</sup> atoms,
+        every one a strict consumer demanding definite inputs. No pending
+        evaluations survive. That's decoherence.
+      </p>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Superposition and Collapse</span
+        >
+        <p>
+          <strong>D16 (Superposition):</strong> No strict consumer &rarr; node
+          stays unevaluated &rarr; pending edges to multiple states.
+          <strong>D17 (Collapse):</strong> Consumer demands result &rarr; one
+          path commits &rarr; definite outcome.
+          <strong>D18 (Decoherence):</strong> ~10<sup>26</sup> atoms each acting
+          as strict consumers &rarr; no pending evaluations survive in
+          warm/dense environments. <strong>D19 (Double-Slit):</strong> No
+          consumer at slits &rarr; both paths pending &rarr; interference at
+          screen. <strong>D20 (Quantum Eraser):</strong> Eraser is upstream in
+          dependency chain. Its state at cascade-time determines outcome. No
+          retrocausality &mdash; evaluation was in flight.
+          <strong>D26 (Heisenberg):</strong> Measuring one property rewires the
+          topology the other depends on. Topological constraint, not instrument
+          limitation.
+        </p>
+      </div>
+
+      <div class="technical-card">
+        <span class="callout-label"
+          >Technical Detail &mdash; Entanglement Mechanics</span
+        >
+        <p>
+          <strong>D21 (Entanglement):</strong> Interaction merges value
+          subgraphs into a shared node. Correlation is structural &mdash; baked
+          into topology at interaction time.
+          <strong>D22 (No FTL):</strong> Results are correlated but individually
+          random. Comparing notes requires classical communication at C. Bell's
+          theorem: the correlations are stronger than any local hidden variable
+          model allows &mdash; because the shared node ISN'T a hidden variable.
+          It's a real topological feature of the graph that both particles
+          share. The correlation isn't pre-determined &mdash; it's co-determined
+          at commit-time.
+        </p>
+      </div>
+
+      <div class="physics-card">
+        <span class="callout-label"
+          >&#9883; Physics Card &mdash; Why Probability Is Amplitude Squared
+          (Speculative)</span
+        >
+        <p>
+          <strong>Caveat up front:</strong> this card is the most speculative
+          thing in the document. We haven't derived the Born rule. What follows
+          is a structural observation &mdash; &ldquo;look, the shapes
+          rhyme&rdquo; &mdash; not a proof.
+        </p>
+        <p>
+          The prime demo uses trees (no cycles). Values stay real. Everything is
+          deterministic. Now add a <strong>cycle</strong> &mdash; a node that
+          depends on itself. Topological ordering breaks. You can't evaluate it
+          top-down because the node needs its own result before it can produce
+          one.
+        </p>
+        <p>
+          Self-consistency forces a constraint: the value must equal the result
+          of its own operation applied to itself. For many operations, the
+          solutions are <strong>roots of unity</strong> &mdash; complex numbers
+          that return to 1 when raised to some power. So cycles in a graph can
+          produce complex-valued solutions. That's interesting, because quantum
+          mechanics runs on complex amplitudes.
+        </p>
+        <p>
+          Once you have complex values, paths through the graph carry complex
+          amplitudes. Multiple paths to the same node accumulate &mdash; some
+          reinforce, some cancel. That's <strong>interference</strong>.
+        </p>
+        <p>
+          The bidirectional walk (down to leaves, back up to root) means the
+          final result involves &alpha; times its conjugate: &alpha; &times;
+          &alpha;* = |&alpha;|&sup2;.
+        </p>
+        <p>
+          Here's the honesty: this argument has a circularity problem. We're
+          observing that a graph with cycles <em>can produce</em> the
+          mathematical structures QM uses &mdash; but we haven't shown it
+          <em>must</em>, and we haven't derived which cycles, which operations,
+          or why the specific structure of quantum mechanics emerges rather than
+          some other self-consistent system. The mathematical ingredients
+          (complex numbers, interference, |&alpha;|&sup2;) appear in the graph
+          formalism, but appearing is not the same as being derived.
+        </p>
+      </div>
+
+      <div class="insight">
+        <span class="callout-label">&starf; What This Means</span>
+        <p>
+          Quantum mechanics is what a graph looks like when nobody's reading it.
+          Idle subgraphs sit with all paths pending &mdash; that's
+          superposition. Connecting a consumer forces commitment &mdash; that's
+          collapse. Measurement changes the topology it's trying to read &mdash;
+          that's Heisenberg. Two particles that interacted share a node that
+          commits once for both &mdash; that's entanglement. And the quantum
+          eraser? The eraser sits upstream in the dependency chain. The cascade
+          reads its state at pull-time, not at wall-clock time. No time travel.
+          No spookiness. Just a graph being evaluated in dependency order.
+        </p>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- WHAT'S ACTUALLY NOVEL HERE                                       -->
+      <!-- ================================================================ -->
+      <h2>What's Actually Novel Here</h2>
+
+      <p>
+        The idea that spacetime might be discrete isn't new. Loop quantum
+        gravity, causal sets, causal dynamical triangulations, Wolfram's
+        hypergraph rewriting &mdash; a lot of serious people have been here
+        before. So what, if anything, does this framework add?
+      </p>
+
+      <p>Four things, specifically:</p>
+
+      <p>
+        <strong>1. Read/write separation.</strong> No other discrete spacetime
+        framework separates operations into reads (evaluations that build call
+        stacks) and writes (commits that update the graph). This separation is
+        what produces the off-by-one that gives you a speed limit without
+        bolting one on.
+      </p>
+
+      <p>
+        <strong>2. The off-by-one.</strong> You only ever see committed results
+        &mdash; never the computation in progress. The engine layer is
+        structurally unobservable. This isn't a philosophical claim. It's a
+        consequence of how recursive evaluation works: parents read their
+        children's LAST committed value, not the current one.
+      </p>
+
+      <p>
+        <strong>3. The entanglement mechanism.</strong> Shared topology that
+        co-resolves. Value edges and position edges are different parts of the
+        graph. Particles separate spatially while remaining topologically
+        connected. This is a specific, testable-in-principle mechanism &mdash;
+        not just &ldquo;they're correlated.&rdquo;
+      </p>
+
+      <p>
+        <strong>4. The ontological claim.</strong> Most discrete spacetime
+        theories say spacetime &ldquo;can be modeled as&rdquo; a discrete
+        structure. This framework says spacetime IS a graph &mdash;
+        specifically, a directed graph with operations on edges, evaluated by a
+        single recursive function. That's a stronger claim, and it's
+        falsifiable: if the structure of spacetime can't be decomposed into
+        read/write operations on a graph, the framework is wrong.
+      </p>
+
+      <p>
+        None of these are proven. But they are specific. And specificity is what
+        separates &ldquo;what if reality is discrete&rdquo; from something you
+        can actually try to break.
+      </p>
+
+      <!-- ================================================================ -->
+      <!-- HONEST GAPS                                                      -->
+      <!-- ================================================================ -->
+      <h2>Honest Gaps</h2>
+
+      <p>
+        A framework that claims to explain everything without identifying where
+        it breaks is a story, not a theory. These gaps are real and hard.
+      </p>
+
+      <div class="gap-box">
+        <div class="gap-item">
+          <strong
+            >Can't derive Einstein's exact equations from graph
+            structure.</strong
+          >
+          The number one problem. The qualitative match is strong but we haven't
+          derived G<sub>&mu;&nu;</sub> + &Lambda;g<sub>&mu;&nu;</sub> =
+          8&pi;G/c<sup>4</sup> T<sub>&mu;&nu;</sub> from first principles.
+          Without the derivation, this is a compelling analogy, not a formal
+          theory.
+        </div>
+
+        <div class="gap-item">
+          <strong>Can't prove the computation is confluent.</strong> We claim
+          the committed result is independent of traversal order. But we haven't
+          formally proven the graph has a unique fixed point for all orderings.
+          If different orderings produce different states, the framework
+          predicts violations of Lorentz symmetry that aren't observed.
+        </div>
+
+        <div class="gap-item">
+          <strong>Can't explain specific particles.</strong> Electrons, quarks,
+          neutrinos have specific masses and charges. &ldquo;Particles are
+          stable topologies&rdquo; doesn't tell us which ones exist or why. The
+          naive mapping from graph cycles (Z<sub>n</sub> symmetry) to particle
+          physics gauge groups (SU(n)) doesn't work &mdash; the mathematical
+          structures are fundamentally different. This gap is bigger than it
+          looks.
+        </div>
+
+        <div class="gap-item">
+          <strong>Can't prove the Born rule.</strong> We explain that
+          measurement produces a committed result. We don't explain why
+          probabilities follow amplitude squared. (The Born Rule physics card
+          above shows that cycles in graphs naturally produce the right
+          mathematical ingredients &mdash; complex amplitudes and
+          |&alpha;|&sup2; &mdash; but this observation is exploratory, not a
+          derivation.)
+        </div>
+
+        <div class="gap-item">
+          <strong>Can't explain the hierarchy problem.</strong> Gravity is
+          approximately 10<sup>36</sup> times weaker than electromagnetism. Why
+          would stack depth produce such an enormous ratio? No answer.
+        </div>
+
+        <div class="gap-item">
+          <strong
+            >No unique experimental prediction &mdash; with one
+            exception.</strong
+          >
+          The framework predicts <strong>no singularity</strong> at the center
+          of black holes. Standard GR predicts infinite density. This framework
+          predicts stack exhaustion &mdash; finite depth, non-terminating
+          computation, but nothing infinite. If quantum gravity observations
+          become possible, this could be testable.
+        </div>
+
+        <div class="gap-item">
+          <strong>Lorentz invariance on a discrete structure.</strong> Any
+          discrete spacetime must explain why Lorentz symmetry holds to the
+          precision we've measured &mdash; roughly 10<sup>&minus;20</sup> times
+          tighter than a naive lattice would produce. A discrete graph should
+          break continuous symmetry at small scales. We have no mechanism for
+          how a graph recovers exact Lorentz invariance. This may be the single
+          biggest existential threat to any discrete spacetime theory, including
+          this one.
+        </div>
+
+        <div class="gap-item">
+          <strong>Analogy vs. derivation.</strong> This framework reasons by
+          structural analogy, not mathematical derivation. Where the mapping is
+          exact (topological ordering = causal structure), it's compelling.
+          Where it's approximate (stack depth &asymp; gravitational potential),
+          it's suggestive. Where it's a stretch (cycle length = gauge group), it
+          fails. A map that &ldquo;looks right&rdquo; is useful &mdash; but
+          physics requires equations, not analogies. Until the structural
+          matches produce quantitative predictions, this remains a conceptual
+          framework, not a theory.
+        </div>
+      </div>
+
+      <p>
+        These are genuine obstacles. Any one of them could be fatal to the whole
+        picture. That's fine. That's how this works. You lay out what you think,
+        you lay out where it breaks, and you hope someone smarter can get
+        further than you did.
+      </p>
+
+      <!-- ================================================================ -->
+      <!-- QUICK REFERENCE                                                  -->
+      <!-- ================================================================ -->
+      <h2>Quick Reference</h2>
+
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Physics Concept</th>
+            <th>In This Framework</th>
+            <th>Computer Analogy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Space</td>
+            <td>Large-scale graph shape. Connectivity pattern.</td>
+            <td>Network topology. Hop count = distance.</td>
+          </tr>
+          <tr>
+            <td>Mass</td>
+            <td>Stable subgraph topology. Same walk, same result.</td>
+            <td>Deterministic function, same output for unchanged input.</td>
+          </tr>
+          <tr>
+            <td>Energy</td>
+            <td>Return value that propagates outward when topology changes.</td>
+            <td>Function output feeding next function call.</td>
+          </tr>
+          <tr>
+            <td>E = mc&sup2;</td>
+            <td>
+              Bidirectional walk: m hops down at C, m hops up at C. mc&sup2;.
+            </td>
+            <td>
+              Recursive call cost: down m levels &times; up m levels at same
+              rate.
+            </td>
+          </tr>
+          <tr>
+            <td>Time</td>
+            <td>
+              Change. Each commit is one tick of local time. No change = no
+              time.
+            </td>
+            <td>State change counter. No state change = no tick.</td>
+          </tr>
+          <tr>
+            <td>Arrow of time</td>
+            <td>
+              Each walk's output feeds the next. Fibonacci dependency. Cannot
+              un-commit.
+            </td>
+            <td>Program execution order. Can't un-run code.</td>
+          </tr>
+          <tr>
+            <td>Time dilation</td>
+            <td>
+              Deep stack or fast motion &rarr; slower commits &rarr; revision
+              counter ticks less.
+            </td>
+            <td>
+              Deep recursion or I/O consuming cycles &rarr; lower throughput.
+            </td>
+          </tr>
+          <tr>
+            <td>Speed of light (C)</td>
+            <td>Commit rate of a leaf node. No subgraph. Maximum rate.</td>
+            <td>Base case return time. Immediate, no recursion.</td>
+          </tr>
+          <tr>
+            <td>Gravity</td>
+            <td>Deep call stack creating routing pressure. Paths curve.</td>
+            <td>Deep recursive call; OS routes work around it.</td>
+          </tr>
+          <tr>
+            <td>Can't shield gravity</td>
+            <td>
+              Stack is part of your own evaluation. Not a signal &mdash; a
+              topology.
+            </td>
+            <td>Can't avoid being on the same call stack.</td>
+          </tr>
+          <tr>
+            <td>Equivalence principle</td>
+            <td>
+              Acceleration and gravity both add call stack depth. Same
+              mechanism.
+            </td>
+            <td>
+              CPU load from motion vs. deep calls: same throughput impact.
+            </td>
+          </tr>
+          <tr>
+            <td>Spacetime</td>
+            <td>
+              The routing table &mdash; edge weights, cheapest paths. Updated by
+              stack pressure.
+            </td>
+            <td>Network routing table, updated on congestion.</td>
+          </tr>
+          <tr>
+            <td>Black hole</td>
+            <td>
+              Subgraph so deep the stack never unwinds. No singularity &mdash;
+              stack exhaustion.
+            </td>
+            <td>Non-terminating recursion. Finite code, infinite loop.</td>
+          </tr>
+          <tr>
+            <td>Dark matter</td>
+            <td>
+              Graph cycles that build stacks but never commit. Gravitates, never
+              interacts.
+            </td>
+            <td>
+              Infinite loop &mdash; CPU busy (stack depth) but no output (no
+              signal).
+            </td>
+          </tr>
+          <tr>
+            <td>Wave function</td>
+            <td>
+              Pending evaluation. Multiple possible states, nothing committed.
+            </td>
+            <td>Lazy thunk. Defined, not forced.</td>
+          </tr>
+          <tr>
+            <td>Collapse</td>
+            <td>
+              Strict consumer demands a result. Pending evaluation commits.
+            </td>
+            <td>Forcing a lazy thunk.</td>
+          </tr>
+          <tr>
+            <td>Quantum eraser</td>
+            <td>
+              Eraser is upstream in dependency chain. Pull cascades through its
+              state.
+            </td>
+            <td>Editing spreadsheet formula before Enter.</td>
+          </tr>
+          <tr>
+            <td>Heisenberg uncertainty</td>
+            <td>
+              Measuring one property rewires the topology the other depends on.
+              Topological constraint.
+            </td>
+            <td>Can't read a variable and its derivative from one snapshot.</td>
+          </tr>
+          <tr>
+            <td>Delayed choice</td>
+            <td>Choice node is upstream. Cascade reads state at pull-time.</td>
+            <td>Setting a config value before the function reads it.</td>
+          </tr>
+          <tr>
+            <td>Entanglement</td>
+            <td>
+              Shared value subgraph node. Co-resolves when either is evaluated.
+            </td>
+            <td>Shared pointer. Same data regardless of location.</td>
+          </tr>
+          <tr>
+            <td>Special relativity</td>
+            <td>No preferred traversal order &rarr; no preferred frame.</td>
+            <td>Same output regardless of evaluation order.</td>
+          </tr>
+          <tr>
+            <td>Expansion</td>
+            <td>
+              Evaluations add new nodes. Growth proportional to size =
+              acceleration.
+            </td>
+            <td>Self-modifying code. Evaluation extends codebase.</td>
+          </tr>
+          <tr>
+            <td>Planck length</td>
+            <td>One hop. One node. One pixel.</td>
+            <td>Minimum addressable unit.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- /.container -->
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="doc-footer">
+      <strong>GL Theory:</strong> Greg's Computational Guide to the Universe<br />
+      March 2026 &middot; Plain English Edition<br />
+      Framework developed by Greg.<br />
+      &ldquo;The delusions are my own.&rdquo;
+    </footer>
+  </body>
 </html>

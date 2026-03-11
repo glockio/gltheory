@@ -60,6 +60,7 @@ This is very much a work in progress. As we've started out on this journey — t
 Everything that follows builds on one idea: reality is a graph that evaluates itself.
 
 Five rules. That's it.
+
 1. **It's a graph.** Dots connected by lines. The lines carry operations.
 2. **One function evaluates it.** Recursive. Leaves first, then up.
 3. **Nothing computes until asked.** No reader? No result. It just sits there.
@@ -121,11 +122,11 @@ Now our universe graph needs a few rules:
 
 **3. Edges are operations** — the lines connecting dots can be instructions. Like: (3) --- × --- (3) = 9.
 
-One more thing: **recursive functions.** You know when you feed your dog and then an hour later he tries to eat his own sh*t? That is a recursive function. It's a function (in this case your dog) which eats its own "output"... again and again.
+One more thing: **recursive functions.** You know when you feed your dog and then an hour later he tries to eat his own sh\*t? That is a recursive function. It's a function (in this case your dog) which eats its own "output"... again and again.
 
 In our case we eat the graph, do math, get a result, then eat that result. Again and again. Each time we eat the graph we update the screen with what the graph says. This is how video games work — the engine does math, then updates the screen. Mario never sees half a screen. He always sees a complete image. From Mario's perspective you can hit pause, walk away, get lunch, and resume — and no time would have passed at all for him.
 
-That's it. Sh*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...
+That's it. Sh\*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go make some graphic content and create the fucking universe...
 
 ---
 
@@ -137,8 +138,8 @@ Here is a basic example of what an engine might look like.
 
 @code
 function evaluate(node):
-    if node has no children:
-        return 1 // leaf — base case
+if node has no children:
+return 1 // leaf — base case
 
     result = identity
     for each child of node:
@@ -513,7 +514,7 @@ Once you have complex values, paths through the graph carry complex amplitudes. 
 
 The bidirectional walk (down to leaves, back up to root) means the final result involves α times its conjugate: α × α\* = |α|².
 
-Here's the honesty: this argument has a circularity problem. We're observing that a graph with cycles *can produce* the mathematical structures QM uses — but we haven't shown it *must*, and we haven't derived which cycles, which operations, or why the specific structure of quantum mechanics emerges rather than some other self-consistent system. The mathematical ingredients (complex numbers, interference, |α|²) appear in the graph formalism, but appearing is not the same as being derived.
+Here's the honesty: this argument has a circularity problem. We're observing that a graph with cycles _can produce_ the mathematical structures QM uses — but we haven't shown it _must_, and we haven't derived which cycles, which operations, or why the specific structure of quantum mechanics emerges rather than some other self-consistent system. The mathematical ingredients (complex numbers, interference, |α|²) appear in the graph formalism, but appearing is not the same as being derived.
 @/physics-card
 
 @insight
