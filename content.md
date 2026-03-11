@@ -51,6 +51,7 @@ A Very Serious Person
 
 @callout-gold
 This is very much a work in progress. As we've started out on this journey — this exercise of reflection — what has started to take shape is fairly similar to [Wolfram's project](https://www.wolframphysics.org/). So if this piques your interest, take a look for what is more likely to be the actual correct interpretation of what I'm trying to say. I myself have not read the work, but Mr. GPT tells me it's similar in concept.
+
 @/callout
 
 ---
@@ -58,26 +59,28 @@ This is very much a work in progress. As we've started out on this journey — t
 ## THE HOOK
 
 @hook
-Before we get into anything — before graphs, before physics, before any of it — I need to tell you something uncomfortable.
+Before we get into anything — before graphs, before physics, how nerds run computers in the sky. I want to drive a point home.
 
-**You are Mario.**
+**You are Mario.** Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it. Now there are worse things than life as an Italian 2D plumber — we'll get to that in a minute. But stay with me for a second.
 
-Now there are worse things than life as an Italian 2D plumber — we'll get to that in a minute.
-
-Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it.
 @/hook
 
-// Two tight paragraphs. First: two-layer systems are everywhere (monitor/computer). Second: this isn't "reality is a simulation" — it's a specific architecture.
+This might sound crazy, maybe confusing? But you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're — well I'm — claiming reality works the same way. What you experience takes place on a screen, but the real action is in the engine underneath. YOU and your reality are stored on that engine. And more specifically, the universe seems to be stored as a graph. Why a graph, you ask? Graphs have some interesting properties we will cover.
 
-That sounds crazy until you realize you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're claiming reality works the same way — what you experience takes place on a screen, but the real reality of it is in the engine. So while I said you were a 2D Italian plumber, I am actually saying you are the _graphical_ representation of a 2D Italian plumber. See, it always can get worse.
+So I lied. You are not a 2D Italian plumber, you are the _graphical_ representation of a 2D Italian plumber. See, it always can get worse.
 
-This isn't just "reality is a simulation" — that's like saying "there's something going on." We're proposing a specific architecture and then showing it actually explains things:
+Saying "it's all a simulation" is not actually that new or novel. But what I want to add is a bit more on how I think the specifics of the architecture might look. And I want to show _why_ this type of architecture would actually explain things. Things like:
 
 - Why can't you shield gravity?
+- What is gravity? Why can't you tell the difference between gravity and acceleration?
+- Why can't anything travel faster than the speed of light?
+- Why does time slow down near a black hole?
 - Why does the universe "know" what you'll measure?
-- Why do equations work backwards in time?
+- Why do equations for physics work backwards in time?
+- Is time travel possible?
+- Is there any age at which a man can know for sure he won't ever bald?
 
-These are genuine unsolved mysteries and they all have the same answer.
+These are genuine unsolved mysteries and in my version of what's going on, they all have the same answer. Well except the last one, that is an open question I'm asking for a friend.
 
 @callout-blue
 **The Engine Layer** — where computation happens. The actual structure of reality. Think: the Nintendo console.
@@ -90,18 +93,32 @@ Two layers. The engine computes the graph. The screen shows the output — Mario
 
 // Bridge to graphs — NOT a standalone section. 2-3 sentences folded into hook flow.
 
-We suspect the engine layer is a **graph** — dots connected by lines. A recipe is a graph. A family tree is a graph. You already know graphs.
+Okay so real quick, let's cover what a **graph** is. You already know graphs, dots connected by lines. A recipe is a graph. A family tree is a graph.
 
 @fig:you-already-know-what-a-graph-is
 These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show "mom" on the relationship between you and your mother.
 
-Now I suspect our universe graph is slightly more complicated than the family tree. So here are the basic rules we will add:
+Now our universe graph is slightly more complicated than the family tree. So we need to add some basic rules for the graph:
 
-**1. Values are lazy loaded.** That means unless someone asks "hey you, what's your name/value?" then don't even think about it, just do nothing.
+### The Graph Rules
 
-**2. No values are stored within the nodes themselves** — all values are derived from the topology of the graph. Yikes... umm... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is "what time is it" depends on where you are, and you don't know the answer yourself — you always need to check with the star nerds.
+**1. Nodes/Values are lazy loaded.** That means unless someone asks "hey you, what's your name/value?" then don't even think about it, just do nothing.
 
-That's it. Not so bad. So to recap we have sh*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...
+**2. No values are stored within the nodes themselves** — all values are derived from the topology of the graph. Yikes... basically... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is "what time is it" depends on where you are, and you don't know the answer yourself — you always need to check with the star nerds.
+
+**3. Edges are operations**: This just means the lines connecting the dots can be instructions. For example, multiplication could be an instruction: (3) --- X --- (3) or (you) --- call --> (mom).
+
+### Recursive Functions
+
+Okay so we know what our universe graph looks like. But we want our graph to do something... so let's spice things up and see how we can make some graphic content.
+
+For that we need a recursive function. What is a recursive function? Well you know when you feed your dog and then an hour later he tries to eat his own sh\*t.... that is a recursive function. It's a function (in this case your dog) which eats its own "output"... again and again....
+
+In our case we eat the graph, do math, get a result, then eat that result. Again and again. Each time we eat the graph we update the screen with what the graph says.
+
+This is how video games work as well. It's called a render loop — the engine does some math, then updates the screen with the result. In Mario's world, you don't ever see half a screen or the pixels paint one by one. You always see a complete image. The key point here is you ALWAYS see the completed result. You never experience the engine doing the calculations. From Mario's perspective you can hit pause, walk away, get lunch, and resume — and no time would have passed at all for him.
+
+That's it. Not so bad. So to recap we have sh\*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...
 
 ---
 
@@ -109,18 +126,12 @@ That's it. Not so bad. So to recap we have sh*t-eating dogs, nerds in the sky wi
 
 // THE CENTREPIECE OF THE SETUP. Reframed from "primes from topology" to "watch what emerges from the simplest possible recursive evaluation." Pseudocode + visual walkthrough does the heavy lifting, not prose.
 
-Okay, we left off with: you are a graph. "That don't impress me much," you say (in the best Shania Twain voice). But wait, it gets better.
-
-So your — _our_ — reality is actually off by one. What do I mean by that? I mean what happens is the graph does its little graphy calculations, we get the result, and then paint that to the screen. While you're sitting happy on the screen, the graph starts running its little calculations again, over and over. Where the input for the next calculation is the output of the previous one.
-
-We have a nice little name for this in comp sci — we call it a **recursive function**. There is a proper way to describe this, but the easiest way to get the concept is if you have ever owned a dog. And you feed it... wait a bit... let the dog's stomach do dog stomach things... then take it on a walk and for some unknown reason it tries to eat its own sh*t... and the cycle repeats. Well, that is your dog running a recursive function. A recursive function is something that eats its own "output"... again and again... and the universe, my friend, seems to LOVE eating its own graph.
-
-Now that dogs helped explain what this is, let's look at one in code for you nerds:
+Here is a basic example of what an engine might look like.
 
 @code
 function evaluate(node):
     if node has no children:
-        return 1                        // leaf — base case
+        return 1 // leaf — base case
 
     result = identity
     for each child of node:
@@ -130,9 +141,8 @@ function evaluate(node):
     node.revision += 1                  // tick the counter
     node.committed = result             // lock in the result
     return result
-@/code
 
-That's the whole engine. It's not much, but it's ours. So as much as I'd love for it to be that simple, I am going to say that the universe's graph has some special properties that are _slightly_ different from your family tree. Let's run it on a simple graph and watch what happens.
+@/code
 
 @fig:graph-evaluation-walkthrough
 One recursive function. No physics. No special rules. Just: evaluate the graph. And look what fell out.
@@ -366,7 +376,7 @@ Self-consistency forces a constraint: the value must equal the result of its own
 
 Once you have complex values, paths through the graph carry complex amplitudes. Multiple paths to the same node accumulate — some reinforce, some cancel. That's **interference**. Not mysterious wave behavior. Bookkeeping on a graph with cycles.
 
-The bidirectional walk (down to leaves, back up to root) means the final result involves α times its conjugate: α × α* = |α|². Probability from structure.
+The bidirectional walk (down to leaves, back up to root) means the final result involves α times its conjugate: α × α\* = |α|². Probability from structure.
 
 **Caveat:** This is exploratory. We haven't derived the Born rule from first principles. But it's interesting that cycles in a graph — which must exist in any non-trivial universe (feedback, self-reference, closed causal loops) — naturally produce exactly the mathematical structure quantum mechanics uses: complex amplitudes, interference, and squared-modulus probability.
 @/physics-card
