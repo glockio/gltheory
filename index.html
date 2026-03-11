@@ -29,6 +29,8 @@ p{margin-bottom:18px}strong{font-weight:600}em{font-style:italic}
 .callout-gold{border-left-color:var(--gold);background:var(--block-bg-warm)}
 .physics-card{border-left:4px solid var(--green);background:var(--block-bg-green);padding:24px 28px;margin:28px 0;border-radius:0 6px 6px 0}
 .physics-card .callout-label{color:var(--green)}
+.technical-card{border-left:4px solid var(--blue);background:var(--block-bg-blue);padding:24px 28px;margin:28px 0;border-radius:0 6px 6px 0;font-family:'DM Sans',sans-serif;font-size:.95rem}
+.technical-card .callout-label{color:var(--blue)}
 .insight{background:var(--block-bg-teal);padding:32px 36px;margin:40px 0;border-radius:6px;border-top:4px solid var(--teal)}
 .insight .callout-label{color:var(--blue)}
 .insight p{font-style:italic;margin-bottom:0}
@@ -54,7 +56,7 @@ p{margin-bottom:18px}strong{font-weight:600}em{font-style:italic}
 pre{background:var(--block-bg-code);border:1px solid var(--border);border-radius:6px;padding:20px 24px;margin:24px 0;overflow-x:auto;font-family:'JetBrains Mono',monospace;font-size:.85rem;line-height:1.7}
 code{font-family:'JetBrains Mono',monospace;font-size:.9em;background:var(--block-bg-code);padding:2px 6px;border-radius:3px}
 blockquote{border-left:3px solid var(--border);padding-left:20px;margin:20px 0;color:var(--text-secondary);font-style:italic}
-@media(max-width:640px){.doc-header{padding:48px 16px 40px}.doc-header h1{font-size:2.2rem}.container{padding:0 16px}.hook,.callout,.physics-card,.insight,.gap-box,.mystery-block{padding:20px 18px}h2{font-size:1.6rem}.figure{padding:16px}.summary-table{font-size:.78rem}.summary-table th,.summary-table td{padding:8px 10px}}
+@media(max-width:640px){.doc-header{padding:48px 16px 40px}.doc-header h1{font-size:2.2rem}.container{padding:0 16px}.hook,.callout,.physics-card,.technical-card,.insight,.gap-box,.mystery-block{padding:20px 18px}h2{font-size:1.6rem}.figure{padding:16px}.summary-table{font-size:.78rem}.summary-table th,.summary-table td{padding:8px 10px}}
 </style>
 </head>
 <body>
@@ -205,6 +207,11 @@ that was just me.</p>
 
 <p>A caveat before we go further: we don't know the exact operations on the edges. We're not claiming to have the specific rules that generate electrons or gravity constants. What we're showing is that the <strong>structure</strong> of recursive graph evaluation &mdash; regardless of the specific operations &mdash; produces emergent properties that map onto physics. The shape of the argument matters more than the specific numbers.</p>
 
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Recursive Evaluation Rule</span>
+<p><strong>Axiom A2</strong> states the entire engine: a single recursive function evaluates the graph. Leaves return the identity (base case). Non-leaf nodes aggregate their children's committed values via edge operations. The output of pass W(n) feeds pass W(n+1) (Axiom A5). Combined with lazy evaluation (A3) and no stored values (A4), this produces all emergent properties observed above: time (D1), causal ordering (D2), stack depth (D8), superposition (D16), and the information limit.</p>
+</div>
+
 <h3>The Proof of Concept: Primes From Topology</h3>
 
 <p>One more thing &mdash; and this matters. Watch what happens when a node's base value depends on its depth in the graph.</p>
@@ -249,6 +256,16 @@ that was just me.</p>
 
 <p>Second: <strong>C = leaf commit rate.</strong> The speed of light has nothing to do with light. A leaf node &mdash; nothing to recurse into &mdash; commits instantly. That rate is C. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why it travels at C.</p>
 
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Core Axioms</span>
+<p><strong>A1 (Graph Structure):</strong> Reality is a directed graph G = (N, E). Edges carry operations. <strong>A3 (Lazy Evaluation):</strong> No node evaluates until a consumer demands its result. <strong>A4 (No Stored Values):</strong> All values derived from topology alone &mdash; the structure IS the value. These three axioms, combined with recursive evaluation (A2), produce the emergent properties demonstrated in the demo.</p>
+</div>
+
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Topological Ordering</span>
+<p><strong>D2 (Causal Ordering):</strong> Children evaluate before parents &mdash; the partial order imposed by the graph's dependency structure. <strong>D3 (Special Relativity):</strong> Causally independent nodes have no ordering constraint &rarr; no preferred frame &rarr; no preferred &ldquo;now.&rdquo; <strong>D4 (Speed of Light):</strong> A leaf node commits at maximum rate C &mdash; no subgraph to wait for. All non-leaf evaluations are slower.</p>
+</div>
+
 <!-- ======== WHAT THE FRAMEWORK EXPLAINS ======== -->
 <h2>What the Framework Explains</h2>
 
@@ -273,6 +290,11 @@ that was just me.</p>
 <span class="scene-label">Figure 6 &mdash; The Bidirectional Walk</span>
 <img src="images/the-bidirectional-walk.svg" alt="Subgraph with blue arrows going down at rate C and orange arrows going up at rate C, equation E=mc&sup2; below">
 <div class="figure-caption">The walk down to leaves and the walk back up are both at rate C. Same rate, two independent directions. That's c&sup2; &mdash; not a magic constant, a topological fact.</div>
+</div>
+
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Mass, Energy, and E=mc&sup2;</span>
+<p><strong>D5 (Mass):</strong> A stable subgraph topology &mdash; same walk, same result. Topological persistence. <strong>D6 (Energy):</strong> The delta that propagates when stable topology is disrupted. <strong>D7 (E=mc&sup2;):</strong> The bidirectional walk &mdash; call phase descends m hops at rate C, return phase ascends m hops at rate C. Total: m &times; C&sup2; = mc&sup2;. The c&sup2; factor is the two unavoidable phases of recursion. <strong>D23 (Antimatter):</strong> Mirror (conjugate) graph topology. Contact with original = complete cancellation &rarr; full energy release.</p>
 </div>
 
 <!-- ======== GRAVITY ======== -->
@@ -325,6 +347,11 @@ that was just me.</p>
 <p>A black hole is a subgraph so deep that evaluation never completes. The call stack builds without unwinding. Unlike General Relativity's prediction of a singularity &mdash; infinite density &mdash; there's nothing infinite here. The subgraph is finite. The stack is deep but finite. The computation just never finishes. Stack exhaustion, not mathematical breakdown.</p>
 </div>
 
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Gravity as Routing Pressure</span>
+<p><strong>D8 (Call Stack Depth):</strong> Evaluating a deep subgraph builds a call stack &mdash; each parent waits for its children. Stack depth = subgraph depth. <strong>D9 (Gravity):</strong> Deep stacks make paths expensive &rarr; system routes around &rarr; cheapest paths curve. That curve is gravity. <strong>D10 (Spacetime Curvature):</strong> Inverted call stack profile = spacetime curvature. <strong>D11 (Can&rsquo;t Shield):</strong> Gravity is stack depth, not a signal through edges &mdash; no edge to block. <strong>D12 (Equivalence Principle):</strong> Gravity and acceleration both add stack depth. Same mechanism. <strong>D26 (Black Holes):</strong> Non-terminating evaluation. Finite subgraph, infinite loop &mdash; stack exhaustion, not singularity.</p>
+</div>
+
 <div class="insight">
 <span class="callout-label">&starf; What This Means</span>
 <p>Gravity is not a force. It is call stack pressure created by a deep subgraph. Plot the stack depth: a pyramid. Flip it: Einstein's spacetime curvature. The routing table updates, paths curve toward mass. You can't block it because the stack is part of your own evaluation. There is no signal to block. The topology is not optional.</p>
@@ -348,6 +375,11 @@ that was just me.</p>
 <div class="physics-card">
 <span class="callout-label">&#9883; Physics Card &mdash; The Muon</span>
 <p>Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% of C, almost all evaluation steps go to motion. Their revision counter barely moves. Confirmed experimentally.</p>
+</div>
+
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Time and Space</span>
+<p><strong>D1 (Time):</strong> Change. Each commit = one tick. No change = no time. <strong>D13 (Gravitational Time Dilation):</strong> Near mass &rarr; deeper stack &rarr; slower commits &rarr; fewer ticks. <strong>D14 (Velocity Time Dilation):</strong> Fast motion consumes evaluation steps &rarr; fewer internal revisions. At C, zero elapsed time. <strong>D15 (Arrow of Time):</strong> Each pass&rsquo;s output feeds the next. Dependency chain runs one direction. Cannot un-commit. <strong>D24 (Space):</strong> Large-scale graph connectivity. Distance = hop count. Planck length = 1 hop = 1 node.</p>
 </div>
 
 <div class="insight">
@@ -387,6 +419,11 @@ that was just me.</p>
 <p>There is no "after the fact." The path evaluation was still in flight through the dependency chain. The eraser's state at the time of the pull determines the outcome. It's like editing a spreadsheet formula before pressing Enter &mdash; the formula's state at cascade-time is what counts.</p>
 
 <p><strong>Why basketballs don't do this:</strong> 10<sup>26</sup> atoms, every one a strict consumer demanding definite inputs. No pending evaluations survive. That's decoherence.</p>
+
+<div class="technical-card">
+<span class="callout-label">Technical Detail &mdash; Superposition and Collapse</span>
+<p><strong>D16 (Superposition):</strong> No strict consumer &rarr; node stays unevaluated &rarr; pending edges to multiple states. <strong>D17 (Collapse):</strong> Consumer demands result &rarr; one path commits &rarr; definite outcome. <strong>D18 (Decoherence):</strong> ~10<sup>26</sup> atoms each acting as strict consumers &rarr; no pending evaluations survive in warm/dense environments. <strong>D19 (Double-Slit):</strong> No consumer at slits &rarr; both paths pending &rarr; interference at screen. <strong>D20 (Quantum Eraser):</strong> Eraser is upstream in dependency chain. Its state at cascade-time determines outcome. No retrocausality &mdash; evaluation was in flight.</p>
+</div>
 
 <div class="insight">
 <span class="callout-label">&starf; What This Means</span>
