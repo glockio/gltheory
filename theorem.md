@@ -333,7 +333,7 @@ Cannot formally prove the computation is confluent — that committed results ar
 
 ### O3: Particle Spectrum
 
-Cannot explain why specific particles exist with specific masses and charges. "Particles are stable topologies" is a category, not a derivation. Why an electron has mass 0.511 MeV, why there are three generations, why quarks come in six flavors — all unexplained.
+Cannot explain why specific particles exist with specific masses and charges. "Particles are stable topologies" is a category, not a derivation. Why an electron has mass 0.511 MeV, why there are three generations, why quarks come in six flavors — all unexplained. Additionally, the naive mapping from graph cycle symmetry (Z_n) to particle physics gauge groups (SU(n)) fails — these are fundamentally different mathematical structures. A mechanism for recovering continuous gauge symmetry from discrete graph topology is not known.
 
 ### O4: Born Rule Derivation
 
@@ -346,6 +346,14 @@ Gravity is ~10³⁶ times weaker than electromagnetism. The framework offers no 
 ### O6: Unique Experimental Predictions
 
 The framework makes one testable prediction that differs from standard GR: **no singularity** at the center of black holes (D26). The prediction is stack exhaustion (finite depth, non-terminating computation) rather than infinite density. If quantum gravity observations become possible, this could be tested. Beyond this, the framework currently makes no unique quantitative predictions that distinguish it from existing physics.
+
+### O7: Lorentz Invariance on Discrete Structure
+
+Any discrete spacetime must explain why Lorentz symmetry holds to the precision measured experimentally — roughly 10⁻²⁰ times tighter than a naive lattice or graph discretization would produce. Continuous Lorentz symmetry is a property of smooth manifolds; a discrete graph should break this symmetry at scales near the discretization length. The framework has no mechanism for recovering exact Lorentz invariance from discrete graph structure. This is arguably the single biggest existential threat to any discrete spacetime theory, including this one. Related to O2 (confluence), but a distinct problem: even if the computation is confluent, the discrete structure itself may violate continuous symmetry.
+
+### O8: Analogy vs. Derivation
+
+The framework reasons primarily by structural analogy rather than mathematical derivation. The mappings between graph mechanics and physics exist on a spectrum: some are exact (topological ordering = causal structure), some are plausible but unproven (stack depth ≈ gravitational potential), and some are speculative (cycle length = gauge group). Until the structural matches produce quantitative predictions — specific numbers that can be compared to experiment — the framework remains a conceptual model, not a physical theory. This is a meta-problem that applies to every claim in the framework.
 
 ---
 
