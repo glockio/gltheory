@@ -1,0 +1,150 @@
+<!-- DESCRIPTION: Side-by-side comparison. Left panel: the inverted call stack from figure 7b, with curving cheapest-path lines drawn through it, labeled "GRAPH MODEL — Inverted call stack. Paths curve around depth." Right panel: a classic General Relativity spacetime curvature diagram — the rubber-sheet analogy with a mass in the center and grid lines curving around it, labeled "GENERAL RELATIVITY — Spacetime fabric. Paths curve around mass." A large equals sign or double-headed arrow between the two panels. Below both: "Same thing. Different notation. 110 years of research. Our map." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" font-family="DM Sans, sans-serif">
+  <rect width="820" height="440" fill="white" fill-opacity="0"/>
+
+  <defs>
+    <marker id="rt-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#1a1a1a" stroke="none"/>
+    </marker>
+    <linearGradient id="well-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d35400" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d4a017" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- LEFT PANEL: GRAPH MODEL — Inverted Call Stack -->
+  <!-- ============================================ -->
+
+  <!-- Panel label -->
+  <text x="185" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a" letter-spacing="0.5">GRAPH MODEL</text>
+
+  <!-- Inverted call stack bars (hanging down from baseline at y=70) -->
+  <!-- 11 bars, symmetric, deepest in center -->
+  <!-- Bar heights: 12, 20, 35, 55, 80, 105, 80, 55, 35, 20, 12 -->
+  <!-- x positions: 45, 73, 101, 129, 157, 185, 213, 241, 269, 297, 325 -->
+
+  <rect x="37" y="70" width="16" height="12" rx="1.5" fill="url(#well-grad)" opacity="0.4"/>
+  <rect x="65" y="70" width="16" height="20" rx="1.5" fill="url(#well-grad)" opacity="0.45"/>
+  <rect x="93" y="70" width="16" height="35" rx="1.5" fill="url(#well-grad)" opacity="0.5"/>
+  <rect x="121" y="70" width="16" height="55" rx="1.5" fill="url(#well-grad)" opacity="0.55"/>
+  <rect x="149" y="70" width="16" height="80" rx="1.5" fill="url(#well-grad)" opacity="0.65"/>
+  <rect x="177" y="70" width="16" height="105" rx="1.5" fill="url(#well-grad)" opacity="0.8"/>
+  <rect x="205" y="70" width="16" height="80" rx="1.5" fill="url(#well-grad)" opacity="0.65"/>
+  <rect x="233" y="70" width="16" height="55" rx="1.5" fill="url(#well-grad)" opacity="0.55"/>
+  <rect x="261" y="70" width="16" height="35" rx="1.5" fill="url(#well-grad)" opacity="0.5"/>
+  <rect x="289" y="70" width="16" height="20" rx="1.5" fill="url(#well-grad)" opacity="0.45"/>
+  <rect x="317" y="70" width="16" height="12" rx="1.5" fill="url(#well-grad)" opacity="0.4"/>
+
+  <!-- Baseline at top of bars -->
+  <line x1="30" y1="70" x2="340" y2="70" stroke="#1a1a1a" stroke-width="1" opacity="0.3"/>
+
+  <!-- Well outline (dashed, connecting bar bottoms) -->
+  <path d="M 45,82 L 73,90 L 101,105 L 129,125 L 157,150 L 185,175 L 213,150 L 241,125 L 269,105 L 297,90 L 325,82"
+        fill="none" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+
+  <!-- Curved path lines through the well — these curve AROUND the depth -->
+  <!-- Path 1: high, gently curving -->
+  <path d="M 28,88 Q 100,86 140,90 Q 185,100 185,100 Q 185,100 230,90 Q 270,86 342,88"
+        fill="none" stroke="#2471a3" stroke-width="1.8" opacity="0.7"/>
+  <!-- Path 2: mid-height, more curvature -->
+  <path d="M 28,105 Q 90,102 130,112 Q 165,132 185,138 Q 205,132 240,112 Q 280,102 342,105"
+        fill="none" stroke="#2471a3" stroke-width="1.8" opacity="0.6"/>
+  <!-- Path 3: deep, most curvature -->
+  <path d="M 28,125 Q 80,122 120,140 Q 155,165 185,172 Q 215,165 250,140 Q 290,122 342,125"
+        fill="none" stroke="#2471a3" stroke-width="1.8" opacity="0.5"/>
+
+  <!-- Small arrowheads on path ends (right side) -->
+  <polygon points="342,88 336,84 336,92" fill="#2471a3" opacity="0.7"/>
+  <polygon points="342,105 336,101 336,109" fill="#2471a3" opacity="0.6"/>
+  <polygon points="342,125 336,121 336,129" fill="#2471a3" opacity="0.5"/>
+
+  <!-- "depth" label at bottom of well -->
+  <text x="185" y="196" text-anchor="middle" font-size="9" fill="#c0392b" font-weight="600">DEPTH</text>
+
+  <!-- Sub-labels -->
+  <text x="185" y="222" text-anchor="middle" font-size="10.5" fill="#7a7a6a" font-style="italic">Inverted call stack.</text>
+  <text x="185" y="238" text-anchor="middle" font-size="10.5" fill="#7a7a6a" font-style="italic">Paths curve around depth.</text>
+
+
+  <!-- ============================================ -->
+  <!-- CENTER: Equals sign -->
+  <!-- ============================================ -->
+
+  <rect x="378" y="112" width="64" height="8" rx="3" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="378" y="130" width="64" height="8" rx="3" fill="#1a1a1a" opacity="0.8"/>
+
+
+  <!-- ============================================ -->
+  <!-- RIGHT PANEL: GENERAL RELATIVITY — Rubber Sheet -->
+  <!-- ============================================ -->
+
+  <!-- Panel label -->
+  <text x="635" y="28" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a" letter-spacing="0.5">GENERAL RELATIVITY</text>
+
+  <!-- Rubber-sheet grid: horizontal lines curving into a well -->
+  <!-- Row 1 (top, flattest) -->
+  <path d="M 470,68 Q 560,68 590,72 Q 635,82 635,82 Q 635,82 680,72 Q 710,68 800,68"
+        fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.55"/>
+  <!-- Row 2 -->
+  <path d="M 470,88 Q 555,88 585,95 Q 635,112 635,112 Q 635,112 685,95 Q 715,88 800,88"
+        fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.6"/>
+  <!-- Row 3 -->
+  <path d="M 470,108 Q 550,108 578,120 Q 635,145 635,145 Q 635,145 692,120 Q 720,108 800,108"
+        fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.65"/>
+  <!-- Row 4 -->
+  <path d="M 470,128 Q 545,128 572,145 Q 635,178 635,178 Q 635,178 698,145 Q 725,128 800,128"
+        fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.7"/>
+  <!-- Row 5 (deepest visible) -->
+  <path d="M 470,148 Q 540,148 568,170 Q 635,208 635,208 Q 635,208 702,170 Q 730,148 800,148"
+        fill="none" stroke="#a8dadc" stroke-width="1.2" opacity="0.75"/>
+
+  <!-- Vertical grid lines curving into well -->
+  <path d="M 500,63 L 500,153" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.35"/>
+  <path d="M 540,63 Q 540,130 545,153" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.35"/>
+  <path d="M 575,63 Q 575,110 585,145 L 600,185" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 605,63 Q 605,100 615,145 L 625,200" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.45"/>
+  <path d="M 635,63 L 635,210" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.5"/>
+  <path d="M 665,63 Q 665,100 655,145 L 645,200" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.45"/>
+  <path d="M 695,63 Q 695,110 685,145 L 670,185" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.4"/>
+  <path d="M 730,63 Q 730,130 725,153" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.35"/>
+  <path d="M 770,63 L 770,153" fill="none" stroke="#a8dadc" stroke-width="1" opacity="0.35"/>
+
+  <!-- Curved path lines through spacetime (same style as left panel) -->
+  <!-- Path 1 -->
+  <path d="M 465,88 Q 540,86 580,92 Q 635,105 635,105 Q 635,105 690,92 Q 730,86 805,88"
+        fill="none" stroke="#2471a3" stroke-width="1.8" opacity="0.7"/>
+  <!-- Path 2 -->
+  <path d="M 465,112 Q 530,110 575,122 Q 620,140 635,145 Q 650,140 695,122 Q 740,110 805,112"
+        fill="none" stroke="#2471a3" stroke-width="1.8" opacity="0.6"/>
+  <!-- Path 3 -->
+  <path d="M 465,138 Q 525,136 568,152 Q 615,175 635,180 Q 655,175 702,152 Q 745,136 805,138"
+        fill="none" stroke="#2471a3" stroke-width="1.8" opacity="0.5"/>
+
+  <!-- Arrowheads on path ends (right side) -->
+  <polygon points="805,88 799,84 799,92" fill="#2471a3" opacity="0.7"/>
+  <polygon points="805,112 799,108 799,116" fill="#2471a3" opacity="0.6"/>
+  <polygon points="805,138 799,134 799,142" fill="#2471a3" opacity="0.5"/>
+
+  <!-- Mass dot at bottom of well -->
+  <circle cx="635" cy="213" r="7" fill="#c0392b" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="635" y="232" text-anchor="middle" font-size="9" fill="#c0392b" font-weight="600">MASS</text>
+
+  <!-- Sub-labels -->
+  <text x="635" y="252" text-anchor="middle" font-size="10.5" fill="#7a7a6a" font-style="italic">Spacetime fabric.</text>
+  <text x="635" y="268" text-anchor="middle" font-size="10.5" fill="#7a7a6a" font-style="italic">Paths curve around mass.</text>
+
+
+  <!-- ============================================ -->
+  <!-- BOTTOM: Shared caption -->
+  <!-- ============================================ -->
+
+  <!-- Divider line -->
+  <line x1="100" y1="310" x2="720" y2="310" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Main caption -->
+  <text x="410" y="348" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">Same thing. Different notation.</text>
+  <text x="410" y="374" text-anchor="middle" font-size="14" fill="#7a7a6a">110 years of research.</text>
+  <text x="410" y="398" text-anchor="middle" font-size="15" font-weight="700" fill="#d35400">Our map.</text>
+
+</svg>

@@ -1,0 +1,146 @@
+<!-- DESCRIPTION: A dependency graph showing the double-slit experiment. Left: a SOURCE node (blue). Center: two SLIT nodes (slit A and slit B) connected to the source with dotted purple lines labeled "PENDING — both paths alive." Right: a SCREEN node connected to both slit nodes. Below: a second version of the same graph with a DETECTOR node attached to slit A. The detector's edge is solid green (committed), forcing slit A's path to commit. Slit B's path disappears (grayed out). Labels: Top version: "No detector — both paths pending. Interference at screen." Bottom version: "Detector present — one path committed. No interference." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- ============================================ -->
+  <!-- TOP ROW: No detector — both paths pending    -->
+  <!-- ============================================ -->
+
+  <!-- Top row label -->
+  <text x="400" y="28" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700">No detector — both paths pending. Interference at screen.</text>
+
+  <!-- SOURCE node -->
+  <circle cx="100" cy="140" r="22" fill="#2471a3" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="100" y="136" text-anchor="middle" font-size="9" fill="white" font-weight="700">SOURCE</text>
+  <text x="100" y="147" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.7)">photon</text>
+
+  <!-- SLIT A node -->
+  <circle cx="340" cy="95" r="18" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="340" y="92" text-anchor="middle" font-size="9" fill="#7d3c98" font-weight="700">SLIT A</text>
+  <text x="340" y="103" text-anchor="middle" font-size="7" fill="#7d3c98">pending</text>
+
+  <!-- SLIT B node -->
+  <circle cx="340" cy="185" r="18" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="340" y="182" text-anchor="middle" font-size="9" fill="#7d3c98" font-weight="700">SLIT B</text>
+  <text x="340" y="193" text-anchor="middle" font-size="7" fill="#7d3c98">pending</text>
+
+  <!-- Dotted purple edge: SOURCE → SLIT A -->
+  <line x1="122" y1="130" x2="322" y2="100" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.7"/>
+  <text x="210" y="105" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">PENDING</text>
+
+  <!-- Dotted purple edge: SOURCE → SLIT B -->
+  <line x1="122" y1="150" x2="322" y2="180" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.7"/>
+  <text x="210" y="178" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">PENDING</text>
+
+  <!-- SCREEN node -->
+  <circle cx="580" cy="140" r="22" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="580" y="137" text-anchor="middle" font-size="9" fill="#1a1a1a" font-weight="700">SCREEN</text>
+  <text x="580" y="148" text-anchor="middle" font-size="7" fill="#7a7a6a">consumer</text>
+
+  <!-- Dotted purple edge: SLIT A → SCREEN -->
+  <line x1="358" y1="90" x2="558" y2="132" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.7"/>
+
+  <!-- Dotted purple edge: SLIT B → SCREEN -->
+  <line x1="358" y1="190" x2="558" y2="148" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="6,4" opacity="0.7"/>
+
+  <!-- Interference pattern near screen (alternating bands) -->
+  <rect x="630" y="100" width="6" height="80" rx="1" fill="none" stroke="#ddd" stroke-width="0.5"/>
+  <rect x="631" y="101" width="4" height="6" rx="0.5" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="631" y="110" width="4" height="4" rx="0.5" fill="#1a1a1a" opacity="0.15"/>
+  <rect x="631" y="117" width="4" height="6" rx="0.5" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="631" y="126" width="4" height="4" rx="0.5" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="631" y="133" width="4" height="6" rx="0.5" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="631" y="142" width="4" height="4" rx="0.5" fill="#1a1a1a" opacity="0.12"/>
+  <rect x="631" y="149" width="4" height="6" rx="0.5" fill="#1a1a1a" opacity="0.65"/>
+  <rect x="631" y="158" width="4" height="4" rx="0.5" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="631" y="165" width="4" height="6" rx="0.5" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="631" y="174" width="4" height="5" rx="0.5" fill="#1a1a1a" opacity="0.15"/>
+
+  <!-- Interference label -->
+  <text x="655" y="137" font-size="8" fill="#7a7a6a">interference</text>
+  <text x="655" y="148" font-size="8" fill="#7a7a6a">pattern</text>
+
+  <!-- "both paths alive" annotation -->
+  <text x="340" y="228" text-anchor="middle" font-size="9" fill="#7a7a6a" font-style="italic">both paths alive</text>
+
+  <!-- Divider line -->
+  <line x1="40" y1="260" x2="760" y2="260" stroke="#ddd" stroke-width="1" stroke-dasharray="8,4"/>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM ROW: Detector present                 -->
+  <!-- ============================================ -->
+
+  <!-- Bottom row label -->
+  <text x="400" y="292" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700">Detector present — one path committed. No interference.</text>
+
+  <!-- SOURCE node -->
+  <circle cx="100" cy="400" r="22" fill="#2471a3" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="100" y="396" text-anchor="middle" font-size="9" fill="white" font-weight="700">SOURCE</text>
+  <text x="100" y="407" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.7)">photon</text>
+
+  <!-- SLIT A node (committed — solid green border) -->
+  <circle cx="340" cy="360" r="18" fill="none" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="340" y="357" text-anchor="middle" font-size="9" fill="#1e8449" font-weight="700">SLIT A</text>
+  <text x="340" y="368" text-anchor="middle" font-size="7" fill="#1e8449">committed</text>
+
+  <!-- SLIT B node (grayed out) -->
+  <circle cx="340" cy="445" r="18" fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="340" y="442" text-anchor="middle" font-size="9" fill="#ccc" font-weight="700">SLIT B</text>
+  <text x="340" y="453" text-anchor="middle" font-size="7" fill="#ccc">dead</text>
+
+  <!-- Solid green edge: SOURCE → SLIT A (committed) -->
+  <line x1="122" y1="390" x2="322" y2="365" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="210" y="368" text-anchor="middle" font-size="8" fill="#1e8449" font-weight="600">COMMITTED</text>
+
+  <!-- Grayed out dotted edge: SOURCE → SLIT B -->
+  <line x1="122" y1="410" x2="322" y2="440" stroke="#ccc" stroke-width="1.2" stroke-dasharray="6,4" opacity="0.4"/>
+  <text x="210" y="440" text-anchor="middle" font-size="8" fill="#ccc">killed</text>
+
+  <!-- DETECTOR node (small, attached to SLIT A) -->
+  <circle cx="340" cy="310" r="14" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="340" y="306" text-anchor="middle" font-size="7" fill="white" font-weight="700">DETECT</text>
+  <text x="340" y="316" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.7)">-OR</text>
+
+  <!-- Solid green edge: SLIT A → DETECTOR -->
+  <line x1="340" y1="342" x2="340" y2="324" stroke="#1e8449" stroke-width="2.5"/>
+
+  <!-- "which-path info" label near detector -->
+  <text x="380" y="308" font-size="7" fill="#1e8449" font-style="italic">which-path</text>
+  <text x="380" y="318" font-size="7" fill="#1e8449" font-style="italic">info</text>
+
+  <!-- SCREEN node -->
+  <circle cx="580" cy="400" r="22" fill="none" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="580" y="397" text-anchor="middle" font-size="9" fill="#1a1a1a" font-weight="700">SCREEN</text>
+  <text x="580" y="408" text-anchor="middle" font-size="7" fill="#7a7a6a">consumer</text>
+
+  <!-- Solid green edge: SLIT A → SCREEN (only committed path) -->
+  <line x1="358" y1="355" x2="558" y2="393" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- No edge from SLIT B to SCREEN (path is dead) -->
+  <!-- Faint X over where the edge would be -->
+  <line x1="360" y1="445" x2="556" y2="410" stroke="#ccc" stroke-width="0.8" stroke-dasharray="3,5" opacity="0.3"/>
+
+  <!-- No interference pattern — scattered dots -->
+  <rect x="630" y="360" width="6" height="80" rx="1" fill="none" stroke="#ddd" stroke-width="0.5"/>
+  <!-- Uniform blob — no bands -->
+  <circle cx="633" cy="390" r="1.5" fill="#1a1a1a" opacity="0.5"/>
+  <circle cx="632" cy="397" r="1.2" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="634" cy="402" r="1.5" fill="#1a1a1a" opacity="0.6"/>
+  <circle cx="633" cy="407" r="1.3" fill="#1a1a1a" opacity="0.5"/>
+  <circle cx="632" cy="395" r="1" fill="#1a1a1a" opacity="0.3"/>
+  <circle cx="634" cy="399" r="1.4" fill="#1a1a1a" opacity="0.55"/>
+  <circle cx="633" cy="404" r="1.1" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="632" cy="410" r="1.5" fill="#1a1a1a" opacity="0.45"/>
+  <circle cx="634" cy="385" r="1" fill="#1a1a1a" opacity="0.3"/>
+  <circle cx="633" cy="415" r="1.2" fill="#1a1a1a" opacity="0.35"/>
+
+  <!-- No interference label -->
+  <text x="655" y="397" font-size="8" fill="#7a7a6a">no interference</text>
+  <text x="655" y="408" font-size="8" fill="#7a7a6a">just hits</text>
+
+  <!-- "only one path reaches screen" annotation -->
+  <text x="340" y="488" text-anchor="middle" font-size="9" fill="#7a7a6a" font-style="italic">only one path reaches the screen</text>
+
+</svg>

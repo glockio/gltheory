@@ -227,18 +227,36 @@ Background: `var(--block-bg-code)`. Border: 1px solid `var(--border)`. JetBrains
 ### Narrative Arc
 
 ```
-Mario / two layers → Graph basics → Demo (emergent properties) →
-Industry / Topo ordering / C →
-Mass & Energy → Gravity (centrepiece) →
-Space & Time →
-Quantum + Eraser →
-Entanglement + Expansion (compressed) →
-Honest Gaps → Reference Table
+Ch 1: You Are Mario (hook, two layers, graph basics, rules, recursion)
+  ↓
+Ch 2: Run It (pseudocode, evaluation walkthrough, "Did You Notice?" seedlings, primes PoC)
+  ↓
+★ Ch 3: THE REVEAL — "Wait. This IS Spacetime." ★
+  (You Already Use This Model → subgraph stacks → pyramid → flip → spacetime)
+  (THE PUNCH: "This IS spacetime." → THE RANT: Greg processes the realization)
+  ↓
+PART 2: GR CONFIRMATION
+  ├── Mass & Energy (stable topology, E=mc², antimatter)
+  ├── Gravity (routing pressure, 3 mysteries dissolved, black holes, dark matter card)
+  └── Time, Space & C (hop count, leaf commit rate, dilation, arrow, GPS, muon)
+  ↓
+PART 3: QM CONFIRMATION
+  ├── Superposition & Collapse (lazy evaluation)
+  ├── Double-Slit & Quantum Eraser (4 steps, upstream dependency)
+  └── Entanglement (shared node, no FTL)
+  ↓
+Everything Else (expansion — quick hit)
+  ↓
+Honest Gaps (earned credibility)
+  ↓
+Quick Reference Table
 ```
 
 ### The Core Insight
 
 **Nodes store nothing. Values, forces, and observable properties all emerge from graph topology alone.** The universe is a recursive function walking a graph. The walking IS reality.
+
+The structural pivot is Chapter 3 — the revelation that the call stack topology IS spacetime. Everything before builds to it. Everything after confirms it.
 
 Thread three ideas throughout:
 1. Topology generates values (prime demo proof-of-concept)
@@ -323,10 +341,35 @@ All figures, their slugs, labels, and full descriptions for SVG generation.
 - **Description:** Two panels. Left panel "BEFORE — no mass, flat routing table": a uniform grid of nodes. A straight path from A (top left) to B (bottom right) drawn as a straight diagonal line. All nodes the same color. Label: "Uniform routing costs. Straight path is cheapest." Right panel "AFTER — mass present, routing table updated": same grid. A cluster of nodes in the center colored amber/orange, labeled "DEEP STACK — high routing cost." The path from A to B is now curved around the mass cluster, avoiding the high-cost center. Label: "Routing table updated. Cheapest path now bends around the mass. That bend is gravity."
 - **Caption:** Deep call stacks create routing pressure. Cheapest paths bend around the pressure zone. That bend is gravity.
 
+### spacetime-is-a-routing-table
+- **Label:** Figure 7d — Same Thing. Different Notation.
+- **Description:** Side-by-side comparison. Left panel: the inverted call stack from figure 7b, with curving cheapest-path lines drawn through it, labeled "GRAPH MODEL — Inverted call stack. Paths curve around depth." Right panel: a classic General Relativity spacetime curvature diagram — the rubber-sheet analogy with a mass in the center and grid lines curving around it, labeled "GENERAL RELATIVITY — Spacetime fabric. Paths curve around mass." A large equals sign or double-headed arrow between the two panels. Below both: "Same thing. Different notation. 110 years of research. Our map."
+- **Caption:** Same thing. Different notation. 110 years of research. Our map.
+
 ### pending-vs-committed
 - **Label:** Figure 8 — Pending vs. Committed
 - **Description:** Two panels. Left panel (purple border, "WAVE FUNCTION — PENDING"): central node (the particle) with six dotted lines connecting to six possible position nodes around it. None are committed. Label: "No consumer. All paths pending. Nothing committed. This is superposition." Right panel (green border, "MEASURED — COMMITTED"): same central node with ONE thick solid line to ONE position node. All other connections gone. Label: "Consumer demands a result. One path commits. One definite position."
 - **Caption:** Superposition is pending evaluation. Collapse is when a consumer demands a result. One path commits.
+
+### double-slit-as-graph
+- **Label:** Figure 9 — Double-Slit as a Dependency Graph
+- **Description:** A dependency graph showing the double-slit experiment. Left: a SOURCE node (blue). Center: two SLIT nodes (slit A and slit B) connected to the source with dotted purple lines labeled "PENDING — both paths alive." Right: a SCREEN node connected to both slit nodes. Below: a second version of the same graph with a DETECTOR node attached to slit A. The detector's edge is solid green (committed), forcing slit A's path to commit. Slit B's path disappears (grayed out). Labels: Top version: "No detector — both paths pending. Interference at screen." Bottom version: "Detector present — one path committed. No interference."
+- **Caption:** The double-slit experiment as a dependency graph. Pending edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
+
+### entanglement-shared-subgraph
+- **Label:** Figure 10 — Entanglement Is a Shared Node
+- **Description:** Two particles (labeled A and B) shown far apart on opposite sides of the figure. Each has its own local subgraph. But both connect to ONE shared node in the center, drawn with a gold border and labeled "SHARED NODE." Dotted lines show A and B can be any distance apart. When either particle is evaluated, the shared node commits ONCE. Both A and B read the same committed value. Labels: "Distance doesn't matter. The shared node commits once. Both sides get the same answer. No signal needed."
+- **Caption:** Two particles, one shared node. Doesn't matter how far apart. When either side evaluates, the shared node commits once. Same value, both sides. No signal needed.
+
+### time-is-revision-rate
+- **Label:** Figure 11 — Time Is the Revision Counter
+- **Description:** Two horizontal timelines side by side. Top timeline labeled "FAR FROM MASS — shallow stack" shows nodes committing rapidly with many tick marks closely spaced, revision counter advancing quickly (rev 1, 2, 3, 4, 5...). Bottom timeline labeled "NEAR MASS — deep stack" shows the same span but with fewer, wider-spaced tick marks, revision counter advancing slowly (rev 1... 2... 3...). Both timelines span the same horizontal distance but the top has more commits. Label: "Same span. More commits far from mass. Fewer near mass. That's time dilation."
+- **Caption:** Time is the revision counter. Each commit is one tick. Near mass: deeper stack, slower commits, fewer ticks. That's time dilation.
+
+### the-graph-grows-itself
+- **Label:** Figure 12 — The Graph Grows Itself
+- **Description:** Three panels showing a graph at three stages. Panel 1 "PASS 1": a small graph with ~6 nodes and ~8 edges. Panel 2 "PASS 2": same graph but now ~10 nodes and ~14 edges — new nodes sprouted from evaluations. Panel 3 "PASS 3": ~16 nodes, ~24 edges. Each panel is labeled with its node count. Arrow below: "More graph → more evaluations → more new nodes. Growth proportional to size = accelerating expansion."
+- **Caption:** The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.
 
 ---
 

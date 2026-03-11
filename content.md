@@ -56,7 +56,9 @@ This is very much a work in progress. As we've started out on this journey — t
 
 ---
 
-## THE HOOK
+## Chapter 1: You Are Mario
+
+// ~500 words. Compressed hook. Two layers. Mystery questions (promises). Graph basics. Three rules. Recursive functions. Pure momentum — no cards.
 
 @hook
 Before we get into anything — before graphs, before physics, how nerds run computers in the sky. I want to drive a point home.
@@ -65,7 +67,7 @@ Before we get into anything — before graphs, before physics, how nerds run com
 
 @/hook
 
-This might sound crazy, maybe confusing? But you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're — well I'm — claiming reality works the same way. What you experience takes place on a screen, but the real action is in the engine underneath. YOU and your reality are stored on that engine. And more specifically, the universe seems to be stored as a graph. Why a graph, you ask? Graphs have some interesting properties we will cover.
+This might sound crazy, maybe confusing? But you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're — well I'm — claiming reality works the same way. What you experience takes place on a screen, but the real action is in the engine underneath. YOU and your reality are stored on that engine. And more specifically, the universe seems to be stored as a graph.
 
 So I lied. You are not a 2D Italian plumber, you are the _graphical_ representation of a 2D Italian plumber. See, it always can get worse.
 
@@ -91,40 +93,30 @@ These are genuine unsolved mysteries and in my version of what's going on, they 
 @fig:two-layers-of-reality
 Two layers. The engine computes the graph. The screen shows the output — Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?
 
-// Bridge to graphs — NOT a standalone section. 2-3 sentences folded into hook flow.
-
-Okay so real quick, let's cover what a **graph** is. You already know graphs, dots connected by lines. A recipe is a graph. A family tree is a graph.
+Okay so real quick — a **graph** is dots connected by lines. A recipe is a graph. A family tree is a graph. That's it.
 
 @fig:you-already-know-what-a-graph-is
-These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show "mom" on the relationship between you and your mother.
+These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots.
 
-Now our universe graph is slightly more complicated than the family tree. So we need to add some basic rules for the graph:
+Now our universe graph needs a few rules:
 
-### The Graph Rules
+**1. Lazy loaded.** Unless someone asks "hey, what's your value?" — do nothing.
 
-**1. Nodes/Values are lazy loaded.** That means unless someone asks "hey you, what's your name/value?" then don't even think about it, just do nothing.
+**2. No stored values** — all values come from how the graph is connected. Imagine someone asks you the time. You don't actually know — you check your phone, which checks a satellite, which checks an atomic clock. The time depends on where you are in the graph. You always need to check.
 
-**2. No values are stored within the nodes themselves** — all values are derived from the topology of the graph. Yikes... basically... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is "what time is it" depends on where you are, and you don't know the answer yourself — you always need to check with the star nerds.
+**3. Edges are operations** — the lines connecting dots can be instructions. Like: (3) --- × --- (3) = 9.
 
-**3. Edges are operations**: This just means the lines connecting the dots can be instructions. For example, multiplication could be an instruction: (3) --- X --- (3) or (you) --- call --> (mom).
+One more thing: **recursive functions.** You know when you feed your dog and then an hour later he tries to eat his own sh*t? That is a recursive function. It's a function (in this case your dog) which eats its own "output"... again and again.
 
-### Recursive Functions
+In our case we eat the graph, do math, get a result, then eat that result. Again and again. Each time we eat the graph we update the screen with what the graph says. This is how video games work — the engine does math, then updates the screen. Mario never sees half a screen. He always sees a complete image. From Mario's perspective you can hit pause, walk away, get lunch, and resume — and no time would have passed at all for him.
 
-Okay so we know what our universe graph looks like. But we want our graph to do something... so let's spice things up and see how we can make some graphic content.
-
-For that we need a recursive function. What is a recursive function? Well you know when you feed your dog and then an hour later he tries to eat his own sh\*t.... that is a recursive function. It's a function (in this case your dog) which eats its own "output"... again and again....
-
-In our case we eat the graph, do math, get a result, then eat that result. Again and again. Each time we eat the graph we update the screen with what the graph says.
-
-This is how video games work as well. It's called a render loop — the engine does some math, then updates the screen with the result. In Mario's world, you don't ever see half a screen or the pixels paint one by one. You always see a complete image. The key point here is you ALWAYS see the completed result. You never experience the engine doing the calculations. From Mario's perspective you can hit pause, walk away, get lunch, and resume — and no time would have passed at all for him.
-
-That's it. Not so bad. So to recap we have sh\*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...
+That's it. Sh*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...
 
 ---
 
-## The Demo: What Happens When You Evaluate One
+## Chapter 2: Run It
 
-// THE CENTREPIECE OF THE SETUP. Reframed from "primes from topology" to "watch what emerges from the simplest possible recursive evaluation." Pseudocode + visual walkthrough does the heavy lifting, not prose.
+// ~400 words. Pseudocode. Evaluation walkthrough. "Did You Notice?" as seedlings/promises. Primes compressed. NO "You Already Use This Model" — that moves to Chapter 3.
 
 Here is a basic example of what an engine might look like.
 
@@ -171,17 +163,7 @@ A caveat before we go further: we don't know the exact operations on the edges. 
 
 ### The Proof of Concept: Primes From Topology
 
-One more thing — and this matters. Watch what happens when a node's base value depends on its depth in the graph.
-
-Take a graph of depth 2 — one parent, one child. The child is a leaf, returns 1. The parent multiplies: result is 1. Depth 2 gives you the first value in the sequence.
-
-Depth 3: the parent has a child at depth 2 (which already returned its result) and a leaf. Multiply up: 2. That's prime.
-
-Depth 4: the subgraph at depth 2 already returned its result. The parent at depth 4 just gets 2 × 1 = 2. Not a new prime — it's composite. It factors into the structure below it.
-
-Depth 5: a new topology that can't be factored into smaller subgraphs. Result: 3. The next prime.
-
-See the pattern? Depths that introduce genuinely new topological structure produce primes. Depths that are just combinations of existing sub-structures produce composites. The primes aren't stored. They aren't computed by a formula. They emerge from which depths create irreducible topologies.
+Watch what happens when a node's value depends on its depth. Depth 2: leaf returns 1. Depth 3: new irreducible structure → 2 (prime). Depth 4: just recombines depth 2 → composite. Depth 5: another irreducible structure → 3 (prime).
 
 @fig:evaluating-a-graph-step-by-step
 Primes emerge from topology. Depths with irreducible structure produce primes. Composite depths just re-combine existing sub-structures. No values stored anywhere.
@@ -192,11 +174,17 @@ The node stores nothing. The structure IS the value. If topology generates prime
 A recursive graph evaluation — with no stored values and no special rules — produces emergent properties that map directly onto physics: time (change), causality (evaluation order), gravity (stack depth), quantum mechanics (lazy evaluation), and the speed of information (off-by-one). None of these were designed in. They fell out of the recursive evaluation. The properties ARE the evaluation.
 @/insight
 
+Five properties. No physics. No special rules. Just: evaluate the graph. But here's the thing — we're not the first people to build systems like this.
+
 ---
+
+## Chapter 3: "Wait. This IS Spacetime."
+
+// THE REVEAL. ~600 words. The document's structural pivot. "You Already Use This Model" → subgraph stacks → image sequence → THE PUNCH → THE RANT.
 
 ### You Already Use This Model
 
-// Promoted from callout to regular subsection. Topological ordering is essential context, not optional engineer-only material.
+// Moved from Demo. Bridges everyday experience to the spacetime revelation.
 
 We already build systems that evaluate graphs. Spreadsheets, React, CPU caches — different teams, different decades, different purposes. They all independently converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait.
 
@@ -207,7 +195,28 @@ Change A1 and the update cascades forward through the dependency graph. B1 and C
 
 Two key consequences fall out of topological ordering. First: no preferred traversal order = no preferred frame = **special relativity for free**. Two observers on independent branches genuinely have no shared "now" — not because of a physical law, but because there's no ordering constraint between them.
 
-Second: **C = leaf commit rate.** The speed of light has nothing to do with light. A leaf node — nothing to recurse into — commits instantly. That rate is C. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why it travels at C.
+### Subgraphs Have Stacks
+
+Now here's where it gets interesting. When the engine evaluates a deep subgraph, it builds a **call stack** — a list of things waiting for answers. Think of a stack of plates: you can't get to the bottom one until you take off every plate above it. Deeper subgraphs = taller call stacks = more pressure on the system.
+
+Plot call stack depth across a region of the graph. What shape do you get?
+
+@fig:call-stack-pyramid
+Plot call stack depth across the graph and you get a mountain. Tallest where mass is. Height 1 at the leaves — those are your photons, traveling at C.
+
+Now flip that pyramid upside down. The tall bars become deep wells. Drape a spacetime fabric grid over it.
+
+@fig:invert-pyramid-spacetime
+Flip the pyramid and drape a fabric over it. That's the spacetime diagram from your physics textbook. The call stack topology is spacetime curvature.
+
+You're looking at the diagram from every physics textbook ever printed.
+
+@fig:spacetime-is-a-routing-table
+Same thing. Different notation. 110 years of research. Our map.
+
+**This IS spacetime.**
+
+Around here I realized something that took me embarrassingly long to see. I just invented another word for spacetime. Physicists have studied spacetime for 110 years. They call it a "fabric." They draw diagrams of it curving. But nobody — NOBODY — ever says what it IS. What is the fabric? What is the thing that curves? The question goes unanswered. I'm saying it's a graph. And if it's a graph, then 110 years of general relativity just became our instruction manual.
 
 @technical-card: Core Axioms
 **A1 (Graph Structure):** Reality is a directed graph G = (N, E). Edges carry operations. **A3 (Lazy Evaluation):** No node evaluates until a consumer demands its result. **A4 (No Stored Values):** All values derived from topology alone — the structure IS the value. These three axioms, combined with recursive evaluation (A2), produce the emergent properties demonstrated in the demo.
@@ -217,11 +226,17 @@ Second: **C = leaf commit rate.** The speed of light has nothing to do with ligh
 **D2 (Causal Ordering):** Children evaluate before parents — the partial order imposed by the graph's dependency structure. **D3 (Special Relativity):** Causally independent nodes have no ordering constraint → no preferred frame → no preferred "now." **D4 (Speed of Light):** A leaf node commits at maximum rate C — no subgraph to wait for. All non-leaf evaluations are slower.
 @/technical-card
 
+@insight
+The call stack of a recursive graph evaluation IS spacetime. The topology of stack depth IS spacetime curvature. Nobody ever said what spacetime IS — what the fabric is, what the thing that curves is. It's a graph. And 110 years of general relativity just became our instruction manual.
+@/insight
+
+If this is spacetime, then 110 years of general relativity just became our instruction manual. Let's open it.
+
 ---
 
-## What the Framework Explains
+## PART 2: General Relativity, Translated
 
-// Merged chapters. Mystery blocks only for gravity and quantum (the big reveals).
+// Each GR phenomenon is now a CONFIRMATION. The reader already saw the routing table. Each concept is: "Does GR predict X? Check our graph. Yes, it falls out."
 
 ### Mass & Energy
 
@@ -249,6 +264,8 @@ The walk down to leaves and the walk back up are both at rate C. Same rate, two 
 
 ### Gravity
 
+// Significantly compressed — the pyramid/inversion already happened in The Reveal. What remains: mystery, routing pressure, three mystery dissolutions, black holes, dark matter card.
+
 @mystery
 Gravity is weird. A suspicious kind of weird. Three clues:
 
@@ -259,19 +276,7 @@ Gravity is weird. A suspicious kind of weird. Three clues:
 **3.** Physicists hunted the graviton for decades. Never found one. Maybe gravity isn't a force at all.
 @/mystery
 
-// This is the centrepiece. ~800 words. Call stack → pyramid → invert → routing pressure. All three mysteries dissolved. Keep "can't shield gravity" at full strength.
-
-When the engine evaluates a deep subgraph, it builds a **call stack** — a list of things waiting for answers. Think of a stack of plates: you can't get to the bottom one until you take off every plate above it. Each plate is a question waiting for the question below it to be answered first. Everything on the stack is waiting. The stack depth equals the subgraph depth. Deep subgraph = tall stack = everything nearby waits longer.
-
-Now plot call stack depth across a region of the graph. What shape do you get?
-
-@fig:call-stack-pyramid
-Plot call stack depth across the graph and you get a mountain. Tallest where mass is. Height 1 at the leaves — those are your photons, traveling at C.
-
-Now flip that pyramid upside down. The tall bars become deep wells. Drape a spacetime fabric grid over it. You're looking at exactly what spacetime curvature looks like in every physics textbook.
-
-@fig:invert-pyramid-spacetime
-Flip the pyramid and drape a fabric over it. That's the spacetime diagram from your physics textbook. The call stack topology is spacetime curvature.
+You already saw it — the call stack pyramid, the inversion, the spacetime curvature. Now let's look at what the routing pressure actually does.
 
 The deep call stack doesn't just slow things down — the system actively routes around it. Paths through mass are expensive. Paths around it are cheaper. Everything follows the cheapest path. The cheapest path curves. That curve IS gravity.
 
@@ -290,8 +295,12 @@ Now dissolve the three mysteries:
 A black hole is a subgraph so deep that evaluation never completes. The call stack builds without unwinding. Unlike General Relativity's prediction of a singularity — infinite density — there's nothing infinite here. The subgraph is finite. The stack is deep but finite. The computation just never finishes. Stack exhaustion, not mathematical breakdown.
 @/physics-card
 
+@physics-card: Dark Matter
+Pure cycles in the graph — nodes that depend on themselves. When the engine tries to evaluate a cycle, it detects "already visiting this node" and returns PENDING. The cycle can't resolve. But the call stack was already built on the way in. Stack depth is real. Routing pressure is real. So the cycle gravitates — it has mass from the stack depth — but no value ever commits. No signal leaves. No electromagnetic interaction. No committed state to collide with. Collisionless, invisible, extends further than stable matter. All observed dark matter properties from one mechanism: cycles that gravitate but never resolve.
+@/physics-card
+
 @technical-card: Gravity as Routing Pressure
-**D8 (Call Stack Depth):** Evaluating a deep subgraph builds a call stack — each parent waits for its children. Stack depth = subgraph depth. **D9 (Gravity):** Deep stacks make paths expensive → system routes around → cheapest paths curve. That curve is gravity. **D10 (Spacetime Curvature):** Inverted call stack profile = spacetime curvature. **D11 (Can't Shield):** Gravity is stack depth, not a signal through edges — no edge to block. **D12 (Equivalence Principle):** Gravity and acceleration both add stack depth. Same mechanism. **D26 (Black Holes):** Non-terminating evaluation. Finite subgraph, infinite loop — stack exhaustion, not singularity.
+**D8 (Call Stack Depth):** Evaluating a deep subgraph builds a call stack — each parent waits for its children. Stack depth = subgraph depth. **D9 (Gravity):** Deep stacks make paths expensive → system routes around → cheapest paths curve. That curve is gravity. **D10 (Spacetime Curvature):** Inverted call stack profile = spacetime curvature. **D11 (Can't Shield):** Gravity is stack depth, not a signal through edges — no edge to block. **D12 (Equivalence Principle):** Gravity and acceleration both add stack depth. Same mechanism.
 @/technical-card
 
 @insight
@@ -300,15 +309,20 @@ Gravity is not a force. It is call stack pressure created by a deep subgraph. Pl
 
 ---
 
-### Space & Time
+### Time, Space & the Speed of Light
 
-// Space section folded into Time. Brief space opening (~50 words), then time is the main content (~300 words).
+// ~400 words. Space = hop count. C = leaf commit rate. Time = change/commits. Time dilation. Arrow of time. GPS, muon.
 
 Space isn't a box things happen inside. It's the graph's shape — the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop — one node. That's the Planck length: one pixel.
 
-What would it look like if time stopped? Nothing changes. No node evaluates to a new state. Nothing commits. Time IS the amount of change in your local region. Each time a node commits a new result, that's one tick of local time — not because the graph is counting, but because change happened. Near mass, the call stack is deeper, commits are slower, less change happens. That IS time dilation.
+**C = leaf commit rate.** The speed of light has nothing to do with light. A leaf node — nothing to recurse into — commits instantly. That rate is C. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why it travels at C.
 
-GPS satellites orbit where the stack depth is lower — less mass nearby, shallower call stacks, faster commits, faster clocks. The difference is about 45 microseconds per day. Without correction, GPS would drift roughly 10 kilometres per day. Your phone depends on this being real.
+What would it look like if time stopped? Nothing changes. No node evaluates to a new state. Nothing commits. Time IS the amount of change in your local region. Each time a node commits a new result, that's one tick of local time — not because the graph is counting, but because change happened.
+
+@fig:time-is-revision-rate
+Time is the revision counter. Each commit is one tick. Near mass: deeper stack, slower commits, fewer ticks. That's time dilation.
+
+Near mass, the call stack is deeper, commits are slower, less change happens. That IS time dilation. GPS satellites orbit where the stack depth is lower — less mass nearby, shallower call stacks, faster commits, faster clocks. The difference is about 45 microseconds per day. Without correction, GPS would drift roughly 10 kilometres per day. Your phone depends on this being real.
 
 **The arrow of time:** remember Fibonacci? 1, 1, 2, 3, 5, 8, 13... Each number needs the previous two. The engine works the same way. Each walk's committed results become the input to the next walk. Walk 5 needs Walk 4's output. The dependency runs one direction.
 
@@ -328,9 +342,28 @@ Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% 
 Space is the graph's shape. Distance is hop count. Time is change. No change, no time. Near mass: deeper stack, slower commits, less change, less elapsed time. The arrow of time is a dependency chain — each walk's output feeds the next. The equations work backwards because they describe photographs, not the computation. The computation runs one direction. No undo.
 @/insight
 
+General relativity mapped. Every prediction checks out. But Einstein only described the large-scale structure. What about the small-scale weirdness?
+
 ---
 
-## The Quantum World
+## PART 3: Quantum Mechanics, Translated
+
+// Same pattern: mystery → graph explanation → "oh."
+
+### Superposition & Collapse
+
+// ~300 words.
+
+Remember the demo — if nothing demands a node's result, it stays unevaluated. Being "somewhere" means having committed position edges to specific neighbors. Not having a definite position — pending edges to multiple neighbors — is superposition. A particle in flight with no **strict consumer** — anything that demands a definite answer right now, like a detector, a screen, your eyeball — stays pending. Both paths through both slits: pending. Neither committed.
+
+@fig:pending-vs-committed
+Superposition is pending evaluation. Collapse is when a consumer demands a result. One path commits.
+
+Quantum mechanics is just lazy loading. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly.
+
+---
+
+### Double-Slit & Quantum Eraser
 
 @mystery
 Double-slit: fire particles one at a time at two slits. An interference pattern appears — as if each particle went through both. Add a detector at one slit: pattern vanishes. Looking at it changed the result.
@@ -338,14 +371,12 @@ Double-slit: fire particles one at a time at two slits. An interference pattern 
 Quantum eraser: run the experiment WITH a detector. After the particle hits the screen and its dot is already recorded, erase the detector's which-path info. Sort the results. The interference pattern comes BACK. The dot is already on the screen. How can erasing information after the fact change a result that's already been recorded?
 @/mystery
 
-Remember the demo — if nothing demands a node's result, it stays unevaluated. Being "somewhere" means having committed position edges to specific neighbors. Not having a definite position — pending edges to multiple neighbors — is superposition. A particle in flight with no **strict consumer** — anything that demands a definite answer right now, like a detector, a screen, your eyeball — stays pending. Both paths through both slits: pending. Neither committed.
-
-@fig:pending-vs-committed
-Superposition is pending evaluation. Collapse is when a consumer demands a result. One path commits.
-
 **The double-slit in four steps:** (1) No consumer — both paths pending. (2) Engine evaluates all pending paths without committing. (3) Pending paths overlap at the screen — bright bands where they align, dark where they cancel. (4) Screen's 10²⁶ atoms force commitment — one dot. Over thousands of particles: the interference bands fill in.
 
 **A detector ruins it** because it demands "which slit?" — forces one path to commit. Only one path to the screen. No overlap. No pattern.
+
+@fig:double-slit-as-graph
+The double-slit experiment as a dependency graph. Pending edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
 
 ### Why the Quantum Eraser Isn't Time Travel
 
@@ -363,10 +394,6 @@ There is no "after the fact." The path evaluation was still in flight through th
 **D16 (Superposition):** No strict consumer → node stays unevaluated → pending edges to multiple states. **D17 (Collapse):** Consumer demands result → one path commits → definite outcome. **D18 (Decoherence):** ~10²⁶ atoms each acting as strict consumers → no pending evaluations survive in warm/dense environments. **D19 (Double-Slit):** No consumer at slits → both paths pending → interference at screen. **D20 (Quantum Eraser):** Eraser is upstream in dependency chain. Its state at cascade-time determines outcome. No retrocausality — evaluation was in flight.
 @/technical-card
 
-@insight
-Quantum mechanics is lazy evaluation. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly. The quantum eraser isn't time travel — the eraser is upstream in the dependency chain. Its state at the moment of the cascade determines the outcome. Not backward in time — upstream in the dependency graph.
-@/insight
-
 @physics-card: Why Probability Is Amplitude Squared
 The prime demo uses trees (no cycles). Values stay real. Everything is deterministic. That's the baseline.
 
@@ -381,21 +408,35 @@ The bidirectional walk (down to leaves, back up to root) means the final result 
 **Caveat:** This is exploratory. We haven't derived the Born rule from first principles. But it's interesting that cycles in a graph — which must exist in any non-trivial universe (feedback, self-reference, closed causal loops) — naturally produce exactly the mathematical structure quantum mechanics uses: complex amplitudes, interference, and squared-modulus probability.
 @/physics-card
 
+@insight
+Quantum mechanics is lazy evaluation. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly. The quantum eraser isn't time travel — the eraser is upstream in the dependency chain. Its state at the moment of the cascade determines the outcome. Not backward in time — upstream in the dependency graph.
+@/insight
+
 ---
-
-## Everything Else That Falls Out
-
-// Very brief. Entanglement: 2 paragraphs. Expansion: 2 paragraphs. No figures.
 
 ### Entanglement
 
+// ~200 words. Quick and clean.
+
 When two particles interact, their value subgraphs merge — they share a node. Position can change — they can move to opposite ends of the universe. But the shared node doesn't care about position. When either particle is evaluated, the shared node commits. Both read the same result. No signal travels — the correlation was in the topology all along.
 
+@fig:entanglement-shared-subgraph
+Two particles, one shared node. Doesn't matter how far apart. When either side evaluates, the shared node commits once. Same value, both sides. No signal needed.
+
 Why not faster-than-light communication? The results are correlated but random. Neither observer learns anything useful until they compare notes at C. It's like two people opening envelopes from a pre-shuffled deck — the results are correlated by the deck, but neither person's opening tells the other anything until they call each other.
+
+---
+
+## Everything Else
+
+// ~100 words. Expansion only — dark matter handled as physics card in gravity section.
 
 ### Expansion
 
 The engine evaluates the graph. Some evaluations return values that add new nodes and edges. More graph = more evaluations = more new nodes. Growth proportional to size = accelerating expansion. No dark energy needed — the graph computes itself into existence.
+
+@fig:the-graph-grows-itself
+The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.
 
 ---
 
@@ -445,6 +486,7 @@ These are genuine obstacles. Any one of them could be fatal to the whole picture
 | Equivalence principle | Acceleration and gravity both add call stack depth. Same mechanism. | CPU load from motion vs. deep calls: same throughput impact. |
 | Spacetime | The routing table — edge weights, cheapest paths. Updated by stack pressure. | Network routing table, updated on congestion. |
 | Black hole | Subgraph so deep the stack never unwinds. No singularity — stack exhaustion. | Non-terminating recursion. Finite code, infinite loop. |
+| Dark matter | Graph cycles that build stacks but never commit. Gravitates, never interacts. | Infinite loop — CPU busy (stack depth) but no output (no signal). |
 | Wave function | Pending evaluation. Multiple possible states, nothing committed. | Lazy thunk. Defined, not forced. |
 | Collapse | Strict consumer demands a result. Pending evaluation commits. | Forcing a lazy thunk. |
 | Quantum eraser | Eraser is upstream in dependency chain. Pull cascades through its state. | Editing spreadsheet formula before Enter. |
