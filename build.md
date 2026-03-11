@@ -238,14 +238,12 @@ Ch 2: Run It (pseudocode, evaluation walkthrough, "Did You Notice?" seedlings, p
 PART 2: GR CONFIRMATION
   ├── Mass & Energy (stable topology, E=mc², antimatter)
   ├── Gravity (routing pressure, 3 mysteries dissolved, black holes, dark matter card)
-  └── Time, Space & C (hop count, leaf commit rate, dilation, arrow, GPS, muon)
+  └── Time, Space & C (hop count, leaf commit rate, dilation, arrow, GPS, muon, expansion)
   ↓
 PART 3: QM CONFIRMATION
   ├── Superposition & Collapse (lazy evaluation)
   ├── Double-Slit & Quantum Eraser (4 steps, upstream dependency)
   └── Entanglement (shared node, no FTL)
-  ↓
-Everything Else (expansion — quick hit)
   ↓
 Honest Gaps (earned credibility)
   ↓

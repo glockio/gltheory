@@ -116,7 +116,7 @@ That's it. Sh*t-eating dogs, nerds in the sky with time, and a base rule of don'
 
 ## Chapter 2: Run It
 
-// ~400 words. Pseudocode. Evaluation walkthrough. "Did You Notice?" as seedlings/promises. Primes compressed. NO "You Already Use This Model" — that moves to Chapter 3.
+// ~800 words. Pseudocode. Conversational walkthrough (time, C, E=mc², mass). Primes compressed. Technical card. NO "You Already Use This Model" — that moves to Chapter 3.
 
 Here is a basic example of what an engine might look like.
 
@@ -139,19 +139,23 @@ function evaluate(node):
 @fig:graph-evaluation-walkthrough
 One recursive function. No physics. No special rules. Just: evaluate the graph. And look what fell out.
 
-### Did You Notice?
+So what just happened? The engine walked the graph. Leaves committed first — they had nothing to wait for. Parents waited for their children, then committed. Each node's revision counter ticked. The screen updated. That's one frame of reality.
 
-**Change** — each node's state changed when it committed. From that node's perspective, time just passed. No change = no time.
+Now let me show you what fell out of that — because it's kind of insane.
 
-**Evaluation order** — leaves first, root last. Can't evaluate a parent before its children. That's causal ordering.
+**Time.** See that revision counter? That's time. Not metaphorical time — actual time. Every commit is one tick. Two commits = two moments passed. No commits = no time passes. Think about it: what would it look like if time stopped? Nothing would change. No node evaluates. Nothing commits. That's literally what "time stopped" means — zero change. Time isn't a river you float on. It's the amount of change happening in your local region.
 
-**Stack depth** — deeper subgraphs build taller call stacks, take longer to unwind. That's the gravity mechanism.
+And here's the thing about engine time: the engine could take a billion years between frames for all we know. Mario doesn't notice. Hit pause, walk away, get lunch, come back — zero time passed for Mario. You only ever experience the update. Never the computation.
 
-**Lazy evaluation** — if nothing demands a node's result, it stays unevaluated. That's quantum superposition.
+**The speed limit.** Every parent reads its children's LAST COMMITTED value — not the value they're currently computing. You're always one step behind. The current evaluation is invisible. That's the speed limit. A leaf node — nothing to recurse into — commits instantly. That rate is C. The speed of light. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why nothing travels faster than light — you can't commit faster than a node with zero work to do.
 
-**The off-by-one** — you only ever read the last committed result. The current evaluation is invisible. That's the speed-of-information limit.
+**E=mc².** Look at the pseudocode again. Recursive evaluation has two legs it can't skip. The _call_ phase walks DOWN the graph — root to leaves. That's m hops at rate C. Then the _return_ phase walks back UP — leaves to root, delivering results. Another m hops at rate C. Down at C, up at C. m × C × C = mc². The c² isn't some magical physics constant. It's the two unavoidable legs of recursion.
 
-The important thing isn't this specific graph. It's that **all of these properties emerged from nothing more than recursive evaluation.** No special rules. No physics. Just: evaluate the graph. The properties ARE the evaluation.
+**Mass.** A region of the graph whose topology doesn't change. Same walk, same result, every time. A rock on a table keeps committing the same value because no new inputs are arriving. Stability. When that stability breaks — enough energy to rewire the edges — the delta propagates outward. That's released energy.
+
+And one more: **lazy evaluation.** If nothing demands a node's result, it stays unevaluated. It doesn't need to commit. It can sit there with multiple possible states, pending, until someone asks. That's quantum superposition — and we'll come back to it.
+
+No physics. No special rules. Just: evaluate the graph. And we got time (revision counter), a speed limit (off-by-one), E=mc² (two-leg recursion), mass (stable topology), and lazy evaluation (nodes that nobody asked for stay unevaluated). All from one function.
 
 // Qualitative caveat — manage expectations before going further.
 
@@ -171,7 +175,7 @@ Primes emerge from topology. Depths with irreducible structure produce primes. C
 The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept — everything else builds on it.
 
 @insight
-A recursive graph evaluation — with no stored values and no special rules — produces emergent properties that map directly onto physics: time (change), causality (evaluation order), gravity (stack depth), quantum mechanics (lazy evaluation), and the speed of information (off-by-one). None of these were designed in. They fell out of the recursive evaluation. The properties ARE the evaluation.
+One recursive function — no physics, no special rules — and we got time, a speed limit, E=mc², mass, and quantum superposition. None of these were designed in. They fell out of the evaluation. The engine walked the graph, and physics showed up uninvited.
 @/insight
 
 Five properties. No physics. No special rules. Just: evaluate the graph. But here's the thing — we're not the first people to build systems like this.
@@ -216,7 +220,7 @@ Same thing. Different notation. 110 years of research. Our map.
 
 **This IS spacetime.**
 
-Around here I realized something that took me embarrassingly long to see. I just invented another word for spacetime. Physicists have studied spacetime for 110 years. They call it a "fabric." They draw diagrams of it curving. But nobody — NOBODY — ever says what it IS. What is the fabric? What is the thing that curves? The question goes unanswered. I'm saying it's a graph. And if it's a graph, then 110 years of general relativity just became our instruction manual.
+Around here I realized something that took me embarrassingly long to see. This graph I'd been staring at — physicists already had a name for it. They call it spacetime. They've been studying it for 110 years. They call it a "fabric." They draw diagrams of it curving. But here's the question that never gets answered: what IS the fabric? What is the thing that curves? I'm saying it's a graph. And if I'm right — or even close — then 110 years of general relativity research just became our instruction manual. Reverse engineering might be cheating in the physics world, but in my world it's a mark of the trade.
 
 @technical-card: Core Axioms
 **A1 (Graph Structure):** Reality is a directed graph G = (N, E). Edges carry operations. **A3 (Lazy Evaluation):** No node evaluates until a consumer demands its result. **A4 (No Stored Values):** All values derived from topology alone — the structure IS the value. These three axioms, combined with recursive evaluation (A2), produce the emergent properties demonstrated in the demo.
@@ -230,7 +234,7 @@ Around here I realized something that took me embarrassingly long to see. I just
 The call stack of a recursive graph evaluation IS spacetime. The topology of stack depth IS spacetime curvature. Nobody ever said what spacetime IS — what the fabric is, what the thing that curves is. It's a graph. And 110 years of general relativity just became our instruction manual.
 @/insight
 
-If this is spacetime, then 110 years of general relativity just became our instruction manual. Let's open it.
+So what does GR actually tell us about our graph? It tells us this is a 3D graph. It tells us mass curves the routing table. It tells us paths follow cheapest routes. It tells us the speed of information has a hard cap. We didn't invent any of this — we're using 110 years of research as a map. But we ARE adding a few rules of our own: lazy evaluation, topology-as-value, and no stored state. Let's see where the map takes us.
 
 ---
 
@@ -242,14 +246,14 @@ If this is spacetime, then 110 years of general relativity just became our instr
 
 // ~350 words. Stable topology = mass. Disruption = energy. E=mc² from bidirectional walk. Antimatter = mirror graph.
 
-A massive object is a region of the graph whose topology is **stable** — edges don't change, same walk produces the same result every time. That's mass. A rock on a table isn't running a computation. It's a region of the graph that keeps evaluating to the same thing because no new inputs are arriving. Stability. Topology that holds.
+A massive object is a region of the graph whose topology is **stable** — edges don't change, same walk produces the same result every time. That's mass. A rock on a table IS part of the evaluation — but its topology hasn't changed, so it commits the same result every time. No change = same committed value = that's what mass is. Topology that holds.
 
 When that stability breaks — enough energy to rewire the edges — the evaluation produces a different result. The delta propagates outward through the graph. That outward propagation IS the released energy.
 
 @fig:mass-is-stable-topology
 Mass is a stable subgraph — same walk, same result. Energy is the delta that propagates when the topology changes.
 
-**E = mc²:** look at the pseudocode from the demo. Recursive evaluation has two phases and it can't avoid them. The _call_ phase walks down — the root calls its children, which call their children, all the way to the leaves. That's m hops at rate C. Then the _return_ phase walks back up — each child returns its result to its parent, all the way to the root. Another m hops at rate C. Every recursive evaluation does both. You can't have one without the other — you go down to get the answer, you come back up to deliver it. m × C × C = mc². The c² isn't magic — it's the two unavoidable phases of recursion.
+**E = mc²:** remember the two-leg walk from the demo? The _call_ phase walks down — root to leaves. That's m hops at rate C. The _return_ phase walks back up — leaves to root, delivering results. Another m hops at rate C. You can't have one without the other — you go down to get the answer, you come back up to deliver it. m × C × C = mc². The c² isn't magic — it's the two unavoidable phases of recursion.
 
 Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full evaluation propagates outward as energy.
 
@@ -311,13 +315,11 @@ Gravity is not a force. It is call stack pressure created by a deep subgraph. Pl
 
 ### Time, Space & the Speed of Light
 
-// ~400 words. Space = hop count. C = leaf commit rate. Time = change/commits. Time dilation. Arrow of time. GPS, muon.
+// ~500 words. Callbacks to Ch2 basics, then consequences: dilation, arrow of time, expansion.
+
+We already know time is the revision counter and C is the leaf commit rate. Now watch what happens near mass — and what happens to the graph as a whole.
 
 Space isn't a box things happen inside. It's the graph's shape — the large-scale pattern of connections. Distance is hop count. The minimum distance is one hop — one node. That's the Planck length: one pixel.
-
-**C = leaf commit rate.** The speed of light has nothing to do with light. A leaf node — nothing to recurse into — commits instantly. That rate is C. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why it travels at C.
-
-What would it look like if time stopped? Nothing changes. No node evaluates to a new state. Nothing commits. Time IS the amount of change in your local region. Each time a node commits a new result, that's one tick of local time — not because the graph is counting, but because change happened.
 
 @fig:time-is-revision-rate
 Time is the revision counter. Each commit is one tick. Near mass: deeper stack, slower commits, fewer ticks. That's time dilation.
@@ -334,12 +336,17 @@ Moving fast eats commits too — position edges being rewired costs evaluation s
 Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% of C, almost all evaluation steps go to motion. Their revision counter barely moves. Confirmed experimentally.
 @/physics-card
 
+**Why is the universe expanding?** Think of your family tree. It can grow — two people create a new person. You never ask "what is my family tree expanding into?" — growth is just a valid operation on a graph. Same here. The engine evaluates the graph. Some evaluations produce new nodes and edges. More graph = more evaluations = more new nodes. Growth proportional to size = accelerating expansion. No dark energy needed — the graph computes itself into existence.
+
+@fig:the-graph-grows-itself
+The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.
+
 @technical-card: Time and Space
-**D1 (Time):** Change. Each commit = one tick. No change = no time. **D13 (Gravitational Time Dilation):** Near mass → deeper stack → slower commits → fewer ticks. **D14 (Velocity Time Dilation):** Fast motion consumes evaluation steps → fewer internal revisions. At C, zero elapsed time. **D15 (Arrow of Time):** Each pass's output feeds the next. Dependency chain runs one direction. Cannot un-commit. **D24 (Space):** Large-scale graph connectivity. Distance = hop count. Planck length = 1 hop = 1 node.
+**D1 (Time):** Change. Each commit = one tick. No change = no time. **D13 (Gravitational Time Dilation):** Near mass → deeper stack → slower commits → fewer ticks. **D14 (Velocity Time Dilation):** Fast motion consumes evaluation steps → fewer internal revisions. At C, zero elapsed time. **D15 (Arrow of Time):** Each pass's output feeds the next. Dependency chain runs one direction. Cannot un-commit. **D24 (Space):** Large-scale graph connectivity. Distance = hop count. Planck length = 1 hop = 1 node. **D25 (Expansion):** Evaluations add nodes. Growth proportional to size = accelerating expansion.
 @/technical-card
 
 @insight
-Space is the graph's shape. Distance is hop count. Time is change. No change, no time. Near mass: deeper stack, slower commits, less change, less elapsed time. The arrow of time is a dependency chain — each walk's output feeds the next. The equations work backwards because they describe photographs, not the computation. The computation runs one direction. No undo.
+Space is the graph's shape. Distance is hop count. Time is change — near mass, deeper stacks mean slower commits and less elapsed time. The arrow points one direction because each walk feeds the next. And the universe expands because evaluation grows the graph — like a family tree, it doesn't expand "into" anything. It just grows.
 @/insight
 
 General relativity mapped. Every prediction checks out. But Einstein only described the large-scale structure. What about the small-scale weirdness?
@@ -359,7 +366,7 @@ Remember the demo — if nothing demands a node's result, it stays unevaluated. 
 @fig:pending-vs-committed
 Superposition is pending evaluation. Collapse is when a consumer demands a result. One path commits.
 
-Quantum mechanics is just lazy loading. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly.
+Quantum mechanics is just lazy loading. Think about that. The weirdest part of quantum mechanics — particles being in two places at once, interfering with themselves — is just "nobody asked yet." The graph hasn't been forced to commit. Both paths are genuinely alive in the dependency chain. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly.
 
 ---
 
@@ -386,7 +393,7 @@ Eraser OFF: the cascade hits "which-path erased." Both paths still pending. Inte
 
 Eraser ON: the cascade hits "which-path recorded." One path commits. Interference destroyed.
 
-There is no "after the fact." The path evaluation was still in flight through the dependency chain. The eraser's state at the time of the pull determines the outcome. It's like editing a spreadsheet formula before pressing Enter — the formula's state at cascade-time is what counts.
+There is no "after the fact." The path evaluation was still in flight through the dependency chain. The eraser's state at the time of the pull determines the outcome. No time travel. No retrocausality. No spooky anything. Just a dependency graph where the eraser sits upstream. It's the same thing as editing a spreadsheet cell before the formula recalculates — the formula doesn't care when you edited, it cares what the value is at cascade-time.
 
 **Why basketballs don't do this:** 10²⁶ atoms, every one a strict consumer demanding definite inputs. No pending evaluations survive. That's decoherence.
 
@@ -424,19 +431,6 @@ When two particles interact, their value subgraphs merge — they share a node. 
 Two particles, one shared node. Doesn't matter how far apart. When either side evaluates, the shared node commits once. Same value, both sides. No signal needed.
 
 Why not faster-than-light communication? The results are correlated but random. Neither observer learns anything useful until they compare notes at C. It's like two people opening envelopes from a pre-shuffled deck — the results are correlated by the deck, but neither person's opening tells the other anything until they call each other.
-
----
-
-## Everything Else
-
-// ~100 words. Expansion only — dark matter handled as physics card in gravity section.
-
-### Expansion
-
-The engine evaluates the graph. Some evaluations return values that add new nodes and edges. More graph = more evaluations = more new nodes. Growth proportional to size = accelerating expansion. No dark energy needed — the graph computes itself into existence.
-
-@fig:the-graph-grows-itself
-The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.
 
 ---
 
