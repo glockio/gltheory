@@ -1,0 +1,112 @@
+<!-- DESCRIPTION: Three panels. LEFT: idle subgraph with pending position edges (purple dotted) and pending momentum structure (orange dotted). MIDDLE: position detector connected — position edges commit (green solid), momentum edges disrupted (red "?"). RIGHT: annotation explaining why both can't be committed simultaneously. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="340" fill="#faf8f3" rx="4"/>
+
+  <!-- Dividers -->
+  <line x1="300" y1="30" x2="300" y2="300" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="600" y1="30" x2="600" y2="300" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- === PANEL 1: IDLE — BOTH PENDING === -->
+  <text x="150" y="28" text-anchor="middle" font-size="12" fill="#7d3c98" font-weight="700" letter-spacing="1">BEFORE MEASUREMENT</text>
+
+  <!-- Central particle node -->
+  <circle cx="150" cy="130" r="22" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="150" y="136" text-anchor="middle" font-size="14" fill="#7d3c98" font-weight="700">P</text>
+
+  <!-- Position edges (purple dotted) — fan out to positions -->
+  <circle cx="70" cy="70" r="12" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="70" y="74" text-anchor="middle" font-size="9" fill="#7d3c98">x₁</text>
+  <line x1="133" y1="116" x2="82" y2="78" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <circle cx="230" cy="70" r="12" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="230" y="74" text-anchor="middle" font-size="9" fill="#7d3c98">x₂</text>
+  <line x1="167" y1="116" x2="218" y2="78" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <circle cx="80" cy="195" r="12" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="80" y="199" text-anchor="middle" font-size="9" fill="#7d3c98">x₃</text>
+  <line x1="134" y1="145" x2="92" y2="188" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Momentum structure (orange dotted) — separate edges -->
+  <circle cx="220" cy="200" r="12" fill="#fff8f2" stroke="#d35400" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="220" y="204" text-anchor="middle" font-size="9" fill="#d35400">Δx</text>
+  <line x1="166" y1="145" x2="210" y2="192" stroke="#d35400" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <circle cx="150" cy="230" r="12" fill="#fff8f2" stroke="#d35400" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="150" y="234" text-anchor="middle" font-size="9" fill="#d35400">Δt</text>
+  <line x1="150" y1="152" x2="150" y2="218" stroke="#d35400" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Legend -->
+  <line x1="50" y1="268" x2="80" y2="268" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="86" y="272" font-size="10" fill="#7d3c98">Position (pending)</text>
+  <line x1="50" y1="288" x2="80" y2="288" stroke="#d35400" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="86" y="292" font-size="10" fill="#d35400">Momentum (pending)</text>
+
+  <!-- === PANEL 2: POSITION MEASURED === -->
+  <text x="450" y="28" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="700" letter-spacing="1">POSITION MEASURED</text>
+
+  <!-- Central particle node — committed -->
+  <circle cx="450" cy="130" r="22" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="450" y="136" text-anchor="middle" font-size="14" fill="#1e8449" font-weight="700">P</text>
+
+  <!-- Position edges — ONE committed (green solid) -->
+  <circle cx="370" cy="70" r="12" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <text x="370" y="74" text-anchor="middle" font-size="9" fill="#1e8449" font-weight="600">x₁</text>
+  <line x1="434" y1="116" x2="382" y2="78" stroke="#1e8449" stroke-width="2.5"/>
+
+  <!-- Others faded -->
+  <circle cx="530" cy="70" r="12" fill="#f5f2eb" stroke="#ccc" stroke-width="1"/>
+  <text x="530" y="74" text-anchor="middle" font-size="9" fill="#ccc">x₂</text>
+  <line x1="467" y1="116" x2="518" y2="78" stroke="#ccc" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <circle cx="380" cy="195" r="12" fill="#f5f2eb" stroke="#ccc" stroke-width="1"/>
+  <text x="380" y="199" text-anchor="middle" font-size="9" fill="#ccc">x₃</text>
+  <line x1="434" y1="145" x2="392" y2="188" stroke="#ccc" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Momentum structure — DISRUPTED (red) -->
+  <circle cx="520" cy="200" r="12" fill="#fdf0ef" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="520" y="204" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">?</text>
+  <line x1="466" y1="145" x2="510" y2="192" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <circle cx="450" cy="230" r="12" fill="#fdf0ef" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="450" y="234" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="700">?</text>
+  <line x1="450" y1="152" x2="450" y2="218" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Detector -->
+  <circle cx="320" cy="50" r="16" fill="#1e8449" stroke="#145a32" stroke-width="2"/>
+  <text x="320" y="54" text-anchor="middle" font-size="8" fill="white" font-weight="700">DET</text>
+  <line x1="332" y1="60" x2="362" y2="66" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- Legend -->
+  <line x1="350" y1="268" x2="380" y2="268" stroke="#1e8449" stroke-width="2"/>
+  <text x="386" y="272" font-size="10" fill="#1e8449">Position committed</text>
+  <line x1="350" y1="288" x2="380" y2="288" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="386" y="292" font-size="10" fill="#c0392b">Momentum disrupted</text>
+
+  <!-- === PANEL 3: EXPLANATION === -->
+  <text x="750" y="28" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="700" letter-spacing="1">WHY NOT BOTH?</text>
+
+  <rect x="630" y="50" width="240" height="240" rx="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" opacity="0.5"/>
+
+  <text x="750" y="80" text-anchor="middle" font-size="11" fill="#2a2a2a" font-weight="600">Measuring position</text>
+  <text x="750" y="96" text-anchor="middle" font-size="11" fill="#2a2a2a">= connecting a consumer</text>
+  <text x="750" y="112" text-anchor="middle" font-size="11" fill="#2a2a2a">= adding new edges</text>
+
+  <text x="750" y="142" text-anchor="middle" font-size="18" fill="#7d3c98">↓</text>
+
+  <text x="750" y="166" text-anchor="middle" font-size="11" fill="#2a2a2a" font-weight="600">New edges rewire</text>
+  <text x="750" y="182" text-anchor="middle" font-size="11" fill="#2a2a2a">the topology</text>
+
+  <text x="750" y="212" text-anchor="middle" font-size="18" fill="#7d3c98">↓</text>
+
+  <text x="750" y="236" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="600">Momentum depends</text>
+  <text x="750" y="252" text-anchor="middle" font-size="11" fill="#c0392b">on the topology</text>
+  <text x="750" y="268" text-anchor="middle" font-size="11" fill="#c0392b">you just changed</text>
+
+  <!-- Bottom label -->
+  <text x="450" y="328" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">Demanding one property structurally alters what the other depends on.</text>
+</svg>

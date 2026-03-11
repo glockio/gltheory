@@ -1,0 +1,89 @@
+<!-- DESCRIPTION: Two panels. LEFT: idle subgraph from idle-subgraph figure — all pending, no consumer. RIGHT: consumer node (green, "DETECTOR") connected. Cascade path highlighted green through the subgraph. One path commits (solid green). Others fade to gray. Labels: "Before: idle" / "Consumer connected. One path commits." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="360" fill="#faf8f3" rx="4"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="30" x2="400" y2="310" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- === LEFT PANEL: IDLE === -->
+  <text x="190" y="30" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700" letter-spacing="1.5">BEFORE</text>
+
+  <!-- Idle subgraph boundary -->
+  <rect x="90" y="50" width="210" height="190" rx="14" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Node 1 (top) -->
+  <circle cx="195" cy="85" r="18" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="195" y="91" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">?</text>
+
+  <!-- Node 2 (left) -->
+  <circle cx="130" cy="155" r="18" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="130" y="161" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">?</text>
+
+  <!-- Node 3 (right) -->
+  <circle cx="260" cy="155" r="18" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="260" y="161" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">?</text>
+
+  <!-- Node 4 (bottom) -->
+  <circle cx="195" cy="210" r="18" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="195" y="216" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">?</text>
+
+  <!-- Pending edges -->
+  <line x1="182" y1="99" x2="143" y2="141" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="208" y1="99" x2="247" y2="141" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="144" y1="168" x2="182" y2="197" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="246" y1="168" x2="208" y2="197" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <line x1="148" y1="155" x2="242" y2="155" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <text x="195" y="270" text-anchor="middle" font-size="12" fill="#7d3c98" font-weight="600">All paths pending. No consumer.</text>
+
+  <!-- === RIGHT PANEL: CASCADE === -->
+  <text x="600" y="30" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700" letter-spacing="1.5">AFTER</text>
+
+  <!-- Node 1 (top) — committed -->
+  <circle cx="590" cy="85" r="18" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">3</text>
+
+  <!-- Node 2 (left) — committed (chosen path) -->
+  <circle cx="525" cy="155" r="18" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="525" y="161" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">1</text>
+
+  <!-- Node 3 (right) — faded (not chosen) -->
+  <circle cx="655" cy="155" r="18" fill="#f5f2eb" stroke="#bbb" stroke-width="1.5"/>
+  <text x="655" y="161" text-anchor="middle" font-size="13" fill="#bbb" font-weight="600">—</text>
+
+  <!-- Node 4 (bottom) — committed -->
+  <circle cx="590" cy="210" r="18" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="590" y="216" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">2</text>
+
+  <!-- Committed edge: top → left (chosen) -->
+  <line x1="577" y1="99" x2="538" y2="141" stroke="#1e8449" stroke-width="2.5"/>
+  <!-- Faded edge: top → right -->
+  <line x1="603" y1="99" x2="642" y2="141" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Committed edge: left → bottom -->
+  <line x1="538" y1="168" x2="577" y2="197" stroke="#1e8449" stroke-width="2.5"/>
+  <!-- Faded edge: right → bottom -->
+  <line x1="642" y1="168" x2="603" y2="197" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Faded edge: left ↔ right -->
+  <line x1="543" y1="155" x2="637" y2="155" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Detector node -->
+  <circle cx="590" cy="295" r="22" fill="#1e8449" stroke="#145a32" stroke-width="2"/>
+  <text x="590" y="300" text-anchor="middle" font-size="10" fill="white" font-weight="700">DETECTOR</text>
+
+  <!-- Cascade arrow from detector to bottom node -->
+  <line x1="590" y1="273" x2="590" y2="232" stroke="#1e8449" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Green cascade arrow markers -->
+  <defs>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="340" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="600">Consumer connects. One path commits. The rest fade.</text>
+</svg>

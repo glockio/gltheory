@@ -1,102 +1,109 @@
 <!-- DESCRIPTION: One subgraph of depth m shown with two sets of arrows. Blue arrows going DOWN from root to leaves labeled "DOWN LEG — m hops at rate C." Orange arrows going UP from leaves to root labeled "UP LEG — m hops at rate C." Below: equation "E = m x C (down) x C (up) = mc^2." Caption note: "Same rate. Two independent directions. The graph is symmetric. No preferred direction. That's why c^2 appears." -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" font-family="DM Sans, sans-serif">
-  <rect width="700" height="400" fill="white" fill-opacity="0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="DM Sans, sans-serif">
 
   <defs>
-    <marker id="bd-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#2471a3" stroke="none"/>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7" fill="#2471a3" stroke="none"/>
     </marker>
-    <marker id="bd-orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#d35400" stroke="none"/>
+    <marker id="arr-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L10,3.5 L0,7" fill="#d35400" stroke="none"/>
     </marker>
   </defs>
 
-  <!-- SUBGRAPH -->
-  <!-- Root (depth 0) -->
-  <circle cx="350" cy="45" r="14" fill="white" stroke="#1a1a1a" stroke-width="2.5"/>
-  <text x="350" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a1a">root</text>
+  <!-- ===== PANEL 1: CALL PHASE (DOWN) ===== -->
+  <text x="175" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#2471a3" letter-spacing="1.5">1. CALL PHASE</text>
+  <text x="175" y="48" text-anchor="middle" font-size="11" fill="#2471a3">root → leaves</text>
 
-  <!-- Depth 1 -->
-  <circle cx="230" cy="105" r="11" fill="white" stroke="#1a1a1a" stroke-width="2"/>
-  <circle cx="470" cy="105" r="11" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <!-- Vertical chain of nodes -->
+  <circle cx="175" cy="80" r="16" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="175" y="85" text-anchor="middle" font-size="10" font-weight="600" fill="#2471a3">root</text>
 
-  <!-- Depth 2 -->
-  <circle cx="170" cy="165" r="10" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
-  <circle cx="290" cy="165" r="10" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
-  <circle cx="410" cy="165" r="10" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
-  <circle cx="530" cy="165" r="10" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+  <circle cx="175" cy="150" r="13" fill="#eef6fb" stroke="#2471a3" stroke-width="2"/>
 
-  <!-- Depth 3 (leaves) -->
-  <circle cx="145" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="195" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="265" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="315" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="385" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="435" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="505" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
-  <circle cx="555" cy="225" r="8" fill="white" stroke="#7a7a6a" stroke-width="1.5"/>
+  <circle cx="175" cy="220" r="13" fill="#eef6fb" stroke="#2471a3" stroke-width="2"/>
 
-  <!-- BLUE ARROWS DOWN (left side of edges) -->
-  <!-- root → depth1 -->
-  <line x1="340" y1="57" x2="238" y2="95" stroke="#2471a3" stroke-width="1.8" marker-end="url(#bd-blue)"/>
-  <line x1="360" y1="57" x2="462" y2="95" stroke="#2471a3" stroke-width="1.8" marker-end="url(#bd-blue)"/>
-  <!-- depth1 → depth2 -->
-  <line x1="222" y1="115" x2="178" y2="155" stroke="#2471a3" stroke-width="1.5" marker-end="url(#bd-blue)"/>
-  <line x1="238" y1="115" x2="283" y2="155" stroke="#2471a3" stroke-width="1.5" marker-end="url(#bd-blue)"/>
-  <line x1="462" y1="115" x2="418" y2="155" stroke="#2471a3" stroke-width="1.5" marker-end="url(#bd-blue)"/>
-  <line x1="478" y1="115" x2="523" y2="155" stroke="#2471a3" stroke-width="1.5" marker-end="url(#bd-blue)"/>
-  <!-- depth2 → leaves -->
-  <line x1="163" y1="174" x2="150" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="177" y1="174" x2="190" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="283" y1="174" x2="270" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="297" y1="174" x2="310" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="403" y1="174" x2="390" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="417" y1="174" x2="430" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="523" y1="174" x2="510" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
-  <line x1="537" y1="174" x2="550" y2="217" stroke="#2471a3" stroke-width="1.3" marker-end="url(#bd-blue)"/>
+  <circle cx="175" cy="290" r="12" fill="#eef6fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="175" y="295" text-anchor="middle" font-size="9" font-weight="600" fill="#2471a3">leaf</text>
 
-  <!-- DOWN LEG label (left side) -->
-  <text x="58" y="90" font-size="12" font-weight="bold" fill="#2471a3">DOWN LEG</text>
-  <text x="58" y="108" font-size="10" fill="#2471a3">m hops</text>
-  <text x="58" y="123" font-size="10" fill="#2471a3">at rate C</text>
-  <!-- Down arrow indicator -->
-  <line x1="85" y1="62" x2="85" y2="80" stroke="#2471a3" stroke-width="2" marker-end="url(#bd-blue)"/>
+  <!-- Blue arrows going DOWN -->
+  <line x1="175" y1="96" x2="175" y2="135" stroke="#2471a3" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+  <line x1="175" y1="163" x2="175" y2="205" stroke="#2471a3" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+  <line x1="175" y1="233" x2="175" y2="276" stroke="#2471a3" stroke-width="2.5" marker-end="url(#arr-blue)"/>
 
-  <!-- UP LEG label (right side) -->
-  <text x="612" y="175" font-size="12" font-weight="bold" fill="#d35400">UP LEG</text>
-  <text x="612" y="193" font-size="10" fill="#d35400">m hops</text>
-  <text x="612" y="208" font-size="10" fill="#d35400">at rate C</text>
-  <!-- Up arrow indicator -->
-  <line x1="638" y1="230" x2="638" y2="165" stroke="#d35400" stroke-width="2" marker-end="url(#bd-orange)"/>
+  <!-- "m hops" brace on left -->
+  <line x1="120" y1="80" x2="120" y2="290" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="116" y1="80" x2="124" y2="80" stroke="#7a7a6a" stroke-width="1"/>
+  <line x1="116" y1="290" x2="124" y2="290" stroke="#7a7a6a" stroke-width="1"/>
+  <text x="108" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a" font-style="italic">m</text>
+  <text x="108" y="206" text-anchor="middle" font-size="9" fill="#7a7a6a">hops</text>
 
-  <!-- Depth labels on right side -->
-  <text x="580" y="49" font-size="8" fill="#7a7a6a">depth 0</text>
-  <text x="580" y="109" font-size="8" fill="#7a7a6a">depth 1</text>
-  <text x="580" y="169" font-size="8" fill="#7a7a6a">depth 2</text>
-  <text x="580" y="229" font-size="8" fill="#7a7a6a">depth 3</text>
+  <!-- Rate label on right -->
+  <text x="220" y="170" font-size="11" font-weight="600" fill="#2471a3">at rate C</text>
 
-  <!-- Brace for m on left -->
-  <line x1="120" y1="45" x2="120" y2="225" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="3,3"/>
-  <text x="110" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a" font-style="italic">m</text>
+  <!-- Dots between nodes to suggest more depth -->
+  <circle cx="143" cy="148" r="2" fill="#7a7a6a" opacity="0.4"/>
+  <circle cx="207" cy="148" r="2" fill="#7a7a6a" opacity="0.4"/>
+  <circle cx="143" cy="218" r="2" fill="#7a7a6a" opacity="0.4"/>
+  <circle cx="207" cy="218" r="2" fill="#7a7a6a" opacity="0.4"/>
 
-  <!-- Separator line -->
-  <line x1="80" y1="260" x2="620" y2="260" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+  <!-- ===== PANEL 2: RETURN PHASE (UP) ===== -->
+  <text x="525" y="30" text-anchor="middle" font-size="13" font-weight="700" fill="#d35400" letter-spacing="1.5">2. RETURN PHASE</text>
+  <text x="525" y="48" text-anchor="middle" font-size="11" fill="#d35400">leaves → root</text>
 
-  <!-- EQUATION -->
-  <text x="350" y="292" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">E = m</text>
-  <text x="408" y="292" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e"> </text>
-  <text x="350" y="292" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">
-    <tspan fill="#1a1a2e">E  =  m </tspan>
-    <tspan fill="#2471a3"> x  C</tspan>
-    <tspan fill="#7a7a6a" font-size="11" baseline-shift="sub">down</tspan>
-    <tspan fill="#d35400">  x  C</tspan>
-    <tspan fill="#7a7a6a" font-size="11" baseline-shift="sub">up</tspan>
-    <tspan fill="#1a1a2e">  =  mc</tspan>
-    <tspan fill="#1a1a2e" font-size="13" baseline-shift="super">2</tspan>
+  <!-- Vertical chain of nodes -->
+  <circle cx="525" cy="80" r="16" fill="#fff8f2" stroke="#d35400" stroke-width="2.5"/>
+  <text x="525" y="85" text-anchor="middle" font-size="10" font-weight="600" fill="#d35400">root</text>
+
+  <circle cx="525" cy="150" r="13" fill="#fff8f2" stroke="#d35400" stroke-width="2"/>
+
+  <circle cx="525" cy="220" r="13" fill="#fff8f2" stroke="#d35400" stroke-width="2"/>
+
+  <circle cx="525" cy="290" r="12" fill="#fff8f2" stroke="#d35400" stroke-width="2"/>
+  <text x="525" y="295" text-anchor="middle" font-size="9" font-weight="600" fill="#d35400">leaf</text>
+
+  <!-- Orange arrows going UP -->
+  <line x1="525" y1="278" x2="525" y2="235" stroke="#d35400" stroke-width="2.5" marker-end="url(#arr-orange)"/>
+  <line x1="525" y1="207" x2="525" y2="165" stroke="#d35400" stroke-width="2.5" marker-end="url(#arr-orange)"/>
+  <line x1="525" y1="137" x2="525" y2="98" stroke="#d35400" stroke-width="2.5" marker-end="url(#arr-orange)"/>
+
+  <!-- "m hops" brace on right -->
+  <line x1="580" y1="80" x2="580" y2="290" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="576" y1="80" x2="584" y2="80" stroke="#7a7a6a" stroke-width="1"/>
+  <line x1="576" y1="290" x2="584" y2="290" stroke="#7a7a6a" stroke-width="1"/>
+  <text x="594" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a" font-style="italic">m</text>
+  <text x="594" y="206" text-anchor="middle" font-size="9" fill="#7a7a6a">hops</text>
+
+  <!-- Rate label on left -->
+  <text x="462" y="170" font-size="11" font-weight="600" fill="#d35400">at rate C</text>
+
+  <!-- Dots between nodes to suggest more depth -->
+  <circle cx="493" cy="148" r="2" fill="#7a7a6a" opacity="0.4"/>
+  <circle cx="557" cy="148" r="2" fill="#7a7a6a" opacity="0.4"/>
+  <circle cx="493" cy="218" r="2" fill="#7a7a6a" opacity="0.4"/>
+  <circle cx="557" cy="218" r="2" fill="#7a7a6a" opacity="0.4"/>
+
+  <!-- ===== CENTER DIVIDER ===== -->
+  <line x1="350" y1="55" x2="350" y2="310" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ===== PLUS SIGN between panels ===== -->
+  <rect x="335" y="165" width="30" height="30" rx="15" fill="#f5f2eb" stroke="#d5d0c0" stroke-width="1"/>
+  <text x="350" y="186" text-anchor="middle" font-size="18" font-weight="700" fill="#7a7a6a">+</text>
+
+  <!-- ===== BOTTOM: EQUATION ===== -->
+  <line x1="80" y1="330" x2="620" y2="330" stroke="#d5d0c0" stroke-width="1"/>
+
+  <text x="350" y="370" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">
+    <tspan>E  =  m  </tspan>
+    <tspan fill="#2471a3">&times;  C</tspan>
+    <tspan fill="#7a7a6a" font-size="11" dy="4">down</tspan>
+    <tspan dy="-4">  </tspan>
+    <tspan fill="#d35400">&times;  C</tspan>
+    <tspan fill="#7a7a6a" font-size="11" dy="4">up</tspan>
+    <tspan dy="-4">  </tspan>
+    <tspan fill="#1a1a2e">=  mc</tspan>
+    <tspan font-size="14" dy="-8">2</tspan>
   </text>
 
-  <!-- Caption -->
-  <text x="350" y="335" text-anchor="middle" font-size="11" fill="#7a7a6a">Same rate. Two independent directions.</text>
-  <text x="350" y="352" text-anchor="middle" font-size="11" fill="#7a7a6a">The graph is symmetric. No preferred direction.</text>
-  <text x="350" y="375" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a1a2e">That's why c<tspan font-size="8" baseline-shift="super">2</tspan> appears.</text>
+  <text x="350" y="405" text-anchor="middle" font-size="12" font-weight="600" fill="#7a7a6a">Two unavoidable legs. Same rate. That's why c<tspan font-size="8" dy="-5">2</tspan><tspan dy="5"> appears.</tspan></text>
+
 </svg>

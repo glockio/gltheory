@@ -1,0 +1,77 @@
+<!-- DESCRIPTION: Two panels. LEFT "BEFORE": Particles A and B with separate value subgraphs (A-val, B-val). Independent. RIGHT "AFTER INTERACTION": A-val and B-val merged into single shared node (SH, gold border). Both A and B point to SH. Label: "Interaction merges value subgraphs. One shared node. Correlation is structural." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="#faf8f3" rx="4"/>
+
+  <!-- Divider -->
+  <line x1="400" y1="30" x2="400" y2="270" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- === LEFT PANEL: BEFORE === -->
+  <text x="200" y="28" text-anchor="middle" font-size="13" fill="#2471a3" font-weight="700" letter-spacing="1.5">BEFORE INTERACTION</text>
+
+  <!-- Particle A -->
+  <circle cx="120" cy="100" r="24" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="120" y="106" text-anchor="middle" font-size="15" fill="#2471a3" font-weight="700">A</text>
+
+  <!-- A's value subgraph -->
+  <circle cx="120" cy="190" r="14" fill="#eef6fb" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="120" y="195" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="600">A-val</text>
+  <line x1="120" y1="124" x2="120" y2="176" stroke="#2471a3" stroke-width="1.5"/>
+
+  <!-- Particle B -->
+  <circle cx="280" cy="100" r="24" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="280" y="106" text-anchor="middle" font-size="15" fill="#2471a3" font-weight="700">B</text>
+
+  <!-- B's value subgraph -->
+  <circle cx="280" cy="190" r="14" fill="#eef6fb" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="280" y="195" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="600">B-val</text>
+  <line x1="280" y1="124" x2="280" y2="176" stroke="#2471a3" stroke-width="1.5"/>
+
+  <!-- Independent label -->
+  <text x="200" y="244" text-anchor="middle" font-size="12" fill="#7a7a6a">Separate value subgraphs.</text>
+  <text x="200" y="260" text-anchor="middle" font-size="12" fill="#7a7a6a">Independent. No correlation.</text>
+
+  <!-- === RIGHT PANEL: AFTER === -->
+  <text x="600" y="28" text-anchor="middle" font-size="13" fill="#d4a017" font-weight="700" letter-spacing="1.5">AFTER INTERACTION</text>
+
+  <!-- Particle A -->
+  <circle cx="510" cy="100" r="24" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="510" y="106" text-anchor="middle" font-size="15" fill="#2471a3" font-weight="700">A</text>
+
+  <!-- Particle B -->
+  <circle cx="690" cy="100" r="24" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="690" y="106" text-anchor="middle" font-size="15" fill="#2471a3" font-weight="700">B</text>
+
+  <!-- Interaction spark -->
+  <text x="600" y="90" text-anchor="middle" font-size="22" fill="#d4a017">⚡</text>
+
+  <!-- Shared node (gold border, center-bottom) -->
+  <circle cx="600" cy="200" r="20" fill="#faf6e8" stroke="#d4a017" stroke-width="3"/>
+  <text x="600" y="206" text-anchor="middle" font-size="13" fill="#d4a017" font-weight="700">SH</text>
+
+  <!-- Value edges from both A and B to shared node -->
+  <line x1="522" y1="120" x2="586" y2="186" stroke="#d35400" stroke-width="2"/>
+  <line x1="678" y1="120" x2="614" y2="186" stroke="#d35400" stroke-width="2"/>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#d35400"/>
+    </marker>
+  </defs>
+
+  <!-- Labels on edges -->
+  <text x="540" y="168" text-anchor="middle" font-size="10" fill="#d35400" transform="rotate(-35, 540, 168)">value edge</text>
+  <text x="660" y="168" text-anchor="middle" font-size="10" fill="#d35400" transform="rotate(35, 660, 168)">value edge</text>
+
+  <!-- Bottom label -->
+  <text x="600" y="252" text-anchor="middle" font-size="12" fill="#d4a017" font-weight="600">Value subgraphs merged. One shared node.</text>
+  <text x="600" y="268" text-anchor="middle" font-size="12" fill="#7a7a6a">Correlation is structural — baked into topology.</text>
+
+  <!-- Bottom spanning label -->
+  <text x="400" y="305" text-anchor="middle" font-size="14" fill="#1a1a1a" font-weight="700">Interaction merges value subgraphs. Correlation is structural.</text>
+</svg>

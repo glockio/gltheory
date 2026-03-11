@@ -355,50 +355,136 @@ General relativity mapped. Every prediction checks out. But Einstein only descri
 
 ## PART 3: Quantum Mechanics, Translated
 
-// Same pattern: mystery → graph explanation → "oh."
+// New structure: Mystery → Idle Node (superposition) → Measurement/Heisenberg → Entanglement (centerpiece) → Double-Slit → Eraser/Delayed Choice → Cards & Insight
 
-### Superposition & Collapse
+@mystery
+Three things that shouldn't be possible:
 
-// ~300 words.
+**1.** Looking at something changes it. Not bumping it, not touching it — looking. The act of measurement alters the result.
 
-Remember the demo — if nothing demands a node's result, it stays unevaluated. Being "somewhere" means having committed position edges to specific neighbors. Not having a definite position — pending edges to multiple neighbors — is superposition. A particle in flight with no **strict consumer** — anything that demands a definite answer right now, like a detector, a screen, your eyeball — stays pending. Both paths through both slits: pending. Neither committed.
+**2.** Two particles, separated by the width of the universe, give correlated answers the instant either is measured. No signal between them. Instantaneous.
 
-@fig:pending-vs-committed
-Superposition is pending evaluation. Collapse is when a consumer demands a result. One path commits.
+**3.** A particle hits a screen. The dot is recorded. AFTER that, you erase some information about the experiment. The interference pattern comes back — in data that was already collected. Erasing information after the fact changed a result that already happened.
 
-Quantum mechanics is just lazy loading. Think about that. The weirdest part of quantum mechanics — particles being in two places at once, interfering with themselves — is just "nobody asked yet." The graph hasn't been forced to commit. Both paths are genuinely alive in the dependency chain. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly.
+These are real. Every one confirmed experimentally, repeatedly, for decades. Standard physics says shut up and calculate. Let's do better.
+@/mystery
+
+### The Idle Node
+
+Remember lazy evaluation from the demo? No consumer = no evaluation. Now zoom in. Picture a small subgraph — four or five nodes connected by edges. It's sitting in a quiet corner of the graph. No path connects it to any consumer. No detector. No screen. No eyeball. Just nodes, floating there. Idle.
+
+@fig:idle-subgraph
+An isolated subgraph. No consumer connected. All edges pending. All nodes uncommitted. The surrounding committed graph (green) doesn't reach it. This is superposition.
+
+What would it mean for one of those nodes to "be somewhere"? Being somewhere means having committed position edges to specific neighbors. Definite position = definite edges. But this subgraph has no consumer demanding answers. So it hasn't committed. It has pending edges to MULTIPLE positions. Not because physics is weird — because nobody asked.
+
+THIS is superposition. Not a particle magically in two places at once. A graph with no reader. An idle subgraph with uncommitted edges. There is nothing mysterious about it. It's the same thing as a spreadsheet cell whose formula hasn't recalculated yet because nothing downstream needs the result.
+
+Now connect a consumer. A detector. A screen. Something that demands: "What is your value?" That demand cascades into the idle subgraph. The nodes MUST commit. One path is chosen. The others disappear. That's collapse. Not a mystical transition — a lazy thunk being forced.
+
+@fig:consumer-forces-cascade
+LEFT: the idle subgraph from before — all pending, no consumer. RIGHT: a detector connects. The demand cascades in. One path commits (green, solid). The rest fade. That's measurement.
+
+Small, isolated things — no consumers nearby — stay pending. Both paths alive. That's why quantum effects appear at tiny scales. Large things — 10²⁶ atoms, every one a **strict consumer** (anything that demands a definite answer right now: a detector, a screen, your eyeball) demanding definite inputs from its neighbors — everything commits instantly. No pending evaluations survive the crowd. That's decoherence.
 
 ---
 
-### Double-Slit & Quantum Eraser
+### Why You Can't Just Look
+
+Measurement means inserting a consumer into the graph. Simple enough. But here's the catch: connecting a consumer CHANGES THE TOPOLOGY. You've added edges. You've altered the dependency structure. The graph before measurement and the graph after measurement are different graphs.
+
+You cannot observe without participating. Not because of some mystical observer effect — because inserting a node into a dependency graph changes the dependency graph. That's not philosophy. That's data structures.
+
+@fig:measurement-changes-topology
+LEFT: idle subgraph with pending position edges (purple, dotted) and pending momentum structure (orange, dotted). MIDDLE: position detector connects — position edges commit (green), momentum edges disrupted (red). RIGHT: you can't demand both without one demand disrupting the other.
+
+This is Heisenberg's uncertainty principle. Position and momentum are both derived from graph topology. Position is about WHICH edges connect WHERE. Momentum is about HOW the topology is changing over time — edge rewiring rates. Measuring position requires a consumer that demands position edges. That consumer's presence rewires the topology — which is exactly the thing momentum depends on. You can't demand both because demanding one structurally alters what the other depends on.
+
+Not an instrument limitation. Not "we need better equipment." A topological constraint. You can't read a variable and its rate of change from a single snapshot of a graph that your measurement just rewired.
+
+---
+
+### Entanglement
+
+// THE CENTERPIECE. ~450 words. Three figures. This is the section Greg wants to shine.
+
+When two particles interact — collide, get created together, exchange energy — their value subgraphs merge. They end up sharing a node. Think of two spreadsheet cells that both reference the same formula cell. Change the formula, both cells update. That's not magic. That's a shared dependency.
+
+@fig:entanglement-forms
+LEFT — BEFORE: particles A and B with separate, independent value subgraphs. RIGHT — AFTER INTERACTION: their value subgraphs have merged into a single shared node (SH). Both A and B point to SH. Interaction merges value subgraphs. Correlation is structural.
+
+Now the particles separate. They fly to opposite ends of the universe. Position edges rewire — A is HERE, B is THERE, enormous distance between them. But here's the thing: value edges and position edges are **different parts of the graph**. The shared value node doesn't move. It doesn't care about position. It's still shared. Still pending. Nobody asked for its value yet.
+
+@fig:entangled-separated
+A on the far left, B on the far right. Long dashed gray position path between them (many hops — enormous distance). But both A and B have direct value edges going to the shared node SH (center-bottom). Position edges: gray, dashed — rewired when particles move. Value edges: orange, solid — unchanged by movement. SH is still purple/pending. Nobody asked.
+
+Someone measures particle A. A detector connects. The demand cascades: detector → A → shared node SH. SH must commit. It produces result R. Done.
+
+Now someone measures particle B. Could be a millisecond later. Could be a year. Could be simultaneously. The demand cascades: detector → B → shared node SH. But SH already committed. It already chose R. B reads R. Same result. Correlated.
+
+@fig:entanglement-cascade
+The full cascade. (1) Detector connects to A. (2) Green cascade: detector → A → SH. SH commits, shows "R". (3) Detector connects to B. (4) Orange cascade: detector → B → SH (already committed). B reads R. No signal between A and B. SH committed once. Both read the same answer.
+
+No signal traveled between A and B. Nothing moved faster than light. The correlation was baked into the topology the moment they interacted. It was sitting there, waiting for someone to ask. The first measurement didn't CAUSE the second result. Both results were caused by the shared node — which committed once, for both.
+
+Why can't you use this for faster-than-light communication? Because the results are correlated but individually random. When A measures, it gets R — but R is random. A can't choose R. B gets R too — but without knowing A's result, it just looks random. Comparing notes still requires a classical signal at speed C. It's like two people opening sealed envelopes from the same pre-shuffled deck — the cards match, but neither person controls which card they got, and they can't learn anything useful until they call each other.
+
+---
+
+### The Double-Slit
 
 @mystery
-Double-slit: fire particles one at a time at two slits. An interference pattern appears — as if each particle went through both. Add a detector at one slit: pattern vanishes. Looking at it changed the result.
-
-Quantum eraser: run the experiment WITH a detector. After the particle hits the screen and its dot is already recorded, erase the detector's which-path info. Sort the results. The interference pattern comes BACK. The dot is already on the screen. How can erasing information after the fact change a result that's already been recorded?
+Fire particles one at a time at two slits. An interference pattern appears — as if each particle went through both. Add a detector at one slit: the pattern vanishes. Looking at it changed the result.
 @/mystery
 
-**The double-slit in four steps:** (1) No consumer — both paths pending. (2) Engine evaluates all pending paths without committing. (3) Pending paths overlap at the screen — bright bands where they align, dark where they cancel. (4) Screen's 10²⁶ atoms force commitment — one dot. Over thousands of particles: the interference bands fill in.
+You already know everything you need for this one.
 
-**A detector ruins it** because it demands "which slit?" — forces one path to commit. Only one path to the screen. No overlap. No pattern.
+**Step 1:** No consumer at the slits. Both paths through slit A and slit B are pending. The particle's path is an idle subgraph — nobody asked which slit.
+
+**Step 2:** The engine evaluates all pending paths without committing. Both paths are alive in the dependency chain.
+
+**Step 3:** Pending paths overlap at the screen — bright bands where they align, dark bands where they cancel. Interference.
+
+**Step 4:** The screen's 10²⁶ atoms force commitment. One dot. Over thousands of particles, the interference bands fill in.
 
 @fig:double-slit-as-graph
 The double-slit experiment as a dependency graph. Pending edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
 
-### Why the Quantum Eraser Isn't Time Travel
+**A detector ruins it** because it's a consumer. It demands "which slit?" — forces one path to commit. Only one path reaches the screen. No overlap. No interference. You didn't disturb the particle. You changed the graph.
 
-The eraser is **upstream in the dependency chain**. When the screen demands the particle's position, that demand cascades backwards through the dependency graph. The eraser node sits in that path. The cascade reads whatever state the eraser is in at the moment the pull arrives.
+---
 
-Eraser OFF: the cascade hits "which-path erased." Both paths still pending. Interference emerges.
+### The Quantum Eraser & Delayed Choice
 
-Eraser ON: the cascade hits "which-path recorded." One path commits. Interference destroyed.
+This is the payoff. Let me spell out why the quantum eraser is so strange — because "strange" doesn't do it justice.
 
-There is no "after the fact." The path evaluation was still in flight through the dependency chain. The eraser's state at the time of the pull determines the outcome. No time travel. No retrocausality. No spooky anything. Just a dependency graph where the eraser sits upstream. It's the same thing as editing a spreadsheet cell before the formula recalculates — the formula doesn't care when you edited, it cares what the value is at cascade-time.
+You run the double-slit with a detector. The detector records which-path info. No interference — just like we'd expect. Particles hit the screen one at a time. Dots recorded. Data collected. Done.
+
+Now — AFTER the dots are already on the screen — you erase the which-path information. You sort the data by whether the which-path info was erased or kept. In the "erased" subset: the interference pattern is BACK. In the "kept" subset: no interference. The dots were already recorded. How can erasing information after the fact change a pattern that's already there?
+
+Here's how: the eraser is **upstream in the dependency chain.**
+
+@fig:eraser-cascade-path
+Full dependency chain: SOURCE → SLIT A / SLIT B → SCREEN. An IDLER branch from one slit path leads to the ERASER node. The cascade from SCREEN traces backward through the graph and hits the ERASER. Two outcomes — TOP: eraser says "erased" → both paths still pending → interference. BOTTOM: eraser says "recorded" → one path committed → no interference. The cascade reads the eraser's state at pull-time.
+
+When the screen demands the particle's position, that demand cascades backward through the dependency graph. The eraser node sits in that chain. The cascade reads whatever state the eraser is in at the moment the cascade reaches it. Not when the eraser was set. When the cascade arrives.
+
+Eraser says "erased" → which-path info gone → both paths still pending → interference.
+
+Eraser says "recorded" → which-path info locked → one path committed → no interference.
+
+"After the fact" is an illusion. The cascade was in flight through the dependency chain. The eraser's state at cascade-time is what matters. No time travel. No retrocausality. A dependency graph being read in dependency order.
+
+**Delayed choice** is the same mechanism pushed further. Wheeler's thought experiment: choose whether to insert a detector AFTER the particle has already passed the slits. Seems like the particle must retroactively decide its own past. But the choice node is upstream in the dependency graph. The cascade reads its state at pull-time, not at wall-clock-time. "Retrocausality" is confusing wall-clock time with graph evaluation order. In the dependency graph, there is no "before" and "after" — there is only upstream and downstream.
 
 **Why basketballs don't do this:** 10²⁶ atoms, every one a strict consumer demanding definite inputs. No pending evaluations survive. That's decoherence.
 
 @technical-card: Superposition and Collapse
-**D16 (Superposition):** No strict consumer → node stays unevaluated → pending edges to multiple states. **D17 (Collapse):** Consumer demands result → one path commits → definite outcome. **D18 (Decoherence):** ~10²⁶ atoms each acting as strict consumers → no pending evaluations survive in warm/dense environments. **D19 (Double-Slit):** No consumer at slits → both paths pending → interference at screen. **D20 (Quantum Eraser):** Eraser is upstream in dependency chain. Its state at cascade-time determines outcome. No retrocausality — evaluation was in flight.
+**D16 (Superposition):** No strict consumer → node stays unevaluated → pending edges to multiple states. **D17 (Collapse):** Consumer demands result → one path commits → definite outcome. **D18 (Decoherence):** ~10²⁶ atoms each acting as strict consumers → no pending evaluations survive in warm/dense environments. **D19 (Double-Slit):** No consumer at slits → both paths pending → interference at screen. **D20 (Quantum Eraser):** Eraser is upstream in dependency chain. Its state at cascade-time determines outcome. No retrocausality — evaluation was in flight. **D26 (Heisenberg):** Measuring one property rewires the topology the other depends on. Topological constraint, not instrument limitation.
+@/technical-card
+
+@technical-card: Entanglement Mechanics
+**D21 (Entanglement):** Interaction merges value subgraphs into a shared node. Correlation is structural — baked into topology at interaction time. **D22 (No FTL):** Results are correlated but individually random. Comparing notes requires classical communication at C. Bell's theorem: the correlations are stronger than any local hidden variable model allows — because the shared node ISN'T a hidden variable. It's a real topological feature of the graph that both particles share. The correlation isn't pre-determined — it's co-determined at commit-time.
 @/technical-card
 
 @physics-card: Why Probability Is Amplitude Squared
@@ -416,21 +502,8 @@ The bidirectional walk (down to leaves, back up to root) means the final result 
 @/physics-card
 
 @insight
-Quantum mechanics is lazy evaluation. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly. The quantum eraser isn't time travel — the eraser is upstream in the dependency chain. Its state at the moment of the cascade determines the outcome. Not backward in time — upstream in the dependency graph.
+Quantum mechanics is what a graph looks like when nobody's reading it. Idle subgraphs sit with all paths pending — that's superposition. Connecting a consumer forces commitment — that's collapse. Measurement changes the topology it's trying to read — that's Heisenberg. Two particles that interacted share a node that commits once for both — that's entanglement. And the quantum eraser? The eraser sits upstream in the dependency chain. The cascade reads its state at pull-time, not at wall-clock time. No time travel. No spookiness. Just a graph being evaluated in dependency order.
 @/insight
-
----
-
-### Entanglement
-
-// ~200 words. Quick and clean.
-
-When two particles interact, their value subgraphs merge — they share a node. Position can change — they can move to opposite ends of the universe. But the shared node doesn't care about position. When either particle is evaluated, the shared node commits. Both read the same result. No signal travels — the correlation was in the topology all along.
-
-@fig:entanglement-shared-subgraph
-Two particles, one shared node. Doesn't matter how far apart. When either side evaluates, the shared node commits once. Same value, both sides. No signal needed.
-
-Why not faster-than-light communication? The results are correlated but random. Neither observer learns anything useful until they compare notes at C. It's like two people opening envelopes from a pre-shuffled deck — the results are correlated by the deck, but neither person's opening tells the other anything until they call each other.
 
 ---
 
@@ -484,6 +557,8 @@ These are genuine obstacles. Any one of them could be fatal to the whole picture
 | Wave function | Pending evaluation. Multiple possible states, nothing committed. | Lazy thunk. Defined, not forced. |
 | Collapse | Strict consumer demands a result. Pending evaluation commits. | Forcing a lazy thunk. |
 | Quantum eraser | Eraser is upstream in dependency chain. Pull cascades through its state. | Editing spreadsheet formula before Enter. |
+| Heisenberg uncertainty | Measuring one property rewires the topology the other depends on. Topological constraint. | Can't read a variable and its derivative from one snapshot. |
+| Delayed choice | Choice node is upstream. Cascade reads state at pull-time. | Setting a config value before the function reads it. |
 | Entanglement | Shared value subgraph node. Co-resolves when either is evaluated. | Shared pointer. Same data regardless of location. |
 | Special relativity | No preferred traversal order → no preferred frame. | Same output regardless of evaluation order. |
 | Expansion | Evaluations add new nodes. Growth proportional to size = acceleration. | Self-modifying code. Evaluation extends codebase. |

@@ -1,0 +1,121 @@
+<!-- DESCRIPTION: Shows full dependency chain: SOURCE → SLIT A / SLIT B → SCREEN. IDLER branch from one slit path → ERASER node. Cascade arrow traces backward from SCREEN through the graph, hits ERASER. Two outcomes: TOP: eraser="erased" → both paths pending → interference. BOTTOM: eraser="recorded" → one path committed → no interference. Big label: "The cascade reads the eraser's state at pull-time." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="460" fill="#faf8f3" rx="4"/>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="aG2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#1e8449"/>
+    </marker>
+    <marker id="aP2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#7d3c98"/>
+    </marker>
+    <marker id="aR2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="25" text-anchor="middle" font-size="13" fill="#1a1a1a" font-weight="700" letter-spacing="1">THE CASCADE READS THE ERASER'S STATE AT PULL-TIME</text>
+
+  <!-- =================== DEPENDENCY CHAIN (center) =================== -->
+
+  <!-- SOURCE node -->
+  <circle cx="80" cy="220" r="22" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="80" y="225" text-anchor="middle" font-size="10" fill="#2471a3" font-weight="700">SOURCE</text>
+
+  <!-- Slit A -->
+  <circle cx="260" cy="155" r="20" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2"/>
+  <text x="260" y="160" text-anchor="middle" font-size="10" fill="#7d3c98" font-weight="700">SLIT A</text>
+
+  <!-- Slit B -->
+  <circle cx="260" cy="285" r="20" fill="#f9f5fd" stroke="#7d3c98" stroke-width="2"/>
+  <text x="260" y="290" text-anchor="middle" font-size="10" fill="#7d3c98" font-weight="700">SLIT B</text>
+
+  <!-- Source → Slit A -->
+  <line x1="100" y1="206" x2="242" y2="164" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <!-- Source → Slit B -->
+  <line x1="100" y1="234" x2="242" y2="276" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- SCREEN node -->
+  <circle cx="500" cy="220" r="24" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="500" y="225" text-anchor="middle" font-size="10" fill="#1e8449" font-weight="700">SCREEN</text>
+
+  <!-- Slit A → Screen -->
+  <line x1="278" y1="164" x2="480" y2="208" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <!-- Slit B → Screen -->
+  <line x1="278" y1="276" x2="480" y2="232" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- IDLER branch from Slit A path → ERASER -->
+  <circle cx="370" cy="95" r="14" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="370" y="99" text-anchor="middle" font-size="8" fill="#7d3c98">IDLER</text>
+  <line x1="272" y1="140" x2="358" y2="104" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ERASER node (bigger, important) -->
+  <circle cx="500" cy="95" r="22" fill="#faf6e8" stroke="#d4a017" stroke-width="3"/>
+  <text x="500" y="100" text-anchor="middle" font-size="10" fill="#d4a017" font-weight="700">ERASER</text>
+  <line x1="384" y1="95" x2="478" y2="95" stroke="#d4a017" stroke-width="2"/>
+
+  <!-- Cascade arrow from SCREEN backward -->
+  <path d="M476,220 Q420,220 380,180 Q340,140 370,109" fill="none" stroke="#1e8449" stroke-width="2" stroke-dasharray="8,4" marker-end="url(#aG2)"/>
+  <text x="385" y="200" font-size="9" fill="#1e8449" font-weight="600">cascade</text>
+  <text x="385" y="212" font-size="9" fill="#1e8449" font-weight="600">←</text>
+
+  <!-- Cascade hits ERASER -->
+  <path d="M384,95 L476,95" fill="none" stroke="#1e8449" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- =================== OUTCOME A (top-right): ERASED → INTERFERENCE =================== -->
+  <rect x="590" y="45" width="290" height="120" rx="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+
+  <text x="610" y="68" font-size="11" fill="#1e8449" font-weight="700">ERASER = "ERASED"</text>
+
+  <text x="610" y="90" font-size="10" fill="#2a2a2a">Which-path info gone.</text>
+  <text x="610" y="106" font-size="10" fill="#2a2a2a">Both paths still pending.</text>
+
+  <!-- Mini interference pattern -->
+  <rect x="610" y="118" width="8" height="30" rx="2" fill="#7d3c98" opacity="0.9"/>
+  <rect x="625" y="124" width="8" height="18" rx="2" fill="#7d3c98" opacity="0.5"/>
+  <rect x="640" y="118" width="8" height="30" rx="2" fill="#7d3c98" opacity="0.9"/>
+  <rect x="655" y="124" width="8" height="18" rx="2" fill="#7d3c98" opacity="0.5"/>
+  <rect x="670" y="118" width="8" height="30" rx="2" fill="#7d3c98" opacity="0.9"/>
+
+  <text x="760" y="140" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="700">→ INTERFERENCE</text>
+
+  <!-- Arrow from ERASER to outcome A -->
+  <line x1="522" y1="85" x2="588" y2="75" stroke="#1e8449" stroke-width="1.5" marker-end="url(#aG2)"/>
+
+  <!-- =================== OUTCOME B (bottom-right): RECORDED → NO INTERFERENCE =================== -->
+  <rect x="590" y="190" width="290" height="120" rx="8" fill="#fdf0ef" stroke="#c0392b" stroke-width="1.5"/>
+
+  <text x="610" y="213" font-size="11" fill="#c0392b" font-weight="700">ERASER = "RECORDED"</text>
+
+  <text x="610" y="235" font-size="10" fill="#2a2a2a">Which-path locked.</text>
+  <text x="610" y="251" font-size="10" fill="#2a2a2a">One path committed.</text>
+
+  <!-- Mini no-interference (just dots) -->
+  <circle cx="618" cy="280" r="3" fill="#999"/>
+  <circle cx="632" cy="273" r="2" fill="#999"/>
+  <circle cx="625" cy="286" r="2" fill="#999"/>
+  <circle cx="645" cy="278" r="3" fill="#999"/>
+  <circle cx="655" cy="284" r="2" fill="#999"/>
+  <circle cx="639" cy="290" r="2" fill="#999"/>
+  <circle cx="662" cy="275" r="2" fill="#999"/>
+  <circle cx="670" cy="285" r="3" fill="#999"/>
+
+  <text x="760" y="285" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="700">→ NO PATTERN</text>
+
+  <!-- Arrow from ERASER to outcome B -->
+  <line x1="522" y1="105" x2="588" y2="210" stroke="#c0392b" stroke-width="1.5" marker-end="url(#aR2)"/>
+
+  <!-- Key insight label -->
+  <rect x="150" y="370" width="600" height="34" rx="6" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5"/>
+  <text x="450" y="392" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">The cascade reads the eraser's state when the cascade arrives — not when the eraser was set.</text>
+
+  <!-- Timeline annotation -->
+  <text x="450" y="440" text-anchor="middle" font-size="11" fill="#7a7a6a">"After the fact" is an illusion. The cascade was in flight. Dependency order, not wall-clock order.</text>
+</svg>

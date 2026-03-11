@@ -241,9 +241,11 @@ PART 2: GR CONFIRMATION
   └── Time, Space & C (hop count, leaf commit rate, dilation, arrow, GPS, muon, expansion)
   ↓
 PART 3: QM CONFIRMATION
-  ├── Superposition & Collapse (lazy evaluation)
-  ├── Double-Slit & Quantum Eraser (4 steps, upstream dependency)
-  └── Entanglement (shared node, no FTL)
+  ├── The Idle Node (superposition from lazy evaluation)
+  ├── Why You Can't Just Look (Heisenberg as topological constraint)
+  ├── Entanglement (CENTERPIECE — shared node, 3 figures, cascade)
+  ├── The Double-Slit (4 steps, compressed)
+  └── Quantum Eraser & Delayed Choice (upstream dependency, payoff)
   ↓
 Honest Gaps (earned credibility)
   ↓
@@ -344,28 +346,53 @@ All figures, their slugs, labels, and full descriptions for SVG generation.
 - **Description:** Side-by-side comparison. Left panel: the inverted call stack from figure 7b, with curving cheapest-path lines drawn through it, labeled "GRAPH MODEL — Inverted call stack. Paths curve around depth." Right panel: a classic General Relativity spacetime curvature diagram — the rubber-sheet analogy with a mass in the center and grid lines curving around it, labeled "GENERAL RELATIVITY — Spacetime fabric. Paths curve around mass." A large equals sign or double-headed arrow between the two panels. Below both: "Same thing. Different notation. 110 years of research. Our map."
 - **Caption:** Same thing. Different notation. 110 years of research. Our map.
 
-### pending-vs-committed
-- **Label:** Figure 8 — Pending vs. Committed
-- **Description:** Two panels. Left panel (purple border, "WAVE FUNCTION — PENDING"): central node (the particle) with six dotted lines connecting to six possible position nodes around it. None are committed. Label: "No consumer. All paths pending. Nothing committed. This is superposition." Right panel (green border, "MEASURED — COMMITTED"): same central node with ONE thick solid line to ONE position node. All other connections gone. Label: "Consumer demands a result. One path commits. One definite position."
-- **Caption:** Superposition is pending evaluation. Collapse is when a consumer demands a result. One path commits.
+### idle-subgraph
+- **Label:** Figure 8 — The Idle Node
+- **Description:** Isolated subgraph (4-5 nodes) floating with no consumer nearby. All edges purple/dotted (pending). All nodes show "?". Surrounding committed graph (green) for contrast. Label: "No consumer. All paths pending. This is superposition."
+- **Caption:** An isolated subgraph. No consumer connected. All edges pending. All nodes uncommitted. The surrounding committed graph (green) doesn't reach it. This is superposition.
+
+### consumer-forces-cascade
+- **Label:** Figure 8b — Consumer Forces Cascade
+- **Description:** Two panels. LEFT: idle subgraph from idle-subgraph figure — all pending, no consumer. RIGHT: consumer node (green, "DETECTOR") connected. Cascade path highlighted green through the subgraph. One path commits (solid green). Others fade to gray. Labels: "Before: idle" / "Consumer connected. One path commits."
+- **Caption:** LEFT: the idle subgraph from before — all pending, no consumer. RIGHT: a detector connects. The demand cascades in. One path commits (green, solid). The rest fade. That's measurement.
+
+### measurement-changes-topology
+- **Label:** Figure 8c — Measurement Changes the Topology
+- **Description:** Three panels. LEFT: idle subgraph with pending position edges (purple dotted) and pending momentum structure (orange dotted). MIDDLE: position detector connected — position edges commit (green solid), momentum edges disrupted (red "?"). RIGHT: annotation explaining why both can't be committed simultaneously.
+- **Caption:** LEFT: idle subgraph with pending position edges (purple, dotted) and pending momentum structure (orange, dotted). MIDDLE: position detector connects — position edges commit (green), momentum edges disrupted (red). RIGHT: you can't demand both without one demand disrupting the other.
+
+### entanglement-forms
+- **Label:** Figure 9 — Entanglement Forms
+- **Description:** Two panels. LEFT "BEFORE": Particles A and B with separate value subgraphs (A-val, B-val). Independent. RIGHT "AFTER INTERACTION": A-val and B-val merged into single shared node (SH, gold border). Both A and B point to SH. Label: "Interaction merges value subgraphs. One shared node. Correlation is structural."
+- **Caption:** LEFT — BEFORE: particles A and B with separate, independent value subgraphs. RIGHT — AFTER INTERACTION: their value subgraphs have merged into a single shared node (SH). Both A and B point to SH. Interaction merges value subgraphs. Correlation is structural.
+
+### entangled-separated
+- **Label:** Figure 9b — Entangled but Separated
+- **Description:** Wide figure. A on far left, B on far right. Long dashed gray position path between them (many hops). Both have direct orange value edges going to shared node SH (center-bottom). Two edge types labeled: "POSITION EDGES (gray, dashed) — rewired when particles move" and "VALUE EDGE (orange, solid) — unchanged by movement." Shared node is purple/pending — nobody asked yet.
+- **Caption:** A on the far left, B on the far right. Long dashed gray position path between them (many hops — enormous distance). But both A and B have direct value edges going to the shared node SH (center-bottom). Position edges: gray, dashed — rewired when particles move. Value edges: orange, solid — unchanged by movement. SH is still purple/pending. Nobody asked.
+
+### entanglement-cascade
+- **Label:** Figure 9c — The Entanglement Cascade
+- **Description:** Sequence figure. (1) Consumer connects to A. (2) Green cascade arrow: detector → A → shared node SH. (3) SH commits, shows result "R" in green badge. (4) Consumer connects to B. (5) Orange cascade arrow: detector → B → SH (already committed). B reads R. Central label: "SH commits ONCE. Both read the same result. No signal between A and B."
+- **Caption:** The full cascade. (1) Detector connects to A. (2) Green cascade: detector → A → SH. SH commits, shows "R". (3) Detector connects to B. (4) Orange cascade: detector → B → SH (already committed). B reads R. No signal between A and B. SH committed once. Both read the same answer.
 
 ### double-slit-as-graph
-- **Label:** Figure 9 — Double-Slit as a Dependency Graph
+- **Label:** Figure 10 — Double-Slit as a Dependency Graph
 - **Description:** A dependency graph showing the double-slit experiment. Left: a SOURCE node (blue). Center: two SLIT nodes (slit A and slit B) connected to the source with dotted purple lines labeled "PENDING — both paths alive." Right: a SCREEN node connected to both slit nodes. Below: a second version of the same graph with a DETECTOR node attached to slit A. The detector's edge is solid green (committed), forcing slit A's path to commit. Slit B's path disappears (grayed out). Labels: Top version: "No detector — both paths pending. Interference at screen." Bottom version: "Detector present — one path committed. No interference."
 - **Caption:** The double-slit experiment as a dependency graph. Pending edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
 
-### entanglement-shared-subgraph
-- **Label:** Figure 10 — Entanglement Is a Shared Node
-- **Description:** Two particles (labeled A and B) shown far apart on opposite sides of the figure. Each has its own local subgraph. But both connect to ONE shared node in the center, drawn with a gold border and labeled "SHARED NODE." Dotted lines show A and B can be any distance apart. When either particle is evaluated, the shared node commits ONCE. Both A and B read the same committed value. Labels: "Distance doesn't matter. The shared node commits once. Both sides get the same answer. No signal needed."
-- **Caption:** Two particles, one shared node. Doesn't matter how far apart. When either side evaluates, the shared node commits once. Same value, both sides. No signal needed.
+### eraser-cascade-path
+- **Label:** Figure 11 — The Eraser Cascade
+- **Description:** Shows full dependency chain: SOURCE → SLIT A / SLIT B → SCREEN. IDLER branch from one slit path → ERASER node. Cascade arrow traces backward from SCREEN through the graph, hits ERASER. Two outcomes: TOP: eraser="erased" → both paths pending → interference. BOTTOM: eraser="recorded" → one path committed → no interference. Big label: "The cascade reads the eraser's state at pull-time."
+- **Caption:** Full dependency chain: SOURCE → SLIT A / SLIT B → SCREEN. An IDLER branch from one slit path leads to the ERASER node. The cascade from SCREEN traces backward through the graph and hits the ERASER. Two outcomes — TOP: eraser says "erased" → both paths still pending → interference. BOTTOM: eraser says "recorded" → one path committed → no interference. The cascade reads the eraser's state at pull-time.
 
 ### time-is-revision-rate
-- **Label:** Figure 11 — Time Is the Revision Counter
+- **Label:** Figure 12 — Time Is the Revision Counter
 - **Description:** Two horizontal timelines side by side. Top timeline labeled "FAR FROM MASS — shallow stack" shows nodes committing rapidly with many tick marks closely spaced, revision counter advancing quickly (rev 1, 2, 3, 4, 5...). Bottom timeline labeled "NEAR MASS — deep stack" shows the same span but with fewer, wider-spaced tick marks, revision counter advancing slowly (rev 1... 2... 3...). Both timelines span the same horizontal distance but the top has more commits. Label: "Same span. More commits far from mass. Fewer near mass. That's time dilation."
 - **Caption:** Time is the revision counter. Each commit is one tick. Near mass: deeper stack, slower commits, fewer ticks. That's time dilation.
 
 ### the-graph-grows-itself
-- **Label:** Figure 12 — The Graph Grows Itself
+- **Label:** Figure 13 — The Graph Grows Itself
 - **Description:** Three panels showing a graph at three stages. Panel 1 "PASS 1": a small graph with ~6 nodes and ~8 edges. Panel 2 "PASS 2": same graph but now ~10 nodes and ~14 edges — new nodes sprouted from evaluations. Panel 3 "PASS 3": ~16 nodes, ~24 edges. Each panel is labeled with its node count. Arrow below: "More graph → more evaluations → more new nodes. Growth proportional to size = accelerating expansion."
 - **Caption:** The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.
 
