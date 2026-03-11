@@ -112,27 +112,32 @@ that was just me.</p>
 
 <!-- ======== THE HOOK: YOU ARE MARIO ======== -->
 <div class="hook">
-<p>Before we get into anything &mdash; before graphs, before physics, before any of it &mdash; I need to tell you something uncomfortable.</p>
-<p><strong>You are Mario.</strong></p>
-<p>Now there are worse things than life as an Italian 2D plumber &mdash; we'll get to that in a minute.</p>
-<p>Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it.</p>
+<p>Before we get into anything &mdash; before graphs, before physics, how nerds run computers in the sky. I want to drive a point home.</p>
+<p><strong>You are Mario.</strong> Not metaphorically. Your reality is taking place on a screen. There is an engine underneath computing your world, and you have no direct access to it. Now there are worse things than life as an Italian 2D plumber &mdash; we'll get to that in a minute. But stay with me for a second.</p>
 </div>
 
-<p>That sounds crazy until you realize you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're claiming reality works the same way &mdash; what you experience takes place on a screen, but the real reality of it is in the engine. So while I said you were a 2D Italian plumber, I am actually saying you are the <em>graphical</em> representation of a 2D Italian plumber. See, it always can get worse.</p>
+<p>This might sound crazy, maybe confusing? But you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: engine (processor) and the output (monitor). We're &mdash; well I'm &mdash; claiming reality works the same way. What you experience takes place on a screen, but the real action is in the engine underneath. YOU and your reality are stored on that engine. And more specifically, the universe seems to be stored as a graph. Why a graph, you ask? Graphs have some interesting properties we will cover.</p>
 
-<p>This isn't just "reality is a simulation" &mdash; that's like saying "there's something going on." We're proposing a specific architecture and then showing it actually explains things:</p>
+<p>So I lied. You are not a 2D Italian plumber, you are the <em>graphical</em> representation of a 2D Italian plumber. See, it always can get worse.</p>
+
+<p>Saying &ldquo;it's all a simulation&rdquo; is not actually that new or novel. But what I want to add is a bit more on how I think the specifics of the architecture might look. And I want to show <em>why</em> this type of architecture would actually explain things. Things like:</p>
 
 <ul style="margin:0 0 18px 24px;list-style:none;padding:0">
 <li style="margin-bottom:8px">&bull; Why can't you shield gravity?</li>
-<li style="margin-bottom:8px">&bull; Why does the universe "know" what you'll measure?</li>
-<li style="margin-bottom:8px">&bull; Why do equations work backwards in time?</li>
+<li style="margin-bottom:8px">&bull; What is gravity? Why can't you tell the difference between gravity and acceleration?</li>
+<li style="margin-bottom:8px">&bull; Why can't anything travel faster than the speed of light?</li>
+<li style="margin-bottom:8px">&bull; Why does time slow down near a black hole?</li>
+<li style="margin-bottom:8px">&bull; Why does the universe &ldquo;know&rdquo; what you'll measure?</li>
+<li style="margin-bottom:8px">&bull; Why do equations for physics work backwards in time?</li>
+<li style="margin-bottom:8px">&bull; Is time travel possible?</li>
+<li style="margin-bottom:8px">&bull; Is there any age at which a man can know for sure he won't ever bald?</li>
 </ul>
 
-<p>These are genuine unsolved mysteries and they all have the same answer.</p>
+<p>These are genuine unsolved mysteries and in my version of what's going on, they all have the same answer. Well except the last one, that is an open question I'm asking for a friend.</p>
 
 <div class="callout callout-blue">
 <p><strong>The Engine Layer</strong> &mdash; where computation happens. The actual structure of reality. Think: the Nintendo console.</p>
-<p><strong>The Render Layer</strong> &mdash; what you experience. Your "reality." The output. Think: the TV screen.</p>
+<p><strong>The Render Layer</strong> &mdash; what you experience. Your &ldquo;reality.&rdquo; The output. Think: the TV screen.</p>
 </div>
 
 <!-- Figure 0 -->
@@ -142,32 +147,40 @@ that was just me.</p>
 <div class="figure-caption">Two layers. The engine computes the graph. The screen shows the output &mdash; Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?</div>
 </div>
 
-<p>We suspect the engine layer is a <strong>graph</strong> &mdash; dots connected by lines. A recipe is a graph. A family tree is a graph. You already know graphs.</p>
+<p>Okay so real quick, let's cover what a <strong>graph</strong> is. You already know graphs, dots connected by lines. A recipe is a graph. A family tree is a graph.</p>
 
 <div class="figure" id="you-already-know-what-a-graph-is">
 <span class="scene-label">Figure 1 &mdash; You Already Know What a Graph Is</span>
 <img src="images/you-already-know-what-a-graph-is.svg" alt="Three simple graphs: a family tree, a social network, and a recipe with directional arrows">
-<div class="figure-caption">These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" &mdash; but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show "mom" on the relationship between you and your mother.</div>
+<div class="figure-caption">These are all graphs. Dots connected by lines. That's the whole idea. We call the dots &ldquo;nodes&rdquo; and the connections between them &ldquo;edges&rdquo; &mdash; but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show &ldquo;mom&rdquo; on the relationship between you and your mother.</div>
 </div>
 
-<p>Now I suspect our universe graph is slightly more complicated than the family tree. So here are the basic rules we will add:</p>
+<p>Now our universe graph is slightly more complicated than the family tree. So we need to add some basic rules for the graph:</p>
 
-<p><strong>1. Values are lazy loaded.</strong> That means unless someone asks "hey you, what's your name/value?" then don't even think about it, just do nothing.</p>
+<h3>The Graph Rules</h3>
 
-<p><strong>2. No values are stored within the nodes themselves</strong> &mdash; all values are derived from the topology of the graph. Yikes... umm... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is "what time is it" depends on where you are, and you don't know the answer yourself &mdash; you always need to check with the star nerds.</p>
+<p><strong>1. Nodes/Values are lazy loaded.</strong> That means unless someone asks &ldquo;hey you, what's your name/value?&rdquo; then don't even think about it, just do nothing.</p>
+
+<p><strong>2. No values are stored within the nodes themselves</strong> &mdash; all values are derived from the topology of the graph. Yikes... basically... imagine someone asks you for the time. You actually don't know the time; in fact the time depends on where in the world you are, so you need to check your phone, which uses GPS to check some satellite that nerds everywhere maintain to keep everyone in sync. The point is &ldquo;what time is it&rdquo; depends on where you are, and you don't know the answer yourself &mdash; you always need to check with the star nerds.</p>
+
+<p><strong>3. Edges are operations:</strong> This just means the lines connecting the dots can be instructions. For example, multiplication could be an instruction: (3) --- X --- (3) or (you) --- call --&gt; (mom).</p>
+
+<h3>Recursive Functions</h3>
+
+<p>Okay so we know what our universe graph looks like. But we want our graph to do something... so let's spice things up and see how we can make some graphic content.</p>
+
+<p>For that we need a recursive function. What is a recursive function? Well you know when you feed your dog and then an hour later he tries to eat his own sh*t.... that is a recursive function. It's a function (in this case your dog) which eats its own &ldquo;output&rdquo;... again and again....</p>
+
+<p>In our case we eat the graph, do math, get a result, then eat that result. Again and again. Each time we eat the graph we update the screen with what the graph says.</p>
+
+<p>This is how video games work as well. It's called a render loop &mdash; the engine does some math, then updates the screen with the result. In Mario's world, you don't ever see half a screen or the pixels paint one by one. You always see a complete image. The key point here is you ALWAYS see the completed result. You never experience the engine doing the calculations. From Mario's perspective you can hit pause, walk away, get lunch, and resume &mdash; and no time would have passed at all for him.</p>
 
 <p>That's it. Not so bad. So to recap we have sh*t-eating dogs, nerds in the sky with time, and a base rule of don't speak unless spoken to. Now let's go create the fucking universe...</p>
 
 <!-- ======== THE DEMO ======== -->
 <h2>The Demo: What Happens When You Evaluate One</h2>
 
-<p>Okay, we left off with: you are a graph. "That don't impress me much," you say (in the best Shania Twain voice). But wait, it gets better.</p>
-
-<p>So your &mdash; <em>our</em> &mdash; reality is actually off by one. What do I mean by that? I mean what happens is the graph does its little graphy calculations, we get the result, and then paint that to the screen. While you're sitting happy on the screen, the graph starts running its little calculations again, over and over. Where the input for the next calculation is the output of the previous one.</p>
-
-<p>We have a nice little name for this in comp sci &mdash; we call it a <strong>recursive function</strong>. There is a proper way to describe this, but the easiest way to get the concept is if you have ever owned a dog. And you feed it... wait a bit... let the dog's stomach do dog stomach things... then take it on a walk and for some unknown reason it tries to eat its own sh*t... and the cycle repeats. Well, that is your dog running a recursive function. A recursive function is something that eats its own "output"... again and again... and the universe, my friend, seems to LOVE eating its own graph.</p>
-
-<p>Now that dogs helped explain what this is, let's look at one in code for you nerds:</p>
+<p>Here is a basic example of what an engine might look like.</p>
 
 <pre>function evaluate(node):
     if node has no children:
@@ -182,9 +195,7 @@ that was just me.</p>
     node.committed = result             // lock in the result
     return result</pre>
 
-<p>That's the whole engine. It's not much, but it's ours. So as much as I'd love for it to be that simple, I am going to say that the universe's graph has some special properties that are <em>slightly</em> different from your family tree. Let's run it on a simple graph and watch what happens.</p>
-
-<!-- Figure 2 — NEW: Graph Evaluation Walkthrough -->
+<!-- Figure 2 -->
 <div class="figure" id="graph-evaluation-walkthrough">
 <span class="scene-label">Figure 2 &mdash; Watch What Emerges From Recursive Evaluation</span>
 <img src="images/graph-evaluation-walkthrough.svg" alt="Multi-panel walkthrough of a graph being evaluated step by step, with annotations showing emergent properties: time, causality, gravity mechanism, superposition, and information limit">
