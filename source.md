@@ -265,15 +265,7 @@ A Very Serious Person
 **Description:** Left: a TV screen showing Mario's world (stick-figure Mario, platforms, a question block) labeled "RENDER LAYER — What Mario experiences. His 'reality.'" Right: a Nintendo console with circuit board showing graph nodes and edges inside, labeled "ENGINE LAYER — Dots and lines. The actual computation." Arrow goes FROM the console TO the TV screen, labeled "produces."
 **Caption:** Two layers. The engine computes the graph. The screen shows the output — Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?
 
----
-
-#### What Is a Graph?
-
-> **AUTHOR NOTE:** Very brief (~200 words). Dots, lines, edges carry operations. Family tree / recipe examples. One figure. The setup, not the payoff.
-
-**Content direction:** "Before we can talk about the universe being a graph, we need to talk about what a graph actually is. Good news: you already know." Three compact examples: family tree, social network, recipe. Dots connected by lines. You can't evaluate a dot until you've evaluated everything it depends on — can't frost the cake until it's cooled.
-
-In our graph, edges carry instructions — multiply, divide, add. The edge tells the parent what to DO with the child's result. The node stores nothing. Everything meaningful is in the connections. And the output of evaluating a graph feeds back as the next input — the graph evaluates itself into a new state. The universe is a recursive function.
+**Content direction (graph bridge — NOT a standalone section):** After the figure, 2-3 sentences folded into the hook flow: "We suspect the engine layer is a graph — dots connected by lines, where edges carry operations (multiply, add, divide). A recipe is a graph. A family tree is a graph. You already think in graphs. The node stores nothing — everything meaningful is in the connections."
 
 ##### Figure: you-already-know-what-a-graph-is
 
@@ -322,7 +314,7 @@ function evaluate(node):
 
 **Content direction (after figure, "Did You Notice?" section):** Short section pointing out what just emerged with NO special rules:
 
-- **Revision counts** — each node committed a result and ticked a counter. That's time.
+- **Change** — each node's state changed when it committed. From that node's perspective, time just passed. No change = no time.
 - **Evaluation order** — leaves first, root last. Can't evaluate a parent before its children. That's causal ordering.
 - **Stack depth** — deeper subgraphs build taller stacks, take longer. That's the gravity mechanism.
 - **Lazy evaluation** — if nothing demands a node's result, it stays unevaluated. That's quantum superposition.
@@ -330,39 +322,30 @@ function evaluate(node):
 
 **Content direction (closing beat):** "The important thing isn't this specific graph. It's that ALL of these properties emerged from nothing more than recursive evaluation. No special rules. No physics. Just: evaluate the graph. The properties ARE the evaluation."
 
+**Content direction (qualitative caveat):** "A caveat before we go further: we don't know the exact operations on the edges. We're not claiming to have the specific rules that generate electrons or gravity constants. What we're showing is that the **structure** of recursive graph evaluation — regardless of the specific operations — produces emergent properties that map onto physics. The shape of the argument matters more than the specific numbers."
+
 **Content direction (prime number result):** "One more thing. If we make a node's base value depend on its depth in the graph — depth 2 returns the 2nd value, depth 3 the 3rd — topology alone generates the prime numbers. The node stores nothing. The structure IS the value. If topology generates primes, and primes generate all numbers, then topology alone generates all of arithmetic. This is the proof of concept. Everything else builds on it."
 
 ##### What This Means (Insight)
 
-A recursive graph evaluation — with no stored values and no special rules — produces emergent properties that map directly onto physics: time (revision counts), causality (evaluation order), gravity (stack depth), quantum mechanics (lazy evaluation), and the speed of information (off-by-one). None of these were designed in. They fell out of the recursive evaluation. The properties ARE the evaluation.
+A recursive graph evaluation — with no stored values and no special rules — produces emergent properties that map directly onto physics: time (change), causality (evaluation order), gravity (stack depth), quantum mechanics (lazy evaluation), and the speed of information (off-by-one). None of these were designed in. They fell out of the recursive evaluation. The properties ARE the evaluation.
 
 ---
 
 #### How Industry Already Does This
 
-> **AUTHOR NOTE:** Very compressed (~250 words). One example (spreadsheet). The punchline: the industry independently converged on topological ordering.
+> **AUTHOR NOTE:** Demoted to a callout-blue block titled "For the Engineers." The callout should feel skippable. Keep the spreadsheet figure inside. Cut the topological-ordering figure (spreadsheet already demonstrates the concept). Move the C = leaf commit rate and special relativity punchlines OUT of the callout and INTO a short main-narrative transition paragraph between the callout and "What the Framework Explains."
 
-**Content direction:** Here's the thing: we already build systems that evaluate graphs. Spreadsheets, React, CPU caches — different teams, different decades, different purposes. They all independently converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait.
+**Callout (callout-blue, titled "For the Engineers"):** We already build systems that evaluate graphs. Spreadsheets, React, CPU caches — different teams, different decades, different purposes. They all independently converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait. A spreadsheet is a graph. Change cell A1 and it walks the dependency graph forward, recomputing only what depends on A1, in order. B1 and C1 can update in parallel (no dependency between them). D1 waits for both.
 
-**One example — The Spreadsheet:** Change cell A1 and the spreadsheet walks the dependency graph forward, recomputing only what depends on A1, in order. B1 and C1 can update in parallel (no dependency between them). D1 waits for both.
-
-##### Figure: spreadsheet-is-a-graph
+##### Figure: spreadsheet-is-a-graph (inside callout)
 
 **Slug:** spreadsheet-is-a-graph
 **Label:** Figure 3 — A Spreadsheet Is a Graph Being Evaluated
 **Description:** Three panels showing spreadsheet cell dependency graph changing state. Panel 1 "STATE 0": four cells. A1=5 (blue, just changed), B1="=A1×2" (gray, stale), C1="=A1+1" (gray, stale), D1="=B1+C1" (gray, stale). Panel 2 "STATE 1": B1 and C1 both evaluate (they both depend only on A1, no dependency between each other — they can go in any order or simultaneously). B1=10 (green, committed), C1=6 (green, committed), D1 still stale. Panel 3 "STATE 2": D1 now evaluates (depends on both B1 and C1, which are both committed). D1=16 (green, committed). Arrow below: "A1 changed → B1 and C1 in parallel → D1 last. Topological order."
 **Caption:** Change A1 and the update cascades forward through the dependency graph. B1 and C1 can update in parallel — no dependency between them. D1 waits for both. That's topological ordering.
 
-##### Figure: topological-ordering
-
-**Slug:** topological-ordering
-**Label:** Figure 4 — Topological Ordering
-**Description:** One graph with two clear branches. Root at top. Left branch: Root → A → C (three nodes in a chain, arrows showing sequential dependency, labeled "SEQUENTIAL — C must wait for A. A must wait for Root."). Right branch: Root → B (single node, no dependency on A or C, labeled "PARALLEL — B can evaluate any time. No ordering constraint with A or C."). Below: "Causally connected = ordered. Causally disconnected = free. This is topological ordering."
-**Caption:** Nodes in a dependency chain must evaluate in order. Nodes with no dependency between them can go in any order. That's topological ordering. That's what the universe uses.
-
-**Content direction (punchline):** No preferred traversal order = no preferred frame = special relativity for free. Two observers on independent branches genuinely have no shared "now" — not because of a physical law, but because there's no ordering constraint between them.
-
-**C = leaf commit rate.** C has nothing to do with light. A leaf node — nothing to recurse into — commits instantly. That rate is C. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why it travels at C.
+**Content direction (main narrative transition, OUTSIDE the callout):** Two key consequences fall out of topological ordering. First: no preferred traversal order = no preferred frame = special relativity for free. Two observers on independent branches genuinely have no shared "now" — not because of a physical law, but because there's no ordering constraint between them. Second: **C = leaf commit rate.** The speed of light has nothing to do with light. A leaf node — nothing to recurse into — commits instantly. That rate is C. Everything else is slower because it has subgraph work to do first. A photon is a leaf. That's why it travels at C.
 
 ---
 
@@ -456,9 +439,9 @@ Gravity is not a force. It is call stack pressure created by a deep subgraph. Pl
 
 ##### Time
 
-> **AUTHOR NOTE:** ~300 words. Revision counter, Fibonacci/arrow of time (keep photographs insight), GPS proof. Physics card: The Muon.
+> **AUTHOR NOTE:** ~300 words. Lead with "what if time stopped?" thought experiment. Time = amount of change in your local region. Fibonacci/arrow of time (keep photographs insight), GPS proof. Physics card: The Muon.
 
-**Content direction:** Time is the revision counter on a node — how many times it has committed a result. Near mass, the call stack is deeper, commits are slower, the counter ticks less often. That IS time dilation.
+**Content direction:** What would it look like if time stopped? Nothing changes. No node evaluates to a new state. Nothing commits. Time IS the amount of change in your local region. Each time a node commits a new result, that's one tick of local time — not because the graph is counting, but because change happened. Near mass, the call stack is deeper, commits are slower, less change happens. That IS time dilation.
 
 GPS satellites orbit where the stack depth is lower — faster commits, faster clocks. Without correction, GPS would drift 10km per day. Your phone depends on this being real.
 
@@ -472,7 +455,7 @@ Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% 
 
 ##### What This Means (Insight)
 
-Time is a revision counter. Near mass: deeper stack, slower ticks, less elapsed time. The arrow of time is a dependency chain — each walk's output feeds the next. The equations work backwards because they describe photographs, not the computation. The computation runs one direction. No undo.
+Time is change. No change, no time. Near mass: deeper stack, slower commits, less change, less elapsed time. The arrow of time is a dependency chain — each walk's output feeds the next. The equations work backwards because they describe photographs, not the computation. The computation runs one direction. No undo.
 
 ---
 
@@ -509,6 +492,22 @@ There is no "after the fact." The path evaluation was still in flight through th
 
 Quantum mechanics is lazy evaluation. Small, isolated things: no consumers, pending paths survive, interference. Large things: consumers everywhere, everything commits instantly. The quantum eraser isn't time travel — the eraser is upstream in the dependency chain. Its state at the moment of the cascade determines the outcome. Not backward in time — upstream in the dependency graph.
 
+##### Physics Card — Why Probability Is Amplitude Squared
+
+> **AUTHOR NOTE:** This is a physics card (~250 words), placed after the quantum insight block. Framed as exploratory — we haven't proven this IS the Born rule, but the structure naturally produces the right ingredients. Text only, no figure.
+
+**Content direction:** The prime demo uses trees (no cycles). Values stay real. Everything is deterministic. That's the baseline.
+
+Now add a **cycle** to the graph — a node that depends on itself. Topological ordering breaks. You can't evaluate it top-down because the node needs its own result before it can produce one.
+
+Self-consistency forces a constraint: the value must equal the result of its own operation applied to itself. For many operations, the only solutions are **roots of unity** — complex numbers that return to 1 when raised to some power. Complex numbers don't get bolted on as a special rule. They emerge because cycles demand self-consistent solutions, and self-consistent solutions in a multiplicative graph are roots of unity.
+
+Once you have complex values, paths through the graph carry complex amplitudes. Multiple paths to the same node accumulate — some reinforce, some cancel. That's **interference**. Not mysterious wave behavior. Bookkeeping on a graph with cycles.
+
+The bidirectional walk (down to leaves, back up to root) means the final result involves α times its conjugate: α × α* = |α|². Probability from structure.
+
+**Caveat:** This is exploratory. We haven't derived the Born rule from first principles. But it's interesting that cycles in a graph — which must exist in any non-trivial universe (feedback, self-reference, closed causal loops) — naturally produce exactly the mathematical structure quantum mechanics uses: complex amplitudes, interference, and squared-modulus probability.
+
 ---
 
 #### Everything Else That Falls Out
@@ -541,7 +540,7 @@ The engine evaluates the graph. Some evaluations add new nodes and edges. More g
 
 3. **Can't explain specific particles.** Electrons, quarks, neutrinos have specific masses and charges. "Particles are stable topologies" doesn't tell us which ones exist or why.
 
-4. **Can't prove the Born rule.** We explain that measurement produces a committed result. We don't explain why probabilities follow amplitude squared.
+4. **Can't prove the Born rule.** We explain that measurement produces a committed result. We don't explain why probabilities follow amplitude squared. (The Born Rule physics card above shows that cycles in graphs naturally produce the right mathematical ingredients — complex amplitudes and |α|² — but this observation is exploratory, not a derivation.)
 
 5. **Can't explain the hierarchy problem.** Gravity is ~10³⁶ times weaker than electromagnetism. Why would stack depth produce such an enormous ratio? No answer.
 
@@ -563,7 +562,7 @@ The engine evaluates the graph. Some evaluations add new nodes and edges. More g
 | Mass                  | Stable subgraph topology. Same walk, same result.                            | Deterministic function, same output for unchanged input.       |
 | Energy                | Return value that propagates outward when topology changes.                  | Function output feeding next function call.                    |
 | E = mc²               | Bidirectional walk: m hops down at C, m hops up at C. mc².                   | Recursive call cost: down m levels × up m levels at same rate. |
-| Time                  | Revision counter. How many times this node has committed.                    | Iteration counter.                                             |
+| Time                  | Change. Each commit is one tick of local time. No change = no time.          | State change counter. No state change = no tick.               |
 | Arrow of time         | Each walk's output feeds the next. Fibonacci dependency. Cannot un-commit.   | Program execution order. Can't un-run code.                    |
 | Time dilation         | Deep stack or fast motion → slower commits → revision counter ticks less.    | Deep recursion or I/O consuming cycles → lower throughput.     |
 | Speed of light (C)    | Commit rate of a leaf node. No subgraph. Maximum rate.                       | Base case return time. Immediate, no recursion.                |
