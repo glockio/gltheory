@@ -18,10 +18,8 @@ actually a well-known fact that the best way to spend ANY amount of
 time on ANY amount of drugs is to sit back and go
 **"YO BUT what IF LIKE…"**
 
-Most of what follows is aided with AI, but this is more or
-less the result of my "pondering"/ranting about for the last 8 or 9
-years. So while the words are AI assisted, I assure you the delusions
-are entirely my own.
+This "hobby" all started because I became curious with the idea is anything _truly_ "random". Things seems random, we play dice, flip coins. But, in every case the outcome was the result of their inputs, it just seemed random to us. But is there any event in this universe that dose not depend on the events that came before it? If I could rewind time and flip a coin agian and again is it always heads? If I am just the sum of all my events dose that mean the future in some sense is predetimed? We have
+All of this bugged me more than it should. So I looked into it and 8 or 9 years later here we are.
 
 I have not figured out the exact number yet, but I imagine the odds of
 someone being committed rise significantly the moment they start
@@ -70,23 +68,6 @@ The foundation here draws heavily from [causal set theory](https://en.wikipedia.
 [loop quantum gravity](https://en.wikipedia.org/wiki/Loop_quantum_gravity).
 If this piques your interest, start with those. They have the math we don't.
 @/style
-@/style
-
-@style:callout-blue
-**The Proposal**
-
-Everything that follows builds on one idea: spacetime is a graph, and the way events propagate through it — and when they're forced to commit — explains both gravity and quantum mechanics.
-
-Six rules.
-
-1. **Nodes are spacetime events.** Each node is a where-and-when. The graph IS spacetime.
-2. **Edges are causal order with operations.** An edge from A to B means A can influence B. Each edge carries a transformation — an operation applied to whatever propagates along it.
-3. **The graph grows.** New nodes are born as the product of edge operations on existing nodes. That growth IS time.
-4. **Properties come from position.** A node stores nothing. Its properties are determined by its connections — all the paths reaching it and the composition of edge operations along those paths. Structure is the data.
-5. **Changes propagate at C.** Causal influence travels at most 1 edge per tick. That rate is the speed of light.
-6. **Nodes are pending until demanded.** A newly born node exists, but its properties aren't computed until an interaction requires them. While pending, its parent set continues to accumulate as more events arrive. Commitment freezes the parent set and computes the value.
-
-The punchline: general relativity describes the committed structure of this graph — the shape, the density, the curvature. Quantum mechanics describes nodes that haven't been asked yet — functions with inputs still in transit. They look incompatible because they're describing different states of the same thing.
 @/style
 
 ---
@@ -261,7 +242,7 @@ Primes emerge from topology. No values stored anywhere. The structure IS the val
 The node stores nothing. The structure IS the value. Illustrative, not a proof — but it shows pure structure can generate non-trivial mathematical objects.
 
 @style:insight
-Six rules. No physics designed in. And we got something that looks like time (graph growth), a speed limit (local propagation at C), mass (pattern complexity), and edges that carry operations. All from the structure of a growing causal graph. But we haven't gotten to the good part yet.
+No physics designed in. Just a growing graph with causal edges. And we got something that looks like time (graph growth), a speed limit (local propagation at C), mass (pattern complexity), and edges that carry operations. All from pure structure. But we haven't gotten to the good part yet.
 @/style
 
 ---
@@ -360,7 +341,7 @@ So let's use the map.
 
 ---
 
-## Part 2: General Relativity, Translated
+## Chapter 4: General Relativity, Translated
 
 ### Gravity
 
@@ -405,7 +386,7 @@ If gravity is causal density rather than a force, three mysteries dissolve: you 
 
 ### Time, Space & the Speed of Light
 
-Let's do this as a table because I want to drive these home.
+Gravity was the headline act. Here's the rest of the lineup — fast, because we need to get to quantum mechanics.
 
 | What you've been told                                            | What it is in the graph                                                                                                                                             |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -441,11 +422,13 @@ Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% 
 Space is the graph's shape. Distance is hop count. Time is growth — near mass, denser structure means slower growth. The speed of light isn't about light. It's the speed of change. The arrow is irreversible growth. The universe expands because the graph grows itself.
 @/style
 
-That's the large-scale picture. Einstein described the committed structure — the green nodes, the definite graph. But what about the purple ones? The nodes that haven't been asked yet?
+That's the large-scale picture. Everything Einstein described — gravity, curvature, time dilation — is the committed structure. The green nodes. The definite graph. The part of reality that's already been computed.
+
+But remember the purple nodes? The ones at the frontier? The ones that haven't been asked yet? That's where things get strange.
 
 ---
 
-## Part 3: Quantum Mechanics, Translated
+## Chapter 5: Quantum Mechanics, Translated
 
 @style:mystery
 Three things that shouldn't be possible:
@@ -467,7 +450,9 @@ Imagine a node at the very edge of the graph. The frontier. It was just born —
 
 But nothing is downstream of it. No event needs its value as an input. Nothing is asking it to produce the next state. So what does it do?
 
-**Nothing.** It sits there. Pending.
+Remember the spreadsheet? A cell with a formula that references another cell that hasn't been computed yet? The spreadsheet waits.
+
+**Same thing.** The node sits there. Pending.
 
 Not because something is stopping it. Because there's nothing to compute. A node's value is the result of composing edge operations along all paths reaching it — and that computation only runs when something downstream needs the result to produce a new event. No downstream demand, no computation. The value doesn't exist yet. Not "exists but hidden." Not "exists but unknown." **Does not exist.** The function hasn't been called.
 
@@ -788,19 +773,34 @@ Any of the first three could be fatal. That's fine. You lay out what you think, 
 
 ---
 
+## The Thesis
+
+@style:callout-blue
+**GL Theory in Six Rules**
+
+Everything above builds on one idea: spacetime is a graph, and the way events propagate through it — and when they're forced to commit — explains both gravity and quantum mechanics.
+
+1. **Nodes are spacetime events.** Each node is a where-and-when. The graph IS spacetime.
+2. **Edges are causal order with operations.** An edge from A to B means A can influence B. Each edge carries a transformation — an operation applied to whatever propagates along it.
+3. **The graph grows.** New nodes are born as the product of edge operations on existing nodes. That growth IS time.
+4. **Properties come from position.** A node stores nothing. Its properties are determined by its connections — all the paths reaching it and the composition of edge operations along those paths. Structure is the data.
+5. **Changes propagate at C.** Causal influence travels at most 1 edge per tick. That rate is the speed of light.
+6. **Nodes are pending until demanded.** A newly born node exists, but its properties aren't computed until an interaction requires them. While pending, its parent set continues to accumulate as more events arrive. Commitment freezes the parent set and computes the value.
+
+The punchline: general relativity describes the committed structure of this graph — the shape, the density, the curvature. Quantum mechanics describes nodes that haven't been asked yet — functions with inputs still in transit. They look incompatible because they're describing different states of the same thing.
+@/style
+
+---
+
 ## How I Got Here
 
-@style:hook
-I couldn't stop laughing at the absurdity of it being traced back to sauerkraut. I thought — how random.
-
-Then it hit me. Was it random? Was there any event in that chain that did not depend on the previous one? Was meeting her random? Was anything ever random? Could I keep going back — all the way to the Big Bang — hit play, and watch the events unfold exactly the way they have? Could I play it out to the future?
-@/style
+It started with a question: is anything actually random?
 
 If there is no truly random thing in the universe — if it only appears random to ME — then everything that is going to happen is already predetermined. Not that I can't make a choice. But that the choice I will make depends on the sum of all my life experiences, which is a result of my parents' sum of experiences, and so on and so on.
 
-Surely that can't be right. So I set out to hunt for random. Surely it's somewhere.
+So I set out to hunt for random. Surely it's somewhere.
 
-That led me to the quantum world — where some say the double-slit experiment is random. Funny thing. The moment I saw that, I hated the idea of it instantly. I am a conscious being. I have free will. But hearing that my photon is fucking randomly appearing somewhere? That didn't sit right. "God doesn't play dice." So here we are.
+That led me to the quantum world — where some say the double-slit experiment is random. The moment I saw that, I hated the idea of it instantly. I am a conscious being. I have free will. But hearing that my photon is fucking randomly appearing somewhere? That didn't sit right. "God doesn't play dice." So here we are.
 
 And it's not just photons. Quantum mechanics says that when you sit down on your chair there is a non-zero chance it won't be there. The probability is vanishingly small but it's not zero. And people just kind of accept this.
 
