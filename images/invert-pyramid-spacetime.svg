@@ -1,4 +1,4 @@
-<!-- DESCRIPTION: Same data as the call-stack-pyramid but inverted. The mountain shape is now flipped to a well shape. Over the top of it, a grid of lines (the "spacetime fabric") is draped, curving downward into the well at the center and flat at the edges — exactly like the classic spacetime curvature diagrams from physics textbooks. The mass node is at the bottom of the well. Label: "INVERT THE CALL STACK TOPOLOGY." Second label on the fabric: "THIS IS SPACETIME CURVATURE." Third label: "Same shape. Different perspective. The call stack IS the curvature." -->
+<!-- DESCRIPTION: Same data as the causal-density-profile but inverted. The mountain shape is now flipped to a well shape. Over the top of it, a grid of lines (the "spacetime fabric") is draped, curving downward into the well at the center and flat at the edges — exactly like the classic spacetime curvature diagrams from physics textbooks. The mass node is at the bottom of the well. Label: "INVERT THE DENSITY PROFILE." Second label on the fabric: "THIS IS SPACETIME CURVATURE." Third label: "Same shape. Different perspective. Causal density IS the curvature." -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
   <style>
     text { font-family: "DM Sans", sans-serif; }
@@ -57,7 +57,7 @@
 
   <!-- Label 1 -->
   <text x="130" y="280" font-size="14" fill="#1a1a2e" font-weight="700" text-transform="uppercase">INVERT THE</text>
-  <text x="130" y="298" font-size="14" fill="#1a1a2e" font-weight="700" text-transform="uppercase">CALL STACK TOPOLOGY.</text>
+  <text x="130" y="298" font-size="14" fill="#1a1a2e" font-weight="700" text-transform="uppercase">DENSITY PROFILE.</text>
 
   <!-- Label 2 on the fabric -->
   <text x="640" y="100" font-size="13" fill="#2471a3" font-weight="600">THIS IS SPACETIME</text>
@@ -67,5 +67,5 @@
 
   <!-- Label 3 -->
   <text x="250" y="375" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">Same shape. Different perspective.</text>
-  <text x="600" y="375" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">The call stack IS the curvature.</text>
+  <text x="600" y="375" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">Causal density IS the curvature.</text>
 </svg>

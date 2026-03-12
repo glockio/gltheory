@@ -1,47 +1,30 @@
 # GL Theory — Formal Specification
 
-**Version 1.0 | March 2026**
+**Version 2.0 | March 2026**
 
 ---
 
 ## Axioms
 
-### A1: Graph Structure
+### A1: Causal Graph
 
-Reality is a directed graph G = (N, E) where N is a set of nodes and E is a set of directed edges. Each edge e ∈ E carries an operation op(e) that transforms the value passing through it.
+Reality is a directed acyclic graph (DAG) G = (N, E) where N is a set of spacetime events (nodes) and E is a set of causal relations (directed edges). Each edge e ∈ E carries an operation op(e) that transforms the value passing through it. The graph has no cycles — no event can be among its own causal ancestors.
 
-### A2: Recursive Evaluation
+### A2: Local Propagation
 
-A single recursive function evaluates the graph:
+Changes propagate along causal edges at a maximum rate C. There is no global function, no central evaluator, no preferred root. Each event's committed state depends only on the committed states of its causal ancestors. Propagation is strictly local — an event can only influence its immediate causal neighbors, and influence ripples outward hop by hop.
 
-```
-function evaluate(node):
-    if node has no children:
-        return 1                        // leaf — base case
+### A3: Demand-Driven Commitment
 
-    result = identity
-    for each child of node:
-        child_value = evaluate(child)   // recurse
-        result = result × child_value   // apply edge operation
-
-    node.revision += 1                  // tick the counter
-    node.committed = result             // lock in the result
-    return result
-```
-
-The output of evaluation pass W(n) becomes the input of pass W(n+1). This is the engine's only operation.
-
-### A3: Lazy Evaluation
-
-No node evaluates until a consumer demands its result. A node with no consumer remains in a pending (unevaluated) state indefinitely.
+Events remain in an uncommitted (in-flight) state until forced to commit. Commitment is forced when an event sits in a causally dense region — a region where many causal paths converge and demand resolution. An event with no causal pressure to resolve remains in-flight indefinitely, carrying multiple possible outcomes.
 
 ### A4: No Stored Values
 
 Nodes store no intrinsic values. All values are derived from graph topology — the pattern of connections and the operations on edges. The structure IS the value.
 
-### A5: Self-Feeding Recursion
+### A5: Graph Growth
 
-The output of evaluation pass W(n) feeds the input of pass W(n+1). The graph evaluates itself repeatedly, each pass consuming the committed results of the previous pass. The graph may also grow: evaluations can add new nodes and edges.
+The graph grows: committed events spawn new causal edges and new events. Growth IS time — each new layer of committed events constitutes one tick of local time. The graph cannot shrink. Events, once committed, are permanent.
 
 ---
 
@@ -49,173 +32,173 @@ The output of evaluation pass W(n) feeds the input of pass W(n+1). The graph eva
 
 Each derived mechanic follows logically from the axioms. The citation format is [Axiom(s) → Mechanic].
 
-### D1: Time = Change
+### D1: Time = Graph Growth
 
-[A2, A5 → D1]
+[A5 → D1]
 
-Time is the revision counter. Each time a node commits a new result, one tick of local time has passed. No change = no time. Time is not a background parameter; it is the accumulated state changes of the graph.
+Time is graph growth. Each layer of newly committed events is one tick of local time. No growth = no time. Time is not a background parameter; it is the accumulated committed structure of the graph.
 
 ### D2: Causal Ordering
 
 [A1, A2 → D2]
 
-Children must evaluate before parents (a parent's result depends on its children's committed values). This imposes a partial order on evaluation — the causal structure of the graph.
+An event's state depends on its causal ancestors. This imposes a partial order on commitment — the causal structure of the graph. Effects cannot precede their causes.
 
 ### D3: Special Relativity (No Preferred Frame)
 
 [A1, A2, D2 → D3]
 
-Topological ordering has no preferred traversal order for causally independent nodes. Two observers on independent branches have no shared "now." No preferred frame arises because there is no ordering constraint between independent subgraphs.
+The causal partial order has no preferred traversal order for causally independent events. Two observers on independent branches have no shared "now." No preferred frame arises because there is no ordering constraint between causally disconnected regions.
 
-### D4: Speed of Light (C = Leaf Commit Rate)
+### D4: Speed of Light (C = Maximum Propagation Rate)
 
 [A1, A2 → D4]
 
-A leaf node has no children to recurse into. It commits at the maximum possible rate — one evaluation step. This rate is C. All non-leaf nodes are slower because they must wait for subgraph evaluation to complete.
+C is the maximum rate at which changes propagate along causal edges. An event with no causal ancestors to wait for commits at rate C — one hop per tick. All events with causal ancestry are slower because they must wait for upstream commitments to arrive. C is the speed limit because it is the propagation rate of the graph itself.
 
 ### D5: Mass = Stable Topology
 
-[A1, A2, A4 → D5]
+[A1, A4 → D5]
 
-A massive object is a region of the graph whose topology is stable — edges don't change, the same walk produces the same result every time. Mass is topological persistence.
+A massive object is a region of the graph whose topology is stable — the same pattern of causal connections persists across growth cycles, producing the same committed values. Mass is topological persistence.
 
 ### D6: Energy = Propagated Delta
 
 [A1, A2, A5, D5 → D6]
 
-When a stable topology is disrupted (edges rewired), the evaluation produces a different result. The difference (delta) propagates outward through the graph. That propagation is energy.
+When a stable topology is disrupted (edges rewired), commitment produces a different result. The difference (delta) propagates outward along causal edges. That propagation is energy.
 
-### D7: E = mc² (Bidirectional Walk)
+### D7: E = mc² (Speculative)
 
-[A2, D4, D5 → D7]
+[D4, D5 → D7]
 
-Recursive evaluation has two unavoidable phases: the call phase walks down from root to leaves (m hops at rate C), and the return phase walks back up from leaves to root (m hops at rate C). Total cost: m × C × C = mc². The c² factor is the two phases of recursion, not a magic constant.
+**Status: downgraded to speculative.** The original derivation depended on a bidirectional recursive walk (call phase down, return phase up) that no longer exists in the causal graph model. The causal graph has local propagation, not global recursion. A new derivation of the c² factor from local propagation mechanics is an open problem (see O9). The structural observation remains: disrupting a stable topology of depth m releases energy proportional to m × C², but the mechanism producing the squared factor needs rederivation.
 
-### D8: Call Stack Depth
+### D8: Causal Density
 
 [A1, A2 → D8]
 
-When the engine evaluates a deep subgraph, it builds a call stack — each parent waits for its children, which wait for their children, down to the leaves. The stack depth equals the subgraph depth. Deep subgraph = tall stack = everything nearby waits longer.
+When many causal paths converge on a region, that region has high causal density — many events are causally entangled, many edges intersect, commitment of any one event constrains many others. Dense regions process more causal information per unit of graph growth.
 
-### D9: Gravity = Routing Pressure
+### D9: Gravity = Causal Density Curving Paths
 
 [A1, A2, D8 → D9]
 
-A deep call stack makes paths through that region expensive. The system routes around it — paths through mass cost more evaluation steps than paths around it. Everything follows the cheapest path. The cheapest path curves around mass. That curve is gravity.
+A region of high causal density creates more causal constraints per hop. Propagation through a dense region requires more commitment steps than propagation through a sparse region. The cheapest causal path (fewest hops, fastest propagation) curves around dense regions. That curve is gravity.
 
-### D10: Spacetime Curvature = Inverted Call Stack
+### D10: Spacetime Curvature = Causal Density Profile
 
 [D8, D9 → D10]
 
-Plot call stack depth across the graph: a pyramid, tallest where mass is. Invert it: deep wells where mass is, flat elsewhere. Drape a fabric over it: spacetime curvature. The call stack topology IS the curvature of spacetime.
+Plot causal density across the graph: dense where mass is, sparse elsewhere. The profile of causal density IS the curvature of spacetime. Dense wells where mass is, flat elsewhere.
 
 ### D11: Gravity Cannot Be Shielded
 
 [A2, D8, D9 → D11]
 
-Other forces transmit via signals through edges — block the edge, block the signal. Gravity is not a signal. It is the call stack depth of the evaluation itself. A shield shares the same stack as the thing it's shielding. There is no layer in the render that can reach into the engine and alter stack depth.
+Other forces transmit via signals along specific causal edges — block the edge, block the signal. Gravity is not a signal. It is the causal density of the region itself. A shield placed near mass adds its own causal structure to the region, increasing density rather than decreasing it. You cannot reduce causal density by adding more stuff.
 
 ### D12: Equivalence Principle
 
 [D8, D9 → D12]
 
-Both gravity (deep subgraph nearby) and acceleration (additional evaluation work from motion) add depth to the local call stack. Same mechanism, same effect. Indistinguishable because they are the same thing.
+Both gravity (dense causal region nearby) and acceleration (rapid creation of new causal connections from motion) increase the local causal density. Same mechanism, same effect. Indistinguishable because they are the same thing.
 
 ### D13: Gravitational Time Dilation
 
 [D1, D8 → D13]
 
-Near mass, the call stack is deeper. Deeper stacks take longer to unwind. Commits are slower. Fewer state changes per unit of external comparison. Local clocks tick slower near mass.
+In a causally dense region, each growth cycle must process more causal constraints before commitment. More processing per tick = slower commitment rate relative to sparse regions. Local clocks tick slower where causal density is high.
 
 ### D14: Velocity Time Dilation
 
 [A2, D1, D4 → D14]
 
-Moving fast means position edges are being rewired, consuming evaluation steps. Fewer steps remain for internal state changes. At v = C, all evaluation steps go to motion — zero internal revisions, zero elapsed local time.
+Moving fast means new causal edges are being created for position changes, consuming propagation budget. Fewer propagation steps remain for internal state changes. At v = C, all propagation goes to position change — zero internal commitment, zero elapsed local time.
 
 ### D15: Arrow of Time
 
 [A5, D1 → D15]
 
-Each evaluation pass W(n) produces committed results that become the input for W(n+1). Walk 5 needs Walk 4's output. The dependency chain runs one direction. You cannot un-commit. The arrow of time is this dependency ordering.
+The graph grows. New events are born from committed ancestors. A committed event cannot be uncommitted. A born node cannot be unborn. The arrow of time is the irreversibility of graph growth.
 
-### D16: Superposition = Pending Evaluation
+### D16: Superposition = In-Flight Event
 
 [A3 → D16]
 
-A node with no strict consumer (nothing demanding its result) remains unevaluated. Its edges to possible states are all pending — not committed to any one outcome. This is superposition: multiple possible states, nothing yet committed.
+An event with no causal pressure to resolve (no dense region demanding its commitment) remains in-flight. Its causal edges to possible outcomes are all live — not committed to any single outcome. This is superposition: multiple possible states, nothing yet committed.
 
-### D17: Collapse = Consumer Demands Result
+### D17: Collapse = Dense Region Forces Commitment
 
-[A2, A3, D16 → D17]
+[A2, A3, D8, D16 → D17]
 
-When a strict consumer (detector, screen, other massive object) demands a node's result, the pending evaluation resolves. One path commits. The others are discarded. This is wavefunction collapse.
+When a dense causal region (detector, screen, massive object) creates causal paths converging on an in-flight event, the event must commit. One outcome is selected. The others are discarded. This is wavefunction collapse.
 
 ### D18: Decoherence
 
 [A3, D16, D17 → D18]
 
-Large objects consist of ~10²⁶ atoms, each a strict consumer demanding definite inputs from its neighbors. No pending evaluations survive in a warm, dense environment. Superposition is destroyed by the density of consumers.
+Large objects consist of ~10²⁶ atoms, each creating dense causal connections demanding definite inputs from neighbors. No in-flight events survive in a warm, dense environment. Superposition is destroyed by causal density.
 
 ### D19: Double-Slit Interference
 
 [A3, D16, D17 → D19]
 
-No consumer at the slits → both paths pending. The engine evaluates all pending paths without committing. Pending paths overlap at the detection screen — constructive interference where they align, destructive where they cancel. The screen's atoms force commitment: one dot. Over many particles, the interference pattern fills in.
+No dense region at the slits → both causal paths remain in-flight. The in-flight paths carry uncommitted possibilities through both slits. At the detection screen — a causally dense region — the paths must commit. Where in-flight paths overlap: constructive interference where they align, destructive where they cancel. The screen forces commitment: one dot. Over many particles, the interference pattern fills in.
 
 ### D20: Quantum Eraser
 
 [A2, A3, D16, D17 → D20]
 
-The eraser sits upstream in the dependency chain. When the screen demands the particle's position, the demand cascades backward through the dependency graph. The cascade reads the eraser's state at the moment the pull arrives. Eraser OFF (which-path erased): both paths still pending, interference emerges. Eraser ON (which-path recorded): one path committed, interference destroyed. No retrocausality — the evaluation was in flight through the dependency chain; the eraser's state at cascade-time determines the outcome.
+The eraser sits upstream in the causal graph. When the screen demands commitment, that demand propagates backward through the causal ancestry. The propagation encounters the eraser's state at the moment it arrives. Eraser OFF (which-path erased): both causal paths still in-flight, interference emerges. Eraser ON (which-path recorded): one path committed, interference destroyed. No retrocausality — the commitment was propagating through the causal graph; the eraser's state at propagation-time determines the outcome.
 
-### D21: Entanglement = Shared Subgraph Node
+### D21: Entanglement = Shared Causal Ancestor
 
 [A1, A2, A4 → D21]
 
-When two particles interact, their value subgraphs merge — they share a node. Position can change (they can separate spatially), but the shared node doesn't depend on position. When either particle's evaluation demands the shared node's result, it commits. Both particles read the same committed value. Correlation from topology, not signaling.
+When two particles interact, their causal histories merge — they share a common causal ancestor event. Position can change (they can separate spatially), but the shared ancestor doesn't depend on position. When either particle's commitment demands the shared ancestor's result, it commits. Both particles read the same committed value. Correlation from shared causal topology, not signaling.
 
 ### D22: No FTL Communication via Entanglement
 
 [D4, D21 → D22]
 
-Entangled results are correlated but individually random. Neither observer's local measurement outcome carries information about the other's choice. Useful correlation only emerges when results are compared, which requires classical communication at rate ≤ C.
+Entangled results are correlated but individually random. Neither observer's local commitment outcome carries information about the other's choice. Useful correlation only emerges when results are compared, which requires classical communication at rate ≤ C.
 
 ### D23: Antimatter = Mirror Graph
 
 [A1, A4, D5, D6 → D23]
 
-Antimatter is a graph whose topology is the mirror (conjugate) of its corresponding matter topology. When matter and antimatter subgraphs meet, their topologies cancel completely — every edge finds its inverse. The full evaluation energy propagates outward.
+Antimatter is a graph whose topology is the mirror (conjugate) of its corresponding matter topology. When matter and antimatter subgraphs meet, their topologies cancel completely — every edge finds its inverse. The full energy propagates outward.
 
 ### D24: Space = Graph Shape, Planck Length = 1 Hop
 
 [A1 → D24]
 
-Space is the large-scale connectivity pattern of the graph. Distance is hop count — the minimum number of edges between two nodes. The minimum distance is one hop = one node = Planck length.
+Space is the large-scale connectivity pattern of the graph. Distance is hop count — the minimum number of causal edges between two events. The minimum distance is one hop = one edge = Planck length.
 
-### D25: Expansion = Self-Growing Graph
+### D25: Expansion = Graph Growth
 
 [A2, A5 → D25]
 
-Some evaluations produce new nodes and edges. More graph → more evaluations → more new nodes. Growth proportional to current size = accelerating expansion. No external "dark energy" required — the graph computes itself into existence.
+Committed events spawn new events and edges. More graph → more commitments → more new events. Growth proportional to current size = accelerating expansion. No external "dark energy" required — the graph grows itself into existence.
 
-### D26: Black Hole = Non-Terminating Evaluation
+### D26: Black Hole = Extreme Causal Density
 
 [A2, D8 → D26]
 
-A subgraph so deep that evaluation never completes. The call stack builds without unwinding. Unlike GR's singularity prediction (infinite density), the subgraph is finite and the stack is finite — the computation simply never finishes. Stack exhaustion, not mathematical breakdown.
+A region of such extreme causal density that no causal path leads outward — every neighboring event is causally downstream of the dense core. Unlike GR's singularity prediction (infinite density), the graph is finite and the density is finite — propagation simply cannot escape. Causal trapping, not mathematical breakdown.
 
-### D27: Complex Amplitudes from Cycles (Exploratory)
+### D27: Complex Amplitudes (Open Problem)
 
-[A1, A2 → D27]
+[A1 → D27]
 
-When the graph contains cycles (a node that depends on itself), topological ordering breaks. Self-consistency forces the value to equal the result of its own operation applied to itself. For multiplicative operations, the solutions are roots of unity — complex numbers. Complex amplitudes emerge from cyclic graph topology, not as a bolted-on rule.
+**Status: downgraded to open problem.** The original derivation relied on cycles in the graph to produce roots of unity. But A1 now requires a DAG — no cycles allowed. The mechanism by which complex-valued amplitudes emerge from an acyclic causal graph is unknown. This is a significant gap. See O4.
 
-### D28: Born Rule — P = |α|² (Exploratory)
+### D28: Born Rule — P = |α|² (Open Problem)
 
-[D7, D27 → D28]
+[D27 → D28]
 
-The bidirectional walk (call phase down, return phase up) means the final result involves amplitude α times its conjugate α*: α × α* = |α|². Multiple paths to the same node accumulate complex amplitudes — some reinforce (constructive interference), some cancel (destructive interference). The squared modulus gives the probability. **Status: exploratory, not a derivation from first principles.**
+**Status: downgraded to open problem.** The Born rule derivation was downstream of D27 (complex amplitudes from cycles). With the cycle mechanism lost, the Born rule has no derivation in this framework. See O4.
 
 ---
 
@@ -227,97 +210,97 @@ These are additional mechanics needed to address the full test suite in `tests.m
 
 [A1, D9 → D29]
 
-In a graph embedded in 3D-like connectivity, the number of nodes at distance r (hop count) from a source scales as ~r². Routing pressure (gravity) from a point source dilutes over this surface area, producing 1/r² falloff. **Status: requires proof that graph connectivity produces 3D surface-area scaling.**
+In a graph embedded in 3D-like connectivity, the number of events at distance r (hop count) from a source scales as ~r². Causal density from a point source dilutes over this surface area, producing 1/r² falloff. **Status: requires proof that graph connectivity produces 3D surface-area scaling.**
 
 ### D30: Geodesic Motion
 
 [D9, D10 → D30]
 
-Free-falling objects follow the cheapest evaluation path through the routing table. In curved regions (near mass), cheapest paths curve. These are geodesics — the straightest possible paths through the graph's routing topology.
+Free-falling objects follow the cheapest causal path through the graph. In dense regions (near mass), cheapest paths curve. These are geodesics — the straightest possible paths through the graph's causal topology.
 
 ### D31: Gravitational Lensing
 
 [D9, D10, D30 → D31]
 
-Light (leaf-node evaluation chains) follows cheapest paths. Near mass, cheapest paths bend. Light bends around massive objects. The bending angle depends on stack depth profile.
+Light (maximum-rate propagation along causal edges) follows cheapest paths. Near mass, cheapest paths bend. Light bends around massive objects. The bending angle depends on the causal density profile.
 
 ### D32: Gravitational Redshift
 
 [D1, D13 → D32]
 
-A signal (evaluation chain) climbing out of a deep-stack region loses evaluation steps to the stack gradient. Fewer steps available = lower frequency. Light climbing out of a gravitational well redshifts.
+A signal (propagation chain) climbing out of a causally dense region loses propagation steps to the density gradient. Fewer steps available = lower frequency. Light climbing out of a gravitational well redshifts.
 
 ### D33: Gravitational Waves
 
 [A5, D9, D10 → D33]
 
-When a massive topology changes rapidly (binary merger), the routing table updates propagate outward through the graph as ripples — changes in the cheapest-path structure radiating from the source. These are gravitational waves.
+When a massive topology changes rapidly (binary merger), the causal density profile updates propagate outward through the graph as ripples — changes in the cheapest-path structure radiating from the source. These are gravitational waves.
 
 ### D34: Frame Dragging
 
 [A2, D9 → D34]
 
-A rotating massive subgraph drags its local routing table around with it. Nearby evaluation paths are biased in the rotation direction. **Status: qualitative mapping.**
+A rotating massive region drags its local causal structure around with it. Nearby propagation paths are biased in the rotation direction. **Status: qualitative mapping.**
 
 ### D35: Inertia (F = ma)
 
 [D5, D8 → D35]
 
-A stable topology (mass) resists changes to its evaluation path. Rewiring edges (changing velocity) requires evaluation work proportional to the topology's size. Larger stable topology = more work to change = more inertia.
+A stable topology (mass) resists changes to its propagation path. Rewiring causal edges (changing velocity) requires propagation work proportional to the topology's size. Larger stable topology = more work to change = more inertia.
 
 ### D36: Conservation of Energy
 
 [A2, A5 → D36]
 
-The evaluation function preserves information — every input produces an output, every committed value feeds the next pass. Total evaluation work is conserved across passes. No evaluation steps are created or destroyed, only transformed between regions.
+Local propagation preserves information — every input produces an output, every committed value feeds the next growth cycle. Total propagation work is conserved across cycles. No propagation steps are created or destroyed, only transformed between regions.
 
 ### D37: Entropy Increase (Second Law)
 
 [A2, A5, D2 → D37]
 
-The graph evolves via committed results feeding forward. Each pass increases the number of committed states and constraints. The number of ways to arrange uncommitted subgraph topologies consistent with all committed constraints increases monotonically. This is entropy increase.
+The graph evolves via committed results feeding forward into new growth. Each cycle increases the number of committed events and constraints. The number of ways to arrange uncommitted events consistent with all committed constraints increases monotonically. This is entropy increase.
 
 ### D38: Lorentz Transformation
 
 [D3, D4, D14 → D38]
 
-The mathematical relationship between observations in different traversal orderings. Motion consumes evaluation steps, producing time dilation (D14). The metric structure of the graph's routing table under changes of traversal order produces Lorentz-like transformation. **Status: qualitative — exact Lorentz factor derivation not yet accomplished.**
+The mathematical relationship between observations in different traversal orderings. Motion consumes propagation steps, producing time dilation (D14). The metric structure of the graph's causal topology under changes of traversal order produces Lorentz-like transformation. **Status: qualitative — exact Lorentz factor derivation not yet accomplished.**
 
 ### D39: Length Contraction
 
 [D14, D38 → D39]
 
-In a frame moving at velocity v, the evaluation steps consumed by motion compress the spatial extent of a moving subgraph along the direction of motion. A consequence of the same evaluation-step budget that produces time dilation.
+In a frame moving at velocity v, the propagation steps consumed by motion compress the spatial extent of a moving region along the direction of motion. A consequence of the same propagation budget that produces time dilation.
 
 ### D40: Relativistic Momentum
 
 [D5, D14, D35, D38 → D40]
 
-As velocity approaches C, nearly all evaluation steps go to motion. Changing velocity further requires disproportionately more evaluation work. Momentum diverges as v → C because the evaluation budget is finite.
+As velocity approaches C, nearly all propagation steps go to motion. Changing velocity further requires disproportionately more propagation work. Momentum diverges as v → C because the propagation budget is finite.
 
 ### D41: Hubble Expansion Rate
 
 [D25 → D41]
 
-The rate of graph self-growth determines the expansion rate. Growth proportional to current graph size gives v = H₀d (Hubble's law), where H₀ relates to the growth rate per evaluation pass. **Status: qualitative — exact Hubble constant not derived.**
+The rate of graph growth determines the expansion rate. Growth proportional to current graph size gives v = H₀d (Hubble's law), where H₀ relates to the growth rate per cycle. **Status: qualitative — exact Hubble constant not derived.**
 
 ### D42: CMB as Early-Graph Thermal Signature
 
 [A5, D25 → D42]
 
-The early graph was small and densely connected — every node was a consumer of every nearby node, forcing rapid commitment. The thermal signature of this dense early state is the CMB. Tiny variations in initial graph topology produce the observed anisotropies. **Status: qualitative mapping.**
+The early graph was small and extremely causally dense — every event was causally connected to every nearby event, forcing rapid commitment. The thermal signature of this dense early state is the CMB. Tiny variations in initial graph topology produce the observed anisotropies. **Status: qualitative mapping.**
 
 ### D43: Particle Spectrum Constraints
 
-[A1, D5, D27 → D43]
+[A1, D5 → D43]
 
-Stable topological configurations of the graph (matter) come in discrete types determined by which subgraph patterns are self-consistent under recursive evaluation with cycles. Each stable pattern corresponds to a particle type. **Status: the specific spectrum (electron mass, quark charges, three generations) is NOT derived. This is an open problem (see O3).**
+Stable topological configurations of the graph (matter) come in discrete types determined by which patterns are self-consistent under local propagation. Each stable pattern corresponds to a particle type. **Status: the specific spectrum (electron mass, quark charges, three generations) is NOT derived. This is an open problem (see O3). The mechanism for stable patterns in a DAG (without cycles) needs development.**
 
 ### D44: Vacuum Fluctuations
 
 [A3, A5 → D44]
 
-Even with no explicit consumer, the self-feeding recursion (A5) provides a background evaluation pressure. Nodes briefly enter and exit pending states. These transient pending-committed cycles are vacuum fluctuations — virtual particle-antiparticle pairs that appear and annihilate.
+Even with no explicit dense region demanding commitment, graph growth (A5) provides a background pressure. Events briefly enter and exit in-flight states. These transient in-flight/committed cycles are vacuum fluctuations — virtual particle-antiparticle pairs that appear and annihilate.
 
 ---
 
@@ -325,35 +308,47 @@ Even with no explicit consumer, the self-feeding recursion (A5) provides a backg
 
 ### O1: Einstein Field Equations
 
-Cannot derive Gμν + Λgμν = 8πG/c⁴ Tμν from graph axioms. The qualitative match between call stack topology and spacetime curvature is strong, but without the exact equations, the framework remains a compelling analogy rather than a formal theory. **Closing this gap would be the single highest-impact advance.**
+Cannot derive Gμν + Λgμν = 8πG/c⁴ Tμν from graph axioms. The qualitative match between causal density profiles and spacetime curvature is strong, but without the exact equations, the framework remains a compelling analogy rather than a formal theory. **Closing this gap would be the single highest-impact advance.**
 
 ### O2: Confluence
 
-Cannot formally prove the computation is confluent — that committed results are independent of traversal order. If different evaluation orderings produce different committed states, the framework predicts Lorentz symmetry violations that are not observed (tested to 10⁻²¹ precision).
+Cannot formally prove the computation is confluent — that committed results are independent of the order in which causally independent events commit. If different commitment orderings produce different states, the framework predicts Lorentz symmetry violations that are not observed (tested to 10⁻²¹ precision).
 
 ### O3: Particle Spectrum
 
-Cannot explain why specific particles exist with specific masses and charges. "Particles are stable topologies" is a category, not a derivation. Why an electron has mass 0.511 MeV, why there are three generations, why quarks come in six flavors — all unexplained. Additionally, the naive mapping from graph cycle symmetry (Z_n) to particle physics gauge groups (SU(n)) fails — these are fundamentally different mathematical structures. A mechanism for recovering continuous gauge symmetry from discrete graph topology is not known.
+Cannot explain why specific particles exist with specific masses and charges. "Particles are stable topologies" is a category, not a derivation. Why an electron has mass 0.511 MeV, why there are three generations, why quarks come in six flavors — all unexplained. The removal of cycles (A1 now requires a DAG) further constrains possible mechanisms.
 
-### O4: Born Rule Derivation
+### O4: Complex Amplitudes and Born Rule
 
-Cannot derive P = |α|² from first principles. The exploratory argument (D27, D28) shows that cycles in graphs naturally produce complex amplitudes and squared-modulus structure, but this is not a rigorous derivation.
+Cannot derive complex-valued amplitudes or P = |α|² from first principles. The previous mechanism (graph cycles producing roots of unity) is incompatible with the DAG requirement of A1. A new mechanism for complex amplitudes in an acyclic causal graph is needed. This is arguably the single biggest theoretical gap — quantum mechanics runs on complex numbers, and we have no mechanism to produce them.
 
-### O5: Hierarchy Problem
+### O5: Interference Aggregation Function
 
-Gravity is ~10³⁶ times weaker than electromagnetism. The framework offers no explanation for why routing pressure (gravity) from stack depth would be so many orders of magnitude weaker than signal-based forces through edges.
+The double-slit experiment requires in-flight paths to interfere — constructively and destructively. The framework says in-flight paths "overlap" but does not specify the mathematical function that governs how they combine. What rule determines constructive vs. destructive interference? Without this, the framework describes interference verbally but cannot predict fringe spacing or visibility.
 
 ### O6: Unique Experimental Predictions
 
-The framework makes one testable prediction that differs from standard GR: **no singularity** at the center of black holes (D26). The prediction is stack exhaustion (finite depth, non-terminating computation) rather than infinite density. If quantum gravity observations become possible, this could be tested. Beyond this, the framework currently makes no unique quantitative predictions that distinguish it from existing physics.
+The framework makes one testable prediction that differs from standard GR: **no singularity** at the center of black holes (D26). The prediction is causal trapping (finite density, no escape path) rather than infinite density. If quantum gravity observations become possible, this could be tested. Beyond this, the framework currently makes no unique quantitative predictions that distinguish it from existing physics.
 
 ### O7: Lorentz Invariance on Discrete Structure
 
-Any discrete spacetime must explain why Lorentz symmetry holds to the precision measured experimentally — roughly 10⁻²⁰ times tighter than a naive lattice or graph discretization would produce. Continuous Lorentz symmetry is a property of smooth manifolds; a discrete graph should break this symmetry at scales near the discretization length. The framework has no mechanism for recovering exact Lorentz invariance from discrete graph structure. This is arguably the single biggest existential threat to any discrete spacetime theory, including this one. Related to O2 (confluence), but a distinct problem: even if the computation is confluent, the discrete structure itself may violate continuous symmetry.
+Any discrete spacetime must explain why Lorentz symmetry holds to the precision measured experimentally — roughly 10⁻²⁰ times tighter than a naive lattice or graph discretization would produce. Continuous Lorentz symmetry is a property of smooth manifolds; a discrete graph should break this symmetry at scales near the discretization length. The framework has no mechanism for recovering exact Lorentz invariance from discrete graph structure. This is arguably the single biggest existential threat to any discrete spacetime theory, including this one. Related to O2 (confluence), but a distinct problem: even if commitment is confluent, the discrete structure itself may violate continuous symmetry.
 
 ### O8: Analogy vs. Derivation
 
-The framework reasons primarily by structural analogy rather than mathematical derivation. The mappings between graph mechanics and physics exist on a spectrum: some are exact (topological ordering = causal structure), some are plausible but unproven (stack depth ≈ gravitational potential), and some are speculative (cycle length = gauge group). Until the structural matches produce quantitative predictions — specific numbers that can be compared to experiment — the framework remains a conceptual model, not a physical theory. This is a meta-problem that applies to every claim in the framework.
+The framework reasons primarily by structural analogy rather than mathematical derivation. The mappings between graph mechanics and physics exist on a spectrum: some are exact (topological ordering = causal structure), some are plausible but unproven (causal density ≈ gravitational potential), and some are speculative (stable topology = particle). Until the structural matches produce quantitative predictions — specific numbers that can be compared to experiment — the framework remains a conceptual model, not a physical theory. This is a meta-problem that applies to every claim in the framework.
+
+### O9: E=mc² Derivation
+
+The previous derivation of the c² factor relied on bidirectional recursive evaluation (call phase down, return phase up). The causal graph model has local propagation, not global recursion. A new derivation explaining why disrupting a stable topology of depth m releases energy proportional to m × C² from purely local propagation mechanics is needed.
+
+### O10: Bell's Theorem and Topological Correlations
+
+Entanglement correlations (D21) are explained via shared causal ancestry. Bell's theorem proves that no local hidden variable theory can reproduce quantum correlations. The shared causal ancestor is NOT a local hidden variable — it is a topological feature. But a rigorous proof that topological correlations in a DAG can violate Bell inequalities without violating locality constraints has not been provided. This needs formal development.
+
+### O11: Growth Dynamics
+
+What determines WHERE new events are born in the graph? Graph growth (A5) says the graph grows, but does not specify the rule governing which committed events spawn new edges and where new events appear. Without a growth rule, the framework cannot predict large-scale structure formation, galaxy distribution, or the specific geometry of spacetime.
 
 ---
 
@@ -361,7 +356,7 @@ The framework reasons primarily by structural analogy rather than mathematical d
 
 | Axiom | Primary Test Cases Addressed |
 |-------|------------------------------|
-| A1 | All (graph structure is foundational) |
+| A1 | All (causal graph structure is foundational) |
 | A2 | QM-1 through QM-16, GR-1 through GR-15, SR-1 through SR-9 |
 | A3 | QM-1, QM-2, QM-3, QM-7, QM-8, QM-9, QM-16 |
 | A4 | PP-1, PP-4, INF-3, INF-4 |

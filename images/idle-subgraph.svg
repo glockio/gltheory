@@ -1,4 +1,4 @@
-<!-- DESCRIPTION: Isolated subgraph (4-5 nodes) floating with no consumer nearby. All edges purple/dotted (pending). All nodes show "?". Surrounding committed graph (green) for contrast. Label: "No consumer. All paths pending. This is superposition." -->
+<!-- DESCRIPTION: Subgraph (4 nodes) connected to the surrounding committed graph via thin gray dashed edges, but not causally pressured to commit. All internal edges purple/dotted (pending). All nodes show "?". Surrounding committed graph (green) for contrast. Dashed connections show it's part of the graph but idle. Label: "No causal pressure. All paths in-flight. This is superposition." Annotation: "Connected to the graph, but no dense region demands commitment. It stays in-flight." -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800">
   <style>
     text { font-family: "DM Sans", sans-serif; }
@@ -35,8 +35,16 @@
   <text x="160" y="165" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="600">COMMITTED</text>
   <text x="660" y="140" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="600">COMMITTED</text>
 
+  <!-- Dashed connections from committed graph TO idle subgraph -->
+  <!-- Left committed → idle subgraph -->
+  <line x1="256" y1="80" x2="330" y2="80" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <line x1="256" y1="85" x2="332" y2="130" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <!-- Right committed → idle subgraph -->
+  <line x1="604" y1="70" x2="510" y2="80" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+  <line x1="604" y1="75" x2="508" y2="130" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
   <!-- Idle subgraph (center, purple, pending) -->
-  <!-- Dashed boundary to emphasize isolation -->
+  <!-- Dashed boundary to emphasize idle state -->
   <rect x="310" y="30" width="220" height="200" rx="16" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.4"/>
 
   <!-- Node 1 (top) -->
@@ -62,11 +70,10 @@
   <line x1="474" y1="154" x2="434" y2="186" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
   <line x1="370" y1="140" x2="470" y2="140" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
 
-  <!-- No gap-crossing edges — idle subgraph is isolated -->
-
   <!-- Main label -->
-  <text x="400" y="280" text-anchor="middle" font-size="15" fill="#7d3c98" font-weight="700">No consumer. All paths pending. This is superposition.</text>
+  <text x="400" y="268" text-anchor="middle" font-size="15" fill="#7d3c98" font-weight="700">No causal pressure. All paths in-flight. This is superposition.</text>
 
   <!-- Annotation -->
-  <text x="400" y="310" text-anchor="middle" font-size="12" fill="#7a7a6a">The surrounding graph is committed (green). The isolated subgraph has no reader. It sits idle.</text>
+  <text x="400" y="296" text-anchor="middle" font-size="11.5" fill="#7a7a6a">Connected to the graph, but no dense region demands commitment.</text>
+  <text x="400" y="316" text-anchor="middle" font-size="11.5" fill="#7a7a6a" font-weight="600">It stays in-flight.</text>
 </svg>

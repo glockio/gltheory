@@ -1,4 +1,4 @@
-<!-- DESCRIPTION: Two panels. LEFT: idle subgraph from idle-subgraph figure — all pending, no consumer. RIGHT: consumer node (green, "DETECTOR") connected. Cascade path highlighted green through the subgraph. One path commits (solid green). Others fade to gray. Labels: "Before: idle" / "Consumer connected. One path commits." -->
+<!-- DESCRIPTION: Two panels. LEFT: idle subgraph — all pending, no causal pressure. RIGHT: dense causal region connects, forcing commitment. Cascade path highlighted green through the subgraph. One path commits (solid green). Others fade to gray. Labels: "In-flight. No causal pressure." / "Dense region connects. Commitment forced. One path resolves." -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800">
   <style>
     text { font-family: "DM Sans", sans-serif; }
@@ -39,7 +39,7 @@
   <line x1="246" y1="168" x2="208" y2="197" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
   <line x1="148" y1="155" x2="242" y2="155" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
 
-  <text x="195" y="270" text-anchor="middle" font-size="12" fill="#7d3c98" font-weight="600">All paths pending. No consumer.</text>
+  <text x="195" y="270" text-anchor="middle" font-size="12" fill="#7d3c98" font-weight="600">In-flight. No causal pressure.</text>
 
   <!-- === RIGHT PANEL: CASCADE === -->
   <text x="600" y="30" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700" letter-spacing="1.5">AFTER</text>
@@ -54,7 +54,7 @@
 
   <!-- Node 3 (right) — faded (not chosen) -->
   <circle cx="655" cy="155" r="18" fill="#f5f2eb" stroke="#bbb" stroke-width="1.5"/>
-  <text x="655" y="161" text-anchor="middle" font-size="13" fill="#bbb" font-weight="600">—</text>
+  <text x="655" y="161" text-anchor="middle" font-size="13" fill="#bbb" font-weight="600">--</text>
 
   <!-- Node 4 (bottom) — committed -->
   <circle cx="590" cy="210" r="18" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
@@ -71,19 +71,30 @@
   <!-- Faded edge: left ↔ right -->
   <line x1="543" y1="155" x2="637" y2="155" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
 
-  <!-- Detector node -->
-  <circle cx="590" cy="295" r="22" fill="#1e8449" stroke="#145a32" stroke-width="2"/>
-  <text x="590" y="300" text-anchor="middle" font-size="10" fill="white" font-weight="700">DETECTOR</text>
+  <!-- Dense region node (replaces "DETECTOR") -->
+  <!-- Multiple interconnected nodes to convey density -->
+  <circle cx="570" cy="290" r="10" fill="#1e8449" stroke="#145a32" stroke-width="1.5"/>
+  <circle cx="590" cy="300" r="10" fill="#1e8449" stroke="#145a32" stroke-width="1.5"/>
+  <circle cx="610" cy="290" r="10" fill="#1e8449" stroke="#145a32" stroke-width="1.5"/>
+  <circle cx="590" cy="278" r="10" fill="#1e8449" stroke="#145a32" stroke-width="1.5"/>
+  <!-- Cross-connections within dense region -->
+  <line x1="575" y1="284" x2="585" y2="273" stroke="#145a32" stroke-width="1.2" opacity="0.6"/>
+  <line x1="595" y1="273" x2="605" y2="284" stroke="#145a32" stroke-width="1.2" opacity="0.6"/>
+  <line x1="575" y1="296" x2="585" y2="305" stroke="#145a32" stroke-width="1.2" opacity="0.6"/>
+  <line x1="595" y1="305" x2="605" y2="296" stroke="#145a32" stroke-width="1.2" opacity="0.6"/>
+  <line x1="578" y1="290" x2="602" y2="290" stroke="#145a32" stroke-width="1.2" opacity="0.6"/>
+  <line x1="585" y1="283" x2="585" y2="295" stroke="#145a32" stroke-width="1" opacity="0.4"/>
+  <line x1="595" y1="283" x2="595" y2="295" stroke="#145a32" stroke-width="1" opacity="0.4"/>
+  <!-- Dense region label -->
+  <text x="590" y="325" text-anchor="middle" font-size="9" fill="#1e8449" font-weight="700">DENSE REGION</text>
 
-  <!-- Cascade arrow from detector to bottom node -->
-  <line x1="590" y1="273" x2="590" y2="232" stroke="#1e8449" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
-
-  <!-- Green cascade arrow markers -->
+  <!-- Cascade arrow from dense region to bottom node -->
   <defs>
     <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
       <path d="M0,0 L8,3 L0,6" fill="#1e8449"/>
     </marker>
   </defs>
+  <line x1="590" y1="268" x2="590" y2="232" stroke="#1e8449" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
 
-  <text x="600" y="340" text-anchor="middle" font-size="12" fill="#1e8449" font-weight="600">Consumer connects. One path commits. The rest fade.</text>
+  <text x="600" y="348" text-anchor="middle" font-size="11.5" fill="#1e8449" font-weight="600">Dense region connects. Commitment forced. One path resolves.</text>
 </svg>

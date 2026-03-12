@@ -227,41 +227,43 @@ Background: `var(--block-bg-code)`. Border: 1px solid `var(--border)`. JetBrains
 ### Narrative Arc
 
 ```
-Ch 1: You Are Mario (hook, two layers, graph basics, rules, recursion)
+Ch 1: You Are Mario (hook, two layers, graph basics, rules, local propagation)
   ↓
-Ch 2: Run It (pseudocode, evaluation walkthrough, "Did You Notice?" seedlings, primes PoC)
+Ch 2: Run It (propagation walkthrough, time/C/mass seedlings, what a particle IS, primes PoC)
   ↓
 ★ Ch 3: THE REVEAL — "Wait. This IS Spacetime." ★
-  (You Already Use This Model → subgraph stacks → pyramid → flip → spacetime)
+  (You Already Use This Model → causal density → density profile → flip → spacetime)
   (THE PUNCH: "This IS spacetime." → THE RANT: Greg processes the realization)
   ↓
 PART 2: GR CONFIRMATION
-  ├── Mass & Energy (stable topology, E=mc², antimatter)
-  ├── Gravity (routing pressure, 3 mysteries dissolved, black holes, dark matter card)
-  └── Time, Space & C (hop count, leaf commit rate, dilation, arrow, GPS, muon, expansion)
+  ├── Mass & Energy (stable topology, E=mc² as open gap, antimatter)
+  ├── Gravity (causal density curving paths, 3 mysteries dissolved, black holes, dark matter gap)
+  └── Time, Space & C (hop count, max propagation rate, dilation, arrow, GPS, muon, expansion)
   ↓
 PART 3: QM CONFIRMATION
-  ├── The Idle Node (superposition from lazy evaluation)
+  ├── The In-Flight Event (superposition from demand-driven commitment)
   ├── Why You Can't Just Look (Heisenberg as topological constraint)
-  ├── Entanglement (CENTERPIECE — shared node, 3 figures, cascade)
+  ├── Entanglement (CENTERPIECE — shared causal ancestor, 3 figures, cascade)
   ├── The Double-Slit (4 steps, compressed)
-  └── Quantum Eraser & Delayed Choice (upstream dependency, payoff)
+  └── Quantum Eraser & Delayed Choice (upstream in causal graph, payoff)
+  ↓
+What's Actually Novel Here (two honest contributions)
   ↓
 Honest Gaps (earned credibility)
   ↓
-Quick Reference Table
+Quick Reference Table (with confidence column)
 ```
 
 ### The Core Insight
 
-**Nodes store nothing. Values, forces, and observable properties all emerge from graph topology alone.** The universe is a recursive function walking a graph. The walking IS reality.
+**Nodes store nothing. Values, forces, and observable properties all emerge from graph topology alone.** The universe is a causal graph that grows itself. Growth IS time. Dense regions force commitment.
 
-The structural pivot is Chapter 3 — the revelation that the call stack topology IS spacetime. Everything before builds to it. Everything after confirms it.
+The structural pivot is Chapter 3 — the revelation that the causal density profile IS spacetime. Everything before builds to it. Everything after confirms it.
 
 Thread three ideas throughout:
 1. Topology generates values (prime demo proof-of-concept)
 2. Topological ordering gives you relativity
-3. Call stack depth gives you gravity and time dilation
+3. Causal density gives you gravity and time dilation
 
 ---
 
@@ -293,26 +295,31 @@ All figures, their slugs, labels, and full descriptions for SVG generation.
 
 ### two-layers-of-reality
 - **Label:** Figure 0 — Two Layers of Reality
-- **Description:** Left: a TV screen showing Mario's world (stick-figure Mario, platforms, a question block) labeled "RENDER LAYER — What Mario experiences. His 'reality.'" Right: a Nintendo console with circuit board showing graph nodes and edges inside, labeled "ENGINE LAYER — Dots and lines. The actual computation." Arrow goes FROM the console TO the TV screen, labeled "produces."
-- **Caption:** Two layers. The engine computes the graph. The screen shows the output — Mario's world. Mario can't see the engine. He only sees the output. Sound familiar?
+- **Description:** Left: a TV screen showing Mario's world (stick-figure Mario, platforms, a question block) labeled "OUTPUT — What Mario experiences. His 'reality.'" Right: a Nintendo console with circuit board showing graph nodes and edges inside, labeled "CAUSAL STRUCTURE — Events and connections. The actual fabric." Arrow goes FROM the console TO the TV screen, labeled "produces."
+- **Caption:** Two layers. The structure produces committed results. The screen shows the output — Mario's world. Mario can't see the structure. He only sees the output. Sound familiar?
 
 ### you-already-know-what-a-graph-is
 - **Label:** Figure 1 — You Already Know What a Graph Is
 - **Description:** Three simple graphs side by side: a family tree (5 people, parent-child lines), a social network (6 people, friend connections), and a recipe (4 steps with directional arrows: Mix → Bake → Cool → Frost).
-- **Caption:** These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots. And the lines/edges can have values too, so for the family tree example the line would show "mom" on the relationship between you and your mother.
+- **Caption:** These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots.
 
-### graph-evaluation-walkthrough
-- **Label:** Figure 2 — Watch What Emerges From Recursive Evaluation
-- **Description:** A 2-3 panel visual showing a small graph (root with two children, each with a leaf) being evaluated step by step. Panel 1: "BEFORE" — all nodes show "?" (pending). Annotation: "Nothing demanded yet. All nodes pending. → That's superposition." Panel 2: "EVALUATING" — leaves evaluate first (they have no children, return immediately at rate C). Call stack shown building as parent waits for children. Annotations: "Leaves go first — can't evaluate parent before children. → That's causal ordering." / "Stack builds while parent waits. → That's the gravity mechanism." / "Leaf commits instantly — no subgraph to recurse. → That's C, the speed of light." Panel 3: "COMPLETE" — all nodes committed, revision counters ticked. Parent reads children's LAST committed values. Annotations: "Each node ticked its revision counter. → That's time." / "Parent read the LAST committed result, not the in-progress one. → That's the speed-of-information limit."
-- **Caption:** One recursive function. No physics. No special rules. Just: evaluate the graph. And look what fell out.
+### propagation-walkthrough
+- **Label:** Figure 2 — Local Propagation at C
+- **Description:** A 3-panel walkthrough of local propagation. Panel 1 "EVENT COMMITS": A single node in the center commits (turns green), labeled "Change happens here." Panel 2 "NEIGHBORS COMMIT": The committed node's immediate causal neighbors (3-4 nodes connected by edges) commit in the next tick, highlighted with green ripple outward. Label: "One hop later — neighbors commit. Rate: C." Panel 3 "RIPPLE CONTINUES": The ripple has spread two hops out. More nodes committed, forming a growing green circle. Outer ring still purple/pending. Label: "Two hops later — the change has propagated outward. This IS the speed of light." Bottom summary: "No global function. No central evaluator. Changes ripple outward, hop by hop, at rate C."
+- **Caption:** A change happens at one event. One hop later, its neighbors commit. Two hops later, the ripple has spread further. This IS the speed of light — changes propagating outward through the causal graph.
+
+### what-is-a-particle
+- **Label:** Figure 2b — What IS a Particle?
+- **Description:** Three snapshots left-to-right showing a small cluster of nodes (4-5) in a distinctive triangular pattern that maintains its topology as it moves through the graph. "TICK 1", "TICK 2", "TICK 3". In each snapshot, the pattern is in a different position but maintains the same internal structure. Old positions shown as faded gray. New positions shown in blue. The surrounding graph grows (more nodes at each tick). Label: "A particle: a stable topology that propagates through the growing graph. Same pattern. Different position. The pattern IS the particle."
+- **Caption:** A particle is a stable topology propagating through the growing graph. Same pattern. Different position. The pattern IS the particle.
 
 ### evaluating-a-graph-step-by-step
-- **Label:** Figure 2b — Topology Generates Primes
+- **Label:** Figure 3 — Topology Generates Primes
 - **Description:** Three columns showing graphs at different depths. Left column "DEPTH 2": a simple parent-child pair. Child returns 1, parent gets 1. Label: "Depth 2 → 1. Base case." Center column "DEPTH 3": parent with two children (one at depth 2, one leaf). Result: 2. Label: "Depth 3 → 2. Prime. New irreducible structure." Right column "DEPTH 5": a tree that can't be decomposed into smaller sub-trees. Result: 3. Label: "Depth 5 → 3. Prime. Another irreducible structure." Between columns 2 and 3, a small "DEPTH 4" annotation showing 2 × 1 = 2 with label: "Depth 4 → 2. Composite. Just sub-structures re-combined." Bottom label: "Primes aren't stored. They emerge from irreducible topology. The structure IS the value."
 - **Caption:** Primes emerge from topology. Depths with irreducible structure produce primes. Composite depths just re-combine existing sub-structures. No values stored anywhere.
 
 ### spreadsheet-is-a-graph
-- **Label:** Figure 3 — A Spreadsheet Is a Graph Being Evaluated
+- **Label:** Figure 4 — A Spreadsheet Is a Graph Being Evaluated
 - **Description:** Three panels showing spreadsheet cell dependency graph changing state. Panel 1 "STATE 0": four cells. A1=5 (blue, just changed), B1="=A1×2" (gray, stale), C1="=A1+1" (gray, stale), D1="=B1+C1" (gray, stale). Panel 2 "STATE 1": B1 and C1 both evaluate (they both depend only on A1, no dependency between each other — they can go in any order or simultaneously). B1=10 (green, committed), C1=6 (green, committed), D1 still stale. Panel 3 "STATE 2": D1 now evaluates (depends on both B1 and C1, which are both committed). D1=16 (green, committed). Arrow below: "A1 changed → B1 and C1 in parallel → D1 last. Topological order."
 - **Caption:** Change A1 and the update cascades forward through the dependency graph. B1 and C1 can update in parallel — no dependency between them. D1 waits for both. That's topological ordering.
 
@@ -321,80 +328,75 @@ All figures, their slugs, labels, and full descriptions for SVG generation.
 - **Description:** Three panels. Left panel (blue, "STABLE TOPOLOGY — MASS"): a subgraph with fixed edges shown twice (Walk 1 and Walk 2), both producing the same result. Label: "Same walk. Same result. Every time. That's mass." Center panel (orange, "DISRUPTION — ENERGY INPUT"): new edge being added to the subgraph, labeled "Energy arrives. Topology changes." Right panel (green, "PROPAGATION — RELEASED ENERGY"): the subgraph with new structure, delta arrows radiating outward, labeled "New walk. Different result. Delta propagates outward. That's released energy."
 - **Caption:** Mass is a stable subgraph — same walk, same result. Energy is the delta that propagates when the topology changes.
 
-### the-bidirectional-walk
-- **Label:** Figure 6 — The Bidirectional Walk
-- **Description:** One subgraph of depth m shown with two sets of arrows. Blue arrows going DOWN from root to leaves labeled "DOWN LEG — m hops at rate C." Orange arrows going UP from leaves to root labeled "UP LEG — m hops at rate C." Below: equation "E = m × C (down) × C (up) = mc²." Caption note: "Same rate. Two independent directions. The graph is symmetric. No preferred direction. That's why c² appears."
-- **Caption:** The walk down to leaves and the walk back up are both at rate C. Same rate, two independent directions. That's c² — not a magic constant, a topological fact.
-
 ### call-stack-pyramid
-- **Label:** Figure 7a — Call Stack Depth Forms a Pyramid
-- **Description:** A horizontal row of nodes across the top of the figure (connected as a graph, with a clearly deeper/more complex subgraph in the center, labeled "MASS"). Below each node, a vertical bar whose height represents that node's call stack depth when evaluated. The bars form a pyramid/mountain shape — tallest in the center over the mass, tapering to height 1 at the far edges (leaf nodes). The whole shape is amber/orange. Labels: "height 1" at edges (pointing to leaf nodes), "height 8" at peak (pointing to the mass node's bar), "MASS HERE" with an arrow at the peak. Below the figure: "Stack depth across the graph. Tall where mass is. Flat everywhere else."
-- **Caption:** Plot call stack depth across the graph and you get a mountain. Tallest where mass is. Height 1 at the leaves — those are your photons, traveling at C.
+- **Label:** Figure 6a — Causal Density Forms a Mountain
+- **Description:** A horizontal row of nodes across the top of the figure (connected as a graph, with a clearly denser/more interconnected subgraph in the center, labeled "MASS"). Below each node, a vertical bar whose height represents causal density — how many causal paths converge on that region. The bars form a mountain shape — tallest in the center over the mass, tapering to minimal density at the far edges. The whole shape is amber/orange. Labels: "sparse" at edges, "DENSE" at peak, "MASS HERE" with an arrow at the peak. Below the figure: "Causal density across the graph. Dense where mass is. Sparse everywhere else."
+- **Caption:** Plot causal density across the graph and you get a mountain. Densest where mass is. Sparse at the edges — those are your photons, propagating at C.
 
 ### invert-pyramid-spacetime
-- **Label:** Figure 7b — Invert the Pyramid. That's Spacetime.
-- **Description:** Same data as call-stack-pyramid but inverted. The mountain shape is now flipped to a well shape. Over the top of it, a grid of lines (the "spacetime fabric") is draped, curving downward into the well at the center and flat at the edges — exactly like the classic spacetime curvature diagrams from physics textbooks. The mass node is at the bottom of the well. Label: "INVERT THE CALL STACK TOPOLOGY." Second label on the fabric: "THIS IS SPACETIME CURVATURE." Third label: "Same shape. Different perspective. The call stack IS the curvature."
-- **Caption:** Flip the pyramid and drape a fabric over it. That's the spacetime diagram from your physics textbook. The call stack topology is spacetime curvature.
+- **Label:** Figure 6b — Invert the Density Profile. That's Spacetime.
+- **Description:** Same data as call-stack-pyramid but inverted. The mountain shape is now flipped to a well shape. Over the top of it, a grid of lines (the "spacetime fabric") is draped, curving downward into the well at the center and flat at the edges — exactly like the classic spacetime curvature diagrams from physics textbooks. The mass node is at the bottom of the well. Label: "INVERT THE DENSITY PROFILE." Second label on the fabric: "THIS IS SPACETIME CURVATURE." Third label: "Same shape. Different perspective. Causal density IS the curvature."
+- **Caption:** Flip the density profile and drape a fabric over it. That's the spacetime diagram from your physics textbook. The causal density profile is spacetime curvature.
 
 ### routing-pressure
-- **Label:** Figure 7c — Routing Pressure
-- **Description:** Two panels. Left panel "BEFORE — no mass, flat routing table": a uniform grid of nodes. A straight path from A (top left) to B (bottom right) drawn as a straight diagonal line. All nodes the same color. Label: "Uniform routing costs. Straight path is cheapest." Right panel "AFTER — mass present, routing table updated": same grid. A cluster of nodes in the center colored amber/orange, labeled "DEEP STACK — high routing cost." The path from A to B is now curved around the mass cluster, avoiding the high-cost center. Label: "Routing table updated. Cheapest path now bends around the mass. That bend is gravity."
-- **Caption:** Deep call stacks create routing pressure. Cheapest paths bend around the pressure zone. That bend is gravity.
+- **Label:** Figure 6c — Causal Density Curves Paths
+- **Description:** Two panels. Left panel "BEFORE — no mass, uniform density": a uniform grid of nodes. A straight path from A (top left) to B (bottom right) drawn as a straight diagonal line. All nodes the same color. Label: "Uniform causal density. Straight path is cheapest." Right panel "AFTER — mass present, density increased": same grid. A cluster of nodes in the center colored amber/orange with many cross-connections, labeled "HIGH CAUSAL DENSITY — expensive traversal." The path from A to B is now curved around the dense cluster, avoiding the high-density center. Label: "Dense region. Cheapest path now bends around the density. That bend is gravity."
+- **Caption:** High causal density creates routing pressure. Cheapest paths bend around the dense zone. That bend produces gravity-like behavior.
 
 ### spacetime-is-a-routing-table
-- **Label:** Figure 7d — Same Thing. Different Notation.
-- **Description:** Side-by-side comparison. Left panel: the inverted call stack from figure 7b, with curving cheapest-path lines drawn through it, labeled "GRAPH MODEL — Inverted call stack. Paths curve around depth." Right panel: a classic General Relativity spacetime curvature diagram — the rubber-sheet analogy with a mass in the center and grid lines curving around it, labeled "GENERAL RELATIVITY — Spacetime fabric. Paths curve around mass." A large equals sign or double-headed arrow between the two panels. Below both: "Same thing. Different notation. 110 years of research. Our map."
+- **Label:** Figure 6d — Same Thing. Different Notation.
+- **Description:** Side-by-side comparison. Left panel: the inverted causal density profile from figure 6b, with curving cheapest-path lines drawn through it, labeled "GRAPH MODEL — Inverted causal density. Paths curve around dense regions." Right panel: a classic General Relativity spacetime curvature diagram — the rubber-sheet analogy with a mass in the center and grid lines curving around it, labeled "GENERAL RELATIVITY — Spacetime fabric. Paths curve around mass." A large equals sign or double-headed arrow between the two panels. Below both: "Same thing. Different notation. 110 years of research. Our map."
 - **Caption:** Same thing. Different notation. 110 years of research. Our map.
 
 ### idle-subgraph
-- **Label:** Figure 8 — The Idle Node
-- **Description:** Isolated subgraph (4-5 nodes) floating with no consumer nearby. All edges purple/dotted (pending). All nodes show "?". Surrounding committed graph (green) for contrast. Label: "No consumer. All paths pending. This is superposition."
-- **Caption:** An isolated subgraph. No consumer connected. All edges pending. All nodes uncommitted. The surrounding committed graph (green) doesn't reach it. This is superposition.
+- **Label:** Figure 7 — The In-Flight Event
+- **Description:** A cluster of 4-5 events connected to the surrounding committed graph (green) via thin gray dashed edges, but under no causal pressure. All internal edges purple/dotted (in-flight). All internal nodes show "?". The surrounding committed graph (green) is nearby but creates no density pressure — the cluster is in a causally sparse region. Label: "No causal pressure. All paths in-flight. This is superposition." Annotation: "Connected to the graph, but no dense region demands commitment. It stays in-flight."
+- **Caption:** A cluster of events connected to the graph but under no causal pressure. All edges in-flight. All events uncommitted. The surrounding committed graph (green) is nearby but creates no density pressure. This is superposition.
 
 ### consumer-forces-cascade
-- **Label:** Figure 8b — Consumer Forces Cascade
-- **Description:** Two panels. LEFT: idle subgraph from idle-subgraph figure — all pending, no consumer. RIGHT: consumer node (green, "DETECTOR") connected. Cascade path highlighted green through the subgraph. One path commits (solid green). Others fade to gray. Labels: "Before: idle" / "Consumer connected. One path commits."
-- **Caption:** LEFT: the idle subgraph from before — all pending, no consumer. RIGHT: a detector connects. The demand cascades in. One path commits (green, solid). The rest fade. That's measurement.
+- **Label:** Figure 7b — Dense Region Forces Commitment
+- **Description:** Two panels. LEFT: in-flight events from idle-subgraph figure — all pending, no causal pressure. RIGHT: a dense causal region (green, labeled "DENSE REGION") connected. Cascade path highlighted green through the cluster. One path commits (solid green). Others fade to gray. Labels: "In-flight. No causal pressure." / "Dense region connects. Commitment forced. One path resolves."
+- **Caption:** LEFT: in-flight events from before — all pending, no causal pressure. RIGHT: a dense region connects. Commitment is forced. One path commits (green, solid). The rest fade. That's measurement.
 
 ### measurement-changes-topology
-- **Label:** Figure 8c — Measurement Changes the Topology
-- **Description:** Three panels. LEFT: idle subgraph with pending position edges (purple dotted) and pending momentum structure (orange dotted). MIDDLE: position detector connected — position edges commit (green solid), momentum edges disrupted (red "?"). RIGHT: annotation explaining why both can't be committed simultaneously.
-- **Caption:** LEFT: idle subgraph with pending position edges (purple, dotted) and pending momentum structure (orange, dotted). MIDDLE: position detector connects — position edges commit (green), momentum edges disrupted (red). RIGHT: you can't demand both without one demand disrupting the other.
+- **Label:** Figure 7c — Measurement Changes the Topology
+- **Description:** Three panels. LEFT: in-flight events with pending position edges (purple dotted) and pending momentum structure (orange dotted). MIDDLE: position detector connected — position edges commit (green solid), momentum edges disrupted (red "?"). RIGHT: annotation explaining why both can't be committed simultaneously.
+- **Caption:** LEFT: in-flight events with pending position edges (purple, dotted) and pending momentum structure (orange, dotted). MIDDLE: position detector connects — position edges commit (green), momentum edges disrupted (red). RIGHT: you can't demand both without one demand disrupting the other.
 
 ### entanglement-forms
-- **Label:** Figure 9 — Entanglement Forms
-- **Description:** Two panels. LEFT "BEFORE": Particles A and B with separate value subgraphs (A-val, B-val). Independent. RIGHT "AFTER INTERACTION": A-val and B-val merged into single shared node (SH, gold border). Both A and B point to SH. Label: "Interaction merges value subgraphs. One shared node. Correlation is structural."
-- **Caption:** LEFT — BEFORE: particles A and B with separate, independent value subgraphs. RIGHT — AFTER INTERACTION: their value subgraphs have merged into a single shared node (SH). Both A and B point to SH. Interaction merges value subgraphs. Correlation is structural.
+- **Label:** Figure 8 — Entanglement Forms
+- **Description:** Two panels. LEFT "BEFORE": Particles A and B with separate causal histories (A-hist, B-hist). Independent. RIGHT "AFTER INTERACTION": causal histories merged into single shared ancestor event (SH, gold border). Both A and B causally depend on SH. Label: "Interaction merges causal histories. One shared ancestor. Correlation is structural."
+- **Caption:** LEFT — BEFORE: particles A and B with separate, independent causal histories. RIGHT — AFTER INTERACTION: their causal histories have merged into a shared ancestor event (SH). Both A and B causally depend on SH. Interaction merges causal histories. Correlation is structural.
 
 ### entangled-separated
-- **Label:** Figure 9b — Entangled but Separated
-- **Description:** Wide figure. A on far left, B on far right. Long dashed gray position path between them (many hops). Both have direct orange value edges going to shared node SH (center-bottom). Two edge types labeled: "POSITION EDGES (gray, dashed) — rewired when particles move" and "VALUE EDGE (orange, solid) — unchanged by movement." Shared node is purple/pending — nobody asked yet.
-- **Caption:** A on the far left, B on the far right. Long dashed gray position path between them (many hops — enormous distance). But both A and B have direct value edges going to the shared node SH (center-bottom). Position edges: gray, dashed — rewired when particles move. Value edges: orange, solid — unchanged by movement. SH is still purple/pending. Nobody asked.
+- **Label:** Figure 8b — Entangled but Separated
+- **Description:** Wide figure. A on far left, B on far right. Long dashed gray position path between them (many hops). Both have direct orange causal edges going to shared ancestor SH (center-bottom). Two edge types labeled: "POSITION EDGES (gray, dashed) — rewired when particles move" and "CAUSAL EDGES (orange, solid) — unchanged by movement." Shared ancestor is purple/pending — nobody pressured it yet.
+- **Caption:** A on the far left, B on the far right. Long dashed gray position path between them (many hops — enormous distance). But both A and B have direct causal edges going to the shared ancestor SH (center-bottom). Position edges: gray, dashed — rewired when particles move. Causal edges: orange, solid — unchanged by movement. SH is still purple/pending. Nobody asked.
 
 ### entanglement-cascade
-- **Label:** Figure 9c — The Entanglement Cascade
-- **Description:** Sequence figure. (1) Consumer connects to A. (2) Green cascade arrow: detector → A → shared node SH. (3) SH commits, shows result "R" in green badge. (4) Consumer connects to B. (5) Orange cascade arrow: detector → B → SH (already committed). B reads R. Central label: "SH commits ONCE. Both read the same result. No signal between A and B."
+- **Label:** Figure 8c — The Entanglement Cascade
+- **Description:** Sequence figure. (1) Detector creates density near A. (2) Green cascade arrow: detector → A → shared ancestor SH. (3) SH commits, shows result "R" in green badge. (4) Detector creates density near B. (5) Orange cascade arrow: detector → B → SH (already committed). B reads R. Central label: "SH commits ONCE. Both read the same result. No signal between A and B."
 - **Caption:** The full cascade. (1) Detector connects to A. (2) Green cascade: detector → A → SH. SH commits, shows "R". (3) Detector connects to B. (4) Orange cascade: detector → B → SH (already committed). B reads R. No signal between A and B. SH committed once. Both read the same answer.
 
 ### double-slit-as-graph
-- **Label:** Figure 10 — Double-Slit as a Dependency Graph
-- **Description:** A dependency graph showing the double-slit experiment. Left: a SOURCE node (blue). Center: two SLIT nodes (slit A and slit B) connected to the source with dotted purple lines labeled "PENDING — both paths alive." Right: a SCREEN node connected to both slit nodes. Below: a second version of the same graph with a DETECTOR node attached to slit A. The detector's edge is solid green (committed), forcing slit A's path to commit. Slit B's path disappears (grayed out). Labels: Top version: "No detector — both paths pending. Interference at screen." Bottom version: "Detector present — one path committed. No interference."
-- **Caption:** The double-slit experiment as a dependency graph. Pending edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
+- **Label:** Figure 9 — Double-Slit as a Causal Graph
+- **Description:** A causal graph showing the double-slit experiment. Left: a SOURCE node (blue). Center: two SLIT nodes (slit A and slit B) connected to the source with dotted purple lines labeled "IN-FLIGHT — both paths alive." Right: a SCREEN node (dense region) connected to both slit nodes. Below: a second version of the same graph with a DETECTOR node attached to slit A. The detector's edge is solid green (committed), forcing slit A's path to commit. Slit B's path disappears (grayed out). Labels: Top version: "No detector — both paths in-flight. Interference at screen." Bottom version: "Detector present — one path committed. No interference."
+- **Caption:** The double-slit experiment as a causal graph. In-flight edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
 
 ### eraser-cascade-path
-- **Label:** Figure 11 — The Eraser Cascade
-- **Description:** Shows full dependency chain: SOURCE → SLIT A / SLIT B → SCREEN. IDLER branch from one slit path → ERASER node. Cascade arrow traces backward from SCREEN through the graph, hits ERASER. Two outcomes: TOP: eraser="erased" → both paths pending → interference. BOTTOM: eraser="recorded" → one path committed → no interference. Big label: "The cascade reads the eraser's state at pull-time."
-- **Caption:** Full dependency chain: SOURCE → SLIT A / SLIT B → SCREEN. An IDLER branch from one slit path leads to the ERASER node. The cascade from SCREEN traces backward through the graph and hits the ERASER. Two outcomes — TOP: eraser says "erased" → both paths still pending → interference. BOTTOM: eraser says "recorded" → one path committed → no interference. The cascade reads the eraser's state at pull-time.
+- **Label:** Figure 10 — The Eraser Cascade
+- **Description:** Shows full causal chain: SOURCE → SLIT A / SLIT B → SCREEN. IDLER branch from one slit path → ERASER node. Propagation arrow traces backward from SCREEN through the causal graph, encounters ERASER. Two outcomes: TOP: eraser="erased" → both paths in-flight → interference. BOTTOM: eraser="recorded" → one path committed → no interference. Big label: "The propagation reads the eraser's state at arrival-time."
+- **Caption:** Full causal chain: SOURCE → SLIT A / SLIT B → SCREEN. An IDLER branch from one slit path leads to the ERASER node. The commitment propagation from SCREEN traces backward through the causal graph and encounters the ERASER. Two outcomes — TOP: eraser says "erased" → both paths still in-flight → interference. BOTTOM: eraser says "recorded" → one path committed → no interference. The propagation reads the eraser's state at arrival-time.
 
 ### time-is-revision-rate
-- **Label:** Figure 12 — Time Is the Revision Counter
-- **Description:** Two horizontal timelines side by side. Top timeline labeled "FAR FROM MASS — shallow stack" shows nodes committing rapidly with many tick marks closely spaced, revision counter advancing quickly (rev 1, 2, 3, 4, 5...). Bottom timeline labeled "NEAR MASS — deep stack" shows the same span but with fewer, wider-spaced tick marks, revision counter advancing slowly (rev 1... 2... 3...). Both timelines span the same horizontal distance but the top has more commits. Label: "Same span. More commits far from mass. Fewer near mass. That's time dilation."
-- **Caption:** Time is the revision counter. Each commit is one tick. Near mass: deeper stack, slower commits, fewer ticks. That's time dilation.
+- **Label:** Figure 11 — Time Is Graph Growth
+- **Description:** Two horizontal timelines side by side. Top timeline labeled "FAR FROM MASS — sparse region" shows events committing rapidly with many tick marks closely spaced, layers advancing quickly (tick 1, 2, 3, 4, 5...). Bottom timeline labeled "NEAR MASS — dense region" shows the same span but with fewer, wider-spaced tick marks, layers advancing slowly (tick 1... 2... 3...). Both timelines span the same horizontal distance but the top has more committed layers. Label: "Same span. More growth far from mass. Less near mass. That's time dilation."
+- **Caption:** Time is graph growth. Each new layer of committed events is one tick. Near mass: denser region, more causal constraints per growth cycle, fewer ticks for your local processes. That's time dilation.
 
 ### the-graph-grows-itself
-- **Label:** Figure 13 — The Graph Grows Itself
-- **Description:** Three panels showing a graph at three stages. Panel 1 "PASS 1": a small graph with ~6 nodes and ~8 edges. Panel 2 "PASS 2": same graph but now ~10 nodes and ~14 edges — new nodes sprouted from evaluations. Panel 3 "PASS 3": ~16 nodes, ~24 edges. Each panel is labeled with its node count. Arrow below: "More graph → more evaluations → more new nodes. Growth proportional to size = accelerating expansion."
-- **Caption:** The graph grows itself. Evaluations add nodes. More nodes = more evaluations = more new nodes. Growth proportional to size = accelerating expansion.
+- **Label:** Figure 12 — The Graph Grows Itself
+- **Description:** Three panels showing a graph at three stages. Panel 1 "TICK 1": a small graph with ~6 nodes and ~8 edges. Panel 2 "TICK 2": same graph but now ~10 nodes and ~14 edges — new events spawned from commitments. Panel 3 "TICK 3": ~16 nodes, ~24 edges. Each panel is labeled with its node count. Arrow below: "More graph → more commitments → more new events. Growth proportional to size = accelerating expansion."
+- **Caption:** The graph grows itself. Committed events spawn new events. More events = more commitments = more growth. Growth proportional to size = accelerating expansion.
 
 ---
 
