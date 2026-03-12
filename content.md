@@ -461,43 +461,89 @@ These are real. Confirmed experimentally, repeatedly, for decades. Standard phys
 
 ### The Punchline (I Can't Wait Any Longer)
 
-Everything so far has been building to this. The graph grows. Events propagate at C. Edges carry operations. Properties come from position. All of that is setup. Here's the payoff:
+Everything so far has been building to this. The graph grows. Events propagate at C. Edges carry operations. Properties come from position. All of that is setup. Here's the payoff.
 
-**A node that hasn't been asked to produce the next event doesn't know what it is.**
+Imagine a node at the very edge of the graph. The frontier. It was just born — some event produced it. It has one parent: the event that created it. It exists. It's a real node in the graph.
 
-Not because it's confused. Not because of uncertainty. Because it literally has not received all its inputs yet.
+But nothing is downstream of it. No event needs its value as an input. Nothing is asking it to produce the next state. So what does it do?
 
-Think about it. The graph is enormous. Events are propagating in every direction at C. A new node is born at the frontier. It has parents — edges from the nodes that produced it. It exists. But right now, at this tick, an event from a completely different region of the graph is also propagating. It's three hops away. Then two. Then one. It connects.
+**Nothing.** It sits there. Pending.
 
-If the node had been asked for its value at tick one, it would have computed with one parent. At tick four, with that parent plus the new arrival, it computes a different value. **The answer depends on when you ask.** Not because reality is random. Because an input was still in transit.
+Not because something is stopping it. Because there's nothing to compute. A node's value is the result of composing edge operations along all paths reaching it — and that computation only runs when something downstream needs the result to produce a new event. No downstream demand, no computation. The value doesn't exist yet. Not "exists but hidden." Not "exists but unknown." **Does not exist.** The function hasn't been called.
 
-@fig:pending-node-with-event-in-transit
-A graph with green committed nodes on the left and center. At the
-frontier (right edge), a purple pending node P with 2 green parent
-edges connected. From a distant region (upper-left), a red event node
-is propagating toward P — shown as a red node with a red arrow
-indicating direction and "2 hops away" label. The red event's path
-is shown as a series of red dashed edges through intermediate nodes.
-Below P: "P exists. Has 2 parents. Has not been asked."
-Below the red event: "This event WILL reach P before any consumer
-demands P's value."
-At the bottom, side-by-side comparison:
-LEFT: "If asked NOW: f(parent₁, parent₂) = X"
-RIGHT: "If asked AFTER red arrives: f(parent₁, parent₂, red) = Y"
-"X ≠ Y. The answer depends on when you ask."
+Now watch what happens over the next few ticks.
+
+@fig:tick-by-tick-walkthrough
+Six panels arranged in sequence, each showing the same region of the
+graph at a different tick.
+
+**TICK 1**: A small graph. Green committed nodes A, B, C on the left
+(already resolved). Purple node P on the right, just born, with one
+parent edge from A. Label on P: "PENDING. 1 parent. No one needs my
+value." Far left, a red node E with a red arrow showing its direction
+of propagation. Red dashed line shows the path E will travel: 4 hops
+to reach P. Label: "Event E: 4 hops away. Propagating at C."
+
+**TICK 2**: Same graph, one tick later. E has moved 1 hop closer (now
+3 hops from P). P is still purple, still 1 parent. A new node F is
+born near P from node B — but F's edge operations don't require P's
+value. F needs B's value (B is committed, so F can compute). Label on
+P: "Still pending. Still 1 parent. F didn't need me."
+
+**TICK 3**: E is now 2 hops from P. P still purple, still 1 parent.
+Nothing has changed for P. The graph is growing around it but nothing
+has asked.
+
+**TICK 4**: E is 1 hop from P. Almost there. P still pending, still 1
+parent.
+
+**TICK 5**: E arrives. A new edge connects E to P. P now has 2
+parents: A and E. But P is STILL pending — nothing downstream needs
+its value yet. Label: "2 parents now. Still no one asking."
+
+**TICK 6 (SCENARIO A — LATE COMMITMENT)**: A new event G is born.
+G's parent set includes P — G needs P's value to compute its own.
+NOW P must commit. P composes edge operations along both parent paths
+(from A and from E). Value = f(A, E). GREEN checkmark. P turns green.
+Label: "G demanded P's value. P commits with BOTH parents. Value = f(A, E)."
+
+**TICK 6 (SCENARIO B — EARLY COMMITMENT)**: Same graph, but G was
+born at TICK 3 instead of TICK 6. At Tick 3, G needs P's value. P
+must commit NOW. But E hasn't arrived yet (still 2 hops away). P
+commits with only 1 parent: A. Value = f(A). P turns green. E arrives
+at Tick 5 — but P is already committed. Too late. Label: "G demanded
+P's value EARLY. P commits with only 1 parent. Value = f(A). DIFFERENT
+from f(A, E)."
+
+Bottom annotation in large text: "Same node. Same graph. Different
+timing of demand. Different inputs at commitment. Different value."
 
 ---
 
-The purple node P is pending. It has two parents. But a red event is propagating toward it from elsewhere in the graph. If P is asked for its value now, it computes with 2 parents. If the red event arrives first, it computes with 3 parents — a different value. The node is a function with an input still in transit.
+Watch P through six ticks. In Scenario A (late commitment), nothing demands P's value until Tick 6 — by then, event E has arrived and P commits with 2 parents: value = f(A, E). In Scenario B (early commitment), an event G needs P's value at Tick 3 — before E arrives. P commits with 1 parent: value = f(A). Same node. Different timing. Different result.
 @/fig
 
-This is `3 × y = ?` where y hasn't arrived yet. You can't give an answer. Not because the answer doesn't exist — it does, it's determined, y is a specific value propagating at C through the graph. If you could zoom out and see the whole graph, you'd see the red event coming and you'd know exactly what y is and exactly what the answer will be. **It's deterministic.** But the node can't see the whole graph. Information travels at C. The input is in transit.
+That's the whole thing. That's the mechanism. Not metaphor. Not analogy. The topology of a growing directed graph where information propagates at finite speed.
 
-So what IS the node, right now, from inside the system?
+### Why It's a Wave
 
-**It's a probability.** Not because reality is random. Because from the node's perspective — from inside the graph — it has incomplete information. It knows its current parents but not what's still in transit. The "wave function" that physicists write is the mathematical description of this: given what we know about the graph structure, here are the possible values this node could have when it finally commits, and here are their relative likelihoods.
+Now put yourself inside the graph. You are node P. It's Tick 2.
 
-The wave IS reality not yet committed.
+You have 1 parent. You know about A. That's it. Event E is out there — 3 hops away, propagating toward you at C — but you can't see it. Information travels at 1 edge per tick. E is 3 ticks away from you. You have no way to know it's coming.
+
+From your perspective, you have 1 parent. Maybe more events are in transit. Maybe not. You don't know. You CAN'T know. Not because of some philosophical limitation — because information is physically not available to you. It hasn't arrived.
+
+So what are you, right now?
+
+You're a function waiting to be called, and you don't know all your inputs yet. The set of possible values you could have — depending on which events arrive before you're asked to commit — IS the probability distribution. That IS the wave function.
+
+The "wave" isn't a physical thing oscillating in space. It's the mathematical description of: "given what's known about the graph structure right now, here are the possible values this node could produce at commitment, and here are their relative likelihoods based on what might still be in transit."
+
+Here's what makes this different from "hidden variables" — from the idea that the value already exists and we just can't see it. **The value does not exist.** The computation has not been triggered. There is no fact of the matter about what P's value is at Tick 2, because the function that produces the value hasn't been called, and the inputs to that function haven't finished arriving. The value will be PRODUCED at commitment. It will be produced by composing edge operations along whatever parent paths exist at the moment of commitment. But right now? Right now it's an unevaluated function with incomplete inputs. That's all a wave function is.
+
+**The topology is deterministic.** If you could zoom out and see the entire graph — every node, every edge, every event in transit — you would know exactly which events will reach P and exactly when. You would know what P's value will be when commitment happens. But P can't see the whole graph. You can't see the whole graph. Nobody inside the system can. Information travels at C. So from inside, it's probability.
+
+Deterministic topology. Probabilistic experience. Same structure, two perspectives.
 
 @fig:the-frontier
 A wide graph. Left side: dense green committed nodes. Center: green
@@ -509,49 +555,53 @@ approaching. Label for the green region: "COMMITTED. Definite. This is
 what you experience." Label for the purple frontier: "PENDING. Inputs
 still arriving. This is what quantum mechanics describes." Label for
 the red events: "Events in transit at C. Determined but not yet
-arrived."
+arrived." Additional annotation at bottom: "From inside the graph,
+purple nodes can't see the red events coming. That's why they're
+probabilities — not because reality is random, but because they can't
+see far enough."
 
 ---
 
-Green: committed reality. Purple: the frontier — nodes with incomplete inputs. Red: events still propagating at C, determined but not yet arrived. The frontier IS the quantum world. It's not mysterious. It's just not finished.
+Green: committed reality. Purple: the frontier — nodes whose computations haven't been triggered. Red: events propagating at C through the graph. From inside, the purple nodes can't see the red events coming. That's why they're described as probabilities. Not because reality is random — because information hasn't arrived yet.
 @/fig
+
+### What Forces Commitment?
+
+This is worth being explicit about because it's the part that makes everything else work.
+
+A node commits when a new event is born whose computation requires this node's value as an input. That's it. The "consumer" isn't a special entity. It's not consciousness. It's not a measurement apparatus. It's any event in the graph that needs this node's output to compute its own edge operations.
+
+Think about what this means for different regions of the graph:
+
+**Sparse regions** (deep space, the frontier): Very few events around. Nothing nearby is spawning new events that need this node's value. So the node stays pending. Ticks pass. Events propagate in from distant regions. The parent set grows. The node accumulates more and more inputs. This is where quantum behavior lives — in the quiet parts of the graph where nodes have time to wait.
+
+**Dense regions** (matter, detectors, your eyeball): Enormous numbers of events packed together. Every node is surrounded by neighbors that are constantly spawning new events. Every new event needs neighboring values to compute its own. Demand is immediate and relentless. A node barely exists for a tick before something needs it. It commits almost instantly with whatever parents it has — which is usually everything that's ever going to arrive, because in a dense region, everything is close.
+
+That's the difference between quantum and classical. Not different laws. Not different physics. Different neighborhoods in the same graph. Sparse neighborhoods where nodes have time to accumulate inputs. Dense neighborhoods where everything commits before the interesting stuff arrives.
+
+A particle in a vacuum can stay pending for millions of ticks — events from distant regions slowly accumulating in its parent set. The same particle hits a detector — a wall of dense causal structure — and every node in the detector demands values from its neighbors every tick. The pending node commits. Whatever parents it had at that moment, those are the inputs. The function runs. The value is produced.
 
 ### Why Measurement Changes the Result
 
-A detector, a screen, your eyeball — these are dense regions of the graph. Trillions of nodes, all interconnected, all constantly demanding values from their neighbors to produce new events.
+Now you can see exactly why looking at something changes it.
 
-When a dense region encounters a pending node, it demands the node's value. The node must commit — it must produce the next event. Its parent set freezes. Whatever inputs have arrived are what it computes with.
+A detector, a screen, your eyeball — these are dense regions of the graph. Trillions of nodes, all interconnected, all constantly spawning new events that demand values from their neighbors.
 
-If an event was still in transit — one hop away, about to connect — too bad. The demand came first. The parent set froze without that input. The value is computed. It's different from what it would have been if the event had arrived.
+When a dense region encounters a pending node, some event in the dense region needs the pending node's value. The node must commit — it must produce a value so the downstream event can compute. Its parent set freezes. Whatever inputs have arrived at that moment are what it computes with.
 
-**That's why measurement changes the result.** Not because observation is magical. Not because consciousness collapses wave functions. Because the act of measurement is an interaction — a demand for the node to produce its next event — and that demand froze an incomplete parent set.
+If an event was still in transit — one hop away, about to connect — too bad. The demand came first. The parent set froze without that input. The value is produced. It's different from what it would have been if the event had arrived.
 
-The detector didn't change what the node IS. It changed WHEN the node was asked. And when you ask determines which inputs have arrived.
+**That's why measurement changes the result.** Not because observation is magical. Not because consciousness collapses wave functions. Because the act of measurement is an interaction — a new event being born that needs this node's value — and that interaction forced the node to commit with an incomplete parent set.
 
-@fig:early-vs-late-commitment
-Two panels. TOP "LATE COMMITMENT — No detector": Purple node P with 3
-parent edges (2 green, 1 red that just arrived). All 3 inputs present.
-Arrow: commits → value = f(a, b, c) = 7. GREEN checkmark.
-BOTTOM "EARLY COMMITMENT — Detector present": Dense blue cluster
-(detector) connected to P, demanding its value NOW. P has only 2
-parent edges (2 green). Red event still 1 hop away, hasn't connected.
-Arrow: commits → value = f(a, b) = 4. The red event arrives next tick
-but P is already committed. Label: "Same node. Different inputs.
-Different value. The detector demanded an answer before all inputs
-arrived."
+The detector didn't change what the node IS. It changed WHEN the node was asked. And when you ask determines which inputs have arrived. Different inputs → different computation → different value.
 
----
+### Superposition: A Function With Inputs Still in Transit
 
-Late commitment: all inputs arrive, value = f(a,b,c). Early commitment: detector demands value before the third input arrives, value = f(a,b). Same node. Different timing. Different result.
-@/fig
+So what IS superposition? It's not a particle in two places. It's not a magical cloud of possibility. It's a node whose parent set is still accumulating. Multiple events are in transit through the graph. Different combinations of arrivals would produce different values at commitment. The space of possible values IS the superposition.
 
-### Superposition: A Function With Missing Inputs
+When nothing demands the value, the parent set keeps growing. More events connect. The space of possible values narrows. Eventually an interaction demands commitment — a new event needs this node's value — and the function runs with whatever inputs are present.
 
-So what IS superposition? It's not a particle in two places. It's a node whose parent set is still accumulating. Multiple events are in transit. Different combinations of arrivals would produce different values. The space of possible values IS the superposition.
-
-When nothing demands the value, the parent set keeps growing. More events connect. The space of possible values narrows. Eventually an interaction demands commitment and the value is computed.
-
-If you're a physicist, you write this down as a wave function — a mathematical description of all possible values weighted by the structure of what could arrive. That's useful. That's correct. But it's describing a function with missing inputs, not a magical cloud of possibility.
+If you're a physicist, you write this down as a wave function — a mathematical description of all possible values weighted by the structure of what could still arrive. That's useful. That's correct. But it's describing an unevaluated function with incomplete inputs, not a particle in two places.
 
 ### The Double Slit
 
@@ -687,7 +737,7 @@ That's decoherence. Not a mystery. Not a separate law. Dense regions of the grap
 The chair you're sitting in right now — every atom in it is being demanded by every neighboring atom continuously. When you go to sit on it, there is a zero percent chance it won't be there. Not a very small chance. **Zero.** The interaction commits the graph. The result is definite. Every time.
 
 @style:insight
-Quantum mechanics is what nodes look like when they haven't been asked yet. The "wave" is a function with inputs still in transit — determined but not yet arrived. Measurement is an early demand that freezes an incomplete parent set. The detector changes the graph. The eraser cancels the detector's operations algebraically. Entanglement is shared inputs. Decoherence is dense regions that demand answers too fast for anything interesting to accumulate. Not spooky. Not mysterious. A graph where information travels at C and nodes can't see what's coming.
+Quantum mechanics is what nodes look like when they haven't been asked yet. The "wave" is an unevaluated function with inputs still in transit — the value doesn't exist yet because the computation hasn't been triggered. Measurement is a demand that forces commitment — freezing whatever parent set exists at that moment. The detector changes the graph. The eraser cancels the detector's operations algebraically. Entanglement is shared causal ancestry. Decoherence is dense regions that demand answers too fast for anything interesting to accumulate. Not spooky. Not mysterious. A graph where information travels at C and nodes can't see what's coming.
 @/style
 
 ---
