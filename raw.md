@@ -1,0 +1,16 @@
+Nobody ever tells you what spacetime is.
+They tell you it's a "fabric." They tell you it bends. They show you the bowling ball on a rubber sheet diagram. They tell you mass curves it and light follows the curves and time slows down near the curves. And you nod. You were very cool about the whole thing. You accepted that you live inside an invisible fabric that warps around heavy objects and somehow makes gravity work. Gold star.
+But what IS it? What is the thing that bends? What is the fabric made of?
+Ask a physicist and you'll get one of two answers: a very long equation, or "shut up and calculate." Neither one tells you what it IS.
+Here's the thing — when physicists actually model spacetime, when they put it in a computer and simulate it, they use a graph. Dots connected by lines. Nodes and edges. The relationships between points in spacetime are stored as connections in a network. The curvature everyone talks about? That's the shape of the connections. Distance? That's how many hops between two nodes. The whole "fabric" metaphor is describing a graph. It's been a graph the whole time. You just called it spacetime.
+So — tada. You already knew what a graph was. You already accepted that you live inside one. There are 110 years of research telling us what this graph looks like, how it curves, how it behaves at large scales. We don't have to figure that out from scratch. Einstein and everyone after him already drew us the map.
+That's not the new part.
+The New Part: How It Runs
+So what am I actually saying that's different?
+I'm saying how the graph evaluates. How it changes. How it goes from one state to the next. Spacetime tells you what the graph looks like. I'm trying to tell you what the graph DOES.
+And here's where I say something that sounds crazy. But stay with me — because you already believe something just as crazy. You already accept that you live in a universe with rules. Hardcore, non-negotiable rules. Nothing travels faster than 299,792,458 meters per second. Mass and energy are locked together by a specific equation. There is a force that pulls everything toward everything else and nobody has ever figured out how to block it. You can't observe a particle without changing it. Two particles on opposite sides of the universe give correlated answers the instant you measure either one.
+You accept ALL of that. You walk around every day inside a universe that enforces strict rules on how it's allowed to change, and you don't bat an eye.
+So is it really that crazy to say: what if there aren't a bunch of separate rules? What if there's ONE rule — one function that evaluates the graph — and everything else falls out of it?
+Something is enforcing the speed of light. Something is enforcing gravity. Something is making quantum mechanics work the way it does. Those rules are REAL. They're being enforced right now, on you, as you read this. The question isn't whether rules exist. The question is whether they're a long list of special cases or whether they're all the same rule, seen from different angles.
+You can say God. Fine. And I'd say — God can't use a graph?
+Regardless of whether you believe me: you exist in a universe that enforces rules on how it's allowed to change. I'm proposing one rule instead of many. And I'm proposing that it works like this:
