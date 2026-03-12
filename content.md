@@ -1,26 +1,27 @@
-// Title: GL Theory
-// Subtitle: Greg's Computational Guide to the Universe
-// Byline: MARCH 2026 · PLAIN ENGLISH EDITION
+@ai: Title: GL Theory
+@ai: Subtitle: Greg's Computational Guide to the Universe
+@ai: Byline: MARCH 2026 · PLAIN ENGLISH EDITION
 
 ---
 
-## FRONT MATTER
+## Front Matter
 
-@callout-neutral
-@verbatim
+@style:callout-neutral
+@style:verbatim
 It is a curious thing to have a passion for a subject you can't quite
 grasp. I would imagine this is all that is really needed for the seeds
 of AI psychosis to truly take hold.
 
-What follows is something of a "hobby" of mine. On the
-surface might seem odd, to "ponder the world" as a hobby. But, I'd
-argue it's actually a well-known fact that the best way to spend ANY
-amount of time on ANY amount of drugs is to sit back and go
+What follows is something of a "hobby" of mine. On the surface it
+might seem odd, to "ponder the world" as a hobby. But, I'd argue it's
+actually a well-known fact that the best way to spend ANY amount of
+time on ANY amount of drugs is to sit back and go
 **"YO BUT what IF LIKE…"**
 
 Most of what follows is aided with AI, but this is more or
-less the result of my "pondering"/ranting about for the last 8 or 9 years. So while the words
-are AI assisted, I assure you the delusions are entirely my own.
+less the result of my "pondering"/ranting about for the last 8 or 9
+years. So while the words are AI assisted, I assure you the delusions
+are entirely my own.
 
 I have not figured out the exact number yet, but I imagine the odds of
 someone being committed rise significantly the moment they start
@@ -41,551 +42,589 @@ having it on the World Wide Web makes it easier for me to send as
 advance briefing for any family function or dinner party I should be
 expected to attend.
 
-In a world where AI and and do almost everything I wanted one section
+In a world where AI can do almost everything, I wanted one section
 that was just me.
 
 Cheers,
 A Very Serious Person
-@/verbatim
-@/callout
+@/style
+@/style
 
-@callout-gold
-As we've developed this framework, what's taken shape is fairly similar to [causal set theory](https://en.wikipedia.org/wiki/Causal_sets), [loop quantum gravity](https://en.wikipedia.org/wiki/Loop_quantum_gravity), and [Wolfram's hypergraph project](https://www.wolframphysics.org/). The idea that spacetime might be discrete isn't new — a lot of very smart people have been working on it for decades. Those guys BALL. What I think is different here is the specific synthesis: a causal graph where dense regions force commitment (solving the measurement problem) and topology alone carries all values. If this piques your interest, look at those projects for what is more likely to be the actual correct version of what I'm trying to say.
-@/callout
+@style:callout-gold
+@style:verbatim
+Along the way of writing this, my views have changed dramatically from
+where they started. With each version of "oh maybe it works like
+this..." I would hit a wall, and the solution to that wall was —
+surprise surprise — some of our known theory. So this article is very
+much the process of me coming to appreciate some of our existing
+theories of the world... and when I say those guys BALL, I mean they
+BALL.
 
-@callout-blue
+The more I refined what I believe, the smaller my "novel" ideas became.
+What follows is largely the amalgamation of different ideas with
+increasingly ever smaller modest takes. I will assume the final version
+of this article will be the removal of myself entirely :)
+
+The foundation here draws heavily from [causal set theory](https://en.wikipedia.org/wiki/Causal_sets),
+[Wolfram's project](https://www.wolframphysics.org/), and
+[loop quantum gravity](https://en.wikipedia.org/wiki/Loop_quantum_gravity).
+If this piques your interest, start with those. They have the math we don't.
+@/style
+@/style
+
+@style:callout-blue
 **The Proposal**
 
-Everything that follows builds on one idea: reality is a causal graph that grows itself.
+Everything that follows builds on one idea: spacetime is a graph, and the way patterns propagate through it explains both gravity and quantum mechanics.
 
-Five rules. That's it.
+Five rules.
 
-1. **It's a causal graph.** Events connected by cause-and-effect. No cycles — effects can't cause themselves.
-2. **Changes propagate locally.** No global controller. Changes ripple outward along connections, hop by hop, at a maximum rate C.
-3. **Nothing commits until forced.** No pressure? No definite result. Events stay in-flight with multiple possible outcomes.
-4. **No stored values.** Every value comes from the shape of the connections. Structure is the data.
-5. **The graph grows.** Committed events spawn new connections and new events. Growth is time.
+1. **Nodes are spacetime events.** Each node is a where-and-when. The graph IS spacetime.
+2. **Edges are causal order.** An edge from A to B means A can influence B. A is in B's past.
+3. **The graph grows.** New nodes are born with causal relations to existing nodes. That growth IS time.
+4. **No stored values.** A node's properties come from its connections. Structure is the data.
+5. **Changes propagate at C.** Causal influence travels at most 1 edge per tick. That rate is the speed of light.
 
-The punchline: you only ever see the committed results. Never the propagation in progress. Everything in this document — gravity, time, quantum mechanics — is what this graph looks like from the committed side.
-@/callout
+The punchline: general relativity describes the committed structure of this graph — the shape, the density, the curvature. Quantum mechanics describes what patterns look like mid-propagation, before dense regions force them to commit. They look incompatible because they're describing different scales of the same thing.
+@/style
 
 ---
 
 ## Chapter 1: You Are Mario
 
-// ~500 words. Compressed hook. Two layers. Mystery questions (promises). Graph basics. Three rules. Local propagation. Pure momentum — no cards.
+Physics has two grand theories. General relativity describes the big stuff — gravity, spacetime, black holes, the shape of the universe. Quantum mechanics describes the small stuff — particles, superposition, entanglement, the behavior of things at atomic scale. They are the two most successful theories in the history of science. They are also completely incompatible with each other. Nobody knows how to unify them.
 
-@hook
-Before we get into anything — before graphs, before physics, how nerds run computers in the sky. I want to drive a point home.
+What if the reason they look incompatible is that they're describing two different aspects of the same structure?
 
-**You are Mario.** Not metaphorically. Your reality is taking place on a screen. There is a structure underneath producing your world, and you have no direct access to it. Now there are worse things than life as an Italian 2D plumber — we'll get to that in a minute. But stay with me for a second.
+To see that, you need to accept one thing.
 
-@/hook
+@style:hook
+**You are Mario.** Not metaphorically. Your reality is taking place on a screen. There is a structure underneath computing your world, and you have no direct access to it.
+@/style
 
-This might sound crazy, maybe confusing? But you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. Two layers: the committed structure and the output you experience. We're — well I'm — claiming reality works the same way. What you experience is the committed output, but the real action is in the growing causal structure underneath. YOU and your reality are part of that structure. And more specifically, the universe seems to be stored as a graph.
+It's slightly more complicated than this, but the analogy gets you 80% of the way.
 
-So I lied. You are not a 2D Italian plumber, you are the committed output of a 2D Italian plumber's causal history. See, it always can get worse.
+You deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. We're claiming reality works similarly. What you experience — solid objects, definite positions, the "real world" — is the committed state of a graph. The parts still mid-propagation, still resolving, still waiting for something to force a definite answer? That's where quantum weirdness lives.
 
-Saying "it's all a simulation" is not actually that new or novel. But what I want to add is a bit more on how I think the specifics of the architecture might look. And I want to show _why_ this type of architecture would actually explain things. Things like:
+So I lied. You are not a 2D Italian plumber, you are the _graphical_ representation of a 2D Italian plumber. See, it always can get worse.
 
-- Why can't you shield gravity?
-- What is gravity? Why can't you tell the difference between gravity and acceleration?
+Saying "it's all a simulation" is not new. But what I want to show is _why_ thinking of reality as a graph actually explains things. Things like:
+
 - Why can't anything travel faster than the speed of light?
-- Why does time slow down near a black hole?
+- Why can't you shield gravity?
 - Why does the universe "know" what you'll measure?
 - Why do equations for physics work backwards in time?
-- Is time travel possible?
+- Why does time slow down near a black hole?
 - Is there any age at which a man can know for sure he won't ever bald?
 
 These are genuine unsolved mysteries and in my version of what's going on, they all have the same answer. Well except the last one, that is an open question I'm asking for a friend.
 
-@callout-blue
-**The Committed Structure** — the causal graph. Events connected by cause-and-effect. The actual fabric of reality. Think: the Nintendo console.
-
-**The Output** — what you experience. Your "reality." The committed results. Think: the TV screen.
-
-The analogy is imperfect — reality is slightly more complicated than Mario, and this gets you about 80% of the way there. But it's a useful starting lens.
-@/callout
-
 @fig:two-layers-of-reality
+Left: a TV screen showing Mario's world (stick-figure Mario, platforms,
+a question block) labeled "OUTPUT — What you experience. Your 'reality.'"
+Right: a structure showing graph nodes and edges, labeled "CAUSAL
+STRUCTURE — Events and connections. The actual fabric." Arrow goes FROM
+the structure TO the TV screen, labeled "produces committed results."
+
+---
+
 Two layers. The structure produces committed results. The screen shows the output — Mario's world. Mario can't see the structure. He only sees the output. Sound familiar?
+@/fig
 
 Okay so real quick — a **graph** is dots connected by lines. A recipe is a graph. A family tree is a graph. That's it.
 
 @fig:you-already-know-what-a-graph-is
-These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots.
-
-Now our universe graph needs a few rules:
-
-**1. Demand-driven.** Unless there's causal pressure — some dense region demanding "what happened here?" — do nothing. Stay in-flight.
-
-**2. No stored values** — all values come from how the graph is connected. Imagine someone asks you the time. You don't actually know — you check your phone, which checks a satellite, which checks an atomic clock. The time depends on where you are in the graph. You always need to check.
-
-**3. Edges are operations** — the lines connecting dots can be instructions. Like: (3) --- × --- (3) = 9.
-
-One more thing: **local propagation.** Think dominos. You flick one, it knocks over the next, which knocks over the next. No one is standing above orchestrating which domino falls when — each one just reacts to its neighbor. Changes ripple outward, hop by hop, and the fastest they can ripple is the speed of light.
-
-That's it. Dominos, nerds in the sky with time, and a base rule of don't commit unless pressured. Now let's go make some graphic content and create the fucking universe...
+Three simple graphs side by side: a family tree (5 people, parent-child
+lines), a social network (6 people, friend connections), and a recipe
+(4 steps with directional arrows: Mix → Bake → Cool → Frost).
 
 ---
 
-## Chapter 2: Run It
+These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots.
+@/fig
 
-// ~800 words. Propagation walkthrough (replaces pseudocode). Conversational walkthrough (time, C, mass). What a particle IS. Primes compressed. Technical card. NO "You Already Use This Model" — that moves to Chapter 3.
+Now let me show you what this particular graph looks like.
 
-Here's the key idea: changes propagate locally. No master controller. No global function orchestrating everything. Just events affecting their neighbors, who affect their neighbors, rippling outward.
+---
 
-@fig:propagation-walkthrough
-A change happens at one event. One hop later, its neighbors commit. Two hops later, the ripple has spread further. This IS the speed of light — changes propagating outward through the causal graph.
+## Chapter 2: The Graph
 
-So what just happened? A change committed at one event. Its immediate causal neighbors reacted — they had to, because the committed result changed their inputs. One hop later, their neighbors reacted. The change rippled outward through the graph. That's one tick of local time for each layer that committed.
+### Nodes Are Events. The Graph IS Spacetime.
 
-Now let me show you what fell out of that — because it's kind of insane.
+Forget everything you think a graph looks like. This graph isn't a diagram hanging in space. This graph IS space. And time. Together.
 
-**Time.** Each new layer of committed events is one tick. Two layers = two moments passed. No new commitments = no time passes. Think about it: what would it look like if time stopped? Nothing would change. Nothing commits. Nothing grows. That's literally what "time stopped" means — zero change. Time isn't a river you float on. It's the graph growing. New events being born.
+Each node is a **spacetime event** — not a point in space, but a point in spacetime. It has a where and a when baked into one thing. You can't separate them.
 
-And here's the thing: the graph could pause between growth cycles for a billion years for all we know. Mario doesn't notice. Hit pause, walk away, get lunch, come back — zero time passed for Mario. You only ever experience the committed result. Never the gap between.
+The edges tell you **causal order**. If there's an edge from A to B, that means A can influence B. A happened "before" B in the causal sense. A is in B's past.
 
-**The speed limit.** Changes propagate hop by hop along causal edges. An event with nothing upstream to wait for — nothing that needs to commit before it can — commits at the maximum rate. One hop per tick. That rate is C. The speed of light. Everything else is slower because it has upstream causal work to finish first. A photon has no causal baggage. That's why nothing travels faster than light — you can't propagate faster than the graph itself grows.
+@fig:graph-is-spacetime
+A directed graph with time flowing upward. Bottom layer: 3 green nodes
+(A, B, C) labeled "committed — already happened." Middle layer: 2 green
+nodes (D, E) with edges from bottom layer. Top layer: 1 blue node (F)
+labeled "new node born — this birth IS one tick of time." Edges shown
+as arrows pointing upward (past to future). Left side: vertical arrow
+labeled "TIME" pointing up. Annotations: "Each node = a spacetime event"
+and "Each edge = causal order."
 
-**Mass.** A region of the graph whose topology doesn't change. Same pattern of connections, same committed result, every time. A rock on a table keeps producing the same committed value because no new inputs are arriving. Stability. When that stability breaks — enough energy to rewire the connections — the delta propagates outward. That's released energy.
+---
 
-And one more: **demand-driven commitment.** If there's no causal pressure on an event — no dense region forcing it to commit — it stays in-flight. Multiple possible outcomes, all live, until something forces a resolution. That's quantum superposition — and we'll come back to it.
+Each node is a spacetime event. Edges point from past to future — causal order. Green nodes are committed (already happened). Blue node F is being born — that birth IS one tick of time. The graph IS spacetime. Nodes don't exist inside space. Nodes ARE space.
+@/fig
 
-**What IS a particle?** A stable pattern — a specific topology of connections — that propagates through the growing graph. The pattern holds its shape as the graph grows around it. Same internal structure, new position. The pattern IS the particle. Not a thing moving through space — a topological shape maintaining itself through graph growth.
+A node doesn't have a position IN the graph. A node IS a position. The graph IS space. When we say "where is node D?" the answer is: D is defined by its causal relations — it's in the future of A and B, and in the past of F. That's its position. The relations ARE the coordinates.
 
-@fig:what-is-a-particle
-A particle is a stable topology propagating through the growing graph. Same pattern. Different position. The pattern IS the particle.
+### The Graph Grows. That's Time.
 
-No physics. No special rules. Just: changes propagate locally through a growing graph. And we got something that looks like time (graph growth), a speed limit (maximum propagation rate), mass (stable topology), and demand-driven commitment (events that nobody pressured stay unresolved). All from local propagation.
+Time isn't a river. Time isn't a dimension you move through. Time is **new nodes being born into the graph.**
 
-// Qualitative caveat — manage expectations before going further.
+At each tick, new events come into existence. Each new event is born with causal relations to existing events. That birth IS one tick of time. No new nodes = no time. More nodes being born = more time passing.
 
-A caveat before we go further: we don't know the exact operations on the edges. We're not claiming to have the specific rules that generate electrons or gravity constants. What we're showing is that the **structure** of a locally-propagating causal graph — regardless of the specific operations — produces emergent properties that map onto physics. The shape of the argument matters more than the specific numbers.
+@fig:graph-growing
+Three panels side by side. Panel 1 "TICK 1": small graph with 4 green
+nodes and 1 new blue node being born with edges to existing nodes.
+Panel 2 "TICK 2": previous blue node now green, 2 new blue nodes being
+born. Panel 3 "TICK 3": previous blue nodes now green, 3 new blue nodes
+being born. Node counts: 5, 7, 10. Arrow below: "More graph → more new
+nodes → accelerating growth."
 
-@technical-card: Local Propagation
-**Axiom A2** states the core rule: changes propagate along causal edges at maximum rate C. No global function, no central evaluator. Combined with demand-driven commitment (A3), no stored values (A4), and graph growth (A5), this produces all emergent properties observed above: time (D1), causal ordering (D2), causal density (D8), superposition (D16), and the maximum propagation rate.
-@/technical-card
+---
 
-### The Proof of Concept: Primes From Topology
+The graph grows. Each tick, new nodes (blue) are born with causal edges to existing nodes (green). More graph → more new nodes → accelerating growth. This IS the expansion of the universe.
+@/fig
 
-Watch what happens when a node's value depends on its depth. Depth 2: leaf returns 1. Depth 3: new irreducible structure → 2 (prime). Depth 4: just recombines depth 2 → composite. Depth 5: another irreducible structure → 3 (prime).
+### How Changes Propagate
 
-@fig:evaluating-a-graph-step-by-step
-Primes emerge from topology. Depths with irreducible structure produce primes. Composite depths just re-combine existing sub-structures. No values stored anywhere.
+When something changes at node A, the change doesn't instantly affect the whole graph. It propagates outward — one edge per tick. That's C. The speed of light.
 
-The node stores nothing. The structure IS the value. This is illustrative, not a proof — but it shows that pure structure, with no stored values, can generate non-trivial mathematical objects. If topology can produce primes, the "no stored values" axiom isn't as crazy as it sounds.
+@fig:propagation-at-c
+3-panel walkthrough. Panel 1 "TICK 0": center node orange/starred
+(change happened here), all neighbors gray. Panel 2 "TICK 1": center
+node green (committed), immediate neighbors orange/starred (just
+reached), outer nodes still gray. Panel 3 "TICK 2": center and first
+ring green, second ring orange/starred, outer nodes gray. Legend:
+orange star = "just reached", green = "already knows", gray = "doesn't
+know yet." Bottom: "1 hop per tick. That's C."
 
-@insight
-Local propagation through a growing causal graph — no physics, no special rules — and we got structures that look like time, a speed limit, mass, and quantum superposition. None of these were designed in. They fell out of the propagation. Changes rippled through the graph, and something that looks a lot like physics showed up uninvited.
-@/insight
+---
 
-Four properties. No physics. No special rules. Just: changes propagate locally through a growing graph. But here's the thing — we're not the first people to build systems like this.
+A change propagates outward at 1 edge per tick. At tick 0, only the source knows. At tick 1, its neighbors know. At tick 2, the next ring knows. Gray nodes haven't heard yet. That propagation rate is C.
+@/fig
+
+At tick 1, the gray nodes **do not know** the change happened. The information hasn't reached them. There's no global update. Information travels locally, through causal edges, at C. That's why nothing travels faster than light — there's no mechanism for it.
+
+### What Is a Particle?
+
+If every node is a spacetime event, what's an electron? What's a photon?
+
+A particle can't be a single node — nodes are events, and events don't persist. A particle is a **pattern**. A stable structure that reproduces itself as the graph grows. As new nodes are born, the pattern propagates. The particle IS the pattern.
+
+@fig:particle-is-pattern
+Three snapshots left-to-right showing a small cluster of 4-5 nodes in
+a distinctive triangular pattern. "TICK 1", "TICK 2", "TICK 3". Pattern
+maintains same internal structure but moves through the graph. Old
+positions faded gray, new positions blue/orange. Below: photon shown as
+simplest pattern (single node chain, 1 hop/tick, orange) labeled
+"Photon: simplest. 1 hop/tick = C." Next to it: massive particle as
+complex cluster (red) with internal edges, labeled "Massive: complex.
+Internal steps → slower than C."
+
+---
+
+A photon is the simplest pattern — 1 hop per tick = C. A massive particle has internal structure — multiple steps to reproduce, so it propagates slower. Mass is pattern complexity.
+@/fig
+
+A photon is the simplest pattern. One hop per tick. No internal structure to reproduce. That's the fastest anything can propagate — C.
+
+A massive particle is more complex. Internal structure that takes multiple causal steps to reproduce. Those steps "cost" ticks, so the pattern advances slower than C. **Mass is pattern complexity.**
+
+### What Is a Consumer?
+
+This is the concept that ties everything together.
+
+A **consumer** is a dense region of committed causal structure — lots of nodes packed together, all with established causal relations, all demanding definite inputs from their neighbors. A detector. A screen. A rock. Your eyeball.
+
+When a propagating pattern reaches a consumer, new nodes must be born connecting the pattern to the consumer's dense causal structure. Those nodes must resolve the pattern's state. The pattern MUST commit.
+
+If no consumer sits in a pattern's causal future — if the pattern is propagating through a sparse region — nothing forces it to commit. It can propagate with multiple possible paths alive at once.
+
+Remember that. It's the whole reason quantum mechanics looks the way it does.
+
+### Demo: Values From Shape Alone
+
+Can a graph produce meaningful values without storing anything? Watch what happens when a node's value depends on its depth. Depth 2: leaf returns 1. Depth 3: new irreducible structure → 2 (prime). Depth 4: recombines depth 2 → composite. Depth 5: another irreducible structure → 3 (prime).
+
+@fig:primes-from-topology
+Three columns showing graphs at different depths. Left "DEPTH 2":
+simple parent-child, result 1. Center "DEPTH 3": parent with two
+children, result 2. Label: "Prime. Irreducible." Right "DEPTH 5":
+tree that can't decompose, result 3. Label: "Prime." Between 2 and 3,
+small "DEPTH 4" showing composite. Bottom: "Primes aren't stored.
+They emerge from topology."
+
+---
+
+Primes emerge from topology. No values stored anywhere. The structure IS the value.
+@/fig
+
+The node stores nothing. The structure IS the value. Illustrative, not a proof — but it shows pure structure can generate non-trivial mathematical objects.
+
+@style:insight
+Five rules. No physics designed in. And we got something that looks like time (graph growth), a speed limit (local propagation at C), mass (pattern complexity), and the seed of quantum behavior (patterns that don't commit until a consumer forces them). All from the structure of a growing causal graph.
+@/style
 
 ---
 
 ## Chapter 3: "Wait. This IS Spacetime."
 
-// THE REVEAL. ~600 words. The document's structural pivot. "You Already Use This Model" → causal density → image sequence → THE PUNCH → THE RANT.
-
 ### You Already Use This Model
 
-// Moved from Demo. Bridges everyday experience to the spacetime revelation.
-
-We already build systems where changes propagate through dependency graphs. Spreadsheets, React, CPU caches — different teams, different decades, different purposes. They all independently converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can update in any order. If one depends on the other, it must wait.
-
-A spreadsheet is a graph. Change cell A1 and the update propagates forward through the dependency graph, recomputing only what depends on A1, in order. B1 and C1 can update in parallel — no dependency between them. D1 waits for both.
+We already build systems that evaluate graphs. Spreadsheets, React, CPU caches — they all converged on the same model: **topological ordering**. If two nodes have no dependency between them, they can evaluate in any order. If one depends on the other, it must wait.
 
 @fig:spreadsheet-is-a-graph
-Change A1 and the update cascades forward through the dependency graph. B1 and C1 can update in parallel — no dependency between them. D1 waits for both. That's topological ordering.
+Three panels showing spreadsheet cells evaluating in dependency order.
+Panel 1: A1=5 (blue, changed), B1/C1/D1 gray. Panel 2: B1=10 and
+C1=6 (both green, parallel). D1 gray. Panel 3: D1=16 (green, last).
+Arrow: "A1 → B1 and C1 in parallel → D1 last."
 
-Two key consequences fall out of topological ordering. First: no preferred traversal order = no preferred frame = **special relativity for free**. Two observers on independent branches genuinely have no shared "now" — not because of a physical law, but because there's no ordering constraint between them.
+---
+
+Change A1 and the update cascades forward. B1 and C1 in parallel. D1 waits for both. That's topological ordering.
+@/fig
+
+No preferred order between independent nodes = no preferred frame = **special relativity for free**.
 
 ### Causal Density
 
-Now here's where it gets interesting. When many causal paths converge on a region — lots of events, lots of connections, lots of mutual dependencies — that region has high **causal density**. Think of it like a traffic jam: more cars, more intersections, everything takes longer to get through. Dense causal regions process more information per tick of graph growth. Propagation through them is slower.
+A massive object is a complex pattern — lots of internal causal structure. That creates a **dense region** of the graph.
 
-Plot causal density across a region of the graph. What shape do you get?
+Plot causal density across a region. What shape do you get?
 
-@fig:call-stack-pyramid
-Plot causal density across the graph and you get a mountain. Densest where mass is. Sparse at the edges — those are your photons, propagating at C.
+@fig:causal-density-mountain
+Horizontal row of nodes (denser/more interconnected subgraph in center,
+labeled "MASS"). Below each node, vertical bar whose height = causal
+density. Mountain shape — tallest at center, tapering at edges.
+Amber/orange. Labels: "sparse" at edges, "DENSE" at peak.
 
-Now flip that profile upside down. The dense peaks become deep wells. Drape a spacetime fabric grid over it.
+---
 
-@fig:invert-pyramid-spacetime
-Flip the density profile and drape a fabric over it. That's the spacetime diagram from your physics textbook. The causal density profile is spacetime curvature.
+Plot causal density and you get a mountain. Densest where mass is. Sparse at the edges.
+@/fig
+
+The dense region creates a well. Paths through it take more hops. Paths around it take fewer.
+
+@fig:density-is-spacetime-curvature
+Same data as causal-density-mountain but inverted. Mountain flipped to
+well. Grid of lines ("spacetime fabric") draped over it, curving into
+well at center, flat at edges — like classic spacetime diagrams. Labels:
+"INVERT" → "THIS IS SPACETIME CURVATURE."
+
+---
+
+Flip the density profile and drape a fabric over it. That's the spacetime diagram from your physics textbook. Causal density IS spacetime curvature.
+@/fig
 
 You're looking at the diagram from every physics textbook ever printed.
 
-@fig:spacetime-is-a-routing-table
+@fig:same-thing-different-notation
+Side-by-side. Left: inverted causal density with curving paths. Label:
+"GRAPH MODEL." Right: classic GR rubber-sheet diagram. Label: "GENERAL
+RELATIVITY." Equals sign between. Below: "Same thing. Different
+notation. 110 years of research. Our map."
+
+---
+
 Same thing. Different notation. 110 years of research. Our map.
+@/fig
 
 **This IS spacetime.**
 
-Around here I realized something that took me embarrassingly long to see. This graph I'd been staring at — physicists already had a name for it. They call it spacetime. They've been studying it for 110 years. They call it a "fabric." They draw diagrams of it curving. But here's the question that never gets answered: what IS the fabric? What is the thing that curves? I'm saying it's a graph. And if I'm right — or even close — then 110 years of general relativity research just became our instruction manual. Reverse engineering might be cheating in the physics world, but in my world it's a mark of the trade.
+Around here I realized something that took me embarrassingly long to see. This graph I'd been staring at — physicists already had a name for it. They call it spacetime. They've been studying it for 110 years. They call it a "fabric." They draw diagrams of it curving. But here's the question that never gets answered: what IS the fabric? What is the thing that curves?
 
-@technical-card: Core Axioms
-**A1 (Causal Graph):** Reality is a directed acyclic graph — events connected by causal edges. No cycles. **A3 (Demand-Driven Commitment):** Events stay in-flight until dense causal regions force commitment. **A4 (No Stored Values):** All values derived from topology alone — the structure IS the value. These three axioms, combined with local propagation (A2) and graph growth (A5), produce the emergent properties demonstrated above.
-@/technical-card
+I'm saying it's a graph. And if I'm right — or even close — then 110 years of general relativity research just became our instruction manual.
 
-@technical-card: Topological Ordering
-**D2 (Causal Ordering):** Effects follow causes — the partial order imposed by the graph's causal structure. **D3 (Special Relativity):** Causally independent events have no ordering constraint → no preferred frame → no preferred "now." **D4 (Speed of Light):** Maximum propagation rate C — one hop per tick. All events with upstream causal work are slower.
-@/technical-card
+@style:insight
+The causal density of a growing graph IS spacetime. The density profile IS spacetime curvature. Nobody ever said what spacetime IS — what the fabric is, what the thing that curves is. It's a graph. And 110 years of general relativity just became our instruction manual.
+@/style
 
-@insight
-The causal density profile of a growing graph IS spacetime. The topology of density IS spacetime curvature. Nobody ever said what spacetime IS — what the fabric is, what the thing that curves is. It's a graph. And 110 years of general relativity just became our instruction manual.
-@/insight
-
-So IF this is right — what would GR tell us about our graph? It would tell us this is a 3D graph. It would tell us density curves the paths through it. It would tell us things follow cheapest routes. It would tell us the speed of information has a hard cap. We didn't invent any of this — we're using 110 years of research as a map. But we ARE adding a few rules of our own: demand-driven commitment, topology-as-value, and no stored state. The next two sections reverse-engineer what the graph MUST look like to produce the physics we observe. Where the mapping is structural and exact, we'll say so. Where it's suggestive, we'll say that too.
+So let's use the map.
 
 ---
 
-## PART 2: General Relativity, Translated
-
-// Each GR phenomenon is reverse-engineering: "If reality IS a graph, what would it HAVE to look like to produce the physics we observe?" Frame claims as "would produce" / "suggests" / "mirrors" rather than "IS" / "explains."
-
-### Mass & Energy
-
-// ~300 words. Stable topology = mass. Disruption = energy. E=mc² acknowledged as gap. Antimatter = mirror graph.
-
-A massive object is a region of the graph whose topology is **stable** — the same pattern of causal connections persists across growth cycles, producing the same committed results every time. That's mass. A rock on a table IS part of the growing graph — but its topology hasn't changed, so it commits the same result every time. No change = same committed value = that's what mass is. Topology that holds.
-
-When that stability breaks — enough energy to rewire the connections — the commitment produces a different result. The delta propagates outward through the causal graph. That outward propagation IS the released energy.
-
-@fig:mass-is-stable-topology
-Mass is a stable subgraph — same walk, same result. Energy is the delta that propagates when the topology changes.
-
-**E = mc²:** We'll be honest here. The previous version of this framework had a clean structural argument for the c² factor — two phases of a recursive walk, each at rate C. That argument relied on a global recursive function, which we've abandoned in favor of local propagation. The structural observation remains: disrupting a stable topology releases energy proportional to its depth times C². But a rigorous derivation of WHY the squared factor appears from purely local propagation? That's an open problem. We think the answer is there — something about propagation needing to traverse the topology in both directions — but we haven't nailed it yet.
-
-Antimatter is a mirror graph; when it meets its original, they cancel completely, and the full energy propagates outward.
-
-@technical-card: Mass and Energy
-**D5 (Mass):** A stable graph topology — same pattern, same result. Topological persistence. **D6 (Energy):** The delta that propagates when stable topology is disrupted. **D7 (E=mc²):** Status: speculative. The c² factor needs rederivation from local propagation mechanics (see open problem O9). **D23 (Antimatter):** Mirror (conjugate) graph topology. Contact with original = complete cancellation → full energy release.
-@/technical-card
-
----
+## Part 2: General Relativity, Translated
 
 ### Gravity
 
-// Significantly compressed — the density profile/inversion already happened in The Reveal. What remains: mystery, causal density curving paths, three mystery dissolutions, black holes, dark matter card.
-
-@mystery
+@style:mystery
 Gravity is weird. A suspicious kind of weird. Three clues:
 
 **1.** You can shield every other force — EM, strong, weak. Nobody has ever shielded gravity.
 
-**2.** Einstein's equivalence principle: no experiment can distinguish gravity from acceleration. Why would a "force" be indistinguishable from acceleration?
+**2.** Einstein's equivalence principle: no experiment can distinguish gravity from acceleration.
 
 **3.** Physicists hunted the graviton for decades. Never found one. Maybe gravity isn't a force at all.
-@/mystery
+@/style
 
-You already saw it — the causal density profile, the inversion, the spacetime curvature. Now let's look at what the density actually does.
-
-High causal density means more causal constraints per hop. Propagation through a dense region takes more commitment steps than propagation through a sparse one. The cheapest causal path — the one with the fewest hops, the fastest propagation — curves around dense regions. That curve would produce gravity-like behavior — objects following curved paths toward mass, exactly as observed.
+Einstein told us gravity is geometry, not a force — that was 1915. What he didn't say is what the geometry IS. We're saying it's causal density. Dense regions = more hops. Shortest paths curve around dense regions. That curve is gravity.
 
 @fig:routing-pressure
-High causal density creates routing pressure. Cheapest paths bend around the dense zone. That bend produces gravity-like behavior.
-
-Now look at the three mysteries through this lens:
-
-**Why you can't shield gravity.** Every other force transmits via a signal along specific causal edges — photons carry EM, gluons carry the strong force. Block the edge, block the signal. IF gravity is causal density, it isn't a signal — it's the density of the causal region itself. Your shield adds its own causal structure to the region. More stuff = MORE density, not less. You can't reduce causal density by adding more material. That's actually a BETTER explanation than the old framework had.
-
-**Why gravity equals acceleration.** IF gravity is causal density, then acceleration does the same thing — rapid creation of new causal connections increases the local density. Same effect. Same mechanism. That's why Einstein couldn't tell them apart — in this model, they're the same thing.
-
-**Why there's no graviton.** IF gravity is a structural property of the causal graph rather than a force transmitted along edges, then "What particle carries gravity?" is like asking "What particle carries traffic congestion?" It's not a thing that travels. It's a property of the structure.
-
-@physics-card: Black Holes
-A black hole is a region of such extreme causal density that no causal path leads outward. Every neighboring event is causally downstream of the dense core. Unlike General Relativity's prediction of a singularity — infinite density — there's nothing infinite here. The graph is finite. The density is extreme but finite. Propagation simply cannot escape. Causal trapping, not mathematical breakdown.
-@/physics-card
-
-@physics-card: Dark Matter
-Let's be honest: the previous version had a candidate mechanism for dark matter — pure cycles in the graph that build stack depth without committing values. We've cut cycles (the graph is now a DAG — no event can cause itself). That mechanism is dead. We currently have NO replacement mechanism for dark matter within this framework. The observed properties — gravitates but doesn't interact with light, collisionless — could correspond to a region of high causal density with no topology that couples to electromagnetic propagation. But that's a description, not a mechanism. This is an open gap.
-@/physics-card
-
-@technical-card: Gravity as Causal Density
-**D8 (Causal Density):** Many causal paths converging on a region → high density → more constraints per hop. **D9 (Gravity):** Dense regions make paths expensive → cheapest paths curve → gravity-like behavior. **D10 (Spacetime Curvature):** Inverted causal density profile mirrors spacetime curvature. **D11 (Can't Shield):** Gravity is density, not a signal — adding material adds density. **D12 (Equivalence Principle):** Gravity and acceleration both increase local causal density — same mechanism in this model.
-@/technical-card
-
-@insight
-If gravity is causal density rather than a force, three mysteries dissolve at once: you can't shield it (adding stuff adds density — you're making it worse), you can't tell it from acceleration (both create dense local causal structure), and there's no graviton (it's a structural property, not a particle). Plot the density profile: a mountain. Flip it: something that looks exactly like Einstein's spacetime curvature. Suggestive, not proven — but the structural match is hard to dismiss.
-@/insight
+Two panels. Left "UNIFORM DENSITY": uniform grid, straight path A to B.
+Right "MASS PRESENT": center cluster amber/orange with cross-connections
+labeled "HIGH CAUSAL DENSITY." Path A to B curves around it. Label:
+"Cheapest path bends. That bend is gravity."
 
 ---
+
+High causal density creates routing pressure. Cheapest paths bend around the dense zone. That bend is gravity.
+@/fig
+
+Three mysteries dissolve:
+
+**Why you can't shield gravity.** Gravity isn't a signal through edges. It's the density of the graph itself. You can't reduce density by adding more stuff. A shield is more nodes, more connections, MORE density. Every attempt to block gravity adds to the structure causing it.
+
+**Why gravity equals acceleration.** Accelerating creates dense local causal structure. Dense structure = curvature = gravity. Same thing.
+
+**Why there's no graviton.** "What particle carries gravity?" is like asking "What particle carries the shape of a triangle?" It IS the structure.
+
+@style:physics-card:Black Holes
+A black hole is a region of such extreme causal density that no geodesic leads outward. All future-directed causal paths lead further in. Not because something blocks it — the causal structure doesn't connect outward. Unlike GR's singularity, the density is high but finite. Finite, non-terminating, but not singular. This is the one prediction that differs from standard GR. Though most discrete spacetime theories predict this too.
+@/style
+
+@style:insight
+If gravity is causal density rather than a force, three mysteries dissolve: you can't shield it (adding a shield adds density), you can't tell it from acceleration (both create dense local structure), and there's no graviton (it's a property of the graph, not a particle).
+@/style
 
 ### Time, Space & the Speed of Light
 
-// ~500 words. Callbacks to Ch2 basics, then consequences: dilation, arrow of time, expansion.
+Space isn't a box things happen inside. It's the graph's shape. Distance is hop count. Minimum distance is one hop. That's the Planck length: one pixel.
 
-We already know time is graph growth and C is the maximum propagation rate. Now watch what happens near mass — and what happens to the graph as a whole.
-
-Space isn't a box things happen inside. It's the graph's shape — the large-scale pattern of causal connections. Distance is hop count. The minimum distance is one hop — one edge. That's the Planck length: one pixel.
-
-@fig:time-is-revision-rate
-Time is graph growth. Each new layer of committed events is one tick. Near mass: denser region, more causal constraints per growth cycle, fewer ticks for your local processes. That's time dilation.
-
-Near mass, causal density is higher — more constraints to process per growth cycle, commitment is slower, less change happens locally. That's the graph version of time dilation. GPS satellites orbit where causal density is lower — less mass nearby, sparser causal structure, faster commitment, faster clocks. The difference is about 45 microseconds per day. Without correction, GPS would drift roughly 10 kilometres per day. Your phone depends on this being real.
-
-**The arrow of time:** the graph grows. New events are born from committed ancestors. You can't un-birth a node. You can't un-commit an event. The arrow of time is graph growth — and growth only goes one direction. The equations of physics work backwards because they describe the committed results — the photographs. A photograph has no arrow. You can run a film forward or backward. The arrow lives in the growth that produced the committed structure. Not in the output.
-
-Moving fast eats propagation budget too — new causal edges being created for position changes cost propagation steps, leaving fewer for internal state changes. At C, zero internal commitment. Zero elapsed time. That's why a photon experiences no time.
-
-@physics-card: The Muon
-Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% of C, almost all propagation steps go to position change. Their internal commitment barely progresses. Confirmed experimentally.
-@/physics-card
-
-**Why is the universe expanding?** Think of your family tree. It can grow — two people create a new person. You never ask "what is my family tree expanding into?" — growth is just a valid operation on a graph. Same here. Committed events spawn new events and edges. More graph = more commitments = more new events. Growth proportional to size = accelerating expansion. The graph growing itself would produce expansion-like behavior, though we can't derive the specific rate — so this is a structural possibility, not a replacement for dark energy.
-
-@fig:the-graph-grows-itself
-The graph grows itself. Committed events spawn new events. More events = more commitments = more growth. Growth proportional to size = accelerating expansion.
-
-@technical-card: Time and Space
-**D1 (Time):** Graph growth. Each new layer of committed events = one tick. No growth = no time. **D13 (Gravitational Time Dilation):** Near mass → higher causal density → more constraints per cycle → slower local commitment. **D14 (Velocity Time Dilation):** Fast motion consumes propagation budget → fewer internal commitments. At C, zero elapsed time. **D15 (Arrow of Time):** Graph grows. Can't un-birth a node. Can't un-commit an event. Irreversible. **D24 (Space):** Large-scale causal connectivity. Distance = hop count. Planck length = 1 hop = 1 edge. **D25 (Expansion):** Committed events spawn new events. Growth proportional to size = accelerating expansion.
-@/technical-card
-
-@insight
-Space is the graph's shape. Distance is hop count. Time is growth — near mass, denser causal structure means slower local commitment and less elapsed time. The arrow points one direction because the graph grows and you can't un-birth a node. And the universe expands because committed events spawn new events — like a family tree, it doesn't expand "into" anything. It just grows.
-@/insight
-
-That's the large-scale picture. The structural matches are suggestive — some tighter than others. But Einstein only described the large-scale structure. What about the small-scale weirdness?
+@fig:time-dilation
+Two horizontal timelines. Top "FAR FROM MASS — sparse": many ticks
+closely spaced (1, 2, 3, 4, 5). Bottom "NEAR MASS — dense": same
+span, fewer wider-spaced ticks (1... 2... 3...). Label: "Same span.
+More growth far from mass. Less near mass. Time dilation."
 
 ---
 
-## PART 3: Quantum Mechanics, Translated
+Near mass: denser region, more constraints per growth cycle, fewer ticks. That's time dilation.
+@/fig
 
-// New structure: Mystery → In-flight events (superposition) → Measurement/Heisenberg → Entanglement (centerpiece) → Double-Slit → Eraser/Delayed Choice → Cards & Insight
+Near mass, causal density is higher. A pattern needs more hops per reproduction cycle. The pattern's clock runs slower. GPS satellites orbit where density is lower. Their clocks run faster. 45 microseconds per day. Without correction, GPS drifts 10 km per day. Your phone depends on this.
 
-@mystery
+Moving fast eats causal steps too. A fast pattern spends steps on position changes rather than internal reproduction. At C, ALL steps go to position change. Zero internal reproduction. Zero time. That's why a photon experiences no time.
+
+@style:physics-card:The Muon
+Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% of C, almost all causal steps go to motion. Their internal clock barely ticks. Confirmed experimentally.
+@/style
+
+**The arrow of time:** The graph grows. You can't un-birth a node. Growth is irreversible. That IS the arrow.
+
+**Expansion:** More nodes = more places for new nodes. Growth proportional to size = accelerating expansion. Structural possibility, not a replacement for dark energy.
+
+@style:insight
+Space is the graph's shape. Distance is hop count. Time is growth — near mass, denser structure means slower growth. The arrow is irreversible growth. The universe expands because the graph grows itself.
+@/style
+
+That's the large-scale picture. But Einstein only described the committed structure. What about the small-scale weirdness?
+
+---
+
+## Part 3: Quantum Mechanics, Translated
+
+@style:mystery
 Three things that shouldn't be possible:
 
-**1.** Looking at something changes it. Not bumping it, not touching it — looking. The act of measurement alters the result.
+**1.** Looking at something changes it. Not bumping it, not touching it — looking.
 
-**2.** Two particles, separated by the width of the universe, give correlated answers the instant either is measured. No signal between them. Instantaneous.
+**2.** Two particles, separated by the width of the universe, give correlated answers instantly.
 
-**3.** A particle hits a screen. The dot is recorded. AFTER that, you erase some information about the experiment. The interference pattern comes back — in data that was already collected. Erasing information after the fact changed a result that already happened.
+**3.** Erasing information after the fact changes a result that already happened.
 
-These are real. Every one confirmed experimentally, repeatedly, for decades. Standard physics says shut up and calculate. Let's do better.
-@/mystery
+These are real. Confirmed experimentally, repeatedly, for decades. Standard physics says shut up and calculate. Let's do better.
+@/style
 
-### The In-Flight Event
+### Superposition: A Pattern With Multiple Futures
 
-Remember demand-driven commitment from the earlier chapters? No causal pressure = no commitment. Now zoom in. Picture a small cluster of events — four or five connected by causal edges. They're sitting in a quiet corner of the graph. No path connects them to any dense causal region. No detector. No screen. No massive object nearby creating pressure. Just events, sitting there. In-flight.
+A particle (propagating pattern) is emitted. Its causal future includes **multiple routes**. No consumer (dense region) sits on any path. The pattern propagates through ALL of them — not as copies, but as one pattern whose causal future branches.
 
-@fig:idle-subgraph
-A cluster of events connected to the graph but under no causal pressure. All edges in-flight. All events uncommitted. The surrounding committed graph (green) is nearby but creates no density pressure. This is superposition.
-
-What would it mean for one of those events to "be somewhere"? Being somewhere means having committed position edges to specific neighbors. Definite position = definite edges. But this cluster has no dense region forcing commitment. So it hasn't committed. It has in-flight edges to MULTIPLE positions. Not because physics is weird — because nothing forced a resolution.
-
-THIS is superposition. Not a particle magically in two places at once. A region of the graph with no causal pressure. In-flight events with uncommitted edges. There is nothing mysterious about it. It's the same thing as a spreadsheet cell whose formula hasn't recalculated yet because nothing downstream needs the result.
-
-Now create causal pressure. A detector. A screen. Something massive that creates a dense causal region near the in-flight events. That density forces commitment. The events MUST resolve. One outcome is selected. The others disappear. That's collapse. Not a mystical transition — an in-flight region being forced to commit by causal density.
-
-@fig:consumer-forces-cascade
-LEFT: in-flight events from before — all pending, no causal pressure. RIGHT: a dense region connects. Commitment is forced. One path commits (green, solid). The rest fade. That's measurement.
-
-Small, isolated things — no dense causal regions nearby — stay in-flight. Multiple outcomes alive. That's why quantum effects appear at tiny scales. Large things — 10²⁶ atoms, every one creating dense causal connections demanding definite inputs from its neighbors — everything commits instantly. No in-flight events survive the crowd. That's decoherence.
+@fig:superposition
+Source node (green, bottom) with particle node P (orange). P has two
+causal future paths — Path A upper-left, Path B upper-right — as
+purple dashed nodes. Both in dashed purple outlines. Labels: "Path A —
+pending", "Path B — pending." Top: "Both real. Neither committed. No
+consumer → both propagate."
 
 ---
+
+The particle's causal future includes two paths. Both pending. No consumer forces commitment. This is superposition.
+@/fig
+
+THIS is superposition. Not a particle in two places. A pattern whose causal future branches through a sparse region where nothing forces it to pick one path.
+
+When the pattern reaches a consumer — one path commits. The others vanish. That's collapse.
+
+@fig:collapse
+Two panels. LEFT: both paths pending, no consumer. RIGHT: dense cluster
+of blue nodes (labeled "DETECTOR") connected to Path A. Path A solid
+green (committed). Path B faded gray. Labels: LEFT "Both alive." RIGHT
+"Consumer arrives. One commits. Other gone."
+
+---
+
+No consumer: both alive. Consumer arrives: one commits, other gone. That's collapse.
+@/fig
+
+The particle wasn't "in two places." It was mid-propagation with multiple futures. The consumer forced commitment.
+
+Decoherence: you are 10²⁶ atoms. Every atom demands definite values from its neighbors. Everything near you commits instantly. That's why you never see quantum weirdness at your scale.
 
 ### Why You Can't Just Look
 
-Measurement means creating causal connections between a dense region and the in-flight events. Simple enough. But here's the catch: connecting a dense region CHANGES THE CAUSAL TOPOLOGY. You've added edges. You've altered the causal structure. The graph before measurement and the graph after measurement are different graphs.
+Connecting a consumer CHANGES THE CAUSAL STRUCTURE. You've added nodes and edges. The graph before measurement and the graph after are different graphs. That's not philosophy. That's data structures.
 
-You cannot observe without participating. Not because of some mystical observer effect — because inserting causal connections into a graph changes the graph. That's not philosophy. That's data structures.
+This is Heisenberg. Position is about WHICH connections. Momentum is about HOW connections change. Measuring one restructures what the other depends on. Not an instrument limitation. A structural constraint.
 
-@fig:measurement-changes-topology
-LEFT: in-flight events with pending position edges (purple, dotted) and pending momentum structure (orange, dotted). MIDDLE: position detector connects — position edges commit (green), momentum edges disrupted (red). RIGHT: you can't demand both without one demand disrupting the other.
+### Entanglement: Shared Causal Past
 
-This is Heisenberg's uncertainty principle. Position and momentum are both derived from graph topology. Position is about WHICH causal edges connect WHERE. Momentum is about HOW the topology is changing over time — edge rewiring rates across growth cycles. Measuring position requires a dense region that demands position edges. That region's causal connections rewire the topology — which is exactly the thing momentum depends on. You can't demand both because demanding one structurally alters what the other depends on.
+When two particles interact, their patterns share causal history — nodes in the causal past of BOTH. This shared past creates a topological constraint.
 
-Not an instrument limitation. Not "we need better equipment." A topological constraint. You can't read a variable and its rate of change from a single snapshot of a graph that your measurement just rewired.
-
----
-
-### Entanglement
-
-// THE CENTERPIECE. ~450 words. Three figures. This is the section Greg wants to shine.
-
-When two particles interact — collide, get created together, exchange energy — their causal histories merge. They end up sharing a common causal ancestor. Think of two spreadsheet cells that both reference the same formula cell. Change the formula, both cells update. That's not magic. That's a shared dependency.
-
-@fig:entanglement-forms
-LEFT — BEFORE: particles A and B with separate, independent causal histories. RIGHT — AFTER INTERACTION: their causal histories have merged into a shared ancestor event (SH). Both A and B causally depend on SH. Interaction merges causal histories. Correlation is structural.
-
-Now the particles separate. They fly to opposite ends of the universe. Position edges rewire — A is HERE, B is THERE, enormous distance between them. But here's the thing: causal ancestry and position are **different parts of the graph**. The shared ancestor doesn't move. It doesn't care about position. It's still shared. Still uncommitted. Nobody pressured it to resolve yet.
-
-@fig:entangled-separated
-A on the far left, B on the far right. Long dashed gray position path between them (many hops — enormous distance). But both A and B have direct causal edges going to the shared ancestor SH (center-bottom). Position edges: gray, dashed — rewired when particles move. Causal edges: orange, solid — unchanged by movement. SH is still purple/pending. Nobody asked.
-
-Someone measures particle A. A detector creates causal density. The pressure propagates: detector → A → shared ancestor SH. SH must commit. It produces result R. Done.
-
-Now someone measures particle B. Could be a millisecond later. Could be a year. Could be simultaneously. The pressure propagates: detector → B → shared ancestor SH. But SH already committed. It already chose R. B reads R. Same result. Correlated.
-
-@fig:entanglement-cascade
-The full cascade. (1) Detector connects to A. (2) Green cascade: detector → A → SH. SH commits, shows "R". (3) Detector connects to B. (4) Orange cascade: detector → B → SH (already committed). B reads R. No signal between A and B. SH committed once. Both read the same answer.
-
-No signal traveled between A and B. Nothing moved faster than light. The correlation was baked into the causal topology the moment they interacted. It was sitting there, waiting for something to force commitment. The first measurement didn't CAUSE the second result. Both results were caused by the shared ancestor — which committed once, for both.
-
-Why can't you use this for faster-than-light communication? Because the results are correlated but individually random. When A measures, it gets R — but R is random. A can't choose R. B gets R too — but without knowing A's result, it just looks random. Comparing notes still requires a classical signal at speed C. It's like two people opening sealed envelopes from the same pre-shuffled deck — the cards match, but neither person controls which card they got, and they can't learn anything useful until they call each other.
-
-@physics-card: Bell's Theorem
-Bell's theorem proves that the correlations in entanglement are stronger than any "local hidden variable" theory can produce. The shared causal ancestor in our framework ISN'T a local hidden variable — it's a real topological feature of the causal graph. But here's the honest gap: we haven't rigorously proven that topological correlations in a DAG can reproduce the specific Bell inequality violations that experiments confirm. This is an open problem (O10) that needs formal mathematical development.
-@/physics-card
+@fig:entanglement
+Bottom: gold node "SHARED CAUSAL PAST." Middle: orange node
+"INTERACTION." Two paths diverge — A far left, B far right. Gray dashed
+line: "spatially far apart." Gold dashed curve through shared past:
+"topologically connected." Annotations: "measure A → commitment" and
+"B constrained by shared topology."
 
 ---
+
+Shared causal history. Spatially far apart. Topologically connected. Measure one — the other is constrained.
+@/fig
+
+Measure one. The shared history constrains the other. No signal. The correlation was structural from interaction.
+
+Why no FTL communication? Correlated but individually random. Sealed envelopes from the same deck.
+
+For Bell's theorem: the connection is topological, not spatial. Bell rules out **local** hidden variables. Whether topological correlations count as "local" is an open question.
 
 ### The Double-Slit
 
-@mystery
-Fire particles one at a time at two slits. An interference pattern appears — as if each particle went through both. Add a detector at one slit: the pattern vanishes. Looking at it changed the result.
-@/mystery
+@style:mystery
+Fire particles at two slits. Interference pattern appears. Add a detector: pattern vanishes.
+@/style
 
-You already know everything you need for this one.
+The particle's causal future includes both slits. Both paths are part of the same pattern. Both reach the screen. Where they reinforce: bright. Where they cancel: dark.
 
-**Step 1:** No dense region at the slits. Both causal paths through slit A and slit B are in-flight. The particle's causal future includes both paths — nobody forced a commitment.
-
-**Step 2:** The in-flight paths carry uncommitted possibilities forward through the causal graph. Both paths are alive.
-
-**Step 3:** In-flight paths overlap at the screen — bright bands where they align, dark bands where they cancel. Interference.
-
-**Step 4:** The screen's 10²⁶ atoms create a dense causal region forcing commitment. One dot. Over thousands of particles, the interference bands fill in.
-
-@fig:double-slit-as-graph
-The double-slit experiment as a dependency graph. In-flight edges (purple, dotted) show both paths alive. The detector node, when present, forces commitment — killing the interference.
-
-**A detector ruins it** because it creates causal density at the slit. It forces "which slit?" to commit — one path resolves. Only one path reaches the screen. No overlap. No interference. You didn't disturb the particle. You changed the causal graph.
+@fig:double-slit
+Top: SOURCE → two paths through SLIT A and SLIT B (purple dashed) →
+SCREEN (dense blue region). Interference bars on screen. Label: "No
+detector — both paths. Interference." Bottom: same but DETECTOR (red
+cluster) at SLIT A. Slit A path green. Slit B gray. Screen uniform.
+Label: "Detector — one path committed. No interference."
 
 ---
 
-### The Quantum Eraser & Delayed Choice
+No detector: both paths, interference. Detector: one path committed, no interference.
+@/fig
 
-This is the payoff. Let me spell out why the quantum eraser is so strange — because "strange" doesn't do it justice.
+A detector forces one path to commit. Only one reaches the screen. No interference.
 
-You run the double-slit with a detector. The detector records which-path info. No interference — just like we'd expect. Particles hit the screen one at a time. Dots recorded. Data collected. Done.
+### The Quantum Eraser
 
-Now — AFTER the dots are already on the screen — you erase the which-path information. You sort the data by whether the which-path info was erased or kept. In the "erased" subset: the interference pattern is BACK. In the "kept" subset: no interference. The dots were already recorded. How can erasing information after the fact change a pattern that's already there?
+This is the payoff.
 
-Here's how: the eraser is **upstream in the causal graph.**
+Double-slit with detector. No interference. Dots recorded. Now — AFTER the dots — erase the which-path info. Sort the data. In the "erased" subset: interference is BACK.
 
-@fig:eraser-cascade-path
-Full causal chain: SOURCE → SLIT A / SLIT B → SCREEN. An IDLER branch from one slit path leads to the ERASER node. The commitment propagation from SCREEN traces backward through the causal graph and encounters the ERASER. Two outcomes — TOP: eraser says "erased" → both paths still in-flight → interference. BOTTOM: eraser says "recorded" → one path committed → no interference. The propagation reads the eraser's state at arrival-time.
+The eraser is **in the causal past of the detection event.**
 
-When the screen demands commitment, that demand propagates backward through the causal graph. The eraser sits in that causal chain. The propagation reads whatever state the eraser is in at the moment the propagation reaches it. Not when the eraser was set. When the propagation arrives.
-
-Eraser says "erased" → which-path info gone → both paths still in-flight → interference.
-
-Eraser says "recorded" → which-path info locked → one path committed → no interference.
-
-"After the fact" is an illusion. The commitment was propagating through the causal graph. The eraser's state at propagation-time is what matters. No time travel. No retrocausality. A causal graph being resolved in causal order.
-
-**Delayed choice** is the same mechanism pushed further. Wheeler's thought experiment: choose whether to insert a detector AFTER the particle has already passed the slits. Seems like the particle must retroactively decide its own past. But the choice node is upstream in the causal graph. The propagation reads its state at arrival-time, not at wall-clock-time. "Retrocausality" is confusing wall-clock time with causal graph structure. In the causal graph, there is no "before" and "after" — there is only upstream and downstream.
-
-**Why basketballs don't do this:** 10²⁶ atoms, every one creating dense causal connections demanding definite inputs. No in-flight events survive. That's decoherence.
-
-@technical-card: Superposition and Collapse
-**D16 (Superposition):** No causal pressure → event stays in-flight → multiple possible outcomes alive. **D17 (Collapse):** Dense causal region forces commitment → one outcome selected → definite result. **D18 (Decoherence):** ~10²⁶ atoms each creating dense causal connections → no in-flight events survive in warm/dense environments. **D19 (Double-Slit):** No dense region at slits → both paths in-flight → interference at screen. **D20 (Quantum Eraser):** Eraser is upstream in causal graph. Its state at propagation-time determines outcome. No retrocausality. **D26 (Heisenberg):** Measuring one property rewires the topology the other depends on. Topological constraint, not instrument limitation.
-@/technical-card
-
-@technical-card: Entanglement Mechanics
-**D21 (Entanglement):** Interaction merges causal histories into a shared ancestor event. Correlation is structural — baked into causal topology at interaction time. **D22 (No FTL):** Results are correlated but individually random. Comparing notes requires classical communication at C. The shared ancestor ISN'T a hidden variable — it's a real topological feature of the graph. Whether this mechanism can reproduce Bell inequality violations is an open question (O10).
-@/technical-card
-
-@insight
-Quantum mechanics is what a causal graph looks like when nothing is forcing commitment. In-flight events sit with all outcomes alive — that's superposition. Dense causal regions force commitment — that's collapse. Measurement changes the topology it's trying to read — that's Heisenberg. Two particles that interacted share a causal ancestor that commits once for both — that's entanglement. And the quantum eraser? The eraser sits upstream in the causal graph. The propagation reads its state at arrival-time, not at wall-clock time. No time travel. No spookiness. Just a causal graph being resolved in causal order.
-@/insight
+@fig:eraser-cascade
+Causal chain: SOURCE → SLIT A / SLIT B → SCREEN. IDLER branch →
+ERASER. Arrow traces from SCREEN backward, encounters ERASER. Two
+outcomes: TOP: eraser="erased" → both paths → interference. BOTTOM:
+eraser="recorded" → one committed → no interference. Label: "Causal
+chain reads eraser's state at arrival-time."
 
 ---
 
-## What's Actually Novel Here
+The causal chain reads the eraser's state when it reaches it — not when the eraser was set.
+@/fig
 
-The idea that spacetime might be discrete isn't new. Loop quantum gravity, causal sets, causal dynamical triangulations, Wolfram's hypergraph rewriting — a lot of serious people have been here before. So what, if anything, does this framework add?
+"After the fact" is an illusion. In the causal graph there is no "before" and "after" — only causal past and causal future. The eraser is in the causal past of the screen event. No time travel. A causal graph being read in causal order.
 
-Two things, honestly:
+The most confusing experiment in physics, and it's a graph being evaluated in the order the graph says it should be.
 
-**1. The specific synthesis.** Causal set theory gives you the DAG. Demand-driven evaluation gives you lazy commitment. But combining them with the "no stored values" axiom and the consumer concept — the idea that dense causal regions force commitment — is, as far as we can tell, novel. This specific combination dissolves the measurement problem without adding new physics: measurement IS causal density forcing commitment. That's not a new rule. It's what the existing rules already do when you put a detector (dense causal region) next to in-flight events.
+**Why basketballs don't do this:** 10²⁶ consumers. Nothing stays uncommitted.
 
-**2. The consumer concept.** The claim that dense causal regions — detectors, screens, massive objects — force commitment by creating causal pressure. This is specific. It makes the measurement problem a consequence of graph structure rather than a separate postulate. "What causes collapse?" has a concrete answer: causal density.
+@style:insight
+Quantum mechanics is what patterns look like mid-propagation. Uncommitted patterns have multiple futures — superposition. Dense regions force commitment — collapse. Shared causal past creates correlation — entanglement. The eraser is in the causal past. No spookiness. Just a graph.
+@/style
 
-**What we should NOT claim.** We are not claiming to have derived the equations of general relativity, or the particle spectrum, or the Born rule. We have structural analogies — some tight, some loose — that map graph mechanics onto observed physics. That is interesting and possibly useful. It is not a theory of everything. It is a framework that might point toward one.
+---
+
+## What's Novel Here (Honestly)
+
+The idea that spacetime is discrete isn't new. Causal set theory, loop quantum gravity, Wolfram's project — serious people have been here for decades. As I said: those guys BALL.
+
+So what does this add? Honestly — not much. But maybe two things:
+
+**1. The consumer concept.** Defining collapse as "a dense causal region forces a propagating pattern to commit" — dissolving the measurement problem into graph structure without a separate collapse postulate. Standard decoherence theory says something similar, but framing it as a graph-structural mechanism might add clarity.
+
+**2. The unification framing.** GR describes the committed structure. QM describes mid-propagation patterns. They look incompatible because they're describing different scales of the same thing. A framing, not a proof — but one that makes the divide feel like a perspective difference.
+
+Beyond that? The pedagogical synthesis. The ingredients aren't mine. The recipe might be useful.
 
 ---
 
 ## Honest Gaps
 
-A framework that claims to explain everything without identifying where it breaks is a story, not a theory. These gaps are real and hard.
+A framework that claims to explain everything without identifying where it breaks is a story, not a theory.
 
-@gap-box
-@gap: Can't derive Einstein's exact equations from graph structure.
-The number one problem. The qualitative match is strong but we haven't derived Gμν + Λgμν = 8πG/c⁴ Tμν from first principles. Without the derivation, this is a compelling analogy, not a formal theory.
+@style:gap-box
+**Can't derive Einstein's field equations.** The number one problem. Without the derivation, this is analogy, not theory.
 
-@gap: Can't prove the computation is confluent.
-We claim the committed result is independent of the order in which causally independent events commit. But we haven't formally proven the graph has a unique fixed point for all orderings. If different orderings produce different states, the framework predicts violations of Lorentz symmetry that aren't observed.
+**Lorentz invariance on a discrete structure.** Must explain why Lorentz symmetry holds to ~10⁻²⁰ precision. Causal set theory has a partial answer. We don't. Possibly the single biggest threat.
 
-@gap: Can't explain specific particles.
-Electrons, quarks, neutrinos have specific masses and charges. "Particles are stable topologies" doesn't tell us which ones exist or why. The mathematical structure needed to recover the Standard Model particle spectrum from graph topology is unknown.
+**Analogy vs. derivation.** This framework reasons by structural analogy, not math. Physics requires equations.
 
-@gap: Can't derive complex amplitudes or the Born rule.
-Quantum mechanics runs on complex numbers. Our framework is a DAG — no cycles. The previous mechanism (cycles producing roots of unity) is dead. We have no mechanism for producing complex-valued amplitudes from an acyclic causal graph. This may be the single biggest theoretical gap.
+**Interference aggregation.** What operation produces constructive/destructive patterns from two causal paths? Unspecified.
 
-@gap: Interference aggregation function unspecified.
-The double-slit experiment requires in-flight paths to interfere. We say they "overlap" but don't specify the mathematical rule governing constructive vs. destructive interference. Without this, we describe interference but can't predict fringe patterns.
+**Bell's theorem.** We claim topological correlations might not count as "local." That's a claim, not a proof.
 
-@gap: Bell's theorem — topological escape needs proof.
-We claim entanglement correlations arise from shared causal topology, not local hidden variables. But we haven't rigorously proven that DAG-based topological correlations can violate Bell inequalities while respecting locality. This needs formal math.
+**Can't explain specific particles.** Which patterns are stable and why?
 
-@gap: Growth dynamics unspecified.
-The graph grows (A5), but WHERE do new events appear? What rule determines which committed events spawn new edges? Without a growth rule, the framework can't predict large-scale structure or spacetime geometry.
+**Can't prove the Born rule.** Why |amplitude|²?
 
-@gap: E=mc² needs rederivation.
-The c² factor was previously derived from bidirectional recursive evaluation. That mechanism is gone. A new derivation from local propagation mechanics is needed.
+**Growth dynamics.** What determines where new nodes are born? Unsolved in causal set theory too.
 
-@gap: No unique experimental prediction — with one exception.
-The framework predicts **no singularity** at the center of black holes. Standard GR predicts infinite density. This framework predicts causal trapping — extreme but finite density, no escape path. If quantum gravity observations become possible, this could be testable.
+**No unique experimental prediction.** The no-singularity prediction is shared by most discrete spacetime theories.
+@/style
 
-@gap: Lorentz invariance on a discrete structure.
-Any discrete spacetime must explain why Lorentz symmetry holds to the precision we've measured — roughly 10⁻²⁰ times tighter than a naive lattice would produce. A discrete graph should break continuous symmetry at small scales. We have no mechanism for how a graph recovers exact Lorentz invariance. This may be the single biggest existential threat to any discrete spacetime theory, including this one.
-
-@gap: Analogy vs. derivation.
-This framework reasons by structural analogy, not mathematical derivation. Where the mapping is exact (topological ordering = causal structure), it's compelling. Where it's approximate (causal density ≈ gravitational potential), it's suggestive. Where it's a stretch, it fails. A map that "looks right" is useful — but physics requires equations, not analogies. Until the structural matches produce quantitative predictions, this remains a conceptual framework, not a theory.
-@/gap-box
-
-These are genuine obstacles. Any one of them could be fatal to the whole picture. That's fine. That's how this works. You lay out what you think, you lay out where it breaks, and you hope someone smarter can get further than you did.
+Any of the first three could be fatal. That's fine. You lay out what you think, you lay out where it breaks, and you hope someone smarter gets further.
 
 ---
 
-## Quick Reference
+## How I Got Here
 
-@table
-| Physics Concept | In This Framework | Computer Analogy | Confidence |
-|---|---|---|---|
-| Space | Large-scale causal graph shape. Connectivity pattern. | Network topology. Hop count = distance. | Strong |
-| Mass | Stable causal topology. Same pattern, same result. | Deterministic function, same output for unchanged input. | Strong |
-| Energy | Delta that propagates outward when topology changes. | Function output feeding next function call. | Strong |
-| E = mc² | Depth × C². Mechanism needs rederivation from local propagation. | Open problem. | Speculative |
-| Time | Graph growth. Each new layer of committed events = one tick. | State change counter. No state change = no tick. | Strong |
-| Arrow of time | Graph grows. Can't un-birth a node. Irreversible. | Program execution. Can't un-run code. | Strong |
-| Time dilation | Dense causal region or fast motion → slower local commitment. | Dense computation or I/O consuming cycles → lower throughput. | Suggestive |
-| Speed of light (C) | Maximum propagation rate. One hop per tick. | Base case return time. Immediate, no recursion. | Strong |
-| Gravity | Causal density curving cheapest paths. Dense regions = expensive traversal. | Network congestion; traffic routes around dense zones. | Suggestive |
-| Can't shield gravity | Adding stuff adds causal density. You make it worse. | Can't reduce congestion by adding more cars. | Strong |
-| Equivalence principle | Acceleration and gravity both increase local causal density. Same mechanism. | CPU load from motion vs. dense computation: same throughput impact. | Suggestive |
-| Spacetime | Causal density profile — dense wells where mass is, flat elsewhere. | Network topology, updated on congestion. | Suggestive |
-| Black hole | Extreme causal density. No outward causal path. No singularity — causal trapping. | Infinite loop in a finite program. | Suggestive |
-| Dark matter | Unknown mechanism. Old model (cycles) is dead. Open gap. | Unknown. | Open |
-| Wave function | In-flight event. Multiple possible outcomes, nothing committed. | Lazy thunk. Defined, not forced. | Strong |
-| Collapse | Dense causal region forces commitment. In-flight → definite result. | Forcing a lazy thunk. | Strong |
-| Quantum eraser | Eraser is upstream in causal graph. Propagation reads its state at arrival-time. | Editing spreadsheet formula before recalculation reaches it. | Strong |
-| Heisenberg uncertainty | Measuring one property rewires the causal topology the other depends on. | Can't read a variable and its derivative from one snapshot. | Strong |
-| Delayed choice | Choice node is upstream. Propagation reads state at arrival-time. | Setting a config value before the function reads it. | Strong |
-| Entanglement | Shared causal ancestor. Commits once for both. Correlation from topology. | Shared pointer. Same data regardless of location. | Strong |
-| Special relativity | No preferred traversal order → no preferred frame. | Same output regardless of evaluation order. | Strong |
-| Expansion | Committed events spawn new events. Growth proportional to size = acceleration. | Self-modifying code. Evaluation extends codebase. | Suggestive |
-| Planck length | One hop. One edge. One pixel. | Minimum addressable unit. | Strong |
-| Particle | Stable topology propagating through growing graph. | Persistent data structure. Same shape, new position. | Suggestive |
-@/table
+@style:hook
+I couldn't stop laughing at the absurdity of it being traced back to sauerkraut. I thought — how random.
 
----
+Then it hit me. Was it random? Was there any event in that chain that did not depend on the previous one? Was meeting her random? Was anything ever random? Could I keep going back — all the way to the Big Bang — hit play, and watch the events unfold exactly the way they have? Could I play it out to the future?
+@/style
 
-// FOOTER
-// GL Theory: Greg's Computational Guide to the Universe
-// March 2026 · Plain English Edition
-// Framework developed by Greg.
-// "The delusions are my own."
+If there is no truly random thing in the universe — if it only appears random to ME — then everything that is going to happen is already predetermined. Not that I can't make a choice. But that the choice I will make depends on the sum of all my life experiences, which is a result of my parents' sum of experiences, and so on and so on.
+
+Surely that can't be right. So I set out to hunt for random. Surely it's somewhere.
+
+That led me to the quantum world — where some say the double-slit experiment is random. Funny thing. The moment I saw that, I hated the idea of it instantly. I am a conscious being. I have free will. But hearing that my photon is fucking randomly appearing somewhere? That didn't sit right. "God doesn't play dice." So here we are.
+
+And it's not just photons. Quantum mechanics says that when you sit down on your chair there is a non-zero chance it won't be there. The probability is vanishingly small but it's not zero. And people just kind of accept this.
+
+I'm saying fuck no.
+
+In my version, the second you go to interact with that chair, the chair resolves to exactly where it needs to be. The graph commits. The result is definite. Zero percent chance you go through it. Not a very small chance. Zero. Interaction is a consumer meeting a pattern. Committed results are real. Every time.
+
+**I'd rather be Mario than accept random.**
+
+I don't know what that means for free will. Maybe every choice I make depends on every event that came before it and none of it was random. Or maybe it all still depends on every previous event but somewhere along the way it came down to a choice some electron made. I don't know. The framework doesn't tell me which one it is. It just says the graph grows, patterns propagate, and consumers force commitment.
+
+The odds that any of this is right are as close to zero as something can be. But if even the shape is right — if spacetime really is a graph, if gravity really is causal density, if quantum mechanics really is what patterns look like before consumers force commitment — then maybe understanding that helps someone who actually knows what they're doing.
+
+And if not, at least I finally understand why those guys BALL.
