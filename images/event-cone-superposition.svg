@@ -1,0 +1,92 @@
+<!-- DESCRIPTION: event-cone-superposition -->
+<svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gg"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="go"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="ag" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#44cc66"/>
+    </marker>
+  </defs>
+  <rect width="720" height="400" fill="#08080f"/>
+
+  <!-- Divider -->
+  <line x1="360" y1="20" x2="360" y2="355" stroke="#1e1e38" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ===== LEFT PANEL: LATE CONSUMER (tick 8) ===== -->
+  <text x="180" y="32" fill="#a8dadc" font-size="14" text-anchor="middle" font-family="Georgia" font-weight="bold">LATE CONSUMER</text>
+  <text x="180" y="50" fill="#668888" font-size="11" text-anchor="middle" font-family="Georgia">tick 8</text>
+
+  <!-- Large teal event cone -->
+  <path d="M 200,190 L 50,90 L 50,290 Z" fill="#a8dadc" fill-opacity="0.08" stroke="#a8dadc" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Node (committed green) -->
+  <circle cx="200" cy="190" r="20" fill="#1a3a1a" stroke="#44cc66" stroke-width="2.5" filter="url(#gg)"/>
+  <text x="200" y="196" fill="#44cc66" font-size="16" text-anchor="middle" font-family="Georgia">&#10003;</text>
+
+  <!-- 4 green arrived events -->
+  <circle cx="90" cy="120" r="8" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+  <line x1="98" y1="124" x2="182" y2="180" stroke="#44cc66" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="90" y="108" fill="#44cc66" font-size="9" text-anchor="middle" font-family="Georgia">E1 &#10003;</text>
+
+  <circle cx="80" cy="180" r="8" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+  <line x1="88" y1="182" x2="180" y2="190" stroke="#44cc66" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="70" y="168" fill="#44cc66" font-size="9" text-anchor="middle" font-family="Georgia">E2 &#10003;</text>
+
+  <circle cx="95" cy="240" r="8" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+  <line x1="103" y1="236" x2="184" y2="200" stroke="#44cc66" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="95" y="260" fill="#44cc66" font-size="9" text-anchor="middle" font-family="Georgia">E3 &#10003;</text>
+
+  <circle cx="130" cy="280" r="8" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+  <line x1="138" y1="275" x2="188" y2="207" stroke="#44cc66" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="130" y="298" fill="#44cc66" font-size="9" text-anchor="middle" font-family="Georgia">E4 &#10003;</text>
+
+  <!-- Consumer (late, small, bottom-right of panel) -->
+  <circle cx="280" cy="280" r="10" fill="#1a1000" stroke="#d35400" stroke-width="1.5" filter="url(#go)"/>
+  <text x="280" y="284" fill="#d35400" font-size="9" text-anchor="middle" font-family="Georgia">C</text>
+  <line x1="270" y1="270" x2="215" y2="205" stroke="#d35400" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- Result -->
+  <text x="180" y="330" fill="#44cc66" font-size="11" text-anchor="middle" font-family="Georgia">4 inputs arrived</text>
+  <text x="180" y="348" fill="#44cc66" font-size="10" text-anchor="middle" font-family="Georgia">value = f(E1, E2, E3, E4)</text>
+
+  <!-- ===== RIGHT PANEL: EARLY CONSUMER (tick 3) ===== -->
+  <text x="540" y="32" fill="#d35400" font-size="14" text-anchor="middle" font-family="Georgia" font-weight="bold">EARLY CONSUMER</text>
+  <text x="540" y="50" fill="#885500" font-size="11" text-anchor="middle" font-family="Georgia">tick 3</text>
+
+  <!-- Small orange event cone -->
+  <path d="M 560,190 L 470,150 L 470,230 Z" fill="#d35400" fill-opacity="0.08" stroke="#d35400" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Node (committed green but different value) -->
+  <circle cx="560" cy="190" r="20" fill="#1a3a1a" stroke="#44cc66" stroke-width="2.5" filter="url(#gg)"/>
+  <text x="560" y="196" fill="#44cc66" font-size="16" text-anchor="middle" font-family="Georgia">&#10003;</text>
+
+  <!-- E1: arrived (inside cone) -->
+  <circle cx="490" cy="170" r="8" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+  <line x1="498" y1="174" x2="542" y2="185" stroke="#44cc66" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="485" y="158" fill="#44cc66" font-size="9" text-anchor="middle" font-family="Georgia">E1 &#10003;</text>
+
+  <!-- E2: didn't make it (outside cone, red X) -->
+  <circle cx="430" cy="200" r="8" fill="#2a0a0a" stroke="#cc4444" stroke-width="1.5"/>
+  <text x="430" y="220" fill="#cc4444" font-size="9" text-anchor="middle" font-family="Georgia">E2 &#10007;</text>
+
+  <!-- E3: didn't make it -->
+  <circle cx="420" cy="130" r="8" fill="#2a0a0a" stroke="#cc4444" stroke-width="1.5"/>
+  <text x="420" y="118" fill="#cc4444" font-size="9" text-anchor="middle" font-family="Georgia">E3 &#10007;</text>
+
+  <!-- E4: didn't make it -->
+  <circle cx="400" cy="260" r="8" fill="#2a0a0a" stroke="#cc4444" stroke-width="1.5"/>
+  <text x="400" y="280" fill="#cc4444" font-size="9" text-anchor="middle" font-family="Georgia">E4 &#10007;</text>
+
+  <!-- Consumer (early, close, big) -->
+  <circle cx="640" cy="220" r="14" fill="#1a1000" stroke="#d35400" stroke-width="2" filter="url(#go)"/>
+  <text x="640" y="225" fill="#d35400" font-size="11" text-anchor="middle" font-family="Georgia" font-weight="bold">C</text>
+  <line x1="628" y1="212" x2="578" y2="198" stroke="#d35400" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="640" y="250" fill="#885500" font-size="9" text-anchor="middle" font-family="Georgia">arrived early</text>
+
+  <!-- Result -->
+  <text x="540" y="330" fill="#d35400" font-size="11" text-anchor="middle" font-family="Georgia">1 input arrived</text>
+  <text x="540" y="348" fill="#d35400" font-size="10" text-anchor="middle" font-family="Georgia">value = f(E1) &#8212; DIFFERENT</text>
+
+  <!-- Bottom spanning text -->
+  <text x="360" y="385" fill="#cccccc" font-size="12" text-anchor="middle" font-family="Georgia">Same node. Same graph. Different consumer timing. Different reality.</text>
+</svg>

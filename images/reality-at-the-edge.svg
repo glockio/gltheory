@@ -1,0 +1,192 @@
+<!-- DESCRIPTION: reality-at-the-edge -->
+<svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gg"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gp"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gt"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="720" height="440" fill="#08080f"/>
+
+  <!-- BOTTOM LAYER: ancient history — tiny dense green dots -->
+  <g opacity="0.3">
+    <circle cx="120" cy="400" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="140" cy="405" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="160" cy="398" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="180" cy="403" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="200" cy="400" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="220" cy="406" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="240" cy="399" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="260" cy="404" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="280" cy="401" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="300" cy="406" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="320" cy="399" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="340" cy="403" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="360" cy="400" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="380" cy="405" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="400" cy="398" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="420" cy="403" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="440" cy="401" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="460" cy="406" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="480" cy="399" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="500" cy="404" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="520" cy="401" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="540" cy="405" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="560" cy="400" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="580" cy="403" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="600" cy="399" r="3" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+  </g>
+
+  <!-- LAYER 2: slightly newer, r=4 -->
+  <g opacity="0.4">
+    <circle cx="130" cy="375" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="165" cy="378" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="200" cy="373" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="235" cy="377" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="270" cy="374" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="305" cy="379" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="340" cy="373" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="375" cy="377" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="410" cy="375" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="445" cy="378" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="480" cy="374" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="515" cy="377" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="550" cy="375" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <circle cx="585" cy="379" r="4" fill="#1a3a1a" stroke="#44cc66" stroke-width="0.8"/>
+    <!-- connecting lines -->
+    <line x1="130" y1="375" x2="165" y2="378" stroke="#2a5a2a" stroke-width="0.5"/>
+    <line x1="200" y1="373" x2="235" y2="377" stroke="#2a5a2a" stroke-width="0.5"/>
+    <line x1="305" y1="379" x2="340" y2="373" stroke="#2a5a2a" stroke-width="0.5"/>
+    <line x1="410" y1="375" x2="445" y2="378" stroke="#2a5a2a" stroke-width="0.5"/>
+    <line x1="515" y1="377" x2="550" y2="375" stroke="#2a5a2a" stroke-width="0.5"/>
+  </g>
+
+  <!-- LAYER 3: r=5 -->
+  <g opacity="0.5">
+    <circle cx="140" cy="345" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="190" cy="348" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="240" cy="343" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="290" cy="347" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="340" cy="344" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="390" cy="348" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="440" cy="343" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="490" cy="347" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="540" cy="345" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <circle cx="590" cy="348" r="5" fill="#1a3a1a" stroke="#44cc66" stroke-width="1" filter="url(#gg)"/>
+    <line x1="140" y1="345" x2="190" y2="348" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="240" y1="343" x2="290" y2="347" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="340" y1="344" x2="390" y2="348" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="440" y1="343" x2="490" y2="347" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="190" y1="348" x2="240" y2="343" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="390" y1="348" x2="440" y2="343" stroke="#2a5a2a" stroke-width="0.7"/>
+  </g>
+
+  <!-- LAYER 4: medium, r=7 -->
+  <g opacity="0.65">
+    <circle cx="120" cy="305" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="185" cy="310" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="250" cy="303" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="315" cy="308" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="380" cy="305" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="445" cy="310" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="510" cy="304" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <circle cx="575" cy="308" r="7" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.2" filter="url(#gg)"/>
+    <line x1="120" y1="305" x2="185" y2="310" stroke="#2a5a2a" stroke-width="0.9"/>
+    <line x1="185" y1="310" x2="250" y2="303" stroke="#2a5a2a" stroke-width="0.9"/>
+    <line x1="250" y1="303" x2="315" y2="308" stroke="#2a5a2a" stroke-width="0.9"/>
+    <line x1="315" y1="308" x2="380" y2="305" stroke="#2a5a2a" stroke-width="0.9"/>
+    <line x1="380" y1="305" x2="445" y2="310" stroke="#2a5a2a" stroke-width="0.9"/>
+    <line x1="445" y1="310" x2="510" y2="304" stroke="#2a5a2a" stroke-width="0.9"/>
+    <line x1="510" y1="304" x2="575" y2="308" stroke="#2a5a2a" stroke-width="0.9"/>
+    <!-- vertical connections down -->
+    <line x1="120" y1="312" x2="140" y2="340" stroke="#2a5a2a" stroke-width="0.6"/>
+    <line x1="250" y1="310" x2="240" y2="338" stroke="#2a5a2a" stroke-width="0.6"/>
+    <line x1="380" y1="312" x2="390" y2="343" stroke="#2a5a2a" stroke-width="0.6"/>
+    <line x1="510" y1="311" x2="540" y2="340" stroke="#2a5a2a" stroke-width="0.6"/>
+  </g>
+
+  <!-- LAYER 5: larger committed, r=9 -->
+  <g opacity="0.8">
+    <circle cx="100" cy="260" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <circle cx="180" cy="265" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <circle cx="260" cy="258" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <circle cx="340" cy="263" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <circle cx="420" cy="260" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <circle cx="500" cy="265" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <circle cx="580" cy="259" r="9" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.5" filter="url(#gg)"/>
+    <line x1="100" y1="260" x2="180" y2="265" stroke="#2a5a2a" stroke-width="1"/>
+    <line x1="180" y1="265" x2="260" y2="258" stroke="#2a5a2a" stroke-width="1"/>
+    <line x1="260" y1="258" x2="340" y2="263" stroke="#2a5a2a" stroke-width="1"/>
+    <line x1="340" y1="263" x2="420" y2="260" stroke="#2a5a2a" stroke-width="1"/>
+    <line x1="420" y1="260" x2="500" y2="265" stroke="#2a5a2a" stroke-width="1"/>
+    <line x1="500" y1="265" x2="580" y2="259" stroke="#2a5a2a" stroke-width="1"/>
+    <line x1="100" y1="269" x2="120" y2="298" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="260" y1="267" x2="250" y2="296" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="420" y1="269" x2="445" y2="303" stroke="#2a5a2a" stroke-width="0.7"/>
+    <line x1="580" y1="268" x2="575" y2="301" stroke="#2a5a2a" stroke-width="0.7"/>
+  </g>
+
+  <!-- LAYER 6: recent committed, r=11 -->
+  <circle cx="80" cy="215" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <circle cx="170" cy="220" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <circle cx="260" cy="213" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <circle cx="350" cy="218" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <circle cx="440" cy="215" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <circle cx="530" cy="220" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <circle cx="620" cy="214" r="11" fill="#1a3a1a" stroke="#44cc66" stroke-width="1.8" filter="url(#gg)"/>
+  <line x1="80" y1="215" x2="170" y2="220" stroke="#2a5a2a" stroke-width="1"/>
+  <line x1="170" y1="220" x2="260" y2="213" stroke="#2a5a2a" stroke-width="1"/>
+  <line x1="260" y1="213" x2="350" y2="218" stroke="#2a5a2a" stroke-width="1"/>
+  <line x1="350" y1="218" x2="440" y2="215" stroke="#2a5a2a" stroke-width="1"/>
+  <line x1="440" y1="215" x2="530" y2="220" stroke="#2a5a2a" stroke-width="1"/>
+  <line x1="530" y1="220" x2="620" y2="214" stroke="#2a5a2a" stroke-width="1"/>
+  <!-- vertical connections -->
+  <line x1="80" y1="226" x2="100" y2="251" stroke="#2a5a2a" stroke-width="0.8"/>
+  <line x1="260" y1="224" x2="260" y2="249" stroke="#2a5a2a" stroke-width="0.8"/>
+  <line x1="440" y1="226" x2="420" y2="251" stroke="#2a5a2a" stroke-width="0.8"/>
+  <line x1="620" y1="225" x2="580" y2="250" stroke="#2a5a2a" stroke-width="0.8"/>
+
+  <!-- FRONTIER: purple pending nodes -->
+  <circle cx="80" cy="165" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <circle cx="170" cy="170" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <circle cx="260" cy="163" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <circle cx="350" cy="168" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <circle cx="440" cy="165" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <circle cx="530" cy="170" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <circle cx="620" cy="164" r="13" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <!-- connections up from committed to frontier -->
+  <line x1="80" y1="204" x2="80" y2="178" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="170" y1="209" x2="170" y2="183" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="260" y1="202" x2="260" y2="176" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="350" y1="207" x2="350" y2="181" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="440" y1="204" x2="440" y2="178" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="530" y1="209" x2="530" y2="183" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+  <line x1="620" y1="203" x2="620" y2="177" stroke="#554488" stroke-width="0.8" stroke-dasharray="3,3"/>
+
+  <!-- SPACETIME FABRIC: teal wavy line draped over the frontier -->
+  <path d="M 40,150 Q 80,135 125,148 Q 170,160 215,145 Q 260,130 305,147 Q 350,162 395,145 Q 440,128 485,148 Q 530,166 575,145 Q 620,126 680,148" fill="none" stroke="#a8dadc" stroke-width="2.5" filter="url(#gt)"/>
+
+  <!-- STICK FIGURE on the surface -->
+  <circle cx="352" cy="127" r="5" fill="none" stroke="#fff" stroke-width="1.5"/> <!-- head -->
+  <line x1="352" y1="132" x2="352" y2="150" stroke="#fff" stroke-width="1.5"/> <!-- body -->
+  <line x1="352" y1="138" x2="342" y2="146" stroke="#fff" stroke-width="1.5"/> <!-- left arm -->
+  <line x1="352" y1="138" x2="362" y2="146" stroke="#fff" stroke-width="1.5"/> <!-- right arm -->
+  <line x1="352" y1="150" x2="344" y2="162" stroke="#fff" stroke-width="1.5"/> <!-- left leg -->
+  <line x1="352" y1="150" x2="360" y2="162" stroke="#fff" stroke-width="1.5"/> <!-- right leg -->
+
+  <!-- Label: You live here -->
+  <text x="390" y="125" fill="#ffffff" font-size="11" font-family="Georgia">You live here.</text>
+
+  <!-- LEFT annotation -->
+  <text x="30" y="42" fill="#44cc66" font-size="11" font-family="Georgia">THE STRUCTURE</text>
+  <text x="30" y="58" fill="#336633" font-size="10" font-family="Georgia">All the events that</text>
+  <text x="30" y="72" fill="#336633" font-size="10" font-family="Georgia">came before</text>
+  <line x1="30" y1="78" x2="30" y2="380" stroke="#336633" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- RIGHT annotation -->
+  <text x="600" y="42" fill="#a8dadc" font-size="11" font-family="Georgia" text-anchor="end">SPACETIME</text>
+  <text x="600" y="58" fill="#668888" font-size="10" font-family="Georgia" text-anchor="end">What you experience</text>
+  <line x1="665" y1="100" x2="665" y2="148" stroke="#668888" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- BOTTOM LABEL -->
+  <text x="360" y="430" fill="#666666" font-size="11" text-anchor="middle" font-family="Georgia">Your reality is the surface. The ocean floor built everything underneath you.</text>
+</svg>
