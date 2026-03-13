@@ -1,0 +1,122 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans. Same layout as double-slit-graph but: PATH A now has an extra orange node at the slit labeled "DETECTOR — forces commitment". The path A nodes AFTER the detector are now GREEN (committed, no longer pending). PATH B nodes still PURPLE (pending). At screen: "Committed value from A + pending operations from B". Label: "Phase relationship broken. No interference." The event cone at slit A is visually shrunk — small teal shaded area ending at the detector. Below: "The detector asked slit A to commit. Now paths A and B no longer have the right relationship. Interference dies. Not because anything was blocked — because commitment happened too soon." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- SOURCE node (committed green) -->
+  <circle cx="80" cy="230" r="24" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="80" y="226" text-anchor="middle" font-size="10" fill="white" font-weight="700">SOURCE</text>
+  <text x="80" y="238" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.7)">committed</text>
+
+  <!-- WALL WITH 2 SLITS -->
+  <line x1="340" y1="40" x2="340" y2="150" stroke="#999" stroke-width="3" stroke-dasharray="6,3"/>
+  <line x1="340" y1="195" x2="340" y2="265" stroke="#999" stroke-width="3" stroke-dasharray="6,3"/>
+  <line x1="340" y1="310" x2="340" y2="460" stroke="#999" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="340" y="30" text-anchor="middle" font-size="10" fill="#7a7a6a" font-weight="600">WALL WITH 2 SLITS</text>
+
+  <!-- Small teal event cone at slit A (visually shrunk) -->
+  <ellipse cx="340" cy="170" rx="45" ry="35" fill="#1abc9c" opacity="0.12" stroke="#1abc9c" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="290" y="145" font-size="7" fill="#1abc9c" font-weight="600">SHRUNK</text>
+  <text x="290" y="155" font-size="7" fill="#1abc9c" font-weight="600">EVENT CONE</text>
+
+  <!-- PATH A label -->
+  <text x="260" y="112" text-anchor="middle" font-size="11" fill="#7d3c98" font-weight="700">PATH A</text>
+
+  <!-- Path A nodes BEFORE detector (purple dashed, pending) -->
+  <circle cx="160" cy="145" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="230" cy="155" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="300" cy="165" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- DETECTOR at slit A (orange, forces commitment) -->
+  <circle cx="350" cy="170" r="16" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="350" y="167" text-anchor="middle" font-size="7" fill="white" font-weight="700">DETECT</text>
+  <text x="350" y="177" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.8)">forces commit</text>
+  <!-- Detector label -->
+  <text x="410" y="155" font-size="9" fill="#d35400" font-weight="700">DETECTOR</text>
+  <text x="410" y="167" font-size="8" fill="#d35400" font-style="italic">forces commitment</text>
+
+  <!-- Path A nodes AFTER detector (GREEN — committed) -->
+  <circle cx="460" cy="165" r="12" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="540" cy="175" r="12" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <circle cx="620" cy="190" r="12" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+
+  <!-- Path A edges (before detector: dashed purple; after detector: solid green) -->
+  <line x1="104" y1="220" x2="148" y2="152" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="172" y1="147" x2="218" y2="153" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="242" y1="157" x2="288" y2="163" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="312" y1="167" x2="334" y2="170" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- After detector: solid green -->
+  <line x1="366" y1="170" x2="448" y2="167" stroke="#1e8449" stroke-width="2"/>
+  <line x1="472" y1="167" x2="528" y2="173" stroke="#1e8449" stroke-width="2"/>
+  <text x="500" y="160" text-anchor="middle" font-size="8" fill="#1e8449" font-weight="600">committed</text>
+  <line x1="552" y1="177" x2="608" y2="188" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- PATH B label -->
+  <text x="260" y="290" text-anchor="middle" font-size="11" fill="#7d3c98" font-weight="700">PATH B</text>
+
+  <!-- Path B nodes (still purple dashed, pending) -->
+  <circle cx="160" cy="310" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="230" cy="300" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="300" cy="290" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="380" cy="285" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="460" cy="288" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="540" cy="280" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="620" cy="268" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Path B edges (dashed purple, pending) -->
+  <line x1="104" y1="240" x2="148" y2="303" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="172" y1="308" x2="218" y2="302" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="195" y="318" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="242" y1="298" x2="288" y2="292" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="265" y="308" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="312" y1="289" x2="368" y2="286" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="392" y1="286" x2="448" y2="288" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="420" y="300" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="472" y1="289" x2="528" y2="282" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="552" y1="278" x2="608" y2="270" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+
+  <!-- SCREEN node (orange, consumer) -->
+  <circle cx="730" cy="230" r="28" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5" opacity="0.6"/>
+  <text x="730" y="224" text-anchor="middle" font-size="10" fill="white" font-weight="700">SCREEN</text>
+  <text x="730" y="237" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">demands value</text>
+
+  <!-- Convergence: Path A (solid green) → Screen -->
+  <line x1="632" y1="192" x2="702" y2="222" stroke="#1e8449" stroke-width="2"/>
+  <polygon points="702,222 695,214 693,224" fill="#1e8449"/>
+
+  <!-- Convergence: Path B (dashed purple) → Screen -->
+  <line x1="632" y1="266" x2="702" y2="238" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.7"/>
+  <polygon points="702,238 695,244 693,234" fill="#7d3c98" opacity="0.7"/>
+
+  <!-- Label at screen -->
+  <text x="730" y="275" text-anchor="middle" font-size="9" fill="#1a1a1a" font-weight="600">Committed value from A</text>
+  <text x="730" y="289" text-anchor="middle" font-size="9" fill="#1a1a1a" font-weight="600">+ pending ops from B</text>
+
+  <!-- Phase broken label -->
+  <text x="730" y="315" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">Phase relationship broken.</text>
+  <text x="730" y="332" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="700">No interference.</text>
+
+  <!-- No interference pattern — scattered dots -->
+  <rect x="775" y="190" width="8" height="80" rx="2" fill="none" stroke="#d5d0c0" stroke-width="0.5"/>
+  <circle cx="779" cy="215" r="1.5" fill="#1a1a1a" opacity="0.5"/>
+  <circle cx="778" cy="222" r="1.2" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="780" cy="228" r="1.5" fill="#1a1a1a" opacity="0.6"/>
+  <circle cx="779" cy="235" r="1.3" fill="#1a1a1a" opacity="0.5"/>
+  <circle cx="778" cy="241" r="1" fill="#1a1a1a" opacity="0.3"/>
+  <circle cx="780" cy="247" r="1.4" fill="#1a1a1a" opacity="0.55"/>
+  <circle cx="779" cy="253" r="1.1" fill="#1a1a1a" opacity="0.4"/>
+  <circle cx="778" cy="208" r="1.5" fill="#1a1a1a" opacity="0.45"/>
+  <circle cx="780" cy="202" r="1" fill="#1a1a1a" opacity="0.3"/>
+  <circle cx="779" cy="260" r="1.2" fill="#1a1a1a" opacity="0.35"/>
+  <text x="795" y="230" font-size="7" fill="#7a7a6a">no</text>
+  <text x="795" y="240" font-size="7" fill="#7a7a6a">interference</text>
+
+  <!-- Red X over where interference would be -->
+  <line x1="774" y1="189" x2="784" y2="272" stroke="#c0392b" stroke-width="1.5" opacity="0.4"/>
+  <line x1="784" y1="189" x2="774" y2="272" stroke="#c0392b" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Bottom caption -->
+  <text x="450" y="420" text-anchor="middle" font-size="11" fill="#1a1a1a">The detector asked slit A to commit. Now paths A and B no longer have the right relationship.</text>
+  <text x="450" y="440" text-anchor="middle" font-size="11" fill="#1a1a1a">Interference dies. Not because anything was blocked — because commitment happened too soon.</text>
+</svg>

@@ -246,7 +246,7 @@ E = mc² is not a conversion. It's an identity. Mass and energy are the same thi
 Why c² and not just c? Dimensional analysis. Energy has units of kg·m²/s². Mass has units of kg. To convert between them you need m²/s² — which is a velocity squared. The speed of light is the only velocity the graph provides (1 hop per tick). So the conversion factor is c². It's not that two things are happening at c. It's that the unit conversion between kilograms and joules happens to require a velocity squared, and the graph only has one velocity to offer.
 @/style
 
-## Chapter 4: There is no random.
+## Chapter 3: There is no random.
 
 Everything so far has been setup. This is what it was building to.
 
@@ -255,16 +255,25 @@ Remember the question that started all of this? Is anything truly random? Nine y
 ### A Node Is Born
 
 Remember that our graph is events, not things, not objects, not particles. Events. That means we need to record every event as it happens. And we said that reality is the sum of all the events that came before it.
+
 But here's the problem. Not all events arrive at the same time. Some events are close. Some are still traveling through the graph at the speed of light. And the next layer of reality has to be the sum of all the events that came before it — so if an event is on its way and WILL arrive in time, the node has to wait for it. It can't produce the next layer yet. It would be wrong.
+
 Let me show you what this looks like.
 
 Your brother is expecting a baby today. You're driving to a family function. You know — with absolute certainty — that someone at this function is going to ask: "are you an uncle yet?"
+
 Right now, driving in, what's the answer?
+
 It's not yes. It's not no. It's... probably? Maybe? Your brother hasn't called yet. The baby might already be born and you just don't know. Or the baby might not come until tomorrow. You are genuinely in a state where the answer does not exist yet — not because you're hiding it, not because you're confused, but because the event that determines the answer hasn't reached you.
+
 Now: will they ask before your brother calls? Or will he call before they ask?
+
 If he calls first — "it's a girl!" — and THEN your aunt asks, the answer is yes. You're an uncle. Committed. Done.
+
 If your aunt asks first — before the call comes — you have to give an answer with whatever you've got. "Not yet, as far as I know." Different answer. Same you. Same family function. Different timing.
+
 That right there is the whole thing. You are the node. The baby being born is an event traveling toward you. Your aunt asking is the consumer — the thing that forces you to commit to an answer. And the answer you give depends entirely on which events reach you before she asks.
+
 The events that make it to you in time? We're calling that your event cone.
 
 Now here is where it gets interesting. Physicists have been studying this "waiting" state for a hundred years. At the really small scale — individual particles, single photons — this state of "pending" shows up in our reality as something very specific. A wave. Physicists call it the probability wave, and it caused an absolute shitstorm that is still raging today. This is the thing that made Einstein say "God does not play dice." This is where you hear "many worlds," "hidden variables," "spooky action at a distance."
@@ -274,6 +283,7 @@ The argument is about whether this wave represents something truly random, or wh
 I'm saying it's not random. It's pending. And we have an actual reason WHY it has to show up as a wave — because events are still in transit through the graph, and the node hasn't been asked yet. There is no value to report. Not a hidden one. Not one we can't see. There isn't one yet.
 
 ### The Event Cone
+
 You may have heard of the light cone — all events that could ever reach you given the speed of light. Your entire possible past.
 
 We're introducing a new concept. The event cone. It's narrower. It's not everything that could reach you — it's everything that reaches you before you're forced to commit.
@@ -293,6 +303,7 @@ Now your friend goes to cash the cheque. That's the thing forcing commitment. Th
 If the wire lands first: cheque clears. If the cheque hits first: it bounces. Nothing random happened. You just didn't know the order because you couldn't see the whole system. If you were watching this as an outside observer, the chain of events was obvious the whole time.
 
 Same node. Consumer arrives early — small event cone, fewer inputs, one result. Consumer arrives late — larger event cone, more inputs, different result. Same dot in the graph. Different timing. Different reality.
+
 @fig:event-cone
 Whiteboard style on white background, DM Sans font. An organic graph of ~25 nodes. Most are small GREEN filled circles (committed). One node center-right is a larger PURPLE dashed circle labeled "P — PENDING."
 
@@ -410,6 +421,8 @@ Step 1: Fire photon through double slit with a detector at slit A. The detector 
 Step 2: AFTER the photon has already hit the screen — after the result is supposedly locked in — an "eraser" device downstream destroys the which-path information the detector recorded.
 
 Step 3: Look at the data, filtered by the eraser's outcome. The interference pattern comes back.
+
+Important: you only see the interference when you filter by the eraser's outcome. The full, unfiltered data still shows no pattern. The eraser doesn't magically restore anything for every photon — it reveals a subset.
 
 Read that again. The detector already fired. The photon already hit the screen. The result should be final. And then an event that happens AFTER all of that somehow restores the interference pattern.
 
@@ -562,6 +575,6 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 
 ### Outro
 
-That's it. That's my grand theory of how it all ought to work. I have no idea if this makes sense, but I've already spent 7 days on this and at some point I need to just accept it will be wrong and that is okay. But in this little version of the world, there is no such thing as random. What does that mean for free will? It's not so much that you can't choose. It's that you will always have chosen the same thing.
+That's it. That's my grand theory of how it all ought to work. The odds any of this is right are about as close to zero as something can be. But if even one concept inspires a thought in someone more capable — even if born out of pure opposition — I'd consider that a win. And in this little version of the world, there is no such thing as random. What does that mean for free will? It's not so much that you can't choose. It's that you will always have chosen the same thing.
 
 ---

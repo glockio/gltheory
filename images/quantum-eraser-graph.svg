@@ -1,0 +1,173 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans. Three stages shown as a visual sequence. STAGE 1 (left third): Double slit with detector at slit A. Path A nodes with a RED label "O" on the edge from the detector. Label: "Detector applies operation O — records which-path info". STAGE 2 (center third): Same graph, but now an eraser device downstream. A BLUE label "O⁻¹" on the edge from the eraser. Label: "Eraser applies O⁻¹ — destroys which-path info". STAGE 3 (right third): At the screen node. Visual: RED "O" and BLUE "O⁻¹" shown meeting at the screen with a cancellation symbol. Label: "O · O⁻¹ = identity. Net operation = nothing happened." Below screen: "Interference returns." Bottom: "The detector recorded. The eraser deleted. Net operation = nothing. The screen sees both paths with their original relationship intact. This is not time travel. This is f(f⁻¹(x)) = x." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- ======== STAGE 1: Detector ======== -->
+  <!-- Stage 1 background area -->
+  <rect x="15" y="60" width="270" height="340" rx="8" fill="none" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="150" y="48" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="700">STAGE 1</text>
+
+  <!-- Source -->
+  <circle cx="40" cy="220" r="14" fill="#1e8449" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="40" y="217" text-anchor="middle" font-size="6" fill="white" font-weight="700">SRC</text>
+
+  <!-- Path A through slit -->
+  <circle cx="100" cy="155" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="155" cy="145" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="54" y1="213" x2="90" y2="160" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="110" y1="153" x2="145" y2="148" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="128" y="135" text-anchor="middle" font-size="7" fill="#7a7a6a">path A</text>
+
+  <!-- Detector on path A -->
+  <circle cx="200" cy="150" r="14" fill="#c0392b" stroke="#1a1a1a" stroke-width="1.2"/>
+  <text x="200" y="147" text-anchor="middle" font-size="6" fill="white" font-weight="700">DET</text>
+  <text x="200" y="156" text-anchor="middle" font-size="5" fill="rgba(255,255,255,0.8)">detector</text>
+  <line x1="165" y1="147" x2="186" y2="149" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- RED "O" label on detector edge -->
+  <rect x="168" y="130" width="22" height="14" rx="3" fill="#c0392b"/>
+  <text x="179" y="140" text-anchor="middle" font-size="9" fill="white" font-weight="700">O</text>
+
+  <!-- After detector (committed) -->
+  <circle cx="250" cy="160" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="214" y1="153" x2="240" y2="158" stroke="#1e8449" stroke-width="1.8"/>
+
+  <!-- Path B through slit -->
+  <circle cx="100" cy="285" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="155" cy="290" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="210" cy="285" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="250" cy="280" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="54" y1="227" x2="90" y2="280" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="110" y1="287" x2="145" y2="289" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="165" y1="291" x2="200" y2="287" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="220" y1="284" x2="240" y2="281" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="175" y="310" text-anchor="middle" font-size="7" fill="#7a7a6a">path B</text>
+
+  <!-- Stage 1 label -->
+  <text x="150" y="365" text-anchor="middle" font-size="9" fill="#c0392b" font-weight="600">Detector applies operation O</text>
+  <text x="150" y="378" text-anchor="middle" font-size="8" fill="#7a7a6a" font-style="italic">records which-path info</text>
+
+  <!-- ======== Arrow 1→2 ======== -->
+  <line x1="290" y1="220" x2="308" y2="220" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="310,220 304,215 304,225" fill="#1a1a1a"/>
+
+  <!-- ======== STAGE 2: Eraser ======== -->
+  <rect x="315" y="60" width="270" height="340" rx="8" fill="none" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="450" y="48" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="700">STAGE 2</text>
+
+  <!-- Source -->
+  <circle cx="340" cy="220" r="14" fill="#1e8449" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="340" y="217" text-anchor="middle" font-size="6" fill="white" font-weight="700">SRC</text>
+
+  <!-- Path A with detector -->
+  <circle cx="395" cy="155" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="354" y1="213" x2="385" y2="160" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+
+  <!-- Detector -->
+  <circle cx="440" cy="148" r="12" fill="#c0392b" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="440" y="146" text-anchor="middle" font-size="5" fill="white" font-weight="700">DET</text>
+  <line x1="405" y1="153" x2="428" y2="150" stroke="#c0392b" stroke-width="1.8"/>
+
+  <!-- RED "O" label -->
+  <rect x="408" y="133" width="18" height="12" rx="3" fill="#c0392b"/>
+  <text x="417" y="142" text-anchor="middle" font-size="8" fill="white" font-weight="700">O</text>
+
+  <!-- After detector (committed) -->
+  <circle cx="485" cy="155" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="452" y1="150" x2="475" y2="153" stroke="#1e8449" stroke-width="1.8"/>
+
+  <!-- ERASER downstream -->
+  <circle cx="530" cy="160" r="14" fill="#2471a3" stroke="#1a1a1a" stroke-width="1.2"/>
+  <text x="530" y="157" text-anchor="middle" font-size="6" fill="white" font-weight="700">ERASER</text>
+  <text x="530" y="166" text-anchor="middle" font-size="5" fill="rgba(255,255,255,0.8)">O⁻¹</text>
+  <line x1="495" y1="157" x2="516" y2="159" stroke="#2471a3" stroke-width="1.8"/>
+
+  <!-- BLUE "O⁻¹" label -->
+  <rect x="494" y="138" width="24" height="14" rx="3" fill="#2471a3"/>
+  <text x="506" y="148" text-anchor="middle" font-size="8" fill="white" font-weight="700">O⁻¹</text>
+
+  <!-- Path B -->
+  <circle cx="395" cy="285" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="450" cy="288" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="505" cy="283" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="545" cy="278" r="10" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="354" y1="227" x2="385" y2="280" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="405" y1="287" x2="440" y2="289" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="460" y1="287" x2="495" y2="284" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <line x1="515" y1="282" x2="535" y2="279" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+
+  <!-- Stage 2 label -->
+  <text x="450" y="365" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="600">Eraser applies O⁻¹</text>
+  <text x="450" y="378" text-anchor="middle" font-size="8" fill="#7a7a6a" font-style="italic">destroys which-path info</text>
+
+  <!-- ======== Arrow 2→3 ======== -->
+  <line x1="590" y1="220" x2="608" y2="220" stroke="#1a1a1a" stroke-width="1.5"/>
+  <polygon points="610,220 604,215 604,225" fill="#1a1a1a"/>
+
+  <!-- ======== STAGE 3: Screen / Cancellation ======== -->
+  <rect x="615" y="60" width="270" height="340" rx="8" fill="none" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="750" y="48" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="700">STAGE 3</text>
+
+  <!-- Cancellation visual -->
+  <!-- Red O coming in from left -->
+  <rect x="660" y="148" width="28" height="20" rx="4" fill="#c0392b"/>
+  <text x="674" y="162" text-anchor="middle" font-size="12" fill="white" font-weight="700">O</text>
+  <line x1="688" y1="158" x2="716" y2="178" stroke="#c0392b" stroke-width="2"/>
+  <polygon points="718,180 712,174 710,182" fill="#c0392b"/>
+
+  <!-- Blue O⁻¹ coming in from left -->
+  <rect x="660" y="195" width="34" height="20" rx="4" fill="#2471a3"/>
+  <text x="677" y="209" text-anchor="middle" font-size="11" fill="white" font-weight="700">O⁻¹</text>
+  <line x1="694" y1="205" x2="716" y2="192" stroke="#2471a3" stroke-width="2"/>
+  <polygon points="718,190 712,186 712,196" fill="#2471a3"/>
+
+  <!-- Cancellation starburst -->
+  <circle cx="738" cy="186" r="24" fill="none" stroke="#d4a017" stroke-width="2.5"/>
+  <!-- Gold starburst rays -->
+  <line x1="738" y1="158" x2="738" y2="164" stroke="#d4a017" stroke-width="2"/>
+  <line x1="738" y1="208" x2="738" y2="214" stroke="#d4a017" stroke-width="2"/>
+  <line x1="710" y1="186" x2="716" y2="186" stroke="#d4a017" stroke-width="2"/>
+  <line x1="760" y1="186" x2="766" y2="186" stroke="#d4a017" stroke-width="2"/>
+  <line x1="720" y1="168" x2="724" y2="172" stroke="#d4a017" stroke-width="1.5"/>
+  <line x1="752" y1="200" x2="756" y2="204" stroke="#d4a017" stroke-width="1.5"/>
+  <line x1="720" y1="204" x2="724" y2="200" stroke="#d4a017" stroke-width="1.5"/>
+  <line x1="752" y1="168" x2="756" y2="172" stroke="#d4a017" stroke-width="1.5"/>
+
+  <!-- "= 1" identity label -->
+  <text x="738" y="190" text-anchor="middle" font-size="14" fill="#d4a017" font-weight="700">= 1</text>
+
+  <!-- Main result labels -->
+  <text x="750" y="240" text-anchor="middle" font-size="11" fill="#1a1a1a" font-weight="700">O · O⁻¹ = identity</text>
+  <text x="750" y="258" text-anchor="middle" font-size="10" fill="#7a7a6a">Net operation = nothing happened.</text>
+
+  <!-- Screen node -->
+  <circle cx="750" cy="300" r="22" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="750" y="296" text-anchor="middle" font-size="8" fill="white" font-weight="700">SCREEN</text>
+  <text x="750" y="307" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.8)">consumer</text>
+
+  <!-- Interference returns -->
+  <!-- Interference pattern bars -->
+  <rect x="790" y="275" width="8" height="50" rx="2" fill="none" stroke="#d5d0c0" stroke-width="0.5"/>
+  <rect x="791" y="277" width="6" height="5" rx="1" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="791" y="284" width="6" height="3" rx="1" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="791" y="289" width="6" height="5" rx="1" fill="#1a1a1a" opacity="0.75"/>
+  <rect x="791" y="296" width="6" height="3" rx="1" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="791" y="301" width="6" height="5" rx="1" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="791" y="308" width="6" height="3" rx="1" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="791" y="313" width="6" height="5" rx="1" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="791" y="320" width="6" height="3" rx="1" fill="#1a1a1a" opacity="0.12"/>
+
+  <text x="810" y="298" font-size="7" fill="#1e8449" font-weight="600">interference</text>
+  <text x="810" y="308" font-size="7" fill="#1e8449" font-weight="600">returns ✓</text>
+
+  <!-- Stage 3 label -->
+  <text x="750" y="370" text-anchor="middle" font-size="10" fill="#1e8449" font-weight="700">Interference returns.</text>
+
+  <!-- ======== Bottom caption ======== -->
+  <line x1="40" y1="420" x2="860" y2="420" stroke="#d5d0c0" stroke-width="0.5"/>
+  <text x="450" y="450" text-anchor="middle" font-size="11" fill="#1a1a1a">The detector recorded. The eraser deleted. Net operation = nothing.</text>
+  <text x="450" y="470" text-anchor="middle" font-size="11" fill="#1a1a1a">The screen sees both paths with their original relationship intact.</text>
+  <text x="450" y="498" text-anchor="middle" font-size="12" fill="#1a1a1a" font-weight="700">This is not time travel. This is f(f⁻¹(x)) = x.</text>
+</svg>

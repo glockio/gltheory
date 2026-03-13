@@ -1,0 +1,110 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans. Shows graph structure of double slit. LEFT: Single green committed node labeled "SOURCE." CENTER: Two diverging paths of purple dashed nodes (pending). Top path labeled "PATH A" — 4-5 purple nodes with edges carrying label "O_A". Bottom path labeled "PATH B" — 4-5 purple nodes with edges carrying label "O_B". Both paths pass through a vertical barrier (gray dashed line labeled "WALL WITH 2 SLITS") — each path goes through one slit opening. RIGHT: Single node labeled "SCREEN — demands value." Shown as orange circle. Arrows from both paths converge on this node. Label at screen: "Value = O_A + O_B". Small annotation: "Both paths in event cone → operations sum → interference". Below: "Nobody asked the slit nodes to commit. Both paths stay pending. Both contribute operations to the screen. That's the interference pattern." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- SOURCE node (committed green) -->
+  <circle cx="80" cy="230" r="24" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="80" y="226" text-anchor="middle" font-size="10" fill="white" font-weight="700">SOURCE</text>
+  <text x="80" y="238" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.7)">committed</text>
+
+  <!-- WALL WITH 2 SLITS -->
+  <line x1="340" y1="40" x2="340" y2="150" stroke="#999" stroke-width="3" stroke-dasharray="6,3"/>
+  <line x1="340" y1="195" x2="340" y2="265" stroke="#999" stroke-width="3" stroke-dasharray="6,3"/>
+  <line x1="340" y1="310" x2="340" y2="460" stroke="#999" stroke-width="3" stroke-dasharray="6,3"/>
+  <text x="340" y="30" text-anchor="middle" font-size="10" fill="#7a7a6a" font-weight="600">WALL WITH 2 SLITS</text>
+
+  <!-- PATH A label -->
+  <text x="260" y="112" text-anchor="middle" font-size="11" fill="#7d3c98" font-weight="700">PATH A</text>
+
+  <!-- Path A nodes (purple dashed, pending) -->
+  <circle cx="160" cy="145" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="230" cy="155" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="300" cy="165" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Through slit gap (150-195) -->
+  <circle cx="380" cy="170" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="460" cy="165" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="540" cy="175" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="620" cy="190" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Path A edges with O_A labels -->
+  <line x1="104" y1="220" x2="148" y2="152" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="172" y1="145" x2="218" y2="153" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="195" y="140" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_A</text>
+  <line x1="242" y1="157" x2="288" y2="163" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="265" y="152" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_A</text>
+  <line x1="312" y1="167" x2="368" y2="170" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="392" y1="170" x2="448" y2="167" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="420" y="160" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_A</text>
+  <line x1="472" y1="167" x2="528" y2="173" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="500" y="162" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_A</text>
+  <line x1="552" y1="177" x2="608" y2="188" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+
+  <!-- PATH B label -->
+  <text x="260" y="290" text-anchor="middle" font-size="11" fill="#7d3c98" font-weight="700">PATH B</text>
+
+  <!-- Path B nodes (purple dashed, pending) -->
+  <circle cx="160" cy="310" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="230" cy="300" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="300" cy="290" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <!-- Through slit gap (265-310) -->
+  <circle cx="380" cy="285" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="460" cy="288" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="540" cy="280" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="620" cy="268" r="12" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Path B edges with O_B labels -->
+  <line x1="104" y1="240" x2="148" y2="303" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="172" y1="308" x2="218" y2="302" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="195" y="318" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="242" y1="298" x2="288" y2="292" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="265" y="308" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="312" y1="289" x2="368" y2="286" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <line x1="392" y1="286" x2="448" y2="288" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="420" y="300" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="472" y1="289" x2="528" y2="282" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+  <text x="500" y="295" text-anchor="middle" font-size="8" fill="#7d3c98" font-style="italic">O_B</text>
+  <line x1="552" y1="278" x2="608" y2="270" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+
+  <!-- SCREEN node (orange, consumer) -->
+  <circle cx="730" cy="230" r="28" fill="#d35400" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="730" y="224" text-anchor="middle" font-size="10" fill="white" font-weight="700">SCREEN</text>
+  <text x="730" y="237" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.8)">demands value</text>
+
+  <!-- Convergence arrows: Path A → Screen -->
+  <line x1="632" y1="192" x2="702" y2="222" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- Arrowhead -->
+  <polygon points="702,222 695,214 693,224" fill="#7d3c98" opacity="0.7"/>
+
+  <!-- Convergence arrows: Path B → Screen -->
+  <line x1="632" y1="266" x2="702" y2="238" stroke="#7d3c98" stroke-width="1.8" stroke-dasharray="5,3" opacity="0.7"/>
+  <!-- Arrowhead -->
+  <polygon points="702,238 695,244 693,234" fill="#7d3c98" opacity="0.7"/>
+
+  <!-- Label at screen -->
+  <text x="730" y="275" text-anchor="middle" font-size="11" fill="#1a1a1a" font-weight="700">Value = O_A + O_B</text>
+
+  <!-- Annotation -->
+  <text x="730" y="295" text-anchor="middle" font-size="9" fill="#7a7a6a" font-style="italic">Both paths in event cone</text>
+  <text x="730" y="308" text-anchor="middle" font-size="9" fill="#7a7a6a" font-style="italic">→ operations sum → interference</text>
+
+  <!-- Interference pattern hint near screen -->
+  <rect x="775" y="190" width="8" height="80" rx="2" fill="none" stroke="#d5d0c0" stroke-width="0.5"/>
+  <rect x="776" y="192" width="6" height="6" rx="1" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="776" y="201" width="6" height="4" rx="1" fill="#1a1a1a" opacity="0.12"/>
+  <rect x="776" y="208" width="6" height="6" rx="1" fill="#1a1a1a" opacity="0.75"/>
+  <rect x="776" y="217" width="6" height="4" rx="1" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="776" y="224" width="6" height="6" rx="1" fill="#1a1a1a" opacity="0.8"/>
+  <rect x="776" y="233" width="6" height="4" rx="1" fill="#1a1a1a" opacity="0.12"/>
+  <rect x="776" y="240" width="6" height="6" rx="1" fill="#1a1a1a" opacity="0.7"/>
+  <rect x="776" y="249" width="6" height="4" rx="1" fill="#1a1a1a" opacity="0.1"/>
+  <rect x="776" y="256" width="6" height="6" rx="1" fill="#1a1a1a" opacity="0.75"/>
+  <rect x="776" y="265" width="6" height="4" rx="1" fill="#1a1a1a" opacity="0.15"/>
+  <text x="795" y="233" font-size="7" fill="#7a7a6a">interference</text>
+  <text x="795" y="243" font-size="7" fill="#7a7a6a">pattern ✓</text>
+
+  <!-- Bottom caption -->
+  <text x="450" y="440" text-anchor="middle" font-size="11" fill="#1a1a1a">Nobody asked the slit nodes to commit. Both paths stay pending.</text>
+  <text x="450" y="458" text-anchor="middle" font-size="11" fill="#1a1a1a">Both contribute operations to the screen. That's the interference pattern.</text>
+</svg>
