@@ -294,6 +294,32 @@ The universe is a growing causal graph. Nodes are spacetime events. Growth is ti
 3. Compare description to the SVG's `<!-- DESCRIPTION: -->` comment
 4. Match → skip. Changed or missing → regenerate.
 
+### Figure Registry
+
+All figures referenced in `content.md` via `@fig:slug`. Ordered by appearance:
+
+| # | Slug | Chapter | Notes |
+|---|------|---------|-------|
+| 1 | `two-layers-of-reality` | Ch 1 | Mario + console two-layer metaphor |
+| 2 | `you-already-know-graphs` | Ch 1 | Family tree / recipe / road map |
+| 3 | `graph-is-spacetime` | Ch 2 | Directed graph with time flowing up |
+| 4 | `reality-at-the-edge` | Ch 2 | Coral reef, frontier, Mario on surface (DARK BG — only exception) |
+| 5 | `what-110-years-tells-us` | Ch 2 | 2×3 cheat sheet grid |
+| 6 | `density-across-graph` | Ch 2 | Nodes + density bars, mountain shape |
+| 7 | `graph-equals-spacetime` | Ch 2 | Inverted well vs GR rubber sheet, equals sign |
+| 8 | `propagation-at-c` | Ch 2 | 3-tick spreading animation |
+| 9 | `mass-as-loop` | Ch 3 | Photon line vs self-perpetuating knot |
+| 10 | `emc2-same-coin` | Ch 3 | Coin metaphor, E=m identity |
+| 11 | `loop-unwinding` | Ch 3 | Knot → radiation, "unraveling" |
+| 12 | `gravity-routing` | Ch 3 | Empty space vs mass present, cheapest path |
+| 13 | `spreadsheet-waiting` | Ch 4 | A1→B1→C1→D1 dependency chain |
+| 14 | `pending-node-no-consumer` | Ch 4 | Tree/DAG, one pending leaf at frontier |
+| 15 | `consumer-arrives` | Ch 4 | Convergence, forced commitment |
+| 16 | `event-cone` | Ch 4 | Part 1/3: setup, distances, light cone |
+| 17 | `event-cone-traced` | Ch 4 | Part 2/3: consumer approaching, cone highlighted |
+| 18 | `event-cone-superposition` | Ch 4 | Part 3/3: same node, different timing, different reality |
+| 19 | `busy-vs-quiet` | Ch 4 | Dense classical vs sparse quantum |
+
 ---
 
 ## 8. Layout

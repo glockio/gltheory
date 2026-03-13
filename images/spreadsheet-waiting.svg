@@ -1,141 +1,169 @@
-<!-- DESCRIPTION: Three panels showing spreadsheet cell dependency graph changing state. Panel 1 STATE 0: A1=5 (blue, just changed), B1 stale, C1 stale, D1 stale. Panel 2 STATE 1: B1=10 and C1=6 both evaluate (committed, green), D1 still stale. Panel 3 STATE 2: D1=16 now evaluates (committed, green). Arrow below: A1 changed, B1 and C1 in parallel, D1 last. Topological order. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
-  <style>
-    text { font-family: "DM Sans", sans-serif; }
-  </style>
+<!-- DESCRIPTION: Spreadsheet dependency chain — A1 changes (blue), B1 and C1 wait for A1 (amber/pending), D1 waits for both B1 and C1 (amber/pending). Curved arrows show dependency flow. Illustrates topological ordering. -->
+<svg viewBox="0 0 900 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Soft blue glow for the "just changed" cell -->
+    <filter id="blue-pulse" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
 
-  <!-- ===== PANEL 1: STATE 0 ===== -->
-  <text x="140" y="20" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">STATE 0</text>
+    <!-- Curved arrow markers -->
+    <marker id="dep-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L9,4 z" fill="#2471a3" opacity="0.65"/>
+    </marker>
+    <marker id="dep-amber" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,1 L0,7 L9,4 z" fill="#d4a017" opacity="0.65"/>
+    </marker>
+  </defs>
 
-  <rect x="15" y="30" width="260" height="210" rx="6" fill="none" stroke="#7a7a6a" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- White background -->
+  <rect width="900" height="350" fill="#ffffff"/>
 
-  <!-- A1 — blue, just changed -->
-  <rect x="105" y="48" width="70" height="36" rx="5" fill="#dbeaf7" stroke="#2471a3" stroke-width="2"/>
-  <text x="140" y="63" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="bold">A1</text>
-  <text x="140" y="77" text-anchor="middle" fill="#2471a3" font-size="10">= 5</text>
-  <text x="182" y="60" fill="#2471a3" font-size="9" font-style="italic">changed!</text>
+  <!-- ================================================================ -->
+  <!-- CELL A1 — CHANGED (blue highlight)                              -->
+  <!-- ================================================================ -->
+  <g id="cell-a1">
+    <!-- Cell label (small, above) -->
+    <text x="128" y="58" font-family="'DM Sans', sans-serif" font-size="13" fill="#888888" text-anchor="middle" font-weight="500">A1</text>
 
-  <!-- Arrows from A1 to B1 and C1 -->
-  <line x1="110" y1="84" x2="70" y2="120" stroke="#1a1a1a" stroke-width="1.2"/>
-  <polygon points="67,116 65,126 74,120" fill="#1a1a1a"/>
+    <!-- Cell rectangle — light blue, bold border, with glow -->
+    <rect x="58" y="66" width="140" height="90" rx="8" fill="#dbeaf7" stroke="#2471a3" stroke-width="2.5" filter="url(#blue-pulse)"/>
 
-  <line x1="170" y1="84" x2="210" y2="120" stroke="#1a1a1a" stroke-width="1.2"/>
-  <polygon points="213,116 215,126 206,120" fill="#1a1a1a"/>
+    <!-- Sparkle dot (top-right, "just changed" indicator) -->
+    <circle cx="183" cy="80" r="6" fill="#2471a3" opacity="0.5"/>
+    <circle cx="183" cy="80" r="3" fill="#ffffff" opacity="0.9"/>
 
-  <!-- B1 — stale -->
-  <rect x="30" y="126" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <text x="70" y="141" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">B1</text>
-  <text x="70" y="155" text-anchor="middle" fill="#7a7a6a" font-size="9">=A1×2</text>
-  <text x="115" y="148" fill="#7a7a6a" font-size="8">stale</text>
+    <!-- Big value -->
+    <text x="128" y="124" font-family="'DM Sans', sans-serif" font-size="32" fill="#2471a3" text-anchor="middle" font-weight="700">5</text>
 
-  <!-- C1 — stale -->
-  <rect x="170" y="126" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <text x="210" y="141" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">C1</text>
-  <text x="210" y="155" text-anchor="middle" fill="#7a7a6a" font-size="9">=A1+1</text>
-  <text x="255" y="148" fill="#7a7a6a" font-size="8">stale</text>
+    <!-- Status -->
+    <text x="128" y="178" font-family="'DM Sans', sans-serif" font-size="11" fill="#2471a3" text-anchor="middle" font-weight="600">changed!</text>
+  </g>
 
-  <!-- Arrows from B1 and C1 to D1 -->
-  <line x1="70" y1="162" x2="110" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
-  <polygon points="107,191 106,201 114,195" fill="#1a1a1a"/>
+  <!-- ================================================================ -->
+  <!-- CELL B1 — PENDING (amber, waiting for A1)                       -->
+  <!-- ================================================================ -->
+  <g id="cell-b1">
+    <text x="348" y="32" font-family="'DM Sans', sans-serif" font-size="13" fill="#888888" text-anchor="middle" font-weight="500">B1</text>
 
-  <line x1="210" y1="162" x2="170" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
-  <polygon points="173,191 174,201 166,195" fill="#1a1a1a"/>
+    <rect x="278" y="40" width="140" height="90" rx="8" fill="#fef9e8" stroke="#d4a017" stroke-width="1.8"/>
 
-  <!-- D1 — stale -->
-  <rect x="100" y="198" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <text x="140" y="213" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">D1</text>
-  <text x="140" y="227" text-anchor="middle" fill="#7a7a6a" font-size="9">=B1+C1</text>
+    <!-- Formula -->
+    <text x="348" y="80" font-family="'DM Sans', sans-serif" font-size="18" fill="#b8860b" text-anchor="middle" font-weight="600">=A1 &#xd7; 2</text>
 
+    <!-- Hourglass / waiting indicator -->
+    <text x="348" y="108" font-family="'DM Sans', sans-serif" font-size="20" fill="#d4a017" text-anchor="middle" letter-spacing="4" opacity="0.7">. . .</text>
 
-  <!-- ===== PANEL 2: STATE 1 ===== -->
-  <text x="460" y="20" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">STATE 1</text>
+    <!-- Status -->
+    <text x="348" y="152" font-family="'DM Sans', sans-serif" font-size="11" fill="#b8860b" text-anchor="middle" font-weight="500">waiting for A1</text>
+  </g>
 
-  <rect x="320" y="30" width="260" height="210" rx="6" fill="none" stroke="#7a7a6a" stroke-width="0.8" stroke-dasharray="4,3"/>
+  <!-- ================================================================ -->
+  <!-- CELL C1 — PENDING (amber, waiting for A1)                       -->
+  <!-- ================================================================ -->
+  <g id="cell-c1">
+    <text x="348" y="182" font-family="'DM Sans', sans-serif" font-size="13" fill="#888888" text-anchor="middle" font-weight="500">C1</text>
 
-  <!-- A1 -->
-  <rect x="410" y="48" width="70" height="36" rx="5" fill="#dbeaf7" stroke="#2471a3" stroke-width="1.5"/>
-  <text x="445" y="63" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="bold">A1</text>
-  <text x="445" y="77" text-anchor="middle" fill="#2471a3" font-size="10">= 5</text>
+    <rect x="278" y="190" width="140" height="90" rx="8" fill="#fef9e8" stroke="#d4a017" stroke-width="1.8"/>
 
-  <!-- Arrows from A1 -->
-  <line x1="415" y1="84" x2="375" y2="120" stroke="#1e8449" stroke-width="1.2"/>
-  <polygon points="372,116 370,126 379,120" fill="#1e8449"/>
+    <!-- Formula -->
+    <text x="348" y="230" font-family="'DM Sans', sans-serif" font-size="18" fill="#b8860b" text-anchor="middle" font-weight="600">=A1 + 3</text>
 
-  <line x1="475" y1="84" x2="515" y2="120" stroke="#1e8449" stroke-width="1.2"/>
-  <polygon points="518,116 520,126 511,120" fill="#1e8449"/>
+    <!-- Waiting indicator -->
+    <text x="348" y="260" font-family="'DM Sans', sans-serif" font-size="20" fill="#d4a017" text-anchor="middle" letter-spacing="4" opacity="0.7">. . .</text>
 
-  <!-- B1 — committed = 10 -->
-  <rect x="335" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
-  <text x="375" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">B1</text>
-  <text x="375" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 10</text>
-  <text x="420" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+    <!-- Status -->
+    <text x="348" y="300" font-family="'DM Sans', sans-serif" font-size="11" fill="#b8860b" text-anchor="middle" font-weight="500">waiting for A1</text>
+  </g>
 
-  <!-- C1 — committed = 6 -->
-  <rect x="475" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
-  <text x="515" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">C1</text>
-  <text x="515" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 6</text>
-  <text x="560" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- ================================================================ -->
+  <!-- CELL D1 — PENDING (amber, waiting for B1 AND C1)                -->
+  <!-- ================================================================ -->
+  <g id="cell-d1">
+    <text x="588" y="108" font-family="'DM Sans', sans-serif" font-size="13" fill="#888888" text-anchor="middle" font-weight="500">D1</text>
 
-  <!-- Arrows from B1 and C1 to D1 -->
-  <line x1="375" y1="162" x2="415" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
-  <polygon points="412,191 411,201 419,195" fill="#1a1a1a"/>
+    <rect x="518" y="116" width="140" height="90" rx="8" fill="#fef9e8" stroke="#d4a017" stroke-width="1.8"/>
 
-  <line x1="515" y1="162" x2="475" y2="195" stroke="#1a1a1a" stroke-width="1.2"/>
-  <polygon points="478,191 479,201 471,195" fill="#1a1a1a"/>
+    <!-- Formula -->
+    <text x="588" y="156" font-family="'DM Sans', sans-serif" font-size="18" fill="#b8860b" text-anchor="middle" font-weight="600">=B1 + C1</text>
 
-  <!-- D1 — still stale -->
-  <rect x="405" y="198" width="80" height="36" rx="5" fill="#f0f0e8" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,2"/>
-  <text x="445" y="213" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="bold">D1</text>
-  <text x="445" y="227" text-anchor="middle" fill="#7a7a6a" font-size="9">=B1+C1</text>
-  <text x="490" y="220" fill="#7a7a6a" font-size="8">stale</text>
+    <!-- Waiting indicator -->
+    <text x="588" y="186" font-family="'DM Sans', sans-serif" font-size="20" fill="#d4a017" text-anchor="middle" letter-spacing="4" opacity="0.7">. . .</text>
 
-  <!-- "parallel" annotation -->
-  <text x="445" y="118" text-anchor="middle" fill="#7a7a6a" font-size="8" font-style="italic">B1 &amp; C1 in parallel</text>
+    <!-- Status -->
+    <text x="588" y="226" font-family="'DM Sans', sans-serif" font-size="11" fill="#b8860b" text-anchor="middle" font-weight="500">waiting for B1 and C1</text>
+  </g>
 
+  <!-- ================================================================ -->
+  <!-- DEPENDENCY ARROWS (curved, friendly)                            -->
+  <!-- ================================================================ -->
 
-  <!-- ===== PANEL 3: STATE 2 ===== -->
-  <text x="760" y="20" text-anchor="middle" fill="#1a1a1a" font-size="12" font-weight="bold">STATE 2</text>
+  <!-- A1 -> B1 -->
+  <path d="M 198 90 C 230 70, 255 58, 278 72"
+        stroke="#2471a3" stroke-width="2.2" fill="none" stroke-linecap="round"
+        marker-end="url(#dep-blue)"/>
 
-  <rect x="625" y="30" width="260" height="210" rx="6" fill="none" stroke="#1e8449" stroke-width="1.5"/>
+  <!-- A1 -> C1 -->
+  <path d="M 198 135 C 230 165, 255 195, 278 225"
+        stroke="#2471a3" stroke-width="2.2" fill="none" stroke-linecap="round"
+        marker-end="url(#dep-blue)"/>
 
-  <!-- A1 -->
-  <rect x="715" y="48" width="70" height="36" rx="5" fill="#dbeaf7" stroke="#2471a3" stroke-width="1.5"/>
-  <text x="750" y="63" text-anchor="middle" fill="#2471a3" font-size="11" font-weight="bold">A1</text>
-  <text x="750" y="77" text-anchor="middle" fill="#2471a3" font-size="10">= 5</text>
+  <!-- B1 -> D1 -->
+  <path d="M 418 95 C 455 110, 490 125, 518 148"
+        stroke="#d4a017" stroke-width="2.2" fill="none" stroke-linecap="round"
+        marker-end="url(#dep-amber)"/>
 
-  <!-- Arrows -->
-  <line x1="720" y1="84" x2="680" y2="120" stroke="#1e8449" stroke-width="1.2"/>
-  <polygon points="677,116 675,126 684,120" fill="#1e8449"/>
-  <line x1="780" y1="84" x2="820" y2="120" stroke="#1e8449" stroke-width="1.2"/>
-  <polygon points="823,116 825,126 816,120" fill="#1e8449"/>
+  <!-- C1 -> D1 -->
+  <path d="M 418 225 C 455 210, 490 190, 518 172"
+        stroke="#d4a017" stroke-width="2.2" fill="none" stroke-linecap="round"
+        marker-end="url(#dep-amber)"/>
 
-  <!-- B1 — committed -->
-  <rect x="640" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
-  <text x="680" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">B1</text>
-  <text x="680" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 10</text>
-  <text x="725" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- ================================================================ -->
+  <!-- STEP BADGES (subtle numbered circles)                           -->
+  <!-- ================================================================ -->
 
-  <!-- C1 — committed -->
-  <rect x="780" y="126" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2"/>
-  <text x="820" y="141" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">C1</text>
-  <text x="820" y="155" text-anchor="middle" fill="#1e8449" font-size="10">= 6</text>
-  <text x="865" y="136" fill="#1e8449" font-size="12">&#10003;</text>
+  <!-- Step 1 on A1 -->
+  <circle cx="72" cy="78" r="10" fill="#2471a3" opacity="0.12"/>
+  <text x="72" y="82" font-family="'DM Sans', sans-serif" font-size="11" fill="#2471a3" text-anchor="middle" font-weight="700">1</text>
 
-  <!-- Arrows to D1 -->
-  <line x1="680" y1="162" x2="720" y2="195" stroke="#1e8449" stroke-width="1.2"/>
-  <polygon points="717,191 716,201 724,195" fill="#1e8449"/>
-  <line x1="820" y1="162" x2="780" y2="195" stroke="#1e8449" stroke-width="1.2"/>
-  <polygon points="783,191 784,201 776,195" fill="#1e8449"/>
+  <!-- Step 2 on B1 -->
+  <circle cx="292" cy="52" r="10" fill="#d4a017" opacity="0.12"/>
+  <text x="292" y="56" font-family="'DM Sans', sans-serif" font-size="11" fill="#b8860b" text-anchor="middle" font-weight="700">2</text>
 
-  <!-- D1 — committed = 16 -->
-  <rect x="710" y="198" width="80" height="36" rx="5" fill="#e8f5e9" stroke="#1e8449" stroke-width="2.5"/>
-  <text x="750" y="213" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="bold">D1</text>
-  <text x="750" y="227" text-anchor="middle" fill="#1e8449" font-size="10">= 16</text>
-  <text x="795" y="208" fill="#1e8449" font-size="14" font-weight="bold">&#10003;</text>
+  <!-- Step 2 on C1 -->
+  <circle cx="292" cy="202" r="10" fill="#d4a017" opacity="0.12"/>
+  <text x="292" y="206" font-family="'DM Sans', sans-serif" font-size="11" fill="#b8860b" text-anchor="middle" font-weight="700">2</text>
 
+  <!-- Step 3 on D1 -->
+  <circle cx="532" cy="128" r="10" fill="#d4a017" opacity="0.12"/>
+  <text x="532" y="132" font-family="'DM Sans', sans-serif" font-size="11" fill="#b8860b" text-anchor="middle" font-weight="700">3</text>
 
-  <!-- Bottom arrow and label -->
-  <line x1="140" y1="270" x2="760" y2="270" stroke="#1a1a1a" stroke-width="1.5"/>
-  <polygon points="760,265 772,270 760,275" fill="#1a1a1a"/>
-  <text x="450" y="290" text-anchor="middle" fill="#7a7a6a" font-size="11">A1 changed → B1 and C1 in parallel → D1 last. Topological order.</text>
+  <!-- ================================================================ -->
+  <!-- NARRATIVE TEXT (below the cells)                                 -->
+  <!-- ================================================================ -->
+
+  <text x="450" y="322" font-family="'DM Sans', sans-serif" font-size="12.5" fill="#999999" text-anchor="middle">
+    A1 changed  &#x2192;  B1 and C1 wait  &#x2192;  D1 waits for both  &#x2192;  topological order
+  </text>
+
+  <text x="450" y="344" font-family="'DM Sans', sans-serif" font-size="11.5" fill="#888888" text-anchor="middle" font-style="italic">
+    C1 can't compute until A1 is ready. D1 can't compute until B1 AND C1 are ready. They wait. In order.
+  </text>
+
+  <!-- ================================================================ -->
+  <!-- RIGHT-SIDE RESULT HINT (what everything will become)            -->
+  <!-- ================================================================ -->
+  <g opacity="0.4">
+    <text x="710" y="148" font-family="'DM Sans', sans-serif" font-size="10" fill="#1e8449" text-anchor="start">&#x2192; 10</text>
+    <text x="710" y="168" font-family="'DM Sans', sans-serif" font-size="10" fill="#1e8449" text-anchor="start">&#x2192; 8</text>
+    <text x="710" y="188" font-family="'DM Sans', sans-serif" font-size="10" fill="#1e8449" text-anchor="start">&#x2192; 18</text>
+
+    <text x="700" y="148" font-family="'DM Sans', sans-serif" font-size="9" fill="#999999" text-anchor="end">B1</text>
+    <text x="700" y="168" font-family="'DM Sans', sans-serif" font-size="9" fill="#999999" text-anchor="end">C1</text>
+    <text x="700" y="188" font-family="'DM Sans', sans-serif" font-size="9" fill="#999999" text-anchor="end">D1</text>
+  </g>
+
 </svg>

@@ -1,122 +1,142 @@
-<!-- DESCRIPTION: Three panels. Left panel (blue, "STABLE TOPOLOGY — MASS"): a subgraph with fixed edges shown twice (Walk 1 and Walk 2), both producing the same result. Label: "Same walk. Same result. Every time. That's mass." Center panel (orange, "DISRUPTION — ENERGY INPUT"): new edge being added to the subgraph, labeled "Energy arrives. Topology changes." Right panel (green, "PROPAGATION — RELEASED ENERGY"): the subgraph with new structure, delta arrows radiating outward, labeled "New walk. Different result. Delta propagates outward. That's released energy." -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="DM Sans, sans-serif">
-  <rect width="900" height="300" fill="white" fill-opacity="0"/>
+<!-- DESCRIPTION: Side-by-side comparison of photon (straight chain of orange dots, no internal structure, travels at C) vs massive particle (self-perpetuating topological knot of blue/red dots shown across three animation frames, must spend budget maintaining itself so travels slower than C) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420">
+  <style>
+    text { font-family: 'DM Sans', sans-serif; }
+  </style>
 
+  <!-- White background -->
+  <rect width="900" height="420" fill="white"/>
+
+  <!-- ===== ARROW MARKERS ===== -->
   <defs>
-    <marker id="m-blue" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-      <path d="M0,0 L7,2.5 L0,5" fill="#2471a3" stroke="none"/>
+    <marker id="arr-orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#d35400"/>
     </marker>
-    <marker id="m-orange" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-      <path d="M0,0 L7,2.5 L0,5" fill="#d35400" stroke="none"/>
-    </marker>
-    <marker id="m-green" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-      <path d="M0,0 L7,2.5 L0,5" fill="#1e8449" stroke="none"/>
-    </marker>
-    <marker id="m-red" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
-      <path d="M0,0 L7,2.5 L0,5" fill="#c0392b" stroke="none"/>
+    <marker id="arr-gray" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#999"/>
     </marker>
   </defs>
 
-  <!-- PANEL 1: STABLE TOPOLOGY — MASS -->
-  <rect x="15" y="15" width="275" height="270" rx="8" fill="white" stroke="#2471a3" stroke-width="2"/>
-  <text x="152" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3">STABLE TOPOLOGY</text>
-  <text x="152" y="56" text-anchor="middle" font-size="10" fill="#7a7a6a">MASS</text>
+  <!-- ===== PANEL HEADERS ===== -->
 
-  <!-- Walk 1 subgraph -->
-  <text x="80" y="78" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="bold">Walk 1</text>
-  <!-- Nodes -->
-  <circle cx="80" cy="95" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <line x1="80" y1="103" x2="60" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <line x1="80" y1="103" x2="100" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <circle cx="55" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <circle cx="105" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <line x1="55" y1="143" x2="80" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <line x1="105" y1="143" x2="80" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <circle cx="80" cy="170" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <!-- Result -->
-  <text x="80" y="195" text-anchor="middle" font-size="9" fill="#2471a3">= 42</text>
+  <!-- Left panel header -->
+  <text x="225" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#d35400">PHOTON</text>
+  <text x="225" y="58" text-anchor="middle" font-size="12" fill="#666">(no internal structure)</text>
 
-  <!-- Walk 2 subgraph (identical) -->
-  <text x="215" y="78" text-anchor="middle" font-size="9" fill="#2471a3" font-weight="bold">Walk 2</text>
-  <circle cx="215" cy="95" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <line x1="215" y1="103" x2="195" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <line x1="215" y1="103" x2="235" y2="128" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <circle cx="190" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <circle cx="240" cy="135" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <line x1="190" y1="143" x2="215" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <line x1="240" y1="143" x2="215" y2="163" stroke="#2471a3" stroke-width="1.5" marker-end="url(#m-blue)"/>
-  <circle cx="215" cy="170" r="8" fill="white" stroke="#2471a3" stroke-width="1.8"/>
-  <!-- Same result -->
-  <text x="215" y="195" text-anchor="middle" font-size="9" fill="#2471a3">= 42</text>
+  <!-- Right panel header -->
+  <text x="675" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#c0392b">MASSIVE PARTICLE</text>
+  <text x="675" y="58" text-anchor="middle" font-size="12" fill="#666">(self-perpetuating topology)</text>
 
-  <!-- Equals sign between -->
-  <text x="148" y="145" text-anchor="middle" font-size="18" fill="#2471a3" font-weight="bold">=</text>
+  <!-- Dashed vertical divider -->
+  <line x1="450" y1="20" x2="450" y2="370" stroke="#bbb" stroke-width="1.5" stroke-dasharray="8,5"/>
 
-  <!-- Label -->
-  <text x="152" y="228" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Same walk. Same result.</text>
-  <text x="152" y="243" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Every time.</text>
-  <text x="152" y="262" text-anchor="middle" font-size="10" font-weight="bold" fill="#2471a3">That's mass.</text>
+  <!-- ===== LEFT PANEL: PHOTON ===== -->
 
-  <!-- PANEL 2: DISRUPTION — ENERGY INPUT -->
-  <rect x="310" y="15" width="275" height="270" rx="8" fill="white" stroke="#d35400" stroke-width="2"/>
-  <text x="447" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#d35400">DISRUPTION</text>
-  <text x="447" y="56" text-anchor="middle" font-size="10" fill="#7a7a6a">ENERGY INPUT</text>
+  <!-- Photon chain: 5 orange dots in a straight horizontal line with arrows -->
+  <circle cx="70" cy="150" r="8" fill="#d35400"/>
+  <circle cx="145" cy="150" r="8" fill="#d35400"/>
+  <circle cx="220" cy="150" r="8" fill="#d35400"/>
+  <circle cx="295" cy="150" r="8" fill="#d35400"/>
+  <circle cx="370" cy="150" r="8" fill="#d35400"/>
 
-  <!-- Original subgraph -->
-  <circle cx="447" cy="95" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
-  <line x1="447" y1="103" x2="427" y2="128" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
-  <line x1="447" y1="103" x2="467" y2="128" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
-  <circle cx="422" cy="135" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
-  <circle cx="472" cy="135" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
-  <line x1="422" y1="143" x2="447" y2="163" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
-  <line x1="472" y1="143" x2="447" y2="163" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)"/>
-  <circle cx="447" cy="170" r="8" fill="white" stroke="#d35400" stroke-width="1.8"/>
+  <!-- Arrows between dots -->
+  <line x1="82" y1="150" x2="133" y2="150" stroke="#d35400" stroke-width="2" marker-end="url(#arr-orange)"/>
+  <line x1="157" y1="150" x2="208" y2="150" stroke="#d35400" stroke-width="2" marker-end="url(#arr-orange)"/>
+  <line x1="232" y1="150" x2="283" y2="150" stroke="#d35400" stroke-width="2" marker-end="url(#arr-orange)"/>
+  <line x1="307" y1="150" x2="358" y2="150" stroke="#d35400" stroke-width="2" marker-end="url(#arr-orange)"/>
 
-  <!-- NEW EDGE being added (bold, red, with lightning) -->
-  <line x1="350" y1="115" x2="417" y2="132" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="4,3" marker-end="url(#m-red)"/>
-  <circle cx="345" cy="112" r="6" fill="#c0392b" opacity="0.3"/>
-  <text x="365" y="108" font-size="8" fill="#c0392b" font-weight="bold">new edge</text>
+  <!-- Subtle motion streak underneath -->
+  <line x1="70" y1="185" x2="360" y2="185" stroke="#d35400" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr-orange)" opacity="0.45"/>
 
-  <!-- Lightning bolt icon -->
-  <path d="M345,90 L340,105 L348,103 L342,118" fill="none" stroke="#d4a017" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left panel description -->
+  <text x="225" y="228" text-anchor="middle" font-size="13" fill="#555">Nothing to maintain.</text>
+  <text x="225" y="248" text-anchor="middle" font-size="13" fill="#555">All budget goes forward.</text>
+  <text x="225" y="282" text-anchor="middle" font-size="16" font-weight="700" fill="#d35400">Speed = C</text>
 
-  <!-- Label -->
-  <text x="447" y="215" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Energy arrives.</text>
-  <text x="447" y="233" text-anchor="middle" font-size="10" font-weight="bold" fill="#d35400">Topology changes.</text>
+  <!-- ===== RIGHT PANEL: MASSIVE PARTICLE ===== -->
 
-  <!-- PANEL 3: PROPAGATION — RELEASED ENERGY -->
-  <rect x="605" y="15" width="280" height="270" rx="8" fill="white" stroke="#1e8449" stroke-width="2"/>
-  <text x="745" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">PROPAGATION</text>
-  <text x="745" y="56" text-anchor="middle" font-size="10" fill="#7a7a6a">RELEASED ENERGY</text>
+  <!-- Frame 1 (tick 1) — dense knot cluster -->
+  <g transform="translate(520, 115)">
+    <!-- 6 nodes with dense internal wiring -->
+    <circle cx="0" cy="0" r="6" fill="#2471a3"/>
+    <circle cx="28" cy="-18" r="6" fill="#c0392b"/>
+    <circle cx="52" cy="2" r="6" fill="#2471a3"/>
+    <circle cx="10" cy="22" r="6" fill="#c0392b"/>
+    <circle cx="42" cy="24" r="6" fill="#2471a3"/>
+    <circle cx="26" cy="6" r="5" fill="#c0392b"/>
+    <!-- Internal connections — many edges forming a knot -->
+    <line x1="0" y1="0" x2="28" y2="-18" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="28" y1="-18" x2="52" y2="2" stroke="#c0392b" stroke-width="1.3" opacity="0.55"/>
+    <line x1="0" y1="0" x2="10" y2="22" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="52" y1="2" x2="42" y2="24" stroke="#c0392b" stroke-width="1.3" opacity="0.55"/>
+    <line x1="10" y1="22" x2="42" y2="24" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="28" y1="-18" x2="26" y2="6" stroke="#2471a3" stroke-width="1.3" opacity="0.5"/>
+    <line x1="0" y1="0" x2="52" y2="2" stroke="#c0392b" stroke-width="1.1" opacity="0.35"/>
+    <line x1="10" y1="22" x2="26" y2="6" stroke="#c0392b" stroke-width="1.3" opacity="0.5"/>
+    <line x1="42" y1="24" x2="26" y2="6" stroke="#2471a3" stroke-width="1.3" opacity="0.5"/>
+    <line x1="0" y1="0" x2="42" y2="24" stroke="#2471a3" stroke-width="1.1" opacity="0.3"/>
+    <line x1="52" y1="2" x2="26" y2="6" stroke="#c0392b" stroke-width="1.1" opacity="0.4"/>
+    <!-- tick label -->
+    <text x="26" y="50" text-anchor="middle" font-size="11" fill="#888" font-style="italic">tick 1</text>
+  </g>
 
-  <!-- Modified subgraph (new structure - extra node) -->
-  <circle cx="740" cy="90" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
-  <line x1="740" y1="98" x2="710" y2="120" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
-  <line x1="740" y1="98" x2="770" y2="120" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
-  <circle cx="705" cy="128" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
-  <!-- New node integrated -->
-  <circle cx="670" cy="128" r="8" fill="#1e8449" stroke="#1e8449" stroke-width="1.8" opacity="0.3"/>
-  <line x1="678" y1="128" x2="697" y2="128" stroke="#1e8449" stroke-width="1.5"/>
-  <circle cx="775" cy="128" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
-  <line x1="705" y1="136" x2="740" y2="155" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
-  <line x1="775" y1="136" x2="740" y2="155" stroke="#1e8449" stroke-width="1.5" marker-end="url(#m-green)"/>
-  <circle cx="740" cy="162" r="8" fill="white" stroke="#1e8449" stroke-width="1.8"/>
+  <!-- Arrow from frame 1 to frame 2 -->
+  <line x1="582" y1="142" x2="614" y2="152" stroke="#999" stroke-width="1.5" marker-end="url(#arr-gray)"/>
 
-  <!-- Delta arrows radiating outward -->
-  <line x1="748" y1="162" x2="790" y2="162" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
-  <line x1="745" y1="170" x2="780" y2="195" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
-  <line x1="735" y1="170" x2="700" y2="195" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
-  <line x1="732" y1="162" x2="690" y2="162" stroke="#d35400" stroke-width="1.5" marker-end="url(#m-orange)" opacity="0.7"/>
+  <!-- Frame 2 (tick 2) — identical knot, shifted right and slightly down -->
+  <g transform="translate(622, 132)">
+    <circle cx="0" cy="0" r="6" fill="#2471a3"/>
+    <circle cx="28" cy="-18" r="6" fill="#c0392b"/>
+    <circle cx="52" cy="2" r="6" fill="#2471a3"/>
+    <circle cx="10" cy="22" r="6" fill="#c0392b"/>
+    <circle cx="42" cy="24" r="6" fill="#2471a3"/>
+    <circle cx="26" cy="6" r="5" fill="#c0392b"/>
+    <line x1="0" y1="0" x2="28" y2="-18" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="28" y1="-18" x2="52" y2="2" stroke="#c0392b" stroke-width="1.3" opacity="0.55"/>
+    <line x1="0" y1="0" x2="10" y2="22" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="52" y1="2" x2="42" y2="24" stroke="#c0392b" stroke-width="1.3" opacity="0.55"/>
+    <line x1="10" y1="22" x2="42" y2="24" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="28" y1="-18" x2="26" y2="6" stroke="#2471a3" stroke-width="1.3" opacity="0.5"/>
+    <line x1="0" y1="0" x2="52" y2="2" stroke="#c0392b" stroke-width="1.1" opacity="0.35"/>
+    <line x1="10" y1="22" x2="26" y2="6" stroke="#c0392b" stroke-width="1.3" opacity="0.5"/>
+    <line x1="42" y1="24" x2="26" y2="6" stroke="#2471a3" stroke-width="1.3" opacity="0.5"/>
+    <line x1="0" y1="0" x2="42" y2="24" stroke="#2471a3" stroke-width="1.1" opacity="0.3"/>
+    <line x1="52" y1="2" x2="26" y2="6" stroke="#c0392b" stroke-width="1.1" opacity="0.4"/>
+    <text x="26" y="50" text-anchor="middle" font-size="11" fill="#888" font-style="italic">tick 2</text>
+  </g>
 
-  <!-- Delta symbols at arrow tips -->
-  <text x="795" y="160" font-size="10" fill="#d35400" font-style="italic">delta</text>
-  <text x="782" y="200" font-size="10" fill="#d35400" font-style="italic">delta</text>
+  <!-- Arrow from frame 2 to frame 3 -->
+  <line x1="684" y1="159" x2="716" y2="169" stroke="#999" stroke-width="1.5" marker-end="url(#arr-gray)"/>
 
-  <!-- New result -->
-  <text x="740" y="185" text-anchor="middle" font-size="9" fill="#1e8449">= 47</text>
+  <!-- Frame 3 (tick 3) — identical knot, shifted further right and down -->
+  <g transform="translate(724, 149)">
+    <circle cx="0" cy="0" r="6" fill="#2471a3"/>
+    <circle cx="28" cy="-18" r="6" fill="#c0392b"/>
+    <circle cx="52" cy="2" r="6" fill="#2471a3"/>
+    <circle cx="10" cy="22" r="6" fill="#c0392b"/>
+    <circle cx="42" cy="24" r="6" fill="#2471a3"/>
+    <circle cx="26" cy="6" r="5" fill="#c0392b"/>
+    <line x1="0" y1="0" x2="28" y2="-18" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="28" y1="-18" x2="52" y2="2" stroke="#c0392b" stroke-width="1.3" opacity="0.55"/>
+    <line x1="0" y1="0" x2="10" y2="22" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="52" y1="2" x2="42" y2="24" stroke="#c0392b" stroke-width="1.3" opacity="0.55"/>
+    <line x1="10" y1="22" x2="42" y2="24" stroke="#2471a3" stroke-width="1.3" opacity="0.55"/>
+    <line x1="28" y1="-18" x2="26" y2="6" stroke="#2471a3" stroke-width="1.3" opacity="0.5"/>
+    <line x1="0" y1="0" x2="52" y2="2" stroke="#c0392b" stroke-width="1.1" opacity="0.35"/>
+    <line x1="10" y1="22" x2="26" y2="6" stroke="#c0392b" stroke-width="1.3" opacity="0.5"/>
+    <line x1="42" y1="24" x2="26" y2="6" stroke="#2471a3" stroke-width="1.3" opacity="0.5"/>
+    <line x1="0" y1="0" x2="42" y2="24" stroke="#2471a3" stroke-width="1.1" opacity="0.3"/>
+    <line x1="52" y1="2" x2="26" y2="6" stroke="#c0392b" stroke-width="1.1" opacity="0.4"/>
+    <text x="26" y="50" text-anchor="middle" font-size="11" fill="#888" font-style="italic">tick 3</text>
+  </g>
 
-  <!-- Label -->
-  <text x="745" y="225" text-anchor="middle" font-size="9.5" fill="#1a1a1a">New walk. Different result.</text>
-  <text x="745" y="240" text-anchor="middle" font-size="9.5" fill="#1a1a1a">Delta propagates outward.</text>
-  <text x="745" y="259" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e8449">That's released energy.</text>
+  <!-- Right panel description -->
+  <text x="675" y="260" text-anchor="middle" font-size="12.5" fill="#555">Each tick: internal edges sum → same shape again.</text>
+  <text x="675" y="292" text-anchor="middle" font-size="13" fill="#555">The knot persists. Some budget maintaining itself</text>
+  <text x="675" y="312" text-anchor="middle" font-size="13.5" font-weight="700" fill="#c0392b">→ moves forward slower than C.</text>
+
+  <!-- ===== BOTTOM SPANNING TEXT ===== -->
+  <line x1="60" y1="370" x2="840" y2="370" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="400" text-anchor="middle" font-size="15" font-weight="700" fill="#333">A photon is a straight line. A particle is a knot that keeps tying itself.</text>
+
 </svg>

@@ -1,0 +1,240 @@
+<!-- DESCRIPTION: A 2x3 grid titled "THE GRAPH'S CHEAT SHEET" summarizing six core predictions of the graph model: speed limit (c = 1 hop per tick), minimum size (1 hop = Planck length), no grid (organic graph, not tiled), 3+1 dimensions (3 spatial + time from growth), mass = energy (same thing, different name), and shortcuts exist (wormhole-like graph adjacency). Footer: "110 years of experiments. We're just naming what was measured." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="DM Sans, sans-serif">
+  <rect width="900" height="620" fill="white"/>
+
+  <defs>
+    <marker id="cs-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#2471a3" stroke="none"/>
+    </marker>
+    <marker id="cs-arr-dark" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#1a1a1a" stroke="none"/>
+    </marker>
+    <marker id="cs-arr-purple" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#7d3c98" stroke="none"/>
+    </marker>
+    <marker id="cs-arr-orange" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#d35400" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- TITLE -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a1a1a" letter-spacing="2">THE GRAPH'S CHEAT SHEET</text>
+  <line x1="250" y1="46" x2="650" y2="46" stroke="#1a1a1a" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ============================================================ -->
+  <!-- ROW 1 -->
+  <!-- ============================================================ -->
+
+  <!-- PANEL 1: SPEED LIMIT (top-left) -->
+  <rect x="30" y="60" width="410" height="165" rx="6" fill="#f7fbff" stroke="#2471a3" stroke-width="1.2"/>
+  <text x="235" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3" letter-spacing="1.5">SPEED LIMIT</text>
+
+  <!-- Chain of 3 dots with arrows -->
+  <circle cx="135" cy="130" r="10" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <text x="135" y="134" text-anchor="middle" font-size="8" fill="#2471a3" font-weight="bold">A</text>
+  <line x1="148" y1="130" x2="205" y2="130" stroke="#2471a3" stroke-width="2" marker-end="url(#cs-arr)"/>
+  <text x="177" y="122" text-anchor="middle" font-size="8" fill="#2471a3">1 hop</text>
+
+  <circle cx="218" cy="130" r="10" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <text x="218" y="134" text-anchor="middle" font-size="8" fill="#2471a3" font-weight="bold">B</text>
+  <line x1="231" y1="130" x2="288" y2="130" stroke="#2471a3" stroke-width="2" marker-end="url(#cs-arr)"/>
+  <text x="260" y="122" text-anchor="middle" font-size="8" fill="#2471a3">1 hop</text>
+
+  <circle cx="301" cy="130" r="10" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <text x="301" y="134" text-anchor="middle" font-size="8" fill="#2471a3" font-weight="bold">C</text>
+
+  <!-- Tick marks below -->
+  <text x="177" y="148" text-anchor="middle" font-size="7" fill="#7a7a6a">tick 1</text>
+  <text x="260" y="148" text-anchor="middle" font-size="7" fill="#7a7a6a">tick 2</text>
+
+  <!-- Label -->
+  <text x="235" y="195" text-anchor="middle" font-size="11" fill="#1a1a1a">1 hop per tick.</text>
+  <text x="235" y="212" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3">That's c.</text>
+
+  <!-- PANEL 2: MINIMUM SIZE (top-right) -->
+  <rect x="460" y="60" width="410" height="165" rx="6" fill="#f7fbff" stroke="#2471a3" stroke-width="1.2"/>
+  <text x="665" y="84" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3" letter-spacing="1.5">MINIMUM SIZE</text>
+
+  <!-- Single edge: two dots connected -->
+  <circle cx="600" cy="125" r="10" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <circle cx="730" cy="125" r="10" fill="white" stroke="#2471a3" stroke-width="2"/>
+  <line x1="612" y1="125" x2="718" y2="125" stroke="#2471a3" stroke-width="2"/>
+
+  <!-- Ruler / measurement indicator -->
+  <line x1="612" y1="145" x2="718" y2="145" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="612" y1="140" x2="612" y2="150" stroke="#1a1a1a" stroke-width="1"/>
+  <line x1="718" y1="140" x2="718" y2="150" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="665" y="159" text-anchor="middle" font-size="8" fill="#1a1a1a">1 hop</text>
+
+  <!-- Magnifying glass hint -->
+  <circle cx="555" cy="125" r="14" fill="none" stroke="#7a7a6a" stroke-width="1" opacity="0.5"/>
+  <line x1="565" y1="135" x2="573" y2="143" stroke="#7a7a6a" stroke-width="1" opacity="0.5"/>
+
+  <!-- Label -->
+  <text x="665" y="195" text-anchor="middle" font-size="11" fill="#1a1a1a">1 hop = smallest possible distance.</text>
+  <text x="665" y="212" text-anchor="middle" font-size="11" font-weight="bold" fill="#2471a3">You can't go smaller.</text>
+
+  <!-- ============================================================ -->
+  <!-- ROW 2 -->
+  <!-- ============================================================ -->
+
+  <!-- PANEL 3: NO GRID (middle-left) -->
+  <rect x="30" y="240" width="410" height="165" rx="6" fill="#fdf9f9" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="235" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b" letter-spacing="1.5">NO GRID</text>
+
+  <!-- Neat grid of dots with red X -->
+  <!-- 4x3 grid -->
+  <circle cx="80" cy="300" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="110" cy="300" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="140" cy="300" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="170" cy="300" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="80" cy="325" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="110" cy="325" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="140" cy="325" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="170" cy="325" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="80" cy="350" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="110" cy="350" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="140" cy="350" r="4" fill="#aaa" stroke="none"/>
+  <circle cx="170" cy="350" r="4" fill="#aaa" stroke="none"/>
+  <!-- Grid lines -->
+  <line x1="80" y1="300" x2="170" y2="300" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="80" y1="325" x2="170" y2="325" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="80" y1="350" x2="170" y2="350" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="80" y1="300" x2="80" y2="350" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="110" y1="300" x2="110" y2="350" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="140" y1="300" x2="140" y2="350" stroke="#ccc" stroke-width="0.8"/>
+  <line x1="170" y1="300" x2="170" y2="350" stroke="#ccc" stroke-width="0.8"/>
+  <!-- Red X over grid -->
+  <line x1="65" y1="288" x2="185" y2="362" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+  <line x1="185" y1="288" x2="65" y2="362" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- VS divider -->
+  <text x="235" y="330" text-anchor="middle" font-size="12" fill="#7a7a6a" font-weight="bold">vs</text>
+
+  <!-- Messy organic graph with green check -->
+  <circle cx="285" cy="308" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="320" cy="295" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="350" cy="315" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="310" cy="340" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="370" cy="338" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="340" cy="355" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="380" cy="305" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="395" cy="340" r="5" fill="white" stroke="#1e8449" stroke-width="1.5"/>
+  <!-- Organic edges -->
+  <line x1="289" y1="305" x2="316" y2="298" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="323" y1="299" x2="346" y2="312" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="288" y1="312" x2="307" y2="337" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="314" y1="337" x2="347" y2="318" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="354" y1="318" x2="377" y2="308" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="353" y1="319" x2="367" y2="335" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="313" y1="343" x2="337" y2="353" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="373" y1="341" x2="392" y2="340" stroke="#1e8449" stroke-width="1.2"/>
+  <line x1="343" y1="352" x2="368" y2="341" stroke="#1e8449" stroke-width="1.2"/>
+  <path d="M322,299 Q295,320 310,337" fill="none" stroke="#1e8449" stroke-width="1"/>
+  <line x1="383" y1="308" x2="393" y2="337" stroke="#1e8449" stroke-width="1.2"/>
+  <!-- Green check -->
+  <path d="M375,280 L385,292 L405,268" fill="none" stroke="#1e8449" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Label -->
+  <text x="235" y="385" text-anchor="middle" font-size="11" fill="#1a1a1a">Organic, not tiled.</text>
+  <text x="235" y="398" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">No lattice. No pixels.</text>
+
+  <!-- PANEL 4: 3+1 DIMENSIONS (middle-right) -->
+  <rect x="460" y="240" width="410" height="165" rx="6" fill="#faf5ff" stroke="#7d3c98" stroke-width="1.2"/>
+  <text x="665" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#7d3c98" letter-spacing="1.5">3 + 1 DIMENSIONS</text>
+
+  <!-- 3 spatial arrows from origin -->
+  <!-- Origin point -->
+  <circle cx="640" cy="335" r="3" fill="#1a1a1a"/>
+
+  <!-- X axis (right-ish) -->
+  <line x1="643" y1="335" x2="710" y2="335" stroke="#2471a3" stroke-width="2" marker-end="url(#cs-arr)"/>
+  <text x="720" y="339" font-size="10" fill="#2471a3" font-weight="bold">x</text>
+
+  <!-- Y axis (up-left, isometric) -->
+  <line x1="638" y1="332" x2="590" y2="295" stroke="#1e8449" stroke-width="2" marker-end="url(#cs-arr)"/>
+  <text x="582" y="290" font-size="10" fill="#1e8449" font-weight="bold">y</text>
+
+  <!-- Z axis (straight up) -->
+  <line x1="640" y1="332" x2="640" y2="283" stroke="#d35400" stroke-width="2" marker-end="url(#cs-arr-orange)"/>
+  <text x="648" y="280" font-size="10" fill="#d35400" font-weight="bold">z</text>
+
+  <!-- Time arrow (separate, to the right, upward, different style) -->
+  <line x1="760" y1="355" x2="760" y2="285" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="5,3" marker-end="url(#cs-arr-purple)"/>
+  <text x="760" y="275" text-anchor="middle" font-size="10" fill="#7d3c98" font-weight="bold">time</text>
+  <text x="760" y="368" text-anchor="middle" font-size="8" fill="#7a7a6a">(growth)</text>
+
+  <!-- Brace or label grouping spatial -->
+  <text x="640" y="362" text-anchor="middle" font-size="8" fill="#7a7a6a">3 spatial</text>
+
+  <!-- Label -->
+  <text x="665" y="388" text-anchor="middle" font-size="11" fill="#1a1a1a">3 spatial + time = growth.</text>
+  <text x="665" y="401" text-anchor="middle" font-size="11" font-weight="bold" fill="#7d3c98">Graph grows forward.</text>
+
+  <!-- ============================================================ -->
+  <!-- ROW 3 -->
+  <!-- ============================================================ -->
+
+  <!-- PANEL 5: MASS = ENERGY (bottom-left) -->
+  <rect x="30" y="420" width="410" height="165" rx="6" fill="#fefbf4" stroke="#d4a017" stroke-width="1.2"/>
+  <text x="235" y="444" text-anchor="middle" font-size="11" font-weight="bold" fill="#d4a017" letter-spacing="1.5">MASS = ENERGY</text>
+
+  <!-- Two-sided coin, seen from the side, slightly tilted -->
+  <!-- Coin body (ellipse seen from side) -->
+  <ellipse cx="235" cy="505" rx="65" ry="28" fill="none" stroke="#d4a017" stroke-width="2"/>
+  <!-- Left face shading -->
+  <path d="M170,505 Q170,480 235,477" fill="#d4a017" fill-opacity="0.15" stroke="none"/>
+  <!-- Right face shading -->
+  <path d="M300,505 Q300,480 235,477" fill="#d35400" fill-opacity="0.1" stroke="none"/>
+  <!-- Dividing line (edge of coin) -->
+  <line x1="235" y1="477" x2="235" y2="533" stroke="#d4a017" stroke-width="1.5"/>
+  <!-- Left face label -->
+  <text x="200" y="512" text-anchor="middle" font-size="20" font-weight="bold" fill="#d4a017" font-style="italic">m</text>
+  <!-- Right face label -->
+  <text x="270" y="512" text-anchor="middle" font-size="20" font-weight="bold" fill="#d35400" font-style="italic">E</text>
+  <!-- Coin edge thickness -->
+  <line x1="170" y1="505" x2="170" y2="510" stroke="#d4a017" stroke-width="2"/>
+  <line x1="300" y1="505" x2="300" y2="510" stroke="#d4a017" stroke-width="2"/>
+  <path d="M170,510 Q235,540 300,510" fill="none" stroke="#d4a017" stroke-width="2"/>
+
+  <!-- Label -->
+  <text x="235" y="560" text-anchor="middle" font-size="11" fill="#1a1a1a">Same thing. Different name.</text>
+  <text x="235" y="575" text-anchor="middle" font-size="11" font-weight="bold" fill="#d4a017">E = mc²</text>
+
+  <!-- PANEL 6: SHORTCUTS EXIST (bottom-right) -->
+  <rect x="460" y="420" width="410" height="165" rx="6" fill="#f5faf7" stroke="#1e8449" stroke-width="1.2"/>
+  <text x="665" y="444" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449" letter-spacing="1.5">SHORTCUTS EXIST</text>
+
+  <!-- Curved surface with two dots far apart -->
+  <!-- The surface arc -->
+  <path d="M520,510 Q590,460 665,470 Q740,480 810,510" fill="none" stroke="#7a7a6a" stroke-width="1.5"/>
+
+  <!-- Dot A on left of surface -->
+  <circle cx="540" cy="503" r="7" fill="white" stroke="#1e8449" stroke-width="2"/>
+  <text x="540" y="507" text-anchor="middle" font-size="7" fill="#1e8449" font-weight="bold">A</text>
+
+  <!-- Dot B on right of surface -->
+  <circle cx="790" cy="503" r="7" fill="white" stroke="#1e8449" stroke-width="2"/>
+  <text x="790" y="507" text-anchor="middle" font-size="7" fill="#1e8449" font-weight="bold">B</text>
+
+  <!-- Long path along the surface (dashed, red = slow) -->
+  <path d="M548,500 Q590,458 665,468 Q740,478 782,500" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="665" y="458" text-anchor="middle" font-size="8" fill="#c0392b">long way round</text>
+
+  <!-- Short direct line underneath (green = shortcut) -->
+  <line x1="545" y1="515" x2="785" y2="515" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="665" y="530" text-anchor="middle" font-size="8" fill="#1e8449" font-weight="bold">graph edge: neighbours!</text>
+
+  <!-- Small arrow pointing to the shortcut -->
+  <path d="M665,540 L665,520" fill="none" stroke="#1e8449" stroke-width="1" marker-end="url(#cs-arr)"/>
+
+  <!-- Label -->
+  <text x="665" y="558" text-anchor="middle" font-size="11" fill="#1a1a1a">The surface says far apart.</text>
+  <text x="665" y="573" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">The graph says neighbours.</text>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER -->
+  <!-- ============================================================ -->
+  <line x1="150" y1="598" x2="750" y2="598" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+  <text x="450" y="614" text-anchor="middle" font-size="12" font-style="italic" fill="#7a7a6a">110 years of experiments. We're just naming what was measured.</text>
+</svg>

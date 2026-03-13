@@ -1,77 +1,138 @@
-<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg">
+<!-- DESCRIPTION: Two-panel comparison showing dense committed green network (busy neighborhood / matter) vs sparse pending purple nodes (quiet frontier / quantum world) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="'DM Sans', sans-serif">
+  <rect width="900" height="380" fill="#ffffff"/>
+
   <defs>
-    <marker id="ab" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#2a5a2a"/>
+    <marker id="arrowGreen" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#1e8449" opacity="0.5"/>
     </marker>
-    <marker id="ap2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#554488"/>
+    <marker id="arrowBlue" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 7 2.5, 0 5" fill="#2471a3" opacity="0.35"/>
     </marker>
-    <filter id="gg"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="gp"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
-  <rect width="720" height="380" fill="#08080f"/>
+  <!-- Dashed vertical divider -->
+  <line x1="450" y1="20" x2="450" y2="360" stroke="#cccccc" stroke-width="1.5" stroke-dasharray="6,4"/>
 
-  <!-- divider -->
-  <line x1="360" y1="10" x2="360" y2="370" stroke="#1e1e38" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- ============================================ -->
+  <!-- LEFT PANEL: BUSY NEIGHBORHOOD                -->
+  <!-- ============================================ -->
 
-  <!-- LEFT: busy neighborhood (classical) -->
-  <text x="180" y="32" fill="#447744" font-size="13" text-anchor="middle" font-family="Georgia">BUSY NEIGHBORHOOD</text>
-  <text x="180" y="50" fill="#336633" font-size="11" text-anchor="middle" font-family="Georgia">Your chair. Your face. Matter.</text>
+  <text x="225" y="36" text-anchor="middle" fill="#1e8449" font-size="14" font-weight="700" letter-spacing="1">BUSY NEIGHBORHOOD</text>
+  <text x="225" y="54" text-anchor="middle" fill="#999999" font-size="11">Your chair. Your face. Matter.</text>
 
-  <!-- dense committed nodes -->
-  <circle cx="80" cy="120" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="140" cy="90" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="200" cy="120" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="140" cy="150" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="80" cy="190" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="200" cy="190" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="140" cy="220" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="80" cy="260" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="200" cy="260" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="260" cy="150" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="260" cy="220" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <circle cx="140" cy="290" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
-  <!-- edges dense -->
-  <line x1="92" y1="114" x2="128" y2="98" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="152" y1="96" x2="188" y2="112" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="140" y1="102" x2="140" y2="138" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="92" y1="126" x2="128" y2="142" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="188" y1="126" x2="152" y2="142" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="80" y1="132" x2="80" y2="178" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="200" y1="132" x2="200" y2="178" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="140" y1="162" x2="140" y2="208" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="92" y1="196" x2="128" y2="212" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="188" y1="196" x2="152" y2="212" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="212" y1="156" x2="248" y2="152" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="212" y1="196" x2="248" y2="214" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="80" y1="202" x2="80" y2="248" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="200" y1="202" x2="200" y2="248" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
-  <line x1="140" y1="232" x2="140" y2="278" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <!-- Dense green arrows -->
+  <line x1="95" y1="120" x2="148" y2="138" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="160" y1="140" x2="218" y2="128" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="230" y1="120" x2="288" y2="145" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="300" y1="150" x2="348" y2="175" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="85" y1="130" x2="118" y2="188" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="130" y1="200" x2="188" y2="185" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="200" y1="180" x2="248" y2="205" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="260" y1="210" x2="318" y2="195" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="330" y1="185" x2="358" y2="230" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="160" y1="150" x2="128" y2="195" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="230" y1="130" x2="258" y2="205" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="300" y1="155" x2="200" y2="180" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="130" y1="205" x2="168" y2="248" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="200" y1="190" x2="148" y2="250" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="260" y1="215" x2="228" y2="258" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="360" y1="240" x2="308" y2="265" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="300" y1="270" x2="238" y2="265" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="180" y1="260" x2="228" y2="262" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="140" y1="255" x2="95" y2="275" stroke="#1e8449" stroke-width="1.2" opacity="0.45" marker-end="url(#arrowGreen)"/>
+  <line x1="85" y1="280" x2="128" y2="258" stroke="#1e8449" stroke-width="1.2" opacity="0.35" marker-end="url(#arrowGreen)"/>
+  <line x1="360" y1="180" x2="310" y2="150" stroke="#1e8449" stroke-width="1.2" opacity="0.35" marker-end="url(#arrowGreen)"/>
+  <line x1="85" y1="125" x2="155" y2="145" stroke="#1e8449" stroke-width="1.2" opacity="0.35" marker-end="url(#arrowGreen)"/>
 
-  <text x="180" y="336" fill="#44cc66" font-size="12" text-anchor="middle" font-family="Georgia">Every node has consumers.</text>
-  <text x="180" y="354" fill="#336633" font-size="11" text-anchor="middle" font-family="Georgia">Nothing stays pending. Zero quantum behavior.</text>
+  <!-- Green committed nodes (solid circles, white fill, green stroke) -->
+  <!-- Row 1 -->
+  <circle cx="85" cy="120" r="11" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="160" cy="140" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="230" cy="120" r="12" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="300" cy="150" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="360" cy="175" r="11" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
 
-  <!-- RIGHT: quiet frontier (quantum) -->
-  <text x="540" y="32" fill="#7744aa" font-size="13" text-anchor="middle" font-family="Georgia">QUIET FRONTIER</text>
-  <text x="540" y="50" fill="#553388" font-size="11" text-anchor="middle" font-family="Georgia">Deep space. A lone particle. The quantum world.</text>
+  <!-- Row 2 -->
+  <circle cx="130" cy="200" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="200" cy="185" r="12" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="260" cy="210" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="330" cy="190" r="11" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
 
-  <!-- sparse pending nodes -->
-  <circle cx="420" cy="140" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
-  <text x="420" y="145" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
-  <circle cx="560" cy="180" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
-  <text x="560" y="185" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
-  <circle cx="480" cy="260" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
-  <text x="480" y="265" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
-  <circle cx="640" cy="120" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
-  <text x="640" y="125" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
+  <!-- Row 3 -->
+  <circle cx="85" cy="280" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="140" cy="255" r="11" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="230" cy="265" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="300" cy="270" r="12" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="360" cy="240" r="10" fill="#ffffff" stroke="#1e8449" stroke-width="2"/>
 
-  <!-- incoming events heading toward them -->
-  <line x1="390" y1="80" x2="412" y2="126" stroke="#4455aa" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ap2)"/>
-  <line x1="530" y1="240" x2="546" y2="198" stroke="#4455aa" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ap2)"/>
-  <line x1="450" y1="300" x2="468" y2="278" stroke="#4455aa" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ap2)"/>
+  <!-- Check marks inside some nodes -->
+  <text x="85" y="124" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">&#10003;</text>
+  <text x="230" y="124" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">&#10003;</text>
+  <text x="200" y="189" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">&#10003;</text>
+  <text x="300" y="274" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">&#10003;</text>
+  <text x="140" y="259" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">&#10003;</text>
+  <text x="360" y="179" text-anchor="middle" fill="#1e8449" font-size="10" font-weight="700">&#10003;</text>
 
-  <!-- no consumer symbol -->
-  <text x="540" y="336" fill="#aa66ff" font-size="12" text-anchor="middle" font-family="Georgia">No consumers nearby.</text>
-  <text x="540" y="354" fill="#7744aa" font-size="11" text-anchor="middle" font-family="Georgia">Inputs accumulating. This IS the wave function.</text>
+  <!-- Labels -->
+  <text x="340" y="133" fill="#1e8449" font-size="9" opacity="0.7" font-style="italic">asked instantly</text>
+  <text x="55" y="168" fill="#1e8449" font-size="9" opacity="0.7" font-style="italic">asked instantly</text>
+  <text x="280" y="240" fill="#1e8449" font-size="9" opacity="0.7" font-style="italic">asked instantly</text>
+
+  <!-- Bottom labels -->
+  <text x="225" y="325" text-anchor="middle" fill="#1e8449" font-size="11" font-weight="600">Every node has consumers.</text>
+  <text x="225" y="345" text-anchor="middle" fill="#999999" font-size="10">Nothing stays pending. Zero quantum behavior.</text>
+
+  <!-- ============================================ -->
+  <!-- RIGHT PANEL: QUIET FRONTIER                  -->
+  <!-- ============================================ -->
+
+  <text x="675" y="36" text-anchor="middle" fill="#7d3c98" font-size="14" font-weight="700" letter-spacing="1">QUIET FRONTIER</text>
+  <text x="675" y="54" text-anchor="middle" fill="#999999" font-size="11">Deep space. A lone particle. The quantum world.</text>
+
+  <!-- Faint dashed blue arrows approaching from distant points -->
+  <line x1="490" y1="90" x2="558" y2="155" stroke="#2471a3" stroke-width="1" opacity="0.3" stroke-dasharray="5,4" marker-end="url(#arrowBlue)"/>
+  <line x1="860" y1="100" x2="792" y2="168" stroke="#2471a3" stroke-width="1" opacity="0.3" stroke-dasharray="5,4" marker-end="url(#arrowBlue)"/>
+  <line x1="510" y1="290" x2="568" y2="245" stroke="#2471a3" stroke-width="1" opacity="0.25" stroke-dasharray="5,4" marker-end="url(#arrowBlue)"/>
+  <line x1="850" y1="280" x2="788" y2="235" stroke="#2471a3" stroke-width="1" opacity="0.25" stroke-dasharray="5,4" marker-end="url(#arrowBlue)"/>
+  <line x1="680" y1="90" x2="680" y2="148" stroke="#2471a3" stroke-width="1" opacity="0.2" stroke-dasharray="5,4" marker-end="url(#arrowBlue)"/>
+  <line x1="620" y1="300" x2="640" y2="260" stroke="#2471a3" stroke-width="1" opacity="0.2" stroke-dasharray="5,4" marker-end="url(#arrowBlue)"/>
+
+  <!-- Faint dashed lines between pending nodes -->
+  <line x1="580" y1="170" x2="665" y2="165" stroke="#7d3c98" stroke-width="1" opacity="0.25" stroke-dasharray="4,4"/>
+  <line x1="800" y1="180" x2="695" y2="165" stroke="#7d3c98" stroke-width="1" opacity="0.25" stroke-dasharray="4,4"/>
+  <line x1="580" y1="240" x2="650" y2="250" stroke="#7d3c98" stroke-width="1" opacity="0.2" stroke-dasharray="4,4"/>
+
+  <!-- Purple dashed pending nodes -->
+  <circle cx="570" cy="165" r="15" fill="#ffffff" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="680" cy="160" r="16" fill="#ffffff" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="800" cy="180" r="14" fill="#ffffff" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="580" cy="240" r="15" fill="#ffffff" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="660" cy="250" r="14" fill="#ffffff" stroke="#7d3c98" stroke-width="2" stroke-dasharray="5,3"/>
+
+  <!-- Question marks inside pending nodes -->
+  <text x="570" y="170" text-anchor="middle" fill="#7d3c98" font-size="14" font-weight="700">?</text>
+  <text x="680" y="165" text-anchor="middle" fill="#7d3c98" font-size="14" font-weight="700">?</text>
+  <text x="800" y="185" text-anchor="middle" fill="#7d3c98" font-size="14" font-weight="700">?</text>
+  <text x="580" y="245" text-anchor="middle" fill="#7d3c98" font-size="14" font-weight="700">?</text>
+  <text x="660" y="255" text-anchor="middle" fill="#7d3c98" font-size="14" font-weight="700">?</text>
+
+  <!-- Labels -->
+  <text x="570" y="200" text-anchor="middle" fill="#7d3c98" font-size="9" opacity="0.6" font-style="italic">still waiting...</text>
+  <text x="800" y="210" text-anchor="middle" fill="#7d3c98" font-size="9" opacity="0.6" font-style="italic">still waiting...</text>
+  <text x="660" y="282" text-anchor="middle" fill="#7d3c98" font-size="9" opacity="0.6" font-style="italic">still waiting...</text>
+
+  <!-- Tiny distant dots suggesting vast empty space -->
+  <circle cx="520" cy="130" r="2" fill="#7d3c98" opacity="0.15"/>
+  <circle cx="840" cy="140" r="2" fill="#7d3c98" opacity="0.15"/>
+  <circle cx="750" cy="280" r="2" fill="#7d3c98" opacity="0.12"/>
+  <circle cx="530" cy="270" r="1.5" fill="#7d3c98" opacity="0.12"/>
+  <circle cx="850" cy="230" r="1.5" fill="#7d3c98" opacity="0.1"/>
+  <circle cx="490" cy="200" r="1.5" fill="#7d3c98" opacity="0.1"/>
+  <circle cx="720" cy="110" r="1.5" fill="#7d3c98" opacity="0.1"/>
+  <circle cx="830" cy="260" r="1" fill="#7d3c98" opacity="0.08"/>
+
+  <!-- Bottom labels -->
+  <text x="675" y="325" text-anchor="middle" fill="#7d3c98" font-size="11" font-weight="600">No consumers nearby.</text>
+  <text x="675" y="345" text-anchor="middle" fill="#999999" font-size="10">Inputs accumulating. This IS the quantum world.</text>
 </svg>
