@@ -4,22 +4,29 @@
 
 @style:callout-neutral
 @style:verbatim
-It is a curious thing to have a passion for a subject you can't quite grasp. I would imagine this is all that is really needed for the seeds of AI psychosis to truly take hold.
 
-What follows is something of a "hobby" of mine. On the surface it might seem odd, to "ponder the world" as a hobby. But I'd argue it's actually a well-known fact that the best way to spend ANY amount of time on ANY amount of drugs is to sit back and go "YO BUT what IF LIKE…"
+On the surface this might seem odd, to "ponder the universe" as a hobby. But I'd argue it's actually a well-known fact that the best way to spend ANY amount of time on ANY amount of drugs is to sit back and go **"YO BUT what IF LIKE…"**
 
-Now it takes a special kinda idiot to write a blog post about this subject. I can't "math." There is no test in existence where the type of intelligence I have ever showed up. So — fair point.
+Now as a warning. I have the type of intelligence that seemingly evaded every test ever created by man. And for the first couple school years teachers and doctors watched my development closely...
 
-But this little hobby of mine started with one question: is anything truly random? Is there any event in this universe that does not depend on the events that came before it? If I could rewind time and flip a coin again and again, will it always land heads?
+But to quote one of my favorite movies Good Will Hunting, "I can't paint you a picture, I can't hit the ball out of Fenway, and I can't play the piano, but when it comes to wild imaginative theories on a subject I hardly know... I could always just play."
 
-This bugged me more than it should. So I looked into it. And I've been losing arguments in bars over beers ever since.
+I would imagine having a passion for a subject you can't fully grasp is all that is really needed for the seeds of AI psychosis to truly take hold.
 
-The odds that someone gets committed rise significantly the moment they start saying "I have a theory of the universe." So to get ahead of whoever plotted to get Kanye — here's what this actually is.
+But this special little "hobby" of mine started with one question: is anything truly random? Is there any event in this universe that does not depend on the events that came before it? If I could rewind time and flip a coin again and again, will it always land heads? This bugged me so I looked into it and like a true tism 9 years later here we are.
 
-This is my best guess on how it could all work. The odds of it being right are as close to zero as something can be. But if even one concept inspires a thought in someone more capable, I'd consider that a win.
+Now, I KNOW the odds that someone gets committed rise significantly the moment they start saying "I have a theory of the universe."
+
+So to get ahead of whoever plotted to get Kanye — here's what this actually is.
+
+This is my best guess on how it could all work. These are some of the greatest mysteries of life and I think everyone should have some version of this in their own head.
+
+The odds of my version being at all right are as close to zero as something can be. But if even one concept inspires a thought in someone more capable, even if born out of pure opposition, then I'd consider that a win.
+
+At the very least, having a link to this on the World Wide Web makes it easy to send an advanced briefing for any dinner party I should be expected to attend in the future.
 
 Cheers,
-A Very Serious Person
+A Very Serious Person (Greg)
 @/style
 @/style
 
@@ -53,12 +60,12 @@ Two layers. The structure produces the output. Mario can't see the structure —
 
 Now here's what makes this more than a fun idea. When you accept that reality has two layers, a whole list of genuinely weird things stop being weird. Things like:
 
-* Why can't anything travel faster than light? Every other speed limit has a reason. This one just... is.
-* Why can't you shield gravity? Got radiation? Lead stops it. Electromagnetic field bothering you? Faraday cage. Gravity? Nothing. Nobody has ever shielded gravity. Not once.
-* Why does looking at something change it? Not touching it. Not bumping it. Just looking.
-* Why do two particles on opposite sides of the universe give correlated answers instantly?
-* Why does time slow down near a black hole? Yes — this is real. How fast time passes actually changes depending on where you are. Your phone corrects for this every single day or your GPS would be wrong by 10 kilometers.
-* At what age can a man know for sure that he won't go bald?
+- Why can't anything travel faster than light? Every other speed limit has a reason. This one just... is.
+- Why can't you shield gravity? Got radiation? Lead stops it. Electromagnetic field bothering you? Faraday cage. Gravity? Nothing. Nobody has ever shielded gravity. Not once.
+- Why does looking at something change it? Not touching it. Not bumping it. Just looking.
+- Why do two particles on opposite sides of the universe give correlated answers instantly?
+- Why does time slow down near a black hole? Yes — this is real. How fast time passes actually changes depending on where you are. Your phone corrects for this every single day or your GPS would be wrong by 10 kilometers.
+- At what age can a man know for sure that he won't go bald?
 
 These are real experimental results that our best theories describe but don't explain.
 
@@ -222,9 +229,9 @@ Whiteboard style. Two panels with a large arrow between them labeled "ANNIHILATI
 Mass is a loop — computation cycling inward. Energy is what happens when the loop collapses and all that deferred work fires outward at once. An atomic bomb is a loop unwinding.
 @/fig
 
-* **m** is the depth of the loop — how many steps to complete one full cycle
-* **c²** is the propagation cost paid twice: once for moving through the graph, once for the internal cycling rate
-* **E** is every deferred internal step, released at once, propagating outward at C
+- **m** is the depth of the loop — how many steps to complete one full cycle
+- **c²** is the propagation cost paid twice: once for moving through the graph, once for the internal cycling rate
+- **E** is every deferred internal step, released at once, propagating outward at C
 
 Mass-energy equivalence is the conversion of looped computation into linear propagation.
 
@@ -240,7 +247,7 @@ Three clues that something is off about gravity:
 1. You can shield every other force. Radiation — lead. Electromagnetic fields — Faraday cage. Gravity — nothing. Not once, anywhere, ever.
 2. Einstein showed gravity and acceleration are identical. Standing on Earth feels exactly the same as accelerating in a rocket at 9.8 m/s². Why would a force feel the same as motion?
 3. Physicists have hunted the graviton — the particle that carries the gravitational force — for nearly a hundred years. Never found one.
-@/style
+   @/style
 
 Three clues. One answer.
 
@@ -276,15 +283,15 @@ Near a massive object, the graph is denser. More hops per cycle means a pattern'
 
 ### The Rest of the Lineup
 
-| Mystery | What you were told | What it is in the graph |
-| --- | --- | --- |
-| Speed of light | How fast light goes | Rate changes spread: 1 hop per tick. Nothing special about light — it's the simplest pattern |
-| Space | A box things happen inside | The graph's shape. Distance = hop count. Minimum distance = 1 hop = Planck length |
-| Time | A dimension you move through | New nodes being born. No births = no time |
-| Time dilation | Mysterious relativistic effect | Near mass: denser graph, more hops per cycle, pattern's clock runs slower |
-| Arrow of time | Something about entropy | You can't un-birth a node. Growth is irreversible |
-| Universe expanding | Space stretching somehow | More nodes = more places for new nodes. Growth feeds growth |
-| Black holes | Infinite singularity | Density so extreme no path leads outward. Not infinite — just one-way |
+| Mystery            | What you were told             | What it is in the graph                                                                      |
+| ------------------ | ------------------------------ | -------------------------------------------------------------------------------------------- |
+| Speed of light     | How fast light goes            | Rate changes spread: 1 hop per tick. Nothing special about light — it's the simplest pattern |
+| Space              | A box things happen inside     | The graph's shape. Distance = hop count. Minimum distance = 1 hop = Planck length            |
+| Time               | A dimension you move through   | New nodes being born. No births = no time                                                    |
+| Time dilation      | Mysterious relativistic effect | Near mass: denser graph, more hops per cycle, pattern's clock runs slower                    |
+| Arrow of time      | Something about entropy        | You can't un-birth a node. Growth is irreversible                                            |
+| Universe expanding | Space stretching somehow       | More nodes = more places for new nodes. Growth feeds growth                                  |
+| Black holes        | Infinite singularity           | Density so extreme no path leads outward. Not infinite — just one-way                        |
 
 ---
 
@@ -516,11 +523,11 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 
 **What is claimed vs derived:**
 
-* Time dilation: qualitatively derived from causal density. Consistent with GPS corrections to ~10⁻¹⁰. Not formally derived.
-* Gravity as routing pressure: structurally consistent with GR geodesics. Einstein field equations not derived.
-* Mass as stable topology: consistent with LQG particle models. No mass spectrum derived.
-* Measurement as consumer-forced commitment: structurally reproduces decoherence. Born rule not derived.
-* Bell correlations via shared causal topology: structural argument only. cos²(θ) not derived.
+- Time dilation: qualitatively derived from causal density. Consistent with GPS corrections to ~10⁻¹⁰. Not formally derived.
+- Gravity as routing pressure: structurally consistent with GR geodesics. Einstein field equations not derived.
+- Mass as stable topology: consistent with LQG particle models. No mass spectrum derived.
+- Measurement as consumer-forced commitment: structurally reproduces decoherence. Born rule not derived.
+- Bell correlations via shared causal topology: structural argument only. cos²(θ) not derived.
 
 **Potentially fatal gaps:** (1) Einstein field equations not derived. (2) Lorentz invariance requires Poisson sprinkling from causal set theory — borrowed, not derived. (3) Born rule unexplained. (4) Edge algebra unspecified. (5) Bell inequality violation not quantitatively reproduced.
 

@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Georgia', serif">
+  <defs>
+    <marker id="arr-down" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#2563EB"/>
+    </marker>
+    <marker id="arr-up" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#c0392b"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L6,2.5 L0,5" fill="#bbb"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">The Bidirectional Walk</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#777" font-style="italic">You can't get the answer without going down. You can't deliver it without coming back up.</text>
+
+  <!-- ============================================ -->
+  <!-- CENTER: The Tree -->
+  <!-- ============================================ -->
+
+  <!-- Depth labels (left side) -->
+  <text x="82" y="148" text-anchor="end" font-size="12" fill="#999" font-family="'Courier New', monospace">depth 0</text>
+  <text x="82" y="238" text-anchor="end" font-size="12" fill="#999" font-family="'Courier New', monospace">depth 1</text>
+  <text x="82" y="328" text-anchor="end" font-size="12" fill="#999" font-family="'Courier New', monospace">depth 2</text>
+  <text x="82" y="418" text-anchor="end" font-size="12" fill="#999" font-family="'Courier New', monospace">depth 3</text>
+
+  <!-- Depth tick lines -->
+  <line x1="90" y1="143" x2="98" y2="143" stroke="#ccc" stroke-width="1"/>
+  <line x1="90" y1="233" x2="98" y2="233" stroke="#ccc" stroke-width="1"/>
+  <line x1="90" y1="323" x2="98" y2="323" stroke="#ccc" stroke-width="1"/>
+  <line x1="90" y1="413" x2="98" y2="413" stroke="#ccc" stroke-width="1"/>
+  <line x1="94" y1="143" x2="94" y2="413" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <!-- m bracket (right side) -->
+  <line x1="810" y1="135" x2="820" y2="135" stroke="#555" stroke-width="1.5"/>
+  <line x1="820" y1="135" x2="820" y2="420" stroke="#555" stroke-width="1.5"/>
+  <line x1="810" y1="420" x2="820" y2="420" stroke="#555" stroke-width="1.5"/>
+  <text x="835" y="282" text-anchor="start" font-size="18" font-weight="bold" fill="#333" font-style="italic">m</text>
+  <text x="835" y="300" text-anchor="start" font-size="12" fill="#888">hops</text>
+
+  <!-- TREE STRUCTURE -->
+  <!-- Root: R -->
+  <circle cx="450" cy="143" r="22" fill="white" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="450" y="149" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a1a">R</text>
+
+  <!-- Level 1: L1a, L1b -->
+  <circle cx="300" cy="233" r="20" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="300" y="239" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">A</text>
+  <circle cx="600" cy="233" r="20" fill="white" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="600" y="239" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">B</text>
+
+  <!-- Level 2: L2a, L2b, L2c, L2d -->
+  <circle cx="210" cy="323" r="18" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="210" y="329" text-anchor="middle" font-size="12" fill="#1a1a1a">C</text>
+  <circle cx="390" cy="323" r="18" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="390" y="329" text-anchor="middle" font-size="12" fill="#1a1a1a">D</text>
+  <circle cx="510" cy="323" r="18" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="510" y="329" text-anchor="middle" font-size="12" fill="#1a1a1a">E</text>
+  <circle cx="690" cy="323" r="18" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="690" y="329" text-anchor="middle" font-size="12" fill="#1a1a1a">F</text>
+
+  <!-- Level 3 (leaves): small dots -->
+  <circle cx="170" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="170" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="250" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="250" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="350" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="350" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="430" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="430" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="470" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="470" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="550" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="550" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="650" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="650" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+  <circle cx="730" cy="413" r="12" fill="#f5f5f5" stroke="#aaa" stroke-width="1.5"/>
+  <text x="730" y="417" text-anchor="middle" font-size="9" fill="#888">1</text>
+
+  <!-- Tree edges (subtle gray) -->
+  <line x1="434" y1="160" x2="316" y2="218" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="466" y1="160" x2="584" y2="218" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="286" y1="248" x2="224" y2="308" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="314" y1="248" x2="376" y2="308" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="586" y1="248" x2="524" y2="308" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="614" y1="248" x2="676" y2="308" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="200" y1="338" x2="178" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="220" y1="338" x2="242" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="380" y1="338" x2="358" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="400" y1="338" x2="422" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="500" y1="338" x2="478" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="520" y1="338" x2="542" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="680" y1="338" x2="658" y2="402" stroke="#ccc" stroke-width="1"/>
+  <line x1="700" y1="338" x2="722" y2="402" stroke="#ccc" stroke-width="1"/>
+
+  <!-- ============================================ -->
+  <!-- CALL PHASE (left side arrows - BLUE, going DOWN) -->
+  <!-- ============================================ -->
+
+  <!-- Offset arrows showing the down-walk on the left branch -->
+  <!-- R → A -->
+  <path d="M430,155 Q370,185 310,218" stroke="#2563EB" stroke-width="2.5" fill="none" marker-end="url(#arr-down)" stroke-dasharray="8,4"/>
+  <!-- A → C -->
+  <path d="M282,243 Q250,272 222,308" stroke="#2563EB" stroke-width="2.5" fill="none" marker-end="url(#arr-down)" stroke-dasharray="8,4"/>
+  <!-- C → leaf -->
+  <path d="M198,335 Q186,370 176,400" stroke="#2563EB" stroke-width="2.5" fill="none" marker-end="url(#arr-down)" stroke-dasharray="8,4"/>
+
+  <!-- CALL label -->
+  <text x="130" y="480" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563EB">CALL</text>
+  <text x="130" y="498" text-anchor="middle" font-size="13" fill="#2563EB">phase</text>
+  <!-- down arrow icon -->
+  <line x1="130" y1="505" x2="130" y2="535" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arr-down)"/>
+  <text x="130" y="555" text-anchor="middle" font-size="12" fill="#2563EB" font-style="italic">m hops</text>
+  <text x="130" y="570" text-anchor="middle" font-size="12" fill="#2563EB" font-style="italic">at rate C</text>
+
+  <!-- "asking" labels along the call path -->
+  <text x="345" y="180" font-size="11" fill="#2563EB" font-style="italic">what's your value?</text>
+  <text x="225" y="270" font-size="11" fill="#2563EB" font-style="italic">what's your value?</text>
+  <text x="148" y="370" font-size="11" fill="#2563EB" font-style="italic" text-anchor="end">what's your value?</text>
+
+  <!-- ============================================ -->
+  <!-- RETURN PHASE (right side arrows - RED, going UP) -->
+  <!-- ============================================ -->
+
+  <!-- Offset arrows showing the up-walk on the right branch -->
+  <!-- leaf → F -->
+  <path d="M724,400 Q718,372 698,340" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#arr-up)"/>
+  <!-- F → B -->
+  <path d="M682,310 Q650,275 614,250" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#arr-up)"/>
+  <!-- B → R -->
+  <path d="M588,218 Q535,185 468,158" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#arr-up)"/>
+
+  <!-- RETURN label -->
+  <text x="770" y="555" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">RETURN</text>
+  <text x="770" y="537" text-anchor="middle" font-size="13" fill="#c0392b">phase</text>
+  <!-- up arrow icon -->
+  <line x1="770" y1="530" x2="770" y2="500" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arr-up)"/>
+  <text x="770" y="573" text-anchor="middle" font-size="12" fill="#c0392b" font-style="italic">m hops</text>
+  <text x="770" y="588" text-anchor="middle" font-size="12" fill="#c0392b" font-style="italic">at rate C</text>
+
+  <!-- "delivering" labels along the return path -->
+  <text x="750" y="370" font-size="11" fill="#c0392b" font-style="italic">here: 1</text>
+  <text x="670" y="275" font-size="11" fill="#c0392b" font-style="italic">here: result</text>
+  <text x="555" y="180" font-size="11" fill="#c0392b" font-style="italic">here: result</text>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM: The equation -->
+  <!-- ============================================ -->
+  <rect x="250" y="470" width="400" height="90" rx="8" fill="#faf8f3" stroke="#d5d0c0" stroke-width="1.5"/>
+
+  <!-- Equation build-up -->
+  <text x="450" y="498" text-anchor="middle" font-size="14" fill="#555">
+    <tspan fill="#2563EB" font-weight="bold">m hops down</tspan>
+    <tspan fill="#888"> × </tspan>
+    <tspan fill="#c0392b" font-weight="bold">m hops up</tspan>
+  </text>
+  <text x="450" y="520" text-anchor="middle" font-size="14" fill="#555">
+    <tspan fill="#2563EB" font-weight="bold">at rate C</tspan>
+    <tspan fill="#888"> × </tspan>
+    <tspan fill="#c0392b" font-weight="bold">at rate C</tspan>
+  </text>
+  <line x1="340" y1="530" x2="560" y2="530" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="550" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a1a" font-style="italic">m × C × C = mc²</text>
+
+  <!-- Caption -->
+  <text x="450" y="598" text-anchor="middle" font-size="12" fill="#888">You can't skip either leg. Down to ask. Up to deliver. Two phases, each at C. That's the structure.</text>
+</svg>

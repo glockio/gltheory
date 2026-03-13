@@ -1,0 +1,161 @@
+<!-- DESCRIPTION: A 3-panel walkthrough of local propagation at rate C. Panel 1 "EVENT COMMITS": A single node commits (turns green). Panel 2 "NEIGHBORS COMMIT": The committed node's immediate causal neighbors commit in the next tick, highlighted with green ripple outward. Panel 3 "RIPPLE CONTINUES": The ripple has spread two hops out, forming a growing green circle with outer ring still purple/pending. Bottom summary: "No global function. No central evaluator. Changes ripple outward, hop by hop, at rate C." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" font-family="DM Sans, sans-serif">
+  <rect width="900" height="400" fill="none"/>
+
+  <defs>
+    <marker id="pw-arr" markerWidth="7" markerHeight="5" refX="7" refY="2.5" orient="auto">
+      <path d="M0,0 L7,2.5 L0,5" fill="#1a1a1a" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- Panel dividers -->
+  <line x1="300" y1="30" x2="300" y2="330" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="600" y1="30" x2="600" y2="330" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- ====== PANEL 1: EVENT COMMITS ====== -->
+  <text x="150" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#1e8449" letter-spacing="1.5">PANEL 1</text>
+  <text x="150" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#1a1a1a">EVENT COMMITS</text>
+
+  <!-- Surrounding pending nodes -->
+  <circle cx="85" cy="120" r="10" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="215" cy="120" r="10" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="110" cy="200" r="10" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="190" cy="200" r="10" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="150" cy="80" r="10" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <circle cx="150" cy="240" r="10" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- Outer ring -->
+  <circle cx="50" cy="160" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="250" cy="160" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="70" cy="80" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="230" cy="80" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="70" cy="240" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="230" cy="240" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+
+  <!-- Edges from center to neighbors -->
+  <line x1="150" y1="148" x2="150" y2="92" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="150" y1="172" x2="150" y2="228" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="138" y1="155" x2="97" y2="126" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="162" y1="155" x2="203" y2="126" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="138" y1="168" x2="122" y2="192" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <line x1="162" y1="168" x2="178" y2="192" stroke="#7d3c98" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <!-- Outer edges -->
+  <line x1="77" y1="120" x2="60" y2="93" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="75" y1="125" x2="58" y2="152" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="225" y1="120" x2="238" y2="93" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="225" y1="125" x2="242" y2="152" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="103" y1="208" x2="78" y2="232" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="197" y1="208" x2="222" y2="232" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="145" y1="248" x2="80" y2="245" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+  <line x1="155" y1="248" x2="220" y2="245" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.4"/>
+
+  <!-- Center node: COMMITTED (green) -->
+  <circle cx="150" cy="160" r="14" fill="#1e8449" stroke="#145a32" stroke-width="2"/>
+  <text x="150" y="165" text-anchor="middle" font-size="10" fill="white" font-weight="700">C</text>
+
+  <!-- Label -->
+  <text x="150" y="290" text-anchor="middle" font-size="11" fill="#1a1a1a" font-weight="600">Change happens here.</text>
+
+  <!-- ====== PANEL 2: NEIGHBORS COMMIT ====== -->
+  <text x="450" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#1e8449" letter-spacing="1.5">PANEL 2</text>
+  <text x="450" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#1a1a1a">NEIGHBORS COMMIT</text>
+
+  <!-- Outer ring: still pending -->
+  <circle cx="350" cy="160" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="550" cy="160" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="370" cy="80" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="530" cy="80" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="370" cy="240" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <circle cx="530" cy="240" r="8" fill="#f9f5fd" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+
+  <!-- Edges: inner committed to outer pending -->
+  <line x1="377" y1="120" x2="360" y2="93" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="375" y1="125" x2="358" y2="152" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="525" y1="120" x2="538" y2="93" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="525" y1="125" x2="542" y2="152" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="403" y1="208" x2="378" y2="232" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="497" y1="208" x2="522" y2="232" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="445" y1="248" x2="380" y2="245" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <line x1="455" y1="248" x2="520" y2="245" stroke="#7d3c98" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+
+  <!-- Committed edges (green, solid) from center to neighbors -->
+  <line x1="450" y1="148" x2="450" y2="92" stroke="#1e8449" stroke-width="2"/>
+  <line x1="450" y1="172" x2="450" y2="228" stroke="#1e8449" stroke-width="2"/>
+  <line x1="438" y1="155" x2="397" y2="126" stroke="#1e8449" stroke-width="2"/>
+  <line x1="462" y1="155" x2="503" y2="126" stroke="#1e8449" stroke-width="2"/>
+  <line x1="438" y1="168" x2="422" y2="192" stroke="#1e8449" stroke-width="2"/>
+  <line x1="462" y1="168" x2="478" y2="192" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- Neighbor nodes: NOW committed (green, lighter) -->
+  <circle cx="385" cy="120" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="515" cy="120" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="410" cy="200" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="490" cy="200" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="450" cy="80" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="450" cy="240" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- Center node -->
+  <circle cx="450" cy="160" r="14" fill="#1e8449" stroke="#145a32" stroke-width="2"/>
+  <text x="450" y="165" text-anchor="middle" font-size="10" fill="white" font-weight="700">C</text>
+
+  <!-- Ripple ring indicator -->
+  <circle cx="450" cy="160" r="70" fill="none" stroke="#1e8449" stroke-width="1" stroke-dasharray="6,3" opacity="0.35"/>
+
+  <!-- Label -->
+  <text x="450" y="285" text-anchor="middle" font-size="11" fill="#1a1a1a" font-weight="600">One hop later -- neighbors commit.</text>
+  <text x="450" y="302" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="700">Rate: C.</text>
+
+  <!-- ====== PANEL 3: RIPPLE CONTINUES ====== -->
+  <text x="750" y="28" text-anchor="middle" font-size="12" font-weight="700" fill="#1e8449" letter-spacing="1.5">PANEL 3</text>
+  <text x="750" y="46" text-anchor="middle" font-size="11" font-weight="600" fill="#1a1a1a">RIPPLE CONTINUES</text>
+
+  <!-- Committed edges: center to hop-1 -->
+  <line x1="750" y1="148" x2="750" y2="92" stroke="#1e8449" stroke-width="2"/>
+  <line x1="750" y1="172" x2="750" y2="228" stroke="#1e8449" stroke-width="2"/>
+  <line x1="738" y1="155" x2="697" y2="126" stroke="#1e8449" stroke-width="2"/>
+  <line x1="762" y1="155" x2="803" y2="126" stroke="#1e8449" stroke-width="2"/>
+  <line x1="738" y1="168" x2="722" y2="192" stroke="#1e8449" stroke-width="2"/>
+  <line x1="762" y1="168" x2="778" y2="192" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- Committed edges: hop-1 to hop-2 -->
+  <line x1="677" y1="120" x2="660" y2="93" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="675" y1="125" x2="658" y2="152" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="813" y1="120" x2="838" y2="93" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="815" y1="125" x2="842" y2="152" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="715" y1="208" x2="678" y2="232" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="785" y1="208" x2="822" y2="232" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="745" y1="248" x2="680" y2="245" stroke="#1e8449" stroke-width="1.5"/>
+  <line x1="755" y1="248" x2="820" y2="245" stroke="#1e8449" stroke-width="1.5"/>
+
+  <!-- Hop-2 nodes: NOW committed (lighter green) -->
+  <circle cx="650" cy="160" r="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="850" cy="160" r="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="670" cy="80" r="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="845" cy="85" r="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="670" cy="240" r="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+  <circle cx="830" cy="240" r="8" fill="#edf8f1" stroke="#1e8449" stroke-width="1.5"/>
+
+  <!-- Hop-1 nodes: committed -->
+  <circle cx="685" cy="120" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="815" cy="120" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="710" cy="200" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="790" cy="200" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="750" cy="80" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+  <circle cx="750" cy="240" r="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2"/>
+
+  <!-- Center node -->
+  <circle cx="750" cy="160" r="14" fill="#1e8449" stroke="#145a32" stroke-width="2"/>
+  <text x="750" y="165" text-anchor="middle" font-size="10" fill="white" font-weight="700">C</text>
+
+  <!-- Ripple rings -->
+  <circle cx="750" cy="160" r="70" fill="none" stroke="#1e8449" stroke-width="1" stroke-dasharray="6,3" opacity="0.25"/>
+  <circle cx="750" cy="160" r="110" fill="none" stroke="#1e8449" stroke-width="1" stroke-dasharray="6,3" opacity="0.2"/>
+
+  <!-- Label -->
+  <text x="750" y="285" text-anchor="middle" font-size="11" fill="#1a1a1a" font-weight="600">Two hops later -- the change has</text>
+  <text x="750" y="302" text-anchor="middle" font-size="11" fill="#1a1a1a" font-weight="600">propagated outward.</text>
+  <text x="750" y="319" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="700">This IS the speed of light.</text>
+
+  <!-- ====== BOTTOM SUMMARY ====== -->
+  <line x1="80" y1="350" x2="820" y2="350" stroke="#1a1a1a" stroke-width="0.5" opacity="0.2"/>
+  <text x="450" y="378" text-anchor="middle" font-size="13" fill="#1a1a1a">No global function. No central evaluator. Changes ripple outward, hop by hop, at rate C.</text>
+</svg>

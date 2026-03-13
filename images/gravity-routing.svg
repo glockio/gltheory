@@ -1,0 +1,148 @@
+<!-- DESCRIPTION: Two panels. Left panel "BEFORE — no mass, flat routing table": a uniform grid of nodes. A straight path from A (top left) to B (bottom right) drawn as a straight diagonal line. All nodes the same color. Label: "Uniform routing costs. Straight path is cheapest." Right panel "AFTER — mass present, routing table updated": same grid. A cluster of nodes in the center colored amber/orange, labeled "DEEP STACK — high routing cost." The path from A to B is now curved around the mass cluster, avoiding the high-cost center. Label: "Routing table updated. Cheapest path now bends around the mass. That bend is gravity." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- LEFT PANEL -->
+  <rect x="10" y="10" width="380" height="320" rx="6" fill="none" stroke="#a8dadc" stroke-width="1.5"/>
+  <text x="200" y="36" text-anchor="middle" font-size="12" fill="#1a1a2e" font-weight="700">BEFORE -- no mass, flat routing table</text>
+
+  <!-- Grid of uniform nodes - 6x5 grid -->
+  <!-- Row 1 -->
+  <circle cx="60" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="120" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="180" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="240" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="300" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="360" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 2 -->
+  <circle cx="60" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="120" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="180" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="240" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="300" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="360" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 3 -->
+  <circle cx="60" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="120" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="180" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="240" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="300" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="360" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 4 -->
+  <circle cx="60" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="120" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="180" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="240" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="300" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="360" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 5 -->
+  <circle cx="60" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="120" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="180" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="240" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="300" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="360" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+
+  <!-- Grid lines (faint) -->
+  <!-- Horizontal -->
+  <line x1="55" y1="65" x2="365" y2="65" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="55" y1="115" x2="365" y2="115" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="55" y1="165" x2="365" y2="165" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="55" y1="215" x2="365" y2="215" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="55" y1="265" x2="365" y2="265" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <!-- Vertical -->
+  <line x1="60" y1="60" x2="60" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="120" y1="60" x2="120" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="180" y1="60" x2="180" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="240" y1="60" x2="240" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="300" y1="60" x2="300" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="360" y1="60" x2="360" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Straight diagonal path A to B -->
+  <line x1="60" y1="65" x2="360" y2="265" stroke="#2471a3" stroke-width="2.5" opacity="0.8"/>
+  <!-- A label -->
+  <circle cx="60" cy="65" r="7" fill="#2471a3"/>
+  <text x="60" y="69" text-anchor="middle" font-size="9" fill="white" font-weight="700">A</text>
+  <!-- B label -->
+  <circle cx="360" cy="265" r="7" fill="#2471a3"/>
+  <text x="360" y="269" text-anchor="middle" font-size="9" fill="white" font-weight="700">B</text>
+
+  <!-- Left panel label -->
+  <text x="200" y="298" text-anchor="middle" font-size="10" fill="#7a7a6a" font-style="italic">Uniform routing costs.</text>
+  <text x="200" y="312" text-anchor="middle" font-size="10" fill="#7a7a6a" font-style="italic">Straight path is cheapest.</text>
+
+  <!-- RIGHT PANEL -->
+  <rect x="410" y="10" width="380" height="320" rx="6" fill="none" stroke="#a8dadc" stroke-width="1.5"/>
+  <text x="600" y="36" text-anchor="middle" font-size="12" fill="#1a1a2e" font-weight="700">AFTER -- mass present, routing table updated</text>
+
+  <!-- Grid of nodes - same 6x5 grid but center nodes are orange -->
+  <!-- Row 1 -->
+  <circle cx="460" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="520" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="580" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="640" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="700" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="760" cy="65" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 2 -->
+  <circle cx="460" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="520" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="580" cy="115" r="6" fill="#d35400" opacity="0.8"/>
+  <circle cx="640" cy="115" r="6" fill="#d35400" opacity="0.8"/>
+  <circle cx="700" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="760" cy="115" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 3 (center - mass cluster) -->
+  <circle cx="460" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="520" cy="165" r="6" fill="#d35400" opacity="0.8"/>
+  <circle cx="580" cy="165" r="7" fill="#d35400" opacity="0.9"/>
+  <circle cx="640" cy="165" r="7" fill="#d35400" opacity="0.9"/>
+  <circle cx="700" cy="165" r="6" fill="#d35400" opacity="0.8"/>
+  <circle cx="760" cy="165" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 4 -->
+  <circle cx="460" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="520" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="580" cy="215" r="6" fill="#d35400" opacity="0.8"/>
+  <circle cx="640" cy="215" r="6" fill="#d35400" opacity="0.8"/>
+  <circle cx="700" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="760" cy="215" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <!-- Row 5 -->
+  <circle cx="460" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="520" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="580" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="640" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="700" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+  <circle cx="760" cy="265" r="5" fill="#7a7a6a" opacity="0.5"/>
+
+  <!-- Grid lines (faint) -->
+  <line x1="455" y1="65" x2="765" y2="65" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="455" y1="115" x2="765" y2="115" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="455" y1="165" x2="765" y2="165" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="455" y1="215" x2="765" y2="215" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="455" y1="265" x2="765" y2="265" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="460" y1="60" x2="460" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="520" y1="60" x2="520" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="580" y1="60" x2="580" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="640" y1="60" x2="640" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="700" y1="60" x2="700" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+  <line x1="760" y1="60" x2="760" y2="270" stroke="#a8dadc" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Mass cluster label -->
+  <text x="610" y="155" text-anchor="middle" font-size="8" fill="#d35400" font-weight="600">DEEP STACK</text>
+  <text x="610" y="182" text-anchor="middle" font-size="7" fill="#d35400">high routing cost</text>
+
+  <!-- Curved path from A to B, bending around the mass -->
+  <path d="M 460,65 Q 455,80 460,115 Q 462,160 460,215 Q 462,245 520,265 Q 640,275 760,265"
+        fill="none" stroke="#2471a3" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- A label -->
+  <circle cx="460" cy="65" r="7" fill="#2471a3"/>
+  <text x="460" y="69" text-anchor="middle" font-size="9" fill="white" font-weight="700">A</text>
+  <!-- B label -->
+  <circle cx="760" cy="265" r="7" fill="#2471a3"/>
+  <text x="760" y="269" text-anchor="middle" font-size="9" fill="white" font-weight="700">B</text>
+
+  <!-- Right panel label -->
+  <text x="600" y="298" text-anchor="middle" font-size="10" fill="#7a7a6a" font-style="italic">Cheapest path now bends around the mass.</text>
+  <text x="600" y="312" text-anchor="middle" font-size="10" fill="#1a1a2e" font-weight="600" font-style="italic">That bend is gravity.</text>
+</svg>

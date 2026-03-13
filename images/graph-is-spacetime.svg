@@ -1,0 +1,78 @@
+<!-- DESCRIPTION: Two panels. Left panel (purple border, "WAVE FUNCTION — PENDING"): central node (the particle) with six dotted lines connecting to six possible position nodes around it. None are committed. Label: "No consumer. All paths pending. Nothing committed. This is superposition." Right panel (green border, "MEASURED — COMMITTED"): same central node with ONE thick solid line to ONE position node. All other connections gone. Label: "Consumer demands a result. One path commits. One definite position." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
+  <style>
+    text { font-family: "DM Sans", sans-serif; }
+  </style>
+
+  <!-- LEFT PANEL: WAVE FUNCTION - PENDING -->
+  <rect x="15" y="15" width="370" height="290" rx="8" fill="none" stroke="#7d3c98" stroke-width="2"/>
+  <text x="200" y="42" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">WAVE FUNCTION -- PENDING</text>
+
+  <!-- Central particle node -->
+  <circle cx="200" cy="150" r="16" fill="#7d3c98" stroke="#1a1a1a" stroke-width="1.5" opacity="0.8"/>
+  <text x="200" y="155" text-anchor="middle" font-size="10" fill="white" font-weight="700">P</text>
+
+  <!-- Six possible position nodes around the center (dotted connections) -->
+  <!-- Position 1 - top -->
+  <circle cx="200" cy="70" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="200" y="73" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
+  <line x1="200" y1="134" x2="200" y2="78" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Position 2 - top right -->
+  <circle cx="290" cy="95" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="290" y="98" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
+  <line x1="214" y1="140" x2="282" y2="100" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Position 3 - bottom right -->
+  <circle cx="290" cy="205" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="290" y="208" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
+  <line x1="214" y1="160" x2="282" y2="200" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Position 4 - bottom -->
+  <circle cx="200" cy="230" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="200" y="233" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
+  <line x1="200" y1="166" x2="200" y2="222" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Position 5 - bottom left -->
+  <circle cx="110" cy="205" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="110" y="208" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
+  <line x1="186" y1="160" x2="118" y2="200" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Position 6 - top left -->
+  <circle cx="110" cy="95" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <text x="110" y="98" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
+  <line x1="186" y1="140" x2="118" y2="100" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- Left panel labels -->
+  <text x="200" y="262" text-anchor="middle" font-size="10" fill="#1a1a2e">No consumer. All paths pending.</text>
+  <text x="200" y="278" text-anchor="middle" font-size="10" fill="#1a1a2e">Nothing committed.</text>
+  <text x="200" y="296" text-anchor="middle" font-size="11" fill="#7d3c98" font-weight="600" font-style="italic">This is superposition.</text>
+
+  <!-- RIGHT PANEL: MEASURED - COMMITTED -->
+  <rect x="415" y="15" width="370" height="290" rx="8" fill="none" stroke="#1e8449" stroke-width="2"/>
+  <text x="600" y="42" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">MEASURED -- COMMITTED</text>
+
+  <!-- Central particle node (same position) -->
+  <circle cx="600" cy="150" r="16" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="600" y="155" text-anchor="middle" font-size="10" fill="white" font-weight="700">P</text>
+
+  <!-- ONE committed position node - top right -->
+  <circle cx="690" cy="95" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
+  <text x="690" y="99" text-anchor="middle" font-size="8" fill="white" font-weight="700">!</text>
+
+  <!-- Thick solid line to committed position -->
+  <line x1="614" y1="140" x2="681" y2="100" stroke="#1e8449" stroke-width="3"/>
+
+  <!-- Position label -->
+  <text x="720" y="90" font-size="9" fill="#1e8449" font-weight="600">committed</text>
+  <text x="720" y="102" font-size="9" fill="#1e8449" font-weight="600">position</text>
+
+  <!-- Consumer arrow coming from outside -->
+  <text x="500" y="83" font-size="9" fill="#7a7a6a">consumer</text>
+  <path d="M 510,88 L 590,138" fill="none" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="588,136 594,140 586,142" fill="#7a7a6a"/>
+
+  <!-- Right panel labels -->
+  <text x="600" y="262" text-anchor="middle" font-size="10" fill="#1a1a2e">Consumer demands a result.</text>
+  <text x="600" y="278" text-anchor="middle" font-size="10" fill="#1a1a2e">One path commits. One definite position.</text>
+</svg>
