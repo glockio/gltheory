@@ -5,23 +5,23 @@
 @style:callout-neutral
 @style:verbatim
 
-On the surface this might seem odd, to "ponder the universe" as a hobby. But I'd argue it's actually a well-known fact that the best way to spend _ANY_ amount of time on _ANY_ amount of drugs is to sit back and go **"YO BUT what IF LIKE…"**
+When someones asks if I have any hobbies, this is it. On the surface this will seem odd, to "ponder the universe" as a hobby.
 
-Now as a warning. I have the type of intelligence that seemingly evaded every test ever created by man.
+But I'd argue it's actually a well-known fact that the best way to spend _ANY_ amount of time on _ANY_ amount of drugs is to sit back and go **"YO BUT what IF LIKE…"**
+
+Now as a warning. I have the type of intelligence that seemingly evaded every it ever came accross.
 
 But to quote Good Will Hunting, "I can't paint you a picture, I can't hit the ball out of Fenway, and I can't play the piano, but when it comes to wild imaginative theories on a subject I hardly know... I could always just play."
 
 I would imagine having a passion for a subject you can't fully grasp is all that is really needed for the seeds of AI psychosis to truly take hold.
 
-But this special little "hobby" of mine started with one question: is anything truly random? Is there any event in this universe that does not depend on the events that came before it? If I could rewind time and flip a coin again and again, will it always land heads? This bugged me so I looked into it and like a true tism 9 years later here we are.
+But this special little "hobby" of mine started because I was cuurious if anything is truly "random". 9 years and a lot of PBS SpaceTime, here we are.
 
 Now, I KNOW the odds that someone gets committed rise significantly the moment they start saying "I have a theory of the universe."
 
 So to get ahead of whoever plotted to get Kanye — here's what this actually is.
 
-This is my best guess on how it could all work. These are some of the greatest mysteries of life and I think everyone should have some version of this in their own head.
-
-The odds of my version being at all right are as close to zero as something can be. But if even one concept inspires a thought in someone more capable, even if born out of pure opposition, then I'd consider that a win.
+This is my best guess on how it could all work. The odds any of this is right is about as close to zero as something can be. But if even one concept inspires a thought in someone more capable, even if born out of pure opposition, then I'd consider that a win.
 
 At the very least, having a link to this on the World Wide Web makes it easy to send an advanced briefing for any dinner party I should be expected to attend in the future.
 
@@ -32,30 +32,28 @@ A Very Serious Person (Greg)
 
 @style:callout-gold
 @style:verbatim
-Along the way of writing this, my views changed dramatically. With each version of "oh maybe it works like this" I would hit a wall — and the solution to that wall was, surprise surprise, some piece of existing theory. So this article is very much the process of me coming to appreciate what we already know. And when I say those guys BALL, I mean they BALL.
-
 The foundation here draws heavily from [causal set theory](https://en.wikipedia.org/wiki/Causal_sets), [Wolfram's project](https://www.wolframphysics.org/), and [loop quantum gravity](https://en.wikipedia.org/wiki/Loop_quantum_gravity). If this piques your interest, start with those. They have the math we don't.
 @/style
 @/style
 
 ## Chapter 1: You Are Mario
 
-Physics has two main theories. General relativity describes the big stuff — gravity, black holes, how the universe is shaped. Quantum mechanics describes the small stuff — atoms, particles, all the tiny weirdness. They are the two most successful theories in the history of science.
+Alright lets go. So all you need to know is Physics has two main theories. General relativity describes the big stuff, Quantum mechanics the small sutff. Its very similar to East and West coast rap in the 90s. Both great are great in their own respects but they are forcing us to pick a side.
 
-The problem is they completely contradict each other. Nobody knows why.
+So in our best effort to sit everyone down and ask, "can't we all just get along?", we have to accept something that at first might sound a little bit crazy... and that is... "it was all a ~~screen~ Dream"
 
 @style:hook
-You are Mario. Not metaphorically. Your reality is taking place on a screen. There is a structure underneath that represents your world, and you have no direct access to it.
+You are Mario. Not metaphorically. Your reality is taking place on a screen. There is a structure underneath that represents your world, and you have no direct access to it. But don't worry, there could be worse things than life as an Italian 2D plumber.
 @/style
 
-This sounds strange. But you deal with two-layer systems every day. Your monitor shows letters. Your computer stores ones and zeros. The letters are real — you're reading them right now. But what's actually stored looks nothing like what you see.
+This sounds strange. But you deal with two-layer systems every day. Your monitor shows letters. Your computer stores ones and zeros. The letters are real — you're reading them right now. But what's actually stored looks nothing like what you see. We build and use these system everyday, they work like super duper well.
 
-We're saying reality works the same way. What you experience — solid objects, definite positions, the world — is the output. It's produced by something underneath that you cannot see and have never touched.
+We're saying reality works the same way. What you experience — solid objects, a handfull of rice, a glup of water, all taking place on screen world. It's produced by something underneath that you cannot see and have never touched. To be honest, its not exactly a screen but this analogy gets you 90% of the way there. The point you need to get is there is layers to this shit.
 
 @fig:two-layers-of-reality
 Whiteboard style. Two panels side by side with an arrow between them pointing right. Left panel labeled "THE STRUCTURE" shows a simple graph: dots connected by lines, clean and abstract. Right panel labeled "WHAT YOU EXPERIENCE" shows a stick figure Mario jumping on a platform with a question block above him. The arrow between them is labeled "produces." Below both panels: "You only see the right side. The left side runs the show."
 
-Two layers. The structure produces the output. Mario can't see the structure — he only sees the world he lives in. Sound familiar?
+Two layers. The structure produces the output. Mario can't see the structure — he only sees the world he lives in.
 @/fig
 
 Now here's what makes this more than a fun idea. When you accept that reality has two layers, a whole list of genuinely weird things stop being weird. Things like:
@@ -67,11 +65,9 @@ Now here's what makes this more than a fun idea. When you accept that reality ha
 - Why does time slow down near a black hole? Yes — this is real. How fast time passes actually changes depending on where you are. Your phone corrects for this every single day or your GPS would be wrong by 10 kilometers.
 - At what age can a man know for sure that he won't go bald?
 
-These are real experimental results that our best theories describe but don't explain.
+So lets try and explain this. So if we roll with the idea you are Mario and there is another layer? What "IS", this other layer? Are you 1's and 0's?
 
-In my version of what's going on, most of them dissolve. Not because I'm smart — because the structure underneath, once you name it, does the work.
-
-The structure is a graph. A graph is just dots connected by lines. You already know what one looks like.
+The other layer is a graph. A graph is just dots connected by lines. You already know graphs.
 
 @fig:you-already-know-graphs
 Whiteboard style. Three simple graphs side by side. Left: a family tree — two parents at top, lines going down to three children. Center: a recipe — four steps in boxes with arrows: "Mix" → "Bake" → "Cool" → "Frost." Right: a road map — five cities as dots with roads as lines between them. Label above all three: "These are all graphs." Label below: "Dots. Lines. That's it. The universe is built from a bigger version of this."
@@ -83,37 +79,50 @@ A family tree is a graph. A recipe is a graph. A road map is a graph. Dots conne
 
 ## Chapter 2: You Already Live in One
 
-Here's the twist. And I want you to feel it land.
+Okay so here is the twist. On some level you already accepted this whole "layers" to reality idea. You just didn't quite call it that. But what do you think spacetime is? Look up any textbox and you will see fabric being warped... can you see this fabric? Can you see the warping? The answer is... (drumroll)...no.
 
-You already believe in spacetime. Every physics textbook printed in the last hundred years talks about it. Einstein made it famous. It's the fabric of the universe — the thing that bends near black holes, the thing that makes clocks run slower near heavy objects.
+You might never have thought about it, but what IS spacetime? This is a quote from John Archibald Wheele the physicist who named black holes and gave us the most famous summary of Einstein's theory:
 
-You accept all of that.
+"Matter tells spacetime how to curve, and spacetime tells matter how to move."
 
-Here's the question nobody ever answers:
+Beautiful sentence. Now what THE FUCK dose that even mean? It tells you what spacetime does. It doesn't tell you what spacetime is.
 
-What IS spacetime? What is it made of?
+Well its a graph. When they do math on spacetime they actually treat it as a graph, its a specific type of graph called a mainfold. So tada, this graph nonesense dose not seem so hopeless. Its worth noting that there are major theories and projects that treat the universe as a graph so this idea is taken seriously in some circles.
 
-John Archibald Wheeler — the physicist who named black holes — gave us the most famous summary of Einstein's theory: "Matter tells spacetime how to curve, and spacetime tells matter how to move."
+Okay so if our logic tracks and spacetime is a graph, and we have been researching it for 110 years now... lets cheat a little bit and see what the research tells us our graph MUST look like.
 
-Beautiful sentence. But read it again. It tells you what spacetime does. It doesn't tell you what spacetime is. What is the fabric? What is the thing that curves?
+**Speed limit.** Nothing travels faster than one hop per tick. That is the speed of light. The speed of light has NOTHING at all todo with light, it is just the fasest the graph or anything can change.
 
-Nobody says. Everyone just moves on.
+That's c. Not because there's a cosmic speed enforcer — because there's no mechanism to skip a connection. You can't jump three edges in one tick any more than you can skip three steps on a staircase in one step.
 
-I'm saying it's a graph. And if that's even close to right — here's the part that took me embarrassingly long to see — then we already have a hundred and ten years of research telling us exactly how it works. We just never named the thing being studied.
+**3+1 dimensions.** Three dimensions of space plus one of time. Sick, we got a 3D graph. Time is the growth direction — new nodes being born. Not a fourth spatial axis.
 
-You've been living in a graph your whole life. You already accepted that you can't see it. You already accepted that it bends and warps. You were just never told what it was made of.
+**Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name. More on this shortly.
 
-It's dots and lines.
+**Shortcuts exist.** Two points that look far apart on the surface might be direct neighbours in the graph. The surface says "far apart." The graph says "one hop." This matters. A lot.
+
+@fig:what-110-years-tells-us
+Whiteboard style. Heading: "THE GRAPH'S CHEAT SHEET." A 2×3 grid of small panels. 1) SPEED LIMIT: chain of 3 dots with arrows, "1 hop per tick. That's c." 2) MINIMUM SIZE: single edge with ruler, "1 hop = smallest possible distance." 3) NO GRID: neat grid with red ✗ vs messy organic graph with green ✓, "Organic, not tiled." 4) 3+1 DIMENSIONS: three spatial arrows + upward time arrow, "3 spatial + time = growth." 5) MASS = ENERGY: two-sided coin with "m" and "E", "Same thing. Different name." 6) SHORTCUTS EXIST: two dots far apart on surface, connected by line underneath, "The surface says far apart. The graph says neighbours." Below: "110 years of experiments. We're just naming what was measured."
 
 ### The Rules
 
-So what does this graph look like? Three rules. Simple version.
+Alright so if spacetime is concerned with the graph, I want to focus on the rules for how it can change. Maybe you don't like the idea I am adding rules, if your objection is that I am the one doing it... than well...fair. But no matter what you live in a world where this graph has rules for how it can change.
 
-**Rule 1 — The dots are events.** Not points in space — events in spacetime. A thing that happened, at a place, at a time. You can't separate the where from the when. A node doesn't have a position inside the graph. A node IS a position. Its place is defined entirely by what it's connected to.
+Nothing in this iniverse travels faster than 299 792 458 m / s, things fall at a rate, things attract eachother with an invisible and unshidledable force that acts at 6.6743 × 10-11 m3 kg-1 s-2.
 
-**Rule 2 — The lines point forward.** A line from dot A to dot B means: A happened before B, and A could have influenced B. The lines carry the direction of cause and effect. Past to future.
+The point is you already exsit in a world that has rules, hardcoded unbreakable rules for how this world is allowed to change. I would like to propose less rules and that some of the propperites and constant we have are emergent from our simpler set of rules.
 
-**Rule 3 — The graph grows.** New events are born as the product of old ones. That birth — a new dot appearing — is one tick of time. Time isn't a river you float down. Time is new dots being born. No new dots, no time.
+These rules all basically just are a fancy way of saying. Past events sum together to make up new events. You already know this as basic cause and effect we are just being a little more detailed in how they sum together.
+
+**Rule 1 — The nodes in the graph are events.** Not points in space — events in spacetime. What is an event? I don't know exactly, but it would have to be some repersnsation of the smallest amount of change that can occur in the universe. A thing that happened, at a place, at a time. You can't separate the where from the when.
+
+**Rule 2 - Edges are operations** This just means the connections in the graph say the operations to generate the next event. Lucky for us this is just math. So 3 x 2 = 6. In our graph world would be stored as (3) ---- X --- (2). Where 3, and 2 would be events, and mutplication is the operation, producing 9. So really what we have is summing all operations to any node gives us the next "layer" or event in reality. This seems trippy but your intuation already understands that past events make the future events. This is basic cause and effect with a fancy terms. Someone smarter can figure out exactly what all the operations are in the graph.
+
+**Rule 3 — Your posisiton in the graph gives rise to properites.** The points themselves don't have properties beyond posisiton. All other properites are derived from their posisiton in the graph. An easy way to think of this is in your family tree, I might put your name, but if someone asked "Are you a parent", we don't keep that information on your point, we just look if there is anyone under you in the tree. So your posistion in the family tree tells me what you are.
+
+**Rule 4 — The lines point forward, the graph grows.** A line from dot A to dot B means: A happened before B, and A could have influenced B. The lines carry the direction of cause and effect. Past to future. Again this is just saying that time moves on and there are past events that all sum togrether and say what the future event can be.
+
+The main thing, is your reality takes place at the edge. You can imagine an ocean of events that lead you to your "now", and your experince is always on the surface.
 
 @fig:graph-is-spacetime
 Whiteboard style. A directed graph with time flowing upward (vertical arrow on left labeled "TIME"). Bottom row: three green filled circles labeled A, B, C — "committed, already happened." Middle row: two green circles D, E with arrows coming up from A, B, C. Top: one purple dashed circle F with arrows from D and E pointing to it. Label on F: "PENDING — just born, not yet asked." Label on green nodes: "committed." Annotations: "Each dot = a spacetime event" and "Each line = what can affect what."
@@ -127,65 +136,51 @@ Whiteboard style. A large graph building upward like a coral reef or stalagmite.
 Your reality is the surface tension of a vast graph. Every event that ever happened is underneath, holding up the present moment. You live on the edge — the frontier — the thin layer where new events are being born. Spacetime is the surface of the ocean. The graph is everything below it.
 @/fig
 
-### So What Do 110 Years Tell Us?
+### So what the hell is gravity?
 
-If the graph is real — if spacetime really is dots and lines — then every experiment ever run has been measuring properties of this graph without knowing it. And a hundred and ten years of results paint a remarkably consistent picture.
+@style:mystery
+Three clues that something is off about gravity:
 
-**Speed limit.** Nothing travels faster than one hop per tick. That's c. Not because there's a cosmic speed enforcer — because there's no mechanism to skip a connection. You can't jump three edges in one tick any more than you can skip three steps on a staircase in one step.
+1. You can shield every other force. Radiation — slap some lead on that bitch lead. Electromagnetic fields — get your ass in a Faraday cage. Gravity — nothing. Not once, anywhere, ever.
+2. Einstein showed gravity and acceleration are identical. Standing on Earth feels exactly the same as accelerating in a rocket at 9.8 m/s². Why would a force feel the same as motion?
+3. Physicists have hunted the graviton — the particle that carries the gravitational force — for nearly a hundred years. Never found one.
+   @/style
 
-**Minimum size.** One hop is the smallest possible distance. You can't travel half an edge. The graph is discrete. This is the Planck length — the bottom of the ruler.
+Three clues. One answer.
 
-**No grid.** The graph isn't a neat, tiled lattice. Real graphs are organic — irregular, tangled, messy. If spacetime were a grid, physics would look different depending on which direction you faced. It doesn't. That means the underlying structure isn't tiled. It's organic.
+To explain gravity, we need to first explain mass. So remember we said our graph is events. That means when ever you try and think of an object like "a star", "a photon", none of that exsits in our graph as a single point.
 
-**3+1 dimensions.** Three dimensions of space plus one of time. In the graph: three spatial directions emerge from the connectivity pattern. Time is the growth direction — new nodes being born. Not a fourth spatial axis. A fundamentally different thing.
+Mass, objects, particals, are all the result of stable configrations within the graph. So you could imagine a collection of events join together and form a specific shape, lets say its a circle, could be a star, what ever floats your boat.
 
-**Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name. More on this shortly.
+But when we go to build our next layer of reality, to move from current now, to future now, we need to sum all of those events in our graph.
 
-**Shortcuts exist.** Two points that look far apart on the surface might be direct neighbours in the graph. The surface says "far apart." The graph says "one hop." This matters. A lot.
+What we are saying is for mass, or particals, or objects, when you sum all of their operations together, it basically just generates the same shape in our graph for the next "now"
 
-@fig:what-110-years-tells-us
-Whiteboard style. Heading: "THE GRAPH'S CHEAT SHEET." A 2×3 grid of small panels. 1) SPEED LIMIT: chain of 3 dots with arrows, "1 hop per tick. That's c." 2) MINIMUM SIZE: single edge with ruler, "1 hop = smallest possible distance." 3) NO GRID: neat grid with red ✗ vs messy organic graph with green ✓, "Organic, not tiled." 4) 3+1 DIMENSIONS: three spatial arrows + upward time arrow, "3 spatial + time = growth." 5) MASS = ENERGY: two-sided coin with "m" and "E", "Same thing. Different name." 6) SHORTCUTS EXIST: two dots far apart on surface, connected by line underneath, "The surface says far apart. The graph says neighbours." Below: "110 years of experiments. We're just naming what was measured."
+So mass is the result of stable configrations in the graph that carry forward into the next now. So imagine your boss pays you $1000 (event 1), your landlord charges you $1000 (event 2). Those sum together so you were poor than, and you are poor now. 2 events resulting in a stable configration where you forever remain poor. If those events happen again in the next now, than you have a stable configration of events.
 
-Six properties. Six experimental facts. All of them fall out of a graph with directed edges, discrete events, and one-hop-per-tick propagation. We didn't invent these. We're naming what was already measured.
-@/fig
+Okay, so mass is a collection of events in the graph that have self-perpetuating topology/shape.
 
-@style:physics-card:Planck Scale
-The Planck length (~1.6 × 10⁻³⁵ metres) and Planck time (~5.4 × 10⁻⁴⁴ seconds) are the smallest meaningful measurements in physics — below them, our equations break down. In graph terms, these are simply the length of one edge and the duration of one tick. The graph can't be subdivided further because there's nothing smaller than a single connection. The Planck scale isn't where physics gets weird. It's where you hit the resolution of the structure.
-@/style
+Now here is where it gets interesting. So we already said the fastest anything can travel is the graph is one hop at a time, which is the speed of light. The speed of light has NOTHING todo with the speed of light at all, its just the fastest our graph is capable of change. Think about it for a second, what would it look like if time stopped? Well everyhting would be frozen, nothing would change. So our preception of time is really the rate of change occuring in our local region of the graph?
 
-### Our Computers Already Do This
+So why is time releative? Why dose it slow down near a black hole?
 
-Here's the part that should make you trust this a little more. We already build systems that work exactly like this. Every day.
+Well, if mass is the result of a stable congiration, it means in order for us to get the NEXT state of the mass, we have to sum all of its edges. If we can only do one hop at a time...at the speed of light...than it means it will take longer to create the next "now", in that region of the graph.
 
-Your computer doesn't evaluate things randomly. It follows the shape of the graph. When you open a spreadsheet and change cell A1, the spreadsheet doesn't update every cell at once. It follows the dependencies. B1 depends on A1, so B1 updates first. D1 depends on B1 and C1, so D1 waits for both. The order of evaluation isn't programmed in — it falls out of the shape of the graph.
+This one is a bit of a head fuck to understand. But we need to seperate out "your time" so what you consider to be NOW and the graphs "time". We can meaure the graphs time in "ticks", your time we will call "proper time".
 
-The internet works the same way. When your phone loads a webpage, the data doesn't teleport. It hops through routers. Each router looks at the graph of connections and sends the packet along the cheapest path. That routing — cheapest path through a graph — is literally how your packets get from a server in Virginia to your phone. No one programmed the route. The shape of the network determines it.
+Lets explain this again from Marios perspetive. I could pause my N64 walk awway come back and hit play and to Mario, no time passed at all.
 
-@fig:density-across-graph
-Whiteboard style. Top: horizontal row of graph nodes, center has denser subgraph (more edges, cross-connections) labeled "MASS." Bottom: vertical bars below each node showing evaluation depth — bars form a mountain shape, tallest at center. Labels: "sparse" at edges, "DENSE" at peak. Note: "Dense regions take more steps to resolve. Like navigating a crowded room vs. an empty hallway. (In computers, this is called a call stack.)"
+We are saying our graph is always ticking, but because some regions of the graph have to sum all their edges, the graph dose not GROW evenly, some areas of the graph are really easy to compute and those areas like a photon move at the speed of light. Other areas like near a black hole, time SLOWS. This is time dilation.
 
-Causal density across the graph. Dense where mass is. Sparse everywhere else.
-@/fig
+So what is gravity than and why can't you sheild it. Gravity is the TAX you pay to get the next "now", to add a new layer to reality. It is unavoidable beacuse it is the compute coast to process all the events that came before it. More stuff in a region more gravity.
 
-This is important. The rules aren't hard-coded in. There is no line of code that says "gravity pulls things down." There is no routing table that says "send packets this way." There is no spreadsheet engine that says "evaluate D1 last." The behavior emerges from the structure. The shape of the graph determines what happens.
+Our computers have this as well, we call it stack depth. But an intersting thing happens as well in computers is we maintain a routing table, which is the most effiecnt path though the system to avoid traffic or congestion.
 
-Now flip the density profile upside down — make it a well instead of a mountain. Draw paths through it. They curve around the depth. Sound familiar?
+This is why gravity pulls you in, your graph too has a path that miniumizes compute, that is the force. It is the routing table though the graph. Sounds like I am taking crazy pills again right?
 
-@fig:graph-equals-spacetime
-Whiteboard style. Side-by-side comparison. Left: density bars inverted (mountain → well), blue curved paths threading through, bending around depth. Label: "GRAPH MODEL — paths curve around depth." Right: classic GR rubber-sheet with grid lines curving around mass, same blue paths. Label: "GENERAL RELATIVITY — paths curve around mass." Center: large equals sign.
+But this idea of miniumzing work is actaully an established thing in physics. Its called the principle of least action and it shows the light, everyting, will ALWAYS take the most effiecnt path in the universe, as if it had calcuated every possible option. Imagine you are on a beach walking and you see some drowing 2km away, you want to get to them as fast as possible. How would you do it? Would you run the whole way, than do a hard right and swim into the water? Do do you cut into the water 20m before you get to them and swim on a dianogl miniumzing your distance? Well to know this answer you need to know how fast you can run, how fast you can swim and the exact distainces you need to travel, because there is a correct answer. When we shine light into water, it gets this right. Every fucking time. Instantly. If we change the density of what it is going though or add something else in its way, it also gets this right, instatnly. This is freaky as fuck but somehow our universe IS maintaing the most effiecnt path in the universe.
 
-Same thing. Different notation. 110 years of research. Our map.
-@/fig
-
-@style:insight
-You don't need to take my word for any of this. Your own computer already proves the principle. Spreadsheets evaluate in dependency order. The internet routes around expensive paths. Call stacks trap computation and create pressure. None of these behaviors are programmed in — they all emerge from the shape of the graph. The universe does the same thing. We just never noticed because we were inside it.
-@/style
-
-### The Speed Limit
-
-When something happens at a node, that change doesn't instantly affect the whole graph. It spreads outward — one connection at a time. That rate is C. The speed of light.
-
-Not the speed of light specifically — the speed of anything. The speed of cause and effect. The speed that information can travel. Light moves at that speed because it's the simplest possible pattern — nothing to slow it down.
+So what we are porposing is not as crazy as it might sound on the surface.
 
 @fig:propagation-at-c
 Whiteboard style. Three panels left to right labeled "TICK 0," "TICK 1," "TICK 2." Each shows a grid of dots. In TICK 0: one center dot is orange/starred — "change happens here." All other dots gray. In TICK 1: center dot green (committed), its immediate neighbors orange/starred (just reached), outer dots still gray. In TICK 2: center and first ring green, second ring orange/starred, outer dots gray. Below: "1 hop per tick. That's C. Gray dots don't know yet."
@@ -197,94 +192,6 @@ A change spreads outward at one connection per tick. The gray dots haven't heard
 The speed of light isn't about light. It's the speed that changes spread through the graph — one connection per tick. Light moves at that speed because it's the simplest pattern. There's nothing to slow it down.
 @/style
 
----
-
-## Chapter 3: How It Works
-
-### Mass Is a Loop That Won't Stop
-
-If dots are events, what is a particle? What is an electron? What is you?
-
-A particle can't be a single dot — dots are events, and events don't persist. Every moment you are a new event. So a particle must be a pattern. A shape in the graph that reproduces itself as new dots are born, tick after tick.
-
-Think of a wave in the ocean. The water doesn't travel across the ocean. The pattern does.
-
-Now there are two kinds of patterns.
-
-Simple patterns have no internal structure. A photon is this — a chain of edges marching forward in a straight line. Nothing to maintain. Every tick, all of its computation budget goes toward moving forward. Maximum speed. C.
-
-Complex patterns have a self-perpetuating topology — a knot. Think of it like a standing wave: a shape that isn't physically moving in a circle, but whose internal edges sum to reproduce the same structure every tick. The knot persists not because something is cycling — but because the operations on those edges, when you add them all up, produce the same topology again.
-
-That self-perpetuating topology is mass.
-
-@fig:mass-as-loop
-Whiteboard style. Two diagrams side by side. Left labeled "PHOTON (no internal structure)": a simple chain of orange dots connected by arrows in a straight line. Label: "Nothing to maintain. All budget goes forward. Speed = C." Right labeled "MASSIVE PARTICLE (self-perpetuating topology)": a cluster of dots with many internal connections forming a knot-like shape, shown three times offset to the right (tick 1, tick 2, tick 3), shape identical each time. Label: "Each tick: internal edges sum → same shape again. The knot persists. Some budget maintaining itself → moves forward slower than C."
-
-A photon is a straight line. A particle is a knot that keeps tying itself. The knot has to spend computation budget each tick maintaining its own structure — so it has less budget to move forward. That's why massive particles move slower than light.
-@/fig
-
-Not a property stored somewhere. Not a number on a tag. A topology. A shape. A pattern that keeps reproducing itself because the edge operations sum back to the same structure. The particle persists because the topology is self-reinforcing. Destroy the topology and the particle ceases to exist.
-
-@style:insight
-Mass is not a property. It is a self-perpetuating topology — a knot of edges whose operations reproduce the same shape every tick. The heavier the particle, the more complex the topology, the more computation budget spent maintaining it, the slower it moves.
-@/style
-
-@style:physics-card:Mass and the Standard Model
-In loop quantum gravity, particles correspond to topological features of the graph — persistent structures in the evolving geometry. We're making the same claim: different particles are different loop topologies. The particle zoo might be a complete catalogue of loop structures the graph can sustain. Unstable topologies decay into simpler ones. Particle decay is a loop that can't maintain itself unwinding into simpler structures.
-@/style
-
-### E = mc² — It's an Identity
-
-You've seen the equation. You've nodded at it. You almost certainly think it describes a conversion — mass turning into energy. Some violent process. A bomb.
-
-It doesn't. It says mass and energy are the same thing. Literally the same number, measured in different units.
-
-In the graph, a massive particle is a self-perpetuating topology — a knot of edges whose operations reproduce the same structure every tick. That topology IS the particle. Measure it in kilograms and call it mass. Measure it in joules and call it energy. You haven't changed anything. You've changed the ruler.
-
-@fig:emc2-same-coin
-Whiteboard style. Central element: a large coin shown from the side, slightly angled to see both faces. Left face: "MASS" / "m" / "(measured in kg)." Right face: "ENERGY" / "E" / "(measured in joules)." Inside the coin edge: a small graph showing a self-perpetuating topology (the knot). Below coin: "Same thing. Different name. The c² is just the exchange rate between human units." Two equation boxes: LEFT "In the graph: E = m (same number)" | RIGHT "In human units: E = m × c² (conversion factor)." Bottom: "1 inch = 2.54 cm. The 2.54 isn't a process. Neither is c²."
-
-Mass and energy are two labels for the same thing. The c² is a unit conversion — like inches to centimetres. The 2.54 doesn't describe a process. Neither does c².
-@/fig
-
-In natural units — the units physicists actually use when they're not trying to be understood by the rest of us — c equals 1. The equation becomes E = m. Same number. Same thing. The c² only appears because humans invented separate units for mass and energy before realising they're identical.
-
-1 inch = 2.54 cm. The 2.54 isn't a process. It isn't a mechanism. It's just the exchange rate between two ways of measuring the same length. That's what c² is. The exchange rate between kilograms and joules.
-
-So what happens when you annihilate a particle?
-
-@fig:loop-unwinding
-Whiteboard style. Two panels with colored borders. Left panel (red border, #c0392b): a knot topology — cluster of dots with many internal connections, arrows cycling through. Label above: "MASS." Label below: "internal edges maintaining the shape." Right panel (orange border, #d35400): the same edges now radiating outward as straight arrows from a center point, small dots at arrow tips. Label above: "RADIATION." Label below: "internal edges freed, propagating outward at C." Arrow between panels labeled "ANNIHILATION — the knot unravels." Bottom caption: "Same edges. Different arrangement. An atomic bomb isn't a conversion. It's an unraveling."
-
-The knot unravels. The edges that were maintaining the topology are freed and propagate outward at C. An atomic bomb isn't converting mass into energy — they were always the same thing. It's rearranging the edges from a self-perpetuating structure into outward propagation.
-@/fig
-
-@style:insight
-E = mc² is not a conversion. It's an identity. Mass and energy are the same thing measured in different units. The c² is a unit conversion factor — like inches to centimetres. When a particle annihilates, nothing is converted. The knot unravels. Same edges, different arrangement.
-@/style
-
-@style:physics-card:Why c Is Squared
-Why c² and not just c? Dimensional analysis. Energy has units of kg·m²/s². Mass has units of kg. To convert between them you need m²/s² — which is a velocity squared. The speed of light is the only velocity the graph provides (1 hop per tick). So the conversion factor is c². It's not that two things are happening at c. It's that the unit conversion between kilograms and joules happens to require a velocity squared, and the graph only has one velocity to offer.
-@/style
-
-### Gravity — The Tax You Can't Avoid
-
-@style:mystery
-Three clues that something is off about gravity:
-
-1. You can shield every other force. Radiation — lead. Electromagnetic fields — Faraday cage. Gravity — nothing. Not once, anywhere, ever.
-2. Einstein showed gravity and acceleration are identical. Standing on Earth feels exactly the same as accelerating in a rocket at 9.8 m/s². Why would a force feel the same as motion?
-3. Physicists have hunted the graviton — the particle that carries the gravitational force — for nearly a hundred years. Never found one.
-   @/style
-
-Three clues. One answer.
-
-Gravity isn't a force. It's the shape of the computation.
-
-A massive particle is a dense topology — lots of internal steps, lots of connections, a complex region of the graph. That density makes paths through it expensive. More hops to traverse. Meanwhile, paths around it are cheaper.
-
-At each tick, the next state follows the cheapest available path. Not because anything is choosing — because that's how graphs evaluate. Like water finding the path of least resistance.
-
 Dense region = expensive paths through it = cheap paths curve around it. Objects following those cheap paths appear to curve toward the mass. That curve is gravity.
 
 @fig:gravity-routing
@@ -292,8 +199,6 @@ Whiteboard style. Two panels. Left labeled "EMPTY SPACE": a uniform grid of dots
 
 High density makes straight paths expensive. The graph routes around it. That curve is gravity. You are not being pulled — you are following the cheapest path through a graph that is denser near massive objects.
 @/fig
-
-The three mysteries dissolve:
 
 **Why you can't shield gravity:** Gravity isn't a signal traveling through the graph — it IS the density of the graph. Adding a shield adds more nodes, more connections, more density. Every attempt to block gravity makes it stronger. Like trying to reduce traffic by adding more cars.
 
@@ -323,67 +228,65 @@ Near a massive object, the graph has more connections per region — denser terr
 
 ---
 
-## Chapter 4: The Punchline
+### Sidebar, wanna see something cool: E = mc²
 
-Everything so far has been setup. This is what it was building to.
+You've seen the equation. You've nodded at it. You almost certainly think it describes a conversion — mass turning into energy. Some violent process. A bomb.
 
-### The Spreadsheet
+So we said M, is really the the sum of all those events/edges we need to compute. So it would be the time to sum edges, we said C is the fastest you can do this. So we get sum(edges) \* c, now the graph is 3D, so its c\*2. That becomes energy because everything in our graph is just events, that is why they are equakivent you can't create or destroy energy. So what is antimatter? Well it would be the inverse graph of the respeftive matter. Whcih means all operations cancel out.
 
-Before quantum mechanics, think about spreadsheets for one second.
+So what happens when you annihilate a particle?
 
-Cell D1 has a formula: =B1+C1. Now imagine B1 references another cell that hasn't been calculated yet. What does the spreadsheet do?
+@fig:loop-unwinding
+Whiteboard style. Two panels with colored borders. Left panel (red border, #c0392b): a knot topology — cluster of dots with many internal connections, arrows cycling through. Label above: "MASS." Label below: "internal edges maintaining the shape." Right panel (orange border, #d35400): the same edges now radiating outward as straight arrows from a center point, small dots at arrow tips. Label above: "RADIATION." Label below: "internal edges freed, propagating outward at C." Arrow between panels labeled "ANNIHILATION — the knot unravels." Bottom caption: "Same edges. Different arrangement. An atomic bomb isn't a conversion. It's an unraveling."
 
-It waits. It doesn't guess. It doesn't make something up. It sits there, pending, until the input arrives. Then — and only then — does it compute.
-
-@fig:spreadsheet-waiting
-Whiteboard style. Big friendly spreadsheet cells. A1 contains "5" (blue, just changed). B1 contains "=A1×2" (amber pending, hourglass). C1 contains "=A1+3" (amber pending). D1 contains "=B1+C1" (amber pending, waiting for both). Curved dependency arrows: A1→B1, A1→C1, B1→D1, C1→D1. Label: "A1 changed → B1 and C1 wait → D1 waits for both → topological order."
-
-A spreadsheet cell with a formula waits for its inputs before computing. It doesn't guess. It doesn't have a value until something needs it. The universe works exactly the same way.
+The knot unravels. The edges that were maintaining the topology are freed and propagate outward at C. An atomic bomb isn't converting mass into energy — they were always the same thing. It's rearranging the edges from a self-perpetuating structure into outward propagation.
 @/fig
 
-Remember that. We're coming back to it.
+@style:insight
+E = mc² is not a conversion. It's an identity. Mass and energy are the same thing measured in different units. The c² is a unit conversion factor — like inches to centimetres. When a particle annihilates, nothing is converted. The knot unravels. Same edges, different arrangement.
+@/style
+
+@style:physics-card:Why c Is Squared
+Why c² and not just c? Dimensional analysis. Energy has units of kg·m²/s². Mass has units of kg. To convert between them you need m²/s² — which is a velocity squared. The speed of light is the only velocity the graph provides (1 hop per tick). So the conversion factor is c². It's not that two things are happening at c. It's that the unit conversion between kilograms and joules happens to require a velocity squared, and the graph only has one velocity to offer.
+@/style
+
+## Chapter 4: There is no random.
+
+Everything so far has been setup. This is what it was building to. This is were I am going to get really fucking weird with it.
 
 ### A Node Is Born
 
-Picture the very edge of the graph. The frontier. A new event has just been born — a new dot, produced by the events before it. It exists. It has parents. It has lines connecting it to the past.
+Remember that our graph is events, not things, not objects, not particals, events. That means we need to record every event as it happens. And we said that reality is the sum of all the events that came before it. But we have an issue than, not all events arrive or happen at the same time? Some events will happen before others, and the next layer of the graph has to be the sum of all the events that came before it.
 
-But nothing is downstream of it yet. Nothing needs its value as an input.
+Each new layer of the graph is the result of the sum of the previous, IF an event is on its way and WILL reach it before it has is asked to form the next layer or reality, than the event HAS to wait, it can't produce the next layer yet otherwise it would be WRONG. It a fundemtnal feature of how to actually generate the correct next sequence of the graph.
 
-So what does it do?
+But these events are still being recored in the graph. And our reality is the graph... so how they show up in our reailty. How do you repersent a "maybe"?
 
-It waits.
+Well they do show up, at the really small level and the way they show up as a wave. Physiscts have called this the "proabiluty wave" as it repersents a probaility of distribtuions. This is the moment all of physics broke. This is where people aruged if its truly random. I am going to argue its not random at all, its only pending. This is where you hear things like "many world", "hidden local vairables", "spooky action at distance".
 
-The value does not exist yet. Not "exists but is hidden." Not "exists but we can't measure it." The function hasn't been called. Nobody asked. There is no answer right now because right now nothing needs one.
+But in our version of the universe, this is how you repersent an event that has not yet been forced to produce reailty. And we have an actaul reason _WHY_ it can't be repersented any other way.
 
-That is not a measurement problem. That is not philosophy. That is just how every spreadsheet on Earth works.
-
-### The Consumer
-
-What forces a node to finally commit — to produce a value?
-
-A consumer — any downstream event that needs this node's value to compute its own. The moment something new is born that requires this node's answer as an input, the node must commit. It sums all the inputs that have arrived along its edges at that moment, runs the computation, produces a value, turns green. Immutable. Forever.
-
-This is important so let me say what it isn't.
-
-It isn't consciousness. It isn't a physicist in a lab coat. It isn't observation in any mystical sense. It is simply any event in the graph that needs the answer. A detector is a consumer. Your eyeball is a consumer. A neighboring atom is a consumer.
-
-@fig:pending-node-no-consumer
-Whiteboard style. A tree/DAG growing upward from bottom (past) to top (present). All surface nodes are green (committed) except ONE new purple dashed node at top — the pending event. Dashed lines show incoming edges approaching from below with tick distance labels ("3 ticks away," "5 ticks away," "7 ticks away"). No-consumer symbol (∅) to the right. Annotation: "Born. Inputs arriving. Nobody asking yet."
-
-A pending node exists. Inputs are on their way at C. But nothing downstream needs its value yet — so no value exists. Not hidden. Not unknown. Just not yet asked.
-@/fig
-
-@fig:consumer-arrives
-Whiteboard style. Same tree/DAG as previous figure. An event arriving from the left with a traced highlighted path (E1 ✓ arrived, green). Another event arriving from the right (E2 ✓ arrived, green). A third event still far away (E3 — still traveling, dashed red). A new orange consumer node appears, demanding the value. The pending node turns green — commits now with value = f(E1, E2). E3 labeled "too late — joins next layer." Tick markers along traced paths.
-
-A consumer appears. The node must commit immediately — with whatever inputs have arrived. E3 was still traveling. Too late. The value is produced from E1 and E2 only. Immutable. E3 influences the next layer of the graph instead.
-@/fig
+So to explain that lets get to a brand new concept we just inveted we are calling "The Event Cone"
 
 ### The Event Cone
 
 You may have heard of the light cone — all events that could ever reach you given the speed of light. Your entire possible past.
 
-The event cone is different. Narrower. It's not everything that could reach you. It's everything that reaches you before your consumer arrives.
+Well we are going to invent a new concept which we call "the event conne". The event cone is different. Its Narrower. It's not everything that could reach you. It's everything that reaches you before you are forced to create the next layer in the graph above you.
+
+Lets expalin it with an analogy first.
+
+Imagine you're broke. Zero dollars in your bank account. Now two things happen at once: you write someone a cheque for $20, and your buddy says he owes you $40 and wire transfers it to you.
+
+You don't know how long the wire transfer will take to arrive. One day? Three days? You have no idea.
+
+Right now, that cheque you wrote? It might bounce. Or it might clear. You genuinely don't know. You're in superposition. Not because the universe is being weird — because events are still in transit and you don't know the order they'll land in.
+
+Now your friend goes to cash the cheque. That's the consumer. The bank has to commit — does the $40 arrive first, or does the cheque hit an empty account?
+
+If the wire lands first: cheque clears. If the cheque hits first: it bounces. The events were always going to unfold exactly the way they did. The wire was always going to take however many days it took. The cheque was always going to be cashed when it was cashed. Nothing random happened. You just didn't know the order because you couldn't see the whole system. If you were watching this as an outside observer it was obvious to you the whole time what was going to happen. The chain of events was clear.
+
+That's quantum mechanics. A node that has not yet been asked to produce a value, but there IS a set of events that will reach it in time. The events that fall in that time window we are calling "the event cone". Its the sum of all the events that WILL join the node before its asked to make its next layer in the graph. The next layer of reality.
 
 Same node. Consumer arrives early — small event cone, fewer inputs, one result. Consumer arrives late — larger event cone, more inputs, different result. Same dot in the graph. Different consumer timing. Different reality.
 
@@ -410,20 +313,6 @@ The event cone is narrower than the light cone. It's not what could reach you �
 @/style
 
 ### Superposition — The Cheque in the Mail
-
-This is where people's eyes glaze over. "The particle is in two places at once." "The cat is both alive and dead." Let me try something different.
-
-Imagine you're broke. Zero dollars in your bank account. Now two things happen at once: you write someone a cheque for $20, and your buddy says he owes you $40 and wire transfers it to you.
-
-You don't know how long the wire transfer will take to arrive. One day? Three days? You have no idea.
-
-Right now, that cheque you wrote? It might bounce. Or it might clear. You genuinely don't know. You're in superposition. Not because the universe is being weird — because events are still in transit and you don't know the order they'll land in.
-
-Now your friend goes to cash the cheque. That's the consumer. The bank has to commit — does the $40 arrive first, or does the cheque hit an empty account?
-
-If the wire lands first: cheque clears. If the cheque hits first: it bounces. The events were always going to unfold exactly the way they did. The wire was always going to take however many days it took. The cheque was always going to be cashed when it was cashed. Nothing random happened. You just didn't know the order because you couldn't see the whole system.
-
-That's quantum mechanics. A node with inputs still in transit, being asked for its value before everything arrives.
 
 ### Two Very Different Neighborhoods
 
