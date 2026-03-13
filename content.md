@@ -2,47 +2,21 @@
 @ai: Subtitle: Greg's Computational Guide to the Universe
 @ai: Byline: MARCH 2026 · PLAIN ENGLISH EDITION
 
----
-
-## Front Matter
-
 @style:callout-neutral
 @style:verbatim
-It is a curious thing to have a passion for a subject you can't quite
-grasp. I would imagine this is all that is really needed for the seeds
-of AI psychosis to truly take hold.
+It is a curious thing to have a passion for a subject you can't quite grasp. I would imagine this is all that is really needed for the seeds of AI psychosis to truly take hold.
 
-What follows is something of a "hobby" of mine. On the surface it
-might seem odd, to "ponder the world" as a hobby. But, I'd argue it's
-actually a well-known fact that the best way to spend ANY amount of
-time on ANY amount of drugs is to sit back and go
-**"YO BUT what IF LIKE…"**
+What follows is something of a "hobby" of mine. On the surface it might seem odd, to "ponder the world" as a hobby. But I'd argue it's actually a well-known fact that the best way to spend ANY amount of time on ANY amount of drugs is to sit back and go "YO BUT what IF LIKE…"
 
-Now it takes a speical kinda idiot to write a blog post about this subject. And to be fair, I can't "math", and there is no test in existince where the type of "intellegnce" I have ever showed up. So...fair point.
+Now it takes a special kinda idiot to write a blog post about this subject. I can't "math." There is no test in existence where the type of intelligence I have ever showed up. So — fair point.
 
-But this little "hobby" of mine all started because because I wanted ot know if anything _truly_ "random"? Is there any event in this universe that does not depend on the events that came before it? If I could rewind time and flip a coin again and again, will it always be heads? Am I just sum of all the events that came before me? Dose that mean my future is already predetermined? All of this bugged me more than it should. So I looked into it, and I've been losing arguments in bars over beers ever since. And than it hit me that what I am really missing is inforgraphics... and thus this blog post was born into existance.
+But this little hobby of mine started with one question: is anything truly random? Is there any event in this universe that does not depend on the events that came before it? If I could rewind time and flip a coin again and again, will it always land heads?
 
-I have not figured out the exact number yet, but I imagine the odds of
-someone being committed rise significantly the moment they start
-uttering the words "I have a theory of the universe".
+This bugged me more than it should. So I looked into it. And I've been losing arguments in bars over beers ever since.
 
-So to try and get ahead of whoever it was that plotted to get Kanye,
-I'd like to spell out what this actually is.
+The odds that someone gets committed rise significantly the moment they start saying "I have a theory of the universe." So to get ahead of whoever plotted to get Kanye — here's what this actually is.
 
-This is my best guess on how it could all work. Do I think it's right?
-I'd say the odds are as close to zero as something can be. However, if
-this somehow has any iota of a concept that inspires a thought in
-someone more capable, even if born out of pure opposition, then I'd
-consider that a win.
-
-Most of what I describe below is things about our known universe that
-absolutely fascinate (scare the living fuck out of me). And I thought
-having it on the World Wide Web makes it easier for me to send as
-advance briefing for any dinner party I should be
-expected to attend.
-
-In a world where AI can do almost everything, I wanted one section
-that was just me.
+This is my best guess on how it could all work. The odds of it being right are as close to zero as something can be. But if even one concept inspires a thought in someone more capable, I'd consider that a win.
 
 Cheers,
 A Very Serious Person
@@ -51,761 +25,506 @@ A Very Serious Person
 
 @style:callout-gold
 @style:verbatim
-Along the way of writing this, my views have changed dramatically from
-where they started. With each version of "oh maybe it works like
-this..." I would hit a wall, and the solution to that wall was —
-surprise surprise — some of our known theory. So this article is very
-much the process of me coming to appreciate some of our existing
-theories of the world... and when I say those guys BALL, I mean they
-BALL.
+Along the way of writing this, my views changed dramatically. With each version of "oh maybe it works like this" I would hit a wall — and the solution to that wall was, surprise surprise, some piece of existing theory. So this article is very much the process of me coming to appreciate what we already know. And when I say those guys BALL, I mean they BALL.
 
-The more I refined what I believe, the smaller my "novel" ideas became.
-What follows is largely the amalgamation of different ideas with
-increasingly ever smaller modest takes. I will assume the final version
-of this article will be the removal of myself entirely :)
-
-The foundation here draws heavily from [causal set theory](https://en.wikipedia.org/wiki/Causal_sets),
-[Wolfram's project](https://www.wolframphysics.org/), and
-[loop quantum gravity](https://en.wikipedia.org/wiki/Loop_quantum_gravity).
-If this piques your interest, start with those. They have the math we don't.
+The foundation here draws heavily from [causal set theory](https://en.wikipedia.org/wiki/Causal_sets), [Wolfram's project](https://www.wolframphysics.org/), and [loop quantum gravity](https://en.wikipedia.org/wiki/Loop_quantum_gravity). If this piques your interest, start with those. They have the math we don't.
 @/style
 @/style
-
----
 
 ## Chapter 1: You Are Mario
 
-Alright let's go.
+Physics has two main theories. General relativity describes the big stuff — gravity, black holes, how the universe is shaped. Quantum mechanics describes the small stuff — atoms, particles, all the tiny weirdness. They are the two most successful theories in the history of science.
 
-Physics has two main theories. General relativity, which talks about the big stuff — gravity, black holes, how the universe is shaped. And quantum mechanics, which describes the small stuff — atoms, particles, all the tiny weirdness. They are the two most successful theories in the history of science. The issue is they are also completely incompatible with each other. Why can't we describe big and small the same way?
-
-Well here is my hot (mostly borrowed) take.
+The problem is they completely contradict each other. Nobody knows why.
 
 @style:hook
-**You are Mario.** Not metaphorically. Your reality is taking place on a screen. There is a structure underneath that represents your world, and you have no direct access to it.
+You are Mario. Not metaphorically. Your reality is taking place on a screen. There is a structure underneath that represents your world, and you have no direct access to it.
 @/style
 
-It's slightly more complicated than this, but the analogy gets you 80% of the way.
+This sounds strange. But you deal with two-layer systems every day. Your monitor shows letters. Your computer stores ones and zeros. The letters are real — you're reading them right now. But what's actually stored looks nothing like what you see.
 
-This sounds odd at first, but you deal with two-layer systems every day. Your monitor shows letters, your computer stores ones and zeros. We're claiming reality works similarly. What you experience — solid objects, definite positions, the "real world" — is stored as something different. Just like Mario is 1's and 0's plugged into some teenager's N64.
-
-So how is reality "stored" then? Well it's a graph. Why a graph? I dunno why, you muggle, but it just works okay. For now "trust me bro."
-
-So I lied. You are not a 2D Italian plumber, you are the _graphical_ representation of a 2D Italian plumber. See, it always can get worse.
-
-Saying "it's all a simulation" is not new. But what I want to show is _why_ thinking of reality as a graph actually explains things. Spooky things like:
-
-- Why can't anything travel faster than the speed of light?
-- Why can't you shield gravity? Every other force you can shield. Got some radiation? Slap some lead on that bitch. Electromagnetic field bugging you lately? Get your ass in a Faraday cage. Gravity though? Nope.
-- What even IS gravity? All the other forces we can explain where they come from, but physicists have been hunting for the "graviton" particle for around 100 years and never found it.
-- Why does the universe "know" what you'll measure? This is where the small world gets weird.
-- Why do equations for physics work backwards in time?
-- Why does time slow down near a black hole? For those new to the whole time game — yup, how fast time passes actually does change depending on where you are in the universe and how fast you are going. Despite what your mom told you, it is not impacted by how much "fun" you are having.
-- At what age can a man know for sure that he won't go bald?
-
-These are genuine unsolved mysteries, and in my version of what's going on, most of them go away if you accept it's a graphical world after all.
+We're saying reality works the same way. What you experience — solid objects, definite positions, the world — is the output. It's produced by something underneath that you cannot see and have never touched.
 
 @fig:two-layers-of-reality
-Left: a TV screen showing Mario's world (stick-figure Mario, platforms,
-a question block) labeled "OUTPUT — What you experience. Your 'reality.'"
-Right: a structure showing graph nodes and edges, labeled "CAUSAL
-STRUCTURE — Events and connections. The actual fabric." Arrow goes FROM
-the structure TO the TV screen, labeled "produces committed results."
+Whiteboard style. Two panels side by side with an arrow between them pointing right. Left panel labeled "THE STRUCTURE" shows a simple graph: dots connected by lines, clean and abstract. Right panel labeled "WHAT YOU EXPERIENCE" shows a stick figure Mario jumping on a platform with a question block above him. The arrow between them is labeled "produces." Below both panels: "You only see the right side. The left side runs the show."
 
----
-
-Two layers. The structure produces committed results. The screen shows the output — Mario's world. Mario can't see the structure. He only sees the output. Sound familiar?
+Two layers. The structure produces the output. Mario can't see the structure — he only sees the world he lives in. Sound familiar?
 @/fig
 
-Okay so real quick — a **graph** is dots connected by lines. A recipe is a graph. A family tree is a graph. That's it.
+Now here's what makes this more than a fun idea. When you accept that reality has two layers, a whole list of genuinely weird things stop being weird. Things like:
 
-@fig:you-already-know-what-a-graph-is
-Three simple graphs side by side: a family tree (5 people, parent-child
-lines), a social network (6 people, friend connections), and a recipe
-(4 steps with directional arrows: Mix → Bake → Cool → Frost).
+* Why can't anything travel faster than light? Every other speed limit has a reason. This one just... is.
+* Why can't you shield gravity? Got radiation? Lead stops it. Electromagnetic field bothering you? Faraday cage. Gravity? Nothing. Nobody has ever shielded gravity. Not once.
+* Why does looking at something change it? Not touching it. Not bumping it. Just looking.
+* Why do two particles on opposite sides of the universe give correlated answers instantly?
+* Why does time slow down near a black hole? Yes — this is real. How fast time passes actually changes depending on where you are. Your phone corrects for this every single day or your GPS would be wrong by 10 kilometers.
+* At what age can a man know for sure that he won't go bald?
 
----
+These are real experimental results that our best theories describe but don't explain.
 
-These are all graphs. Dots connected by lines. That's the whole idea. We call the dots "nodes" and the connections between them "edges" — but lines and dots.
+In my version of what's going on, most of them dissolve. Not because I'm smart — because the structure underneath, once you name it, does the work.
+
+The structure is a graph. A graph is just dots connected by lines. You already know what one looks like.
+
+@fig:you-already-know-graphs
+Whiteboard style. Three simple graphs side by side. Left: a family tree — two parents at top, lines going down to three children. Center: a recipe — four steps in boxes with arrows: "Mix" → "Bake" → "Cool" → "Frost." Right: a road map — five cities as dots with roads as lines between them. Label above all three: "These are all graphs." Label below: "Dots. Lines. That's it. The universe is built from a bigger version of this."
+
+A family tree is a graph. A recipe is a graph. A road map is a graph. Dots connected by lines. That's the whole idea.
 @/fig
 
-Now that we know what graphs are, let's get into what ours looks like.
-
 ---
 
-## Chapter 2: The Graph
+## Chapter 2: You Already Live in One
 
-### Nodes Are Events. The Graph IS Spacetime.
+Here's the twist. And I want you to feel it land.
 
-So for all you naysayers who doubt my whole little "graph" theory — it might come as a shock for you to know that "spacetime," when we model it in math, is actually modeled as a graph. Specifically it's called a "manifold." Everyone accepts spacetime as this "fabric" of reality but no one ever talks about what the HELL the fabric is! WHY is there a fabric? So like it or not you are already living in a world where you accept that you can't "see" spacetime but it makes up your reality. Oh, so when Einstein says a fabric graph y'all are cool with it. But when Greg says it...
+You already believe in spacetime. Every physics textbook printed in the last hundred years talks about it. Einstein made it famous. It's the fabric of the universe — the thing that bends near black holes, the thing that makes clocks run slower near heavy objects.
 
-Okay, so now that you are hopefully a little bit more onboard with the whole graph idea, let's talk about what this graph might look like. Lucky for me they have been working on studying it for around 110 years now, so it's not that much heavy lifting on my end.
+You accept all of that.
 
-But I am going to add a couple of rules that focus more on HOW Einstein's little spacetime graph can change. So we are going to add some rules.
+Here's the question nobody ever answers:
 
-Each node is a **spacetime event** — not a point in space, but a point in spacetime. It has a where and a when baked into one thing. You can't separate them.
+What IS spacetime? What is it made of?
 
-The edges — the lines connecting the dots — tell you **what can affect what**. If there's an edge from A to B, that means A can influence B. A happened "before" B. A is in B's past.
+John Archibald Wheeler — the physicist who named black holes — gave us the most famous summary of Einstein's theory: "Matter tells spacetime how to curve, and spacetime tells matter how to move."
+
+Beautiful sentence. But read it again. It tells you what spacetime does. It doesn't tell you what spacetime is. What is the fabric? What is the thing that curves?
+
+Nobody says. Everyone just moves on.
+
+I'm saying it's a graph. And if that's even close to right — here's the part that took me embarrassingly long to see — then we already have a hundred and ten years of research telling us exactly how it works. We just never named the thing being studied.
+
+You've been living in a graph your whole life. You already accepted that you can't see it. You already accepted that it bends and warps. You were just never told what it was made of.
+
+It's dots and lines.
+
+### The Rules
+
+So what does this graph look like? Three rules. Simple version.
+
+**Rule 1 — The dots are events.** Not points in space — events in spacetime. A thing that happened, at a place, at a time. You can't separate the where from the when. A node doesn't have a position inside the graph. A node IS a position. Its place is defined entirely by what it's connected to.
+
+**Rule 2 — The lines point forward.** A line from dot A to dot B means: A happened before B, and A could have influenced B. The lines carry the direction of cause and effect. Past to future.
+
+**Rule 3 — The graph grows.** New events are born as the product of old ones. That birth — a new dot appearing — is one tick of time. Time isn't a river you float down. Time is new dots being born. No new dots, no time.
 
 @fig:graph-is-spacetime
-A directed graph with time flowing upward. Bottom layer: 3 green nodes
-(A, B, C) labeled "committed — already happened." Middle layer: 2 green
-nodes (D, E) with edges from bottom layer. Top layer: 1 purple node (F)
-labeled "new node born — PENDING. No one has asked for its value yet."
-Edges shown as arrows pointing upward (past to future). Left side:
-vertical arrow labeled "TIME" pointing up. Annotations: "Each node = a
-spacetime event" and "Each edge = causal order + an operation."
+Whiteboard style. A directed graph with time flowing upward (vertical arrow on left labeled "TIME"). Bottom row: three green filled circles labeled A, B, C — "committed, already happened." Middle row: two green circles D, E with arrows coming up from A, B, C. Top: one purple dashed circle F with arrows from D and E pointing to it. Label on F: "PENDING — just born, not yet asked." Label on green nodes: "committed." Annotations: "Each dot = a spacetime event" and "Each line = what can affect what."
 
----
-
-Each node is a spacetime event. Edges point from past to future — what can affect what. Green nodes are committed (their values have been demanded and resolved). Purple node F has been born but is PENDING — it exists, it has parents, but nothing has asked it what it is yet. The graph IS spacetime. Nodes don't exist inside space. Nodes ARE space.
+Green dots are committed — they've happened, their value is settled. The purple dot just came into existence but hasn't been asked what it is yet. The graph IS spacetime. The dots don't exist inside space — they ARE space.
 @/fig
 
-A node doesn't have a position IN the graph. A node IS a position. The graph IS space. When we say "where is node D?" the answer is: D is defined by what it's connected to — it's in the future of A and B, and in the past of F. That's its position. The connections ARE the coordinates.
+@fig:reality-at-the-edge
+Whiteboard style. A large graph building upward like a coral reef or stalagmite. At the bottom: dense layers of small green committed nodes, tightly packed, fading into the background. As you go up, the layers become more visible, newer. At the very top: a thin line of purple pending nodes — the frontier. Draped over the top of this structure like a tablecloth over a table, or like the surface of the ocean over the depths below: a wavy membrane labeled "SPACETIME FABRIC — what you experience." Below the membrane, the graph structure labeled "THE STRUCTURE — all the events that came before." A small stick-figure Mario stands on top of the membrane. A label reads: "You live here. On the surface. The ocean floor built everything underneath you."
 
-And here's the thing you might not expect: the properties of each node — everything about it — come from those connections. Not from something stored inside the node. This one is actually a really important point to get. The shape of the graph around a node IS its data. A node IS its position.
-
-This point is actually really important so let me say it again in a different way. Imagine someone asks you for the time. You actually don't know the time yourself, so you check your phone, which checks with some satellite in the sky, which gives you an answer that depends on YOUR location. The point is you don't know it yourself, and where you are changes the answer. All thanks to nerds maintaining spacetime clocks in the sky.
-
-### The Graph Grows. That's Time.
-
-Time isn't a river. Time isn't a dimension you move through. Time is **new nodes being born into the graph.**
-
-At each tick, new events come into existence. New nodes are born because of what happened before them — the stuff happening along the edges produces new events. That birth IS one tick of time. No new nodes = no time. More nodes being born = more time passing.
-
-Again in plain English: you have a family tree. Two people get together in the dark of night and an event unfolds that 9 months later leads to a new node in the family tree. To drive the point home again — no node in your family tree needs to store "parent." We can just look at the position and figure out if someone is a parent. They are a parent if there are people below them. Just like you could look at any org chart or pyramid scheme and guess who is making the big bucks.
-
-@fig:graph-growing
-Three panels side by side. Panel 1 "TICK 1": small graph with 4 green
-nodes and 1 new purple node being born with edges to existing nodes.
-Panel 2 "TICK 2": previous purple node now green (it was demanded by
-a neighbor), 2 new purple nodes being born. Panel 3 "TICK 3": previous
-purple nodes now green, 3 new purple nodes being born. Node counts:
-5, 7, 10. Arrow below: "More graph → more new nodes → accelerating
-growth."
-
----
-
-The graph grows. Each tick, new nodes (purple, pending) are born with edges to existing committed nodes (green). More graph → more new nodes → accelerating growth. This IS the expansion of the universe.
+Your reality is the surface tension of a vast graph. Every event that ever happened is underneath, holding up the present moment. You live on the edge — the frontier — the thin layer where new events are being born. Spacetime is the surface of the ocean. The graph is everything below it.
 @/fig
 
-### How Changes Spread
+### Our Computers Already Do This
 
-When something changes at node A, the change doesn't instantly affect the whole graph. It spreads outward — one connection per tick. That rate is C. The speed of light.
+Here's the part that should make you trust this a little more. We already build systems that work exactly like this. Every day.
+
+Your computer doesn't evaluate things randomly. It follows the shape of the graph. When you open a spreadsheet and change cell A1, the spreadsheet doesn't update every cell at once. It follows the dependencies. B1 depends on A1, so B1 updates first. D1 depends on B1 and C1, so D1 waits for both. The order of evaluation isn't programmed in — it falls out of the shape of the graph.
+
+The internet works the same way. When your phone loads a webpage, the data doesn't teleport. It hops through routers. Each router looks at the graph of connections and sends the packet along the cheapest path. That routing — cheapest path through a graph — is literally how your packets get from a server in Virginia to your phone. No one programmed the route. The shape of the network determines it.
+
+@fig:call-stack-pressure
+Whiteboard style. Three panels side by side. Left labeled "SPREADSHEET": cells A1→B1→C1→D1 with arrows showing dependency order, D1 waiting for its inputs. Center labeled "INTERNET ROUTING": five router nodes connected by lines with numbers (hop costs), a highlighted cheapest path from source to destination curving around an expensive node. Right labeled "THE UNIVERSE": the same routing diagram but with a dense cluster of nodes in the center labeled "MASS" and the cheapest path curving around it — identical shape to the internet routing panel. Below all three: "Same principle. Same math. The rules aren't coded in — they come from the shape."
+
+A spreadsheet evaluates in dependency order. The internet routes along cheapest paths. The universe does the same thing. Nobody programmed gravity. The shape of the graph produces it.
+@/fig
+
+This is important. The rules aren't hard-coded in. There is no line of code that says "gravity pulls things down." There is no routing table that says "send packets this way." There is no spreadsheet engine that says "evaluate D1 last." The behavior emerges from the structure. The shape of the graph determines what happens.
+
+Call stacks work the same way. When your computer runs a program that calls a function that calls another function, each call adds depth. The deeper the call stack, the more work is trapped before results can flow back out. Dense call stacks create evaluation pressure — the system has to resolve the deepest functions before it can move forward.
+
+@fig:stack-depth-creates-pressure
+Whiteboard style. A pyramid/inverted triangle. At the top, wide: "YOUR PROGRAM — waiting for an answer." Below it, narrower layers labeled "function A calls function B" → "function B calls function C" → "function C calls function D" → at the very bottom, the deepest point: "D resolves first." Arrows flowing back upward as results propagate out. Right side annotation: "Depth = trapped computation. More depth = more pressure. Sound familiar?" Below the pyramid: "This is a call stack. This is also what mass looks like in the graph."
+
+A call stack traps computation. The deeper the stack, the more work must resolve before results flow outward. Mass does the same thing — a dense loop is a deep call stack. Gravity is the pressure that depth creates.
+@/fig
+
+@style:insight
+You don't need to take my word for any of this. Your own computer already proves the principle. Spreadsheets evaluate in dependency order. The internet routes around expensive paths. Call stacks trap computation and create pressure. None of these behaviors are programmed in — they all emerge from the shape of the graph. The universe does the same thing. We just never noticed because we were inside it.
+@/style
+
+### The Speed Limit
+
+When something happens at a node, that change doesn't instantly affect the whole graph. It spreads outward — one connection at a time. That rate is C. The speed of light.
+
+Not the speed of light specifically — the speed of anything. The speed of cause and effect. The speed that information can travel. Light moves at that speed because it's the simplest possible pattern — nothing to slow it down.
 
 @fig:propagation-at-c
-3-panel walkthrough. Panel 1 "TICK 0": center node orange/starred
-(change happened here), all neighbors gray. Panel 2 "TICK 1": center
-node green (committed), immediate neighbors orange/starred (just
-reached), outer nodes still gray. Panel 3 "TICK 2": center and first
-ring green, second ring orange/starred, outer nodes gray. Legend:
-orange star = "just reached", green = "already knows", gray = "doesn't
-know yet." Bottom: "1 hop per tick. That's C."
+Whiteboard style. Three panels left to right labeled "TICK 0," "TICK 1," "TICK 2." Each shows a grid of dots. In TICK 0: one center dot is orange/starred — "change happens here." All other dots gray. In TICK 1: center dot green (committed), its immediate neighbors orange/starred (just reached), outer dots still gray. In TICK 2: center and first ring green, second ring orange/starred, outer dots gray. Below: "1 hop per tick. That's C. Gray dots don't know yet."
 
----
-
-A change spreads outward at 1 connection per tick. At tick 0, only the source knows. At tick 1, its neighbors know. At tick 2, the next ring knows. Gray nodes haven't heard yet. That spread rate is C.
+A change spreads outward at one connection per tick. The gray dots haven't heard yet. There's no group text. No instant announcement. Information travels locally, one hop at a time. That's why nothing goes faster than light — there's no mechanism to skip connections.
 @/fig
-
-Think about it like gossip. You tell your neighbor. Your neighbor tells their neighbor. The gray nodes at tick 1 **do not know** the change happened. The information hasn't reached them yet. There's no group text. No global announcement. Information travels locally, through connections, at C. That's why nothing travels faster than light — there's literally no mechanism for it. There's no way to skip connections.
-
-### What Is a Particle?
-
-If every node is a spacetime event, what's an electron? What's a photon?
-
-A particle can't be a single node — nodes are events, and events don't persist. You don't persist. Every moment you are a new event. A particle is a **pattern**. A stable shape that reproduces itself as the graph grows. As new nodes are born, the pattern keeps going. The particle IS the pattern.
-
-Think of a wave in the ocean. The water doesn't travel across the ocean — the pattern does. Same idea.
-
-@fig:particle-is-pattern
-Three snapshots left-to-right showing a small cluster of 4-5 nodes in
-a distinctive triangular pattern. "TICK 1", "TICK 2", "TICK 3". Pattern
-maintains same internal structure but moves through the graph. Old
-positions faded gray, new positions purple. Below: photon shown as
-simplest pattern (single node chain, 1 hop/tick, orange) labeled
-"Photon: simplest. 1 hop/tick = C." Next to it: massive particle as
-complex cluster (red) with internal edges, labeled "Massive: complex.
-Internal steps → slower than C."
-
----
-
-A photon is the simplest pattern — 1 hop per tick = C. A massive particle has internal structure — multiple steps to reproduce, so it propagates slower. Mass is pattern complexity.
-@/fig
-
-A photon is the simplest pattern. One hop per tick. Nothing complicated to reproduce. That's the fastest anything can move — C.
-
-A massive particle is more complex. It has internal structure that takes multiple steps to reproduce itself. Those steps "cost" ticks, so the pattern advances slower than C. **Mass is pattern complexity.** The heavier something is, the more complicated its pattern. An elephant has a more complicated pattern than a photon. Controversial, I know.
-
-### Values From Shape Alone
-
-Can a graph produce meaningful values without storing anything? Watch what happens when a node's value depends on its depth. Depth 2: leaf returns 1. Depth 3: new irreducible structure → 2 (prime). Depth 4: recombines depth 2 → composite. Depth 5: another irreducible structure → 3 (prime).
-
-@fig:primes-from-topology
-Three columns showing graphs at different depths. Left "DEPTH 2":
-simple parent-child, result 1. Center "DEPTH 3": parent with two
-children, result 2. Label: "Prime. Irreducible." Right "DEPTH 5":
-tree that can't decompose, result 3. Label: "Prime." Between 2 and 3,
-small "DEPTH 4" showing composite. Bottom: "Primes aren't stored.
-They emerge from topology."
-
----
-
-Primes emerge from topology. No values stored anywhere. The structure IS the value.
-@/fig
-
-The node stores nothing. The structure IS the value. This is just an illustration, not a proof — but it shows that pure structure can generate non-trivial mathematical objects. Shape alone can carry information.
 
 @style:insight
-No physics designed in. Just a growing graph with connections. And we got something that looks like time (graph growth), a speed limit (changes spread at C), mass (pattern complexity), and edges that carry information along them. All from pure structure. But we haven't gotten to the good part yet.
+The speed of light isn't about light. It's the speed that changes spread through the graph — one connection per tick. Light moves at that speed because it's the simplest pattern. There's nothing to slow it down.
 @/style
 
 ---
 
-## Chapter 3: "Wait. This IS Spacetime."
+## Chapter 3: How It Works
 
-### You Already Accept the Rules
+### Mass Is a Loop That Won't Stop
 
-Here's the thing. You already accept that the universe has rules. You accept that nothing moves faster than light. You accept that energy is conserved. You accept that light always takes the fastest path — that's Fermat's principle, known since the 1600s. Nobody asks "what enforces these rules?" They're just properties of the structure.
+If dots are events, what is a particle? What is an electron? What is you?
 
-The universe already optimizes. Light already takes the shortest path. Particles already follow the cheapest route. There are already rules being applied. I'm not adding rules. I'm saying the rules have a structure, and that structure is a graph.
+A particle can't be a single dot — dots are events, and events don't persist. Every moment you are a new event. So a particle must be a pattern. A shape in the graph that reproduces itself as new dots are born, tick after tick.
 
-You already accept something even stranger. You accept that there's a thing called "spacetime" and it's a "fabric" and it "curves." Every physics textbook says this. Einstein told us this in 1915. But here's the question nobody ever answers:
+Think of a wave in the ocean. The water doesn't travel across the ocean. The pattern does.
 
-**What IS the fabric? What is the thing that curves?**
+Now there are two kinds of patterns.
 
-John Archibald Wheeler — the guy who named black holes — gave us the most famous summary of general relativity: "Matter tells spacetime how to curve, and spacetime tells matter how to move." Beautiful sentence. But it dodges the question. What IS spacetime? What is it made of?
+Simple patterns travel in a straight line. One hop per tick. No internal structure to maintain. A photon is this — the simplest possible propagating pattern. Maximum speed. C.
 
-I'm saying it's a graph. The nodes are events. The edges are connections. The density of the graph IS the curvature. And if that's even close to right, then 110 years of general relativity research just became our instruction manual.
+Complex patterns have an internal loop. A cycle. A shape that has to go around the full circle before it can step forward. Those internal traversals cost ticks. So the pattern moves slower than C.
 
-### You Already Use This Model
+That internal loop — that self-sustaining cycle — is mass.
 
-Here's the part that made me think I might not be completely insane.
+@fig:mass-as-loop
+Whiteboard style. Two diagrams side by side. Left labeled "PHOTON (massless)": a simple chain of orange dots connected by arrows in a straight line, each dot one hop from the last. Label: "straight line — 1 hop per tick — speed C." Right labeled "MASSIVE PARTICLE": a cluster of red dots arranged in a circle with arrows going around the loop, and a separate arrow showing the whole cluster moving forward slowly. Label: "must complete the full loop before stepping forward — slower than C." Below right diagram: "The loop IS the mass. More loops = heavier particle."
 
-We already build systems that work exactly like this. Spreadsheets. When you change cell A1, B1 updates, then C1 updates. They don't all update at the same time. They update in order — whatever depends on what. If two cells don't depend on each other, they can update in any order. If one depends on the other, it has to wait.
-
-@fig:spreadsheet-is-a-graph
-Three panels showing spreadsheet cells evaluating in dependency order.
-Panel 1: A1=5 (blue, changed), B1/C1/D1 gray. Panel 2: B1=10 and
-C1=6 (both green, parallel). D1 gray. Panel 3: D1=16 (green, last).
-Arrow: "A1 → B1 and C1 in parallel → D1 last."
-
----
-
-Change A1 and the update cascades forward. B1 and C1 in parallel. D1 waits for both. That's topological ordering. The universe does the same thing.
+A photon is a straight line through the graph — maximum speed. A massive particle is a self-sustaining loop — it has to go around the full cycle before it can move forward. The loop is the mass.
 @/fig
 
-No preferred order between independent cells = no preferred frame = **special relativity for free**. Einstein's whole thing about "there's no special viewpoint in the universe"? That falls straight out of this. If two things don't depend on each other, there's no fact about which one "happens first."
-
-And here's the spreadsheet detail that matters for everything that follows: if a cell has a formula that references another cell, and that referenced cell hasn't been computed yet — what does the spreadsheet do? It waits. It doesn't guess. It doesn't make something up. It **waits for the input to arrive**, and then it computes.
-
-Remember that. It's the whole punchline.
-
-### Causal Density
-
-A massive object has a complex pattern — lots of internal structure. That creates a **dense region** of the graph. Think of it like a crowded city versus the empty desert. More stuff packed together = more connections = denser graph.
-
-Plot that density across a region. What shape do you get?
-
-@fig:causal-density-mountain
-Horizontal row of nodes (denser/more interconnected subgraph in center,
-labeled "MASS"). Below each node, vertical bar whose height = causal
-density. Mountain shape — tallest at center, tapering at edges.
-Amber/orange. Labels: "sparse" at edges, "DENSE" at peak.
-
----
-
-Plot causal density and you get a mountain. Densest where mass is. Sparse at the edges.
-@/fig
-
-The dense region creates a well. Paths through it take more hops. Paths around it take fewer.
-
-@fig:density-is-spacetime-curvature
-Same data as causal-density-mountain but inverted. Mountain flipped to
-well. Grid of lines ("spacetime fabric") draped over it, curving into
-well at center, flat at edges — like classic spacetime diagrams. Labels:
-"INVERT" → "THIS IS SPACETIME CURVATURE."
-
----
-
-Flip the density profile and drape a fabric over it. That's the spacetime diagram from your physics textbook. Causal density IS spacetime curvature.
-@/fig
-
-You're looking at the diagram from every physics textbook ever printed.
-
-@fig:same-thing-different-notation
-Side-by-side. Left: inverted causal density with curving paths. Label:
-"GRAPH MODEL." Right: classic GR rubber-sheet diagram. Label: "GENERAL
-RELATIVITY." Equals sign between. Below: "Same thing. Different
-notation. 110 years of research. Our map."
-
----
-
-Same thing. Different notation. 110 years of research. Our map.
-@/fig
-
-**This IS spacetime.**
-
-Around here I realized something that took me embarrassingly long to see. This graph I'd been staring at — physicists already had a name for it. They call it spacetime. They've been studying it for 110 years. They call it a "fabric." They draw diagrams of it curving. The question was always just: what IS the fabric? What is the thing that curves?
-
-It's a graph. And if I'm right — or even close — then 110 years of general relativity research just became our instruction manual.
+Not a property stored somewhere. Not a number on a tag. A loop. A shape. A pattern that keeps reproducing itself because the edges keep pointing back into the cycle. The particle persists because the structure is self-reinforcing. Destroy the loop and the particle ceases to exist.
 
 @style:insight
-The causal density of a growing graph IS spacetime. The density profile IS spacetime curvature. "Matter tells spacetime how to curve, and spacetime tells matter how to move" — John Archibald Wheeler. Beautiful. But what IS spacetime? Nobody ever said. It's a graph. And 110 years of general relativity just became our instruction manual.
+Mass is not a property. It is a self-sustaining loop — a pattern that cycles through itself every tick. The heavier the particle, the more complex the loop, the more internal steps required, the slower it moves.
 @/style
 
-So let's use the map.
+@style:physics-card:Mass and the Standard Model
+In loop quantum gravity, particles correspond to topological features of the graph — persistent structures in the evolving geometry. We're making the same claim: different particles are different loop topologies. The particle zoo might be a complete catalogue of loop structures the graph can sustain. Unstable topologies decay into simpler ones. Particle decay is a loop that can't maintain itself unwinding into simpler structures.
+@/style
 
----
+### E = mc² — Finally Making Sense
 
-## Chapter 4: General Relativity, Translated
+You've seen the equation. You've nodded at it. You almost certainly don't know what it actually means.
 
-### Gravity
+Here's what it means in the graph.
+
+You have a massive particle — a self-sustaining loop. Every tick, the graph traverses the whole cycle just to produce the next state. All that internal cycling is deferred work. The loop keeps the computation trapped, going around and around, not firing outward.
+
+Now annihilate the particle. Destroy the loop.
+
+@fig:emc2-the-walk
+Whiteboard style. A single image showing the "bidirectional walk" of energy in a massive particle. Left side: a loop of red nodes with arrows cycling clockwise. Two arrows are highlighted and labeled. Arrow going DOWN into the loop: "c — the rate changes propagate through the graph (1 hop per tick)." Arrow going AROUND the loop back UP: "c — the internal cycling rate of the loop (1 cycle per tick)." Between them, a multiplication sign. Label: "c × c = c². One factor for how fast things spread. One factor for how fast the loop cycles. That's why c is SQUARED." Below: "Every tick, the loop pays BOTH costs — propagation AND cycling. The total trapped energy scales with both."
+
+Why is c squared? Because two things are happening at once. Changes spread through the graph at c — that's one factor. The loop cycles internally at c — that's the second factor. The total energy trapped in the loop scales with both rates multiplied together. c² isn't mysterious. It's a walk down into the loop and a walk back out.
+@/fig
+
+@fig:loop-unwinding
+Whiteboard style. Two panels with a large arrow between them labeled "ANNIHILATION." Left panel: a circular loop of red dots with arrows going around it, labeled "mass — trapped computation cycling inward." Right panel: the same dots now arranged as straight arrows radiating outward in all directions from a center point, labeled "energy — computation released outward at C." Below the arrow: "E = mc² is this. The loop unwinds. Trapped cycles become outward propagation."
+
+Mass is a loop — computation cycling inward. Energy is what happens when the loop collapses and all that deferred work fires outward at once. An atomic bomb is a loop unwinding.
+@/fig
+
+* **m** is the depth of the loop — how many steps to complete one full cycle
+* **c²** is the propagation cost paid twice: once for moving through the graph, once for the internal cycling rate
+* **E** is every deferred internal step, released at once, propagating outward at C
+
+Mass-energy equivalence is the conversion of looped computation into linear propagation.
+
+@style:insight
+E=mc² means: energy is what you get when a self-sustaining loop collapses into a straight line. The mass was trapped computation. The explosion is that computation released.
+@/style
+
+### Gravity — The Tax You Can't Avoid
 
 @style:mystery
-Gravity is weird. A suspicious kind of weird. Three clues:
+Three clues that something is off about gravity:
 
-**1.** You can shield every other force — EM, strong, weak. Nobody has ever shielded gravity.
-
-**2.** Einstein's equivalence principle: no experiment can distinguish gravity from acceleration.
-
-**3.** Physicists hunted the graviton for decades. Never found one. Maybe gravity isn't a force at all.
+1. You can shield every other force. Radiation — lead. Electromagnetic fields — Faraday cage. Gravity — nothing. Not once, anywhere, ever.
+2. Einstein showed gravity and acceleration are identical. Standing on Earth feels exactly the same as accelerating in a rocket at 9.8 m/s². Why would a force feel the same as motion?
+3. Physicists have hunted the graviton — the particle that carries the gravitational force — for nearly a hundred years. Never found one.
 @/style
 
-Einstein told us gravity is geometry, not a force — that was 1915. What he didn't say is what the geometry IS. We're saying it's density. Dense regions of the graph = more hops to get through. The shortest path curves around dense regions. That curve? That's gravity. It's not pulling you. You're just taking the cheapest route through a crowded part of the graph.
+Three clues. One answer.
 
-@fig:routing-pressure
-Two panels. Left "UNIFORM DENSITY": uniform grid, straight path A to B.
-Right "MASS PRESENT": center cluster amber/orange with cross-connections
-labeled "HIGH CAUSAL DENSITY." Path A to B curves around it. Label:
-"Cheapest path bends. That bend is gravity."
+Gravity isn't a force. It's the shape of the computation.
 
----
+A massive particle is a dense loop — lots of internal steps, lots of connections, a complex region of the graph. That density makes paths through it expensive. More hops to traverse. Meanwhile, paths around it are cheaper.
 
-High causal density creates routing pressure. Cheapest paths bend around the dense zone. That bend is gravity.
+At each tick, the next state follows the cheapest available path. Not because anything is choosing — because that's how graphs evaluate. Like water finding the path of least resistance.
+
+Dense region = expensive paths through it = cheap paths curve around it. Objects following those cheap paths appear to curve toward the mass. That curve is gravity.
+
+@fig:gravity-routing
+Whiteboard style. Two panels. Left labeled "EMPTY SPACE": a uniform grid of dots, a straight arrow from point A to point B cutting directly across. Label: "cheapest path = straight line." Right labeled "MASS PRESENT": same grid but center region has a dense cluster of orange/gold dots with many cross-connections labeled "HIGH DENSITY — expensive." The path from A to B now curves around the dense cluster. Label: "cheapest path bends around the dense region. That bend IS gravity."
+
+High density makes straight paths expensive. The graph routes around it. That curve is gravity. You are not being pulled — you are following the cheapest path through a graph that is denser near massive objects.
 @/fig
 
-And just like that, three mysteries dissolve:
+The three mysteries dissolve:
 
-**Why you can't shield gravity.** Gravity isn't a signal traveling through the graph. It IS the density of the graph itself. You can't reduce density by adding more stuff. A shield is more nodes, more connections, MORE density. Every attempt to block gravity adds to the structure causing it. It's like trying to reduce traffic by adding more cars.
+**Why you can't shield gravity:** Gravity isn't a signal traveling through the graph — it IS the density of the graph. Adding a shield adds more nodes, more connections, more density. Every attempt to block gravity makes it stronger. Like trying to reduce traffic by adding more cars.
 
-**Why gravity equals acceleration.** Accelerating creates dense local structure. Dense structure = curvature = gravity. Same thing. That's why you feel the same force standing on Earth as you would accelerating in a rocket — both are the same kind of density.
+**Why gravity equals acceleration:** Accelerating rapidly creates dense local structure. Dense structure IS curvature IS gravity. Same thing, same cause.
 
-**Why there's no graviton.** "What particle carries gravity?" is like asking "What particle carries the shape of a triangle?" There is no particle. It IS the structure.
-
-@style:physics-card:Black Holes
-A black hole is a region of such extreme density that no path leads outward. All paths lead further in. Not because something blocks you — the graph just doesn't connect outward anymore. Unlike the standard model's "singularity" (an infinite point), in our version the density is high but finite. This is the one prediction that differs from standard physics. Though most theories that treat spacetime as discrete predict this too.
-@/style
+**Why there's no graviton:** "What particle carries gravity?" is like asking "what particle carries the shape of a triangle?" There is no particle. Gravity IS the structure.
 
 @style:insight
-If gravity is density rather than a force, three mysteries dissolve: you can't shield it (adding a shield adds density), you can't tell it from acceleration (both create dense local structure), and there's no graviton (it's a property of the graph, not a particle).
+Gravity is routing pressure. Dense topology makes some paths expensive. The graph follows the cheapest path. That curve is gravity. You can't shield it because a shield is more density — you're making it worse.
 @/style
 
-### Time, Space & the Speed of Light
+@style:physics-card:Time Dilation
+Near a massive object, the graph is denser. More hops per cycle means a pattern's internal clock runs slower. This isn't theoretical — GPS satellites orbit where Earth's gravity is weaker. Their clocks run faster than clocks on the surface by 45 microseconds per day. Without correcting for this, your GPS would drift 10 km per day. Your phone depends on this being real.
+@/style
 
-Gravity was the headline act. Here's the rest of the lineup — fast, because we need to get to quantum mechanics.
+### The Rest of the Lineup
 
-| What you've been told                                            | What it is in the graph                                                                                                                                      |
-| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Space** is a box things happen inside                          | Space is the graph's shape. Distance is hop count. Minimum distance is one hop. That's the Planck length: one pixel.                                         |
-| **Time** is a dimension you move through                         | Time is new nodes being born. No births = no time.                                                                                                           |
-| **The speed of light** is how fast light goes                    | C is the rate changes spread: 1 connection per tick. Light is just the simplest pattern, so it moves at the max rate. Nothing to do with light specifically. |
-| **Time dilation** is mysterious                                  | Near mass, density is higher. More hops per cycle. Pattern's clock runs slower. That's it.                                                                   |
-| **Nothing can go faster than light** because... reasons?         | There is no mechanism to skip connections. 1 hop per tick is all there is.                                                                                   |
-| **What would happen if you stopped time?** Nothing would change. | Exactly. No new nodes born = no change = no time. Time IS change.                                                                                            |
-| **The arrow of time** points forward because... entropy?         | The graph grows. You can't un-birth a node. Growth is irreversible.                                                                                          |
-| **The universe is expanding** and accelerating                   | More nodes = more places for new nodes. Growth proportional to size = accelerating expansion.                                                                |
-
-@fig:time-dilation
-Two horizontal timelines. Top "FAR FROM MASS — sparse": many ticks
-closely spaced (1, 2, 3, 4, 5). Bottom "NEAR MASS — dense": same
-span, fewer wider-spaced ticks (1... 2... 3...). Label: "Same span.
-More growth far from mass. Less near mass. Time dilation."
+| Mystery | What you were told | What it is in the graph |
+| --- | --- | --- |
+| Speed of light | How fast light goes | Rate changes spread: 1 hop per tick. Nothing special about light — it's the simplest pattern |
+| Space | A box things happen inside | The graph's shape. Distance = hop count. Minimum distance = 1 hop = Planck length |
+| Time | A dimension you move through | New nodes being born. No births = no time |
+| Time dilation | Mysterious relativistic effect | Near mass: denser graph, more hops per cycle, pattern's clock runs slower |
+| Arrow of time | Something about entropy | You can't un-birth a node. Growth is irreversible |
+| Universe expanding | Space stretching somehow | More nodes = more places for new nodes. Growth feeds growth |
+| Black holes | Infinite singularity | Density so extreme no path leads outward. Not infinite — just one-way |
 
 ---
 
-Near mass: denser region, more constraints per growth cycle, fewer ticks. That's time dilation.
+## Chapter 4: The Punchline
+
+Everything so far has been setup. This is what it was building to.
+
+### The Spreadsheet
+
+Before quantum mechanics, think about spreadsheets for one second.
+
+Cell D1 has a formula: =B1+C1. Now imagine B1 references another cell that hasn't been calculated yet. What does the spreadsheet do?
+
+It waits. It doesn't guess. It doesn't make something up. It sits there, pending, until the input arrives. Then — and only then — does it compute.
+
+@fig:spreadsheet-waiting
+Whiteboard style. A simple spreadsheet grid. Cell A1 contains "5" (blue, just changed). Cell B1 contains "=A1×2" with a yellow pending symbol — not yet calculated. Cell C1 contains "=B1+3" with a yellow pending symbol — waiting for B1. Arrow chain: A1 → B1 → C1. Label: "C1 can't compute until B1 computes. B1 can't compute until A1 is ready. They wait. In order." Below: "Remember this. It's the whole punchline."
+
+A spreadsheet cell with a formula waits for its inputs before computing. It doesn't guess. It doesn't have a value until something needs it. The universe works exactly the same way.
 @/fig
 
-Near mass, density is higher. A pattern needs more hops to reproduce itself each cycle. The pattern's clock runs slower. This isn't theoretical — GPS satellites orbit where density is lower. Their clocks run faster. 45 microseconds per day. Without correcting for this, your GPS would drift 10 km per day. Your phone depends on this being real.
+Remember that. We're coming back to it.
 
-Moving fast eats up steps too. A fast pattern spends its steps on moving rather than on reproducing its internal structure. At C, ALL steps go to moving. Zero internal reproduction. Zero time. That's why a photon experiences no time. It's moving at the speed limit, so it has no "ticks" left over for anything else.
+### A Node Is Born
 
-@style:physics-card:The Muon
-Cosmic ray muons should decay 660m above Earth. They reach the ground. At 99.5% of C, almost all their steps go to motion. Their internal clock barely ticks. Confirmed experimentally.
-@/style
+Picture the very edge of the graph. The frontier. A new event has just been born — a new dot, produced by the events before it. It exists. It has parents. It has lines connecting it to the past.
+
+But nothing is downstream of it yet. Nothing needs its value as an input.
+
+So what does it do?
+
+It waits.
+
+The value does not exist yet. Not "exists but is hidden." Not "exists but we can't measure it." The function hasn't been called. Nobody asked. There is no answer right now because right now nothing needs one.
+
+That is not a measurement problem. That is not philosophy. That is just how every spreadsheet on Earth works.
+
+### The Consumer
+
+What forces a node to finally commit — to produce a value?
+
+A consumer — any downstream event that needs this node's value to compute its own. The moment something new is born that requires this node's answer as an input, the node must commit. It sums all the inputs that have arrived along its edges at that moment, runs the computation, produces a value, turns green. Immutable. Forever.
+
+This is important so let me say what it isn't.
+
+It isn't consciousness. It isn't a physicist in a lab coat. It isn't observation in any mystical sense. It is simply any event in the graph that needs the answer. A detector is a consumer. Your eyeball is a consumer. A neighboring atom is a consumer.
+
+@fig:pending-node-no-consumer
+Whiteboard style. Center: one large purple dashed circle labeled "PENDING — no value yet." Three blue arrows approaching from different directions, each with a distance label: "7 ticks away," "4 ticks away," "9 ticks away." To the right of the node: a large empty circle with a line through it, labeled "no consumer." The node has a speech bubble: "I exist. Inputs are coming. But nobody has asked me anything yet."
+
+A pending node exists. Inputs are on their way at C. But nothing downstream needs its value yet — so no value exists. Not hidden. Not unknown. Just not yet asked.
+@/fig
+
+@fig:consumer-arrives
+Whiteboard style. Same purple node from previous figure, but now: two of the blue arrows have arrived and connected (labeled "E1 ✓ arrived" and "E2 ✓ arrived" in green). One arrow labeled "E3 — still traveling" is shown as a dashed red line that hasn't reached the node yet. A new orange node appears to the right labeled "CONSUMER — needs the value." An orange arrow points FROM the consumer TO the pending node labeled "demands value." The pending node is now shown turning green with a checkmark, labeled "commits now — value = f(E1, E2)." The red E3 arrow has a label: "too late — joins next layer."
+
+A consumer appears. The node must commit immediately — with whatever inputs have arrived. E3 was still traveling. Too late. The value is produced from E1 and E2 only. Immutable. E3 influences the next layer of the graph instead.
+@/fig
+
+### The Event Cone
+
+You may have heard of the light cone — all events that could ever reach you given the speed of light. Your entire possible past.
+
+The event cone is different. Narrower. It's not everything that could reach you. It's everything that reaches you before your consumer arrives.
+
+Same node. Consumer arrives early — small event cone, fewer inputs, one result. Consumer arrives late — larger event cone, more inputs, different result. Same dot in the graph. Different consumer timing. Different reality.
+
+@fig:event-cone
+Whiteboard style. A large, detailed diagram. Center-right: one purple pending node labeled "NODE P." Three events approaching from the left at different distances:
+
+- EVENT E1 (green, arrived): directly connected to P with a solid green line. Label: "1 tick away — ARRIVED ✓"
+- EVENT E2 (orange, close): 2 hops from P, shown as a dot with a dashed orange arrow. Label: "2 ticks away — almost there"
+- EVENT E3 (red, far): 5 hops from P, shown as a distant dot with a long dashed red arrow. Label: "5 ticks away — still traveling"
+
+Below node P, a new orange node labeled "CONSUMER — arrives in 3 ticks."
+
+A large dashed triangle emanates backward from P (the light cone) labeled "LIGHT CONE — everything that COULD ever reach P."
+
+Inside the light cone, a smaller shaded region labeled "EVENT CONE — what actually reaches P before the consumer asks." E1 is inside the event cone. E2 is right at the edge (will barely make it). E3 is outside the event cone (won't arrive in time).
+
+Below: "The light cone is the theoretical maximum. The event cone is what actually counts. When you're asked determines what's real."
+
+The event cone is what actually makes it in before commitment. The light cone is what could have made it given infinite time. Consumer timing determines which inputs count. Same node, different consumer, different value.
+@/fig
+
+@fig:event-cone-superposition
+Whiteboard style. Two side-by-side panels showing the SAME node P in the SAME graph, but with different consumer timing.
+
+LEFT PANEL — "LATE CONSUMER (tick 8)":
+Node P shown with a large green shaded event cone. Four green arrows have arrived and connected: E1, E2, E3, E4. Consumer appears at tick 8. Label: "Event cone = large. 4 inputs arrived. Value = f(E1, E2, E3, E4)." Result shown as a green committed node.
+
+RIGHT PANEL — "EARLY CONSUMER (tick 3)":
+Same node P but with a smaller orange shaded event cone. Only E1 has arrived. E2 is 1 hop away (didn't make it). E3 and E4 shown far off with X marks. Consumer appears at tick 3. Label: "Event cone = small. 1 input arrived. Value = f(E1) — DIFFERENT RESULT." Result shown as a green committed node with a different value.
+
+Below both panels: "Same node. Same graph. Different consumer timing. Different reality. This is quantum mechanics."
+
+Same node. Same graph. Different consumer timing. Different reality. The event cone determines which version of reality you get.
+@/fig
 
 @style:insight
-Space is the graph's shape. Distance is hop count. Time is growth — near mass, denser structure means slower growth. The speed of light isn't about light. It's the speed of change. The arrow is irreversible growth. The universe expands because the graph grows itself.
+The event cone is narrower than the light cone. It's not what could reach you — it's what reaches you before you're forced to answer. When you're asked determines what counts.
 @/style
 
-That's the large-scale picture. Everything Einstein described — gravity, curvature, time dilation — is the committed structure. The green nodes. The definite graph. The part of reality that's already been computed.
+### Superposition — The Cheque in the Mail
 
-But remember the purple nodes? The ones at the frontier? The ones that haven't been asked yet? That's where things get strange.
+This is where people's eyes glaze over. "The particle is in two places at once." "The cat is both alive and dead." Let me try something different.
 
----
+Imagine you're broke. Zero dollars in your bank account. Now two things happen at once: you write someone a cheque for $20, and your buddy says he owes you $40 and wire transfers it to you.
 
-## Chapter 5: Quantum Mechanics, Translated
+You don't know how long the wire transfer will take to arrive. One day? Three days? You have no idea.
 
-@style:mystery
-Three things that shouldn't be possible:
+Right now, that cheque you wrote? It might bounce. Or it might clear. You genuinely don't know. You're in superposition. Not because the universe is being weird — because events are still in transit and you don't know the order they'll land in.
 
-**1.** Looking at something changes it. Not bumping it, not touching it — looking.
+Now your friend goes to cash the cheque. That's the consumer. The bank has to commit — does the $40 arrive first, or does the cheque hit an empty account?
 
-**2.** Two particles, separated by the width of the universe, give correlated answers instantly.
+If the wire lands first: cheque clears. If the cheque hits first: it bounces. The events were always going to unfold exactly the way they did. The wire was always going to take however many days it took. The cheque was always going to be cashed when it was cashed. Nothing random happened. You just didn't know the order because you couldn't see the whole system.
 
-**3.** Erasing information after the fact changes a result that already happened.
+That's quantum mechanics. A node with inputs still in transit, being asked for its value before everything arrives.
 
-These are real. Confirmed experimentally, repeatedly, for decades. Standard physics says shut up and calculate. Let's do better.
-@/style
+### Two Very Different Neighborhoods
 
-### The Punchline (I Can't Wait Any Longer)
+Now look at two very different parts of the graph.
 
-Everything so far has been building to this. The graph grows. Changes spread at C. Edges carry operations that transform what travels along them. Properties come from position. All of that was setup. Here's the payoff.
+@fig:busy-vs-quiet
+Whiteboard style. Two panels side by side separated by a dashed vertical line. Left panel labeled "BUSY NEIGHBORHOOD — your chair, your face, matter": densely packed green dots with many connecting lines, arrows everywhere, every dot immediately connected to consumers. Small label on a few nodes: "asked instantly." Right panel labeled "QUIET FRONTIER — a lone particle, deep space": sparse purple dashed circles far apart, a few faint blue arrows slowly approaching from a distance, no consumers visible. Small label on nodes: "still waiting..." Bottom of left: "Zero quantum behavior. Everything commits immediately." Bottom of right: "This IS the quantum world. Not different laws — just nobody asking yet."
 
-Imagine a node at the very edge of the graph. The frontier. It was just born — some event produced it. It has one parent: the event that created it. It exists. It's a real node in the graph.
-
-But nothing is downstream of it. Nothing needs its value as an input. Nothing is asking it to produce the next state. So what does it do?
-
-Remember the spreadsheet? A cell with a formula that references another cell that hasn't been computed yet? The spreadsheet waits.
-
-**Same thing.** The node sits there. Pending.
-
-Not because something is stopping it. Because there's nothing to compute yet. A node's value is the result of combining all the stuff that's reached it along its parent paths — and that only happens when something downstream needs the result. No demand, no computation. The value doesn't exist yet. Not "exists but hidden." Not "exists but unknown." **Does not exist.** The function hasn't been called. Nobody asked.
-
-Now watch what happens over the next few ticks.
-
-@fig:tick-by-tick-walkthrough
-Six panels arranged in sequence, each showing the same region of the
-graph at a different tick.
-
-**TICK 1**: A small graph. Green committed nodes A, B, C on the left
-(already resolved). Purple node P on the right, just born, with one
-parent edge from A. Label on P: "PENDING. 1 parent. No one needs my
-value." Far left, a red node E with a red arrow showing its direction
-of propagation. Red dashed line shows the path E will travel: 4 hops
-to reach P. Label: "Event E: 4 hops away. Propagating at C."
-
-**TICK 2**: Same graph, one tick later. E has moved 1 hop closer (now
-3 hops from P). P is still purple, still 1 parent. A new node F is
-born near P from node B — but F doesn't need P's
-value. F needs B's value (B is committed, so F can compute). Label on
-P: "Still pending. Still 1 parent. F didn't need me."
-
-**TICK 3**: E is now 2 hops from P. P still purple, still 1 parent.
-Nothing has changed for P. The graph is growing around it but nothing
-has asked.
-
-**TICK 4**: E is 1 hop from P. Almost there. P still pending, still 1
-parent.
-
-**TICK 5**: E arrives. A new edge connects E to P. P now has 2
-parents: A and E. But P is STILL pending — nothing downstream needs
-its value yet. Label: "2 parents now. Still no one asking."
-
-**TICK 6 (SCENARIO A — LATE COMMITMENT)**: A new event G is born.
-G needs P's value to compute its own.
-NOW P must commit. P combines the stuff from both parent paths
-(from A and from E). Value = f(A, E). GREEN checkmark. P turns green.
-Label: "G demanded P's value. P commits with BOTH parents. Value = f(A, E)."
-
-**TICK 6 (SCENARIO B — EARLY COMMITMENT)**: Same graph, but G was
-born at TICK 3 instead of TICK 6. At Tick 3, G needs P's value. P
-must commit NOW. But E hasn't arrived yet (still 2 hops away). P
-commits with only 1 parent: A. Value = f(A). P turns green. E arrives
-at Tick 5 — but P is already committed. Too late. Label: "G demanded
-P's value EARLY. P commits with only 1 parent. Value = f(A). DIFFERENT
-from f(A, E)."
-
-Bottom annotation in large text: "Same node. Same graph. Different
-timing of demand. Different inputs at commitment. Different value."
-
----
-
-Watch P through six ticks. In Scenario A (late commitment), nothing demands P's value until Tick 6 — by then, event E has arrived and P commits with 2 parents: value = f(A, E). In Scenario B (early commitment), an event G needs P's value at Tick 3 — before E arrives. P commits with 1 parent: value = f(A). Same node. Different timing. Different result.
+Busy neighborhoods commit everything instantly — no node stays pending long enough for anything interesting to accumulate. The quiet frontier has nodes that can wait millions of ticks, inputs slowly arriving. That waiting IS quantum behavior.
 @/fig
 
-That's the whole thing. That's the mechanism. Not metaphor. Not analogy. This is what happens in a growing graph where information spreads at a finite speed. When you ask matters because it determines what's arrived.
+Deep inside the graph — in dense matter — every node is surrounded by neighbors constantly needing answers. A node barely exists before something asks it. It commits with whatever inputs it has. That's the classical world. Your chair. Your face.
 
-### Why It's a Wave
+Out at the frontier, nodes are sparse. A node can sit there, pending, for millions of ticks. Events from distant regions keep arriving slowly. The node keeps accumulating inputs. But nothing nearby needs its value yet.
 
-Now put yourself inside the graph. You are node P. It's Tick 2.
-
-You have 1 parent. You know about A. That's it. Event E is out there — 3 hops away, heading toward you at C — but you can't see it. Information travels at 1 connection per tick. E is 3 ticks away from you. You have no way to know it's coming.
-
-From your perspective, you have 1 parent. Maybe more events are heading your way. Maybe not. You don't know. You CAN'T know. Not because of some philosophical limitation — because information is physically not available to you. It hasn't arrived. It's like asking someone what's in a package that's still in the mail. It's not that they're hiding the answer. The package isn't there yet.
-
-So what are you, right now?
-
-You're a function waiting to be called, and you don't know all your inputs yet. The set of possible values you could have — depending on which events arrive before you're asked to commit — IS the probability distribution. That IS the wave function.
-
-The "wave" isn't a physical thing oscillating in space. It's the mathematical description of: "given what we know about the graph right now, here are the possible values this node could produce when asked, and here are their likelihoods based on what might still be on its way."
-
-Here's what makes this different from "hidden variables" — from the idea that the value already exists and we just can't see it. **The value does not exist.** The computation has not been triggered. There is no answer to "what is P's value at Tick 2" because the function that produces the value hasn't been called, and the inputs to that function haven't finished arriving. The value will be PRODUCED when someone asks. But right now? Right now it's an unanswered question with incomplete inputs. That's all a wave function is.
-
-**The graph itself is deterministic.** If you could zoom out and see the entire graph — every node, every edge, every event on its way — you would know exactly which events will reach P and exactly when. You would know what P's value will be. But P can't see the whole graph. You can't see the whole graph. Nobody inside the system can. Information travels at C. So from inside, it's probability.
-
-Deterministic structure. Probabilistic experience. Same thing, two perspectives.
-
-@fig:the-frontier
-A wide graph. Left side: dense green committed nodes. Center: green
-committed nodes becoming sparser. Right side: the frontier — a line
-of purple pending nodes at the growing edge. Some purple nodes have
-red events approaching them from various directions (some 1 hop away,
-some 3 hops, some 5 hops). Some purple nodes have NO red events
-approaching. Label for the green region: "COMMITTED. Definite. This is
-what you experience." Label for the purple frontier: "PENDING. Inputs
-still arriving. This is what quantum mechanics describes." Label for
-the red events: "Events in transit at C. Determined but not yet
-arrived." Additional annotation at bottom: "From inside the graph,
-purple nodes can't see the red events coming. That's why they're
-probabilities — not because reality is random, but because they can't
-see far enough."
-
----
-
-Green: committed reality. Purple: the frontier — nodes that haven't been asked yet. Red: events heading toward them at C. From inside, the purple nodes can't see the red events coming. That's why they look like probabilities. Not because reality is random — because information hasn't arrived yet.
-@/fig
-
-### What Forces Commitment?
-
-This is worth spelling out because it's the part that makes everything else work.
-
-A node commits when a new event is born that needs this node's value as an input. That's it. The "consumer" isn't a special entity. It's not consciousness. It's not a measurement device specifically. It's just any event in the graph that needs this node's answer to compute its own. Like a spreadsheet cell that says "=B1+C1" — the moment that cell is born, B1 and C1 need to have answers.
-
-Think about what this means for different neighborhoods in the graph:
-
-**Quiet neighborhoods** (deep space, the frontier): Very few events around. Nothing nearby needs this node's value. So the node stays pending. Ticks pass. Events come in from distant regions. The node accumulates more and more inputs over time. This is where quantum behavior lives — in the quiet parts of the graph where nodes have time to wait.
-
-**Busy neighborhoods** (matter, detectors, your eyeball): Enormous numbers of events packed together. Every node is surrounded by neighbors that constantly need answers. A node barely exists for a tick before something needs it. It commits almost instantly with whatever inputs it has — which is usually everything that's ever going to arrive, because in a busy neighborhood, everything is close.
-
-That's the difference between quantum and classical. Not different laws. Not different physics. Different neighborhoods in the same graph. Quiet neighborhoods where nodes have time to accumulate inputs. Busy neighborhoods where everything gets asked immediately.
-
-A particle in a vacuum can stay pending for millions of ticks — events from distant regions slowly adding to its inputs. The same particle hits a detector — a wall of busy structure — and every node in the detector is asking its neighbors for answers every tick. The pending node gets asked. Whatever inputs it had at that moment, those are what it computes with. The function runs. The value is produced.
-
-### Why Measurement Changes the Result
-
-Now you can see exactly why looking at something changes it.
-
-A detector, a screen, your eyeball — these are busy neighborhoods. Trillions of nodes, all interconnected, all constantly spawning new events that need answers from their neighbors.
-
-When a busy region encounters a pending node, some event in the busy region needs the pending node's value. The node must commit — it must produce an answer so the next event can compute. Its inputs freeze. Whatever has arrived at that moment is what it computes with.
-
-If an event was still on its way — one hop away, about to connect — too bad. The demand came first. The inputs froze without it. The value is produced. It's different from what it would have been if the event had arrived.
-
-**That's why measurement changes the result.** Not because observation is magical. Not because consciousness collapses wave functions. Because the act of measurement is an interaction — a new event being born that needs this node's value — and that interaction forced the node to commit with an incomplete set of inputs.
-
-The detector didn't change what the node IS. It changed WHEN the node was asked. And when you ask determines which inputs have arrived. Different inputs → different computation → different value.
-
-### Superposition: Waiting for Inputs
-
-So what IS superposition? It's not a particle in two places. It's not a magical cloud of possibility. It's a node whose inputs are still accumulating. Multiple events are on their way through the graph. Different combinations of arrivals would produce different values. The space of possible values IS the superposition.
-
-When nothing asks for the value, the inputs keep growing. More events connect. The space of possible values narrows. Eventually an interaction demands a commit — a new event needs this node's value — and the function runs with whatever inputs are present.
-
-If you're a physicist, you write this down as a wave function — a mathematical description of all possible values weighted by what could still arrive. That's useful. That's correct. But it's describing an unanswered question with incomplete inputs, not a particle in two places.
-
-### The Double Slit
-
-@style:mystery
-Fire particles at two slits. Interference pattern appears. Add a detector: pattern vanishes.
-@/style
-
-A photon is emitted. It's the simplest pattern — events spreading through the graph at C. The graph beyond the slits has frontier nodes, all pending. Events from the photon reach these frontier nodes through BOTH slits — because both slits are open paths in the graph.
-
-A screen node at position P accumulates inputs from both paths. Path A through slit A: 7 hops total. Path B through slit B: 9 hops total. Each hop along the way applied a transformation — think of it like a game of telephone where each person changes the message in a specific way. The transformations build up along each path.
-
-When the screen asks for P's value, it computes with BOTH paths as inputs. The transformations from path A and path B combine at P. At this screen position, with these path lengths, the transformations reinforce each other — bright spot. At a neighboring position, different path lengths mean the transformations partially cancel — dim spot. Across the whole screen: a pattern of bright and dark bands. Interference.
-
-@fig:double-slit-accumulation
-TOP PANEL — "NO DETECTOR: both paths contribute."
-Source (green) → events propagate through Slit A and Slit B → both
-sets of events reach screen node P (purple). P has parents from BOTH
-paths. Labels show hop counts: "Path A: 7 hops" and "Path B: 9 hops."
-P commits with both → value depends on both paths → interference.
-Screen shows alternating bright/dark bands.
-
-BOTTOM PANEL — "DETECTOR AT SLIT A: early commitment changes the graph."
-Same setup, but dense blue cluster (DETECTOR) at Slit A. Detector
-demands values from nodes at Slit A, committing them early. The
-detector produces NEW events (it clicked, it recorded) — these
-propagate forward with ADDITIONAL transformations from the detector.
-Screen node P still receives both paths, but Path A now carries extra
-transformations from the detector. The extra transformations break the
-relationship. No systematic reinforcement/cancellation. No pattern.
-Screen shows uniform distribution.
-
----
-
-No detector: both paths contribute their transformations to the screen. They reinforce and cancel at different positions → interference. With detector: the detector added new transformations to path A, breaking the relationship between the two paths → no interference.
-@/fig
-
-**Why the detector kills interference:** The detector didn't block path B. Both paths still reach the screen. But the detector added nodes and edges to the graph at slit A. Those extra nodes carry extra transformations. Path A's contribution to the screen now includes the detector's stuff. The precise relationship between path A and path B — the relationship that made them reinforce at some points and cancel at others — is broken. Different transformations → no systematic pattern → no interference.
-
-The detector changed the graph. Different graph → different structure → different values. Not philosophy. Data structures.
-
-### Entanglement: Shared History
-
-When two particles interact, their patterns share history — common ancestor nodes, shared transformations. Then they separate. Particle A goes left. Particle B goes right.
-
-Both are pending. Both have input sets that include their shared history. Think of it like identical twins raised in the same house — even after they move to different cities, they share a foundation that produces correlated behavior. Not because they're texting each other. Because they came from the same place.
-
-@fig:entanglement
-Bottom: gold node "SHARED SOURCE." Middle: two events emerge —
-particle A (left) and particle B (right). Transformations from source
-to A labeled "O_A." Transformations from source to B labeled "O_B."
-A and B propagate outward. Both pending (purple). Dotted gold line
-connects them through their shared source: "topologically connected
-through shared causal past." Gray dashed line: "spatially far apart."
-Annotations: "Measure A → commitment. Value determined by O_A applied
-to shared source." and "Measure B → commitment. Value determined by
-O_B applied to SAME shared source." Bottom: "Correlated because they
-compute from the same input. No signal needed."
-
----
-
-Shared history. Spatially far apart. Structurally connected. Both pending. Measure one — its value reflects the shared source. Measure the other — same source, correlated value. No signal. The correlation was baked in from the moment they interacted.
-@/fig
-
-Detector A asks for particle A's value. The computation traces back through A's inputs, including the shared source. A's value is computed.
-
-Later, detector B asks for particle B's value. The computation traces back through B's inputs — including the SAME shared source. B's value is computed from the same root.
-
-The values are correlated. Not because A sent a message to B. Because both values come from the same ancestor, through complementary transformations. The correlation was baked into the graph the moment the particles interacted.
-
-**Why no faster-than-light communication?** You can't choose what A's value will be — it's determined by the full structure. You can only learn it. The correlation is real but uncontrollable. Sealed envelopes from the same deck.
-
-For the physics nerds: Bell's theorem says "sealed envelopes" (predetermined values) can't explain the strength of quantum correlations. Bell proved this in 1964. Our response: the values aren't predetermined in the envelopes. The STRUCTURE is predetermined, and the structure produces values only at commitment through its transformations. Whether structural correlations count as "local hidden variables" in Bell's sense is an open question. We're making a structural argument, not a loophole claim. This gap deserves serious math we don't have.
-
-### The Quantum Eraser
-
-This is the payoff. If you get this one, you get the whole thing.
-
-Standard double-slit setup with a detector at slit A. Detector fires. No interference — just like we described. Dots are recorded on the screen. Experiment over.
-
-Now add a twist. Between the detector and the screen, insert an **eraser**. The eraser applies transformations that are the **exact reverse** of the detector's transformations.
-
-@fig:quantum-eraser-graph
-Causal chain from left to right:
-
-SOURCE (green) → events propagate through SLIT A and SLIT B.
-
-SLIT A path: events reach DETECTOR (blue dense cluster). Detector
-applies transformations O_D to the path (labeled "O_D: encodes which-path
-info"). Events continue past detector toward screen.
-
-Between detector and screen: ERASER device (gold). Eraser applies
-transformations O_D⁻¹ (labeled "O_D⁻¹: reverse of detector transformations").
-
-Mathematical annotation beside the path: "O_D then O_D⁻¹ = Identity.
-Net effect: as if detector transformations never happened."
-
-SLIT B path: events propagate straight to screen (no detector, no
-eraser). Transformations unmodified.
-
-SCREEN (dense green): receives both paths. Path A (net: identity after
-eraser cancelled detector). Path B (unchanged). Net transformations at
-screen = same as if no detector existed. Interference pattern shown
-on screen.
-
-Bottom annotation: "Nothing was erased. Nothing traveled back in time.
-The eraser applied the reverse transformation. The detector's information
-was algebraically cancelled before reaching the screen. Function
-composition."
-
----
-
-The detector applied transformations O_D. The eraser applied O_D⁻¹. Combined: identity. The screen sees the same net transformations as if no detector existed. Interference returns. No time travel. Function composition.
-@/fig
-
-**Nothing was erased.** The detector event is real. It happened. It's a green node in the graph. But its informational content — the transformations that encoded "which slit did it come through" — was algebraically cancelled by the eraser's reverse transformations. The screen, when it computes, sees a structure where the which-path information has been cancelled out.
-
-Think of it like this: someone whispers a secret into the telephone chain (the detector), then someone else whispers the exact opposite (the eraser). By the time the message reaches the end, the secret has cancelled itself out. The whisper happened. It's real. But its content was undone.
-
-The "delayed choice" version: the eraser decision is made AFTER the screen records its dots. How? In the actual experiment, you sort the screen data by the eraser's outcome. The subsets with the eraser active show interference. The subsets without it don't. The full unsorted data never shows interference.
-
-In graph terms: every screen node committed with a specific structure. That structure includes or excludes the eraser's transformations depending on the connections. When you sort by eraser outcome, you're grouping screen nodes by which structure they committed with. Same structure as undetected → interference. Different structure → no interference.
-
-"After the fact" is an illusion. In the graph, there's no "before" and "after" — only causal past and causal future. The eraser's transformations are in the causal past of the relevant screen events, regardless of when in lab time the eraser was set. A graph being evaluated in the order the graph says it should be.
-
-The most confusing experiment in physics, and it's just: do this transformation, then do the reverse. They cancel. That's it.
-
-### Why Basketballs Don't Do This
-
-You are 10²⁶ atoms. Every atom is a dense knot of structure. Every atom is asking its neighbors "what are you?" every tick — thermal vibrations, electromagnetic interactions, nuclear forces. Ten trillion neighbors all saying: "I need your value to produce MY next event."
-
-Nothing stays pending. Every frontier node commits almost instantly because some neighbor asks within a tick or two. No time for distant events to arrive. No time for inputs to accumulate anything interesting. It's like trying to have a moment of quiet reflection in Times Square. Somebody is always yelling at you.
-
-That's decoherence. Not a mystery. Not a separate law. Busy regions of the graph where nothing stays pending long enough for the quantum stuff to matter.
-
-The chair you're sitting in right now — every atom in it is being asked by every neighboring atom continuously. When you go to sit on it, there is a zero percent chance it won't be there. Not a very small chance. **Zero.** The interaction commits the graph. The result is definite. Every time.
+This is where quantum behavior lives. Not because different laws apply. Because nothing is asking.
 
 @style:insight
-Quantum mechanics is what nodes look like when they haven't been asked yet. The "wave" is an unanswered question with inputs still on their way — the value doesn't exist yet because nobody asked. Measurement is a demand that forces commitment — freezing whatever inputs have arrived at that moment. The detector changes the graph. The eraser cancels the detector's transformations. Entanglement is shared history. Decoherence is busy regions that demand answers too fast for anything interesting to accumulate. Not spooky. Not mysterious. A graph where information travels at C and nodes can't see what's coming.
+Quantum mechanics is what nodes look like when nothing has asked yet. Classical physics is what nodes look like when everything is always asking. Not different laws. Different neighborhoods.
 @/style
 
----
+@style:physics-card:Decoherence
+In standard quantum mechanics, "decoherence" explains why quantum behavior vanishes at large scales — a quantum system entangled with a large environment rapidly loses its superposition. In graph terms: large environments are busy neighborhoods with consumers at every tick. Nothing stays pending. The math gives the same answer. We're just describing the structure rather than the statistics.
+@/style
 
-## What's Novel Here (Honestly)
+### Now Apply It
 
-The idea that spacetime is discrete isn't new. Causal set theory, loop quantum gravity, Wolfram's project — serious people have been here for decades. As I said: those guys BALL.
+**The double slit.** A photon spreads through the graph — both slits are open paths. The screen node accumulates inputs from both paths simultaneously. Different path lengths mean different accumulated transformations. When the screen demands a value, both paths combine. They reinforce at some positions, cancel at others. Interference pattern.
 
-So what does this add? Honestly — not much. But maybe three things:
+Add a detector at one slit. The detector is a consumer. It forces early commitment at slit A before those nodes reach the screen. The precise relationship between path A and path B at the screen is broken. No interference. The detector didn't block anything — it became a consumer and forced early commitment.
 
-**1. Pending nodes with accumulating inputs.** The specific mechanism for quantum behavior: nodes exist but their inputs aren't finalized. Events are still on their way at C. Commitment freezes the inputs and computes the value. This dissolves the measurement problem into graph structure without needing a separate "collapse" rule. Standard decoherence theory describes the same phenomenon statistically. We're describing it structurally — what the node IS, not just what the math predicts.
+@style:physics-card:The Double-Slit Experiment
+The double-slit experiment fires particles one at a time at a barrier with two slits. Each particle lands at a single point on the screen behind it. But over thousands of particles, the dots form an interference pattern — bands of high and low density — as if each particle went through both slits simultaneously and interfered with itself. Place a detector at one slit to learn which slit the particle went through, and the interference pattern vanishes. The particle behaves as if it only went through one slit. This has been confirmed with photons, electrons, atoms, and even large molecules.
+@/style
 
-**2. The quantum eraser as function composition.** Detector transformations composed with eraser transformations equal identity. No retrocausality. No mystical erasure. Algebraic cancellation. This is the clearest explanation we've found for the most confusing experiment in physics.
+**Entanglement.** Two particles share a common causal history — common ancestor nodes, shared transformations. They separate. Both pending. When you measure particle A, it commits — tracing back through shared ancestors. When you measure particle B later, it commits — same shared ancestors, complementary transformations. Correlated values. Not because A sent a message to B. Because both computations trace back to the same root.
 
-**3. The unification framing.** General relativity describes the committed structure — green nodes, definite graph, density, curvature. Quantum mechanics describes the frontier — purple nodes, pending, inputs on their way. They look incompatible because one describes finished computation and the other describes computation in progress. A framing, not a proof — but one that makes the divide feel like a perspective difference rather than a fundamental contradiction.
+No faster-than-light communication. Sealed envelopes from the same deck.
 
-Beyond that? The pedagogical synthesis. The ingredients aren't mine. The recipe might be useful.
+**The quantum eraser.** Detector applies transformation O. Eraser applies O⁻¹. Combined: identity. Net effect at the screen: as if the detector never happened. Interference returns. Nothing was erased. Nothing traveled backward in time. Two transformations that cancel each other out. The most confusing experiment in physics is function composition.
+
+@style:physics-card:The Quantum Eraser
+In the quantum eraser experiment, a detector at one slit records which-path information, destroying the interference pattern. Then an "eraser" device downstream removes that which-path information. When you filter the data by the eraser's outcome, the interference pattern reappears — even though the detector already fired. Standard physics says the eraser "retroactively" changed the result. In graph terms: the detector applied a transformation, the eraser applied the reverse transformation. They cancel. The screen sees the same structure as if no detector existed. Nothing was erased. Nothing went backward in time. Two operations that compose to identity.
+@/style
+
+**Why basketballs don't do this.** You are 10²⁶ atoms. Every atom has consumers. Every tick, something needs its value. Nothing stays pending. Nothing accumulates interesting inputs. The graph commits everything immediately. Zero quantum behavior. Not a small chance. Zero.
+
+@style:insight
+Quantum mechanics is not spooky. It is not random. It is a node that hasn't been asked yet — a function with inputs still on their way. The moment something needs its value, it commits, and it was always going to give exactly that answer. You just couldn't see it coming because you're inside the graph.
+@/style
+
+@style:physics-card:Bell's Theorem
+Bell's theorem (1964) proves no theory of local hidden variables can reproduce quantum correlations — specifically the violation of the CHSH inequality. Our response: node values are not predetermined hidden variables. Values don't exist until commitment. But the graph's topological structure — including shared causal history — is predetermined back to initial conditions. Whether this constitutes "local hidden variables" in Bell's sense is genuinely open. Reproducing the exact cos²(θ) correlation function from graph topology is unsolved. It is the single most important quantitative gap in the framework.
+@/style
 
 ---
 
 ## Honest Gaps
 
-A framework that claims to explain everything without identifying where it breaks is a story, not a theory. So here's where it breaks.
+A framework that claims to explain everything without saying where it breaks is a story, not a theory. Here's where this one breaks.
 
 @style:gap-box
-**Can't derive Einstein's field equations.** The number one problem. Without the derivation, this is analogy, not theory.
+**Can't derive Einstein's field equations.** The number one problem. Gravity as routing pressure is a compelling analogy. Without the derivation, that's all it is.
 
-**Lorentz invariance on a discrete structure.** Must explain why Lorentz symmetry holds to ~10⁻²⁰ precision. Causal set theory has a partial answer. We don't. Possibly the single biggest threat.
+**Lorentz invariance on a discrete graph.** A graph has preferred directions. Explaining why physics looks the same from all angles — to 10⁻²⁰ precision — requires a solution borrowed from causal set theory that we haven't derived ourselves.
 
-**Analogy vs. derivation.** This framework reasons by structural analogy, not math. Physics requires equations.
+**The Born rule.** Why does quantum probability equal |amplitude|²? If values are determined by structure, what produces exactly that distribution? Unsolved in most interpretations of QM. We're in good company but that's not an excuse.
 
-**The Born rule.** Why does probability equal |amplitude|²? If the node's value is determined by structure, what produces the specific probability distribution we observe? Unsolved in most interpretations of QM. We're in company but that's not an excuse.
+**Bell's theorem — quantitatively.** The structural argument is made. The specific numbers are not derived.
 
-**Bell's theorem.** We claim structural correlations through shared history might not count as "local hidden variables." That's a structural argument, not a proof. It needs serious math.
+**Edge algebra unspecified.** What are the operations on the edges? What symmetry group governs them? This is the gap between a framework and a theory.
 
-**Edge operations.** What are they? How do they compose? What is the specific algebra? Unspecified. This is the gap between a framework and a theory.
-
-**Can't explain specific particles.** Which patterns are stable and why?
-
-**Growth dynamics.** What determines where new nodes are born? Unsolved in causal set theory too.
-
-**Superdeterminism.** If everything is determined by the full structure, then measurement choices are also determined. This is a philosophical position, not a proven one. 't Hooft holds it. Most physicists are uncomfortable with it. We're agnostic.
-
-**No unique experimental prediction.** The no-singularity prediction is shared by most discrete spacetime theories.
+Any of the first three could be fatal. That's fine. You lay out what you think, you say where it breaks, and you hope someone smarter gets further.
 @/style
-
-Any of the first three could be fatal. That's fine. You lay out what you think, you lay out where it breaks, and you hope someone smarter gets further.
 
 ---
 
-## The Thesis
+## Wild Guesses (Clearly Labeled)
+
+If the framework is right — or even close — it might hint at some open questions. These are guesses. Enjoyable ones, but guesses.
+
+**The Standard Model as a topology catalogue.** If particles are stable loops, the particle zoo might be a complete catalogue of loop structures the graph can sustain. Only certain topologies are self-reinforcing. The rest decay.
+
+**Dark matter as a loop without a consumer.** What if dark matter is a self-sustaining loop that never adjoins with the visible graph? It has loop depth — mass — so it exerts routing pressure — gravitational effect. But it never commits into the layer we can detect. Not invisible matter. Matter that exists in the graph but has no consumer in our region. This would explain why dark matter has gravitational effects but no electromagnetic interaction, no direct detection, no visible output.
+
+**Dark energy as frontier pressure.** The graph keeps growing. New nodes create new places for newer nodes. The routing pressure at the expanding frontier — the tendency of the graph to propagate outward — might be what we're measuring as dark energy. Not a force. Just the graph growing, with the edges always being the last place anything committed.
+
+@style:physics-card:Prior Work
+These speculations are not new territory. Causal set theory, loop quantum gravity, and Wolfram's hypergraph project have all explored discrete spacetime with similar implications. The Standard Model symmetry groups would need to emerge from the graph's topological update rules — partial progress exists in loop quantum gravity's spin network approach. All three require serious mathematics before they become more than suggestive analogies.
+@/style
+
+---
+
+## Technical Summary
 
 @style:callout-blue
-**GL Theory in Six Rules**
+**GL Theory — Technical Position**
 
-Everything above builds on one idea: spacetime is a graph, and the way events spread through it — and when they're forced to commit — explains both gravity and quantum mechanics.
+**Core claim:** Spacetime is a directed acyclic graph of discrete events connected by causal edges carrying algebraic operations. The graph grows: new nodes are produced as functions of their causal predecessors. Node values are lazily evaluated — computed only when demanded by a downstream consumer. Causal influence propagates at C: 1 edge per tick maximum.
 
-1. **Nodes are spacetime events.** Each node is a where-and-when. The graph IS spacetime.
-2. **Edges are causal order with operations.** An edge from A to B means A can influence B. Each edge carries a transformation — an operation applied to whatever travels along it.
-3. **The graph grows.** New nodes are born as the product of edge operations on existing nodes. That growth IS time.
-4. **Properties come from position.** A node stores nothing. Its properties are determined by its connections — all the paths reaching it and the transformations along those paths. Structure is the data.
-5. **Changes spread at C.** Causal influence travels at most 1 edge per tick. That rate is the speed of light.
-6. **Nodes are pending until demanded.** A newly born node exists, but its properties aren't computed until an interaction requires them. While pending, its input set continues to accumulate as more events arrive. Commitment freezes the inputs and computes the value.
+**Relationship to existing work:** This framework operates within discrete quantum gravity — specifically causal set theory (Bombelli et al., 1987), loop quantum gravity (Rovelli, Smolin), and Wolfram's hypergraph physics project (2020). The novel framing, if any: nodes as thunks, commitment as forced evaluation by a consumer, the event cone as distinct from the light cone. Standard decoherence theory describes the quantum-to-classical transition statistically; this describes it structurally.
 
-The punchline: general relativity describes the committed structure of this graph — the shape, the density, the curvature. Quantum mechanics describes nodes that haven't been asked yet — functions with inputs still on their way. They look incompatible because they're describing different states of the same thing.
+**Six axioms:**
+
+1. Nodes are spacetime events — where and when, inseparable.
+2. Edges are directed causal relations carrying operations.
+3. The graph grows: new nodes born as edge-operation products of existing nodes. Growth IS time.
+4. Node properties derive entirely from position — from paths reaching the node and their accumulated operations. Nodes store nothing.
+5. Changes propagate at C: 1 edge per tick maximum.
+6. Nodes are pending until demanded by a consumer. Pending nodes accumulate inputs as events arrive. Commitment freezes inputs and computes the value. Committed nodes are immutable.
+
+**What is claimed vs derived:**
+
+* Time dilation: qualitatively derived from causal density. Consistent with GPS corrections to ~10⁻¹⁰. Not formally derived.
+* Gravity as routing pressure: structurally consistent with GR geodesics. Einstein field equations not derived.
+* Mass as stable topology: consistent with LQG particle models. No mass spectrum derived.
+* Measurement as consumer-forced commitment: structurally reproduces decoherence. Born rule not derived.
+* Bell correlations via shared causal topology: structural argument only. cos²(θ) not derived.
+
+**Potentially fatal gaps:** (1) Einstein field equations not derived. (2) Lorentz invariance requires Poisson sprinkling from causal set theory — borrowed, not derived. (3) Born rule unexplained. (4) Edge algebra unspecified. (5) Bell inequality violation not quantitatively reproduced.
+
+**Prior art to engage:** Causal set theory · Loop quantum gravity · Wolfram physics project · Penrose spin networks · 't Hooft cellular automaton interpretation.
 @/style
 
 ---
@@ -814,24 +533,24 @@ The punchline: general relativity describes the committed structure of this grap
 
 It started with a question: is anything actually random?
 
-If there is no truly random thing in the universe — if it only appears random to ME — then everything that is going to happen is already predetermined. Not that I can't make a choice. But that the choice I will make depends on the sum of all my life experiences, which is a result of my parents' sum of experiences, and so on and so on.
+If there is no truly random thing in the universe — if it only appears random to me — then everything that is going to happen is already predetermined. Not that I can't make a choice. But that the choice I will make depends on the sum of all my life experiences, which depends on my parents' experiences, which depends on theirs, all the way back.
 
 So I set out to hunt for random. Surely it's somewhere.
 
-That led me to the quantum world — where some say the double-slit experiment is random. The moment I saw that, I hated the idea of it instantly. I am a conscious being. I have free will. But hearing that my photon is fucking randomly appearing somewhere? That didn't sit right. "God doesn't play dice." So here we are.
+That led me to the quantum world — where some say the double-slit experiment is random. The moment I saw that, I hated the idea instantly. I am a conscious being. I have free will. Hearing that my photon is randomly appearing somewhere? That didn't sit right. "God doesn't play dice." So here we are.
 
-And it's not just photons. Quantum mechanics says that when you sit down on your chair there is a non-zero chance it won't be there. The probability is vanishingly small but it's not zero. And people just kind of accept this.
+And it's not just photons. Quantum mechanics says that when you sit down on your chair there is a non-zero chance it won't be there. The probability is vanishingly small. And people just kind of accept this.
 
-I'm saying fuck no.
+I'm saying no.
 
-In my version, the second you go to interact with that chair, every atom in that chair is demanded by every atom around it. The graph commits. The result is definite. Zero percent chance you go through it. Not a very small chance. Zero. Interaction means commitment. Committed results are real. Every time.
+In my version, the second you go to sit on that chair, every atom in it is demanded by every atom around it. The graph commits. The result is definite. Zero percent chance you go through it. Not a very small chance. Zero. Interaction means commitment. Committed results are real. Every time.
 
-And what about the photon? It wasn't randomly appearing somewhere. It was a function with inputs still on their way. Events were spreading through the graph from every direction, and the photon hadn't been asked yet. When the detector demands its value, the inputs freeze, the transformations combine, and the answer pops out. Determined. The same answer it was always going to give, given the structure. You just couldn't see it coming because you're inside the graph and information travels at C.
+And what about the photon? It wasn't randomly appearing somewhere. It was a function with inputs still on their way. Events were spreading through the graph from every direction, and the photon hadn't been asked yet. When the detector demanded its value, the inputs froze, the transformations combined, and the answer came out. Determined. The same answer it was always going to give, given the structure. You just couldn't see it coming because you're inside the graph and information travels at C.
 
-**I'd rather be Mario than accept random.**
+I'd rather be Mario than accept random.
 
-I don't know what that means for free will. Maybe every choice I make depends on every event that came before it and none of it was random. Maybe the structure that started at the Big Bang fully determines every event that will ever happen, including me typing this sentence. Or maybe there's something in the transformations that introduces genuine randomness and I just haven't found it yet. The framework doesn't tell me which one it is. It just says the graph grows, changes spread at C, nodes accumulate inputs, and interactions force commitment.
+I don't know what that means for free will. Maybe every choice I make depends on every event that came before it and none of it was random. Maybe the structure from the Big Bang fully determines every event that will ever happen, including me typing this sentence. The framework doesn't tell me which one it is. It just says the graph grows, changes spread at C, nodes accumulate inputs, and interactions force commitment.
 
-The odds that any of this is right are as close to zero as something can be. But if even the shape is right — if spacetime really is a graph, if gravity really is density, if quantum mechanics really is what happens when a node hasn't been asked yet — then maybe understanding that helps someone who actually knows what they're doing.
+The odds that any of this is right are as close to zero as something can be. But if even the shape is right — if spacetime really is a graph, if gravity really is routing pressure, if quantum mechanics really is what happens when a node hasn't been asked yet — then maybe that shape helps someone who actually knows what they're doing get a little further.
 
 And if not, at least I finally understand why those guys BALL.
