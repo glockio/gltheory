@@ -5,11 +5,11 @@
 @style:callout-neutral
 @style:verbatim
 
-On the surface this might seem odd, to "ponder the universe" as a hobby. But I'd argue it's actually a well-known fact that the best way to spend ANY amount of time on ANY amount of drugs is to sit back and go **"YO BUT what IF LIKE…"**
+On the surface this might seem odd, to "ponder the universe" as a hobby. But I'd argue it's actually a well-known fact that the best way to spend _ANY_ amount of time on _ANY_ amount of drugs is to sit back and go **"YO BUT what IF LIKE…"**
 
-Now as a warning. I have the type of intelligence that seemingly evaded every test ever created by man. And for the first couple school years teachers and doctors watched my development closely...
+Now as a warning. I have the type of intelligence that seemingly evaded every test ever created by man.
 
-But to quote one of my favorite movies Good Will Hunting, "I can't paint you a picture, I can't hit the ball out of Fenway, and I can't play the piano, but when it comes to wild imaginative theories on a subject I hardly know... I could always just play."
+But to quote Good Will Hunting, "I can't paint you a picture, I can't hit the ball out of Fenway, and I can't play the piano, but when it comes to wild imaginative theories on a subject I hardly know... I could always just play."
 
 I would imagine having a passion for a subject you can't fully grasp is all that is really needed for the seeds of AI psychosis to truly take hold.
 
