@@ -312,24 +312,6 @@ Same node. Same graph. Different consumer timing. Different reality. The event c
 The event cone is narrower than the light cone. It's not what could reach you — it's what reaches you before you're forced to answer. When you're asked determines what counts.
 @/style
 
-### Superposition — The Cheque in the Mail
-
-### Two Very Different Neighborhoods
-
-Now look at two very different parts of the graph.
-
-@fig:busy-vs-quiet
-Whiteboard style. Two panels. Left "BUSY NEIGHBORHOOD": dense green committed nodes, arrows everywhere, labels "asked instantly." Right "QUIET FRONTIER": sparse purple dashed pending nodes with "?" marks, faint dashed arrows approaching, labels "still waiting..." Left bottom: "Every node has consumers. Nothing stays pending. Zero quantum behavior." Right bottom: "No consumers nearby. Inputs accumulating. This IS the quantum world."
-
-Busy neighborhoods commit everything instantly — no node stays pending long enough for anything interesting to accumulate. The quiet frontier has nodes that can wait millions of ticks, inputs slowly arriving. That waiting IS quantum behavior.
-@/fig
-
-Deep inside the graph — in dense matter — every node is surrounded by neighbors constantly needing answers. A node barely exists before something asks it. It commits with whatever inputs it has. That's the classical world. Your chair. Your face.
-
-Out at the frontier, nodes are sparse. A node can sit there, pending, for millions of ticks. Events from distant regions keep arriving slowly. The node keeps accumulating inputs. But nothing nearby needs its value yet.
-
-This is where quantum behavior lives. Not because different laws apply. Because nothing is asking.
-
 @style:insight
 Quantum mechanics is what nodes look like when nothing has asked yet. Classical physics is what nodes look like when everything is always asking. Not different laws. Different neighborhoods.
 @/style
@@ -374,28 +356,6 @@ Quantum mechanics is not spooky. It is not random. It is a node that hasn't been
 Bell's theorem (1964) proves no theory of local hidden variables can reproduce quantum correlations — specifically the violation of the CHSH inequality. Our response: node values are not predetermined hidden variables. Values don't exist until commitment. But the graph's topological structure — including shared causal history — is predetermined back to initial conditions. Whether this constitutes "local hidden variables" in Bell's sense is genuinely open. Reproducing the exact cos²(θ) correlation function from graph topology is unsolved. It is the single most important quantitative gap in the framework.
 @/style
 
----
-
-## Honest Gaps
-
-A framework that claims to explain everything without saying where it breaks is a story, not a theory. Here's where this one breaks.
-
-@style:gap-box
-**Can't derive Einstein's field equations.** The number one problem. Gravity as routing pressure is a compelling analogy. Without the derivation, that's all it is.
-
-**Lorentz invariance on a discrete graph.** A graph has preferred directions. Explaining why physics looks the same from all angles — to 10⁻²⁰ precision — requires a solution borrowed from causal set theory that we haven't derived ourselves.
-
-**The Born rule.** Why does quantum probability equal |amplitude|²? If values are determined by structure, what produces exactly that distribution? Unsolved in most interpretations of QM. We're in good company but that's not an excuse.
-
-**Bell's theorem — quantitatively.** The structural argument is made. The specific numbers are not derived.
-
-**Edge algebra unspecified.** What are the operations on the edges? What symmetry group governs them? This is the gap between a framework and a theory.
-
-Any of the first three could be fatal. That's fine. You lay out what you think, you say where it breaks, and you hope someone smarter gets further.
-@/style
-
----
-
 ## Wild Guesses (Clearly Labeled)
 
 If the framework is right — or even close — it might hint at some open questions. These are guesses. Enjoyable ones, but guesses.
@@ -417,7 +377,7 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 @style:callout-blue
 **GL Theory — Technical Position**
 
-**Core claim:** Spacetime is a directed graph of discrete events connected by causal edges carrying algebraic operations. The causal structure is acyclic — effects cannot precede their causes — but the spatial subgraph may contain cycles. Those cycles are mass. The graph grows: new nodes are produced as functions of their causal predecessors. Node values are lazily evaluated — computed only when demanded by a downstream consumer. Causal influence propagates at C: 1 edge per tick maximum.
+**Core claim:** Spacetime is a directed graph of discrete events connected by causal edges carrying algebraic operations. The causal structure is acyclic — effects cannot precede their causes — but the spatial subgraph may contain self propgating toplogy. Those stable topolgies are mass. The graph grows: new nodes are produced as functions of their causal predecessors. Node values are lazily evaluated — computed only when demanded by a downstream consumer. Causal influence propagates at C: 1 edge per tick maximum.
 
 **Relationship to existing work:** This framework operates within discrete quantum gravity — specifically causal set theory (Bombelli et al., 1987), loop quantum gravity (Rovelli, Smolin), and Wolfram's hypergraph physics project (2020). The novel framing, if any: nodes as thunks, commitment as forced evaluation by a consumer, the event cone as distinct from the light cone. Standard decoherence theory describes the quantum-to-classical transition statistically; this describes it structurally.
 
@@ -445,29 +405,3 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 @/style
 
 ---
-
-## How I Got Here
-
-It started with a question: is anything actually random?
-
-If there is no truly random thing in the universe — if it only appears random to me — then everything that is going to happen is already predetermined. Not that I can't make a choice. But that the choice I will make depends on the sum of all my life experiences, which depends on my parents' experiences, which depends on theirs, all the way back.
-
-So I set out to hunt for random. Surely it's somewhere.
-
-That led me to the quantum world — where some say the double-slit experiment is random. The moment I saw that, I hated the idea instantly. I am a conscious being. I have free will. Hearing that my photon is randomly appearing somewhere? That didn't sit right. "God doesn't play dice." So here we are.
-
-And it's not just photons. Quantum mechanics says that when you sit down on your chair there is a non-zero chance it won't be there. The probability is vanishingly small. And people just kind of accept this.
-
-I'm saying no.
-
-In my version, the second you go to sit on that chair, every atom in it is demanded by every atom around it. The graph commits. The result is definite. Zero percent chance you go through it. Not a very small chance. Zero. Interaction means commitment. Committed results are real. Every time.
-
-And what about the photon? It wasn't randomly appearing somewhere. It was a function with inputs still on their way. Events were spreading through the graph from every direction, and the photon hadn't been asked yet. When the detector demanded its value, the inputs froze, the transformations combined, and the answer came out. Determined. The same answer it was always going to give, given the structure. You just couldn't see it coming because you're inside the graph and information travels at C.
-
-I'd rather be Mario than accept random.
-
-I don't know what that means for free will. Maybe every choice I make depends on every event that came before it and none of it was random. Maybe the structure from the Big Bang fully determines every event that will ever happen, including me typing this sentence. The framework doesn't tell me which one it is. It just says the graph grows, changes spread at C, nodes accumulate inputs, and interactions force commitment.
-
-The odds that any of this is right are as close to zero as something can be. But if even the shape is right — if spacetime really is a graph, if gravity really is routing pressure, if quantum mechanics really is what happens when a node hasn't been asked yet — then maybe that shape helps someone who actually knows what they're doing get a little further.
-
-And if not, at least I finally understand why those guys BALL.
