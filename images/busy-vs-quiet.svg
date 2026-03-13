@@ -1,0 +1,77 @@
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ab" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2a5a2a"/>
+    </marker>
+    <marker id="ap2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#554488"/>
+    </marker>
+    <filter id="gg"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gp"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="720" height="380" fill="#08080f"/>
+
+  <!-- divider -->
+  <line x1="360" y1="10" x2="360" y2="370" stroke="#1e1e38" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- LEFT: busy neighborhood (classical) -->
+  <text x="180" y="32" fill="#447744" font-size="13" text-anchor="middle" font-family="Georgia">BUSY NEIGHBORHOOD</text>
+  <text x="180" y="50" fill="#336633" font-size="11" text-anchor="middle" font-family="Georgia">Your chair. Your face. Matter.</text>
+
+  <!-- dense committed nodes -->
+  <circle cx="80" cy="120" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="140" cy="90" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="200" cy="120" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="140" cy="150" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="80" cy="190" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="200" cy="190" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="140" cy="220" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="80" cy="260" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="200" cy="260" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="260" cy="150" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="260" cy="220" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <circle cx="140" cy="290" r="12" fill="#1a3a1a" stroke="#44cc66" stroke-width="2" filter="url(#gg)"/>
+  <!-- edges dense -->
+  <line x1="92" y1="114" x2="128" y2="98" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="152" y1="96" x2="188" y2="112" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="140" y1="102" x2="140" y2="138" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="92" y1="126" x2="128" y2="142" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="188" y1="126" x2="152" y2="142" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="80" y1="132" x2="80" y2="178" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="200" y1="132" x2="200" y2="178" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="140" y1="162" x2="140" y2="208" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="92" y1="196" x2="128" y2="212" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="188" y1="196" x2="152" y2="212" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="212" y1="156" x2="248" y2="152" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="212" y1="196" x2="248" y2="214" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="80" y1="202" x2="80" y2="248" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="200" y1="202" x2="200" y2="248" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+  <line x1="140" y1="232" x2="140" y2="278" stroke="#2a5a2a" stroke-width="1" marker-end="url(#ab)"/>
+
+  <text x="180" y="336" fill="#44cc66" font-size="12" text-anchor="middle" font-family="Georgia">Every node has consumers.</text>
+  <text x="180" y="354" fill="#336633" font-size="11" text-anchor="middle" font-family="Georgia">Nothing stays pending. Zero quantum behavior.</text>
+
+  <!-- RIGHT: quiet frontier (quantum) -->
+  <text x="540" y="32" fill="#7744aa" font-size="13" text-anchor="middle" font-family="Georgia">QUIET FRONTIER</text>
+  <text x="540" y="50" fill="#553388" font-size="11" text-anchor="middle" font-family="Georgia">Deep space. A lone particle. The quantum world.</text>
+
+  <!-- sparse pending nodes -->
+  <circle cx="420" cy="140" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <text x="420" y="145" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
+  <circle cx="560" cy="180" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <text x="560" y="185" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
+  <circle cx="480" cy="260" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <text x="480" y="265" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
+  <circle cx="640" cy="120" r="18" fill="#1a0a30" stroke="#aa66ff" stroke-width="2" stroke-dasharray="5,3" filter="url(#gp)"/>
+  <text x="640" y="125" fill="#cc99ff" font-size="10" text-anchor="middle" font-family="Georgia">?</text>
+
+  <!-- incoming events heading toward them -->
+  <line x1="390" y1="80" x2="412" y2="126" stroke="#4455aa" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ap2)"/>
+  <line x1="530" y1="240" x2="546" y2="198" stroke="#4455aa" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ap2)"/>
+  <line x1="450" y1="300" x2="468" y2="278" stroke="#4455aa" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#ap2)"/>
+
+  <!-- no consumer symbol -->
+  <text x="540" y="336" fill="#aa66ff" font-size="12" text-anchor="middle" font-family="Georgia">No consumers nearby.</text>
+  <text x="540" y="354" fill="#7744aa" font-size="11" text-anchor="middle" font-family="Georgia">Inputs accumulating. This IS the wave function.</text>
+</svg>
