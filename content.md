@@ -250,110 +250,81 @@ E = mc² is not a conversion. It's an identity. Mass and energy are the same thi
 Why c² and not just c? Dimensional analysis. Energy has units of kg·m²/s². Mass has units of kg. To convert between them you need m²/s² — which is a velocity squared. The speed of light is the only velocity the graph provides (1 hop per tick). So the conversion factor is c². It's not that two things are happening at c. It's that the unit conversion between kilograms and joules happens to require a velocity squared, and the graph only has one velocity to offer.
 @/style
 
-## Chapter 4: There is no random.
-
-Everything so far has been setup. This is what it was building to. This is were I am going to get really fucking weird with it.
-
-### A Node Is Born
-
-Remember that our graph is events, not things, not objects, not particals, events. That means we need to record every event as it happens. And we said that reality is the sum of all the events that came before it. But we have an issue than, not all events arrive or happen at the same time? Some events will happen before others, and the next layer of the graph has to be the sum of all the events that came before it.
-
-Each new layer of the graph is the result of the sum of the previous, IF an event is on its way and WILL reach it before it has is asked to form the next layer or reality, than the event HAS to wait, it can't produce the next layer yet otherwise it would be WRONG. It a fundemtnal feature of how to actually generate the correct next sequence of the graph.
-
-But these events are still being recored in the graph. And our reality is the graph... so how they show up in our reailty. How do you repersent a "maybe"?
-
-Well they do show up, at the really small level and the way they show up as a wave. Physiscts have called this the "proabiluty wave" as it repersents a probaility of distribtuions. This is the moment all of physics broke. This is where people aruged if its truly random. I am going to argue its not random at all, its only pending. This is where you hear things like "many world", "hidden local vairables", "spooky action at distance".
-
-But in our version of the universe, this is how you repersent an event that has not yet been forced to produce reailty. And we have an actaul reason _WHY_ it can't be repersented any other way.
-
-So to explain that lets get to a brand new concept we just inveted we are calling "The Event Cone"
-
-### The Event Cone
-
+Chapter 4: There is no random.
+Everything so far has been setup. This is what it was building to.
+Remember the question that started all of this? Is anything truly random? Nine years ago that question bugged me enough to look into it and I ended up here. So this is where I finally give you my answer.
+A Node Is Born
+Remember that our graph is events, not things, not objects, not particles, events. That means we need to record every event as it happens. And we said that reality is the sum of all the events that came before it.
+But here's the problem. Not all events arrive at the same time. Some events are close. Some are still traveling through the graph at the speed of light. And the next layer of reality has to be the sum of all the events that came before it — so if an event is on its way and WILL arrive in time, the node has to wait for it. It can't produce the next layer yet. It would be wrong.
+Let me show you what this looks like with something you already understand.
+Your brother is expecting a baby today. You're driving to a family function. You know — with absolute certainty — that someone at this function is going to ask: "are you an uncle yet?"
+Right now, driving in, what's the answer?
+It's not yes. It's not no. It's... probably? Maybe? Your brother hasn't called yet. The baby might already be born and you just don't know. Or the baby might not come until tomorrow. You are genuinely in a state where the answer does not exist yet — not because you're hiding it, not because you're confused, but because the event that determines the answer hasn't reached you.
+Now: will they ask before your brother calls? Or will he call before they ask?
+If he calls first — "it's a girl!" — and THEN your aunt asks, the answer is yes. You're an uncle. Committed. Done.
+If your aunt asks first — before the call comes — you have to give an answer with whatever you've got. "Not yet, as far as I know." Different answer. Same you. Same family function. Different timing.
+That right there is quantum mechanics. You are the node. The baby being born is an event traveling toward you. Your aunt asking is the consumer — the thing that forces you to commit to an answer. And the answer you give depends entirely on which events reach you before she asks.
+The events that make it to you in time? We're calling that your event cone.
+Now here is where it gets interesting. Physicists have been studying this "waiting" state for a hundred years. When you look at the really small scale — individual particles, single photons — this state of "pending" shows up in our reality as something very specific. A wave. Physicists call it the probability wave, and it caused an absolute shitstorm that is still raging today. This is the thing that made Einstein say "God does not play dice." This is where you hear "many worlds," "hidden variables," "spooky action at a distance."
+The argument is about whether this wave represents something truly random, or whether there's something underneath determining the outcome.
+I'm saying it's not random. It's pending. And we have an actual reason WHY it can't be represented any other way — because events are still in transit through the graph, and the node hasn't been asked yet.
+The Event Cone
 You may have heard of the light cone — all events that could ever reach you given the speed of light. Your entire possible past.
-
-Well we are going to invent a new concept which we call "the event conne". The event cone is different. Its Narrower. It's not everything that could reach you. It's everything that reaches you before you are forced to create the next layer in the graph above you.
-
-Lets expalin it with an analogy first.
-
+We're introducing a new concept. The event cone. It's narrower. It's not everything that could reach you. It's everything that reaches you before you're forced to commit — before something downstream needs your value.
+Your aunt asking "are you an uncle?" — that's the consumer. Everything that reaches you before she asks — your brother's call, a text from your mum, your sister posting on Instagram — that's your event cone. The events that actually count.
+Now let me deepen this with money, because money makes everything clearer.
 Imagine you're broke. Zero dollars in your bank account. Now two things happen at once: you write someone a cheque for $20, and your buddy says he owes you $40 and wire transfers it to you.
-
 You don't know how long the wire transfer will take to arrive. One day? Three days? You have no idea.
-
 Right now, that cheque you wrote? It might bounce. Or it might clear. You genuinely don't know. You're in superposition. Not because the universe is being weird — because events are still in transit and you don't know the order they'll land in.
-
-Now your friend goes to cash the cheque. That's the consumer. The bank has to commit — does the $40 arrive first, or does the cheque hit an empty account?
-
-If the wire lands first: cheque clears. If the cheque hits first: it bounces. The events were always going to unfold exactly the way they did. The wire was always going to take however many days it took. The cheque was always going to be cashed when it was cashed. Nothing random happened. You just didn't know the order because you couldn't see the whole system. If you were watching this as an outside observer it was obvious to you the whole time what was going to happen. The chain of events was clear.
-
-That's quantum mechanics. A node that has not yet been asked to produce a value, but there IS a set of events that will reach it in time. The events that fall in that time window we are calling "the event cone". Its the sum of all the events that WILL join the node before its asked to make its next layer in the graph. The next layer of reality.
-
-Same node. Consumer arrives early — small event cone, fewer inputs, one result. Consumer arrives late — larger event cone, more inputs, different result. Same dot in the graph. Different consumer timing. Different reality.
-
+Now your friend goes to cash the cheque. That's the consumer — the thing forcing commitment. The bank has to produce an answer. Does the $40 arrive first, or does the cheque hit an empty account?
+If the wire lands first: cheque clears. If the cheque hits first: it bounces. The events were always going to unfold exactly the way they did. The wire was always going to take however many days it took. The cheque was always going to be cashed when it was cashed. Nothing random happened. You just didn't know the order because you couldn't see the whole system. If you were watching this as an outside observer, the chain of events was obvious the whole time.
+That's quantum mechanics. A node with events still in transit, being forced to commit before everything arrives. The set of events that actually make it in time — that's the event cone.
+Same node. Consumer arrives early — small event cone, fewer inputs, one result. Consumer arrives late — larger event cone, more inputs, different result. Same dot in the graph. Different timing. Different reality.
+This is not spooky. This is not philosophical. This is what happens every time your bank processes transactions in a different order.
 @fig:event-cone
 Whiteboard style. Central pending node P (purple dashed). Surrounding graph with events at known distances. E1 (green, 1 tick — arrived ✓), E2 (orange, 3 ticks — approaching), E3 (red, 6 ticks — still traveling). Light gray "light cone" boundary — everything that COULD reach P. Smaller shaded "event cone" — what actually reaches P before consumer asks (arrives in 4 ticks). Below: "The light cone is the theoretical maximum. The event cone is what actually counts."
-
 The event cone is what actually makes it in before commitment. The light cone is what could have made it given infinite time. Consumer timing determines which inputs count. Same node, different consumer, different value.
 @/fig
-
 @fig:event-cone-traced
 Whiteboard style. Same layout as previous figure. Consumer C appears (arrives in 4 ticks), approaching from bottom-right. Highlighted/shaded EVENT CONE — what ACTUALLY reaches P before C asks. Events inside cone: green (E1, E2 — will count). Events outside: red (E3, E4 — too late). Traced paths showing routes events will take, with tick markers along the paths.
-
 The consumer is approaching. The event cone is everything that reaches P before C asks. Events inside count. Events outside don't. The graph doesn't decide — the timing does.
 @/fig
-
 @fig:event-cone-superposition
 Whiteboard style. Two side-by-side panels — same node P, same graph, different consumer timing. LEFT "LATE CONSUMER (tick 8)": large teal event cone, 4 green arrived events (E1–E4), value = f(E1, E2, E3, E4). RIGHT "EARLY CONSUMER (tick 3)": small orange event cone, only E1 arrived, E2–E4 red ✗, value = f(E1) — DIFFERENT. Bold bottom: "Same node. Same graph. Different consumer timing. Different reality."
-
 Same node. Same graph. Different consumer timing. Different reality. The event cone determines which version of reality you get.
 @/fig
-
 @style:insight
 The event cone is narrower than the light cone. It's not what could reach you — it's what reaches you before you're forced to answer. When you're asked determines what counts.
 @/style
-
+Two Very Different Neighbourhoods
+Now picture two very different parts of the graph.
+Deep inside matter — your chair, your face, the ground — every node is surrounded by neighbours that need answers constantly. A node barely exists before something asks it to commit. Event cone? Tiny. Almost nothing pending. That's the classical world. Solid. Definite. Real.
+Out in the quiet frontier — a lone photon in deep space, an electron in a vacuum — nodes are sparse. Nothing nearby needs the answer. A node can sit there pending for millions of ticks. Events keep arriving slowly from distant regions. The event cone grows and grows. Lots of pending. Lots of "maybe."
+That's the quantum world. Same graph. Same rules. Just a different neighbourhood. The weird stuff isn't because the laws change at small scales. It's because nothing is asking.
+Your chair doesn't do quantum things because every atom in it is being demanded by every atom around it, every tick. Zero time to accumulate anything interesting. Zero quantum behavior. Not a small chance. Zero.
 @style:insight
-Quantum mechanics is what nodes look like when nothing has asked yet. Classical physics is what nodes look like when everything is always asking. Not different laws. Different neighborhoods.
+Quantum mechanics is what nodes look like when nothing has asked yet. Classical physics is what nodes look like when everything is always asking. Not different laws. Different neighbourhoods.
 @/style
-
 @style:physics-card:Decoherence
-In standard quantum mechanics, "decoherence" explains why quantum behavior vanishes at large scales — a quantum system entangled with a large environment rapidly loses its superposition. In graph terms: large environments are busy neighborhoods with consumers at every tick. Nothing stays pending. The math gives the same answer. We're just describing the structure rather than the statistics.
+In standard quantum mechanics, "decoherence" explains why quantum behavior vanishes at large scales — a quantum system entangled with a large environment rapidly loses its superposition. In graph terms: large environments are busy neighbourhoods with consumers at every tick. Nothing stays pending. The math gives the same answer. We're just describing the structure rather than the statistics.
 @/style
-
-### Now Apply It
-
-**The double slit.** A photon spreads through the graph — both slits are open paths. The screen node accumulates inputs from both paths simultaneously. Different path lengths mean different accumulated transformations. When the screen demands a value, both paths combine. They reinforce at some positions, cancel at others. Interference pattern.
-
-Add a detector at one slit. The detector is a consumer. It forces early commitment at slit A before those nodes reach the screen. The precise relationship between path A and path B at the screen is broken. No interference. The detector didn't block anything — it became a consumer and forced early commitment.
-
+Now Apply It
+If the event cone idea is right, it should explain the experiments that broke physics. Let's run through them.
+The double slit. A photon spreads through the graph — both slits are open paths. The screen node accumulates inputs from both paths simultaneously. Different path lengths mean different accumulated transformations. When the screen demands a value, both paths combine. They reinforce at some positions, cancel at others. Interference pattern.
+Add a detector at one slit. The detector is a consumer. It forces early commitment at that slit before those nodes reach the screen. The precise relationship between path A and path B at the screen is broken. No interference. The detector didn't block anything — it became a consumer and forced early commitment. It shrank the event cone.
 @style:physics-card:The Double-Slit Experiment
 The double-slit experiment fires particles one at a time at a barrier with two slits. Each particle lands at a single point on the screen behind it. But over thousands of particles, the dots form an interference pattern — bands of high and low density — as if each particle went through both slits simultaneously and interfered with itself. Place a detector at one slit to learn which slit the particle went through, and the interference pattern vanishes. The particle behaves as if it only went through one slit. This has been confirmed with photons, electrons, atoms, and even large molecules.
 @/style
-
-**Entanglement.** Two particles share a common causal history — common ancestor nodes, shared transformations. They separate. Both pending. When you measure particle A, it commits — tracing back through shared ancestors. When you measure particle B later, it commits — same shared ancestors, complementary transformations. Correlated values. Not because A sent a message to B. Because both computations trace back to the same root.
-
+Entanglement. Two particles share a common causal history — common ancestor nodes, shared transformations. They separate. Both pending. When you measure particle A, it commits — tracing back through shared ancestors. When you measure particle B later, it commits — same shared ancestors, complementary transformations. Correlated values. Not because A sent a message to B. Because both computations trace back to the same root.
 No faster-than-light communication. Sealed envelopes from the same deck.
-
-**The quantum eraser.** Detector applies transformation O. Eraser applies O⁻¹. Combined: identity. Net effect at the screen: as if the detector never happened. Interference returns. Nothing was erased. Nothing traveled backward in time. Two transformations that cancel each other out. The most confusing experiment in physics is function composition.
-
+The quantum eraser. Detector applies transformation O. Eraser applies O⁻¹. Combined: identity. Net effect at the screen: as if the detector never happened. Interference returns. Nothing was erased. Nothing traveled backward in time. Two transformations that cancel each other out. The most confusing experiment in physics is function composition.
 @style:physics-card:The Quantum Eraser
 In the quantum eraser experiment, a detector at one slit records which-path information, destroying the interference pattern. Then an "eraser" device downstream removes that which-path information. When you filter the data by the eraser's outcome, the interference pattern reappears — even though the detector already fired. Standard physics says the eraser "retroactively" changed the result. In graph terms: the detector applied a transformation, the eraser applied the reverse transformation. They cancel. The screen sees the same structure as if no detector existed. Nothing was erased. Nothing went backward in time. Two operations that compose to identity.
 @/style
 
-**Tunneling.** A particle hits a wall it shouldn't be able to cross. Classically, it bounces. Quantum mechanically, it sometimes appears on the other side. Spooky? Only if you assume the wall is solid in the graph. But the graph doesn't care about your walls. Two nodes that look "far apart" in emergent space might be direct neighbours in the graph — connected by a single edge that doesn't follow the surface geometry. The particle doesn't go through the wall. It takes a shortcut that the wall doesn't cover. One hop, one tick, and it's on the other side.
-
+Tunneling. A particle hits a wall it shouldn't be able to cross. Classically, it bounces. Quantum mechanically, it sometimes appears on the other side. Spooky? Only if you assume the wall is solid in the graph. Remember — shortcuts exist. Two nodes that look "far apart" on the surface might be direct neighbours in the actual graph, connected by an edge that doesn't follow the emergent geometry. The particle doesn't go through the wall. It takes a path the wall doesn't cover.
 @style:physics-card:Quantum Tunneling
 Quantum tunneling is measured in every semiconductor on Earth — your phone depends on it. Alpha decay, scanning tunneling microscopes, and nuclear fusion in the sun all require particles to traverse classically forbidden barriers. The standard treatment uses a decaying exponential wavefunction inside the barrier. In graph terms: the probability drops because few graph edges cross the barrier region — but some do. The tunneling rate depends on how many shortcut edges exist, which maps to barrier width and height.
-@/style
-
-**Why basketballs don't do this.** You are 10²⁶ atoms. Every atom has consumers. Every tick, something needs its value. Nothing stays pending. Nothing accumulates interesting inputs. The graph commits everything immediately. Zero quantum behavior. Not a small chance. Zero.
-
-@style:insight
-Quantum mechanics is not spooky. It is not random. It is a node that hasn't been asked yet — a function with inputs still on their way. The moment something needs its value, it commits, and it was always going to give exactly that answer. You just couldn't see it coming because you're inside the graph.
-@/style
-
-@style:physics-card:Bell's Theorem
-Bell's theorem (1964) proves no theory of local hidden variables can reproduce quantum correlations — specifically the violation of the CHSH inequality. Our response: node values are not predetermined hidden variables. Values don't exist until commitment. But the graph's topological structure — including shared causal history — is predetermined back to initial conditions. Whether this constitutes "local hidden variables" in Bell's sense is genuinely open. Reproducing the exact cos²(θ) correlation function from graph topology is unsolved. It is the single most important quantitative gap in the framework.
 @/style
 
 ## Wild Guesses (Clearly Labeled)
@@ -403,5 +374,9 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 
 **Prior art to engage:** Causal set theory · Loop quantum gravity · Wolfram physics project · Penrose spin networks · 't Hooft cellular automaton interpretation.
 @/style
+
+### Outro
+
+That is is. Thats my grand theory of how it all ought to work. I have no idea if this makes sense, but I've already spent 7 days on this and at some point I need to just accept it will be wrong and that is okay. But in this little version of the world, there is no such thing as random. What dose that mean for free will, its not so much you can't choose. Its that you will always have choosen the same thing.
 
 ---
