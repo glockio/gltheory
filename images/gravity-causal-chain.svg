@@ -1,0 +1,113 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans font. A horizontal chain of four boxes connected by arrows, reading left to right: Box 1: "DENSE TOPOLOGY" (orange/gold, icon of tightly packed nodes) Arrow labeled "causes" Box 2: "TIME DILATION" (blue, icon of two clocks — one fast, one slow) Arrow labeled "causes" Box 3: "UNEVEN GROWTH" (green, icon of surface dipping on one side) Arrow labeled "produces" Box 4: "GRAVITY" (purple, icon of curved arrow/path) Below the chain: "Mass doesn't cause gravity. Mass causes time dilation. Gravity is what emerges at the end of the chain." Above the chain, crossed out in red: "MASS → GRAVITY" with a big ✗ Below that, in green: "MASS → TIME DILATION → CURVATURE → GRAVITY ✓" -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="'DM Sans', sans-serif">
+  <rect width="900" height="420" fill="white"/>
+
+  <!-- Crossed-out shortcut at top -->
+  <text x="450" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#c0392b" letter-spacing="1">
+    MASS → GRAVITY
+  </text>
+  <line x1="340" y1="38" x2="560" y2="38" stroke="#c0392b" stroke-width="3"/>
+  <text x="580" y="44" font-size="22" font-weight="700" fill="#c0392b">✗</text>
+
+  <!-- Correct chain text -->
+  <text x="450" y="72" text-anchor="middle" font-size="14" font-weight="600" fill="#1e8449" letter-spacing="0.5">
+    MASS → TIME DILATION → CURVATURE → GRAVITY ✓
+  </text>
+
+  <!-- ====== BOX 1: DENSE TOPOLOGY ====== -->
+  <rect x="30" y="110" width="170" height="160" rx="10" fill="#fef9e7" stroke="#d4a017" stroke-width="2.5"/>
+  <text x="115" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#d4a017" letter-spacing="1">DENSE TOPOLOGY</text>
+
+  <!-- Icon: tightly packed nodes -->
+  <circle cx="90" cy="185" r="6" fill="#d4a017"/>
+  <circle cx="110" cy="175" r="6" fill="#d4a017"/>
+  <circle cx="130" cy="185" r="6" fill="#d4a017"/>
+  <circle cx="100" cy="200" r="6" fill="#d4a017"/>
+  <circle cx="120" cy="195" r="6" fill="#d4a017"/>
+  <circle cx="115" cy="215" r="6" fill="#d4a017"/>
+  <circle cx="95" cy="218" r="6" fill="#d4a017"/>
+  <circle cx="135" cy="210" r="6" fill="#d4a017"/>
+  <line x1="90" y1="185" x2="110" y2="175" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="110" y1="175" x2="130" y2="185" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="90" y1="185" x2="100" y2="200" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="130" y1="185" x2="120" y2="195" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="200" x2="120" y2="195" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="110" y1="175" x2="120" y2="195" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="100" y1="200" x2="115" y2="215" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="120" y1="195" x2="135" y2="210" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="115" y1="215" x2="95" y2="218" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="115" y1="215" x2="135" y2="210" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+  <line x1="90" y1="185" x2="95" y2="218" stroke="#d4a017" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Arrow 1: causes -->
+  <line x1="205" y1="190" x2="248" y2="190" stroke="#7a7a6a" stroke-width="2"/>
+  <polygon points="248,184 260,190 248,196" fill="#7a7a6a"/>
+  <text x="232" y="178" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">causes</text>
+
+  <!-- ====== BOX 2: TIME DILATION ====== -->
+  <rect x="265" y="110" width="170" height="160" rx="10" fill="#eef6fb" stroke="#2471a3" stroke-width="2.5"/>
+  <text x="350" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#2471a3" letter-spacing="1">TIME DILATION</text>
+
+  <!-- Icon: two clocks -->
+  <!-- Fast clock -->
+  <circle cx="315" cy="195" r="22" fill="none" stroke="#2471a3" stroke-width="2"/>
+  <line x1="315" y1="195" x2="315" y2="179" stroke="#2471a3" stroke-width="2"/>
+  <line x1="315" y1="195" x2="328" y2="190" stroke="#2471a3" stroke-width="2"/>
+  <text x="315" y="232" text-anchor="middle" font-size="10" fill="#2471a3">FAST</text>
+
+  <!-- Slow clock -->
+  <circle cx="385" cy="195" r="22" fill="none" stroke="#2471a3" stroke-width="2"/>
+  <line x1="385" y1="195" x2="385" y2="179" stroke="#2471a3" stroke-width="2"/>
+  <line x1="385" y1="195" x2="377" y2="186" stroke="#2471a3" stroke-width="2"/>
+  <text x="385" y="232" text-anchor="middle" font-size="10" fill="#2471a3">SLOW</text>
+
+  <!-- Arrow 2: causes -->
+  <line x1="440" y1="190" x2="483" y2="190" stroke="#7a7a6a" stroke-width="2"/>
+  <polygon points="483,184 495,190 483,196" fill="#7a7a6a"/>
+  <text x="467" y="178" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">causes</text>
+
+  <!-- ====== BOX 3: UNEVEN GROWTH ====== -->
+  <rect x="500" y="110" width="170" height="160" rx="10" fill="#edf8f1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="585" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#1e8449" letter-spacing="1">UNEVEN GROWTH</text>
+
+  <!-- Icon: surface dipping on one side -->
+  <path d="M535,210 Q555,195 575,200 Q590,205 605,220 Q620,235 640,210" fill="none" stroke="#1e8449" stroke-width="2.5"/>
+  <!-- Left side tall growth lines -->
+  <line x1="540" y1="210" x2="540" y2="180" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="550" y1="205" x2="550" y2="175" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <!-- Right side short growth lines -->
+  <line x1="610" y1="225" x2="610" y2="215" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="620" y1="228" x2="620" y2="218" stroke="#1e8449" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <!-- Labels -->
+  <text x="545" y="172" text-anchor="middle" font-size="9" fill="#1e8449">tall</text>
+  <text x="615" y="212" text-anchor="middle" font-size="9" fill="#1e8449">short</text>
+
+  <!-- Arrow 3: produces -->
+  <line x1="675" y1="190" x2="718" y2="190" stroke="#7a7a6a" stroke-width="2"/>
+  <polygon points="718,184 730,190 718,196" fill="#7a7a6a"/>
+  <text x="700" y="178" text-anchor="middle" font-size="12" fill="#7a7a6a" font-style="italic">produces</text>
+
+  <!-- ====== BOX 4: GRAVITY ====== -->
+  <rect x="735" y="110" width="135" height="160" rx="10" fill="#f5f0fa" stroke="#7d3c98" stroke-width="2.5"/>
+  <text x="802" y="142" text-anchor="middle" font-size="13" font-weight="700" fill="#7d3c98" letter-spacing="1">GRAVITY</text>
+
+  <!-- Icon: curved path/arrow -->
+  <path d="M770,185 Q785,175 800,185 Q815,200 800,215 Q785,225 775,215" fill="none" stroke="#7d3c98" stroke-width="2.5"/>
+  <polygon points="773,219 770,210 779,215" fill="#7d3c98"/>
+  <!-- Small dot representing mass -->
+  <circle cx="800" cy="200" r="5" fill="#7d3c98" opacity="0.3"/>
+
+  <!-- Bottom caption -->
+  <text x="450" y="320" text-anchor="middle" font-size="15" fill="#2a2a2a" font-weight="400">
+    Mass doesn't cause gravity. Mass causes time dilation.
+  </text>
+  <text x="450" y="345" text-anchor="middle" font-size="15" fill="#2a2a2a" font-weight="400">
+    Gravity is what emerges at the end of the chain.
+  </text>
+
+  <!-- Step numbers under each box -->
+  <text x="115" y="290" text-anchor="middle" font-size="11" fill="#7a7a6a" font-weight="600">STEP 1</text>
+  <text x="350" y="290" text-anchor="middle" font-size="11" fill="#7a7a6a" font-weight="600">STEP 2</text>
+  <text x="585" y="290" text-anchor="middle" font-size="11" fill="#7a7a6a" font-weight="600">STEP 3</text>
+  <text x="802" y="290" text-anchor="middle" font-size="11" fill="#7a7a6a" font-weight="600">RESULT</text>
+</svg>

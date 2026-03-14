@@ -309,41 +309,49 @@ The light cone is the maximum. The event cone is what actually counts. Same node
 The event cone is narrower than the light cone. It's not what could reach you — it's what reaches you before you're forced to answer. When you're asked determines what counts.
 @/style
 
+---
+
+---
+
 ### The Experiment That Started A Gang War
 
 So there is this very famous experiment that started this whole gang war. I highly suggest you check out the [PBS SpaceTime content](https://www.youtube.com/results?search_query=pbs+spacetime+double+slit) on it for the full breakdown.
 
-But the thing you need to know is they found that when they did not look at or measure a particle, something strange happened — it stopped "being" a particle and existed as a wave.
+But before we get into the experiment, we need to connect something back to our model. We said every change in the universe is an event. Every path, every interaction, every tick — an event in the graph. And we said the graph IS reality. There is no backstage. No hidden layer that doesn't count. If something is in the graph, it shows up in reality.
 
-How did they notice this if they didn't look at it? Well they shot it through two slits, and they found that if they did NOT check which door it went through, it seemed to go through BOTH doors. This would be like finding out that when you shoot a basketball it goes in both nets at the same time; but only if you close your eyes.
+So what happens when a node is pending? It's in the graph. It's real. But it hasn't been forced to commit. It doesn't have an answer yet — it has a probability of what its answer COULD be. That state has to show up as something. And it does. It shows up as a wave.
 
-To make things even stranger, they tried a version called "delayed choice." They said okay universe, you wanna fuck with me do ya? I'll only check which door you went through AFTER you already made your choice. And again — same thing. Even though the particle should have already gone through one slit, the act of checking changed an event that should have happened BEFORE the check. It would be like if you waited to check the score of the Super Bowl after the game ended... but the act of checking turned the game back on.
+The wave is real. It's not a metaphor. It's not a mathematical trick. It's what pending nodes look like in reality. Remember you on the way to the family event — you're not in some limbo dimension. You're in the car, you're real, you exist. But your uncle status is genuinely undetermined. Not because you're missing information. Because the event that determines the answer hasn't reached you yet. If someone looked at your "uncle status" right now, they'd see a probability. A wave.
 
-This means war. So they do one final test — the quantum eraser. This one is clever.
+A photon leaving a source and heading toward two slits — nothing has asked it to commit. So it propagates as a wave. It goes through both slits. Not because it's magic. Because that's what pending looks like. The events accumulate, propagate, interfere with each other — all while pending.
 
-They fire a photon at the double slit, but this time the photon has a twin — an entangled partner created at the same moment from the same crystal. The photon goes through the slits and hits the screen. A dot is recorded. Done. Committed. Can't change it. The twin takes a longer path to a separate set of detectors.
+Then the screen says "what are you." The node sums everything in its event cone — all the accumulated events from both paths, the whole wave — and commits. One dot. One position. Done. Repeat this a hundred times and the positions form bands — an interference pattern — because each dot's position was calculated from the sum of both paths.
 
-Half the twins get sent to detectors that preserve which-door information — you can tell which slit the original went through. The other half get sent to detectors that scramble it — the paths are combined so you can never know.
+But if someone checks which slit BEFORE the screen asks — that check is a consumer. It forces the node to commit to a path early. Now the screen only gets one path's worth of inputs. The sum is different. The dot lands somewhere different. Repeat a hundred times — no bands. No pattern.
 
-Now here's the part that broke physics. Look at ALL the dots on the screen. No pattern. Just a blob. Looks exactly the same no matter what happened to the twins. Nothing changed. Nothing was rewritten.
+So the interference pattern isn't some spooky wave-particle duality. It's the mathematical consequence of how many events were in the node's event cone when it committed. More inputs, both paths — interference. Fewer inputs, one path — no interference.
 
-But now sort the dots. Take only the dots whose twin went to a scrambled detector. Interference pattern. Take only the dots whose twin went to a which-path detector. No pattern. Put them all back together — blob again.
+Now. How do we know the wave isn't random?
 
-The dots never moved. The screen never changed. The pattern was ALWAYS there, hiding inside the blob. You just needed the twin's result to know which dots to group together. The twin didn't change the past. It gave you the sorting key.
+Let's explain it with basketball first then break it down.
 
-Back to basketball. You and a friend are both shooting on separate courts. You were born as twins — you do everything weirdly in sync. You both shoot 100 balls with your eyes closed. Your balls land all over the place — no obvious pattern. Now, on your friend's court, half his shots were recorded on video, half weren't. You go back and sort YOUR shots by what happened on HIS court. The ones where his video was deleted? Your shots show a pattern. The ones where his video was kept? No pattern. Your balls never moved. Your court never changed. But because you and your friend share the same origin — twins — your results were always correlated. His video just told you which of your shots to group together.
+Imagine shooting a basketball on a court. Simple enough. Now imagine you found out that when you close your eyes... the basketball stops being a basketball, becomes a wave and goes into both nets on the court. That is the double slit experiment.
+
+It gets weird. You decide you want to see this wave so you are smart. You close your eyes, fire your shot... and right when you hear it go in the net you open your eyes to see it go into both nets... except this time... it was a basketball the whole time. The universe somehow knew you would peak. Every time you close your eyes, back to weird wave ball. Decide you are going to open your eyes at ANY point even after the ball goes through the net... it knew you would check.
+
+It gets even stranger. Let's say you have a twin brother. You think you are going crazy so you send him to a different basketball court with specific instructions. You are going to shoot your ball first, and then after that he will shoot his ball. You both decide you will record the whole thing on video. You will keep your eyes open but your brother is going to keep his eyes closed the whole time. It's okay you have his on video.
+
+Now before you watch your brother's video, you think... let's just see what happens if I delete HALF the footage. It's done forever no one ever saw it.
+
+Now what happens? Well when you look at the shots where you kept your brother's video — everything is normal. Your shots are scattered randomly. But when you look at JUST the shots where you deleted your brother's footage... your balls — the ones that already landed, already recorded, already done — they show a pattern of where they landed on the ground. Bands. A distribution that shouldn't be there. Your balls never moved. But the pattern was always hiding in your results. Deleting your brother's footage is what told you which shots to look at.
+
+That's how we know it's not random. If the dot positions were truly random, it wouldn't matter what you do with your brother's footage. Delete it, keep it — random is random. You can't sort random data by an unrelated variable and find structure. But you can. Every time. Which means the positions were never random. They were determined by the sum of events in the event cone. The correlation with the twin was baked into the graph at the shared causal ancestor. The twin's footage is just the key that lets you see the structure that was always there. Randomness can't be sorted into a pattern. Determinism hiding inside a larger graph can.
 
 For everyone who thinks religion or the "we are all connected" stuff is trippy — I dare you to try a microdose of this experiment.
 
-So how does our graph model explain this?
-
-The photon and its twin share a common causal ancestor — the same event in the graph created them both. Same root. Same causal history. When the photon hits the screen, it commits. The dot is real. Done. But the CORRELATION between the photon and its twin — the relationship encoded in their shared history — that's a property of the graph's structure. It was baked in at the root.
-
-The dots on the screen are committed and they never change. But hidden inside them is a pattern — a correlation with their twins. That correlation was written into the graph the moment the entangled pair was created. It was always there. The twin's measurement doesn't change the dots. It tells you which dots to look at. Which-path detector? One grouping. Scrambled detector? Different grouping. Different pattern emerges from the same set of dots.
-
-No information traveled backwards. No event was rewritten. The graph knew from the start — because the shared causal history between entangled pairs IS the graph. The twin's result is just the key that unlocks which pattern was hiding in your data all along.
-
 The most confusing experiment in physics is sorting a spreadsheet.
+
+That's the basketball version. The real experiment is called the double-slit experiment, and the escalations are called the delayed-choice experiment and the quantum eraser. Instead of basketballs, they use photons. Instead of nets, two slits in a barrier. Instead of where the ball lands in the net, dots on a screen. Instead of twins, entangled particles created from the same crystal. Instead of deleting video, sending the twin to a detector that scrambles which-path information. Everything else is the same. The results are the same. And nobody can fully explain why.
 
 @style:insight
 The quantum eraser doesn't change the past. The dots on the screen are committed and never move. But each photon has a twin, and they share a common origin in the graph — a common causal ancestor. Their outcomes were always correlated. How the twin commits determines which subset of dots reveals a pattern. The pattern was always there, hidden in the correlations. The twin's measurement is the sorting key. Nothing was erased. Nothing went backwards. The graph knew from the start.
