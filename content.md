@@ -87,7 +87,9 @@ You might never have thought about it, but what IS spacetime? This is a quote fr
 
 "Matter tells spacetime how to curve, and spacetime tells matter how to move."
 
-Beautiful sentence. Now what THE FUCK does that even mean? It tells you what spacetime does. It doesn't tell you what spacetime is.
+Beautiful sentence John.
+
+Now what THE FUCK does that even mean? It tells you what spacetime does. It doesn't tell you what spacetime is.
 
 Well it's a graph. When they do math on spacetime they actually treat it as a graph, it's a specific type of graph called a manifold. So tada, this graph nonsense does not seem so hopeless. It's worth noting that there are major theories and projects that treat the universe as a graph so this idea is taken seriously in some circles.
 
@@ -97,14 +99,7 @@ Okay so if our logic tracks and spacetime is a graph, and we have been researchi
 
 **3+1 dimensions.** Three dimensions of space plus one of time. Time is the growth direction — new nodes being born. Not a fourth spatial axis.
 
-**Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name.
-
-**Shortcuts exist.** Two points that look far apart on the surface might be direct neighbours in the graph. The surface says "far apart." The graph says "one hop." This matters. A lot.
-
-@fig:what-110-years-tells-us
-Whiteboard style. Heading: "THE GRAPH'S CHEAT SHEET." A 2×3 grid of small panels. 1) SPEED LIMIT: chain of 3 dots with arrows, "1 hop per tick. That's c." 2) MINIMUM SIZE: single edge with ruler, "1 hop = smallest possible distance." 3) NO GRID: neat grid with red ✗ vs messy organic graph with green ✓, "Organic, not tiled." 4) 3+1 DIMENSIONS: three spatial arrows + upward time arrow, "3 spatial + time = growth." 5) MASS = ENERGY: two-sided coin with "m" and "E", "Same thing. Different name." 6) SHORTCUTS EXIST: two dots far apart on surface, connected by line underneath, "The surface says far apart. The graph says neighbours." Below: "110 years of experiments. We're just naming what was measured."
-
-@/fig
+**Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name. E=mc^2
 
 ### The Rules
 
@@ -118,7 +113,9 @@ The main thing is your reality takes place at the edge. You can imagine an ocean
 
 @fig:reality-at-the-edge
 Whiteboard style. A large graph building upward like a coral reef or stalagmite. At the bottom: dense layers of small green committed nodes, tightly packed, fading into the background. As you go up, the layers become more visible, newer. At the very top: a thin line of purple pending nodes — the frontier. Draped over the top of this structure like a tablecloth over a table, or like the surface of the ocean over the depths below: a wavy membrane labeled "SPACETIME FABRIC — what you experience." Below the membrane, the graph structure labeled "THE STRUCTURE — all the events that came before." A small stick-figure Mario stands on top of the membrane. A label reads: "You live here. On the surface. The ocean floor built everything underneath you."
+
 ---
+
 Your reality is the surface tension of a vast graph. Every event that ever happened is underneath, holding up the present moment. You live on the edge — the frontier — the thin layer where new events are being born. Spacetime is the surface of the ocean. The graph is everything below it.
 @/fig
 
@@ -128,17 +125,14 @@ Your reality is the surface tension of a vast graph. Every event that ever happe
 Three clues that something is off about gravity:
 
 1. You can shield every other force. Radiation — slap some lead on that bitch. Electromagnetic fields — get your ass in a Faraday cage. Gravity — nothing. Not once, anywhere, ever.
-2. Einstein showed gravity and acceleration are identical. Standing on Earth feels exactly the same as accelerating in a rocket at 9.8 m/s². Why would a force feel the same as motion?
-3. Physicists have hunted the graviton — the particle that carries the gravitational force — for nearly a hundred years. Never found one.
+2. Physicists have hunted the graviton — the particle that carries the gravitational force — for nearly a hundred years. Never found one.
    @/style
-
-Three clues. One answer.
 
 To explain gravity, we first need to explain mass. Remember we said our graph is events. That means whenever you try and think of an object like "a star" or "a photon", none of that exists in our graph as a single point.
 
-Mass, objects, particles — all the result of stable configurations within the graph. A collection of events that join together and form a specific shape. When we go to build the next layer of reality, to move from current now to future now, we sum all of those events. And for mass — when you sum all the operations together — it just generates the same shape again. That's it. Mass is a self-perpetuating topology.
+Mass, objects, particles — all the result of stable configurations within the graph. A collection of events that join together and form a specific shape. When we go to build the next layer of reality, to move from current now to future now, we sum all of those events. And for mass — when you sum all the operations together — it just generates the same shape again. That's it. Mass is a self-perpetuating topology/shape.
 
-Your boss pays you $1000 (event 1), your landlord charges you $1000 (event 2). Those sum together so you were poor then, and you are poor now. Two events resulting in a stable configuration where you forever remain poor. If those events happen again in the next now, you have a self-perpetuating topology of poverty.
+Your boss pays you $1000 (event 1), your landlord charges you $1000 (event 2). Those sum together so you were poor then, and you are poor now. Two events resulting in a stable configuration where you forever remain poor. If those events happen again in the next now, you have a self-perpetuating topology of poverty. You are not just poor, you are stable poor.
 
 Now here is where it gets interesting. The fastest anything can travel in the graph is one hop at a time — the speed of light. And the speed of light has NOTHING to do with light, it's just the fastest our graph is capable of change. So our perception of time is really the rate of change occurring in our local region of the graph.
 
@@ -162,51 +156,38 @@ RIGHT (no mass): Same as left — sparse, tall, 4 ticks of growth.
 The spacetime fabric curves down over the dense region because the graph grew
 LESS there. Label: "Mass doesn't push spacetime down. It just grows slower.
 Everything else grew faster."
+
 ---
+
 Mass doesn't push spacetime down. The graph just grows slower where it's dense. Everything else grew faster. The "warping" is uneven growth.
 @/fig
 
-Think about what "mass warps spacetime" actually means in our graph. It's not that mass is pushing spacetime down like a bowling ball on a trampoline. That's the textbook picture but it's backwards. Imagine a field of grass growing. In the open, the grass grows fast — three, four new inches a week. But there are rocks scattered across the field. Under the rocks, the grass barely grows at all. Zoom out after a month. The open areas are tall and lush. The areas around the rocks are short. It LOOKS like the rocks created dips — like the field is warped around them. But the rocks didn't push anything down. The grass under them just never grew. The "warping" is really just uneven growth.
+Think about what "mass warps spacetime" actually means in our graph. It's not that mass is pushing spacetime down like a bowling ball on a trampoline. That's the textbook picture but it's backwards.
 
-That's what mass does to the graph. The dense region takes longer to compute the next "now." Meanwhile the sparse regions around it are flying through their ticks, racing ahead. The difference in growth rate IS the curvature. Mass doesn't warp spacetime. Mass is slow spacetime. Everything else just grew faster.
+Imagine a field of grass growing. In the open, the grass grows fast — three, four new inches a week. But there are rocks scattered across the field. Under the rocks, the grass barely grows at all. Zoom out after a month. The open areas are tall and lush. The areas around the rocks are short. It LOOKS like the rocks created dips — like the field is warped around them. But the rocks didn't push anything down. The grass under them just never grew. The "warping" is really just uneven growth.
 
-Dense region = expensive paths through it = cheap paths curve around it. Objects following those cheap paths appear to curve toward the mass. That curve is gravity.
+That's what mass does to the graph. The dense region takes longer to compute the next "now." Meanwhile the sparse regions around it are flying through their ticks, racing ahead. The difference in growth rate IS the curvature. Mass doesn't warp spacetime. Everything else just grew faster. It is regions in the graph with slower rates of change. This is why you experince time dilation near a black hole.
+
+Now in computers when a operation is slow, we actually route other operations around it. Just like you would avoid traffic in a city. There is a fasest path though the graph that avoids slow regions. And the universe seems todo this too.
 
 @fig:gravity-routing
 Whiteboard style. Two panels. Left labeled "EMPTY SPACE": a uniform grid of dots, a straight arrow from point A to point B cutting directly across. Label: "cheapest path = straight line." Right labeled "MASS PRESENT": same grid but center region has a dense cluster of orange/gold dots with many cross-connections labeled "HIGH DENSITY — expensive." The path from A to B now curves around the dense cluster. Label: "cheapest path bends around the dense region. That bend IS gravity."
+
 ---
-High density makes straight paths expensive. The graph routes around it. That curve is gravity. You are not being pulled — you are following the cheapest path through a graph that is denser near massive objects.
-@/fig
 
 Sounds like crazy pills again right? But this idea of minimizing work is actually an established thing in physics. It's called the principle of least action — light, everything, will ALWAYS take the most efficient path in the universe. When we shine light into water, it bends at exactly the angle that minimizes travel time. Every fucking time. Instantly. This is freaky as fuck but somehow our universe IS maintaining the most efficient path. So what we are proposing is not as crazy as it might sound.
 
-**Why you can't shield gravity:** Gravity isn't a signal traveling through the graph — it IS the density of the graph. Adding a shield adds more nodes, more connections, more density. Every attempt to block gravity makes it stronger. Like trying to reduce traffic by adding more cars.
+**Why you can't shield gravity:** Gravity is the TAX you pay to get the next now. Its the result of how complex the compute is and how fast change can occur. Trying to sheild it is like trying to drive a car without using any fuel. How much gravity is how far you need to go, and the force is you being pulled though the routing table of the most efficent path.
 
-**Why there's no graviton:** "What particle carries gravity?" is like asking "what particle carries the shape of a triangle?" There is no particle. Gravity IS the structure.
+**Why there's no graviton:** "What particle carries gravity?" is like asking "what particle carries the shape of a triangle?" There is no particle. Gravity merges from the structure.
 
 @style:insight
 Gravity is routing pressure. Dense topology makes some paths expensive. The graph follows the cheapest path. That curve is gravity. You can't shield it because a shield is more density — you're making it worse.
 @/style
 
-### The Rest of the Lineup
-
-| Mystery            | What you were told             | What it is in the graph                                                                      |
-| ------------------ | ------------------------------ | -------------------------------------------------------------------------------------------- |
-| Speed of light     | How fast light goes            | Rate changes spread: 1 hop per tick. Nothing special about light — it's the simplest pattern |
-| Space              | A box things happen inside     | The graph's shape. Distance = hop count. Minimum distance = 1 hop = Planck length            |
-| Time               | A dimension you move through   | New nodes being born. No births = no time                                                    |
-| Time dilation      | Mysterious relativistic effect | Near mass: denser graph, more hops per cycle, pattern's clock runs slower                    |
-| Arrow of time      | Something about entropy        | You can't un-birth a node. Growth is irreversible                                            |
-| Universe expanding | Space stretching somehow       | More nodes = more places for new nodes. Growth feeds growth                                  |
-| Black holes        | Infinite singularity           | Density so extreme no path leads outward. Not infinite — just one-way                        |
-
----
-
 ## Chapter 3: There is no random.
 
-Everything so far has been setup. This is what it was building to.
-
-Remember the question that started all of this? Is anything truly random? Nine years ago that question bugged me enough to look into it and I ended up here. So this is where I finally give you my answer.
+Everything so far has been setup. There is no random
 
 ### A Node Is Born
 
@@ -234,13 +215,11 @@ Now here is where it gets interesting. Physicists have been studying this "waiti
 
 The argument is about whether this wave represents something truly random, or whether there's something underneath determining the outcome.
 
-Now here's the thing, the big dog Einstein did not like this idea of random very much. So like a proper 90s west coast rapper, he got in the booth and dropped the bar "God does not play dice." In the physics world this was the equivalent of Tupac releasing "Hit Em Up". But then the east coast responded and Bell dropped a track called "No Hidden Variables", which basically proved it IS random. It's worth noting there was also another track called "Many Worlds", but it received much less commercial acclaim.
+Our boy Einstein did not like this idea of random very much. So like a proper 90s west coast rapper, he got in the booth and dropped the bar "God does not play dice." In the physics world this was the equivalent of Tupac releasing "Hit Em Up". But then the east coast responded and Bell dropped a track called "No Hidden Variables", which basically proved it IS random. It's worth noting there was also another track called "Many Worlds", but it received much less commercial acclaim.
 
 The point is the physics world sided with Bell and proved that the wave was random and that there were no hidden variables that said how it would resolve.
 
-Now, you know how Eminem came around in that early 2000s and just kinda like took over. Why? Because he offered a fresh sound. Now you did not have to join a gang to be "hard", just dye your hair blonde and tell your mom you don't want to clean your room. And this whole change in perspective revived Dr. Dre's whole career.
-
-That's what we want a fresh set of eyes to say. Yeah there is no local hidden variables, BUT the events are on the way and it's NOT random.
+We are saying, yes you did not have the answer of you being a unclue or not hidden in your pocket, BUT the news was on the way to you. The end result was not random, it was event ordering.
 
 ### The Event Cone
 
@@ -275,8 +254,8 @@ Nodes OUTSIDE the light cone are light gray.
 
 Bottom caption: "The light cone is the maximum. The event cone is what actually counts. Same node, different consumer timing, different event cone, different reality."
 
-SVG approach: 900×600 viewBox. Plot nodes as circles (r=8 committed green #27ae60, r=12 pending purple #8e44ad dashed). Edges as lines with arrowheads. Event cone as a path with fill="#1abc9c" opacity="0.15" and stroke="#1abc9c" dashed. Light cone as larger dashed gray path. Consumer as small orange (#d35400) triangle/arrow approaching. Use DM Sans for all labels. Keep it clean — no heavy borders, white background.
----
+## SVG approach: 900×600 viewBox. Plot nodes as circles (r=8 committed green #27ae60, r=12 pending purple #8e44ad dashed). Edges as lines with arrowheads. Event cone as a path with fill="#1abc9c" opacity="0.15" and stroke="#1abc9c" dashed. Light cone as larger dashed gray path. Consumer as small orange (#d35400) triangle/arrow approaching. Use DM Sans for all labels. Keep it clean — no heavy borders, white background.
+
 The light cone is the maximum. The event cone is what actually counts. Same node, different consumer timing, different event cone, different reality.
 @/fig
 
@@ -335,8 +314,8 @@ STAGE 3 (right third): At the screen node.
 
 Bottom of entire figure: "The detector recorded. The eraser deleted. Net operation = nothing. The screen sees both paths with their original relationship intact. This is not time travel. This is f(f⁻¹(x)) = x."
 
-SVG approach: 900×550 viewBox. Three panels or one continuous flow. Red for detector operation, blue for eraser operation, white/gold for cancellation. Keep it clean. The cancellation symbol is the visual payoff — make it satisfying. Maybe the red and blue arrows collide and produce a white starburst or a simple "= 1" label.
----
+## SVG approach: 900×550 viewBox. Three panels or one continuous flow. Red for detector operation, blue for eraser operation, white/gold for cancellation. Keep it clean. The cancellation symbol is the visual payoff — make it satisfying. Maybe the red and blue arrows collide and produce a white starburst or a simple "= 1" label.
+
 The detector recorded. The eraser deleted. Net operation = nothing. The screen sees both paths with their original relationship intact. This is not time travel. This is f(f⁻¹(x)) = x.
 @/fig
 
@@ -382,12 +361,12 @@ If the framework is right — or even close — it might hint at some open quest
 
 ### What Else This Explains
 
-| Phenomenon    | What it is in the graph |
-| ------------- | ----------------------- |
-| Entanglement  | Two particles share a common causal ancestor. They separate. Both pending. When one commits, it traces back through shared history. The other does the same — same root, complementary values. Sealed envelopes from the same deck. No signal. |
-| Tunneling     | Shortcuts exist. Two nodes that look "far apart" on the surface might be direct neighbours in the actual graph. The particle doesn't go through the wall — it takes a path the wall doesn't cover. |
-| Decoherence   | Large environments are busy neighbourhoods with consumers at every tick. Nothing stays pending. Quantum behaviour vanishes because everything is always being asked. |
-| Double slit   | Both paths stay pending. Both contribute operations to the screen. Operations reinforce or cancel — interference pattern. Add a detector? Early commitment breaks the relationship. Pattern dies. |
+| Phenomenon   | What it is in the graph                                                                                                                                                                                                                        |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Entanglement | Two particles share a common causal ancestor. They separate. Both pending. When one commits, it traces back through shared history. The other does the same — same root, complementary values. Sealed envelopes from the same deck. No signal. |
+| Tunneling    | Shortcuts exist. Two nodes that look "far apart" on the surface might be direct neighbours in the actual graph. The particle doesn't go through the wall — it takes a path the wall doesn't cover.                                             |
+| Decoherence  | Large environments are busy neighbourhoods with consumers at every tick. Nothing stays pending. Quantum behaviour vanishes because everything is always being asked.                                                                           |
+| Double slit  | Both paths stay pending. Both contribute operations to the screen. Operations reinforce or cancel — interference pattern. Add a detector? Early commitment breaks the relationship. Pattern dies.                                              |
 
 ---
 
@@ -406,7 +385,7 @@ If the framework is right — or even close — it might hint at some open quest
 4. Node properties derive entirely from position — from paths reaching the node and their accumulated operations. Nodes store nothing.
 5. Changes propagate at C: 1 edge per tick maximum.
 6. Nodes are pending until demanded by a consumer. Pending nodes accumulate inputs as events arrive. Commitment freezes inputs and computes the value. Committed nodes are immutable.
-@/style
+   @/style
 
 ### Outro
 
