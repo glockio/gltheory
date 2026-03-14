@@ -390,4 +390,6 @@ If the framework is right — or even close — it might hint at some open quest
 
 ### Outro
 
-## That's it. That's my grand theory of how it all ought to work. GL is me, but Graph Layer Theory sounds dope too.
+That's it. That's my grand theory of how it all ought to work. GL is me, but Graph Layer Theory sounds dope too.
+
+---
