@@ -75,7 +75,7 @@ Whiteboard style. Three simple graphs side by side. Left: a family tree — two 
 A family tree is a graph. A recipe is a graph. A road map is a graph. Dots connected by lines. That's the whole idea.
 @/fig
 
-Now lets go make some graphic content and create the freaking universe!
+Now let's go make some graphic content and create the freaking universe!
 
 ---
 
@@ -99,7 +99,7 @@ That's c. Not because there's a cosmic speed enforcer — because there's no mec
 
 **3+1 dimensions.** Three dimensions of space plus one of time. Sick, we got a 3D graph. Time is the growth direction — new nodes being born. Not a fourth spatial axis.
 
-**Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name. More on this shortly.
+**Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name.
 
 **Shortcuts exist.** Two points that look far apart on the surface might be direct neighbours in the graph. The surface says "far apart." The graph says "one hop." This matters. A lot.
 
@@ -125,12 +125,6 @@ These rules are really just a fancy way of saying: past events sum together to m
 **Rule 4 — The lines point forward, the graph grows.** A line from dot A to dot B means: A happened before B, and A could have influenced B. The lines carry the direction of cause and effect. Past to future. Again this is just saying that time moves on and there are past events that all sum together and say what the future event can be.
 
 The main thing is your reality takes place at the edge. You can imagine an ocean of events that lead you to your "now", and your experience is always on the surface.
-
-@fig:graph-is-spacetime
-Whiteboard style. A directed graph with time flowing upward (vertical arrow on left labeled "TIME"). Bottom row: three green filled circles labeled A, B, C — "committed, already happened." Middle row: two green circles D, E with arrows coming up from A, B, C. Top: one purple dashed circle F with arrows from D and E pointing to it. Label on F: "PENDING — just born, not yet asked." Label on green nodes: "committed." Annotations: "Each dot = a spacetime event" and "Each line = what can affect what."
-
-Green dots are committed — they've happened, their value is settled. The purple dot just came into existence but hasn't been asked what it is yet. The graph IS spacetime. The dots don't exist inside space — they ARE space.
-@/fig
 
 @fig:reality-at-the-edge
 Whiteboard style. A large graph building upward like a coral reef or stalagmite. At the bottom: dense layers of small green committed nodes, tightly packed, fading into the background. As you go up, the layers become more visible, newer. At the very top: a thin line of purple pending nodes — the frontier. Draped over the top of this structure like a tablecloth over a table, or like the surface of the ocean over the depths below: a wavy membrane labeled "SPACETIME FABRIC — what you experience." Below the membrane, the graph structure labeled "THE STRUCTURE — all the events that came before." A small stick-figure Mario stands on top of the membrane. A label reads: "You live here. On the surface. The ocean floor built everything underneath you."
@@ -176,15 +170,25 @@ Sounds like I am taking crazy pills again right? But this idea of minimizing wor
 
 So what we are proposing is not as crazy as it might sound on the surface.
 
-@fig:propagation-at-c
-Whiteboard style. Three panels left to right labeled "TICK 0," "TICK 1," "TICK 2." Each shows a grid of dots. In TICK 0: one center dot is orange/starred — "change happens here." All other dots gray. In TICK 1: center dot green (committed), its immediate neighbors orange/starred (just reached), outer dots still gray. In TICK 2: center and first ring green, second ring orange/starred, outer dots gray. Below: "1 hop per tick. That's C. Gray dots don't know yet."
+Think about what "mass warps spacetime" actually means in our graph. It's not that mass is pushing spacetime down like a bowling ball on a trampoline. That's the textbook picture but it's backwards.
 
-A change spreads outward at one connection per tick. The gray dots haven't heard yet. There's no group text. No instant announcement. Information travels locally, one hop at a time. That's why nothing goes faster than light — there's no mechanism to skip connections.
+Imagine a field of grass growing. In the open, with sunlight, the grass grows fast — three, four new inches a week. But there are rocks scattered across the field. Under the rocks, the grass barely grows at all. Now zoom out and look at the field from above after a month. The open areas are tall and lush. The areas around the rocks are short. It LOOKS like the rocks created dips — like the field is warped around them. But the rocks didn't push anything down. The grass under them just never grew. The "warping" is really just uneven growth.
+
+That's what mass does to the graph. The dense region — the mass — takes longer to compute the next "now." Meanwhile the sparse regions around it are flying through their ticks, growing new layers, racing ahead. The difference in growth rate between the dense region and the space around it IS the curvature. Mass doesn't warp spacetime. Mass is slow spacetime. Everything else just grew faster.
+
+Our computers deal with this exact problem. When you call a function that calls a function that calls a function, your program builds up a call stack — each layer waiting for the one below it to finish. The deeper the stack, the longer it takes to get an answer back to the top. Mass in the graph is like a deep call stack. Lots of operations that need to resolve before the next layer can be built.
+
+And just like your computer maintains a routing table — the most efficient path through the network to avoid congestion — the graph does the same thing. Dense regions are congested. The cheapest path curves around them. That curve is gravity. The routing table is the force.
+
+@fig:density-across-graph
+(use existing SVG — shows causal density mountain shape, dense at mass, sparse at edges)
+Mass creates a mountain of causal density. Dense regions take more steps to resolve — like navigating a crowded room vs. an empty hallway. In computers, this is called a call stack.
 @/fig
 
-@style:insight
-The speed of light isn't about light. It's the speed that changes spread through the graph — one connection per tick. Light moves at that speed because it's the simplest pattern. There's nothing to slow it down.
-@/style
+@fig:invert-pyramid-spacetime
+(use existing SVG — inverts the density profile to show the classic spacetime curvature well)
+Now invert the density profile. The mountain becomes a well. Drape the spacetime fabric over it. THIS is the classic spacetime curvature diagram from every physics textbook. Same shape. Different perspective. Causal density IS the curvature.
+@/fig
 
 Dense region = expensive paths through it = cheap paths curve around it. Objects following those cheap paths appear to curve toward the mass. That curve is gravity.
 
@@ -222,32 +226,6 @@ Near a massive object, the graph has more connections per region — denser terr
 
 ---
 
-### Sidebar, wanna see something cool: E = mc²
-
-You've seen the equation. You've nodded at it. You almost certainly think it describes a conversion — mass turning into energy. Some violent process. A bomb.
-
-It's not a conversion. It's an identity. Mass and energy are the same thing measured in different units. In natural units where c = 1, the equation is just E = m. That's it. They're the same.
-
-So where does the c² come from? It's a unit conversion factor — like inches to centimeters. Energy has units of kg·m²/s². Mass has units of kg. To get from one to the other, you need m²/s², which is a velocity squared. The only velocity the graph provides is c — one hop per tick — so the conversion factor is c². It's not that two things are happening at c. It's that the units require a velocity squared, and c is the only one available.
-
-Now here's the graph version. Mass is a stable topology — edges looping back, maintaining the same shape. Energy is the same edges, freed from the topology, propagating outward at c. Same edges. Different arrangement. And what is antimatter? The inverse topology — all operations reversed. Which means when matter meets antimatter, all operations cancel out.
-
-So what happens when you annihilate a particle?
-
-@fig:loop-unwinding
-Whiteboard style. Two panels with colored borders. Left panel (red border, #c0392b): a knot topology — cluster of dots with many internal connections, arrows cycling through. Label above: "MASS." Label below: "internal edges maintaining the shape." Right panel (orange border, #d35400): the same edges now radiating outward as straight arrows from a center point, small dots at arrow tips. Label above: "RADIATION." Label below: "internal edges freed, propagating outward at C." Arrow between panels labeled "ANNIHILATION — the knot unravels." Bottom caption: "Same edges. Different arrangement. An atomic bomb isn't a conversion. It's an unraveling."
-
-The knot unravels. The edges that were maintaining the topology are freed and propagate outward at C. An atomic bomb isn't converting mass into energy — they were always the same thing. It's rearranging the edges from a self-perpetuating structure into outward propagation.
-@/fig
-
-@style:insight
-E = mc² is not a conversion. It's an identity. Mass and energy are the same thing measured in different units. The c² is a unit conversion factor — like inches to centimetres. When a particle annihilates, nothing is converted. The knot unravels. Same edges, different arrangement.
-@/style
-
-@style:physics-card:Why c Is Squared
-Why c² and not just c? Dimensional analysis. Energy has units of kg·m²/s². Mass has units of kg. To convert between them you need m²/s² — which is a velocity squared. The speed of light is the only velocity the graph provides (1 hop per tick). So the conversion factor is c². It's not that two things are happening at c. It's that the unit conversion between kilograms and joules happens to require a velocity squared, and the graph only has one velocity to offer.
-@/style
-
 ## Chapter 3: There is no random.
 
 Everything so far has been setup. This is what it was building to.
@@ -282,13 +260,13 @@ Now here is where it gets interesting. Physicists have been studying this "waiti
 
 The argument is about whether this wave represents something truly random, or whether there's something underneath determining the outcome.
 
-Now heres the thing, the big dog Einstein did not like this idea of random very much. So like a proper 90s west coast rapper, he got in the booth and dropped the bar "God dose not play dice.". In the physicis world this was the equlivent of tupca releasing "hit em up". But than the east coast responded and a Bell dropped a track called "no hidden variables", which basically proved it IS random. Its worth noting there was also anyother track called "many worlds", but it received much less commecial aclaim.
+Now here's the thing, the big dog Einstein did not like this idea of random very much. So like a proper 90s west coast rapper, he got in the booth and dropped the bar "God does not play dice." In the physics world this was the equivalent of Tupac releasing "Hit Em Up". But then the east coast responded and Bell dropped a track called "No Hidden Variables", which basically proved it IS random. It's worth noting there was also another track called "Many Worlds", but it received much less commercial acclaim.
 
-The point is the phyysics world sided with bell and proved that the wave was random and that there was no hidden variables that said how it would resolve.
+The point is the physics world sided with Bell and proved that the wave was random and that there were no hidden variables that said how it would resolve.
 
-Now, you know how Enimen came around in that early 2000s and just kinda like took over. Why? Because he offered a fresh sound. Now you did not have to join a gang to be "hard", just dye your hair blonde and tell your mom you don't want to clean your room. And this whole change in perpstive revived Dr. Dre's whole carreer.
+Now, you know how Eminem came around in that early 2000s and just kinda like took over. Why? Because he offered a fresh sound. Now you did not have to join a gang to be "hard", just dye your hair blonde and tell your mom you don't want to clean your room. And this whole change in perspective revived Dr. Dre's whole career.
 
-Thats what we want a fresh set of eyes to say. Yeah there is no local hidden variables, BUT the events are on the way and its NOT random.
+That's what we want a fresh set of eyes to say. Yeah there is no local hidden variables, BUT the events are on the way and it's NOT random.
 
 ### The Event Cone
 
@@ -296,7 +274,7 @@ You may have heard of the light cone — all events that could ever reach you gi
 
 We're introducing a new concept. The event cone. It's narrower. It's not everything that could reach you — it's everything that reaches you before you're forced to commit.
 
-Of this whole article this might be the only semi novel contirbtuion I actually have -- and I am sure if I dig into it the idea won't be mine or it will be wrong.
+Of this whole article this might be the only semi novel contribution I actually have -- and I am sure if I dig into it the idea won't be mine or it will be wrong.
 
 Your aunt asking "are you an uncle?" — that's the thing forcing commitment. Everything that reaches you before she asks — your brother's call, a text from your mum, your sister posting on Instagram — that's your event cone. The events that actually count.
 
