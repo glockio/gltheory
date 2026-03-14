@@ -40,7 +40,7 @@ The foundation here draws heavily from [causal set theory](https://en.wikipedia.
 
 Alright let's go. So all you need to know is physics has two main theories. General relativity describes the big stuff, quantum mechanics the small stuff. It's very similar to East and West coast rap in the 90s. Both are great in their own respects but they are forcing us to pick a side.
 
-So in our best effort to sit everyone down and ask, "can't we all just get along?", we have to accept something that at first might sound a little bit crazy... and that is... "it was all a ~~screen~~ Dream"
+So in our best effort to sit everyone down and ask, "can't we all just get along?", we have to accept something that at first might sound a little bit crazy... and that is... "It WAS ALL a ~~Dream~~ screen"
 
 @style:hook
 You are Mario. Not metaphorically. Your reality is taking place on a screen. There is a structure underneath that represents your world, and you have no direct access to it. But don't worry, there could be worse things than life as an Italian 2D plumber.
@@ -74,6 +74,8 @@ Whiteboard style. Three simple graphs side by side. Left: a family tree — two 
 
 A family tree is a graph. A recipe is a graph. A road map is a graph. Dots connected by lines. That's the whole idea.
 @/fig
+
+Now lets go make some graphic content and create the freaking universe!
 
 ---
 
@@ -276,17 +278,25 @@ That right there is the whole thing. You are the node. The baby being born is an
 
 The events that make it to you in time? We're calling that your event cone.
 
-Now here is where it gets interesting. Physicists have been studying this "waiting" state for a hundred years. At the really small scale — individual particles, single photons — this state of "pending" shows up in our reality as something very specific. A wave. Physicists call it the probability wave, and it caused an absolute shitstorm that is still raging today. This is the thing that made Einstein say "God does not play dice." This is where you hear "many worlds," "hidden variables," "spooky action at a distance."
+Now here is where it gets interesting. Physicists have been studying this "waiting" state for a hundred years. At the really small scale — individual particles, single photons — this state of "pending" shows up in our reality as something very specific. A wave. Physicists call it the probability wave, and it caused an absolute shitstorm that is still raging today.
 
 The argument is about whether this wave represents something truly random, or whether there's something underneath determining the outcome.
 
-I'm saying it's not random. It's pending. And we have an actual reason WHY it has to show up as a wave — because events are still in transit through the graph, and the node hasn't been asked yet. There is no value to report. Not a hidden one. Not one we can't see. There isn't one yet.
+Now heres the thing, the big dog Einstein did not like this idea of random very much. So like a proper 90s west coast rapper, he got in the booth and dropped the bar "God dose not play dice.". In the physicis world this was the equlivent of tupca releasing "hit em up". But than the east coast responded and a Bell dropped a track called "no hidden variables", which basically proved it IS random. Its worth noting there was also anyother track called "many worlds", but it received much less commecial aclaim.
+
+The point is the phyysics world sided with bell and proved that the wave was random and that there was no hidden variables that said how it would resolve.
+
+Now, you know how Enimen came around in that early 2000s and just kinda like took over. Why? Because he offered a fresh sound. Now you did not have to join a gang to be "hard", just dye your hair blonde and tell your mom you don't want to clean your room. And this whole change in perpstive revived Dr. Dre's whole carreer.
+
+Thats what we want a fresh set of eyes to say. Yeah there is no local hidden variables, BUT the events are on the way and its NOT random.
 
 ### The Event Cone
 
 You may have heard of the light cone — all events that could ever reach you given the speed of light. Your entire possible past.
 
 We're introducing a new concept. The event cone. It's narrower. It's not everything that could reach you — it's everything that reaches you before you're forced to commit.
+
+Of this whole article this might be the only semi novel contirbtuion I actually have -- and I am sure if I dig into it the idea won't be mine or it will be wrong.
 
 Your aunt asking "are you an uncle?" — that's the thing forcing commitment. Everything that reaches you before she asks — your brother's call, a text from your mum, your sister posting on Instagram — that's your event cone. The events that actually count.
 
@@ -308,6 +318,7 @@ Same node. Consumer arrives early — small event cone, fewer inputs, one result
 Whiteboard style on white background, DM Sans font. An organic graph of ~25 nodes. Most are small GREEN filled circles (committed). One node center-right is a larger PURPLE dashed circle labeled "P — PENDING."
 
 From the left, a chain of green nodes leads toward P at various distances:
+
 - One node 1 hop away, directly connected to P (solid green line)
 - Two nodes 2 hops away (connected through the 1-hop node)
 - Three nodes 3-4 hops away (further along the chain)
@@ -359,11 +370,13 @@ Whiteboard style, white background, DM Sans. Shows graph structure of double sli
 LEFT: Single green committed node labeled "SOURCE."
 
 CENTER: Two diverging paths of purple dashed nodes (pending).
+
 - Top path labeled "PATH A" — 4-5 purple nodes with edges carrying label "O_A"
 - Bottom path labeled "PATH B" — 4-5 purple nodes with edges carrying label "O_B"
 - Both paths pass through a vertical barrier (gray dashed line labeled "WALL WITH 2 SLITS") — each path goes through one slit opening.
 
 RIGHT: Single node labeled "SCREEN — demands value." Shown as orange circle.
+
 - Arrows from both paths converge on this node.
 - Label at screen: "Value = O_A + O_B"
 - Small annotation: "Both paths in event cone → operations sum → interference"
@@ -442,14 +455,17 @@ O composed with O⁻¹ = identity. The two operations cancel. The net effect is 
 Whiteboard style, white background, DM Sans. Three stages shown as a visual sequence.
 
 STAGE 1 (left third): Double slit with detector at slit A.
+
 - Path A nodes with a RED label "O" on the edge from the detector.
 - Label: "Detector applies operation O — records which-path info"
 
 STAGE 2 (center third): Same graph, but now an eraser device downstream.
+
 - A BLUE label "O⁻¹" on the edge from the eraser.
 - Label: "Eraser applies O⁻¹ — destroys which-path info"
 
 STAGE 3 (right third): At the screen node.
+
 - Visual: RED "O" and BLUE "O⁻¹" shown meeting at the screen with a cancellation symbol (like the two colors merging into white, or a "poof" starburst)
 - Label: "O · O⁻¹ = identity. Net operation = nothing happened."
 - Below screen: "Interference returns."
