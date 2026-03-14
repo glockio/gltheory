@@ -46,9 +46,9 @@ So in our best effort to sit everyone down and ask, "can't we all just get along
 You are Mario. Not metaphorically. Your reality is taking place on a screen. There is a structure underneath that represents your world, and you have no direct access to it. But don't worry, there could be worse things than life as an Italian 2D plumber.
 @/style
 
-This sounds strange. But you deal with two-layer systems every day. Your monitor shows letters. Your computer stores ones and zeros. The letters are real — you're reading them right now. But what's actually stored looks nothing like what you see. We build and use these systems every day, they work like super duper well.
+This sounds strange. But you deal with two-layer systems every day. Your monitor shows letters. Your computer stores ones and zeros. The letters are real — you're reading them right now. But what's actually stored looks nothing like what you see.
 
-We're saying reality works the same way. What you experience — solid objects, a handful of rice, a gulp of water, all taking place on the screen world. It's produced by something underneath that you cannot see and have never touched. To be honest, it's not exactly a screen but this analogy gets you 90% of the way there. The point you need to get is there are layers to this shit.
+We're saying reality works the same way. What you experience — solid objects, a handful of rice, a gulp of water — is produced by something underneath that you cannot see and have never touched. The point you need to get is there are layers to this shit.
 
 @fig:two-layers-of-reality
 Whiteboard style. Two panels side by side with an arrow between them pointing right. Left panel labeled "THE STRUCTURE" shows a simple graph: dots connected by lines, clean and abstract. Right panel labeled "WHAT YOU EXPERIENCE" shows a stick figure Mario jumping on a platform with a question block above him. The arrow between them is labeled "produces." Below both panels: "You only see the right side. The left side runs the show."
@@ -62,10 +62,10 @@ Now here's what makes this more than a fun idea. When you accept that reality ha
 - Why can't you shield gravity? Got radiation? Lead stops it. Electromagnetic field bothering you? Faraday cage. Gravity? Nothing. Nobody has ever shielded gravity. Not once.
 - Why does looking at something change it? Not touching it. Not bumping it. Just looking.
 - Why do two particles on opposite sides of the universe give correlated answers instantly?
-- Why does time slow down near a black hole? Yes — this is real. How fast time passes actually changes depending on where you are. Your phone corrects for this every single day or your GPS would be wrong by 10 kilometers.
+- Why does time slow down near a black hole? Yes — this is real. Your phone corrects for this every single day or your GPS would be wrong by 10 kilometers.
 - At what age can a man know for sure that he won't go bald?
 
-So let's try and explain this. If we roll with the idea you are Mario and there is another layer? What "IS", this other layer? Are you 1's and 0's?
+So let's try and explain this. If we roll with the idea you are Mario and there is another layer? What "IS", this other layer?
 
 The other layer is a graph. A graph is just dots connected by lines. You already know graphs.
 
@@ -93,11 +93,9 @@ Well it's a graph. When they do math on spacetime they actually treat it as a gr
 
 Okay so if our logic tracks and spacetime is a graph, and we have been researching it for 110 years now... let's cheat a little bit and see what the research tells us our graph MUST look like.
 
-**Speed limit.** Nothing travels faster than one hop per tick. That is the speed of light. The speed of light has NOTHING at all to do with light, it is just the fastest the graph or anything can change.
+**Speed limit.** Nothing travels faster than one hop per tick. That is the speed of light — not because there's a cosmic speed enforcer, but because there's no mechanism to skip a connection. You can't jump three edges in one tick any more than you can skip three steps on a staircase in one step.
 
-That's c. Not because there's a cosmic speed enforcer — because there's no mechanism to skip a connection. You can't jump three edges in one tick any more than you can skip three steps on a staircase in one step.
-
-**3+1 dimensions.** Three dimensions of space plus one of time. Sick, we got a 3D graph. Time is the growth direction — new nodes being born. Not a fourth spatial axis.
+**3+1 dimensions.** Three dimensions of space plus one of time. Time is the growth direction — new nodes being born. Not a fourth spatial axis.
 
 **Mass equals energy.** A self-perpetuating topology. Call it mass when you weigh it. Call it energy when you release it. Same thing, different name.
 
@@ -106,29 +104,21 @@ That's c. Not because there's a cosmic speed enforcer — because there's no mec
 @fig:what-110-years-tells-us
 Whiteboard style. Heading: "THE GRAPH'S CHEAT SHEET." A 2×3 grid of small panels. 1) SPEED LIMIT: chain of 3 dots with arrows, "1 hop per tick. That's c." 2) MINIMUM SIZE: single edge with ruler, "1 hop = smallest possible distance." 3) NO GRID: neat grid with red ✗ vs messy organic graph with green ✓, "Organic, not tiled." 4) 3+1 DIMENSIONS: three spatial arrows + upward time arrow, "3 spatial + time = growth." 5) MASS = ENERGY: two-sided coin with "m" and "E", "Same thing. Different name." 6) SHORTCUTS EXIST: two dots far apart on surface, connected by line underneath, "The surface says far apart. The graph says neighbours." Below: "110 years of experiments. We're just naming what was measured."
 
+@/fig
+
 ### The Rules
 
-Now I want to focus on the rules for how this graph can change. And before you push back on the idea that I'm adding rules — take a second and think about this.
+Now I want to focus on the rules for how this graph can change. You already live in a world with rules. Hardcoded, unbreakable, non-negotiable rules. Nothing in this universe travels faster than 299,792,458 m/s. Every action has an equal and opposite reaction. These aren't suggestions. These are laws that have never been broken once in the history of the universe. You just don't question them because you grew up with them.
 
-You already live in a world with rules. Hardcoded, unbreakable, non-negotiable rules. Nothing in this universe travels faster than 299,792,458 m/s. Things attract each other with an invisible and unshieldable force at exactly 6.6743 × 10⁻¹¹ m³ kg⁻¹ s⁻². Every action has an equal and opposite reaction. These aren't suggestions. These are laws that have never been broken once in the history of the universe. You just don't question them because you grew up with them.
+So the idea that a graph has rules should not be controversial. You're already living under a set of them. I'd just like to propose fewer rules — and that some of the properties and constants we measure are emergent from a simpler set underneath. These rules are really just a fancy way of saying: past events sum together to make new events. Basic cause and effect.
 
-So the idea that a graph has rules should not be controversial. You're already living under a set of them. I'd just like to propose fewer rules — and that some of the properties and constants we measure are emergent from a simpler set underneath.
-
-These rules are really just a fancy way of saying: past events sum together to make new events. You already know this as basic cause and effect. We're just being more detailed about how they sum.
-
-**Rule 1 — The nodes in the graph are events.** Not points in space — events in spacetime. What is an event? I don't know exactly, but it would have to be some representation of the smallest amount of change that can occur in the universe. A thing that happened, at a place, at a time. You can't separate the where from the when.
-
-**Rule 2 — Edges are operations.** This just means the connections in the graph carry the operations to generate the next event. Lucky for us this is just math. So 3 × 2 = 6. In our graph world that would be stored as (3) —×→ (2), where 3 and 2 are events and multiplication is the operation, producing 6. So really what we have is: summing all operations to any node gives us the next "layer" or event in reality. This seems trippy but your intuition already understands that past events make the future events. This is basic cause and effect with fancy terms. Someone smarter can figure out exactly what all the operations are in the graph.
-
-**Rule 3 — Your position in the graph gives rise to properties.** The points themselves don't have properties beyond position. All other properties are derived from their position in the graph. An easy way to think of this is in your family tree, I might put your name, but if someone asked "Are you a parent?", we don't keep that information on your point, we just look if there is anyone under you in the tree. So your position in the family tree tells me what you are.
-
-**Rule 4 — The lines point forward, the graph grows.** A line from dot A to dot B means: A happened before B, and A could have influenced B. The lines carry the direction of cause and effect. Past to future. Again this is just saying that time moves on and there are past events that all sum together and say what the future event can be.
+**The nodes are events.** Not points in space — events in spacetime. A thing that happened, at a place, at a time. You can't separate the where from the when. **The edges are operations** — the connections carry the math that generates the next event. Summing all operations to any node gives us the next layer of reality. **Your position gives rise to properties** — just like in a family tree, where we don't store "parent" on a dot, we look at who's underneath it. **The lines point forward, the graph grows** — cause and effect, past to future. Time moves on.
 
 The main thing is your reality takes place at the edge. You can imagine an ocean of events that lead you to your "now", and your experience is always on the surface.
 
 @fig:reality-at-the-edge
 Whiteboard style. A large graph building upward like a coral reef or stalagmite. At the bottom: dense layers of small green committed nodes, tightly packed, fading into the background. As you go up, the layers become more visible, newer. At the very top: a thin line of purple pending nodes — the frontier. Draped over the top of this structure like a tablecloth over a table, or like the surface of the ocean over the depths below: a wavy membrane labeled "SPACETIME FABRIC — what you experience." Below the membrane, the graph structure labeled "THE STRUCTURE — all the events that came before." A small stick-figure Mario stands on top of the membrane. A label reads: "You live here. On the surface. The ocean floor built everything underneath you."
-
+---
 Your reality is the surface tension of a vast graph. Every event that ever happened is underneath, holding up the present moment. You live on the edge — the frontier — the thin layer where new events are being born. Spacetime is the surface of the ocean. The graph is everything below it.
 @/fig
 
@@ -150,66 +140,52 @@ Mass, objects, particles — all the result of stable configurations within the 
 
 Your boss pays you $1000 (event 1), your landlord charges you $1000 (event 2). Those sum together so you were poor then, and you are poor now. Two events resulting in a stable configuration where you forever remain poor. If those events happen again in the next now, you have a self-perpetuating topology of poverty.
 
-Now here is where it gets interesting. The fastest anything can travel in the graph is one hop at a time — the speed of light. And the speed of light has NOTHING to do with light, it's just the fastest our graph is capable of change. Think about it: what would it look like if time stopped? Everything would be frozen, nothing would change. So our perception of time is really the rate of change occurring in our local region of the graph.
+Now here is where it gets interesting. The fastest anything can travel in the graph is one hop at a time — the speed of light. And the speed of light has NOTHING to do with light, it's just the fastest our graph is capable of change. So our perception of time is really the rate of change occurring in our local region of the graph.
 
-So why is time relative? Why does it slow down near a black hole?
+If mass is a stable configuration, it means in order to get the NEXT state, we have to sum all of its edges. If we can only do one hop at a time — at the speed of light — then it takes longer to create the next "now" in that region of the graph. Dense regions process slowly. Sparse regions fly. This is time dilation.
 
-If mass is a stable configuration, it means in order to get the NEXT state, we have to sum all of its edges. If we can only do one hop at a time — at the speed of light — then it takes longer to create the next "now" in that region of the graph.
+@fig:growth-rate-gravity
+Whiteboard style, white background, DM Sans font. Cross-section view.
 
-This one is a bit of a head fuck. We need to separate "your time" — what you consider NOW — from the graph's "time." The graph's time we measure in "ticks." Your time we call "proper time."
+TOP: A wavy line representing spacetime fabric, dipping in the center.
 
-Think of it from Mario's perspective. I could pause my N64, walk away, come back and hit play, and to Mario, no time passed at all.
+BOTTOM: Graph structure (nodes + edges) underneath.
 
-Our graph is always ticking, but because some regions have to sum more edges, the graph does not grow evenly. Some areas like a photon are simple — they move at the speed of light. Other areas like near a black hole are dense — time SLOWS. This is time dilation.
+LEFT (no mass): Sparse nodes, tall vertical growth. 4 tick layers labeled
+"TICK 1–4." Green nodes. Growth is tall.
 
-So what is gravity then, and why can't you shield it? Gravity is the TAX you pay to get the next "now", to add a new layer to reality. It is unavoidable because it is the compute cost to process all the events in that region. More stuff means more gravity.
+CENTER (mass): Dense cluster of orange/gold interconnected nodes. Only 2 tick
+layers in the same time. Growth is stunted. Spacetime fabric dips above.
 
-This is why gravity pulls you in — your graph has a path that minimizes compute, and that path is the force. It is a routing table through the graph.
+RIGHT (no mass): Same as left — sparse, tall, 4 ticks of growth.
 
-Sounds like I am taking crazy pills again right? But this idea of minimizing work is actually an established thing in physics. It's called the principle of least action and it shows that light, everything, will ALWAYS take the most efficient path in the universe, as if it had calculated every possible option. When we shine light into water, it bends at exactly the angle that minimizes travel time. Every fucking time. Instantly. Change the density, add obstacles — it still gets this right, instantly. This is freaky as fuck but somehow our universe IS maintaining the most efficient path.
-
-So what we are proposing is not as crazy as it might sound on the surface.
-
-Think about what "mass warps spacetime" actually means in our graph. It's not that mass is pushing spacetime down like a bowling ball on a trampoline. That's the textbook picture but it's backwards.
-
-Imagine a field of grass growing. In the open, with sunlight, the grass grows fast — three, four new inches a week. But there are rocks scattered across the field. Under the rocks, the grass barely grows at all. Now zoom out and look at the field from above after a month. The open areas are tall and lush. The areas around the rocks are short. It LOOKS like the rocks created dips — like the field is warped around them. But the rocks didn't push anything down. The grass under them just never grew. The "warping" is really just uneven growth.
-
-That's what mass does to the graph. The dense region — the mass — takes longer to compute the next "now." Meanwhile the sparse regions around it are flying through their ticks, growing new layers, racing ahead. The difference in growth rate between the dense region and the space around it IS the curvature. Mass doesn't warp spacetime. Mass is slow spacetime. Everything else just grew faster.
-
-Our computers deal with this exact problem. When you call a function that calls a function that calls a function, your program builds up a call stack — each layer waiting for the one below it to finish. The deeper the stack, the longer it takes to get an answer back to the top. Mass in the graph is like a deep call stack. Lots of operations that need to resolve before the next layer can be built.
-
-And just like your computer maintains a routing table — the most efficient path through the network to avoid congestion — the graph does the same thing. Dense regions are congested. The cheapest path curves around them. That curve is gravity. The routing table is the force.
-
-@fig:density-across-graph
-(use existing SVG — shows causal density mountain shape, dense at mass, sparse at edges)
-Mass creates a mountain of causal density. Dense regions take more steps to resolve — like navigating a crowded room vs. an empty hallway. In computers, this is called a call stack.
+The spacetime fabric curves down over the dense region because the graph grew
+LESS there. Label: "Mass doesn't push spacetime down. It just grows slower.
+Everything else grew faster."
+---
+Mass doesn't push spacetime down. The graph just grows slower where it's dense. Everything else grew faster. The "warping" is uneven growth.
 @/fig
 
-@fig:invert-pyramid-spacetime
-(use existing SVG — inverts the density profile to show the classic spacetime curvature well)
-Now invert the density profile. The mountain becomes a well. Drape the spacetime fabric over it. THIS is the classic spacetime curvature diagram from every physics textbook. Same shape. Different perspective. Causal density IS the curvature.
-@/fig
+Think about what "mass warps spacetime" actually means in our graph. It's not that mass is pushing spacetime down like a bowling ball on a trampoline. That's the textbook picture but it's backwards. Imagine a field of grass growing. In the open, the grass grows fast — three, four new inches a week. But there are rocks scattered across the field. Under the rocks, the grass barely grows at all. Zoom out after a month. The open areas are tall and lush. The areas around the rocks are short. It LOOKS like the rocks created dips — like the field is warped around them. But the rocks didn't push anything down. The grass under them just never grew. The "warping" is really just uneven growth.
+
+That's what mass does to the graph. The dense region takes longer to compute the next "now." Meanwhile the sparse regions around it are flying through their ticks, racing ahead. The difference in growth rate IS the curvature. Mass doesn't warp spacetime. Mass is slow spacetime. Everything else just grew faster.
 
 Dense region = expensive paths through it = cheap paths curve around it. Objects following those cheap paths appear to curve toward the mass. That curve is gravity.
 
 @fig:gravity-routing
 Whiteboard style. Two panels. Left labeled "EMPTY SPACE": a uniform grid of dots, a straight arrow from point A to point B cutting directly across. Label: "cheapest path = straight line." Right labeled "MASS PRESENT": same grid but center region has a dense cluster of orange/gold dots with many cross-connections labeled "HIGH DENSITY — expensive." The path from A to B now curves around the dense cluster. Label: "cheapest path bends around the dense region. That bend IS gravity."
-
+---
 High density makes straight paths expensive. The graph routes around it. That curve is gravity. You are not being pulled — you are following the cheapest path through a graph that is denser near massive objects.
 @/fig
 
-**Why you can't shield gravity:** Gravity isn't a signal traveling through the graph — it IS the density of the graph. Adding a shield adds more nodes, more connections, more density. Every attempt to block gravity makes it stronger. Like trying to reduce traffic by adding more cars.
+Sounds like crazy pills again right? But this idea of minimizing work is actually an established thing in physics. It's called the principle of least action — light, everything, will ALWAYS take the most efficient path in the universe. When we shine light into water, it bends at exactly the angle that minimizes travel time. Every fucking time. Instantly. This is freaky as fuck but somehow our universe IS maintaining the most efficient path. So what we are proposing is not as crazy as it might sound.
 
-**Why gravity equals acceleration:** Accelerating rapidly creates dense local structure. Dense structure IS curvature IS gravity. Same thing, same cause.
+**Why you can't shield gravity:** Gravity isn't a signal traveling through the graph — it IS the density of the graph. Adding a shield adds more nodes, more connections, more density. Every attempt to block gravity makes it stronger. Like trying to reduce traffic by adding more cars.
 
 **Why there's no graviton:** "What particle carries gravity?" is like asking "what particle carries the shape of a triangle?" There is no particle. Gravity IS the structure.
 
 @style:insight
 Gravity is routing pressure. Dense topology makes some paths expensive. The graph follows the cheapest path. That curve is gravity. You can't shield it because a shield is more density — you're making it worse.
-@/style
-
-@style:physics-card:Time Dilation
-Near a massive object, the graph has more connections per region — denser terrain. A pattern traversing that terrain needs more hops per cycle, so its internal clock runs slower. This isn't theoretical — GPS satellites orbit where Earth's gravity is weaker. Their clocks run faster than clocks on the surface by 45 microseconds per day. Without correcting for this, your GPS would drift 10 km per day. Your phone depends on this being real.
 @/style
 
 ### The Rest of the Lineup
@@ -254,8 +230,6 @@ If your aunt asks first — before the call comes — you have to give an answer
 
 That right there is the whole thing. You are the node. The baby being born is an event traveling toward you. Your aunt asking is the consumer — the thing that forces you to commit to an answer. And the answer you give depends entirely on which events reach you before she asks.
 
-The events that make it to you in time? We're calling that your event cone.
-
 Now here is where it gets interesting. Physicists have been studying this "waiting" state for a hundred years. At the really small scale — individual particles, single photons — this state of "pending" shows up in our reality as something very specific. A wave. Physicists call it the probability wave, and it caused an absolute shitstorm that is still raging today.
 
 The argument is about whether this wave represents something truly random, or whether there's something underneath determining the outcome.
@@ -277,18 +251,6 @@ We're introducing a new concept. The event cone. It's narrower. It's not everyth
 Of this whole article this might be the only semi novel contribution I actually have -- and I am sure if I dig into it the idea won't be mine or it will be wrong.
 
 Your aunt asking "are you an uncle?" — that's the thing forcing commitment. Everything that reaches you before she asks — your brother's call, a text from your mum, your sister posting on Instagram — that's your event cone. The events that actually count.
-
-Now let me deepen this with money.
-
-Imagine you're broke. Zero dollars in your bank account. Now two things happen at once: you write someone a cheque for $20, and your buddy says he owes you $40 and wire transfers it to you.
-
-You don't know how long the wire transfer will take to arrive. One day? Three days? You have no idea.
-
-Right now, that cheque you wrote? It might bounce. Or it might clear. You genuinely don't know. You're in superposition. Not because the universe is being weird — because events are still in transit and you don't know the order they'll land in.
-
-Now your friend goes to cash the cheque. That's the thing forcing commitment. The bank has to produce an answer. Does the $40 arrive first, or does the cheque hit an empty account?
-
-If the wire lands first: cheque clears. If the cheque hits first: it bounces. Nothing random happened. You just didn't know the order because you couldn't see the whole system. If you were watching this as an outside observer, the chain of events was obvious the whole time.
 
 Same node. Consumer arrives early — small event cone, fewer inputs, one result. Consumer arrives late — larger event cone, more inputs, different result. Same dot in the graph. Different timing. Different reality.
 
@@ -314,96 +276,19 @@ Nodes OUTSIDE the light cone are light gray.
 Bottom caption: "The light cone is the maximum. The event cone is what actually counts. Same node, different consumer timing, different event cone, different reality."
 
 SVG approach: 900×600 viewBox. Plot nodes as circles (r=8 committed green #27ae60, r=12 pending purple #8e44ad dashed). Edges as lines with arrowheads. Event cone as a path with fill="#1abc9c" opacity="0.15" and stroke="#1abc9c" dashed. Light cone as larger dashed gray path. Consumer as small orange (#d35400) triangle/arrow approaching. Use DM Sans for all labels. Keep it clean — no heavy borders, white background.
+---
+The light cone is the maximum. The event cone is what actually counts. Same node, different consumer timing, different event cone, different reality.
 @/fig
 
 @style:insight
 The event cone is narrower than the light cone. It's not what could reach you — it's what reaches you before you're forced to answer. When you're asked determines what counts.
 @/style
 
-### The Double Slit
-
-Now let's apply this to the experiment that broke physics.
-
-The double slit experiment goes like this: you fire a single photon at a wall with two slits. Behind the wall is a screen. The photon hits the screen at a single point. One dot. Nothing weird yet.
-
-But fire thousands of photons, one at a time, and the dots form a pattern. Not a random scatter. Not two clumps behind the two slits. An interference pattern — alternating bands of bright and dark, exactly the kind of pattern you get when two waves overlap and reinforce or cancel each other.
-
-Each photon went through individually. There was nothing to interfere WITH. And yet the pattern says otherwise.
-
-@style:physics-card:The Double-Slit Experiment
-The double-slit experiment fires particles one at a time at a barrier with two slits. Each particle lands at a single point on the screen behind it. But over thousands of particles, the dots form an interference pattern — bands of high and low density — as if each particle went through both slits simultaneously and interfered with itself. Place a detector at one slit to learn which slit the particle went through, and the interference pattern vanishes. The particle behaves as if it only went through one slit. This has been confirmed with photons, electrons, atoms, and even large molecules.
-@/style
-
-Here's what this looks like in our graph.
-
-The photon enters as a set of events propagating through the graph. Two slits means two open paths. The events along both paths are pending — nobody has asked for their value yet. Both paths carry operations — the accumulated transformations along each route.
-
-The screen is the thing that forces commitment. When a screen node demands a value, it sums the operations from every path in its event cone. Both paths contribute. The operations from path A and path B combine at the screen. At some positions they reinforce — bright band. At others they cancel — dark band. Interference pattern.
-
-Not because the photon "went both ways." Because pending nodes along both paths contributed operations to the screen's event cone.
-
-@fig:double-slit-graph
-Whiteboard style, white background, DM Sans. Shows graph structure of double slit.
-
-LEFT: Single green committed node labeled "SOURCE."
-
-CENTER: Two diverging paths of purple dashed nodes (pending).
-
-- Top path labeled "PATH A" — 4-5 purple nodes with edges carrying label "O_A"
-- Bottom path labeled "PATH B" — 4-5 purple nodes with edges carrying label "O_B"
-- Both paths pass through a vertical barrier (gray dashed line labeled "WALL WITH 2 SLITS") — each path goes through one slit opening.
-
-RIGHT: Single node labeled "SCREEN — demands value." Shown as orange circle.
-
-- Arrows from both paths converge on this node.
-- Label at screen: "Value = O_A + O_B"
-- Small annotation: "Both paths in event cone → operations sum → interference"
-
-Below: "Nobody asked the slit nodes to commit. Both paths stay pending. Both contribute operations to the screen. That's the interference pattern."
-
-SVG approach: 900×500 viewBox. Source as green circle left. Wall as vertical gray dashed line with two gaps. Two paths of purple dashed circles diverging through gaps then converging. Screen as orange circle right. Operation labels on edges. Clean, minimal.
-@/fig
-
-Now add a detector at one slit.
-
-The detector is a thing that forces commitment — it demands the slit A nodes commit, right there, before those events reach the screen. Those nodes are no longer pending. They've produced a value. Committed. Done.
-
-Now the screen gets: a committed value from path A, plus pending operations from path B. The precise relationship between the two paths — the thing that created interference — is broken. The event cone at slit A got shrunk by the detector. No interference. Pattern destroyed.
-
-The detector didn't block anything. It didn't change the photon. It forced early commitment. It asked too soon.
-
-@fig:double-slit-detector
-Whiteboard style, white background, DM Sans. Same layout as previous but:
-
-- PATH A now has an extra orange node at the slit labeled "DETECTOR — forces commitment"
-- The path A nodes AFTER the detector are now GREEN (committed, no longer pending)
-- PATH B nodes still PURPLE (pending)
-- At screen: "Committed value from A + pending operations from B"
-- Label: "Phase relationship broken. No interference."
-- The event cone at slit A is visually shrunk — small teal shaded area ending at the detector.
-
-Below: "The detector asked slit A to commit. Now paths A and B no longer have the right relationship. Interference dies. Not because anything was blocked — because commitment happened too soon."
-
-SVG: Same layout, detector as orange filled circle on path A. Path A nodes after detector change from purple dashed to green filled. Annotation arrows.
-@/fig
-
-### Delayed Choice
-
-Here is where it starts getting weird. And I mean properly weird.
-
-What if we don't decide whether to turn the detector on until AFTER the photon has already passed the slits?
-
-This has been done. It works. If you choose to detect — even after the photon already passed the slit — the interference pattern vanishes. If you choose not to detect, the interference pattern remains. As if the photon somehow knew what you were going to decide. As if your future choice reached back in time.
-
-In standard physics, this is genuinely unsettling. It looks like the future is affecting the past.
-
-In our graph: it doesn't matter when WE decided. Our decision is an event in OUR region of the graph. What matters is whether a consumer forced the slit nodes to commit before the screen asked. If no consumer demanded their value, they stayed pending. Our awareness of the decision, the timing of our choice — none of that is relevant. The graph doesn't care about our story. It only cares about which operations composed at the screen node.
-
-We are Mario. Our perception of "when" is our proper time. The graph has its own structure. Those are not the same thing.
-
 ### The Quantum Eraser
 
-Okay. Now the real one. This is my strongest piece of evidence that something like this model is actually what's going on.
+Now for the experiment that I think proves something like this model is actually what's going on. To set it up: physicists have an experiment called the double slit, where they fire photons through two openings. The photons create an interference pattern — alternating bands of bright and dark — as if each photon went through both slits at once. Put a detector at one slit to check which way the photon went, and the pattern disappears. In our graph: both paths stay pending until the screen demands a value. Both contribute operations. Interference. A detector forces early commitment on one path — breaks the relationship — kills the pattern.
+
+That's weird enough. But now the real one.
 
 The quantum eraser experiment goes like this:
 
@@ -451,13 +336,13 @@ STAGE 3 (right third): At the screen node.
 Bottom of entire figure: "The detector recorded. The eraser deleted. Net operation = nothing. The screen sees both paths with their original relationship intact. This is not time travel. This is f(f⁻¹(x)) = x."
 
 SVG approach: 900×550 viewBox. Three panels or one continuous flow. Red for detector operation, blue for eraser operation, white/gold for cancellation. Keep it clean. The cancellation symbol is the visual payoff — make it satisfying. Maybe the red and blue arrows collide and produce a white starburst or a simple "= 1" label.
+---
+The detector recorded. The eraser deleted. Net operation = nothing. The screen sees both paths with their original relationship intact. This is not time travel. This is f(f⁻¹(x)) = x.
 @/fig
 
 This is worth sitting with for a second. Because to us — inside the graph — the events happened in this order: detector fires, photon hits screen, eraser fires. It looks backwards. It looks like the eraser reached back in time and changed the result.
 
-But in the graph, "when" something happens in our proper time is not the same as how operations compose. The detector added an operation. The eraser subtracted it. The net is zero. The slit A nodes were never actually forced to commit in a way that broke the phase relationship, because the operation that would have done it was cancelled by a subsequent operation.
-
-Think of it like this. Someone adds 5 to your bank account. Then someone subtracts 5. Your balance didn't "time travel." Two things happened that cancelled each other out. The net is zero. It doesn't matter what order you process them in.
+But in the graph, "when" something happens in our proper time is not the same as how operations compose. The detector added an operation. The eraser subtracted it. The net is zero. Think of it like this. Someone adds 5 to your bank account. Then someone subtracts 5. Your balance didn't "time travel." Two things happened that cancelled each other out. The net is zero. It doesn't matter what order you process them in.
 
 The most confusing experiment in physics is function composition.
 
@@ -471,52 +356,18 @@ The quantum eraser is not spooky and it is not time travel. It is what happens w
 
 This is, to me, the single strongest piece of evidence that something like this model is going on. Because the quantum eraser makes perfect, obvious, boring sense if reality is the sum of operations in a graph. And it makes absolutely no sense otherwise.
 
-### Two Very Different Neighbourhoods
-
-Now picture two very different parts of the graph.
-
-Deep inside matter — your chair, your face, the ground — every node is surrounded by neighbours that need answers constantly. A node barely exists before something forces it to commit. Event cone? Tiny. Almost nothing pending. Everything is asked immediately. That's the classical world. Solid. Definite. Real.
-
-Out in the quiet frontier — a lone photon in deep space, an electron in a vacuum — nodes are sparse. Nothing nearby needs the answer. A node can sit there pending for millions of ticks. Events keep arriving from distant regions. The event cone grows and grows. Lots of pending. Lots of "maybe."
-
-Same graph. Same rules. Just a different neighbourhood. Your chair doesn't quantum tunnel because every atom in it is being demanded by every atom around it, every single tick. Zero time to accumulate anything interesting.
-
-@style:insight
-Quantum mechanics is what nodes look like when nothing has asked yet. Classical physics is what nodes look like when everything is always asking. Not different laws. Different neighbourhoods.
-@/style
-
-@style:physics-card:Decoherence
-In standard quantum mechanics, "decoherence" explains why quantum behavior vanishes at large scales — a quantum system entangled with a large environment rapidly loses its superposition. In graph terms: large environments are busy neighbourhoods with consumers at every tick. Nothing stays pending. The math gives the same answer. We're just describing the structure rather than the statistics.
-@/style
-
-### The Rest of the Weird Stuff
-
-**Entanglement.** Two particles share a common causal history — common ancestor nodes, shared transformations. They separate. Both pending. When you measure particle A, it commits — tracing back through shared ancestors. When you measure particle B later, it commits — same shared ancestors, complementary transformations. Correlated values. Not because A sent a message to B. Because both computations trace back to the same root.
-
-No faster-than-light communication. Sealed envelopes from the same deck.
-
-**Tunneling.** A particle hits a wall it shouldn't be able to cross. Remember — shortcuts exist. Two nodes that look "far apart" on the surface might be direct neighbours in the actual graph, connected by an edge that doesn't follow the emergent geometry. The particle doesn't go through the wall. It takes a path the wall doesn't cover.
-
-@style:physics-card:Quantum Tunneling
-Quantum tunneling is measured in every semiconductor on Earth — your phone depends on it. Alpha decay, scanning tunneling microscopes, and nuclear fusion in the sun all require particles to traverse classically forbidden barriers. The standard treatment uses a decaying exponential wavefunction inside the barrier. In graph terms: the probability drops because few graph edges cross the barrier region — but some do. The tunneling rate depends on how many shortcut edges exist, which maps to barrier width and height.
-@/style
-
 ### So Is Anything Random?
 
 This is where I started. Nine years ago. Is there any event in this universe that does not depend on the events that came before it?
 
 In our version: no. Every event is the sum of its inputs. Every input travels at a known speed through a known structure. The outcome was always determined by the topology. You just couldn't see it coming because you're inside the graph and information travels at C.
 
-The quantum eraser didn't travel backwards in time. Two operations cancelled. Net zero. The outcome was always going to be identity. We just couldn't see it because the events reached us in an order that made it look impossible.
+Deep inside matter — your chair, your face, the ground — every node is surrounded by neighbours that need answers constantly. Event cone? Tiny. Everything is asked immediately. That's the classical world. Solid. Definite. Real. Out in the quiet frontier — a lone photon in deep space — nodes are sparse. Nothing nearby needs the answer. A node can sit there pending for millions of ticks. Same graph. Same rules. Different neighbourhood. Quantum mechanics and classical physics aren't different laws. They're different densities.
 
 I'd rather be Mario than accept random.
 
 @style:insight
 Quantum mechanics is not spooky. It is not random. It is a node that hasn't been asked yet — events still on their way through the graph. The moment something needs its value, it commits, and it was always going to give exactly that answer. You just couldn't see it coming because you're inside the graph.
-@/style
-
-@style:physics-card:Bell's Theorem
-Bell's theorem (1964) proves no theory of local hidden variables can reproduce quantum correlations — specifically the violation of the CHSH inequality. Our response: node values are not predetermined hidden variables. Values don't exist until commitment. But the graph's topological structure — including shared causal history — is predetermined back to initial conditions. Whether this constitutes "local hidden variables" in Bell's sense is genuinely open. Reproducing the exact cos²(θ) correlation function from graph topology is unsolved. It is the single most important quantitative gap in the framework.
 @/style
 
 ## Wild Guesses (Clearly Labeled)
@@ -529,9 +380,14 @@ If the framework is right — or even close — it might hint at some open quest
 
 **Dark energy as frontier pressure.** The graph keeps growing. New nodes create new places for newer nodes. The routing pressure at the expanding frontier — the tendency of the graph to propagate outward — might be what we're measuring as dark energy. Not a force. Just the graph growing, with the edges always being the last place anything committed.
 
-@style:physics-card:Prior Work
-These speculations are not new territory. Causal set theory, loop quantum gravity, and Wolfram's hypergraph project have all explored discrete spacetime with similar implications. The Standard Model symmetry groups would need to emerge from the graph's topological update rules — partial progress exists in loop quantum gravity's spin network approach. All three require serious mathematics before they become more than suggestive analogies.
-@/style
+### What Else This Explains
+
+| Phenomenon    | What it is in the graph |
+| ------------- | ----------------------- |
+| Entanglement  | Two particles share a common causal ancestor. They separate. Both pending. When one commits, it traces back through shared history. The other does the same — same root, complementary values. Sealed envelopes from the same deck. No signal. |
+| Tunneling     | Shortcuts exist. Two nodes that look "far apart" on the surface might be direct neighbours in the actual graph. The particle doesn't go through the wall — it takes a path the wall doesn't cover. |
+| Decoherence   | Large environments are busy neighbourhoods with consumers at every tick. Nothing stays pending. Quantum behaviour vanishes because everything is always being asked. |
+| Double slit   | Both paths stay pending. Both contribute operations to the screen. Operations reinforce or cancel — interference pattern. Add a detector? Early commitment breaks the relationship. Pattern dies. |
 
 ---
 
@@ -540,9 +396,7 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 @style:callout-blue
 **GL Theory — Technical Position**
 
-**Core claim:** Spacetime is a directed graph of discrete events connected by causal edges carrying algebraic operations. The causal structure is acyclic — effects cannot precede their causes — but the spatial subgraph may contain self-propagating topology. Those stable topologies are mass. The graph grows: new nodes are produced as functions of their causal predecessors. Node values are lazily evaluated — computed only when demanded by a downstream consumer. Causal influence propagates at C: 1 edge per tick maximum.
-
-**Relationship to existing work:** This framework operates within discrete quantum gravity — specifically causal set theory (Bombelli et al., 1987), loop quantum gravity (Rovelli, Smolin), and Wolfram's hypergraph physics project (2020). The novel framing, if any: nodes as thunks, commitment as forced evaluation by a consumer, the event cone as distinct from the light cone. Standard decoherence theory describes the quantum-to-classical transition statistically; this describes it structurally.
+**Core claim:** Spacetime is a directed graph of discrete events connected by causal edges carrying algebraic operations. Stable topologies are mass. The graph grows — growth IS time. Node values are lazily evaluated — computed only when demanded by a downstream consumer. Causal influence propagates at C: 1 edge per tick maximum.
 
 **Six axioms:**
 
@@ -552,19 +406,6 @@ These speculations are not new territory. Causal set theory, loop quantum gravit
 4. Node properties derive entirely from position — from paths reaching the node and their accumulated operations. Nodes store nothing.
 5. Changes propagate at C: 1 edge per tick maximum.
 6. Nodes are pending until demanded by a consumer. Pending nodes accumulate inputs as events arrive. Commitment freezes inputs and computes the value. Committed nodes are immutable.
-
-**What is claimed vs derived:**
-
-- Time dilation: qualitatively derived from causal density. Consistent with GPS corrections to ~10⁻¹⁰. Not formally derived.
-- Gravity as routing pressure: structurally consistent with GR geodesics. Einstein field equations not derived.
-- Mass as self-perpetuating topology: consistent with LQG particle models. Spatial cycles whose edge-operation products reproduce the same topology each tick. No mass spectrum derived.
-- Measurement as consumer-forced commitment: structurally reproduces decoherence. Born rule not derived.
-- Bell correlations via shared causal topology: structural argument only. cos²(θ) not derived.
-- Tunneling as graph adjacency: edges need not respect emergent spatial geometry. Two nodes "far apart" on the surface may be graph neighbours — a particle can traverse that edge in one tick. This is tunneling.
-
-**Potentially fatal gaps:** (1) Einstein field equations not derived. (2) Lorentz invariance requires Poisson sprinkling from causal set theory — borrowed, not derived. (3) Born rule unexplained. (4) Edge algebra unspecified. (5) Bell inequality violation not quantitatively reproduced.
-
-**Prior art to engage:** Causal set theory · Loop quantum gravity · Wolfram physics project · Penrose spin networks · 't Hooft cellular automaton interpretation.
 @/style
 
 ### Outro
