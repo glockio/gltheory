@@ -350,6 +350,3 @@ Here are some wild guesses though:
 5. Changes propagate at C: 1 edge per tick maximum.
 6. Nodes are pending until demanded by a consumer. Pending nodes accumulate inputs as events arrive. Commitment freezes inputs and computes the value. Committed nodes are immutable.
    @/style
-
-
-
