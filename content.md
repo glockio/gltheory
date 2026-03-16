@@ -88,9 +88,9 @@ Beautiful sentence John. Now what THE FUCK does that even mean? It tells you wha
 
 Einstein gave us spacetime and general relativity around 110 years ago and we have a pretty incredible understanding of it and its properties. Mass warps spacetime and this curvature gives us gravity, as well as time dilation, so the closer you are to a black hole the slower time moves for you.
 
-Now here is where I would like to play my Rick Rubin card and apply my "taste". That image of a trampoline and a bowling ball is wrong.
+Now here is where I would like to play my Rick Rubin card and apply my "taste". The image of a trampoline and a bowling ball is wrong. The end result is correct, but the mechanism for how mass warps spacetime is wrong (according to me).
 
-Instead, imagine a meadow with a rock in it. The grass around the rock grows, but underneath the rock it grows very slowly. Apply that spacetime fabric graphic on the shape and we end up with the same end result as a bowling ball on a trampoline.
+Instead, imagine a meadow with a rock in it. Pretend the grass can still grow with the rock on it, its just grows slower than the regions with no rocks. We end up with a similar shape/result to the bowling ball on a trampoline.
 
 Except, we suggested something subtle that makes a BIG difference. The mass does not warp the trampoline — the grass grows around the rock, that area of grass just changes more slowly.
 
