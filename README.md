@@ -1,6 +1,6 @@
 # GL Theory
 
-Greg's Computational Guide to the Universe. Published at [averyseriousperson.com](https://averyseriousperson.com).
+Graph Layer: A Software Engineers Guide To The Universe. Published at [averyseriousperson.com](https://averyseriousperson.com).
 
 ## File Structure
 

@@ -1,0 +1,145 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans font. A simple bathtub viewed from a side cutaway/cross-section. Water fills most of the tub. A rubber duck floats on the surface. A faucet on the left pours a thin stream of water into the tub. Labels: stream="Events happening," surface="YOUR 'NOW' — spacetime," duck="You," deeper water="ALL THE EVENTS THAT CAME BEFORE," upward arrow="Water rises → time passes," bottom="Big Bang." -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'DM Sans', sans-serif">
+  <rect width="800" height="500" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrowUp" markerWidth="7" markerHeight="5" refX="3.5" refY="5" orient="auto">
+      <polygon points="0 5, 3.5 0, 7 5" fill="#2471a3"/>
+    </marker>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- BATHTUB — side cutaway                       -->
+  <!-- ============================================ -->
+
+  <!-- Tub outer shape (thick rounded bottom, open top) -->
+  <path d="M 140,160 L 140,380 Q 140,430 190,430 L 650,430 Q 700,430 700,380 L 700,160"
+        fill="none" stroke="#555555" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Tub left rim -->
+  <line x1="110" y1="160" x2="170" y2="160" stroke="#555555" stroke-width="3" stroke-linecap="round"/>
+  <!-- Tub right rim -->
+  <line x1="670" y1="160" x2="730" y2="160" stroke="#555555" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ============================================ -->
+  <!-- WATER LAYERS — darker toward the bottom      -->
+  <!-- ============================================ -->
+
+  <!-- Layer 1 — surface (lightest blue) -->
+  <rect x="141" y="210" width="558" height="40" fill="#2471a3" opacity="0.10"/>
+
+  <!-- Layer 2 -->
+  <rect x="141" y="250" width="558" height="40" fill="#2471a3" opacity="0.15"/>
+
+  <!-- Layer 3 -->
+  <rect x="141" y="290" width="558" height="40" fill="#2471a3" opacity="0.22"/>
+
+  <!-- Layer 4 -->
+  <rect x="141" y="330" width="558" height="40" fill="#2471a3" opacity="0.30"/>
+
+  <!-- Layer 5 — deepest (darkest blue, clipped to tub curve) -->
+  <path d="M 141,370 L 141,380 Q 141,429 190,429 L 650,429 Q 699,429 699,380 L 699,370 Z"
+        fill="#2471a3" opacity="0.40"/>
+
+  <!-- Subtle water surface line (wavy) -->
+  <path d="M 141,210 Q 200,205 260,210 Q 330,216 400,210 Q 470,204 540,210 Q 610,216 660,210 Q 680,208 699,210"
+        fill="none" stroke="#2471a3" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- ============================================ -->
+  <!-- FAUCET — left side                           -->
+  <!-- ============================================ -->
+
+  <!-- Faucet pipe coming from wall -->
+  <rect x="60" y="90" width="60" height="12" rx="3" fill="#7a7a6a" opacity="0.7"/>
+  <!-- Faucet downward spout -->
+  <rect x="110" y="90" width="12" height="40" rx="3" fill="#7a7a6a" opacity="0.7"/>
+  <!-- Faucet handle -->
+  <line x1="80" y1="85" x2="100" y2="85" stroke="#7a7a6a" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="90" cy="82" r="4" fill="#7a7a6a" opacity="0.5"/>
+
+  <!-- Water stream from faucet -->
+  <path d="M 116,130 Q 118,170 155,210"
+        fill="none" stroke="#2471a3" stroke-width="2.5" opacity="0.45" stroke-dasharray="6,4"/>
+  <path d="M 116,130 Q 120,165 150,210"
+        fill="none" stroke="#2471a3" stroke-width="1.5" opacity="0.35" stroke-dasharray="4,5"/>
+
+  <!-- Stream label: "Events happening." -->
+  <text x="58" y="150" fill="#2471a3" font-size="11" font-weight="600" font-style="italic"
+        transform="rotate(-18, 58, 150)">Events happening.</text>
+
+  <!-- ============================================ -->
+  <!-- RUBBER DUCK                                  -->
+  <!-- ============================================ -->
+
+  <!-- Duck body (oval sitting on surface) -->
+  <ellipse cx="460" cy="208" rx="30" ry="18" fill="#d4a017" opacity="0.85"/>
+
+  <!-- Duck head -->
+  <circle cx="488" cy="190" r="13" fill="#d4a017" opacity="0.9"/>
+
+  <!-- Duck eye -->
+  <circle cx="493" cy="187" r="2.5" fill="#333333"/>
+
+  <!-- Duck beak -->
+  <polygon points="501,190 512,188 501,193" fill="#d35400" opacity="0.8"/>
+
+  <!-- Duck label: "You." -->
+  <text x="460" y="175" text-anchor="middle" fill="#d4a017" font-size="12" font-weight="700">You.</text>
+
+  <!-- ============================================ -->
+  <!-- SURFACE LABEL                                -->
+  <!-- ============================================ -->
+
+  <!-- Dashed line extending from surface -->
+  <line x1="550" y1="210" x2="720" y2="210" stroke="#2471a3" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <text x="740" y="206" fill="#2471a3" font-size="12" font-weight="700">YOUR "NOW"</text>
+  <text x="740" y="222" fill="#2471a3" font-size="10" opacity="0.7">spacetime</text>
+
+  <!-- ============================================ -->
+  <!-- UPWARD ARROW: "Water rises -> time passes"   -->
+  <!-- ============================================ -->
+
+  <line x1="340" y1="260" x2="340" y2="215" stroke="#2471a3" stroke-width="2" marker-end="url(#arrowUp)" opacity="0.7"/>
+
+  <text x="348" y="232" fill="#2471a3" font-size="10" font-weight="600" font-style="italic">Water rises</text>
+  <text x="348" y="246" fill="#2471a3" font-size="10" font-weight="600" font-style="italic">&#8594; time passes.</text>
+
+  <!-- ============================================ -->
+  <!-- SIDE LABEL: "ALL THE EVENTS THAT CAME BEFORE"-->
+  <!-- ============================================ -->
+
+  <!-- Bracket-like lines along right inside -->
+  <line x1="715" y1="250" x2="725" y2="250" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="725" y1="250" x2="725" y2="400" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+  <line x1="715" y1="400" x2="725" y2="400" stroke="#7a7a6a" stroke-width="1.5" opacity="0.5"/>
+
+  <text x="738" y="310" fill="#7a7a6a" font-size="10" font-weight="600">ALL THE</text>
+  <text x="738" y="324" fill="#7a7a6a" font-size="10" font-weight="600">EVENTS</text>
+  <text x="738" y="338" fill="#7a7a6a" font-size="10" font-weight="600">THAT CAME</text>
+  <text x="738" y="352" fill="#7a7a6a" font-size="10" font-weight="600">BEFORE.</text>
+
+  <!-- ============================================ -->
+  <!-- BOTTOM OF TUB: "Big Bang."                   -->
+  <!-- ============================================ -->
+
+  <text x="420" y="422" text-anchor="middle" fill="#7a7a6a" font-size="11" font-weight="600" opacity="0.45">Big Bang.</text>
+
+  <!-- ============================================ -->
+  <!-- SMALL DECORATIVE DETAILS — napkin feel        -->
+  <!-- ============================================ -->
+
+  <!-- Tiny bubbles near the duck -->
+  <circle cx="435" cy="215" r="2" fill="none" stroke="#2471a3" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="442" cy="220" r="1.5" fill="none" stroke="#2471a3" stroke-width="0.7" opacity="0.25"/>
+  <circle cx="480" cy="218" r="1.8" fill="none" stroke="#2471a3" stroke-width="0.7" opacity="0.25"/>
+
+  <!-- A few faint horizontal ripple lines in deeper water -->
+  <line x1="200" y1="300" x2="350" y2="300" stroke="#2471a3" stroke-width="0.7" opacity="0.12"/>
+  <line x1="400" y1="340" x2="580" y2="340" stroke="#2471a3" stroke-width="0.7" opacity="0.10"/>
+  <line x1="250" y1="370" x2="500" y2="370" stroke="#2471a3" stroke-width="0.7" opacity="0.08"/>
+
+  <!-- Tub feet (small rounded stubs) -->
+  <ellipse cx="175" cy="438" rx="12" ry="6" fill="#7a7a6a" opacity="0.35"/>
+  <ellipse cx="665" cy="438" rx="12" ry="6" fill="#7a7a6a" opacity="0.35"/>
+</svg>

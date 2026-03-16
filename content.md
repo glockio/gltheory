@@ -1,5 +1,5 @@
 @ai: Title: GL Theory
-@ai: Subtitle: Greg's Computational Guide to the Universe
+@ai: Subtitle: A Software Engineers Guide To The Universe
 @ai: Byline: MARCH 2026 · PLAIN ENGLISH EDITION
 
 @style:callout-neutral

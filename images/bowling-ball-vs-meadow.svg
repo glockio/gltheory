@@ -1,0 +1,237 @@
+<!-- DESCRIPTION: Two panels side by side, separated by a vertical divider. Left: trampoline with bowling ball warping fabric (standard spacetime picture). Right: top-down meadow where grass grows slower near a rock (the meadow model). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480">
+  <!-- White background -->
+  <rect width="820" height="480" fill="#ffffff"/>
+
+  <!-- Vertical divider -->
+  <line x1="410" y1="20" x2="410" y2="430" stroke="#cccccc" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ==================== LEFT PANEL: THE STANDARD PICTURE ==================== -->
+
+  <!-- Title -->
+  <text x="205" y="38" font-family="DM Sans, sans-serif" font-size="15" font-weight="700" fill="#333333" text-anchor="middle">THE STANDARD PICTURE</text>
+  <text x="205" y="56" font-family="DM Sans, sans-serif" font-size="16" fill="#c0392b" text-anchor="middle" opacity="0.7">&#x2717;</text>
+
+  <!-- Trampoline frame — slight perspective (trapezoid) -->
+  <polygon points="60,180 350,180 370,290 40,290" fill="none" stroke="#888888" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Grid lines on trampoline surface — horizontal lines that curve downward in center -->
+  <!-- Horizontal grid lines -->
+  <path d="M 60,195 Q 205,195 350,195" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 52,210 Q 205,213 348,210" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 48,225 Q 205,232 346,225" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 45,240 Q 205,255 344,240" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 43,255 Q 205,270 342,255" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 41,270 Q 205,278 340,270" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 40,285 Q 205,288 370,285" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+
+  <!-- Vertical grid lines that curve down toward center -->
+  <path d="M 100,183 Q 100,235 96,288" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 145,182 Q 143,238 138,288" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 190,181 Q 185,250 182,288" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 220,181 Q 218,250 225,288" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 260,181 Q 265,238 270,288" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+  <path d="M 305,182 Q 310,235 315,288" fill="none" stroke="#bbbbbb" stroke-width="0.8"/>
+
+  <!-- Funnel depression in the fabric -->
+  <ellipse cx="205" cy="258" rx="45" ry="18" fill="none" stroke="#999999" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <path d="M 160,258 Q 175,290 205,300 Q 235,290 250,258" fill="none" stroke="#888888" stroke-width="1.5"/>
+
+  <!-- Bowling ball -->
+  <circle cx="205" cy="248" r="22" fill="#444444" stroke="#333333" stroke-width="1.5"/>
+  <!-- Bowling ball finger holes -->
+  <circle cx="198" cy="240" r="3" fill="#333333"/>
+  <circle cx="210" cy="238" r="3" fill="#333333"/>
+  <circle cx="204" cy="230" r="2.5" fill="#333333"/>
+  <!-- Highlight on ball -->
+  <circle cx="195" cy="237" r="5" fill="#666666" opacity="0.4"/>
+
+  <!-- Marble rolling toward the ball -->
+  <circle cx="310" cy="218" r="7" fill="#2471a3" stroke="#1a5276" stroke-width="1"/>
+  <!-- Marble highlight -->
+  <circle cx="307" cy="215" r="2" fill="#5dade2" opacity="0.6"/>
+
+  <!-- Motion line for marble -->
+  <path d="M 330,210 Q 322,213 315,216" fill="none" stroke="#2471a3" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+  <path d="M 340,206 Q 332,209 325,213" fill="none" stroke="#2471a3" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+
+  <!-- Curved arrow showing marble path -->
+  <path d="M 312,222 Q 280,240 240,252" fill="none" stroke="#2471a3" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.5"/>
+  <!-- arrowhead -->
+  <polygon points="240,252 248,248 246,256" fill="#2471a3" opacity="0.5"/>
+
+  <!-- Downward arrow showing "pushes down" -->
+  <line x1="205" y1="310" x2="205" y2="340" stroke="#c0392b" stroke-width="1.5" opacity="0.6"/>
+  <polygon points="205,343 200,335 210,335" fill="#c0392b" opacity="0.6"/>
+
+  <!-- Left panel caption -->
+  <text x="205" y="370" font-family="DM Sans, sans-serif" font-size="12" fill="#555555" text-anchor="middle">"Mass pushes spacetime down."</text>
+
+
+  <!-- ==================== RIGHT PANEL: THE MEADOW ==================== -->
+
+  <!-- Title -->
+  <text x="615" y="38" font-family="DM Sans, sans-serif" font-size="15" font-weight="700" fill="#333333" text-anchor="middle">THE MEADOW</text>
+  <text x="615" y="56" font-family="DM Sans, sans-serif" font-size="16" fill="#1e8449" text-anchor="middle" opacity="0.7">&#x2713;</text>
+
+  <!-- Meadow background — concentric growth zones -->
+  <!-- Outer zone: tall grass (darkest green) -->
+  <rect x="430" y="75" width="370" height="310" rx="8" fill="#d5f5e3" stroke="#b2dfbc" stroke-width="1"/>
+
+  <!-- Medium zone -->
+  <circle cx="615" cy="230" r="130" fill="#eafaf1" stroke="none"/>
+
+  <!-- Inner zone: sparse/short grass (lightest) -->
+  <circle cx="615" cy="230" r="70" fill="#f9fef9" stroke="none"/>
+
+  <!-- Bare zone nearest rock -->
+  <circle cx="615" cy="230" r="35" fill="#fafafa" stroke="none"/>
+
+  <!-- Tall grass blades — outer edges -->
+  <!-- Top edge -->
+  <line x1="470" y1="105" x2="470" y2="88" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="490" y1="102" x2="491" y2="84" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="520" y1="100" x2="519" y2="82" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="550" y1="98" x2="551" y2="80" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="580" y1="97" x2="580" y2="79" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="615" y1="96" x2="614" y2="78" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="650" y1="97" x2="651" y2="79" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="680" y1="98" x2="680" y2="80" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="710" y1="100" x2="711" y2="82" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="740" y1="102" x2="739" y2="84" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="760" y1="105" x2="761" y2="87" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Left edge tall grass -->
+  <line x1="445" y1="130" x2="445" y2="112" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="448" y1="170" x2="447" y2="152" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="445" y1="210" x2="446" y2="192" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="448" y1="250" x2="447" y2="232" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="445" y1="290" x2="446" y2="272" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="448" y1="330" x2="447" y2="312" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="445" y1="360" x2="446" y2="342" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Right edge tall grass -->
+  <line x1="785" y1="130" x2="785" y2="112" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="782" y1="170" x2="783" y2="152" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="785" y1="210" x2="784" y2="192" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="782" y1="250" x2="783" y2="232" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="785" y1="290" x2="784" y2="272" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="782" y1="330" x2="783" y2="312" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="785" y1="360" x2="784" y2="342" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Bottom edge tall grass -->
+  <line x1="470" y1="372" x2="470" y2="354" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="500" y1="375" x2="501" y2="357" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="540" y1="377" x2="539" y2="359" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="580" y1="378" x2="581" y2="360" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="615" y1="379" x2="614" y2="361" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="650" y1="378" x2="651" y2="360" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="690" y1="377" x2="689" y2="359" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="730" y1="375" x2="731" y2="357" stroke="#27ae60" stroke-width="1.5" opacity="0.65"/>
+  <line x1="760" y1="372" x2="759" y2="354" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Medium grass blades — middle ring -->
+  <!-- Top-left quadrant medium grass -->
+  <line x1="510" y1="145" x2="510" y2="134" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="530" y1="135" x2="531" y2="125" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="480" y1="165" x2="480" y2="154" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <!-- Top-right quadrant -->
+  <line x1="720" y1="145" x2="720" y2="134" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="700" y1="135" x2="699" y2="125" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="740" y1="165" x2="741" y2="154" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <!-- Bottom-left quadrant -->
+  <line x1="510" y1="315" x2="510" y2="326" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="530" y1="325" x2="531" y2="335" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="480" y1="295" x2="480" y2="306" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <!-- Bottom-right quadrant -->
+  <line x1="720" y1="315" x2="720" y2="326" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="700" y1="325" x2="699" y2="335" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="740" y1="295" x2="741" y2="306" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <!-- Left side medium -->
+  <line x1="480" y1="220" x2="480" y2="209" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="480" y1="245" x2="480" y2="256" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <!-- Right side medium -->
+  <line x1="750" y1="220" x2="750" y2="209" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+  <line x1="750" y1="245" x2="750" y2="256" stroke="#52be80" stroke-width="1.2" opacity="0.55"/>
+
+  <!-- Short/sparse grass — inner ring near rock -->
+  <line x1="575" y1="200" x2="575" y2="196" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="655" y1="200" x2="655" y2="196" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="575" y1="260" x2="575" y2="264" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="655" y1="260" x2="655" y2="264" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="565" y1="220" x2="565" y2="216" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="665" y1="220" x2="665" y2="216" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="565" y1="240" x2="565" y2="244" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <line x1="665" y1="240" x2="665" y2="244" stroke="#82e0aa" stroke-width="0.9" opacity="0.4"/>
+  <!-- tiny dots for barely-there grass near rock -->
+  <circle cx="590" cy="215" r="1" fill="#a9dfbf" opacity="0.4"/>
+  <circle cx="640" cy="215" r="1" fill="#a9dfbf" opacity="0.4"/>
+  <circle cx="590" cy="245" r="1" fill="#a9dfbf" opacity="0.4"/>
+  <circle cx="640" cy="245" r="1" fill="#a9dfbf" opacity="0.4"/>
+
+  <!-- Rock in center -->
+  <ellipse cx="615" cy="230" r="20" ry="16" fill="#aaaaaa" stroke="#888888" stroke-width="1.5"/>
+  <!-- Rock texture lines -->
+  <line x1="605" y1="226" x2="610" y2="228" stroke="#999999" stroke-width="0.8" opacity="0.5"/>
+  <line x1="618" y1="222" x2="624" y2="225" stroke="#999999" stroke-width="0.8" opacity="0.5"/>
+  <line x1="612" y1="234" x2="620" y2="236" stroke="#999999" stroke-width="0.8" opacity="0.5"/>
+  <!-- Rock highlight -->
+  <ellipse cx="610" cy="224" rx="6" ry="4" fill="#bbbbbb" opacity="0.4"/>
+
+  <!-- Growth arrows — tall (outer, big arrows) -->
+  <!-- Top outer arrows -->
+  <line x1="475" y1="118" x2="475" y2="105" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="475,103 472,108 478,108" fill="#1e8449" opacity="0.5"/>
+  <line x1="755" y1="118" x2="755" y2="105" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="755,103 752,108 758,108" fill="#1e8449" opacity="0.5"/>
+  <!-- Left outer arrows -->
+  <line x1="458" y1="195" x2="458" y2="182" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="458,180 455,185 461,185" fill="#1e8449" opacity="0.5"/>
+  <line x1="458" y1="265" x2="458" y2="252" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="458,250 455,255 461,255" fill="#1e8449" opacity="0.5"/>
+  <!-- Right outer arrows -->
+  <line x1="772" y1="195" x2="772" y2="182" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="772,180 769,185 775,185" fill="#1e8449" opacity="0.5"/>
+  <line x1="772" y1="265" x2="772" y2="252" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="772,250 769,255 775,255" fill="#1e8449" opacity="0.5"/>
+  <!-- Bottom outer arrows -->
+  <line x1="475" y1="348" x2="475" y2="335" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="475,333 472,338 478,338" fill="#1e8449" opacity="0.5"/>
+  <line x1="755" y1="348" x2="755" y2="335" stroke="#1e8449" stroke-width="1.2" opacity="0.5"/>
+  <polygon points="755,333 752,338 758,338" fill="#1e8449" opacity="0.5"/>
+
+  <!-- Growth arrows — tiny (inner, near rock) -->
+  <line x1="585" y1="207" x2="585" y2="204" stroke="#7a7a6a" stroke-width="0.8" opacity="0.45"/>
+  <polygon points="585,203 583.5,205.5 586.5,205.5" fill="#7a7a6a" opacity="0.45"/>
+  <line x1="645" y1="207" x2="645" y2="204" stroke="#7a7a6a" stroke-width="0.8" opacity="0.45"/>
+  <polygon points="645,203 643.5,205.5 646.5,205.5" fill="#7a7a6a" opacity="0.45"/>
+  <line x1="585" y1="253" x2="585" y2="256" stroke="#7a7a6a" stroke-width="0.8" opacity="0.45"/>
+  <polygon points="585,257 583.5,254.5 586.5,254.5" fill="#7a7a6a" opacity="0.45"/>
+  <line x1="645" y1="253" x2="645" y2="256" stroke="#7a7a6a" stroke-width="0.8" opacity="0.45"/>
+  <polygon points="645,257 643.5,254.5 646.5,254.5" fill="#7a7a6a" opacity="0.45"/>
+
+  <!-- Labels: "growing fast" and "growing slow" -->
+  <text x="464" y="145" font-family="DM Sans, sans-serif" font-size="8.5" fill="#1e8449" opacity="0.7" transform="rotate(-90,464,145)">growing fast</text>
+  <text x="567" y="188" font-family="DM Sans, sans-serif" font-size="7.5" fill="#7a7a6a" opacity="0.6">slow</text>
+  <text x="648" y="188" font-family="DM Sans, sans-serif" font-size="7.5" fill="#7a7a6a" opacity="0.6">slow</text>
+
+  <!-- Right panel caption -->
+  <text x="615" y="370" font-family="DM Sans, sans-serif" font-size="12" fill="#555555" text-anchor="middle">"Grass grows around the rock.</text>
+  <text x="615" y="385" font-family="DM Sans, sans-serif" font-size="12" fill="#555555" text-anchor="middle">It just grows slower underneath."</text>
+
+
+  <!-- ==================== BOTTOM SHARED CAPTION ==================== -->
+
+  <!-- Trampoline legs for visual grounding -->
+  <line x1="80" y1="290" x2="70" y2="320" stroke="#888888" stroke-width="2"/>
+  <line x1="330" y1="290" x2="340" y2="320" stroke="#888888" stroke-width="2"/>
+  <line x1="60" y1="180" x2="50" y2="150" stroke="#888888" stroke-width="2"/>
+  <line x1="350" y1="180" x2="360" y2="150" stroke="#888888" stroke-width="2"/>
+
+  <!-- Shared bottom text -->
+  <text x="410" y="440" font-family="DM Sans, sans-serif" font-size="12.5" fill="#333333" text-anchor="middle" font-style="italic">Same shape. Different reason. One pushes down. One grows around.</text>
+
+  <!-- Subtle horizontal rule above shared caption -->
+  <line x1="150" y1="420" x2="670" y2="420" stroke="#dddddd" stroke-width="1"/>
+
+</svg>
