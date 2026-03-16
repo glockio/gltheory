@@ -295,14 +295,20 @@ All figures referenced in `content.md` via `@fig:slug`. Ordered by appearance:
 
 | # | Slug | Chapter | Notes |
 |---|------|---------|-------|
-| 1 | `two-layers-of-reality` | Ch 1 | Mario + console two-layer metaphor |
-| 2 | `you-already-know-graphs` | Ch 1 | Family tree / recipe / road map |
-| 3 | `what-110-years-tells-us` | Ch 2 | 2×3 cheat sheet grid |
-| 4 | `reality-at-the-edge` | Ch 2 | Coral reef, frontier, Mario on surface |
-| 5 | `growth-rate-gravity` | Ch 2 | Cross-section: sparse tall growth vs dense stunted growth, spacetime dip |
-| 6 | `gravity-routing` | Ch 2 | Empty space vs mass present, cheapest path |
-| 7 | `event-cone` | Ch 3 | Pending node, event cone vs light cone, consumer approaching |
-| 8 | `quantum-eraser-graph` | Ch 3 | Three stages: O, O⁻¹, cancellation = identity |
+| 1 | `duck-in-a-tub` | Ch 1 | Bathtub cross-section: duck on surface, events pouring in, layers below |
+| 2 | `you-already-know-graphs` | Ch 2: The Graph | Family tree / recipe / road map — three everyday graphs |
+| 3 | `bowling-ball-vs-meadow` | Ch 2: Spacetime | Side-by-side: trampoline (✗) vs meadow (✓) — the Rick Rubin pivot |
+| 4 | `reality-at-the-edge` | Ch 2: Event Graph | Coral reef growing upward, spacetime draped on frontier, stick figure |
+| 5 | `mass-is-a-loop` | Ch 2: Mass | Photon (single chain) vs particle (cluster that rebuilds itself each tick) |
+| 6 | `gravity-chain` | Ch 2: Gravity | Four-box causal chain: Dense topology → Time dilation → Curvature → Gravity |
+| 7 | `gravitational-runes` | Ch 4: Runes | Three-panel timeline: star present → removed → long after. Fossil dip remains |
+| 8 | `pending-vs-committed` | Ch 3: Change | Two-panel: pending node (?) with arriving edges → committed node (4) with consumer |
+| 9 | `event-cone` | Ch 4: Event Cone | Pending node, event cone vs light cone, consumer approaching |
+| 10 | `double-slit-graph` | Ch 6: Double Slit | Two side-by-side panels: no consumer (both paths in-flight, overlap, interference) vs consumer at slit (one path commits, other killed, no pattern) |
+| 11 | `delayed-choice-graph` | Ch 6: Delayed Choice | Photon in-flight between slits and screen, two branching futures, timeline bar showing timing is irrelevant |
+| 12 | `quantum-eraser-graph` | Ch 6: Eraser | Three panels: same 12 dots — all gray (no pattern), eraser subset green (interference bands), which-path subset orange (scattered). Crystal as shared ancestor, beam splitter routes idler |
+| 13 | `dark-matter-topology` | Outro | Two disconnected graph clusters — dark matter has density but no edges to us |
+| 14 | `entanglement-shared-ancestor` | Outro | Y-shaped graph from common ancestor — sealed envelopes, no signal needed |
 
 ---
 

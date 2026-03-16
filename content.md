@@ -43,6 +43,12 @@ Imagine a rubber duck floating in a bathtub. Water pours in and the duck rises. 
 
 Underneath you, there is a vast ocean of all the events that lead you to "here" and "now". The idea of "here" and "now" should ring some bells because it's a less formal way of saying "space" and "time" — or "spacetime".
 
+@fig:duck-in-a-tub
+Whiteboard style, white background, DM Sans font. A simple bathtub viewed from a side cutaway/cross-section. Water fills most of the tub. A rubber duck floats on the surface. A faucet on the left pours a thin stream of water into the tub — the stream is labeled "Events happening." The water surface is labeled "YOUR 'NOW' — spacetime." The duck has a tiny label: "You." Below the surface, the water is drawn with subtle horizontal layers getting darker toward the bottom — labeled along the side: "ALL THE EVENTS THAT CAME BEFORE." A small upward arrow from just below the surface to the duck reads "Water rises → time passes." At the very bottom of the tub, faint text: "Big Bang." Friendly napkin-sketch feel — not clinical. No equations.
+---
+You float on the surface. Everything underneath is what got you here. The stream is events. The rising water is time. The duck is you.
+@/fig
+
 You can think of spacetime and GR as the surface, where your "now" lives. Quantum Mechanics is focused on the change. Quantum Mechanics shows up on the small scale because change happens on the small scale — the bath fills up one H2O molecule at a time.
 
 They are both describing water in a tub. But different aspects/layers of it. Quantum Mechanics shows up when we start looking at how do we go from "here and now" to the NEXT "here and now"?
@@ -69,8 +75,8 @@ Seems basic enough right? So why is physics so fucking weird with it then?
 So let's try and explain this. A graph is just dots connected by lines. You already know graphs.
 
 @fig:you-already-know-graphs
-Whiteboard style. Three simple graphs side by side. Left: a family tree — two parents at top, lines going down to three children. Center: a recipe — four steps in boxes with arrows: "Mix" → "Bake" → "Cool" → "Frost." Right: a road map — five cities as dots with roads as lines between them. Label above all three: "These are all graphs." Label below: "Dots. Lines. That's it. The universe is built from a bigger version of this."
-
+Whiteboard style, white background, DM Sans font. Three simple graphs side by side, each in its own soft rounded box. LEFT: A family tree — two parent dots at top connected by lines down to three child dots. Label: "Family Tree." CENTER: A recipe — four steps as small rounded boxes connected by arrows left to right: "Mix → Bake → Cool → Frost." Label: "Recipe." RIGHT: A road map — five city dots scattered with roads (lines) between them, not all connected. Label: "Road Map." Above all three, larger text: "These are all graphs." Below all three: "Dots. Lines. That's it. The universe is built from a bigger version of this."
+---
 A family tree is a graph. A recipe is a graph. A road map is a graph. Dots connected by lines. That's the whole idea.
 @/fig
 
@@ -93,6 +99,12 @@ Now here is where I would like to play my Rick Rubin card and apply my "taste". 
 Instead, imagine a meadow with a rock in it. Pretend the grass can still grow with the rock on it, its just grows slower than the regions with no rocks. We end up with a similar shape/result to the bowling ball on a trampoline.
 
 Except, we suggested something subtle that makes a BIG difference. The mass does not warp the trampoline — the grass grows around the rock, that area of grass just changes more slowly.
+
+@fig:bowling-ball-vs-meadow
+Whiteboard style, white background, DM Sans font. Two panels side by side, separated by a vertical divider. LEFT PANEL — labeled "THE STANDARD PICTURE" with a subtle red ✗ underneath. A trampoline viewed from a slight angle. A heavy bowling ball sits in the center, stretching the fabric downward into a funnel shape. A small marble rolls along the curved surface toward the ball. The fabric is a flat grid that bends. Caption below: "Mass pushes spacetime down." RIGHT PANEL — labeled "THE MEADOW" with a subtle green ✓ underneath. A top-down view of a meadow (green field). A gray rock sits in the center. The grass everywhere is tall and lush EXCEPT around the rock — there the grass is short, sparse, barely grown. Visible gradient: very short grass near rock, medium further out, tall at edges. Small upward arrows in the tall grass (growing fast), tiny arrows near the rock (growing slow). Caption below: "Grass grows around the rock. It just grows slower underneath." Between both panels, centered at bottom: "Same shape. Different reason. One pushes down. One grows around."
+---
+Two models, same result. The standard picture says mass pushes spacetime down. We're saying the grass just grows slower where the rock is. Same shape — completely different mechanism.
+@/fig
 
 Let's look at the implications of this more closely. But to do that properly we need to revisit our "event graph."
 
@@ -117,10 +129,8 @@ This is a poor man's interpretation of causal set theory, but there is a real br
 One point to drive home, an event is not "Sara went for a run", there is no concept of "Sara" in the graph. Events are energy, and the interactions between them. There is no "Sara", there are no objects, there might not even be photons, particles. It's all energy. So if there is no Sara? What are you? And most importantly what is mass?
 
 @fig:reality-at-the-edge
-Whiteboard style. A large graph building upward like a coral reef or stalagmite. At the bottom: dense layers of small green committed nodes, tightly packed, fading into the background. As you go up, the layers become more visible, newer. At the very top: a thin line of purple pending nodes — the frontier. Draped over the top of this structure like a tablecloth over a table, or like the surface of the ocean over the depths below: a wavy membrane labeled "SPACETIME FABRIC — what you experience." Below the membrane, the graph structure labeled "THE STRUCTURE — all the events that came before." A small stick-figure Mario stands on top of the membrane. A label reads: "You live here. On the surface. The ocean floor built everything underneath you."
-
+Whiteboard style, white background, DM Sans font. A large graph structure building upward like a coral reef. At the bottom: dense layers of small green committed nodes (#1e8449), tightly packed, faded and ancient. As you move upward the layers become more visible, more recent, more spaced. At the very top: a thin row of purple (#7d3c98) dashed-outline nodes — the frontier, labeled "PENDING — the next now being built." Draped across the top of the frontier like a tablecloth: a smooth wavy line labeled "SPACETIME — what you experience." The line rests on top of the purple nodes and gently dips between them. A small stick figure stands on the wavy spacetime line, centered. Label beside it: "You live here." Left margin annotation: "THE STRUCTURE — all the events that came before." Right margin annotation: "SPACETIME — the surface of the ocean."
 ---
-
 Your reality is the surface tension of a vast graph. Every event that ever happened is underneath, holding up the present moment. You live on the edge — the frontier — the thin layer where new events are being born. Spacetime is the surface of the ocean. The graph is everything below it.
 @/fig
 
@@ -139,6 +149,12 @@ To be honest this is a bit of a head fuck, but stay with me. You think of mass a
 Imagine, your boss pays you $1000 (event 1), your landlord charges you $1000 (event 2). Those sum together so you were poor then, and you are poor now. Two events resulting in a stable configuration where you forever remain poor. If those events happen again in the next now, you have a self-perpetuating topology of poverty.
 
 Again, this feels trippy but we know energy and mass are equivalent from Einstein's E=MC^2. Why does C show up, what does the speed of light have to do with mass? Well C the speed of light is not a measure of light at all, it is how fast change can occur. C is the fastest operations can occur in the graph. C is how fast our grass in the meadow can possibly grow.
+
+@fig:mass-is-a-loop
+Whiteboard style, white background, DM Sans font. Two side-by-side diagrams showing the same graph growing upward across three time layers (labeled t₁, t₂, t₃ as horizontal dashed lines). LEFT — labeled "A PHOTON (no mass)." A single green node (#1e8449) at t₁ connects via one edge to a single node at t₂, then one edge to a single node at t₃. Simple straight chain. Small label: "One event. One edge. Travels at C." RIGHT — labeled "A PARTICLE (has mass)." At t₁: a cluster of 4-5 blue (#2471a3) nodes interconnected with edges forming a small knot/loop. At t₂: the same cluster shape reappears — edges from t₁ reconstruct the same topology. Same again at t₃. Edges within the cluster are blue, edges between layers are gray. Small label: "Many events. Same shape. Rebuilds itself each tick." Between the two: "C is the speed limit. A photon spends all its budget moving forward. Mass spends budget rebuilding itself — so it moves slower."
+---
+Mass is not a thing. It is a pattern that keeps happening. A photon travels at C because it has nothing to rebuild. A massive particle spends computational budget maintaining its own topology — that's why it's slower.
+@/fig
 
 ### Gravity
 
@@ -172,6 +188,12 @@ This gives rise to uneven curvature on the surface of the graph which IS gravity
 
 This order is everything. **Mass does not pull things toward it. Mass does not cause gravity directly.** Mass is dense topology. Dense topology causes time dilation. Time dilation causes uneven growth. Uneven growth IS curvature. And gravity emerges from that curvature. It's a chain reaction — and gravity is the LAST thing in the chain, not the first.
 
+@fig:gravity-chain
+Whiteboard style, white background, DM Sans font. A horizontal chain of four rounded boxes connected by thick arrows, reading left to right. Box 1: "DENSE TOPOLOGY" — orange/gold (#d4a017) fill. Icon inside: a tight cluster of small dots connected by many lines. Arrow labeled "causes →" Box 2: "TIME DILATION" — blue (#2471a3) fill. Icon inside: two clocks side by side, one running fast, one running slow. Arrow labeled "causes →" Box 3: "UNEVEN GROWTH" — green (#1e8449) fill. Icon inside: a surface line that is flat on the left and dips/curves down on the right. Arrow labeled "produces →" Box 4: "GRAVITY" — purple (#7d3c98) fill. Icon inside: a small circle with a curved arrow showing its path bending toward the dip. Above the chain, crossed out in red with a large ✗: "MASS → GRAVITY" in a single arrow. Below that, in green with a ✓: "MASS → TIME DILATION → CURVATURE → GRAVITY"
+---
+Mass doesn't pull. Mass computes slowly. Gravity is the last thing in the chain, not the first.
+@/fig
+
 So why can't you shield gravity? Gravity emerged from the tax you paid to get to the next "now" — want to have your next moment you have to pay the compute and gravity is a measure of your debt. It's unavoidable.
 
 Once you have curvature, objects follow the cheapest path through it — the path that requires the least computation to traverse. That path curves toward the dense region. That curve is gravity.
@@ -190,6 +212,12 @@ But what if we compare it to a place in space that **NEVER** had any mass? A pat
 
 Like finding a long lost ancient city in the forest, growth was restored and the forest takes over, but there is still some small impression you can see on satellite images. We are saying there _should_ be evidence of gravitational runes, relics of old mass in the universe.
 
+@fig:gravitational-runes
+Whiteboard style, white background, DM Sans font. Three panels arranged left to right showing a timeline. PANEL 1 — labeled "BEFORE: Star present." A meadow cross-section. Dense graph nodes in the center (the star). Grass is short in the center, tall on the sides. The spacetime surface dips. Normal gravity picture. PANEL 2 — labeled "AFTER: Star removed." Same view, but the dense center is gone — graph density is uniform. The grass in the center is still short — it hasn't caught up. The surface still dips but less. Small upward arrows on the short grass showing it's now growing at full speed. Label: "Growth restored to C — but the gap remains." PANEL 3 — labeled "LONG AFTER." The grass has mostly caught up. Surface is almost flat. But a faint subtle dip is still visible — drawn with a dashed line showing where the surface WOULD be if this region never had a star. Label on the remaining dip: "The rune — a fossil of old mass." Below: comparison — "Pristine patch (never had mass):" flat line. "Former star location:" almost-flat line with barely-visible dip. Arrow between them: "This difference is the prediction."
+---
+Remove the mass and growth returns. But the lost time never fully recovers. The graph remembers. This is the prediction — gravitational runes, fossils of old mass.
+@/fig
+
 Now, this is where I have to throw my hands up and say that I have no idea how you would detect this. I am not aware of any way you can snatch a planet, so any change to a planet should emit those changes outwards to the graph slowing the rates of change nearby accordingly.
 
 So our analogy is more like water balloons than rocks — if you pop the balloon you need to account for the water that spills out and impacts the rates of growth on the other areas of the graph. But if there is some way where another region of space would act as a shield and you could find a pristine patch of grass in the universe and compare it to another region that USED to have mass, you would see a gravitational rune if I am right.
@@ -207,6 +235,12 @@ So our graph grows at uneven rates, gravity emerges. But how does an event graph
 If it's all just energy and operations underneath how do we ever GO from "now" to the "next now"? This is actually a deeper philosophical question than it seems. But in our model, we record one event at a time, but we only sum those events when you "ask" for them.
 
 The next now is always accumulating, building, but you only ever get the next layer/now of reality when you ask for it. I keep saying "layer" of reality and what I mean by that is the next events that were the result of all the operations below it. So the way our graph changes is by summing all the operations below it to generate the next layer. Like a brick builder building on the stack below it.
+
+@fig:pending-vs-committed
+Whiteboard style, white background, DM Sans font. Two panels side by side. LEFT PANEL — labeled "PENDING (no consumer yet)." A single purple (#7d3c98) dashed-outline node in the center. Three edges arrive from below, each carrying a small label: "+3", "−1", "+2". The edges are dashed lines (still arriving). The node has a "?" inside it. Around the node, a soft purple glow — the uncommitted state. Below: "Events are arriving. No one has asked for the answer yet. The value doesn't exist." RIGHT PANEL — labeled "COMMITTED (consumer asked)." Same node, now solid green (#1e8449) with "4" inside. The three edges from below are solid. A new edge leaves from the top going upward to another node labeled "Consumer." A small snap/lightning icon at the moment of commitment. Below: "Someone needed this value. Events are summed. Answer is locked forever." Between the panels, a large arrow pointing right labeled "Measurement."
+---
+Nothing is random. Nothing is decided. It's just not finished yet. The moment a consumer asks, the pending events are summed and the answer is locked.
+@/fig
 
 Let's walk through the steps together on how this "ought" to look like and try and explain some of the strangest experiments we have.
 
@@ -229,29 +263,9 @@ We are going to give this collection of events that _will_ reach you a name — 
 So if your brother's phone call will come before your aunt asks then it's inside the event cone.
 
 @fig:event-cone
-Whiteboard style on white background, DM Sans font. An organic graph of ~25 nodes. Most are small GREEN filled circles (committed). One node center-right is a larger PURPLE dashed circle labeled "P — PENDING."
-
-From the left, a chain of green nodes leads toward P at various distances:
-
-- One node 1 hop away, directly connected to P (solid green line)
-- Two nodes 2 hops away (connected through the 1-hop node)
-- Three nodes 3-4 hops away (further along the chain)
-
-SHADED REGION: A soft teal/blue semi-transparent area around P extending exactly 2 hops outward in all directions through the graph. This is the event cone. Label on the shaded region: "EVENT CONE — events within 2 ticks."
-
-DASHED BOUNDARY: A larger dashed gray circle/boundary extending 4-5 hops from P. This is the light cone. Label: "LIGHT CONE — everything that COULD ever reach P."
-
-Small orange arrow approaching from bottom-right, labeled "CONSUMER — arrives in 2 ticks."
-
-Nodes INSIDE the teal event cone region have a subtle highlight.
-Nodes BETWEEN the event cone and light cone boundary are slightly dimmed with label: "Too late — won't arrive in time."
-Nodes OUTSIDE the light cone are light gray.
-
-Bottom caption: "The light cone is the maximum. The event cone is what actually counts. Same node, different consumer timing, different event cone, different reality."
-
-## SVG approach: 900×600 viewBox. Plot nodes as circles (r=8 committed green #27ae60, r=12 pending purple #8e44ad dashed). Edges as lines with arrowheads. Event cone as a path with fill="#1abc9c" opacity="0.15" and stroke="#1abc9c" dashed. Light cone as larger dashed gray path. Consumer as small orange (#d35400) triangle/arrow approaching. Use DM Sans for all labels. Keep it clean — no heavy borders, white background.
-
-The light cone is the maximum. The event cone is what actually counts. Same node, different consumer timing, different event cone, different reality.
+Whiteboard style, white background, DM Sans font. An organic graph of ~25 nodes. Most are small green (#1e8449) filled circles (committed). One node center-right is a larger purple (#7d3c98) dashed circle labeled "P — PENDING." Surrounding P: a web of smaller committed nodes connected by thin directed edges. SHADED REGION — EVENT CONE: A soft teal (#a8dadc) semi-transparent area surrounding P, extending exactly 2 hops outward through the graph edges. Label: "EVENT CONE — events that WILL arrive before commitment." DASHED BOUNDARY — LIGHT CONE: A larger dashed gray circle extending 4-5 hops from P. Label: "LIGHT CONE — everything that COULD ever reach P." Approaching from bottom-right: a small orange (#d35400) arrow/triangle labeled "CONSUMER — arrives in 2 ticks." Nodes INSIDE the event cone: highlighted with teal border, clearly in play. Nodes BETWEEN event cone and light cone: slightly dimmed, labeled "Real events. Won't arrive in time." Nodes OUTSIDE the light cone: light gray.
+---
+The light cone is the maximum. The event cone is what actually counts. When you're asked determines what's real.
 @/fig
 
 @style:insight
@@ -288,6 +302,12 @@ This would be like shooting a basketball and finding out it turns into a wave an
 
 How do we explain this from an Event Graph? Everything between the photon source and the screen is events. Those events collect and we only produce the output once we are asked for the next layer of reality. The act of "measuring" is someone asking — it's when pending events have a consumer that requires them in its dependency tree. Physicists say observer, but it's really a consumer. No consumer at the slits? Both causal paths stay in-flight, they overlap, and the screen — a causally dense region — forces commitment. That overlap is the interference pattern. Put a detector at the slits? Now there's a consumer — the event commits at the slit and only one path survives. No overlap, no pattern.
 
+@fig:double-slit-graph
+Two panels side by side. LEFT — "NO CONSUMER AT SLITS": green committed source node forks to two slit nodes (purple dashed, in-flight). Both paths continue through wall gaps as purple dashed edges, overlap at a shared screen region. Screen bar on right with alternating green/white interference pattern bars. RIGHT — "CONSUMER AT SLIT": same source and fork, but slit A has an orange consumer node (C). Slit A path turns green (committed), slit B path dimmed gray with X (killed). Only one path reaches screen. Screen shows scattered random dots — no pattern. Vertical dashed divider between panels.
+---
+No consumer at the slits — both paths stay in-flight and overlap at the screen. Add a consumer — one path commits early and the other dies. Same graph. Different consumer. Different outcome.
+@/fig
+
 ### Delayed Choice
 
 It gets stranger. In Wheeler's delayed-choice experiment, they let the photon enter the apparatus and only AFTER it's already inside do they choose the configuration — whether to set up the equipment to measure which path or to let both paths interfere. The choice happens after the photon should have "already picked a door." Doesn't matter. The result always matches whatever apparatus is waiting at the end.
@@ -297,6 +317,12 @@ This would be like shooting the basketball and only AFTER it leaves your hands, 
 This kills the idea that the detector "bumps" the photon and disturbs it. Nothing touched it. The apparatus choice was made after the photon was already in flight. So what's going on?
 
 In our model: nothing weird. The photon was never committed. It's pending. In-flight. The timing of your "choice" is irrelevant because the event hadn't committed yet — it was always waiting for a consumer. What matters is what kind of consumer it eventually meets, not when you decided to put it there.
+
+@fig:delayed-choice-graph
+Single scene with timeline. Left: green committed source node. Center: large purple dashed photon node with glow (in-flight, labeled "PHOTON — still pending"). Two dashed purple paths extend leftward from photon through both slits. Right: two branching futures — upper branch leads to screen with no consumer (interference pattern bars, labeled "no consumer → interference"), lower branch leads to screen with orange consumer node C (scattered dots, labeled "consumer → no pattern"). Timeline bar across bottom: t₀ "Photon enters" (green), t₁ "Photon between slits" (purple, annotation "STILL PENDING"), t₂ "Apparatus choice made" (orange, annotation "Doesn't matter when. Event was never committed."), t₃ "Screen forces commitment" (green).
+---
+The photon is already in-flight when the apparatus choice is made. Doesn't matter — the event was never committed. It was always waiting for a consumer. What consumer it meets determines the outcome, not when you decided to put it there.
+@/fig
 
 ### Quantum Eraser
 
@@ -318,6 +344,12 @@ So why does this matter for "no random"? Because the dots on the screen LOOK ran
 
 But these photons aren't independent. They share a common origin — a common causal ancestor in the graph, the crystal event that created both twins. That shared ancestry is why their outcomes are correlated. The pattern was always there, baked into the graph from the moment the twins were born. The twin's measurement just tells you which subset to look at. Nothing was erased. Nothing went backwards. The graph knew from the start.
 
+@fig:quantum-eraser-graph
+Three panels side by side showing the SAME 12 dots on screen. Shared graph topology: gold crystal node (shared causal ancestor) forks into signal path (through slits A/B to screen) and idler path (to beam splitter diamond, which outputs to ERASER detector and WHICH-PATH detector). PANEL 1 "ALL DOTS — NO PATTERN": all graph edges light gray, all 12 screen dots muted gray, no visible pattern. PANEL 2 "ERASER SUBSET — INTERFERENCE": signal path purple (in-flight through both slits), idler path blue to blue-filled eraser detector, which-path dimmed. 6 of 12 dots highlighted green in interference bands (clustered in 3 stripes). PANEL 3 "WHICH-PATH — NO PATTERN": signal path green (one slit committed, other dimmed), idler path orange to orange-filled which-path detector, eraser dimmed. Other 6 dots highlighted orange, scattered randomly. Same dots partition differently in each panel.
+---
+Same dots. Same screen. Same graph. The only difference is which subset you look at — and the twin's measurement is the sorting key. The pattern was always hiding in the correlations.
+@/fig
+
 @style:insight
 The quantum eraser doesn't change the past. The dots on the screen are committed and never move. But each photon has a twin, and they share a common origin in the graph — a common causal ancestor. Their outcomes were always correlated. How the twin commits determines which subset of dots reveals a pattern. The pattern was always there, hidden in the correlations. The twin's measurement is the sorting key. Nothing was erased. Nothing went backwards. The graph knew from the start.
 @/style
@@ -338,7 +370,19 @@ Here are some wild guesses though:
 
 **Dark matter as a topology without a consumer.** What if dark matter is a self-perpetuating topology that never adjoins with the visible graph? It has internal structure — mass — so it exerts routing pressure — gravitational effect. But it never commits into the layer we can detect. Not invisible matter. Matter that exists in the graph but has no consumer in our region. This would explain why dark matter has gravitational effects but no electromagnetic interaction, no direct detection, no visible output.
 
+@fig:dark-matter-topology
+Whiteboard style, white background, DM Sans font. A single graph viewed from above. The main visible graph is drawn in green (#1e8449) — nodes and edges forming a connected web. Labeled: "Visible matter — connected, consumers exist, events commit into our reality." Nearby but NOT connected by any edges: a second cluster of gray/blue nodes and edges, forming its own self-contained topology with internal loops and density. Labeled: "Dark matter — self-perpetuating topology. Has mass (density). No edges into our graph. No consumer in our region." Around the dark matter cluster: subtle concentric dashed rings radiating outward, reaching the visible graph — representing routing pressure / gravitational effect. Labeled: "Routing pressure — gravity. The curvature is real even though we can't see the source."
+---
+Not invisible. Not hidden. Just never connected to us. Mass without a consumer in our world.
+@/fig
+
 **Entanglement.** Two particles share a common causal ancestor. They separate. Both pending. When one commits, it traces back through shared history. The other does the same — same root, complementary values. Sealed envelopes from the same deck. No signal. No faster-than-light communication.
+
+@fig:entanglement-shared-ancestor
+Whiteboard style, white background, DM Sans font. A Y-shaped graph diagram. At the bottom center: a single green (#1e8449) committed node labeled "COMMON ANCESTOR — the moment they were created together." Two edges diverge upward-left and upward-right from this node. Upper-left: a purple (#7d3c98) dashed node labeled "PARTICLE A" — far away, pending. A small lab/detector icon nearby. Upper-right: a purple dashed node labeled "PARTICLE B" — far away in the other direction, pending. Another lab/detector nearby. The shared path from ancestor to both particles is highlighted — thicker line or glowing — to emphasize correlation was baked in at creation. Between A and B at top: a large "✗" over a dashed arrow, labeled "No signal between them." Below the Y-shape: "The envelopes were sealed at the same desk. Opening one tells you what's in the other. No communication needed."
+---
+Not spooky. Not instant communication. Just two nodes that remember where they came from.
+@/fig
 
 **Tunneling.** Shortcuts exist. Two nodes that look "far apart" on the surface might be direct neighbours in the actual graph, connected by an edge that doesn't follow the emergent geometry. The particle doesn't go through the wall — it takes a path the wall doesn't cover.
 
