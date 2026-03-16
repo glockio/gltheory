@@ -286,27 +286,37 @@ We fire a bunch of photons one at a time between two slits at a screen. Each pho
 
 This would be like shooting a basketball and finding out it turns into a wave and goes through both nets. But only when you close your eyes.
 
-This actually gets stranger — there is a version of this called the delayed choice where they only measure the photon AFTER it has already decided which door to go through. Same result. Even though you measure AFTER the photon already should have gone through the door, the universe somehow "knows" that you planned to look and said "be a photon again, they are watching".
+How do we explain this from an Event Graph? Everything between the photon source and the screen is events. Those events collect and we only produce the output once we are asked for the next layer of reality. The act of "measuring" is someone asking — it's when pending events have a consumer that requires them in its dependency tree. Physicists say observer, but it's really a consumer. No consumer at the slits? Both causal paths stay in-flight, they overlap, and the screen — a causally dense region — forces commitment. That overlap is the interference pattern. Put a detector at the slits? Now there's a consumer — the event commits at the slit and only one path survives. No overlap, no pattern.
 
-This would be like you close your eyes, shoot the ball and only AFTER it goes through the net you open your eyes. But the universe knows what you will do, and if you plan on opening your eyes, it's a ball the whole time.
+### Delayed Choice
 
-How do we explain this from an Event Graph? Well everything that is happening between now and the screen is an event. If it happened in reality it is an event. But those events collect and sum and we only produce the output once we are asked to produce the next layer of reality. The act of "measuring" is someone asking — it's when the events that are pending now have a consumer that requires them in its dependency tree to produce its own next layer of reality. So physicists say observer, but it's really a consumer of these events.
+It gets stranger. In Wheeler's delayed-choice experiment, they let the photon enter the apparatus and only AFTER it's already inside do they choose the configuration — whether to set up the equipment to measure which path or to let both paths interfere. The choice happens after the photon should have "already picked a door." Doesn't matter. The result always matches whatever apparatus is waiting at the end.
 
-Until there is a consumer, and when we don't "look", there is no consumer, these events are collecting. The result is collecting until you look, which is why looking after it already made its choice does not matter. Looking after it goes through the door is in the event cone.
+This would be like shooting the basketball and only AFTER it leaves your hands, someone decides whether there's one net or two. Somehow the ball was always the right shape for whatever they chose.
 
-Let's use one more variation to really drive this point home. There is a version of this experiment called the quantum eraser. This one is hard to explain in a couple sentences but the gist is: Using a special crystal, we are able to create a twin/clone of the photon. We shoot the original and clone photons at the screen, but we route the clone somewhere else.
+This kills the idea that the detector "bumps" the photon and disturbs it. Nothing touched it. The apparatus choice was made after the photon was already in flight. So what's going on?
 
-Only AFTER the original hits the screen do we even look at the clone to figure out which way the clone went. But we don't read this information right away. Instead, for half the clones we send them to a special device called an "eraser", that makes it impossible for us to figure out which way the clone went, so that information we recorded — we captured it but then never looked at it and deleted it.
+In our model: nothing weird. The photon was never committed. It's pending. In-flight. The timing of your "choice" is irrelevant because the event hadn't committed yet — it was always waiting for a consumer. What matters is what kind of consumer it eventually meets, not when you decided to put it there.
 
-When we look at the pattern on the screen, it looks normal. But, if we filter it by the twins where we erased the information, the pattern emerges again.
+### Quantum Eraser
+
+Now the one that breaks people.
+
+Using a special crystal, each photon that enters is split into a pair of entangled twins — one called the "signal" and one called the "idler." The signal photon heads to the screen. The idler gets routed through a separate set of optics.
+
+Here's the twist. The idler's route through those optics goes one of two ways. Half the time, it hits a beam splitter that mixes the two possible paths together — after that, it is genuinely impossible to figure out which slit the idler (and therefore the signal) came from. The which-path information isn't recorded and deleted. It's made _unrecoverable_. The paths are scrambled together. That's the "eraser." The other half of the time, the idler takes a route that preserves which-slit information — you can read which way it went.
+
+And here's what actually happens. You look at all the dots on the screen. No pattern. Just a blob. Nothing. The screen by itself _never_ shows an interference pattern — this is the part most people get wrong about this experiment.
+
+But then you take the screen data and you sort it. You filter by "show me only the dots whose twin went through the eraser." The interference pattern appears. Filter by "show me only the dots whose twin preserved which-path info." No pattern — just a blob within the blob.
 
 I can't even explain this one in basketball terms.
 
-This is probably the strongest argument I can make to show that these events are pending. Collecting the information then losing it is a null operation if there never actually is a consumer. It is a +1, -1.
+The dots on the screen never moved. They were committed the moment they hit. What changed is which subset you looked at — and the twin's measurement is the sorting key.
 
-If it was truly random, what you do to the entangled twin should not influence the latter. Random is random, but these are correlated — you know what to look for.
+So why does this matter for "no random"? Because the dots on the screen LOOK random. But they're not. There is structure hiding in them — an interference pattern — that you can only see when you have the sorting key from the twin. If those outcomes were truly random, with no underlying structure, no sorting key in the universe could reveal a pattern. You can't sort pure noise into stripes.
 
-The dots on the screen are committed and never move. But each photon has a twin, and they share a common origin in the graph — a common causal ancestor. Their outcomes were always correlated. How the twin commits determines which subset of dots reveals a pattern. The pattern was always there, hidden in the correlations. The twin's measurement is the sorting key. Nothing was erased. Nothing went backwards. The graph knew from the start.
+But these photons aren't independent. They share a common origin — a common causal ancestor in the graph, the crystal event that created both twins. That shared ancestry is why their outcomes are correlated. The pattern was always there, baked into the graph from the moment the twins were born. The twin's measurement just tells you which subset to look at. Nothing was erased. Nothing went backwards. The graph knew from the start.
 
 @style:insight
 The quantum eraser doesn't change the past. The dots on the screen are committed and never move. But each photon has a twin, and they share a common origin in the graph — a common causal ancestor. Their outcomes were always correlated. How the twin commits determines which subset of dots reveals a pattern. The pattern was always there, hidden in the correlations. The twin's measurement is the sorting key. Nothing was erased. Nothing went backwards. The graph knew from the start.

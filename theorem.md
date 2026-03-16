@@ -148,9 +148,9 @@ No dense region at the slits → both causal paths remain in-flight. The in-flig
 
 ### D20: Quantum Eraser
 
-[A2, A3, D16, D17 → D20]
+[A1, A2, A3, D16, D17, D21 → D20]
 
-The eraser sits upstream in the causal graph. When the screen demands commitment, that demand propagates backward through the causal ancestry. The propagation encounters the eraser's state at the moment it arrives. Eraser OFF (which-path erased): both causal paths still in-flight, interference emerges. Eraser ON (which-path recorded): one path committed, interference destroyed. No retrocausality — the commitment was propagating through the causal graph; the eraser's state at propagation-time determines the outcome.
+Entangled twins (signal + idler) inherit correlated causal structure from their shared ancestor event via forward propagation (A2). The signal photon commits at the screen — one dot, immutable (A5). The idler commits later at one of several possible detectors. When the idler's detector erases which-path information (both paths made indistinguishable by a beam splitter), the signal–idler pairs correlated with that outcome form a subset that exhibits interference. When the idler's detector preserves which-path information, the correlated subset shows no interference. The total set of signal dots (all subsets combined) never shows interference — consistent with no-signaling. No retrocausality — correlations propagate forward from the shared ancestor. The idler measurement is a post-selection key that determines which pre-existing correlations are revealed.
 
 ### D21: Entanglement = Shared Causal Ancestor
 
