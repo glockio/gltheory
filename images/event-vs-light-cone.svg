@@ -1,0 +1,162 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans font. A graph scene showing a pending node (you, driving to the family function) with events in transit toward it. The event cone is the narrow region of events that WILL reach you before the consumer (your aunt asking) forces commitment. Outside the event cone but inside the light cone: real events that won't arrive in time. The consumer (aunt) is approaching from the right on a deterministic path. Your brother's phone call is shown as an event either inside or outside the event cone depending on timing. Everything is deterministic — the paths and speeds are known. -->
+<svg viewBox="0 0 840 560" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="840" height="560" fill="#faf8f3" rx="12"/>
+
+  <!-- Title -->
+  <text x="420" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">The Event Cone</text>
+  <text x="420" y="54" text-anchor="middle" font-size="11" fill="#7a7a6a">Everything is in motion. Everything is deterministic. But not everything arrives in time.</text>
+
+  <!-- ===== LIGHT CONE — large dashed outer boundary ===== -->
+  <ellipse cx="340" cy="280" rx="280" ry="200" fill="none" stroke="#d5d0c0" stroke-width="1.5" stroke-dasharray="8,5"/>
+  <!-- Light cone label -->
+  <text x="110" y="118" font-size="9" font-weight="600" fill="#7a7a6a" letter-spacing="1">LIGHT CONE</text>
+  <text x="110" y="130" font-size="8" fill="#7a7a6a">Everything that COULD</text>
+  <text x="110" y="140" font-size="8" fill="#7a7a6a">ever reach you at C.</text>
+
+  <!-- ===== EVENT CONE — smaller teal shaded region ===== -->
+  <ellipse cx="360" cy="275" rx="130" ry="105" fill="#a8dadc" opacity="0.15" stroke="#a8dadc" stroke-width="2"/>
+  <!-- Event cone label -->
+  <text x="255" y="175" font-size="9" font-weight="700" fill="#2471a3" letter-spacing="1">EVENT CONE</text>
+  <text x="255" y="187" font-size="8" fill="#2471a3">What WILL reach you</text>
+  <text x="255" y="197" font-size="8" fill="#2471a3">before you're asked.</text>
+
+  <!-- ===== YOU — pending node, center ===== -->
+  <circle cx="380" cy="280" r="28" fill="#7d3c98" opacity="0.07" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <circle cx="380" cy="280" r="36" fill="#7d3c98" opacity="0.03" stroke="none"/>
+  <text x="380" y="286" text-anchor="middle" font-size="16" font-weight="700" fill="#7d3c98">?</text>
+  <text x="380" y="320" text-anchor="middle" font-size="10" font-weight="600" fill="#7d3c98">YOU</text>
+  <text x="380" y="332" text-anchor="middle" font-size="8" fill="#7a7a6a">pending, driving to</text>
+  <text x="380" y="342" text-anchor="middle" font-size="8" fill="#7a7a6a">the family function</text>
+
+  <!-- ===== CONSUMER (Aunt) — approaching from right ===== -->
+  <circle cx="650" cy="245" r="18" fill="#d35400" opacity="0.15" stroke="#d35400" stroke-width="2"/>
+  <text x="650" y="250" text-anchor="middle" font-size="11" font-weight="700" fill="#d35400">!</text>
+
+  <!-- Aunt label -->
+  <text x="650" y="222" text-anchor="middle" font-size="9" font-weight="700" fill="#d35400" letter-spacing="0.5">YOUR AUNT</text>
+  <text x="650" y="275" text-anchor="middle" font-size="8" fill="#d35400">"Are you an uncle yet?"</text>
+  <text x="650" y="287" text-anchor="middle" font-size="7" fill="#7a7a6a">CONSUMER</text>
+
+  <!-- Deterministic path from aunt to you — dashed arrow showing approach -->
+  <line x1="632" y1="250" x2="415" y2="275" stroke="#d35400" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="415,275 425,270 423,278" fill="#d35400"/>
+
+  <!-- Time-to-arrival label on aunt's path -->
+  <text x="540" y="253" text-anchor="middle" font-size="8" font-weight="600" fill="#d35400" transform="rotate(-3, 540, 253)">arrives in 3 ticks</text>
+
+  <!-- ===== EVENTS INSIDE THE EVENT CONE (will arrive in time) ===== -->
+
+  <!-- Brother's phone call — INSIDE event cone, will arrive -->
+  <circle cx="290" cy="230" r="12" fill="#1e8449" opacity="0.15" stroke="#1e8449" stroke-width="1.8"/>
+  <text x="290" y="234" text-anchor="middle" font-size="8" font-weight="700" fill="#1e8449">📞</text>
+  <text x="290" y="210" text-anchor="middle" font-size="8" font-weight="600" fill="#1e8449">Brother's call</text>
+  <text x="290" y="255" text-anchor="middle" font-size="7" fill="#1e8449">"It's a girl!"</text>
+
+  <!-- Arrow from brother to you — solid, will arrive -->
+  <line x1="302" y1="235" x2="355" y2="270" stroke="#1e8449" stroke-width="1.5"/>
+  <polygon points="355,270 348,262 345,272" fill="#1e8449"/>
+  <text x="320" y="260" font-size="7" font-weight="600" fill="#1e8449" transform="rotate(20, 320, 260)">2 ticks</text>
+
+  <!-- Traffic report event — INSIDE, will arrive -->
+  <circle cx="340" cy="195" r="9" fill="#2471a3" opacity="0.15" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="340" y="199" text-anchor="middle" font-size="7" font-weight="600" fill="#2471a3">🚗</text>
+  <text x="340" y="183" text-anchor="middle" font-size="7" fill="#2471a3">Traffic slows you</text>
+
+  <line x1="343" y1="204" x2="370" y2="258" stroke="#2471a3" stroke-width="1.2"/>
+  <polygon points="370,258 365,248 361,257" fill="#2471a3"/>
+  <text x="350" y="235" font-size="7" fill="#2471a3" transform="rotate(55, 350, 235)">1 tick</text>
+
+  <!-- Radio news — INSIDE, will arrive -->
+  <circle cx="430" cy="205" r="9" fill="#2471a3" opacity="0.15" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="430" y="209" text-anchor="middle" font-size="7" font-weight="600" fill="#2471a3">📻</text>
+  <text x="430" y="193" text-anchor="middle" font-size="7" fill="#2471a3">Radio plays</text>
+
+  <line x1="425" y1="213" x2="393" y2="256" stroke="#2471a3" stroke-width="1.2"/>
+  <polygon points="393,256 397,246 387,251" fill="#2471a3"/>
+
+  <!-- ===== EVENTS BETWEEN EVENT CONE AND LIGHT CONE (real but won't arrive) ===== -->
+
+  <!-- Mom's text — outside event cone, won't arrive in time -->
+  <circle cx="170" cy="190" r="10" fill="#7a7a6a" opacity="0.15" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="170" y="194" text-anchor="middle" font-size="7" font-weight="600" fill="#7a7a6a">💬</text>
+  <text x="170" y="175" text-anchor="middle" font-size="7" fill="#7a7a6a">Mom's text</text>
+  <text x="170" y="213" text-anchor="middle" font-size="7" fill="#7a7a6a" font-style="italic">sent, but phone</text>
+  <text x="170" y="223" text-anchor="middle" font-size="7" fill="#7a7a6a" font-style="italic">is on silent</text>
+
+  <!-- Dashed line showing it won't reach in time -->
+  <line x1="180" y1="196" x2="355" y2="272" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+  <text x="248" y="245" font-size="7" fill="#c0392b" font-weight="600" transform="rotate(22, 248, 245)">won't arrive in time</text>
+
+  <!-- Cousin's car — outside event cone -->
+  <circle cx="200" cy="340" r="10" fill="#7a7a6a" opacity="0.15" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="200" y="344" text-anchor="middle" font-size="7" font-weight="600" fill="#7a7a6a">🚙</text>
+  <text x="200" y="325" text-anchor="middle" font-size="7" fill="#7a7a6a">Cousin heard news</text>
+  <text x="200" y="363" text-anchor="middle" font-size="7" fill="#7a7a6a" font-style="italic">still 20 min away</text>
+
+  <line x1="210" y1="340" x2="354" y2="283" stroke="#7a7a6a" stroke-width="1" stroke-dasharray="3,4" opacity="0.4"/>
+  <text x="265" y="320" font-size="7" fill="#c0392b" font-weight="600" transform="rotate(-18, 265, 320)">too far, too slow</text>
+
+  <!-- ===== EVENTS OUTSIDE THE LIGHT CONE (can never reach you) ===== -->
+
+  <!-- Distant event — completely outside -->
+  <circle cx="90" cy="400" r="8" fill="#d5d0c0" opacity="0.3" stroke="#d5d0c0" stroke-width="1"/>
+  <text x="90" y="404" text-anchor="middle" font-size="6" fill="#d5d0c0">•</text>
+  <text x="90" y="420" text-anchor="middle" font-size="7" fill="#d5d0c0">Someone in Tokyo</text>
+  <text x="90" y="430" text-anchor="middle" font-size="7" fill="#d5d0c0">also had a baby</text>
+
+  <circle cx="130" cy="130" r="8" fill="#d5d0c0" opacity="0.3" stroke="#d5d0c0" stroke-width="1"/>
+  <text x="130" y="134" text-anchor="middle" font-size="6" fill="#d5d0c0">•</text>
+  <text x="130" y="115" text-anchor="middle" font-size="7" fill="#d5d0c0">Star exploded</text>
+  <text x="130" y="125" text-anchor="middle" font-size="7" fill="#d5d0c0">4 light years away</text>
+
+  <!-- ===== TIMELINE BAR AT BOTTOM ===== -->
+  <rect x="80" y="460" width="680" height="70" rx="8" fill="white" stroke="#d5d0c0" stroke-width="1"/>
+
+  <!-- Timeline line -->
+  <line x1="120" y1="485" x2="720" y2="485" stroke="#d5d0c0" stroke-width="2"/>
+
+  <!-- Tick marks and labels -->
+  <circle cx="170" cy="485" r="5" fill="#1e8449"/>
+  <text x="170" y="505" text-anchor="middle" font-size="8" font-weight="600" fill="#1e8449">t₀</text>
+  <text x="170" y="516" text-anchor="middle" font-size="7" fill="#7a7a6a">You leave house</text>
+
+  <circle cx="320" cy="485" r="5" fill="#1e8449"/>
+  <text x="320" y="505" text-anchor="middle" font-size="8" font-weight="600" fill="#1e8449">t₁</text>
+  <text x="320" y="516" text-anchor="middle" font-size="7" fill="#7a7a6a">Brother calls</text>
+
+  <circle cx="470" cy="485" r="5" fill="#2471a3"/>
+  <text x="470" y="505" text-anchor="middle" font-size="8" font-weight="600" fill="#2471a3">t₂</text>
+  <text x="470" y="516" text-anchor="middle" font-size="7" fill="#7a7a6a">You arrive</text>
+
+  <circle cx="620" cy="485" r="5" fill="#d35400"/>
+  <text x="620" y="505" text-anchor="middle" font-size="8" font-weight="600" fill="#d35400">t₃</text>
+  <text x="620" y="516" text-anchor="middle" font-size="7" fill="#d35400">Aunt asks</text>
+  <text x="620" y="526" text-anchor="middle" font-size="7" fill="#d35400">COMMITTED</text>
+
+  <!-- Arrow showing deterministic flow -->
+  <line x1="170" y1="478" x2="620" y2="478" stroke="#1a1a1a" stroke-width="1" marker-end="url(#arrowSmallBlack)"/>
+  <text x="395" y="473" text-anchor="middle" font-size="7" font-weight="600" fill="#1a1a1a" letter-spacing="1">ALL OF THIS WAS ALWAYS GOING TO HAPPEN THIS WAY</text>
+
+  <!-- ===== LEGEND ===== -->
+  <!-- Inside event cone -->
+  <circle cx="610" cy="380" r="6" fill="#1e8449" opacity="0.2" stroke="#1e8449" stroke-width="1.5"/>
+  <text x="622" y="384" font-size="8" fill="#1e8449" font-weight="600">Inside event cone. Will arrive in time.</text>
+
+  <!-- Outside event cone, inside light cone -->
+  <circle cx="610" cy="400" r="6" fill="#7a7a6a" opacity="0.2" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="622" y="404" font-size="8" fill="#7a7a6a">Real events. Won't arrive in time.</text>
+
+  <!-- Outside light cone -->
+  <circle cx="610" cy="420" r="6" fill="#d5d0c0" opacity="0.3" stroke="#d5d0c0" stroke-width="1"/>
+  <text x="622" y="424" font-size="8" fill="#d5d0c0">Outside light cone. Can never reach you.</text>
+
+  <!-- ===== MARKERS ===== -->
+  <defs>
+    <marker id="arrowSmallBlack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+
+</svg>

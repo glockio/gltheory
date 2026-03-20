@@ -1,0 +1,186 @@
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans font. A cross-section showing two regions of a graph side by side. LEFT REGION: sparse — a few nodes spread apart with simple edges between them. Tall upward growth arrows. The surface/frontier on top is high. Label: "Sparse region — fewer events, grows faster." RIGHT REGION: dense — a tight knot of many nodes with many interconnected edges. Short upward growth arrows. The surface/frontier on top is lower. Label: "Dense region — more events, grows slower." The surface line connecting both regions is uneven — higher on the sparse side, dipping down on the dense side. The unevenness is clearly visible. Bottom caption: "Same speed limit. Different workloads. The graph grows unevenly." -->
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans', sans-serif">
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#faf8f3" rx="12"/>
+
+  <!-- Divider line (soft dashed) -->
+  <line x1="400" y1="70" x2="400" y2="380" stroke="#d5d0c0" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ===== LEFT: SPARSE REGION ===== -->
+  <text x="200" y="45" text-anchor="middle" font-size="15" font-weight="600" fill="#1e8449" letter-spacing="1">SPARSE REGION</text>
+  <text x="200" y="63" text-anchor="middle" font-size="11" fill="#7a7a6a">fewer events, grows faster</text>
+
+  <!-- Sparse nodes — layer 1 (bottom) -->
+  <circle cx="120" cy="330" r="6" fill="#1e8449" opacity="0.3"/>
+  <circle cx="200" cy="340" r="6" fill="#1e8449" opacity="0.3"/>
+  <circle cx="280" cy="325" r="6" fill="#1e8449" opacity="0.3"/>
+
+  <!-- Sparse edges layer 1→2 -->
+  <line x1="124" y1="325" x2="168" y2="278" stroke="#1e8449" stroke-width="1.5" opacity="0.3"/>
+  <line x1="204" y1="335" x2="220" y2="280" stroke="#1e8449" stroke-width="1.5" opacity="0.3"/>
+  <line x1="276" y1="320" x2="248" y2="275" stroke="#1e8449" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Sparse nodes — layer 2 -->
+  <circle cx="170" cy="275" r="6" fill="#1e8449" opacity="0.5"/>
+  <circle cx="220" cy="278" r="6" fill="#1e8449" opacity="0.5"/>
+  <circle cx="250" cy="270" r="6" fill="#1e8449" opacity="0.5"/>
+
+  <!-- Sparse edges layer 2→3 -->
+  <line x1="174" y1="270" x2="155" y2="215" stroke="#1e8449" stroke-width="1.5" opacity="0.5"/>
+  <line x1="222" y1="272" x2="210" y2="218" stroke="#1e8449" stroke-width="1.5" opacity="0.5"/>
+  <line x1="248" y1="265" x2="240" y2="220" stroke="#1e8449" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Sparse nodes — layer 3 -->
+  <circle cx="155" cy="212" r="6" fill="#1e8449" opacity="0.7"/>
+  <circle cx="210" cy="215" r="6" fill="#1e8449" opacity="0.7"/>
+  <circle cx="245" cy="218" r="6" fill="#1e8449" opacity="0.7"/>
+
+  <!-- Sparse edges layer 3→frontier -->
+  <line x1="157" y1="206" x2="150" y2="160" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="212" y1="209" x2="200" y2="158" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+  <line x1="243" y1="212" x2="255" y2="162" stroke="#1e8449" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- Sparse frontier nodes (pending) -->
+  <circle cx="150" cy="155" r="7" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="200" cy="152" r="7" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="255" cy="158" r="7" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Tall growth arrows (sparse = fast) -->
+  <line x1="130" y1="285" x2="130" y2="170" stroke="#1e8449" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="280" y1="285" x2="280" y2="175" stroke="#1e8449" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="118" y="230" font-size="10" fill="#1e8449" font-weight="600" transform="rotate(-90, 118, 230)">FAST</text>
+  <text x="292" y="230" font-size="10" fill="#1e8449" font-weight="600" transform="rotate(-90, 292, 230)">FAST</text>
+
+  <!-- ===== RIGHT: DENSE REGION ===== -->
+  <text x="600" y="45" text-anchor="middle" font-size="15" font-weight="600" fill="#d35400" letter-spacing="1">DENSE REGION</text>
+  <text x="600" y="63" text-anchor="middle" font-size="11" fill="#7a7a6a">more events, grows slower</text>
+
+  <!-- Dense nodes — layer 1 (bottom) -->
+  <circle cx="520" cy="330" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="545" cy="340" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="570" cy="328" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="595" cy="338" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="620" cy="332" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="645" cy="342" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="670" cy="326" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="560" cy="350" r="5" fill="#d35400" opacity="0.25"/>
+  <circle cx="630" cy="348" r="5" fill="#d35400" opacity="0.25"/>
+
+  <!-- Dense internal edges layer 1 (tangled) -->
+  <line x1="523" y1="328" x2="542" y2="338" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="548" y1="338" x2="567" y2="326" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="572" y1="330" x2="593" y2="336" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="597" y1="340" x2="618" y2="334" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="622" y1="330" x2="643" y2="340" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="647" y1="340" x2="668" y2="328" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="545" y1="342" x2="558" y2="348" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="595" y1="340" x2="628" y2="346" stroke="#d35400" stroke-width="1" opacity="0.2"/>
+  <line x1="520" y1="332" x2="568" y2="328" stroke="#d35400" stroke-width="1" opacity="0.15"/>
+  <line x1="620" y1="334" x2="670" y2="328" stroke="#d35400" stroke-width="1" opacity="0.15"/>
+
+  <!-- Dense nodes — layer 2 -->
+  <circle cx="530" cy="285" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="555" cy="280" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="578" cy="290" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="600" cy="282" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="625" cy="288" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="648" cy="278" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="668" cy="286" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="565" cy="295" r="5" fill="#d35400" opacity="0.4"/>
+  <circle cx="635" cy="292" r="5" fill="#d35400" opacity="0.4"/>
+
+  <!-- Dense edges layer 1→2 -->
+  <line x1="522" y1="326" x2="528" y2="290" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="547" y1="336" x2="553" y2="285" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="572" y1="324" x2="576" y2="294" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="597" y1="334" x2="598" y2="286" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="622" y1="328" x2="623" y2="292" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="647" y1="338" x2="646" y2="282" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="670" y1="322" x2="666" y2="290" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+
+  <!-- Dense internal edges layer 2 -->
+  <line x1="533" y1="283" x2="553" y2="278" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="558" y1="282" x2="576" y2="288" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="580" y1="288" x2="598" y2="284" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="603" y1="280" x2="623" y2="286" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="627" y1="286" x2="646" y2="280" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="650" y1="280" x2="666" y2="284" stroke="#d35400" stroke-width="1" opacity="0.3"/>
+  <line x1="530" y1="288" x2="563" y2="293" stroke="#d35400" stroke-width="1" opacity="0.25"/>
+  <line x1="600" y1="285" x2="633" y2="290" stroke="#d35400" stroke-width="1" opacity="0.25"/>
+
+  <!-- Dense nodes — layer 3 -->
+  <circle cx="535" cy="240" r="5" fill="#d35400" opacity="0.6"/>
+  <circle cx="558" cy="235" r="5" fill="#d35400" opacity="0.6"/>
+  <circle cx="582" cy="242" r="5" fill="#d35400" opacity="0.6"/>
+  <circle cx="605" cy="238" r="5" fill="#d35400" opacity="0.6"/>
+  <circle cx="628" cy="244" r="5" fill="#d35400" opacity="0.6"/>
+  <circle cx="652" cy="236" r="5" fill="#d35400" opacity="0.6"/>
+  <circle cx="672" cy="240" r="5" fill="#d35400" opacity="0.6"/>
+
+  <!-- Dense edges layer 2→3 -->
+  <line x1="532" y1="280" x2="534" y2="245" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+  <line x1="557" y1="276" x2="557" y2="240" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+  <line x1="580" y1="286" x2="581" y2="247" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+  <line x1="602" y1="278" x2="604" y2="243" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+  <line x1="627" y1="284" x2="627" y2="249" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+  <line x1="650" y1="274" x2="651" y2="241" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+  <line x1="669" y1="282" x2="671" y2="245" stroke="#d35400" stroke-width="1" opacity="0.45"/>
+
+  <!-- Dense internal edges layer 3 -->
+  <line x1="538" y1="238" x2="556" y2="237" stroke="#d35400" stroke-width="1" opacity="0.4"/>
+  <line x1="560" y1="237" x2="580" y2="240" stroke="#d35400" stroke-width="1" opacity="0.4"/>
+  <line x1="584" y1="240" x2="603" y2="240" stroke="#d35400" stroke-width="1" opacity="0.4"/>
+  <line x1="607" y1="236" x2="626" y2="242" stroke="#d35400" stroke-width="1" opacity="0.4"/>
+  <line x1="630" y1="242" x2="650" y2="238" stroke="#d35400" stroke-width="1" opacity="0.4"/>
+  <line x1="654" y1="238" x2="670" y2="238" stroke="#d35400" stroke-width="1" opacity="0.4"/>
+
+  <!-- Dense frontier nodes (pending) — LOWER than sparse side -->
+  <circle cx="540" cy="210" r="6" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="570" cy="206" r="6" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="600" cy="212" r="6" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="630" cy="208" r="6" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="660" cy="214" r="6" fill="none" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Dense edges layer 3→frontier -->
+  <line x1="536" y1="236" x2="539" y2="217" stroke="#d35400" stroke-width="1" opacity="0.5"/>
+  <line x1="560" y1="232" x2="568" y2="213" stroke="#d35400" stroke-width="1" opacity="0.5"/>
+  <line x1="584" y1="238" x2="598" y2="218" stroke="#d35400" stroke-width="1" opacity="0.5"/>
+  <line x1="607" y1="234" x2="628" y2="214" stroke="#d35400" stroke-width="1" opacity="0.5"/>
+  <line x1="630" y1="240" x2="658" y2="220" stroke="#d35400" stroke-width="1" opacity="0.5"/>
+
+  <!-- Short growth arrows (dense = slow) -->
+  <line x1="510" y1="285" x2="510" y2="225" stroke="#d35400" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <line x1="690" y1="285" x2="690" y2="225" stroke="#d35400" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="498" y="258" font-size="10" fill="#d35400" font-weight="600" transform="rotate(-90, 498, 258)">SLOW</text>
+  <text x="702" y="258" font-size="10" fill="#d35400" font-weight="600" transform="rotate(-90, 702, 258)">SLOW</text>
+
+  <!-- ===== SURFACE LINE (uneven) ===== -->
+  <path d="M 80 148 Q 150 145 200 148 Q 300 152 400 175 Q 480 195 540 205 Q 600 210 660 208 Q 700 210 720 212"
+        stroke="#1a1a1a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Surface label on sparse side (high) -->
+  <text x="100" y="138" font-size="10" fill="#1a1a1a" font-weight="600">YOUR "NOW"</text>
+
+  <!-- Height difference annotation -->
+  <line x1="390" y1="150" x2="390" y2="210" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="383" y1="152" x2="397" y2="152" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="383" y1="208" x2="397" y2="208" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="380" y="185" text-anchor="end" font-size="10" fill="#c0392b" font-weight="600">gap</text>
+
+  <!-- ===== Bottom text ===== -->
+  <rect x="140" y="395" width="520" height="55" rx="8" fill="white" stroke="#d5d0c0" stroke-width="1"/>
+  <text x="400" y="418" text-anchor="middle" font-size="15" font-weight="700" fill="#1a1a1a">Same speed limit. Different workloads.</text>
+  <text x="400" y="438" text-anchor="middle" font-size="13" fill="#7a7a6a">The graph grows unevenly. That unevenness is where gravity comes from.</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e8449"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d35400"/>
+    </marker>
+  </defs>
+
+</svg>
