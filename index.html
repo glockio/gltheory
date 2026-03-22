@@ -99,1195 +99,576 @@
       }
       strong {
         font-weight: 600;
+        color: var(--ink);
       }
-      em {
+      em, i {
         font-style: italic;
       }
       a {
         color: var(--blue);
         text-decoration: none;
-        border-bottom: 1px solid transparent;
+        border-bottom: 1px solid var(--blue);
       }
       a:hover {
-        border-bottom-color: var(--blue);
+        border-bottom: 2px solid var(--blue);
       }
-      ul,
-      ol {
-        margin: 0 0 18px 24px;
+      hr {
+        border: none;
+        border-top: 2px solid var(--border);
+        margin: 48px 0;
+      }
+      ul, ol {
+        margin: 18px 0;
+        padding-left: 32px;
       }
       li {
         margin-bottom: 8px;
       }
-      code {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 0.85em;
-        background: var(--block-bg-code);
-        padding: 2px 6px;
-        border-radius: 3px;
+      
+      /* Styled Blocks */
+      .callout {
+        border-left: 4px solid;
+        padding: 28px 32px;
+        margin: 24px 0;
+        border-radius: 0 6px 6px 0;
       }
+      .callout-neutral {
+        border-color: var(--muted);
+        background: var(--block-bg);
+      }
+      .callout-blue {
+        border-color: var(--blue);
+        background: var(--block-bg-blue);
+      }
+      .callout-gold {
+        border-color: var(--gold);
+        background: var(--block-bg-warm);
+      }
+      .callout p:last-child {
+        margin-bottom: 0;
+      }
+      .callout strong {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 600;
+      }
+      
       .hook {
         border-left: 5px solid var(--ink);
         background: var(--block-bg-warm);
         padding: 32px 36px;
-        margin: 40px 0;
+        margin: 24px 0;
         font-size: 1.1rem;
         line-height: 1.9;
-        border-radius: 0 6px 6px 0;
       }
-      .callout {
+      
+      .mystery-block {
+        border-left: 4px solid var(--purple);
+        background: linear-gradient(to right, #f9f5fd, #f5f0fa);
         padding: 28px 32px;
-        margin: 32px 0;
+        margin: 24px 0;
         border-radius: 0 6px 6px 0;
-        border-left: 4px solid var(--muted);
-        background: var(--block-bg);
       }
-      .callout-label {
+      .mystery-label {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         font-weight: 600;
-        letter-spacing: 1.5px;
         text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--purple);
         margin-bottom: 12px;
-        display: block;
       }
-      .callout-neutral {
-        border-left-color: var(--muted);
-        background: var(--block-bg);
-      }
-      .callout-blue {
-        border-left-color: var(--blue);
-        background: var(--block-bg-blue);
-      }
-      .callout-gold {
-        border-left-color: var(--gold);
-        background: var(--block-bg-warm);
-      }
+      
       .physics-card {
         border-left: 4px solid var(--green);
         background: var(--block-bg-green);
         padding: 24px 28px;
-        margin: 28px 0;
+        margin: 24px 0;
         border-radius: 0 6px 6px 0;
       }
-      .physics-card .callout-label {
+      .physics-card-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
         color: var(--green);
+        margin-bottom: 12px;
       }
+      
       .insight {
+        border-top: 4px solid var(--teal);
         background: var(--block-bg-teal);
         padding: 32px 36px;
-        margin: 40px 0;
-        border-radius: 6px;
-        border-top: 4px solid var(--teal);
+        margin: 24px 0;
       }
-      .insight .callout-label {
+      .insight-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
         color: var(--blue);
+        margin-bottom: 12px;
       }
       .insight p {
         font-style: italic;
-        margin-bottom: 0;
       }
+      
+      .gap-box {
+        border: 2px solid var(--border);
+        background: var(--block-bg);
+        padding: 32px 36px;
+        margin: 24px 0;
+      }
+      .gap-item {
+        border-left: 3px solid var(--muted);
+        padding-left: 20px;
+        margin-bottom: 18px;
+      }
+      .gap-item strong {
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 600;
+      }
+      
+      /* Figures */
       .figure {
-        background: #fff;
         border: 1px solid var(--border);
-        border-radius: 8px;
+        background: #fff;
         padding: 24px;
-        margin: 36px 0;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin: 24px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
       }
       .figure img {
-        display: block;
-        margin: 0 auto;
         width: 100%;
         height: auto;
+        display: block;
+        margin-bottom: 16px;
       }
       .scene-label {
         font-family: 'JetBrains Mono', monospace;
-        font-size: 0.7rem;
+        font-size: 0.72rem;
         font-weight: 600;
-        letter-spacing: 2px;
         text-transform: uppercase;
+        letter-spacing: 1.5px;
         color: var(--muted);
-        margin-bottom: 16px;
         display: block;
+        margin-bottom: 8px;
       }
       .figure-caption {
         font-family: 'DM Sans', sans-serif;
-        font-size: 0.9rem;
-        font-style: italic;
-        color: var(--muted);
-        border-top: 1px solid var(--border);
-        padding-top: 14px;
-        margin-top: 18px;
+        font-size: 0.95rem;
         line-height: 1.6;
-      }
-      .mystery-block {
-        border-left: 4px solid var(--purple);
-        background: linear-gradient(135deg, #f9f5fd, #f5f0fa);
-        padding: 28px 32px;
-        margin: 32px 0;
-        border-radius: 0 6px 6px 0;
-      }
-      .mystery-block .callout-label {
-        color: var(--purple);
-      }
-      blockquote {
-        border-left: 3px solid var(--border);
-        padding-left: 20px;
-        margin: 20px 0;
         color: var(--text-secondary);
         font-style: italic;
       }
-      hr {
-        border: none;
-        border-top: 1px solid var(--border);
-        margin: 48px 0;
-      }
+      
+      /* Summary Tables */
       .summary-table {
         width: 100%;
         border-collapse: collapse;
-        margin: 28px 0;
+        margin: 24px 0;
         font-family: 'DM Sans', sans-serif;
         font-size: 0.85rem;
-        line-height: 1.6;
       }
-      .summary-table thead th {
+      .summary-table th {
         background: var(--dark);
         color: #fff;
         padding: 12px 16px;
         text-align: left;
         font-weight: 600;
       }
-      .summary-table tbody td {
-        padding: 14px 16px;
+      .summary-table td {
+        padding: 12px 16px;
         border-bottom: 1px solid var(--border);
-        vertical-align: top;
       }
-      .summary-table tbody tr:nth-child(even) {
-        background: var(--block-bg);
+      .summary-table tr:nth-child(even) {
+        background: var(--paper2);
       }
+      
+      /* Footer */
       .doc-footer {
         background: var(--dark);
         color: #888;
-        text-align: center;
         padding: 48px 24px;
+        text-align: center;
         margin-top: 80px;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.85rem;
-        line-height: 1.8;
       }
       .doc-footer strong {
         color: var(--teal);
-        font-weight: 600;
       }
+      .doc-footer p {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+      }
+      
+      /* Responsive */
       @media (max-width: 640px) {
-        .doc-header {
-          padding: 48px 16px 40px;
-        }
-        .doc-header h1 {
-          font-size: 2.2rem;
-        }
         .container {
           padding: 0 16px;
         }
-        .hook,
-        .callout,
-        .physics-card,
-        .insight,
-        .mystery-block {
-          padding: 20px 18px;
+        .doc-header {
+          padding: 60px 16px 48px;
+        }
+        .doc-header h1 {
+          font-size: 2.4rem;
         }
         h2 {
           font-size: 1.6rem;
         }
-        .figure {
-          padding: 16px;
+        h3 {
+          font-size: 1.1rem;
         }
-        .summary-table {
-          font-size: 0.8rem;
-        }
-        .summary-table thead th,
-        .summary-table tbody td {
-          padding: 10px 12px;
+        .callout, .hook, .mystery-block, .physics-card, .insight, .gap-box {
+          padding: 20px 24px;
         }
       }
     </style>
   </head>
   <body>
-    <!-- ======== HERO HEADER ======== -->
-    <div class="doc-header">
+    <header class="doc-header">
       <h1>GL Theory</h1>
-      <div class="subtitle">
-        A Software Engineers Conceptual Guide To The Universe
-      </div>
-      <div class="byline">MARCH 2026 &middot; PLAIN ENGLISH EDITION</div>
-    </div>
-
-    <!-- ======== BODY CONTENT ======== -->
-    <div class="container">
-      <!-- Author's Note -->
+      <p class="subtitle">A Software Engineers Conceptual Guide To The Universe</p>
+      <p class="byline">MARCH 2026 · PLAIN ENGLISH EDITION</p>
+    </header>
+    
+    <main class="container">
+      <hr />
+      
+      <p><strong>TL;DR:</strong> Spacetime curvature isn't fabric deformation, it's differential growth rates. The universe is a growing graph of discrete events, and gravity emerges from different regions growing at different rates. Mass has more to compute per tick, so it grows slower, and the curvature we observe is sparse regions outpacing dense ones. This predicts "gravitational runes" — if mass is removed from a region, that region can never fully catch up to space that was always empty, leaving a permanent geometric deficit that GR does not predict.</p>
+      
+      <p>This framework draws heavily from causal set theory and Wolfram's physics project, but diverges on the mechanism of curvature, the origin of mass (self-perpetuating topologies in the graph), and quantum mechanics (lazy evaluation — events stay pending until a downstream consumer forces a commit, giving you wave function collapse without randomness or hidden variables).</p>
+      
+      <hr />
+      
       <div class="callout callout-neutral">
         <p><strong>Authors Note</strong></p>
-
-        <p>
-          When someone asks if I have any hobbies, this is it. It might seem odd
-          to &ldquo;ponder the universe&rdquo; as a hobby.
-        </p>
-
-        <p>
-          But I&rsquo;d argue it&rsquo;s actually a well-known fact that the best
-          way to spend <em>ANY</em> amount of time on <em>ANY</em> amount of
-          drugs is to sit back and go
-          <strong>&ldquo;YO BUT what IF LIKE&hellip;&rdquo;</strong>
-        </p>
-
-        <p>
-          My background is in Software, so I have no business writing about spacetime.
-        </p>
-
-        <p>
-          But if the music industry can tolerate Rick Rubin, then maybe I can share
-          &ldquo;taste&rdquo; for how the universe ought to work.
-        </p>
-
-        <p>
-          I am sure the odds of getting committed rise significantly the moment
-          anyone starts saying &ldquo;I have a theory of the universe.&rdquo;
-        </p>
-
-        <p>
-          So to get ahead of whoever it was that plotted to get Kanye; Here&rsquo;s
-          what this actually is.
-        </p>
-
-        <p>
-          This is my best guess on how it <em>should</em> all work. The odds I am
-          right are about as close to zero as something can be. But if even one
-          concept inspires a thought in someone more capable I&rsquo;d consider
-          that a win.
-        </p>
-
-        <p>Cheers,<br />A Very Serious Person (Greg)</p>
+        <p>When someone asks if I have any hobbies, this is it. It might seem odd to "ponder the universe" as a hobby.</p>
+        <p>But I'd argue it's actually a well-known fact that the best way to spend <em>ANY</em> amount of time on <em>ANY</em> amount of drugs is to sit back and go <strong>"YO BUT what IF LIKE…"</strong></p>
+        <p>My background is in Software, so I have no business writing about spacetime.</p>
+        <p>But if the music industry can tolerate Rick Rubin, then maybe I can share "taste" for how the universe ought to work.</p>
+        <p>I am sure the odds of getting committed rise significantly the moment anyone start saying "I have a theory of the universe."</p>
+        <p>So to get ahead of whoever it was that plotted to get Kanye; Here's what this actually is.</p>
+        <p>This is my best guess on how it <em>should</em> all work. The odds I am right are about as close to zero as something can be. But if even one concept inspires a thought in someone more capable I'd consider that a win.</p>
+        <p>Cheers,<br />A Very Serious Person</p>
       </div>
-
+      
       <hr />
-
-      <!-- TL;DR -->
-      <p>
-        <strong>TL;DR:</strong> Spacetime curvature isn&rsquo;t fabric deformation
-        &mdash; it&rsquo;s differential growth rates. The universe is a growing
-        graph of discrete events, and gravity emerges from different regions
-        growing at different rates. Mass has more to compute per tick, so it grows
-        slower, and the curvature we observe is sparse regions outpacing dense
-        ones. This predicts &ldquo;gravitational runes&rdquo; &mdash; if mass is
-        removed from a region, that region can never fully catch up to space that
-        was always empty, leaving a permanent geometric deficit that GR does not
-        predict.
-      </p>
-
-      <p>
-        This framework draws heavily from causal set theory and Wolfram&rsquo;s
-        physics project, but diverges on the mechanism of curvature, the origin
-        of mass (self-perpetuating topologies in the graph), and quantum mechanics
-        (lazy evaluation &mdash; events stay pending until a downstream consumer
-        forces a commit, giving you wave function collapse without randomness or
-        hidden variables).
-      </p>
-
-      <hr />
-
-      <!-- ======== CHAPTER 1 ======== -->
+      
       <h2>Chapter 1: A Duck in a Tub</h2>
-
-      <p>
-        Imagine a rubber duck floating in a bathtub. Water pours in, time passes,
-        and the duck rises with the water level. From the rubber duck&rsquo;s
-        perspective, reality &mdash; everything it experiences &mdash; is the
-        surface of the water. But its experience is actually composed of the
-        billions of H<sub>2</sub>O molecules it floats on.
-      </p>
-
-      <p>
-        Our universe is the same, you exist on a massive ocean of events that all
-        lead you to your &ldquo;here&rdquo; and &ldquo;now&rdquo;. Trace any moment
-        of your life and what you will find is there is always a sequence of events
-        that brought you to where you are now. This idea of &ldquo;here&rdquo; and
-        &ldquo;now&rdquo;, has another name, &ldquo;space&rdquo; and
-        &ldquo;time&rdquo;, or Spacetime.
-      </p>
-
-      <p>
-        You are floating on an ocean of past events that all brought you to your
-        &ldquo;here&rdquo;, and &ldquo;now&rdquo;.
-      </p>
-
+      
+      <hr />
+      
+      <p>Imagine a rubber duck floating in a bathtub. Water pours in, time passes, and the duck rises with the water level. From the rubber ducks perspective, reality — everything it experiences — is the surface of the water. But its experience is actually composed of the billions of H₂O molecules it floats on.</p>
+      
+      <p>Our universe is the same, you exist on a massive ocean of events that all lead you to your "here" and "now". Trace any moment of your life and what you will find is there is always a sequence of events that brought you to where you are now. This idea of "here" and "now", has another name, "space" and "time", or Spacetime.</p>
+      
+      <p>You are floating on an ocean of past events that all brought you to your "here", and "now".</p>
+      
       <div class="figure" id="duck-in-a-tub">
-        <span class="scene-label">Figure 1 &mdash; Duck in a Tub</span>
-        <img
-          src="images/duck-in-a-tub.svg"
-          alt="Bathtub cross-section: duck on surface, events pouring in from faucet, layers of past events below."
-          width="100%"
-        />
-        <div class="figure-caption">
-          You float on the surface. Everything underneath is what got you here.
-          The stream is events. The rising water is time. The duck is you.
-        </div>
+        <span class="scene-label">Figure 1 — Duck in a Tub</span>
+        <img src="images/duck-in-a-tub.svg" alt="Whiteboard style bathtub cross-section with rubber duck floating on surface" width="100%" />
+        <div class="figure-caption">You float on the surface. Everything underneath is what got you here. The stream is events. The rising water is time. The duck is you.</div>
       </div>
-
-      <p>
-        So what is this &ldquo;ocean of events&rdquo;? We are going to refer to them
-        as the <strong>Event Graph.</strong>
-      </p>
-
-      <p>
-        The Event Graph, is a series of interconnected events that when summed
-        together give you the next &ldquo;now&rdquo; in reality for any point in
-        time. These events go all the way back to the big bang.
-      </p>
-
-      <p>
-        The key point, is that this graph <em>IS</em> the true fundamental nature
-        of the universe. Our experience only exists at the surface of this graph.
-        Just like the duck can only experience the surface of the water, you only
-        ever experience the present moment, the now.
-      </p>
-
-      <p>
-        This graph is always growing, events are always happening, and we always
-        get the next &ldquo;now&rdquo;, or new layer of reality.
-      </p>
-
-      <hr />
-
-      <!-- ======== CHAPTER 2 ======== -->
+      
+      <p>So what is this "ocean of events"? We are going to refer to them as the <strong>Event Graph.</strong></p>
+      
       <h2>Chapter 2: The Event Graph</h2>
-
-      <p>
-        So it&rsquo;s not water you are floating on, but a graph.
-      </p>
-
-      <p>
-        More specifically, its a all the events that have ever happened, going
-        all the way back to the big bang.
-      </p>
-
-      <p>
-        These events connect to each other, add together, and bring you to your
-        &ldquo;here&rdquo; and &ldquo;now.&rdquo; The event graph is the bookkeeping
-        ledger of the universe, always growing.
-      </p>
-
-      <p>
-        The idea that the universe can be represented as a graph of discrete events
-        is not as odd as it sounds. It is a real branch of physics, and this
-        framework draws heavily from
-        <a href="https://en.wikipedia.org/wiki/Causal_sets">causal set theory</a>,
-        <a href="https://www.wolframphysics.org/">Wolfram&rsquo;s project</a>,
-        and <a href="https://en.wikipedia.org/wiki/Loop_quantum_gravity">loop quantum gravity</a>.
-      </p>
-
-      <p>
-        Intuitively, what we are describing is basic cause and effect. Trace any
-        moment in your life backwards and you&rsquo;ll find a chain of events that
-        got you there. Your &ldquo;now&rdquo; didn&rsquo;t appear from nothing.
-        It was built.
-      </p>
-
-      <p>
-        So what does this graph actually look like? A graph is just dots connected
-        by lines. You already know graphs &mdash; a family tree is a graph, a
-        recipe is a graph, a road map is a graph.
-      </p>
-
+      
+      <hr />
+      
+      <p>So it's not water you are floating on, but a graph.</p>
+      
+      <p>More specifically, its all the events that have ever happened, going all the way back to the big bang.</p>
+      
+      <p>These events connect to each other, add together, and bring you to your "here" and "now." The event graph is the bookkeeping ledger of the universe, always growing.</p>
+      
+      <p>The idea that the universe can be represented as a graph of discrete events is a real branch of physics, and this framework draws heavily from <a href="https://en.wikipedia.org/wiki/Causal_sets">causal set theory</a>, <a href="https://www.wolframphysics.org/">Wolfram's project</a>, and <a href="https://en.wikipedia.org/wiki/Loop_quantum_gravity">loop quantum gravity</a>.</p>
+      
+      <p>Intuitively, what we are describing is basic cause and effect. Your "now" didn't appear from nothing, it was built from the past events.</p>
+      
+      <p>So what does this graph actually look like? A graph is just dots connected by lines. You already know graphs — a family tree is a graph, a recipe is a graph, a road map is a graph.</p>
+      
       <div class="figure" id="you-already-know-graphs">
-        <span class="scene-label">Figure 2 &mdash; You Already Know Graphs</span>
-        <img
-          src="images/you-already-know-graphs.svg"
-          alt="Three simple graphs side by side: a family tree, a recipe with four steps, and a road map with five cities."
-          width="100%"
-        />
-        <div class="figure-caption">
-          A family tree is a graph. A recipe is a graph. A road map is a graph.
-          Dots connected by lines. That&rsquo;s the whole idea.
-        </div>
+        <span class="scene-label">Figure 2 — You Already Know Graphs</span>
+        <img src="images/you-already-know-graphs.svg" alt="Three everyday graphs: family tree, recipe, and road map" width="100%" />
+        <div class="figure-caption">A family tree is a graph. A recipe is a graph. A road map is a graph. Dots connected by lines. That's the whole idea.</div>
       </div>
-
+      
       <p>Ours has four rules:</p>
-
-      <p>
-        <strong>1. The dots are events.</strong> Not particles. Not objects. Not
-        &ldquo;Sara went for a run&rdquo; &mdash; there is no Sara in the graph.
-        The dots are events, events are the bookkeeping currency of the universe.
-        What is an Event exactly? To be honest I don&rsquo;t know. It would have
-        to be the smallest unit of change that can occur. For the purpose of this
-        article, I&rsquo;d suggest it&rsquo;s energy in some form &mdash; which
-        would explain why energy can&rsquo;t be created or destroyed. You&rsquo;re
-        always just logging interactions.
-      </p>
-
-      <p>
-        <strong>2. Nodes are stateless.</strong> This one is a bit counterintuitive,
-        so stay with me. The nodes themselves hold no values. All properties emerge
-        from their position in the graph. Just like in a family tree &mdash; you
-        don&rsquo;t write &ldquo;parent&rdquo; on a dot. You look at who&rsquo;s
-        underneath it. A node in the event graph works the same way. What it
-        <em>is</em> comes entirely from the paths reaching it and the operations
-        those paths carried. Nodes store nothing. They inherit everything. This
-        matters a lot later.
-      </p>
-
-      <p>
-        <strong>3. The lines are operations.</strong> They carry the math. Each
-        line connects one event to another and says &ldquo;here&rsquo;s what
-        happened between these two moments.&rdquo; Sum all the operations pointing
-        into any dot and you get the next event. That&rsquo;s how the graph builds
-        the next layer of reality.
-      </p>
-
-      <p>
-        <strong>4. The lines point forward.</strong> Cause to effect. Past to
-        future. The graph only grows. This is time &mdash; not a clock on a wall,
-        but the graph getting one layer taller.
-      </p>
-
-      <p>
-        That&rsquo;s the whole machine. Events, operations between them, growing
-        forward. New events are born from the sum of what came before. Your
-        &ldquo;now&rdquo; is the newest layer. The graph underneath is every
-        &ldquo;now&rdquo; that already happened.
-      </p>
-
-      <p>
-        Now, there is one other very important property of this graph. Our universe
-        has a speed limit &mdash; the speed of light, C &mdash; and so does our
-        graph.
-      </p>
-
-      <p>
-        The speed of light has nothing to do with light. It is the maximum rate
-        that change can occur in our universe. The fastest information can travel,
-        and compute, within the graph. So C, is the fastest our graph can
-        &ldquo;grow&rdquo;.
-      </p>
-
-      <p>
-        Some regions of the graph have more going on than others. A star has more
-        events in play than an empty patch of space. A black hole has more going
-        on than a star. Our graph has dense regions and sparse regions.
-      </p>
-
-      <p>
-        If the graph has a fixed speed limit for how fast it can process &mdash;
-        and dense regions have more to process &mdash; then dense regions take
-        longer to get to their next &ldquo;now&rdquo; than sparse ones.
-      </p>
-
-      <p>
-        This means our graph is <strong>not</strong> growing evenly. And that
-        unevenness is where things get interesting.
-      </p>
-
+      
+      <p><strong>1. The nodes are events.</strong> Not particles. Not objects. Not "Sara went for a run" — there is no Sara in the graph. The dots are events, events are the bookkeeping currency of the universe. What is an Event exactly? To be honest I don't know. It would have to be the smallest unit of change that can occur. For the purpose of this article, I'd suggest it's energy in some form. You're always just logging interactions.</p>
+      
+      <p><strong>2. Nodes are stateless.</strong> This one is a bit counterintuitive, so stay with me. The nodes themselves hold no values. All properties emerge from their position in the graph. Just like in a family tree, you don't write "parent" on a dot. You look at who's underneath it. A node in the event graph works the same way. What it <em>is</em> comes entirely from the paths reaching it and the operations those paths carried. Nodes store nothing. They inherit everything. This matters a lot later.</p>
+      
+      <p><strong>3. The lines are operations.</strong> They carry the math. Each line connects one event to another and says "here's what happened between these two moments." Sum all the operations pointing into any dot and you get the next event. That's how the graph builds the next layer of reality.</p>
+      
+      <p><strong>4. The lines point forward.</strong> Cause to effect. Past to future. The graph only grows. Time is the graph getting taller.</p>
+      
+      <p>That's the whole machine. Events, operations between them, growing forward. New events are born from the sum of what came before. Your "now" is the newest layer. The graph underneath is every "now" that already happened.</p>
+      
+      <p>Now, there is one other very important property of this graph. Our universe has a speed limit, and so does our graph. The speed of light (C).</p>
+      
+      <p>The speed of light has nothing to do with light. It is the maximum rate that change can occur in our universe. The fastest information can travel, and compute, within the graph. So C, is the fastest our graph can "grow".</p>
+      
+      <p>Some regions of the graph have more going on than others. A star has more events in play than an empty patch of space. A black hole has more going on than a star. Our graph has dense regions and sparse regions.</p>
+      
+      <p>If the graph has a fixed speed limit for how fast it can process — and dense regions have more to process — then dense regions take longer to get to their next "now" than sparse ones.</p>
+      
+      <p>This means our graph is <strong>not</strong> growing evenly. And that unevenness is where things get interesting.</p>
+      
       <div class="figure" id="uneven-growth">
-        <span class="scene-label">Figure 3 &mdash; Uneven Growth</span>
-        <img
-          src="images/uneven-growth.svg"
-          alt="Cross-section view of graph growing upward. Sparse region with simple nodes grows fast and high. Dense region with many nodes grows slow and low. Uneven surface connecting them."
-          width="100%"
-        />
-        <div class="figure-caption">
-          The graph has a speed limit but not every region has the same workload.
-          Dense regions fall behind. The surface grows unevenly. That unevenness
-          is where spacetime gets its shape.
-        </div>
+        <span class="scene-label">Figure 3 — Uneven Growth</span>
+        <img src="images/uneven-growth.svg" alt="Cross-section showing sparse vs dense graph regions growing at different rates" width="100%" />
+        <div class="figure-caption">The graph has a speed limit but not every region has the same workload. Dense regions fall behind. The surface grows unevenly. That unevenness is where spacetime gets its shape.</div>
       </div>
-
-      <hr />
-
-      <!-- ======== CHAPTER 3 ======== -->
+      
       <h2>Chapter 3: Spacetime</h2>
-
-      <p>
-        Open up any physics textbook on spacetime and you will see a picture of a
-        bowling ball on a trampoline. Mass warps the fabric of spacetime, and this
-        curvature gives us gravity.
-      </p>
-
+      
+      <hr />
+      
+      <p>Open up any physics textbook on spacetime and you will see a picture of a bowling ball on a trampoline. Mass warps the fabric of spacetime, and this curvature gives us gravity.</p>
+      
       <div class="figure" id="bowling-ball-vs-meadow">
-        <span class="scene-label">Figure 4 &mdash; Bowling Ball vs. Meadow</span>
-        <img
-          src="images/bowling-ball-vs-meadow.svg"
-          alt="Two panels. Left: standard trampoline with bowling ball pushing fabric down. Right: meadow with rock, grass growing slower near rock, same shape different mechanism."
-          width="100%"
-        />
-        <div class="figure-caption">
-          Two models, same result. The standard picture says mass pushes spacetime
-          down. We&rsquo;re saying the grass just grows slower where the rock is.
-          Same shape &mdash; completely different mechanism.
-        </div>
+        <span class="scene-label">Figure 4 — Bowling Ball vs. Meadow</span>
+        <img src="images/bowling-ball-vs-meadow.svg" alt="Two-panel comparison: trampoline with bowling ball vs meadow with rock" width="100%" />
+        <div class="figure-caption">Two models, same result. The standard picture says mass pushes spacetime down. We're saying the grass just grows slower where the rock is. Same shape — completely different mechanism.</div>
       </div>
-
-      <p>
-        In our model, this is wrong. The end result is correct, but the mechanism
-        for how mass warps spacetime is <strong>wrong</strong>.
-      </p>
-
-      <p>
-        We said spacetime is the surface of our event graph, and our graph is not
-        growing evenly. Dense regions have more to process, so they grow slower.
-        Sparse regions race ahead.
-      </p>
-
-      <p>
-        So here&rsquo;s our claim: Mass does <strong>not</strong> warp spacetime
-        like a bowling ball on a trampoline. Mass causes regions of the graph to
-        grow slower than the regions around them.
-      </p>
-
-      <p>
-        A better analogy would be to imagine a meadow with a rock in it, the grass
-        around the meadow grows freely, but grass under the rock grows more slowly.
-        The end result is it might look that the rock warped the rest of the grass,
-        but we are saying the curvature is the result in a difference in growth
-        rates <strong>NOT</strong> a warping of fabric.
-      </p>
-
-      <p>
-        Same shape. Different mechanism. And the mechanism matters &mdash; because
-        it changes what spacetime <em>is</em>. It&rsquo;s not a fabric being
-        deformed. It&rsquo;s a graph being outpaced.
-      </p>
-
-      <p>
-        This is the core claim of this entire framework. General Relativity describes
-        the shape of spacetime with extraordinary precision. It tells you <em>what</em>
-        mass does to geometry. But it doesn&rsquo;t tell you <em>why</em>.
-      </p>
-
-      <p>
-        The Einstein field equations say mass-energy equals curvature &mdash; but
-        they don&rsquo;t explain the mechanism that produces it. We&rsquo;re proposing
-        one: mass is computationally dense, the graph has a processing speed limit,
-        and mass regions lag behind their surroundings. The curvature is real.
-        The shape is the same. But now there&rsquo;s a reason for it.
-      </p>
-
-      <p>
-        But <em>why</em> would mass slow the growth of the graph? What is mass,
-        actually, in a universe made of events?
-      </p>
-
-      <hr />
-
-      <!-- ======== CHAPTER 4 ======== -->
+      
+      <p>In our model, this is inaccurate. The end result is correct, but the mechanism for how mass warps spacetime is <strong>wrong</strong>.</p>
+      
+      <p>We said spacetime is the surface of our event graph, and our graph is not growing evenly. Dense regions have more to process, so they grow slower. Sparse regions race ahead.</p>
+      
+      <p>So here's our claim: Mass does <strong>not</strong> warp spacetime like a bowling ball on a trampoline. Mass causes regions of the graph to grow slower than the regions around them.</p>
+      
+      <p>A better analogy would be to imagine a meadow with a rock in it, the grass around the meadow grows freely, but grass under the rock grows more slowly. The end result is it might look that the rock warped the rest of the grass, but we are saying the curvature is the result in a difference in growth rates <strong>NOT</strong> a warping of fabric.</p>
+      
+      <p>Same shape. Different mechanism. And the mechanism matters, because it changes what spacetime <em>is</em>. It's not a fabric being deformed. It's a graph being outpaced.</p>
+      
+      <p>This is the core claim of this entire framework. General Relativity describes the shape of spacetime with extraordinary precision. It tells you <em>what</em> mass does to geometry. But it doesn't tell you <em>why</em>.</p>
+      
+      <p>We're proposing one: mass is computationally dense, the graph has a processing speed limit, and mass regions lag behind their surroundings. The curvature is real. The shape is the same. But now there's a reason for it.</p>
+      
+      <p>But w<em>hy</em> would mass slow the growth of the graph? What is mass, actually, in a universe made of events?</p>
+      
       <h2>Chapter 4: Mass</h2>
-
-      <p>
-        To answer the question of mass I want to first talk a bit about time.
-      </p>
-
-      <p>
-        Time, is an interesting concept in physics, because our equations work
-        equally well both forwards and backwards in time.
-      </p>
-
-      <p>
-        Imagine what it would look like to you if &ldquo;time&rdquo;, stopped.
-        Well, nothing would change. Our perception or what we call
-        <strong>time is really a measure of change in our local region</strong>.
-      </p>
-
-      <p>
-        We have already said that the speed of light C, is really the fastest
-        information flows though our graph.
-      </p>
-
-      <p>
-        We also said that our graph is composed of events, and that the idea of
-        objects or photons do not exist at the graph level. So what is mass then?
-      </p>
-
-      <p>
-        Mass, objects, particles are all the result of stable configurations within
-        the graph. A collection of events that join together and form a specific
-        &ldquo;shape&rdquo; or result if you will, and whose topology repeats into
-        the &ldquo;next now&rdquo;.
-      </p>
-
-      <p>
-        When we go to build the next layer of reality, to move from current now to
-        future now, we sum all of those events. And for mass &mdash; when you sum
-        all the operations together &mdash; it just generates the same shape again.
-        That&rsquo;s it. Mass is a self-perpetuating topology within the event graph.
-      </p>
-
+      
+      <hr />
+      
+      <p>To answer the question of mass I want to first talk a bit about time.</p>
+      
+      <p>Time, is an interesting concept in physics, because our equations work equally well both forwards and backwards in time.</p>
+      
+      <p>Imagine what it would look like to you if "time", stopped. Well, nothing would change. Our perception or what we call <strong>time is really a measure of change in our local region</strong>.</p>
+      
+      <p>We have already said that the speed of light C, is really the fastest information flows through our graph.</p>
+      
+      <p>We also said that our graph is composed of events, and that the idea of objects or photons do not exist at the graph level. So what is mass then?</p>
+      
+      <p>Mass, objects, particles are all the result of stable configurations within the graph. A collection of events that join together and form a specific "shape" or result if you will, and whose topology repeats into the "next now".</p>
+      
+      <p>When we go to build the next layer of reality, to move from current now to future now, we sum all of those events. And for mass — when you sum all the operations together — it just generates the same shape again. That's it. Mass is a self-perpetuating topology within the event graph.</p>
+      
       <div class="figure" id="mass-is-a-loop">
-        <span class="scene-label">Figure 5 &mdash; Mass Is a Loop</span>
-        <img
-          src="images/mass-is-a-loop.svg"
-          alt="Two side-by-side diagrams. Left: photon as single chain traveling at C. Right: particle as cluster that rebuilds itself each tick, spending budget on maintenance."
-          width="100%"
-        />
-        <div class="figure-caption">
-          Mass is not a thing. It is a pattern that keeps happening. A photon
-          travels at C because it has nothing to rebuild. A massive particle
-          spends computational budget maintaining its own topology &mdash;
-          that&rsquo;s why it&rsquo;s slower.
-        </div>
+        <span class="scene-label">Figure 5 — Mass is a Loop</span>
+        <img src="images/mass-is-a-loop.svg" alt="Side-by-side comparison of photon chain vs particle loop topology" width="100%" />
+        <div class="figure-caption">Mass is not a thing. It is a pattern that keeps happening. A photon travels at C because it has nothing to rebuild. A massive particle spends computational budget maintaining its own topology — that's why it's slower.</div>
       </div>
-
-      <p>
-        Regions of the graph which are simple structures and can be processed in
-        a single tick, grow at the speed of light, where regions which have more
-        dense topologies grow at a slow rate and give rise to time dilation, which
-        gives rise to curvature and finally gravity emerges.
-      </p>
-
+      
+      <p>Regions of the graph which are simple structures and can be processed in a single tick, grow at the speed of light, where regions which have more dense topologies grow at a slow rate and give rise to time dilation, which gives rise to curvature and finally gravity emerges.</p>
+      
       <div class="figure" id="growth-rates">
-        <span class="scene-label">Figure 6 &mdash; Growth Rates</span>
-        <img
-          src="images/growth-rates.svg"
-          alt="Horizontal spectrum from simple (photon) through moderate (particle) to dense (black hole). Shows growth rate arrows getting shorter from left to right."
-          width="100%"
-        />
-        <div class="figure-caption">
-          Simple structures grow at C. Dense topologies grow slower. That
-          difference in growth rate is where time dilation, curvature, and
-          gravity come from.
-        </div>
+        <span class="scene-label">Figure 6 — Growth Rates</span>
+        <img src="images/growth-rates.svg" alt="Spectrum showing photon to black hole growth rates" width="100%" />
+        <div class="figure-caption">Simple structures grow at C. Dense topologies grow slower. That difference in growth rate is where time dilation, curvature, and gravity come from.</div>
       </div>
-
-      <p>
-        To be honest this is a bit of a head fuck, but stay with me. You think
-        of mass as something that just is. But really it&rsquo;s something that
-        existed, and then the bookkeeping decided it should exist again.
-      </p>
-
-      <p>
-        Imagine, your boss pays you $1000 (event 1), your landlord charges you
-        $1000 (event 2). Those sum together so you were poor then, and you are
-        poor now. Two events resulting in a stable configuration where you forever
-        remain poor. If those events happen again in the next now, you have a
-        self-perpetuating topology of poverty.
-      </p>
-
-      <p>
-        This has an implication worth flagging. If mass is a topology that
-        regenerates itself under summation, then the specific particles we observe
-        &mdash; electrons, quarks, photons &mdash; are the specific shapes that
-        happen to be stable.
-      </p>
-
-      <p>
-        From a qualitative standpoint, E=MC&sup2; starts to make intuitive sense.
-        Mass is a collection of events that must be read and recomputed each tick.
-        C is the fastest that can happen. The energy locked in that mass is
-        proportional to C&sup2;, because the graph has to both resolve the
-        structure and propagate its effects &mdash; two operations, both bounded
-        by C.
-      </p>
-
-      <hr />
-
-      <!-- ======== CHAPTER 5 ======== -->
+      
+      <p>To be honest this is a bit of a head fuck, but stay with me. You think of mass as something that just is. But really it's something that existed, and then the bookkeeping decided it should exist again.</p>
+      
+      <p>Imagine, your boss pays you $1000 (event 1), your landlord charges you $1000 (event 2). Those sum together so you were poor then, and you are poor now. Two events resulting in a stable configuration where you forever remain poor. If those events happen again in the next now, you have a self-perpetuating topology of poverty.</p>
+      
+      <p>This has an implication worth flagging. If mass is a topology that regenerates itself under summation, then the specific particles we observe — electrons, quarks, photons — are the specific shapes that happen to be stable.</p>
+      
       <h2>Chapter 5: Gravitational Runes</h2>
-
+      
+      <hr />
+      
       <p>What would happen if the sun disappeared?</p>
-
-      <p>
-        In the standard model, mass warps spacetime like a bowling ball on a
-        trampoline. Remove the ball, the trampoline snaps back. Spacetime restores
-        to flat.
-      </p>
-
-      <p>
-        In our model, something different happens. The sun was a dense region of
-        the graph, which had a slower growth rate. Remove it, and the growth rate in
-        that region is restored. The grass starts growing at full speed again.
-      </p>
-
-      <p>
-        Compared to Earth, the region with the sun will eventually &ldquo;catch
-        up&rdquo;, and surpass earth. But if you compared it to a region of space
-        that never had mass, and was always growing at rate C, it can never catch
-        up. There will always be a deficit. The region of the sun will always be
-        behind the region of space that never had mass in the first place.
-      </p>
-
-      <p>
-        Like finding a long lost ancient city in the forest, growth was restored
-        and the forest takes over, but there is still some small impression you
-        can see on satellite images. We are saying there <em>should</em> be
-        evidence of gravitational runes, relics of old mass in the universe.
-      </p>
-
+      
+      <p>In the standard model, mass warps spacetime like a bowling ball on a trampoline. Remove the ball, the trampoline snaps back. Spacetime restores to flat.</p>
+      
+      <p>In our model, something different happens. The sun was a dense region of the graph, which had a slower growth rate. Remove it, and the growth rate in that region is restored. The grass starts growing at full speed again.</p>
+      
+      <p>Compared to Earth, the region with the sun will eventually "catch up", and surpass earth. But if you compared it to a region of space that never had mass, and was always growing at rate C, it can never catch up. There will always be a deficit. The region of the sun will always be behind the region of space that never had mass in the first place.</p>
+      
       <div class="figure" id="gravitational-runes">
-        <span class="scene-label">Figure 7 &mdash; Gravitational Runes</span>
-        <img
-          src="images/gravitational-runes.svg"
-          alt="Three-panel timeline: star present with dip, star removed with gap remaining, long after with faint fossil dip still visible."
-          width="100%"
-        />
-        <div class="figure-caption">
-          Remove the mass and growth returns. But the lost time never fully
-          recovers. The graph remembers. This is the prediction &mdash;
-          gravitational runes, fossils of old mass.
-        </div>
+        <span class="scene-label">Figure 7 — Gravitational Runes</span>
+        <img src="images/gravitational-runes.svg" alt="Three-panel timeline showing star present, removed, and long after" width="100%" />
+        <div class="figure-caption">Remove the mass and growth returns. But the lost time never fully recovers. The graph remembers. This is the prediction — gravitational runes, fossils of old mass.</div>
       </div>
-
-      <p>
-        Now, the math might not work out so that this is even possible. You can&rsquo;t
-        just &ldquo;delete&rdquo;, as far as I know you can&rsquo;t just delete a
-        planet without energy being emitted from the destruction. The energy
-        emitted would spill into surrounding space and thus impact its rates of
-        change. So maybe the math does not work out where this is something that
-        can exist. But it would be a prediction of this conceptual framework
-        that is novel to the standard.
-      </p>
-
-      <p>
-        This claim is different from gravitational wave memory effect. This is a
-        permanent deficit left by former <em>static</em> mass.
-      </p>
-
-      <p>
-        But <em>if</em> you could find a pristine patch of space that never had
-        mass and compare it to a region that used to &mdash; and if there&rsquo;s
-        a measurable difference in the local geometry &mdash; that would be
-        evidence of a gravitational rune. And that would be a prediction this
-        model makes that GR does not.
-      </p>
-
-      <hr />
-
-      <!-- ======== PART 2 ======== -->
+      
+      <p>Now, the math might not work out so that this is even possible. As far as I know you can't just "delete" a planet without energy being emitted into surrounding areas. Thus impacting their rates of change. So maybe the math does not work out where this is something that can exist. But it would be a prediction of this conceptual framework that is novel to the standard.</p>
+      
+      <p>But <em>if</em> you could find a pristine patch of space that never had mass and compare it to a region that used to — and if there's a measurable difference in the local geometry — that would be evidence of a gravitational rune. And that would be a prediction this model makes that GR does not.</p>
+      
+      <p>This claim is different from gravitational wave memory effect. This is a permanent deficit left by former mass.</p>
+      
       <h2>Part 2: The Quantum World</h2>
-
-      <p>
-        So that was the big stuff.
-      </p>
-
-      <p>
-        Realistically you this article, <em>could/should</em> stop here. But no
-        crackpot theory of everything is complete unless it tries to tackel the
-        quantum world.
-      </p>
-
-      <p>
-        In our model, it&rsquo;s all a graph but Quantum mechanics shows up when we
-        focus on <em>how</em> the graph changes. Curvature is what the graph looks
-        like when you zoom out. Wave function collapse is what it looks like when
-        you zoom in.
-      </p>
-
-      <p>
-        So lets zoom in. How exactly do we get from this &ldquo;now&rdquo; to the
-        next one? Change happens one event at a time. And that&rsquo;s where
-        things get strange.
-      </p>
-
+      
       <hr />
-
-      <!-- ======== CHAPTER 6 ======== -->
+      
+      <p>So that was the big stuff.</p>
+      
+      <p>Realistically you <em>could/should</em> stop here. But no crackpot theory of everything is complete unless it tries to tackle the quantum world.</p>
+      
+      <p>In our model, it's all a graph but Quantum mechanics shows up when we focus on <em>how</em> the graph changes. Curvature is what the graph looks like when you zoom out. Wave function collapse is what it looks like when you zoom in.</p>
+      
+      <p>So lets zoom in. How exactly do we get from this "now" to the next one? Change happens one event at a time. And that's where things get strange.</p>
+      
       <h2>Chapter 6: Pending vs Committed</h2>
-
-      <p>
-        If it&rsquo;s all events and operations underneath, how do we ever go from
-        &ldquo;now&rdquo; to the &ldquo;next now&rdquo;?
-      </p>
-
-      <p>
-        In our model, the graph is always accumulating events. The graph is always
-        growing.
-      </p>
-
-      <p>
-        Energy is always interacting, edges are always arriving. But those events
-        don&rsquo;t produce an answer or the next now, until someone asks them.
-        Our graph is lazy loaded.
-      </p>
-
-      <p>
-        This is the core mechanism of the quantum world in our model. Events
-        accumulate, but they are not summed/committed until a downstream event
-        <em>needs</em> the result. We&rsquo;re going to call that downstream
-        event a <strong>consumer</strong>.
-      </p>
-
-      <p>
-        No consumer? The events keep arriving. The node stays pending. Another
-        event could still show up and change the output. This is like someone
-        asking you a math question verbally.
-      </p>
-
-      <p>
-        You hear: &ldquo;what does&rdquo;&hellip;&rdquo;3&rdquo;&hellip;&rdquo;divided
-        by&rdquo;&hellip;&rdquo;3&rdquo;&hellip;&rdquo;<em>plus</em>&rdquo;&hellip;
-        &rdquo;5&rdquo;&hellip; &rdquo;equal?&rdquo;&hellip;
-      </p>
-
-      <p>
-        Until they say &ldquo;equals?&rdquo; you need to wait for all the numbers
-        and operations to arrive. The graph works the same way. It keeps track of
-        all the operations and values but until a consumer asks &ldquo;equals?&rdquo;,
-        it&rsquo;s waiting to answer. And this is important, the events arriving in
-        sequence <em>change</em> the output. Until the question is finished, the
-        answer doesn&rsquo;t exist. Not because it&rsquo;s hidden. Because the
-        computation isn&rsquo;t done.
-      </p>
-
+      
+      <hr />
+      
+      <p>If it's all events and operations underneath, how do we ever go from "now" to the "next now"?</p>
+      
+      <p>In our model, the graph is always accumulating events. The graph is always growing.</p>
+      
+      <p>Energy is always interacting, edges are always arriving. But those events don't produce an answer or the next now, until someone asks them. Our graph is lazy loaded.</p>
+      
+      <p>This is the core mechanism of the quantum world in our model. Events accumulate, but they are not summed/committed until a downstream event <em>needs</em> the result. We're going to call that downstream event a <strong>consumer</strong>.</p>
+      
+      <p>No consumer? The events keep arriving. The node stays pending. Another event could still show up and change the output. This is like someone asking you a math question verbally.</p>
+      
+      <p>You hear: "what does"…"3"…"divided by"…"3"…"<em>plus</em>"… "5"… "equal?"…</p>
+      
+      <p>Until they say "equals?" you need to wait for all the numbers and operations to arrive. The graph works the same way. It keeps track of all the operations and values but until a consumer asks "equals?", it's waiting to answer.</p>
+      
       <div class="figure" id="pending-vs-committed">
-        <span class="scene-label">Figure 8 &mdash; Pending vs. Committed</span>
-        <img
-          src="images/pending-vs-committed.svg"
-          alt="Two panels. Left: pending node with arriving edges and question mark. Right: committed node with value locked and consumer edge."
-          width="100%"
-        />
-        <div class="figure-caption">
-          Nothing is random. Nothing is decided. It&rsquo;s just not finished yet.
-          The moment a consumer asks, the pending events are summed and the answer
-          is locked.
-        </div>
+        <span class="scene-label">Figure 8 — Pending vs Committed</span>
+        <img src="images/pending-vs-committed.svg" alt="Two-panel diagram showing pending node with arriving edges vs committed node with consumer" width="100%" />
+        <div class="figure-caption">Nothing is random. Nothing is decided. It's just not finished yet. The moment a consumer asks, the pending events are summed and the answer is locked.</div>
       </div>
-
-      <p>
-        So if these pending events are in our graph, and our graph is our reality,
-        then they should show up in our reality.
-      </p>
-
-      <p>
-        And they do. Physicists call it a wave function. It&rsquo;s a probability
-        distribution that describes where a particle <em>might</em> be and what it
-        <em>might</em> do. When you measure the wave &ldquo;collapses&rdquo; and
-        you get a single definite answer.
-      </p>
-
-      <p>
-        In our model, the wave function is what a pending node looks like from
-        the surface. It&rsquo;s not that the particle is in many places at once.
-        It&rsquo;s that the events haven&rsquo;t been summed yet. The answer
-        genuinely doesn&rsquo;t exist. Not because it&rsquo;s hidden. Not
-        because we&rsquo;re ignorant. Because the computation isn&rsquo;t finished.
-      </p>
-
+      
+      <p>So if these pending events are in our graph, and our graph is our reality, then they should show up in our reality.</p>
+      
+      <p>And they do. Physicists call it a wave function. It's a probability distribution that describes where a particle <em>might</em> be and what it <em>might</em> do. When you measure the wave "collapses" and you get a single definite answer.</p>
+      
+      <p>In our model, the wave function is what a pending node looks like from the surface. It's not that the particle is in many places at once. It's that the events haven't been summed yet. The answer genuinely doesn't exist. Not because it's hidden. Not because we're ignorant. Because the computation isn't finished.</p>
+      
       <h3>What Counts as a Consumer?</h3>
-
-      <p>
-        The truth is, I don&rsquo;t know exactly. What counts as an observer is
-        an open question in physics. So I&rsquo;m not going to pretend I&rsquo;ve
-        cracked it here. But for the sake of not being too hand-wavy, here&rsquo;s
-        what I think it <em>ought</em> to be.
-      </p>
-
-      <p>
-        Not every interaction in the graph can force a commit. Things are
-        interacting constantly. Photons scatter off surfaces. Particles exchange
-        energy. Momentum transfers. If every interaction forced a commit, nothing
-        would ever stay pending and there would be no quantum mechanics.
-        Everything would just be classical.
-      </p>
-
-      <p>
-        Energy exchange, scattering, momentum transfer &mdash; these should be
-        operations, logged as edges. More edges adding terms to the pending
-        computation. They contribute to the final output, but they don&rsquo;t
-        demand an answer.
-      </p>
-
-      <p>
-        But there might be some clues as to what counts.
-      </p>
-
-      <p>
-        There&rsquo;s a famous result in quantum mechanics called the Heisenberg
-        uncertainty principle. You can know a particle&rsquo;s position precisely,
-        or its momentum precisely, but not both at the same time. The more
-        precisely you pin down one, the more the other smears out.
-      </p>
-
-      <p>
-        Remember, in our model there is no particle. What we call a
-        &ldquo;particle&rdquo; is a collection of interlinked events in the graph.
-        Mass or things are a self-perpetuating topology. An electron isn&rsquo;t
-        a single dot. It&rsquo;s a region of the graph with structure.
-      </p>
-
-      <p>
-        Here&rsquo;s the key idea: different measurable properties might correspond
-        to different <em>subsets</em> of events within that neighborhood.
-      </p>
-
-      <p>
-        Based on the Heisenberg uncertainty principle specific properties might
-        have their own topological subsets within a given neighborhood. So you
-        could read position while leaving momentum still pending.
-      </p>
-
-      <p>
-        Additionally when you read one property and force a commit, it produces
-        outgoing edges &mdash; new operations that propagate forward. Those new
-        edges don&rsquo;t just disappear. They flow into the rest of the
-        neighborhood, including the momentum subset. They become additional
-        operations added to the still-pending momentum events. They change the
-        computation.
-      </p>
-
-      <hr />
-
-      <!-- ======== CHAPTER 7 ======== -->
+      
+      <p>No idea to be honest. It's a bit of a head scratcher this one, the measurement problem is an outstanding question in physics.</p>
+      
+      <p>But here is my take on how it <em>ought</em> to work. There are two observations that help:</p>
+      
+      <ol>
+        <li>Decoherence is gradual. We can have partial positional information and get partial interference. The more sensitive the detector, the more the fringes fade.</li>
+        <li>The Heisenberg uncertainty principle ties position and momentum together, pinning one disturbs the other.</li>
+      </ol>
+      
+      <p>In both cases, positional information seems to be what matters. So here is the claim: <strong>a commit happens whenever positional information is resolved.</strong></p>
+      
+      <p><strong>A Consumer</strong> is any region of the graph that has a dependency on a pending node's positional information to produce its next state.</p>
+      
+      <p>In cases where positional information is not fully resolved, the interaction can write edges into the graph without creating a new node, partial information, partial decoherence, partial loss of interference. The pending computation narrows but doesn't commit.</p>
+      
+      <p>From the Heisenberg uncertainty principle, we can also infer that commits themselves produce outgoing edges which alter future reads.</p>
+      
       <h2>Chapter 7: Thou Shall Not Commit Random</h2>
-
-      <p>
-        So there is this very famous experiment that started this whole gang war.
-        It&rsquo;s called the double slit experiment. I highly suggest you check
-        out the
-        <a href="https://www.youtube.com/results?search_query=pbs+spacetime+double+slit">PBS SpaceTime content</a>
-        on it for the full breakdown.
-      </p>
-
-      <p>
-        But before we get into it, here&rsquo;s the claim we&rsquo;re going to
-        make and then defend:
-      </p>
-
+      
+      <hr />
+      
+      <p>So there is this very famous experiment that started this whole gang war. It's called the double slit experiment. I highly suggest you check out the <a href="https://www.youtube.com/results?search_query=pbs+spacetime+double+slit">PBS SpaceTime content</a> on it for the full breakdown.</p>
+      
+      <p>But before we get into it, here's the claim we're going to make and then defend:</p>
+      
       <p><strong>There is no random.</strong></p>
-
-      <p>
-        The long standing debate in physics is whether quantum mechanics is
-        fundamentally random. Einstein said &ldquo;God does not play dice.&rdquo;
-        Experiments have been done to prove there are no local hidden variables,
-        no secret answer stored inside the particle.
-      </p>
-
-      <p>
-        Our model agrees. There are no local hidden variables. But the outcome
-        isn&rsquo;t random either. It&rsquo;s <em>in transit</em>.
-      </p>
-
-      <p>
-        Remember, we have a strict speed limit in our graph (C), so not all events
-        arrive at the same time. In physics, your <strong>light cone</strong> is
-        everything that could ever reach you, given the speed limit of C. We&rsquo;re
-        going to define something narrower. Your <strong>event cone</strong> is
-        the set of events that <em>will</em> reach a node while it&rsquo;s still
-        pending, before it&rsquo;s asked to commit.
-      </p>
-
-      <p>
-        Imagine your brother is expecting a baby today. You&rsquo;re driving to a
-        family function. You know someone is going to ask: &ldquo;are you an
-        uncle yet?&rdquo; Right now, what&rsquo;s the answer? It&rsquo;s not yes.
-        It&rsquo;s not no. Your brother hasn&rsquo;t called yet. The order information
-        flows to you matters. Does your aunt ask before your brother calls? Once
-        she asks, you&rsquo;re committed. Done.
-      </p>
-
-      <p>
-        If your brother calls <em>before</em> your aunt asks, that information was
-        in your event cone. Events that arrive after the commit are just part of
-        the next event cone.
-      </p>
-
+      
+      <p>The long standing debate in physics is whether quantum mechanics is fundamentally random. Einstein said "God does not play dice." Experiments have been done to prove there are no local hidden variables, no secret answer stored inside the particle.</p>
+      
+      <p>Our model agrees, and takes a superdeterminism position. There are no local hidden variables, But the outcome isn't random either. It's <em>in transit</em>.</p>
+      
+      <p>Our graph has a speed limit (C), so not all events arrive at the same time. In physics, your <strong>light cone</strong> is everything that could ever reach you, given the speed limit of C. We're going to define something narrower. Your <strong>event cone</strong> is the set of events that <em>will</em> reach a node while it's still pending, before it's asked to commit.</p>
+      
+      <p>Imagine your brother is expecting a baby today. You're driving to a family function. You know someone is going to ask: "are you an uncle yet?" Right now, what's the answer? It's not yes. It's not no. Your brother hasn't called yet. The order information flows to you matters. Does your aunt ask before your brother calls? Once she asks, you're committed. Done.</p>
+      
+      <p>If your brother calls <em>before</em> your aunt asks, that information was in your event cone. Events that arrive after the commit are just part of the next event cone.</p>
+      
       <div class="figure" id="event-cone">
-        <span class="scene-label">Figure 9 &mdash; The Event Cone</span>
-        <img
-          src="images/event-cone.svg"
-          alt="An organic graph with a central pending node P. Shaded teal event cone extending 2 hops. Larger dashed light cone. Orange consumer approaching."
-          width="100%"
-        />
-        <div class="figure-caption">
-          The light cone is the maximum. The event cone is what actually counts.
-          When you&rsquo;re asked determines what&rsquo;s real.
-        </div>
+        <span class="scene-label">Figure 9 — The Event Cone</span>
+        <img src="images/event-cone.svg" alt="Graph diagram showing pending node with event cone vs light cone and approaching consumer" width="100%" />
+        <div class="figure-caption">The light cone is the maximum. The event cone is what actually counts. When you're asked determines what's real.</div>
       </div>
-
-      <p>
-        The events that determine the outcome were already set in motion. The
-        information was on its way at the speed of C. Your aunt is also a
-        collection of events summing at C. The way it unfolds is the way it always
-        would have unfolded. The outcome is not stored locally. It&rsquo;s not
-        random. It&rsquo;s in transit.
-      </p>
-
-      <p>
-        What we&rsquo;re giving up is locality. The outcome is deterministic, but
-        only if you can see the whole graph, and no observer inside the system
-        ever can.
-      </p>
-
+      
+      <p>The events that determine the outcome were already set in motion. The information was on its way at the speed of C. Your aunt is also a collection of events summing at C. The way it unfolds is the way it always would have unfolded. The outcome is not stored locally. It's not random. It's in transit.</p>
+      
+      <p>This side steps Bells theorem, because we are giving up locality. The source of truth is the graph, and outcomes are deterministic. Its not random, but its random to you.</p>
+      
+      <h2>Chapter 8: The Experiment That Started a Gang War</h2>
+      
       <hr />
-
-      <!-- ======== CHAPTER 9 ======== -->
-      <h2>Chapter 9: The Experiment That Started a Gang War</h2>
-
-      <p>
-        You either already know the double slit experiment or you don&rsquo;t.
-      </p>
-
-      <p>
-        If you don&rsquo;t, good luck. It will take you 3 days and a cigarette
-        to process the head fuck.
-      </p>
-
-      <p>
-        Here&rsquo;s the short version: we fire photons one at a time through two
-        slits at a screen. Where they land produces an interference pattern &mdash;
-        the kind you get when two waves meet. But there&rsquo;s only one photon.
-        The conclusion is that the photon travels as a wave, goes through both slits,
-        interferes with itself, and only becomes a particle when it hits the screen.
-        If you try to measure which slit it went through, the interference pattern
-        vanishes.
-      </p>
-
-      <p>
-        In our model the answer is boring. The photon was never committed. It was
-        always pending, accumulating events, waiting for a consumer. The screen is
-        mass &mdash; a dense region of the graph &mdash; and forces the photon to
-        commit. If there is no consumer between the source and the screen, the
-        events just keep accumulating. That&rsquo;s the interference pattern. It&rsquo;s
-        not mysterious. It&rsquo;s a pending computation.
-      </p>
-
+      
+      <p>You either already know the double slit experiment or you don't.</p>
+      
+      <p>If you don't, good luck. It will take you 3 days and a cigarette to process the head fuck.</p>
+      
+      <p>Here's the short version: we fire photons one at a time through two slits at a screen. Where they land produces an interference pattern — the kind you get when two waves meet. But there's only one photon. The conclusion is that the photon travels as a wave, goes through both slits, interferes with itself, and only becomes a particle when it hits the screen. If you try to measure which slit it went through, the interference pattern vanishes.</p>
+      
+      <p>For those new, this is like shooting a basketball and finding out it goes though both nets, but only when you close your eyes…. (spooky).</p>
+      
+      <p>In our model the answer is boring. The photon was never committed. It was always pending, accumulating events, waiting for a consumer. The screen is a consumer and forces a commit. If there is no consumer between the source and the screen, the events just keep accumulating. That's the interference pattern. It's not mysterious. It's a pending computation.</p>
+      
+      <h2>Chapter 9: Delayed Choice</h2>
+      
       <hr />
-
-      <!-- ======== CHAPTER 10 ======== -->
-      <h2>Chapter 10: Delayed Choice</h2>
-
-      <p>
-        The experiment has a famous variation. What if we place a detector
-        <em>after</em> the slits, so we check which way the photon went only after
-        it&rsquo;s already passed through? The interference pattern vanishes. Every
-        time. It looks like the universe knew you were going to look.
-      </p>
-
-      <p>
-        In our model, the photon is traveling as a pending wave through both slits.
-        The interference pattern is building. Then the detector fires &mdash;
-        it&rsquo;s a consumer, it asks &ldquo;equals?&rdquo; and forces a commit.
-        The pending node resolves to a definite position.
-      </p>
-
-      <p>
-        But the instant it commits, the next event is born. The photon goes right
-        back to pending. It propagates from that single committed position toward
-        the screen. One source, one wave, nothing to interfere with. No fringes.
-      </p>
-
+      
+      <p>The experiment has a famous variation. Basically, we try and outsmart the universe by only checking which way the photon went <strong>AFTER</strong>, already passed though the slits. But, when we do this the interference is gone. As if the universe knew you were going to look.,</p>
+      
+      <p>In our model, the photon is traveling as a pending wave through both slits. The interference pattern is building. Then the detector fires, and its a consumer. It asks "equals?" on positional information, which forces commit. The pending node resolves to a definite position.</p>
+      
+      <p>But the instant it commits, the next event is born. The photon goes right back to pending. It propagates from that single committed position toward the screen. One source, one wave, nothing to interfere with. No fringes.</p>
+      
       <div class="figure" id="delayed-choice-graph">
-        <span class="scene-label">Figure 10 &mdash; Delayed Choice</span>
-        <img
-          src="images/delayed-choice-graph.svg"
-          alt="Photon in-flight between slits and screen, two branching futures, timeline bar showing timing is irrelevant because event was never committed."
-          width="100%"
-        />
-        <div class="figure-caption">
-          The universe didn&rsquo;t know you were going to look. You just asked
-          &ldquo;equals?&rdquo; before the screen did, and the answer you got became
-          the only source for what came next.
-        </div>
+        <span class="scene-label">Figure 10 — Delayed Choice</span>
+        <img src="images/delayed-choice-graph.svg" alt="Timeline showing photon in-flight with branching futures based on consumer timing" width="100%" />
+        <div class="figure-caption">The universe didn't know you were going to look. You just asked "equals?" before the screen did, and the answer you got became the only source for what came next.</div>
       </div>
-
-      <p>
-        <strong>prediction:</strong> if this is correct, there should still be an
-        interference pattern in <em>where</em> the photon commits at the detector
-        &mdash; because that commit is resolving a pending computation that had
-        two sources (both slits). And if you placed a second pair of slits after
-        the detector, interference should re-emerge. The photon is pending again.
-      </p>
-
-      <p>
-        Additionally, because the photon&rsquo;s commit position at the detector
-        is drawn from an interference distribution, the origin point for
-        re-propagation varies accordingly. On extreme geometries &mdash; where the
-        detector is far enough from the slits and the screen is positioned to
-        preserve the mapping &mdash; this should produce a subtle variance in the
-        landing distribution on the screen compared to experiments with no
-        detector at all.
-      </p>
-
+      
+      <p>Our intepergation is saying something different from standard QM.</p>
+      
+      <p>Which is that the position at the detector is sampled from from the interference pattern. The interference isn't destroyed, it's consumed. You can't "look" for this directly, otherwise you are just moving the screen to the detector, and its the standard double slit experiment.</p>
+      
+      <p>But to try and give something falsifiable, if someone with math skills an design a geometry for a "double slide cascade" experiment. Where a second pair of slits placed between the detector and the screen can be tuned to amplify the first-stage interference, so that the pattern on the screen yields different results.</p>
+      
+      <h2>Chapter 10: The Quantum Eraser (aka: The Final Boss)</h2>
+      
       <hr />
-
-      <!-- ======== CHAPTER 11 ======== -->
-      <h2>Chapter 11: The Quantum Eraser (aka: The Final Boss)</h2>
-
-      <p>
-        Good lord this is getting fucking long. But the universe just won&rsquo;t
-        chill bro.
-      </p>
-
-      <p>
-        The quantum eraser is the nastiest variation of this experiment. If you
-        want the full setup,
-        <a href="https://www.youtube.com/results?search_query=pbs+spacetime+quantum+eraser">PBS SpaceTime</a>
-        covers it better than I can. The short version: you create entangled
-        photon pairs. One (the signal) goes through the double slit and hits a
-        screen. The other (the idler) gets routed to detectors that either
-        preserve or erase which-path information. The signal hits the screen
-        <em>first</em>. The choice to erase happens <em>after</em>. And yet, when
-        you sort the data later, the signal photons paired with erasure detectors
-        show interference. The ones paired with which-path detectors don&rsquo;t.
-      </p>
-
-      <p>
-        It looks like the future is rewriting the past. It isn&rsquo;t.
-      </p>
-
-      <p>
-        The total pattern on the screen &mdash; before any sorting &mdash; never
-        shows interference. It&rsquo;s always a smooth blob. Always. The
-        interference only appears when you <em>filter</em> the data by which idler
-        detector fired. One subset shows fringes. The complementary subset shows
-        fringes shifted by half a wavelength. Add them together and they cancel
-        perfectly back into the blob.
-      </p>
-
-      <p>
-        In our model: the signal and idler photons are entangled, meaning their
-        pending computations share edges in the graph. When the signal hits the
-        screen and commits, its position is drawn from the <em>combined</em> state
-        &mdash; which already encodes two sub-populations, one for each type of
-        idler detector. Those sub-populations produce complementary patterns that
-        wash each other out. The screen always sees the same blob.
-      </p>
-
-      <p>
-        The idler committing later doesn&rsquo;t change anything that already
-        happened. It gives you a <em>label</em> &mdash; it tells you which
-        sub-population each signal photon belonged to. When you use that label to
-        sort, the structure that was always there becomes visible.
-      </p>
-
-      <p>
-        The universe didn&rsquo;t rewrite anything. You just finished reading
-        the ledger.
-      </p>
-
+      
+      <p>Good lord this is getting fucking long. But the universe just won't chill bro.</p>
+      
+      <p>The quantum eraser is the final boss variation of this experiment. If you want the full setup, <a href="https://www.youtube.com/results?search_query=pbs+spacetime+quantum+eraser">PBS SpaceTime</a> covers it better than I can. The short version: you create entangled photon pairs. One (the signal) goes through the double slit and hits a screen. The other (the idler) gets routed to detectors that either preserve or erase which-path information. The signal hits the screen <em>first</em>. The choice to erase happens <em>after</em>. And yet, when you sort the data later, the signal photons paired with erasure detectors show interference. The ones paired with which-path detectors don't.</p>
+      
+      <p>The total pattern on the screen (before any sorting) never shows interference. It's always a smooth blob.</p>
+      
+      <p>The interference only appears when you <em>filter</em> the data by which idler detector fired. One subset shows fringes. The complementary subset shows fringes shifted by half a wavelength. Add them together and they cancel perfectly back into the blob.</p>
+      
+      <p>In our model: the signal and idler photons are entangled, meaning their pending computations share edges in the graph. When the signal hits the screen and commits, its position is drawn from the <em>combined</em> state — which already encodes two sub-populations, one for each type of idler detector. Those sub-populations produce complementary patterns that wash each other out. The screen always sees the same blob.</p>
+      
+      <p>The idler committing later doesn't change anything that already happened. It gives you a <em>label</em> — it tells you which sub-population each signal photon belonged to. When you use that label to sort, the structure that was always there becomes visible.</p>
+      
       <div class="figure" id="quantum-eraser-graph">
-        <span class="scene-label">Figure 11 &mdash; The Quantum Eraser</span>
-        <img
-          src="images/quantum-eraser-graph.svg"
-          alt="Three panels showing same 12 dots. All gray with no pattern, eraser subset green with interference bands, which-path subset orange scattered randomly."
-          width="100%"
-        />
-        <div class="figure-caption">
-          Same dots. Same screen. Same graph. The only difference is which
-          subset you look at &mdash; and the twin&rsquo;s measurement is the
-          sorting key. The pattern was always hiding in the correlations.
-        </div>
+        <span class="scene-label">Figure 11 — The Quantum Eraser</span>
+        <img src="images/quantum-eraser-graph.svg" alt="Three-panel diagram showing entangled photon pairs and filtering by detector type" width="100%" />
+        <div class="figure-caption">Same dots. Same screen. Same graph. The only difference is which subset you look at — and the twin's measurement is the sorting key. The pattern was always hiding in the correlations.</div>
       </div>
-    </div>
-
-    <!-- ======== FOOTER ======== -->
-    <div class="doc-footer">
-      <p>
-        <strong>GL Theory</strong> &mdash; A Software Engineer&rsquo;s Conceptual
-        Guide to the Universe
-      </p>
-      <p>
-        Built from love and the firm belief that if Rick Rubin can produce
-        music, maybe I can produce a theory.
-      </p>
-      <p style="margin-top: 24px; font-size: 0.75rem; color: #666;">
-        &copy; 2026 Greg &middot; All wrongs reserved
-      </p>
-    </div>
+      
+    </main>
+    
+    <footer class="doc-footer">
+      <p><strong>GL Theory</strong></p>
+      <p>A Software Engineer's Conceptual Guide to the Universe</p>
+      <p>&copy; 2026</p>
+    </footer>
   </body>
 </html>
