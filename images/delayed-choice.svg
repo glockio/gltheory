@@ -1,0 +1,93 @@
+<svg width="100%" viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .th { font-size: 14px; font-weight: 500; fill: #3d3d3a; }
+  .ts { font-size: 12px; font-weight: 400; fill: #73726c; }
+</style>
+
+<!-- Source -->
+<circle cx="36" cy="170" r="14" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text class="ts" x="36" y="174" text-anchor="middle" fill="#854F0B">src</text>
+
+<!-- Ripples from source -->
+<path d="M50 145 A25 25 0 0 1 50 195" fill="none" stroke="#EF9F27" stroke-width="0.9" opacity="0.4"/>
+<path d="M50 135 A35 35 0 0 1 50 205" fill="none" stroke="#EF9F27" stroke-width="0.8" opacity="0.33"/>
+<path d="M50 125 A45 45 0 0 1 50 215" fill="none" stroke="#EF9F27" stroke-width="0.7" opacity="0.25"/>
+<path d="M50 115 A55 55 0 0 1 50 225" fill="none" stroke="#EF9F27" stroke-width="0.6" opacity="0.18"/>
+
+<!-- Barrier with two slits -->
+<rect x="122" y="90" width="6" height="58" rx="1" fill="#3d3d3a" opacity="0.7"/>
+<rect x="122" y="161" width="6" height="18" rx="1" fill="#3d3d3a" opacity="0.7"/>
+<rect x="122" y="192" width="6" height="58" rx="1" fill="#3d3d3a" opacity="0.7"/>
+
+<text class="ts" x="115" y="154" text-anchor="end">A</text>
+<text class="ts" x="115" y="190" text-anchor="end">B</text>
+
+<!-- Ripples from slit A (center 148) -->
+<path d="M128 136 A12 12 0 0 1 128 160" fill="none" stroke="#EF9F27" stroke-width="0.9" opacity="0.45"/>
+<path d="M128 126 A22 22 0 0 1 128 170" fill="none" stroke="#EF9F27" stroke-width="0.8" opacity="0.38"/>
+<path d="M128 116 A32 32 0 0 1 128 180" fill="none" stroke="#EF9F27" stroke-width="0.7" opacity="0.3"/>
+<path d="M128 106 A42 42 0 0 1 128 190" fill="none" stroke="#EF9F27" stroke-width="0.6" opacity="0.22"/>
+<path d="M128 96 A52 52 0 0 1 128 200" fill="none" stroke="#EF9F27" stroke-width="0.5" opacity="0.15"/>
+
+<!-- Ripples from slit B (center 188) -->
+<path d="M128 176 A12 12 0 0 1 128 200" fill="none" stroke="#EF9F27" stroke-width="0.9" opacity="0.45"/>
+<path d="M128 166 A22 22 0 0 1 128 210" fill="none" stroke="#EF9F27" stroke-width="0.8" opacity="0.38"/>
+<path d="M128 156 A32 32 0 0 1 128 220" fill="none" stroke="#EF9F27" stroke-width="0.7" opacity="0.3"/>
+<path d="M128 146 A42 42 0 0 1 128 230" fill="none" stroke="#EF9F27" stroke-width="0.6" opacity="0.22"/>
+<path d="M128 136 A52 52 0 0 1 128 240" fill="none" stroke="#EF9F27" stroke-width="0.5" opacity="0.15"/>
+
+<!-- Interference dots where ripples overlap -->
+<circle cx="175" cy="155" r="2.5" fill="#EF9F27" opacity="0.5"/>
+<circle cx="175" cy="170" r="1.5" fill="#EF9F27" opacity="0.12"/>
+<circle cx="175" cy="183" r="2.5" fill="#EF9F27" opacity="0.5"/>
+<circle cx="195" cy="148" r="2" fill="#EF9F27" opacity="0.4"/>
+<circle cx="195" cy="162" r="1.2" fill="#EF9F27" opacity="0.1"/>
+<circle cx="195" cy="175" r="2" fill="#EF9F27" opacity="0.4"/>
+<circle cx="195" cy="190" r="2" fill="#EF9F27" opacity="0.4"/>
+<circle cx="195" cy="205" r="1.2" fill="#EF9F27" opacity="0.1"/>
+
+<!-- COMMIT LINE -->
+<line x1="240" y1="80" x2="240" y2="260" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.6"/>
+<text class="ts" x="244" y="92" fill="#D85A30">Commit</text>
+
+<!-- Committed photon at slit A position -->
+<circle cx="240" cy="148" r="6" fill="#D85A30" opacity="0.9"/>
+<circle cx="240" cy="148" r="12" fill="none" stroke="#D85A30" stroke-width="0.7" opacity="0.35"/>
+<circle cx="240" cy="148" r="18" fill="none" stroke="#D85A30" stroke-width="0.5" opacity="0.18"/>
+<text class="ts" x="248" y="130" fill="#D85A30">Resolves at A</text>
+
+<!-- New ripples from committed position — single source, green -->
+<path d="M240 136 A12 12 0 0 1 240 160" fill="none" stroke="#1D9E75" stroke-width="1" opacity="0.55"/>
+<path d="M240 126 A22 22 0 0 1 240 170" fill="none" stroke="#1D9E75" stroke-width="0.9" opacity="0.45"/>
+<path d="M240 116 A32 32 0 0 1 240 180" fill="none" stroke="#1D9E75" stroke-width="0.8" opacity="0.36"/>
+<path d="M240 106 A42 42 0 0 1 240 190" fill="none" stroke="#1D9E75" stroke-width="0.7" opacity="0.28"/>
+<path d="M240 96 A52 52 0 0 1 240 200" fill="none" stroke="#1D9E75" stroke-width="0.6" opacity="0.2"/>
+<path d="M240 86 A62 62 0 0 1 240 210" fill="none" stroke="#1D9E75" stroke-width="0.5" opacity="0.14"/>
+<path d="M240 76 A72 72 0 0 1 240 220" fill="none" stroke="#1D9E75" stroke-width="0.5" opacity="0.1"/>
+
+<!-- Screen -->
+<rect x="520" y="100" width="8" height="140" rx="2" fill="#3d3d3a" opacity="0.5"/>
+<text class="ts" x="538" y="168" dominant-baseline="central">Screen</text>
+
+<!-- Smooth blob on screen -->
+<ellipse cx="524" cy="155" rx="3" ry="50" fill="#1D9E75" opacity="0.08"/>
+<ellipse cx="524" cy="155" rx="3" ry="35" fill="#1D9E75" opacity="0.18"/>
+<ellipse cx="524" cy="155" rx="3" ry="18" fill="#1D9E75" opacity="0.35"/>
+
+<text class="ts" x="538" y="120">No fringes</text>
+<text class="ts" x="538" y="134">(smooth blob)</text>
+
+<!-- Legend -->
+<rect x="55" y="290" width="14" height="3" rx="1" fill="#EF9F27" opacity="0.5"/>
+<text class="ts" x="76" y="294" fill="#EF9F27">Pending wave (interference)</text>
+
+<line x1="250" y1="290" x2="266" y2="290" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text class="ts" x="274" y="294" fill="#D85A30">Commit event</text>
+
+<rect x="420" y="290" width="14" height="3" rx="1" fill="#1D9E75" opacity="0.5"/>
+<text class="ts" x="441" y="294" fill="#1D9E75">Re-emitted wave (single source)</text>
+
+<text class="ts" x="340" y="320" text-anchor="middle">One source = nothing to interfere with</text>
+
+</svg>

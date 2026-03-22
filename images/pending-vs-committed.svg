@@ -1,78 +1,145 @@
-<!-- DESCRIPTION: Two panels. Left panel (purple border, "WAVE FUNCTION — PENDING"): central node (the particle) with six dotted lines connecting to six possible position nodes around it. None are committed. Label: "No consumer. All paths pending. Nothing committed. This is superposition." Right panel (green border, "MEASURED — COMMITTED"): same central node with ONE thick solid line to ONE position node. All other connections gone. Label: "Consumer demands a result. One path commits. One definite position." -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
-  <style>
-    text { font-family: "DM Sans", sans-serif; }
-  </style>
+<!-- DESCRIPTION: Whiteboard style, white background, DM Sans font. A horizontal timeline showing events arriving to a pending node one at a time like a verbal math question. LEFT SIDE (pending): A purple dashed node in the center with "?" inside. From the left, a sequence of small labeled edges arrive one at a time: "what does" then "3" then "÷ 3" then "+ 5" — each as a small rounded pill/tag connected by a thin arrow, arriving sequentially. The edges that have arrived are solid, the last one or two are still dashed (in-flight). Below: "Events are arriving. No one has asked 'equals?' yet. The answer doesn't exist." RIGHT SIDE (committed): Same node, now solid green with "6" inside. An orange consumer node labeled "equals?" has arrived from the right. All edges are now solid. A small snap/lightning icon at the moment of commitment. Below: "A consumer asked. Events are summed. The answer is locked forever." Between the two panels, a large arrow labeled "Measurement." -->
+<svg viewBox="0 0 840 520" xmlns="http://www.w3.org/2000/svg" font-family="'DM Sans', sans-serif">
 
-  <!-- LEFT PANEL: WAVE FUNCTION - PENDING -->
-  <rect x="15" y="15" width="370" height="290" rx="8" fill="none" stroke="#7d3c98" stroke-width="2"/>
-  <text x="200" y="42" text-anchor="middle" font-size="13" fill="#7d3c98" font-weight="700">WAVE FUNCTION -- PENDING</text>
+  <!-- Background -->
+  <rect width="840" height="520" fill="#faf8f3" rx="12"/>
 
-  <!-- Central particle node -->
-  <circle cx="200" cy="150" r="16" fill="#7d3c98" stroke="#1a1a1a" stroke-width="1.5" opacity="0.8"/>
-  <text x="200" y="155" text-anchor="middle" font-size="10" fill="white" font-weight="700">P</text>
+  <!-- Title -->
+  <text x="420" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1a1a1a">Pending vs Committed</text>
 
-  <!-- Six possible position nodes around the center (dotted connections) -->
-  <!-- Position 1 - top -->
-  <circle cx="200" cy="70" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <text x="200" y="73" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
-  <line x1="200" y1="134" x2="200" y2="78" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <!-- ===== LEFT PANEL: PENDING ===== -->
+  <rect x="20" y="55" width="380" height="340" rx="10" fill="white" stroke="#d5d0c0" stroke-width="1.2"/>
 
-  <!-- Position 2 - top right -->
-  <circle cx="290" cy="95" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <text x="290" y="98" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
-  <line x1="214" y1="140" x2="282" y2="100" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <!-- Panel label -->
+  <text x="210" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="#7d3c98" letter-spacing="1.5">PENDING</text>
+  <text x="210" y="98" text-anchor="middle" font-size="10" fill="#7a7a6a">no consumer yet</text>
 
-  <!-- Position 3 - bottom right -->
-  <circle cx="290" cy="205" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <text x="290" y="208" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
-  <line x1="214" y1="160" x2="282" y2="200" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <!-- Arriving event pills — sequential from left -->
+  <!-- "what does" — arrived -->
+  <rect x="42" y="150" width="62" height="26" rx="13" fill="#7d3c98" opacity="0.12" stroke="#7d3c98" stroke-width="1.2"/>
+  <text x="73" y="167" text-anchor="middle" font-size="9" font-weight="600" fill="#7d3c98">what does</text>
 
-  <!-- Position 4 - bottom -->
-  <circle cx="200" cy="230" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <text x="200" y="233" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
-  <line x1="200" y1="166" x2="200" y2="222" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <!-- arrow -->
+  <line x1="108" y1="163" x2="122" y2="163" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
 
-  <!-- Position 5 - bottom left -->
-  <circle cx="110" cy="205" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <text x="110" y="208" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
-  <line x1="186" y1="160" x2="118" y2="200" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <!-- "3" — arrived -->
+  <rect x="128" y="150" width="32" height="26" rx="13" fill="#7d3c98" opacity="0.12" stroke="#7d3c98" stroke-width="1.2"/>
+  <text x="144" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#7d3c98">3</text>
 
-  <!-- Position 6 - top left -->
-  <circle cx="110" cy="95" r="8" fill="none" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <text x="110" y="98" text-anchor="middle" font-size="7" fill="#7d3c98" opacity="0.7">?</text>
-  <line x1="186" y1="140" x2="118" y2="100" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4"/>
+  <!-- arrow -->
+  <line x1="164" y1="163" x2="178" y2="163" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
 
-  <!-- Left panel labels -->
-  <text x="200" y="262" text-anchor="middle" font-size="10" fill="#1a1a2e">No consumer. All paths pending.</text>
-  <text x="200" y="278" text-anchor="middle" font-size="10" fill="#1a1a2e">Nothing committed.</text>
-  <text x="200" y="296" text-anchor="middle" font-size="11" fill="#7d3c98" font-weight="600" font-style="italic">This is superposition.</text>
+  <!-- "÷ 3" — arrived -->
+  <rect x="184" y="150" width="38" height="26" rx="13" fill="#7d3c98" opacity="0.12" stroke="#7d3c98" stroke-width="1.2"/>
+  <text x="203" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#7d3c98">÷ 3</text>
 
-  <!-- RIGHT PANEL: MEASURED - COMMITTED -->
-  <rect x="415" y="15" width="370" height="290" rx="8" fill="none" stroke="#1e8449" stroke-width="2"/>
-  <text x="600" y="42" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="700">MEASURED -- COMMITTED</text>
+  <!-- arrow -->
+  <line x1="226" y1="163" x2="240" y2="163" stroke="#7d3c98" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
 
-  <!-- Central particle node (same position) -->
-  <circle cx="600" cy="150" r="16" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
-  <text x="600" y="155" text-anchor="middle" font-size="10" fill="white" font-weight="700">P</text>
+  <!-- "+ 5" — arrived -->
+  <rect x="246" y="150" width="38" height="26" rx="13" fill="#7d3c98" opacity="0.12" stroke="#7d3c98" stroke-width="1.2"/>
+  <text x="265" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#7d3c98">+ 5</text>
 
-  <!-- ONE committed position node - top right -->
-  <circle cx="690" cy="95" r="10" fill="#1e8449" stroke="#1a1a1a" stroke-width="1.5"/>
-  <text x="690" y="99" text-anchor="middle" font-size="8" fill="white" font-weight="700">!</text>
+  <!-- dashed arrow to pending node (still waiting) -->
+  <line x1="288" y1="163" x2="310" y2="185" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowPurple)"/>
 
-  <!-- Thick solid line to committed position -->
-  <line x1="614" y1="140" x2="681" y2="100" stroke="#1e8449" stroke-width="3"/>
+  <!-- "equals?" — NOT arrived yet, dashed, dimmed -->
+  <rect x="290" y="115" width="62" height="26" rx="13" fill="none" stroke="#d35400" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.4"/>
+  <text x="321" y="132" text-anchor="middle" font-size="9" font-weight="600" fill="#d35400" opacity="0.4">equals?</text>
 
-  <!-- Position label -->
-  <text x="720" y="90" font-size="9" fill="#1e8449" font-weight="600">committed</text>
-  <text x="720" y="102" font-size="9" fill="#1e8449" font-weight="600">position</text>
+  <!-- dashed arrow from equals to node (not yet) -->
+  <line x1="321" y1="141" x2="330" y2="180" stroke="#d35400" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.3"/>
 
-  <!-- Consumer arrow coming from outside -->
-  <text x="500" y="83" font-size="9" fill="#7a7a6a">consumer</text>
-  <path d="M 510,88 L 590,138" fill="none" stroke="#7a7a6a" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <polygon points="588,136 594,140 586,142" fill="#7a7a6a"/>
+  <!-- Pending node — large purple dashed circle -->
+  <circle cx="330" cy="210" r="32" fill="#7d3c98" opacity="0.06" stroke="#7d3c98" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <!-- Soft glow -->
+  <circle cx="330" cy="210" r="40" fill="#7d3c98" opacity="0.04" stroke="none"/>
+  <text x="330" y="217" text-anchor="middle" font-size="22" font-weight="700" fill="#7d3c98">?</text>
 
-  <!-- Right panel labels -->
-  <text x="600" y="262" text-anchor="middle" font-size="10" fill="#1a1a2e">Consumer demands a result.</text>
-  <text x="600" y="278" text-anchor="middle" font-size="10" fill="#1a1a2e">One path commits. One definite position.</text>
+  <!-- Explanatory text -->
+  <text x="210" y="290" text-anchor="middle" font-size="11" fill="#7a7a6a">Events are arriving.</text>
+  <text x="210" y="306" text-anchor="middle" font-size="11" fill="#7a7a6a">No one has asked "equals?" yet.</text>
+  <text x="210" y="330" text-anchor="middle" font-size="12" font-weight="700" fill="#7d3c98">The answer doesn't exist.</text>
+
+  <!-- Small annotation -->
+  <text x="210" y="365" text-anchor="middle" font-size="9" fill="#7a7a6a" font-style="italic">Another event could still arrive and change the output.</text>
+
+  <!-- ===== CENTER ARROW ===== -->
+  <line x1="410" y1="225" x2="440" y2="225" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrowBlack)"/>
+  <!-- Snap icon -->
+  <text x="425" y="210" text-anchor="middle" font-size="14">⚡</text>
+  <text x="425" y="252" text-anchor="middle" font-size="8" font-weight="600" fill="#7a7a6a" letter-spacing="1">MEASUREMENT</text>
+
+  <!-- ===== RIGHT PANEL: COMMITTED ===== -->
+  <rect x="448" y="55" width="375" height="340" rx="10" fill="white" stroke="#d5d0c0" stroke-width="1.2"/>
+
+  <!-- Panel label -->
+  <text x="635" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="#1e8449" letter-spacing="1.5">COMMITTED</text>
+  <text x="635" y="98" text-anchor="middle" font-size="10" fill="#7a7a6a">consumer asked</text>
+
+  <!-- Arrived event pills — all solid now -->
+  <rect x="468" y="150" width="62" height="26" rx="13" fill="#1e8449" opacity="0.1" stroke="#1e8449" stroke-width="1.2"/>
+  <text x="499" y="167" text-anchor="middle" font-size="9" font-weight="600" fill="#1e8449">what does</text>
+
+  <line x1="534" y1="163" x2="548" y2="163" stroke="#1e8449" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="554" y="150" width="32" height="26" rx="13" fill="#1e8449" opacity="0.1" stroke="#1e8449" stroke-width="1.2"/>
+  <text x="570" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#1e8449">3</text>
+
+  <line x1="590" y1="163" x2="604" y2="163" stroke="#1e8449" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="610" y="150" width="38" height="26" rx="13" fill="#1e8449" opacity="0.1" stroke="#1e8449" stroke-width="1.2"/>
+  <text x="629" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#1e8449">÷ 3</text>
+
+  <line x1="652" y1="163" x2="666" y2="163" stroke="#1e8449" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="672" y="150" width="38" height="26" rx="13" fill="#1e8449" opacity="0.1" stroke="#1e8449" stroke-width="1.2"/>
+  <text x="691" y="167" text-anchor="middle" font-size="11" font-weight="700" fill="#1e8449">+ 5</text>
+
+  <!-- Arrow from +5 down to committed node -->
+  <line x1="691" y1="176" x2="680" y2="195" stroke="#1e8449" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- "equals?" — arrived, solid orange consumer -->
+  <rect x="728" y="115" width="62" height="26" rx="13" fill="#d35400" opacity="0.15" stroke="#d35400" stroke-width="1.5"/>
+  <text x="759" y="132" text-anchor="middle" font-size="9" font-weight="700" fill="#d35400">equals?</text>
+
+  <!-- Arrow from consumer to node -->
+  <line x1="748" y1="141" x2="700" y2="195" stroke="#d35400" stroke-width="1.5" marker-end="url(#arrowOrangeR)"/>
+
+  <!-- Committed node — solid green circle -->
+  <circle cx="680" cy="220" r="32" fill="#1e8449" opacity="0.1" stroke="#1e8449" stroke-width="2.5"/>
+  <text x="680" y="228" text-anchor="middle" font-size="22" font-weight="700" fill="#1e8449">6</text>
+
+  <!-- Consumer label below orange pill -->
+  <text x="759" y="108" text-anchor="middle" font-size="8" font-weight="600" fill="#d35400" letter-spacing="1">CONSUMER</text>
+
+  <!-- Explanatory text -->
+  <text x="635" y="290" text-anchor="middle" font-size="11" fill="#7a7a6a">A consumer asked "equals?"</text>
+  <text x="635" y="306" text-anchor="middle" font-size="11" fill="#7a7a6a">Events are summed. 3 ÷ 3 + 5 = 6.</text>
+  <text x="635" y="330" text-anchor="middle" font-size="12" font-weight="700" fill="#1e8449">The answer is locked forever.</text>
+
+  <!-- Small annotation -->
+  <text x="635" y="365" text-anchor="middle" font-size="9" fill="#7a7a6a" font-style="italic">Committed nodes are immutable. No take-backs.</text>
+
+  <!-- ===== BOTTOM CAPTION ===== -->
+  <rect x="120" y="420" width="600" height="70" rx="8" fill="white" stroke="#d5d0c0" stroke-width="1"/>
+  <text x="420" y="448" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">Nothing is random. Nothing is decided. It's just not finished yet.</text>
+  <text x="420" y="470" text-anchor="middle" font-size="12" fill="#7a7a6a">The moment a consumer asks, the pending events are summed and the answer is locked.</text>
+
+  <!-- ===== MARKERS ===== -->
+  <defs>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7d3c98"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1e8449"/>
+    </marker>
+    <marker id="arrowOrangeR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#d35400"/>
+    </marker>
+    <marker id="arrowBlack" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a1a1a"/>
+    </marker>
+  </defs>
+
 </svg>
