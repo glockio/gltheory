@@ -4,9 +4,14 @@
 
 ---
 
-**TL;DR:** Spacetime curvature isn't fabric deformation, it's differential growth rates. The universe is a growing graph of discrete events, and gravity emerges from different regions growing at different rates. Mass has more to compute per tick, so it grows slower, and the curvature we observe is sparse regions outpacing dense ones. This predicts "gravitational runes" — if mass is removed from a region, that region can never fully catch up to space that was always empty, leaving a permanent geometric deficit that GR does not predict. 
+**TL;DR:**
 
-This framework draws heavily from causal set theory and Wolfram's physics project, but diverges on the mechanism of curvature, the origin of mass (self-perpetuating topologies in the graph), and quantum mechanics (lazy evaluation — events stay pending until a downstream consumer forces a commit, giving you wave function collapse without randomness or hidden variables).
+Spacetime curvature isn't fabric deformation — it's differential growth rates. The universe is a growing graph of discrete events, and gravity emerges from different regions growing at different rates. Mass has more to compute per tick, so it grows slower, and the curvature we observe is sparse regions outpacing dense ones. This framework draws heavily from causal set theory and Wolfram's physics project, but diverges on the mechanism of curvature, the origin of mass (self-perpetuating topologies in the graph), and quantum mechanics (lazy evaluation — events stay pending until a downstream consumer forces a commit, giving you wave function collapse without randomness or hidden variables).
+
+**Where this framework diverges (novel claims):**
+
+1. **Gravitational Runes** — Removing mass from a region restores its growth rate, but it can never catch up to space that was always empty. GR predicts spacetime snaps back to flat. We predict a permanent geometric deficit — a fossil in the graph.
+2. **Interference is consumed, not destroyed** — In delayed choice experiments, the commit position at the detector is sampled from the interference distribution. The fringes aren't destroyed, they're eaten. This predicts a different statistical input into downstream geometry than standard QM.
 
 ---
 
@@ -39,14 +44,14 @@ A Very Serious Person
 
 ---
 
-Imagine a rubber duck floating in a bathtub. Water pours in, time passes, and the duck rises with the water level. From the rubber ducks perspective, reality — everything it experiences — is the surface of the water. But its experience is actually composed of the billions of H₂O molecules it floats on.
+Imagine a rubber duck floating in a bathtub. Water pours in, time passes, and the duck rises with the water level. From the rubber ducks perspective, reality — everything it experiences — is the surface of the water. But its experience is actually composed of the billions of H₂O molecules it floats on. 
 
 Our universe is the same, you exist on a massive ocean of events that all lead you to your "here" and "now". Trace any moment of your life and what you will find is there is always a sequence of events that brought you to where you are now. This idea of "here" and "now", has another name, "space" and "time", or Spacetime.
 
 You are floating on an ocean of past events that all brought you to your "here", and "now".
 
-@fig:duck-in-a-tub
-Whiteboard style, white background, DM Sans font. A simple bathtub viewed from a side cutaway/cross-section. Water fills most of the tub. A rubber duck floats on the surface. A faucet on the left pours a thin stream of water into the tub — the stream is labeled "Events happening." The water surface is labeled "YOUR 'NOW' — spacetime." The duck has a tiny label: "You." Below the surface, the water is drawn with subtle horizontal layers getting darker toward the bottom — labeled along the side: "ALL THE EVENTS THAT CAME BEFORE." A small upward arrow from just below the surface to the duck reads "Water rises → time passes." At the very bottom of the tub, faint text: "Big Bang." Friendly napkin-sketch feel — not clinical. No equations.
+@fig:reality-at-the-edge
+Whiteboard style, white background, DM Sans font. A large graph structure building upward like a coral reef or stalagmite. At the bottom: dense layers of small green committed nodes, tightly packed, faded and ancient. As you move upward the layers become more visible, more recent, more spaced. At the very top: a thin row of purple dashed-outline nodes — the frontier, labeled "PENDING — the next now being built." Draped across the top of the frontier like a tablecloth over a table: a smooth wavy line labeled "SPACETIME — what you experience." The line rests on top of the purple nodes and gently dips between them. A small stick figure stands on the wavy spacetime line, centered. Label beside it: "You live here." Left margin annotation, vertical text: "THE STRUCTURE — all the events that came before." Right margin annotation, vertical text: "SPACETIME — the surface of the ocean." Bottom caption: "Your reality is the surface. The ocean floor built everything underneath you."
 ---
 You float on the surface. Everything underneath is what got you here. The stream is events. The rising water is time. The duck is you.
 @/fig
@@ -68,12 +73,6 @@ The idea that the universe can be represented as a graph of discrete events is a
 Intuitively, what we are describing is basic cause and effect. Your "now" didn't appear from nothing, it was built from the past events. 
 
 So what does this graph actually look like? A graph is just dots connected by lines. You already know graphs — a family tree is a graph, a recipe is a graph, a road map is a graph. 
-
-@fig:you-already-know-graphs
-Whiteboard style, white background, DM Sans font. Three simple graphs side by side, each in its own soft rounded box. LEFT: A family tree — two parent dots at top connected by lines down to three child dots. Label: "Family Tree." CENTER: A recipe — four steps as small rounded boxes connected by arrows left to right: "Mix → Bake → Cool → Frost." Label: "Recipe." RIGHT: A road map — five city dots scattered with roads (lines) between them, not all connected. Label: "Road Map." Above all three, larger text: "These are all graphs." Below all three: "Dots. Lines. That's it. The universe is built from a bigger version of this."
----
-A family tree is a graph. A recipe is a graph. A road map is a graph. Dots connected by lines. That's the whole idea.
-@/fig
 
 Ours has four rules: 
 
@@ -149,7 +148,7 @@ Mass, objects, particles are all the result of stable configurations within the 
 
 When we go to build the next layer of reality, to move from current now to future now, we sum all of those events. And for mass — when you sum all the operations together — it just generates the same shape again. That's it. Mass is a self-perpetuating topology within the event graph.
 
-@fig:mass-is-a-loop
+@fig:mass-as-loop
 Whiteboard style, white background, DM Sans font. Two side-by-side diagrams showing the same graph growing upward across three time layers (labeled t₁, t₂, t₃ as horizontal dashed lines). LEFT — labeled "A PHOTON (no mass)." A single green node (#1e8449) at t₁ connects via one edge to a single node at t₂, then one edge to a single node at t₃. Simple straight chain. Small label: "One event. One edge. Travels at C." RIGHT — labeled "A PARTICLE (has mass)." At t₁: a cluster of 4-5 blue (#2471a3) nodes interconnected with edges forming a small knot/loop. At t₂: the same cluster shape reappears — edges from t₁ reconstruct the same topology. Same again at t₃. Edges within the cluster are blue, edges between layers are gray. Small label: "Many events. Same shape. Rebuilds itself each tick." Between the two: "C is the speed limit. A photon spends all its budget moving forward. Mass spends budget rebuilding itself — so it moves slower."
 ---
 Mass is not a thing. It is a pattern that keeps happening. A photon travels at C because it has nothing to rebuild. A massive particle spends computational budget maintaining its own topology — that's why it's slower.
@@ -306,8 +305,8 @@ In our model, the photon is traveling as a pending wave through both slits. The 
 
 But the instant it commits, the next event is born. The photon goes right back to pending. It propagates from that single committed position toward the screen. One source, one wave, nothing to interfere with. No fringes.
 
-@fig:delayed-choice-graph
-Single scene with timeline. Left: green committed source node. Center: large purple dashed photon node with glow (in-flight, labeled "PHOTON — still pending"). Two dashed purple paths extend leftward from photon through both slits. Right: two branching futures — upper branch leads to screen with no consumer (interference pattern bars, labeled "no consumer → interference"), lower branch leads to screen with orange consumer node C (scattered dots, labeled "consumer → no pattern"). Timeline bar across bottom: t₀ "Photon enters" (green), t₁ "Photon between slits" (purple, annotation "STILL PENDING"), t₂ "Apparatus choice made" (orange, annotation "Doesn't matter when. Event was never committed."), t₃ "Screen forces commitment" (green).
+@fig:delayed-choice
+Whiteboard style, white background, DM Sans font. Single scene with timeline. Left: green committed source node. Center: large purple dashed photon node with glow (in-flight, labeled "PHOTON — still pending"). Two dashed purple paths extend leftward from photon through both slits. Right: two branching futures — upper branch leads to screen with no consumer (interference pattern bars, labeled "no consumer → interference"), lower branch leads to screen with orange consumer node C (scattered dots, labeled "consumer → no pattern"). Timeline bar across bottom: t₀ "Photon enters" (green), t₁ "Photon between slits" (purple, annotation "STILL PENDING"), t₂ "Apparatus choice made" (orange, annotation "Doesn't matter when. Event was never committed."), t₃ "Screen forces commitment" (green).
 ---
 The universe didn't know you were going to look. You just asked "equals?" before the screen did, and the answer you got became the only source for what came next.
 @/fig
